@@ -1,0 +1,42 @@
+// ### Style générique ###
+
+// Import reset CSS
+@import "../stylesheets/reset.css";
+
+@font-face {
+    font-family: "SourceSansPro";
+    src: url(../fonts/SourceSansPro-Regular.otf);
+}
+
+@font-face {
+    font-family: "SourceSansProBold";
+    src: url(../fonts/SourceSansPro-Bold.otf);
+}
+
+@font-face {
+    font-family: "SourceSansProSemiBold";
+    src: url(../fonts/SourceSansPro-SemiBold.otf);
+}
+
+// Font pour code
+@font-face {
+    font-family: "Inconsolata";
+    src: url(../fonts/Inconsolata.otf);
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "SourceSansPro", "Verdana", "Arial", "Helvetica", sans-serif;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.fa {
+    vertical-align: middle; // Centrage des icones font-awesome
+}

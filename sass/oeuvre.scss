@@ -1,0 +1,59 @@
+// ### Style oeuvre.html ###
+
+@import "general";
+
+.container {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    .leftBloc {
+        float: left;
+        background: url(../img/backgroundKid.jpg) no-repeat center center;
+        background-size: cover;
+        width: 65%;
+        height: 100%;
+    }
+    .rightBloc {
+        border-left: 2px solid #000;
+        float: right;
+        background: #FEFBFB;
+        width: 35%;
+        height: 100%;
+        position: relative;
+        h2 {
+            text-align: center;
+            padding: 5px;
+            margin: 0;
+        }
+        & > div {
+            padding: 10px;
+            width: 100%;
+            height: 50%;
+            position: absolute;
+        }
+        .etiqBloc {
+            top: 0;
+            .etiq {
+                cursor: move;
+                border-radius: 25px;
+                width: 150px;
+                padding: 15px;
+                margin: 10px auto;
+                background: #000;
+                color: #fff;
+                text-align: center;
+            }
+        }
+        .codeBloc {
+            color: #FFF;
+            font-family: "Inconsolata";
+            background: #000;
+            bottom: 0;
+            button {
+                background: none;
+                color: #fff;
+                border: none;
+            }
+        }
+    }
+}
