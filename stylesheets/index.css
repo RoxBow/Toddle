@@ -86,8 +86,24 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 4, ../sass/map.scss */
-.container .map {
-  width: 200%;
+/* line 5, ../sass/index.scss */
+.container {
+  text-align: center;
+}
+/* line 7, ../sass/index.scss */
+.container .logo_toddle {
+  width: 450px;
   height: auto;
+  margin: 0 auto;
+  display: block;
+}
+/* line 13, ../sass/index.scss */
+.container .launch {
+  background: #355E7E;
+  padding: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 30px;
+  margin: 0 auto;
 }

@@ -1,10 +1,10 @@
 <?php 
 
-if( !isset($_SESSION['pseudo']) ){
-    header("location: index.php");
-}
-
 session_start();
+
+if( !isset($_SESSION['pseudo']) ){
+    header("location: name.php");
+}
 
 ?>
 
@@ -12,13 +12,17 @@ session_start();
 <html class="no-js" lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Application web</title>
+    <title>Toodle - Interactive game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/oeuvre.css" media="all">
-    <link rel="stylesheet" href="stylesheets/font-awesome.min.css" media="all">
 </head>
 <body>
     <div class="container">
+       <header>
+            <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
+            <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
+            <p class="name"><?php echo $_SESSION['pseudo']; ?></p>
+        </header>
         <section class="leftBloc">
             
         </section>

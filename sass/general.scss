@@ -1,24 +1,36 @@
 // ### Style générique ###
 
-// Import reset CSS
-@import "../stylesheets/reset.css";
+@import "../stylesheets/reset.css"; // Import reset CSS
+@import "../stylesheets/font-awesome.min.css"; // Import icon
 
+/* ###### VARIABLES ###### */
+
+// Colors //
+$blueToddle : #355E7E;
+$pinkToddle : #F38F9A;
+$beigeToddle : #F8B195;
+
+/* ###### FONTS ###### */
+
+// Main font
 @font-face {
-    font-family: "SourceSansPro";
-    src: url(../fonts/SourceSansPro-Regular.otf);
+    font-family: "GothamRounded";
+    src: url(../fonts/GothamRoundedBook.ttf);
 }
 
 @font-face {
-    font-family: "SourceSansProBold";
-    src: url(../fonts/SourceSansPro-Bold.otf);
+    font-family: "GothamRounded";
+    src: url(../fonts/GothamRoundedBold.ttf);
+    font-weight: bold;
 }
 
 @font-face {
-    font-family: "SourceSansProSemiBold";
-    src: url(../fonts/SourceSansPro-SemiBold.otf);
+    font-family: "GothamRounded";
+    src: url(../fonts/GothamRoundedMedium.ttf);
+    font-weight: 600;
 }
 
-// Font pour code
+// Code Font
 @font-face {
     font-family: "Inconsolata";
     src: url(../fonts/Inconsolata.otf);
@@ -29,7 +41,7 @@ html, body {
     margin: 0;
     width: 100%;
     height: 100%;
-    font-family: "SourceSansPro", "Verdana", "Arial", "Helvetica", sans-serif;
+    font-family: "GothamRounded", "Verdana", "Arial", "Helvetica", sans-serif;
     font-size: 16px;
 }
 
@@ -38,5 +50,44 @@ html, body {
 }
 
 .fa {
-    vertical-align: middle; // Centrage des icones font-awesome
+    vertical-align: middle; // Centrage des icones par defaut
+}
+
+.container {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    header {
+        overflow: hidden;
+        text-align: center;
+        width: 100%;
+        margin: 0 0 15px 0;
+        img, .name {
+            margin: 15px 0 0 0;
+        }
+        .toddle_form {
+            width: 100px;
+            float: left;
+        }
+        .toddle_text {
+            width: 200px;
+        }
+        .name {
+            color: $pinkToddle;
+            float: right;
+            font-size: 30px;
+            margin: 15px 25px 0 0;
+        }
+    }
+}
+
+.btn_toddle {
+    background: $blueToddle;
+    padding: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 30px;
+    margin: 0 auto;
 }
