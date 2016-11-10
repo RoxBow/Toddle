@@ -2,7 +2,66 @@
 
 .container {
     .map {
-        width: 200%;
+        width: 100%;
         height: auto;
     }
+    .group_btn {
+        text-align: center;
+        .container_input {
+            display: inline-block;
+            position: relative;
+            width: 300px;
+            input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 300px;
+                height: 100%;
+                padding: 14px 0;
+                opacity: 0;
+            }
+            label {
+                @extend .btn_toddle;
+                margin-right: 50px;
+            }
+        } // .container_input
+        .help_map {
+            @extend .btn_help;
+        }
+    }
+    // * POPUP HELP * //
+    .overlay {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+        /* Modal Content/Box */
+        .popup {
+            background-color: #fefefe;
+            border: 10px solid $pinkToddle;
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
+
+    
 }

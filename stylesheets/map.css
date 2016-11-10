@@ -76,7 +76,7 @@ html, body {
 }
 
 /* line 85, ../sass/general.scss */
-.btn_toddle {
+.btn_toddle, .container .group_btn .container_input label {
   background: #355E7E;
   padding: 20px;
   color: #fff;
@@ -86,8 +86,86 @@ html, body {
   margin: 0 auto;
 }
 
+/* line 95, ../sass/general.scss */
+.btn_help, .container .group_btn .help_map {
+  background: #F38F9A;
+  color: #fff;
+  border: none;
+  border-radius: 35px;
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+}
+
 /* line 4, ../sass/map.scss */
 .container .map {
-  width: 200%;
+  width: 100%;
   height: auto;
+}
+/* line 8, ../sass/map.scss */
+.container .group_btn {
+  text-align: center;
+}
+/* line 10, ../sass/map.scss */
+.container .group_btn .container_input {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+}
+/* line 14, ../sass/map.scss */
+.container .group_btn .container_input input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  padding: 14px 0;
+  opacity: 0;
+}
+/* line 23, ../sass/map.scss */
+.container .group_btn .container_input label {
+  margin-right: 50px;
+}
+/* line 33, ../sass/map.scss */
+.container .overlay {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Black w/ opacity */
+  /* Modal Content/Box */
+  /* The Close Button */
+}
+/* line 45, ../sass/map.scss */
+.container .overlay .popup {
+  background-color: #fefefe;
+  border: 10px solid #F38F9A;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+/* line 58, ../sass/map.scss */
+.container .overlay .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }

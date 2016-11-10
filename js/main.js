@@ -1,16 +1,29 @@
 $(document).ready(function() {
-    
+
     // button launch experience
     $(".launch",".container").click(function() {
-      location.href = "name.php";
+        location.href = "name.php";
     });
     
     $('.lesson','.lessons').each(function() {
         $('.lesson','.lessons').click(function(e) {
             e.preventDefault();
-            // add "up" class to lesson selected and hide others
-            $(e.target).toggleClass('up').siblings().removeClass('up');
+            
+            if( $(e.target).hasClass('understood') ){
+                // add "up" class to lesson selected and hide others
+                $(e.target).parent().parent().toggleClass('up').next(".lesson").addClass("up");
+            }
+            else if( $(e.target).hasClass('fa-chevron-left') ){
+                // click on arrow left, open previous lesson
+                $(e.target).parent().toggleClass('up').prev(".lesson").addClass("up");
+            }
+            if( $(e.target).hasClass('understood') && $(e.target).parent().parent().is(':last-child') ){
+                location.href="map.php";
+            }
+            
             return false;
         });
     });
+    
+   
 });

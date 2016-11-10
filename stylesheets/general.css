@@ -85,3 +85,14 @@ html, body {
   font-size: 30px;
   margin: 0 auto;
 }
+
+/* line 95, ../sass/general.scss */
+.btn_help {
+  background: #F38F9A;
+  color: #fff;
+  border: none;
+  border-radius: 35px;
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+}

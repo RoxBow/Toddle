@@ -6,8 +6,6 @@ if( !isset($_SESSION['pseudo']) ){
     header("location: name.php");
 }
 
-echo "<h1>Mon pseudo est: ".$_SESSION['pseudo'];
-
 ?>
 
 <!doctype html>
@@ -26,6 +24,24 @@ echo "<h1>Mon pseudo est: ".$_SESSION['pseudo'];
             <p class="name"><?php echo $_SESSION['pseudo']; ?></p>
         </header>
         <img src="img/map.svg" alt="map" class="map"/>
+        <div class="group_btn">
+           <form action="">
+                <div class="container_input">
+                    <input type="file" class="find" id="picture" name="picture" value="TROUVÉ ?" accept="image/*" capture="camera">
+                    <label for="picture">TROUVÉ ?</label>
+                </div>
+                <button class="help_map" id="ok"><i class="fa fa-question fa-lg" aria-hidden="true"></i></button>
+            </form>
+        </div>
+        
+        <!-- POPUP -->
+        <div class="overlay">
+          <div class="popup">
+            <span class="close">x</span>
+            <p>Some text in the Modal..</p>
+          </div>
+        </div>
+        <!-- POPUP -->
     </div>
     
     <script src="js/jquery-3.1.1.min.js"></script>

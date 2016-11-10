@@ -12,31 +12,49 @@
             float: left;
             text-align: center;
             display: flex;
+            position: relative;
             flex-direction: column;
             justify-content: center;
             -webkit-transition: all 1s ease;
             -moz-transition: all 1s ease;
             transition: all 1s ease;
+            * {
+                display: none;
+            }
             &:first-child {
                 border-radius: 20px 0 0 20px;
                 background: $beigeToddle;
+                .understood{
+                    color: $beigeToddle;
+                }
             }
             &:nth-child(2){
                 background: $pinkToddle;
+                .understood {
+                    color: $pinkToddle;
+                }
             }
             &:last-child{
                 border-radius: 0 20px 20px 0;
                 background: $blueToddle;
+                .understood {
+                    color: $blueToddle;
+                }
             }
             // "up" class for lesson selected
             &.up {
                 width: 80%;
-                .content {
+                * {
                     display: block;
                 }
             }
+            .fa-chevron-left {
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                color:white;
+            }
             .content {
-                display: none;
                 .number {
                     font-size: 110px;
                     padding: 4% 6% 3% 6%;
@@ -50,11 +68,11 @@
                     margin: 50px 0;
                     font-size: 22px;
                     color: #fff;
+                    width: 80VW;
                 }
                 .understood {
                     @extend .btn_toddle; // Import style btn default toddle
                     background: #fff;
-                    color: #000;
                     padding: 8px 70px
                 }
             }
