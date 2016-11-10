@@ -4,78 +4,55 @@
 /* ###### FONTS ###### */
 @font-face {
   font-family: "GothamRounded";
-  src: url(../fonts/GothamRoundedBook.ttf);
-}
+  src: url(../fonts/GothamRoundedBook.ttf); }
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedBold.ttf);
-  font-weight: bold;
-}
+  font-weight: bold; }
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedMedium.ttf);
-  font-weight: 600;
-}
+  font-weight: 600; }
 @font-face {
   font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata.otf);
-}
-/* line 39, ../sass/general.scss */
+  src: url(../fonts/Inconsolata.otf); }
 html, body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
   font-family: "GothamRounded", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
-/* line 48, ../sass/general.scss */
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
-/* line 52, ../sass/general.scss */
 .fa {
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
-/* line 56, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
-  position: relative;
-}
-/* line 61, ../sass/general.scss */
-.container header {
-  overflow: hidden;
-  text-align: center;
-  width: 100%;
-  margin: 0 0 15px 0;
-}
-/* line 66, ../sass/general.scss */
-.container header img, .container header .name {
-  margin: 15px 0 0 0;
-}
-/* line 69, ../sass/general.scss */
-.container header .toddle_form {
-  width: 100px;
-  float: left;
-}
-/* line 73, ../sass/general.scss */
-.container header .toddle_text {
-  width: 200px;
-}
-/* line 76, ../sass/general.scss */
-.container header .name {
-  color: #F38F9A;
-  float: right;
-  font-size: 30px;
-  margin: 15px 25px 0 0;
-}
+  position: relative; }
+  .container header {
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 15px 0; }
+    .container header img, .container header .name {
+      margin: 15px 0 0 0; }
+    .container header .toddle_form {
+      width: 100px;
+      float: left; }
+    .container header .toddle_text {
+      width: 200px; }
+    .container header .name {
+      color: #F38F9A;
+      float: right;
+      font-size: 30px;
+      margin: 15px 25px 0 0; }
 
-/* line 85, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -83,9 +60,9 @@ html, body {
   border: none;
   border-radius: 50px;
   font-size: 30px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
+<<<<<<< HEAD
 /* line 95, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
@@ -98,60 +75,51 @@ html, body {
 }
 
 /* line 6, ../sass/oeuvre.scss */
+=======
+.container header {
+  height: 15%; }
+>>>>>>> origin/master
 .container .leftBloc {
   float: left;
-  background: url(../img/backgroundKid.jpg) no-repeat center center;
-  background-size: cover;
   width: 50%;
-  height: 100%;
-}
-/* line 13, ../sass/oeuvre.scss */
+  height: 83%;
+  /*Enlever overflow si possible*/
+  overflow: hidden; }
 .container .rightBloc {
   border-left: 2px solid #000;
   float: right;
   background: #FEFBFB;
   width: 50%;
-  height: 100%;
-  position: relative;
-}
-/* line 20, ../sass/oeuvre.scss */
-.container .rightBloc h2 {
-  text-align: center;
-  padding: 5px;
-  margin: 0;
-}
-/* line 25, ../sass/oeuvre.scss */
-.container .rightBloc > div {
-  padding: 10px;
-  width: 100%;
-  height: 50%;
-  position: absolute;
-}
-/* line 31, ../sass/oeuvre.scss */
-.container .rightBloc .etiqBloc {
-  top: 0;
-}
-/* line 33, ../sass/oeuvre.scss */
-.container .rightBloc .etiqBloc .etiq {
-  cursor: move;
-  border-radius: 25px;
-  width: 150px;
-  padding: 15px;
-  margin: 10px auto;
-  background: #000;
-  color: #fff;
-  text-align: center;
-}
-/* line 44, ../sass/oeuvre.scss */
-.container .rightBloc .codeBloc {
-  color: #FFF;
-  font-family: "Inconsolata";
-  background: #000;
-  bottom: 0;
-}
-/* line 49, ../sass/oeuvre.scss */
-.container .rightBloc .codeBloc button {
-  background: none;
-  color: #fff;
-  border: none;
-}
+  height: 83%;
+  position: relative; }
+  .container .rightBloc h2 {
+    text-align: center;
+    padding: 5px;
+    margin: 0; }
+  .container .rightBloc > div {
+    padding: 10px;
+    width: 100%;
+    height: 50%;
+    position: absolute; }
+  .container .rightBloc .etiqBloc {
+    top: 0; }
+    .container .rightBloc .etiqBloc .etiq {
+      cursor: move;
+      border-radius: 25px;
+      width: 150px;
+      padding: 15px;
+      margin: 10px auto;
+      background: #000;
+      color: #fff;
+      text-align: center; }
+  .container .rightBloc .codeBloc {
+    color: #FFF;
+    font-family: "Inconsolata";
+    background: #000;
+    bottom: 0; }
+    .container .rightBloc .codeBloc button {
+      background: none;
+      color: #fff;
+      border: none; }
+
+/*# sourceMappingURL=oeuvre.css.map */
