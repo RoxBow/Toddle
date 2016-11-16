@@ -44,9 +44,8 @@ if( !isset($_SESSION['pseudo']) ){
     </div>
     
     <script src="js/jquery-3.1.1.min.js"></script>
-    <!--<script src="js/main.js"></script>-->
     <script src="js/global.js"></script>
     <script src="js/oeuvre.js"></script>
-    <script src="js/hammer-time.min.js"></script>
+    <script src="js/hammer.min.js"></script>
 </body>
 </html>

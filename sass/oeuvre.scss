@@ -3,14 +3,10 @@
 @import "general";
 
 .container {
-    header{
-        height: 15%;
-    }
     .leftBloc {
         float: left;
         width: 50%;
         height: 83%;
-            /*Enlever overflow si possible*/
         overflow: hidden;
     }
     .rightBloc {

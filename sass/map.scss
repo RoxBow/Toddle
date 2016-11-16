@@ -7,24 +7,27 @@
     }
     .group_btn {
         text-align: center;
-        .container_input {
+        form {
             display: inline-block;
-            position: relative;
-            width: 300px;
-            input {
-                position: absolute;
-                top: 0;
-                left: 0;
+            .container_input {
+                display: inline-block;
+                position: relative;
                 width: 300px;
-                height: 100%;
-                padding: 14px 0;
-                opacity: 0;
-            }
-            label {
-                @extend .btn_toddle;
-                margin-right: 50px;
-            }
-        } // .container_input
+                input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 300px;
+                    height: 100%;
+                    padding: 14px 0;
+                    opacity: 0;
+                }
+                label {
+                    @extend .btn_toddle;
+                    margin-right: 50px;
+                }
+            } // .container_input
+        }
         .help_map {
             @extend .btn_help;
         }
@@ -44,7 +47,8 @@
         /* Modal Content/Box */
         .popup {
             background-color: #fefefe;
-            border: 10px solid $pinkToddle;
+            border: 15px solid $pinkToddle;
+            border-radius: 15px;
             position: absolute;
             width: 50%;
             height: 50%;
@@ -53,15 +57,12 @@
             margin: auto;
             left: 0;
             right: 0;
+            padding: 15px;
         }
-        /* The Close Button */
         .close {
             color: #aaa;
             float: right;
             font-size: 28px;
-            font-weight: bold;
         }
-    }
-
-    
-}
+    } // .overlay
+} // .container
