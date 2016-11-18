@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var canvas=document.getElementById("canvas");
 	var ctx=canvas.getContext("2d");
 	canvas.width=window.innerWidth/2;
@@ -50,9 +50,9 @@ var canvas=document.getElementById("canvas");
 	/*document.addEventListener('dragend', function() {
 	    alert("Un Drag & Drop vient de se terminer mais l'événement dragend ne sait pas si c'est un succès ou non.");
 	});*/
-=======
+
 canvas.width=window.innerWidth/2;
 canvas.height=window.innerHeight;
 ctx.fillStyle="#002FA7";
 ctx.fillRect(0,0,canvas.width,canvas.height);
->>>>>>> 2171ed3fad9766e584bc5ff3ab1479ea2bb63dbf
+
