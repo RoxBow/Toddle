@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../stylesheets/reset.css);
 @import url(../stylesheets/font-awesome.min.css);
 /* ###### VARIABLES ###### */
@@ -98,60 +99,115 @@ html, body {
   height: 70px;
 }
 
-/* line 6, ../sass/oeuvre.scss */
-.container .leftBloc {
-  float: left;
-  width: 50%;
-  height: 83%;
-  overflow: hidden;
+/* line 4, ../sass/oeuvre.scss */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 9, ../sass/oeuvre.scss */
+.container header {
+  height: 15%;
 }
 /* line 12, ../sass/oeuvre.scss */
-.container .rightBloc {
+.container #jeu {
+  width: 100%;
+  height: 83%;
+  /*height: 83%;*/
+}
+/* line 16, ../sass/oeuvre.scss */
+.container #jeu .leftBloc {
+  float: left;
+  width: 50%;
+  height: 100%;
+  /*Enlever overflow si possible*/
+  overflow: hidden;
+}
+/* line 23, ../sass/oeuvre.scss */
+.container #jeu .rightBloc {
   border-left: 2px solid #000;
   float: right;
   background: #FEFBFB;
   width: 50%;
-  height: 83%;
-  position: relative;
+  height: 100%;
 }
-/* line 19, ../sass/oeuvre.scss */
-.container .rightBloc h2 {
+/* line 30, ../sass/oeuvre.scss */
+.container #jeu .rightBloc h2 {
   text-align: center;
   padding: 5px;
   margin: 0;
 }
-/* line 24, ../sass/oeuvre.scss */
-.container .rightBloc > div {
+/* line 35, ../sass/oeuvre.scss */
+.container #jeu .rightBloc > div {
   padding: 10px;
   width: 100%;
-  height: 50%;
-  position: absolute;
 }
-/* line 30, ../sass/oeuvre.scss */
-.container .rightBloc .etiqBloc {
-  top: 0;
+/* line 39, ../sass/oeuvre.scss */
+.container #jeu .rightBloc .codeBloc {
+  color: #FFF;
+  font-family: "Inconsolata";
+  background: #000;
+  bottom: 0;
+  height: 45%;
 }
-/* line 32, ../sass/oeuvre.scss */
-.container .rightBloc .etiqBloc .etiq {
+/* line 45, ../sass/oeuvre.scss */
+.container #jeu .rightBloc .codeBloc button {
+  background: none;
+  color: #fff;
+  border: none;
+}
+/* line 51, ../sass/oeuvre.scss */
+.container #jeu .rightBloc .etiqBloc {
+  height: 55%;
+  /*Les pourcentages de positionnement sont en relation avec le div avec l'id: jeu et non relatif à la div de classe:rightBloc*/
+}
+/* line 53, ../sass/oeuvre.scss */
+.container #jeu .rightBloc .etiqBloc .etiq {
   cursor: move;
   border-radius: 25px;
-  width: 150px;
+  width: 20%;
   padding: 15px;
   margin: 10px auto;
   background: #000;
   color: #fff;
   text-align: center;
+  /*Pas de position: relative car jai besoin pour le drag&drop, 
+  que la position absolute des etiquettes prennent en compte 
+  le parent de la div de droite, c-à-d la div jeu pour avoir de bonnes coordonées pour le drop*/
 }
-/* line 43, ../sass/oeuvre.scss */
-.container .rightBloc .codeBloc {
-  color: #FFF;
-  font-family: "Inconsolata";
-  background: #000;
-  bottom: 0;
+/* line 67, ../sass/oeuvre.scss */
+.container #jeu .rightBloc .etiqBloc #vert {
+  position: absolute;
+  margin-top: 2.5%;
+  margin-left: 2%;
 }
-/* line 48, ../sass/oeuvre.scss */
-.container .rightBloc .codeBloc button {
-  background: none;
-  color: #fff;
-  border: none;
+/* line 72, ../sass/oeuvre.scss */
+.container #jeu .rightBloc .etiqBloc #rouge {
+  position: absolute;
+  margin-top: 2.5%;
+  margin-left: 27%;
+}
+/* line 77, ../sass/oeuvre.scss */
+.container #jeu .rightBloc .etiqBloc #jaune {
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 2.5%;
+}
+/* line 82, ../sass/oeuvre.scss */
+.container #jeu .rightBloc .etiqBloc #carre {
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 27%;
+}
+/* line 87, ../sass/oeuvre.scss */
+.container #jeu .rightBloc .etiqBloc #rond {
+  position: absolute;
+  margin-top: 17.5%;
+  margin-left: 2.5%;
+}
+/* line 92, ../sass/oeuvre.scss */
+.container #jeu .rightBloc .etiqBloc #violet {
+  position: absolute;
+  margin-top: 17.5%;
+  margin-left: 27%;
 }

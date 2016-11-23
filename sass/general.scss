@@ -73,13 +73,17 @@ html, body {
         }
         .toddle_text {
             width: 200px;
+            margin: 3% 0 0 0;
         }
         .name {
             color: $pinkToddle;
             float: right;
             font-size: 30px;
-            margin: 15px 25px 0 0;
+            margin: 5% 5% 0 0;
         }
+    }
+    * {
+        outline: none;
     }
 }
 

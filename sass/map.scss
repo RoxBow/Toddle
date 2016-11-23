@@ -1,6 +1,9 @@
 @import "general";
 
 .container {
+    .content {
+        height: 83%;
+    }
     .map {
         width: 100%;
         height: auto;
@@ -62,7 +65,7 @@
         .close {
             color: #aaa;
             float: right;
-            font-size: 28px;
+            margin: 10px;
         }
     } // .overlay
 } // .container

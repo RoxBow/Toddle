@@ -35,29 +35,18 @@ $(document).ready(function() {
         }
         
     });
-    
+        
 });
-
 
 // User picture - Display img after upload and analyze color
 function getFile() {
     var preview = document.querySelector('#preview');
-    var file    = document.querySelector('input[type=file]').files[0]; // Img
+    var file    = document.querySelector('#picture').files[0]; // Img
     var reader  = new FileReader();
     
-    reader.addEventListener("load", function () {
-        preview.src = reader.result;
-    }, false);
-
     if (file) {
         reader.readAsDataURL(file);
         
-        /*
-        // Analyze color of file upload
-        var api = resemble(file).onComplete(function(data){
-            console.log(data);
-        });
-        */
         console.log(file);
         compareImg(file);
     }
@@ -65,19 +54,18 @@ function getFile() {
 
 // Original picture
 function getArt() {
-    var file    = new File("https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150");
+    var file    = document.querySelector('#art').files[0]; // Img
     var reader  = new FileReader();
     
     console.log(file);
-
-    reader.addEventListener("load", function () {
-        file.src = reader.result;
-    }, false);
-
+   
     if (file) {
         reader.readAsDataURL(file);
+        
         console.log(file);
+        compareImg(file);
     }
+    
 }
 
 function compareImg(picUser){
@@ -91,6 +79,4 @@ function compareImg(picUser){
         console.log(data);
     });
 }
-
-
 
