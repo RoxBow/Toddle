@@ -57,89 +57,245 @@ if( !isset($_SESSION['pseudo']) ){
     <script src="js/global.js"></script>
     <script src="js/oeuvre.js"></script>
     <script>
+    
       $( document ).ready(function() {
-        var jeu = document.getElementById("jeu");
+
+
+        
         var etiqBloc = document.getElementById("etiqBloc");
-        var element = vert;
-        var element2 = rouge;
-        var element3 = jaune;
-        var element4 = carre;
-        var element5 = violet;
-        var element6 = rond;
+        var element = document.getElementById("vert");
+        var element2 = document.getElementById("rouge");
+        var element3 = document.getElementById("jaune");
+        var element4 = document.getElementById("carre");
+        var element5 = document.getElementById("rond");
+        var element6 = document.getElementById("violet");
+        var startX, startY, startEX, startEY, tapX, tapY, mouseX, mouseY, left, top;
+
           /*POUR LE DRAG, IDEE DE LA DIFFERENCE DE DEPLACEMENT, ECRIRE SA SUR UN PAPIER ET UN CRAYON DEMAIN !*/
+
           /*Drag & drop du bouton vert*/
 
         var hammertime = new Hammer(element);
-        hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-        var tapX, tapY;
-            hammertime.on('pan', function(e) {
-                tapX = e.center.x;
-                tapY = e.center.y;
+        hammertime.on('panstart',function(e){
+            startX = e.center.x;
+            startY = e.center.y;
+            gauche = element.offsetLeft;;
+            droite = element.offsetTop;;
+        });
 
-                element.style.left = (tapX-100) + "px";
-                element.style.top = (tapY-50) + "px";
-            });
-            hammertime.on('panend', function(e) {
-                if ((tapX>0 && tapX<canvas.width)&&(tapY>0 && tapY<canvas.height)) {
+        hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+        hammertime.on('pan', function(e) {
+              mouseX = e.center.x;
+              mouseY = e.center.y ;
+              tapX = -(startX-(e.center.x));
+              tapY = -(startY-(e.center.y));
+              startEX = tapX;
+              startEY = tapY;
+              element.style.left = (mouseX - element.offsetWidth/2)+"px";
+              element.style.top = (mouseY- element.offsetHeight)+"px";
+        });
+
+        hammertime.on('panend', function(e) {
+            console.log('cest fini');
+                if ((mouseX>0 && mouseX<canvas.width)&&(mouseY>0 && mouseY<canvas.height)) {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
-                  ctx.fillStyle="#CBE6A3";
+                  ctx.fillStyle="#276D2A";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
-                  element.style.display = "none";
+                  //element.style.display = "none";
+                  element.style.left = "51.5%";
+                  element.style.top = "58%";
                 } else{
-                    element.style.left = "51%";
-                    element.style.top = "59%";
+                    element.style.left = "51.5%";
+                    element.style.top = "58%";
                 }
-            });
+        });
 
             /*Drag & drop du bouton rouge*/
 
         var hammertime2 = new Hammer(element2);
-        hammertime2.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-            hammertime2.on('pan', function(e) {
+        hammertime2.on('panstart',function(e){
+            startX = e.center.x;
+            startY = e.center.y;
+            gauche = element.offsetLeft;;
+            droite = element.offsetTop;;
+        });
 
-                tapX = e.center.x;
-                tapY = e.center.y;
-                console.log(tapX+"---"+tapY);
-                element2.style.left = (tapX-350) + "px";
-                element2.style.top = (tapY-50) + "px";
-            });
-            hammertime2.on('panend', function(e) {
-                if ((tapX>0 && tapX<canvas.width)&&(tapY>0 && tapY<canvas.height)) {
+        hammertime2.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+        hammertime2.on('pan', function(e) {
+              mouseX = e.center.x;
+              mouseY = e.center.y ;
+              tapX = -(startX-(e.center.x));
+              tapY = -(startY-(e.center.y));
+              startEX = tapX;
+              startEY = tapY;
+              console.log(element, element.offsetWidthcfd);
+              element2.style.left = (mouseX - element2.offsetWidth*1.75)+"px";
+              element2.style.top = (mouseY- element2.offsetHeight*1)+"px";
+        });
+
+        hammertime2.on('panend', function(e) {
+            console.log('cest fini');
+                if ((mouseX>0 && mouseX<canvas.width)&&(mouseY>0 && mouseY<canvas.height)) {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
-                  ctx.fillStyle="#AA1123";
+                  ctx.fillStyle="#ED1C24";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
-                  element2.style.display = "none";
+                  //element2.style.display = "none";
+                  element2.style.left = "51.5%";
+                  element2.style.top = "58%";
                 } else{
-                    element2.style.left = "51%";
-                    element2.style.top = "59%";
+                    element2.style.left = "51.5%";
+                    element2.style.top = "58%";
                 }
-            });
+        });
 
             /*Drag & drop du bouton jaune*/
 
         var hammertime3 = new Hammer(element3);
+        hammertime3.on('panstart',function(e){
+            startX = e.center.x;
+            startY = e.center.y;
+            gauche = element.offsetLeft;;
+            droite = element.offsetTop;;
+        });
         hammertime3.get('pan').set({ direction: Hammer.DIRECTION_ALL });
             hammertime3.on('pan', function(e) {
-
-                tapX = e.center.x;
-                tapY = e.center.y;
-
-                element3.style.left = (tapX-100) + "px";
-                element3.style.top = (tapY-100) + "px";
+                mouseX = e.center.x;
+              mouseY = e.center.y ;
+              tapX = -(startX-(e.center.x));
+              tapY = -(startY-(e.center.y));
+              startEX = tapX;
+              startEY = tapY;
+              console.log(element, element.offsetWidthcfd);
+              element3.style.left = (mouseX - element3.offsetWidth/2)+"px";
+              element3.style.top = (mouseY- element3.offsetHeight*2.5)+"px";
             });
             hammertime3.on('panend', function(e) {
-                if ((tapX>0 && tapX<canvas.width)&&(tapY>0 && tapY<canvas.height)) {
+            console.log('cest fini');
+                if ((mouseX>0 && mouseX<canvas.width)&&(mouseY>0 && mouseY<canvas.height)) {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
-                  ctx.fillStyle="#F8CB00";
+                  ctx.fillStyle="#FECC0B";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
-                  element3.style.display = "none";
+                  //element3.style.display = "none";
+                  element3.style.left = "51.5%";
+                  element3.style.top = "58%";
                 } else{
-                    element3.style.left = "51%";
-                    element3.style.top = "59%";
+                    element3.style.left = "51.5%";
+                    element3.style.top = "58%";
                 }
             });
-      });
 
+      /*Drag & drop du bouton carre*/
+
+        var hammertime4 = new Hammer(element4);
+        hammertime4.on('panstart',function(e){
+            startX = e.center.x;
+            startY = e.center.y;
+            gauche = element.offsetLeft;;
+            droite = element.offsetTop;;
+        });
+
+        hammertime4.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+        hammertime4.on('pan', function(e) {
+              mouseX = e.center.x;
+              mouseY = e.center.y ;
+              tapX = -(startX-(e.center.x));
+              tapY = -(startY-(e.center.y));
+              startEX = tapX;
+              startEY = tapY;
+              element4.style.left = (mouseX - element4.offsetWidth*1.75)+"px";
+              element4.style.top = (mouseY- element4.offsetHeight*2.5)+"px";
+        });
+
+        hammertime4.on('panend', function(e) {
+            console.log('cest fini');
+                if ((mouseX>0 && mouseX<canvas.width)&&(mouseY>0 && mouseY<canvas.height)) {
+                  ctx.beginPath();
+                  ctx.strokeStyle="white";
+                  ctx.lineWidth=4;
+                  ctx.rect(mouseX-50, mouseY-(window.innerHeight*15/100)-65, 100, 100);
+                  ctx.stroke();
+                  //element4.style.display = "none";
+                  element4.style.left = "51.5%";
+                  element4.style.top = "58%";
+                } else{
+                    element4.style.left = "51.5%";
+                    element4.style.top = "58%";
+                }
+        });
+
+        /*Drag & drop du bouton pour le cercle*/
+
+        var hammertime5 = new Hammer(element5);
+        hammertime5.on('panstart',function(e){
+            startX = e.center.x;
+            startY = e.center.y;
+            gauche = element.offsetLeft;;
+            droite = element.offsetTop;;
+        });
+        hammertime5.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+            hammertime5.on('pan', function(e) {
+                mouseX = e.center.x;
+              mouseY = e.center.y ;
+              tapX = -(startX-(e.center.x));
+              tapY = -(startY-(e.center.y));
+              startEX = tapX;
+              startEY = tapY;
+
+              element5.style.left = (mouseX - element5.offsetWidth/2)+"px";
+              element5.style.top = (mouseY- element5.offsetHeight*3.75)+"px";
+            });
+            hammertime5.on('panend', function(e) {
+            console.log('cest fini');
+                if ((mouseX>0 && mouseX<canvas.width)&&(mouseY>0 && mouseY<canvas.height)) {
+                  ctx.beginPath();
+                  ctx.strokeStyle="white";
+                  ctx.lineWidth=4;
+                  ctx.arc(mouseX-25,mouseY-(window.innerHeight*15/100),100,0,2*Math.PI);
+                  ctx.stroke();
+                  //element5.style.display = "none";
+                  element5.style.left = "51.5%";
+                    element5.style.top = "58%";
+                } else{
+                    element5.style.left = "51.5%";
+                    element5.style.top = "58%";
+                }
+            });
+
+        /*Drag & drop du pour le changement en violet*/
+
+        var hammertime6 = new Hammer(element6);
+        hammertime6.on('panstart',function(e){
+            startX = e.center.x;
+            startY = e.center.y;
+            gauche = element.offsetLeft;;
+            droite = element.offsetTop;;
+        });
+
+        hammertime6.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+        hammertime6.on('pan', function(e) {
+              mouseX = e.center.x;
+              mouseY = e.center.y ;
+              tapX = -(startX-(e.center.x));
+              tapY = -(startY-(e.center.y));
+              startEX = tapX;
+              startEY = tapY;
+              element6.style.left = (mouseX - element6.offsetWidth*1.75)+"px";
+              element6.style.top = (mouseY- element6.offsetHeight*3.75)+"px";
+        });
+
+        hammertime6.on('panend', function(e) {
+            console.log('cest fini');
+                if ((mouseX>0 && mouseX<canvas.width)&&(mouseY>0 && mouseY<canvas.height)) {
+                  ctx.fillStyle="#9F00FF";
+                  ctx.fillRect(0,0,canvas.width,canvas.height);
+                  element6.style.display = "none";
+                } else{
+                    element6.style.left = "51.5%";
+                    element6.style.top = "58%";
+                }
+        });
+            /*Fin document.ready()*/
+      });
 
     </script>
 </body>

@@ -1,4 +1,6 @@
-
+/*var body = document.getElementsByTagName("body");
+body.width = window.innerWidth;
+body.height = window.innerHeight;*/
 var canvas=document.getElementById("canvas");
 var ctx=canvas.getContext("2d");
 canvas.width=window.innerWidth/2;
