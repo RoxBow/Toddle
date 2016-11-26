@@ -67,16 +67,21 @@ html, body {
 /* line 74, ../sass/general.scss */
 .container header .toddle_text {
   width: 200px;
+  margin: 3% 0 0 0;
 }
-/* line 77, ../sass/general.scss */
+/* line 78, ../sass/general.scss */
 .container header .name {
   color: #F38F9A;
   float: right;
   font-size: 30px;
-  margin: 15px 25px 0 0;
+  margin: 5% 5% 0 0;
+}
+/* line 85, ../sass/general.scss */
+.container * {
+  outline: none;
 }
 
-/* line 86, ../sass/general.scss */
+/* line 90, ../sass/general.scss */
 .btn_toddle, .container .container_form button {
   background: #355E7E;
   padding: 20px;
@@ -87,7 +92,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 96, ../sass/general.scss */
+/* line 100, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -102,7 +107,7 @@ html, body {
 .container .container_form {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 83%;
 }
 /* line 10, ../sass/name.scss */
 .container .container_form form {

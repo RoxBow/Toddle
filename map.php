@@ -6,6 +6,13 @@ if(!isset($_SESSION['pseudo']) ){
     header("location: name.php");
 }
 
+/*
+### Chrono mode PHP ###
+if(empty($_SESSION['start'])) {
+    $_SESSION['start'] = date("h:i:s");
+}
+*/
+
 ?>
 
 <!doctype html>
@@ -21,14 +28,15 @@ if(!isset($_SESSION['pseudo']) ){
        <header>
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
-            <p class="name"><?php echo $_SESSION['pseudo']; ?></p>
+            <div class="blockRight">
+                <p class="name"><?php echo $_SESSION['pseudo']." - "; ?></p>
+                <form name="chrono" class="chrono">
+                    <input type="text" name="minute" id="min">min
+                    <input type="text" name="seconde" id="sec">s
+                </form>
+            </div>
         </header>
         <div class="content">
-            <span id="chronotime">0:00:00:00</span>
-            <form name="chronoForm">
-                <input type="button" name="startstop" value="start!" onClick="chronoStart()" />
-                <input type="button" name="reset" value="reset!" onClick="chronoReset()" />
-            </form>
             <object data="img/map.svg" type="image/svg+xml" id="map"></object> <!-- Import map -->
             <div class="group_btn">
                 <form>
@@ -56,6 +64,6 @@ if(!isset($_SESSION['pseudo']) ){
     <script src="js/main.js"></script>
     <script src="js/map.js"></script>
     <script src="js/chrono.js"></script>
-    
+   
 </body>
 </html>
