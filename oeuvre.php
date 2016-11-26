@@ -72,8 +72,9 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
 <!--     <script src="code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->    
         <!--<script src="js/main.js"></script>-->
     <script src="js/global.js"></script>
-    <script src="js/oeuvre.js"></script>
     <script src="js/chrono.js"></script>
+    <script src="js/oeuvre.js"></script>
+    
     <script>
     
       $( document ).ready(function() {
