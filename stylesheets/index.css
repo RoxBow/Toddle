@@ -48,6 +48,14 @@ html, body {
   position: relative;
 }
 /* line 61, ../sass/general.scss */
+.container * {
+  outline: none;
+}
+/* line 64, ../sass/general.scss */
+.container input {
+  font-family: 'GothamRounded';
+}
+/* line 67, ../sass/general.scss */
 .container header {
   overflow: hidden;
   text-align: center;
@@ -55,33 +63,48 @@ html, body {
   margin: 0 0 15px 0;
   height: 15%;
 }
-/* line 67, ../sass/general.scss */
-.container header img, .container header .name {
+/* line 73, ../sass/general.scss */
+.container header img {
   margin: 15px 0 0 0;
 }
-/* line 70, ../sass/general.scss */
+/* line 76, ../sass/general.scss */
 .container header .toddle_form {
   width: 100px;
   float: left;
 }
-/* line 74, ../sass/general.scss */
+/* line 80, ../sass/general.scss */
 .container header .toddle_text {
   width: 200px;
   margin: 3% 0 0 0;
 }
-/* line 78, ../sass/general.scss */
-.container header .name {
-  color: #F38F9A;
+/* line 84, ../sass/general.scss */
+.container header .blockRight {
   float: right;
-  font-size: 30px;
+  width: auto;
   margin: 5% 5% 0 0;
+  font-size: 25px;
 }
-/* line 85, ../sass/general.scss */
-.container * {
-  outline: none;
+/* line 89, ../sass/general.scss */
+.container header .blockRight .name, .container header .blockRight .chrono {
+  color: #F38F9A;
+  display: inline-block;
+}
+/* line 93, ../sass/general.scss */
+.container header .blockRight .chrono {
+  display: inline-block;
+}
+/* line 95, ../sass/general.scss */
+.container header .blockRight .chrono input {
+  font-size: 25px;
+  color: #F38F9A;
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  border: none;
+  background: none;
 }
 
-/* line 90, ../sass/general.scss */
+/* line 109, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -92,7 +115,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 100, ../sass/general.scss */
+/* line 119, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;

@@ -49,6 +49,14 @@ html, body {
   position: relative;
 }
 /* line 61, ../sass/general.scss */
+.container * {
+  outline: none;
+}
+/* line 64, ../sass/general.scss */
+.container input {
+  font-family: 'GothamRounded';
+}
+/* line 67, ../sass/general.scss */
 .container header {
   overflow: hidden;
   text-align: center;
@@ -56,33 +64,48 @@ html, body {
   margin: 0 0 15px 0;
   height: 15%;
 }
-/* line 67, ../sass/general.scss */
-.container header img, .container header .name {
+/* line 73, ../sass/general.scss */
+.container header img {
   margin: 15px 0 0 0;
 }
-/* line 70, ../sass/general.scss */
+/* line 76, ../sass/general.scss */
 .container header .toddle_form {
   width: 100px;
   float: left;
 }
-/* line 74, ../sass/general.scss */
+/* line 80, ../sass/general.scss */
 .container header .toddle_text {
   width: 200px;
   margin: 3% 0 0 0;
 }
-/* line 78, ../sass/general.scss */
-.container header .name {
-  color: #F38F9A;
+/* line 84, ../sass/general.scss */
+.container header .blockRight {
   float: right;
-  font-size: 30px;
+  width: auto;
   margin: 5% 5% 0 0;
+  font-size: 25px;
 }
-/* line 85, ../sass/general.scss */
-.container * {
-  outline: none;
+/* line 89, ../sass/general.scss */
+.container header .blockRight .name, .container header .blockRight .chrono {
+  color: #F38F9A;
+  display: inline-block;
+}
+/* line 93, ../sass/general.scss */
+.container header .blockRight .chrono {
+  display: inline-block;
+}
+/* line 95, ../sass/general.scss */
+.container header .blockRight .chrono input {
+  font-size: 25px;
+  color: #F38F9A;
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  border: none;
+  background: none;
 }
 
-/* line 90, ../sass/general.scss */
+/* line 109, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -93,7 +116,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 100, ../sass/general.scss */
+/* line 119, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -110,17 +133,12 @@ p {
   padding: 0;
 }
 
-/* line 9, ../sass/oeuvre.scss */
-.container header {
-  height: 15%;
-}
-/* line 12, ../sass/oeuvre.scss */
+/* line 11, ../sass/oeuvre.scss */
 .container #jeu {
   width: 100%;
   height: 83%;
-  /*height: 83%;*/
 }
-/* line 16, ../sass/oeuvre.scss */
+/* line 15, ../sass/oeuvre.scss */
 .container #jeu .leftBloc {
   float: left;
   width: 50%;
@@ -128,7 +146,7 @@ p {
   /*Enlever overflow si possible*/
   overflow: hidden;
 }
-/* line 23, ../sass/oeuvre.scss */
+/* line 22, ../sass/oeuvre.scss */
 .container #jeu .rightBloc {
   border-left: 2px solid #000;
   float: right;
@@ -136,18 +154,18 @@ p {
   width: 50%;
   height: 100%;
 }
-/* line 30, ../sass/oeuvre.scss */
+/* line 29, ../sass/oeuvre.scss */
 .container #jeu .rightBloc h2 {
   text-align: center;
   padding: 5px;
   margin: 0;
 }
-/* line 35, ../sass/oeuvre.scss */
+/* line 34, ../sass/oeuvre.scss */
 .container #jeu .rightBloc > div {
   padding: 10px;
   width: 100%;
 }
-/* line 39, ../sass/oeuvre.scss */
+/* line 38, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .codeBloc {
   color: #FFF;
   font-family: "Inconsolata";
@@ -155,64 +173,64 @@ p {
   bottom: 0;
   height: 45%;
 }
-/* line 45, ../sass/oeuvre.scss */
+/* line 44, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .codeBloc button {
   background: none;
   color: #fff;
   border: none;
 }
-/* line 51, ../sass/oeuvre.scss */
+/* line 50, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc {
   height: 55%;
   /*Les pourcentages de positionnement sont en relation avec le div avec l'id: jeu et non relatif à la div de classe:rightBloc*/
 }
-/* line 53, ../sass/oeuvre.scss */
+/* line 52, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc .etiq {
   cursor: move;
   border-radius: 25px;
   width: 20%;
   padding: 15px;
   margin: 10px auto;
-  background: #000;
+  background: #365F7F;
   color: #fff;
   text-align: center;
   /*Pas de position: relative car jai besoin pour le drag&drop, 
   que la position absolute des etiquettes prennent en compte 
   le parent de la div de droite, c-à-d la div jeu pour avoir de bonnes coordonées pour le drop*/
 }
-/* line 67, ../sass/oeuvre.scss */
+/* line 66, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #vert {
   position: absolute;
   margin-top: 2.5%;
-  margin-left: 2%;
+  margin-left: 1.5%;
 }
-/* line 72, ../sass/oeuvre.scss */
+/* line 71, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #rouge {
   position: absolute;
   margin-top: 2.5%;
-  margin-left: 27%;
+  margin-left: 25.5%;
 }
-/* line 77, ../sass/oeuvre.scss */
+/* line 76, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #jaune {
   position: absolute;
   margin-top: 10%;
-  margin-left: 2.5%;
+  margin-left: 1.5%;
 }
-/* line 82, ../sass/oeuvre.scss */
+/* line 81, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #carre {
   position: absolute;
   margin-top: 10%;
-  margin-left: 27%;
+  margin-left: 25.5%;
 }
-/* line 87, ../sass/oeuvre.scss */
+/* line 86, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #rond {
   position: absolute;
   margin-top: 17.5%;
-  margin-left: 2.5%;
+  margin-left: 1.5%;
 }
-/* line 92, ../sass/oeuvre.scss */
+/* line 91, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #violet {
   position: absolute;
   margin-top: 17.5%;
-  margin-left: 27%;
+  margin-left: 25.5%;
 }
