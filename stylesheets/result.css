@@ -140,7 +140,7 @@ html, body {
 }
 
 /* line 141, ../sass/general.scss */
-.btn_toddle, .container .container_form button {
+.btn_toddle {
   background: #355E7E;
   padding: 20px;
   color: #fff;
@@ -161,31 +161,61 @@ html, body {
   height: 70px;
 }
 
-/* line 6, ../sass/name.scss */
-.container .container_form {
-  position: relative;
-  width: 100%;
+/* line 3, ../sass/result.scss */
+.content {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
   height: 83%;
 }
-/* line 10, ../sass/name.scss */
-.container .container_form form {
-  font-size: 50px;
-  height: 50%;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  right: 0;
+/* line 8, ../sass/result.scss */
+.content p {
+  text-transform: uppercase;
+  color: #355E7E;
 }
-/* line 21, ../sass/name.scss */
-.container .container_form label {
-  display: block;
+/* line 11, ../sass/result.scss */
+.content p.announce {
+  color: #F38F9A;
+  margin: 40px 0;
+}
+/* line 14, ../sass/result.scss */
+.content p.announce span {
+  color: #355E7E;
+}
+/* line 19, ../sass/result.scss */
+.content .listeUser {
+  width: 50%;
+  float: left;
+  overflow: scroll;
+  height: 450px;
+  text-align: left;
+  padding: 0 0 0 15%;
+}
+/* line 26, ../sass/result.scss */
+.content .listeUser li {
+  color: #355E7E;
+}
+/* line 28, ../sass/result.scss */
+.content .listeUser li.own {
   color: #F38F9A;
 }
-/* line 25, ../sass/name.scss */
-.container .container_form input {
+/* line 34, ../sass/result.scss */
+.content .giftBlock .trait {
+  border: 2px solid #F38F9A;
+  width: 20%;
+  margin: 20px auto;
+}
+/* line 39, ../sass/result.scss */
+.content .giftBlock p {
+  font-size: 1.5rem;
+}
+/* line 42, ../sass/result.scss */
+.content .giftBlock .fa-circle {
+  color: #F38F9A;
+}
+
+/* line 48, ../sass/result.scss */
+.popup input {
   border-radius: 50px;
   color: #355E7E;
   border: 2px solid #355E7E;
@@ -195,11 +225,7 @@ html, body {
   margin: 30px 0;
   font-size: 30px;
 }
-/* line 35, ../sass/name.scss */
-.container .container_form button {
-  border-radius: 100px;
-  display: block;
-  padding: 20px 22px;
-  font-weight: bold;
-  margin: 10px auto 0 auto;
+/* line 58, ../sass/result.scss */
+.popup .fa-circle {
+  color: #355E7E;
 }

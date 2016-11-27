@@ -13,6 +13,7 @@ $(window).bind('beforeunload',function(){
 });
 
 $(document).ready(function() {
+    /* CHRONO */
     if(localSec != 0 || localMin != 0){
         // Update time script
         sec = localSec;
@@ -23,6 +24,16 @@ $(document).ready(function() {
     }
     
     chrono();
+    
+    $(document).click(function (e) {
+        /* POPUP HELP */
+        if( $(".help_map").is(e.target) || $(".fa-question").is(e.target) ){
+            $(".overlay").fadeIn();
+        }
+        else if ( !$(".popup").is(e.target) ) {
+            $(".overlay").fadeOut();
+        }
+    });
 
     setTimeout(function(){
         $("#map").contents().find("rect").attr({"opacity":"0"});
@@ -33,20 +44,5 @@ $(document).ready(function() {
         $("#map").contents().find("rect").attr({"opacity":"0"});
         $("#map").contents().find("#room27").attr({"fill":"blue", "opacity":"1"});
     }, 6000);
-    
-    setTimeout(function(){
-        $("#map").contents().find("rect").attr({"opacity":"0"});
-        $("#map").contents().find("#room24").attr({"fill":"pink", "opacity":"1"});
-    }, 9000);
-    
-    setTimeout(function(){
-        $("#map").contents().find("rect").attr({"opacity":"0"});
-        $("#map").contents().find("#room37").attr({"fill":"orange", "opacity":"1"});
-    }, 12000);
-    
-    setTimeout(function(){
-        $("#map").contents().find("rect").attr({"opacity":"0"});
-        $("#map").contents().find("#room38").attr({"fill":"orange", "opacity":"1"});
-    }, 15000);
     
 });

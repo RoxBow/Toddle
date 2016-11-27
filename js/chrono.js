@@ -1,4 +1,4 @@
-var sec, min;
+var sec, min, count;
 var centi = 0; // Init dixième
 
 // Global variable GET time
@@ -10,6 +10,7 @@ localSec = localSec.replace(/\s/g, '');
 localMin = localMin.replace(/\s/g, '');
 
 function chrono(){
+    
     centi++; // dixième
     if (centi > 9){
         centi = 0;
@@ -21,7 +22,7 @@ function chrono(){
     }
     //document.querySelector("#dix").value = " "+centi //on affiche les dixièmes
     document.querySelector("#sec").value = sec //on affiche les secdes
-    document.querySelector("#min").value = +min //on affiche les mintes
+    document.querySelector("#min").value = min //on affiche les mintes
     count = setTimeout('chrono()', 100) //la fonction est relancée 
 }
 
@@ -34,4 +35,8 @@ function RAZ(){
     //document.querySelector("#dix").value = " "+centi //on affiche les dixièmes
     document.querySelector("#sec").value = sec //on affiche les secdes
     document.querySelector("#min").value = min //on affiche les mintes
+}
+
+function stopchrono(){
+    clearTimeout(count); // Stop function chrono
 }
