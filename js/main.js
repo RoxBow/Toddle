@@ -4,6 +4,11 @@ $(document).ready(function() {
         location.href = "name.php";
     });
     
+    // button re-launch experience
+    $(".retry",".content").click(function() {
+        location.href = "index.html";
+    });
+    
     /* ### TUTO ### */
     $('.lesson','.lessons').each(function() {
         $('.lesson','.lessons').click(function(e) {

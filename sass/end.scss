@@ -1,0 +1,36 @@
+@import "general";
+
+body {
+    overflow: hidden;
+}
+
+.content {
+    text-align: center;
+    font-size: 2.7rem;
+    height: 83%;
+    color: $blueToddle;
+    img {
+        width: 20%;
+        vertical-align: text-bottom;
+    }
+    hr {
+        border: 2px solid #F38F9A;
+        width: 50%;
+        margin: 40px auto;
+    }
+    p {
+        text-transform: uppercase;
+        &:first-child {
+            font-weight: 600;
+        }
+        &.render {
+            width: 75%;
+            margin: 0 auto 35px auto;
+        }
+    }
+    button {
+        @extend .btn_toddle;
+        background: $pinkToddle;
+        font-size: 3rem;
+    }
+}
