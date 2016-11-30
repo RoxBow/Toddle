@@ -196,6 +196,13 @@ html, body {
   font-size: 30px;
 }
 /* line 35, ../sass/name.scss */
+.container .container_form .error {
+  width: 50%;
+  margin: 20px auto;
+  color: red;
+  font-size: 1.3rem;
+}
+/* line 41, ../sass/name.scss */
 .container .container_form button {
   border-radius: 100px;
   display: block;

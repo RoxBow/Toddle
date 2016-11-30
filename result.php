@@ -26,13 +26,6 @@ $result->execute();
        <header>
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
-            <div class="blockRight">
-                <p class="name"><?php echo $_SESSION['pseudo']." - "; ?></p>
-                <form name="chrono" class="chrono">
-                    <input type="text" name="minute" id="min">min
-                    <input type="text" name="seconde" id="sec">s
-                </form>
-            </div>
         </header>
         <div class="content">
             <p class="announce">Félicitations <?php echo $_SESSION['pseudo']; ?> !<br>Vous avez résolu tous les défis<br>en <span id="minResult">minutes</span>  et <span id="secResult">secondes</span>  </p>

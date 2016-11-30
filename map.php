@@ -31,8 +31,8 @@ if(empty($_SESSION['start'])) {
             <div class="blockRight">
                 <p class="name"><?php echo $_SESSION['pseudo']." - "; ?></p>
                 <form name="chrono" class="chrono">
-                    <input type="text" name="minute" id="min">min
-                    <input type="text" name="seconde" id="sec">s
+                    <input type="text" name="minute" id="min" readonly>min
+                    <input type="text" name="seconde" id="sec" readonly>s
                 </form>
             </div>
         </header>
@@ -45,7 +45,7 @@ if(empty($_SESSION['start'])) {
                         <label for="picture">TROUVÉ ?</label>
                     </div>
                 </form>
-                <button class="help_map"><i class="fa fa-question fa-lg" aria-hidden="true"></i></button>
+                <button type="button" class="help_map"><i class="fa fa-question fa-lg" aria-hidden="true"></i></button>
             </div>
         </div>
         

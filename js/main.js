@@ -25,3 +25,35 @@ $(document).ready(function() {
         });
     });
 });
+
+/* Check length pseudo user */
+function validateMyForm(){
+    var pseudo = $("#pseudo").val();
+    if(pseudo.length < 3){
+        $(".error").remove();
+        $("#pseudo").after("<p class='error'>Pseudo trop court</p>");
+        $("#pseudo").css({
+            "border": "2px solid red",
+            "margin-bottom": "0"
+        });
+    }
+    else if(pseudo.length > 10){
+        $(".error").remove();
+        $("#pseudo").after("<p class='error'>Pseudo trop long</p>");
+        $("#pseudo").css({
+            "border": "2px solid red",
+            "margin-bottom": "0"
+        });
+    }
+    else {
+        $.ajax({
+          type: "POST",
+          url: "login.php",
+          data: { 'pseudo': pseudo },
+          success: function(data) {
+                console.log(pseudo+" save");
+                document.location.href = "tuto.php"
+          }
+        });
+    }
+}

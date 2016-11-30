@@ -31,31 +31,32 @@ html, body {
 }
 
 /* line 48, ../sass/general.scss */
-* {
-  box-sizing: border-box;
-}
-
-/* line 52, ../sass/general.scss */
 .fa {
   vertical-align: middle;
 }
 
-/* line 56, ../sass/general.scss */
+/* line 52, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 61, ../sass/general.scss */
+/* line 57, ../sass/general.scss */
 .container * {
   outline: none;
+  box-sizing: border-box;
 }
-/* line 64, ../sass/general.scss */
+/* line 61, ../sass/general.scss */
 .container input {
   font-family: 'GothamRounded';
 }
-/* line 67, ../sass/general.scss */
+/* line 64, ../sass/general.scss */
+.container button {
+  background: none;
+  border: none;
+}
+/* line 68, ../sass/general.scss */
 .container header {
   overflow: hidden;
   text-align: center;
@@ -63,37 +64,37 @@ html, body {
   margin: 0 0 15px 0;
   height: 15%;
 }
-/* line 73, ../sass/general.scss */
+/* line 74, ../sass/general.scss */
 .container header img {
   margin: 15px 0 0 0;
 }
-/* line 76, ../sass/general.scss */
+/* line 77, ../sass/general.scss */
 .container header .toddle_form {
-  width: 100px;
+  width: 10%;
   float: left;
 }
-/* line 80, ../sass/general.scss */
+/* line 81, ../sass/general.scss */
 .container header .toddle_text {
-  width: 200px;
+  width: 20%;
   margin: 3% 0 0 0;
 }
-/* line 84, ../sass/general.scss */
+/* line 85, ../sass/general.scss */
 .container header .blockRight {
   float: right;
   width: auto;
   margin: 5% 5% 0 0;
   font-size: 25px;
 }
-/* line 89, ../sass/general.scss */
+/* line 90, ../sass/general.scss */
 .container header .blockRight .name, .container header .blockRight .chrono {
   color: #F38F9A;
   display: inline-block;
 }
-/* line 93, ../sass/general.scss */
+/* line 94, ../sass/general.scss */
 .container header .blockRight .chrono {
   display: inline-block;
 }
-/* line 95, ../sass/general.scss */
+/* line 96, ../sass/general.scss */
 .container header .blockRight .chrono input {
   font-size: 25px;
   color: #F38F9A;
@@ -103,8 +104,42 @@ html, body {
   border: none;
   background: none;
 }
+/* line 108, ../sass/general.scss */
+.container .overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/* line 119, ../sass/general.scss */
+.container .overlay .popup {
+  background-color: #fefefe;
+  border: 15px solid #F38F9A;
+  border-radius: 15px;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  padding: 15px;
+}
+/* line 133, ../sass/general.scss */
+.container .overlay .close {
+  color: #aaa;
+  float: right;
+  margin: 10px;
+}
 
-/* line 109, ../sass/general.scss */
+/* line 141, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -115,7 +150,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 119, ../sass/general.scss */
+/* line 151, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
