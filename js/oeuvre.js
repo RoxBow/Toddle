@@ -1,9 +1,10 @@
 
 var canvas=document.getElementById("canvas");
 var jeu = document.getElementById("jeu");
+var leftBloc = document.getElementById("leftBloc");
 var ctx=canvas.getContext("2d");
 canvas.width=window.innerWidth/2;
-canvas.height=jeu.offsetHeight;
+canvas.height=leftBloc.offsetHeight;
 ctx.fillStyle="#002FA7";
 ctx.fillRect(0,0,canvas.width,canvas.height);
 
@@ -45,6 +46,7 @@ $(document).ready(function() {
         var element5 = document.getElementById("rond");
         var element6 = document.getElementById("violet");
         var offleft = $("#jeu").css("padding-left").slice(0,2);
+        var offset = $("#jeu").offset();
         var mouseX, mouseY;
 
         var hm = new Hammer(undo);
@@ -78,6 +80,10 @@ $(document).ready(function() {
         hm3.on('pressup', function(e) {
             indice.style.backgroundColor="#f3939e";
         });
+        hm3.on('tap', function(e) {
+          $('.wrap').toggleClass('active');
+          return false;
+        });
 
         hm4.on('press', function(e) {
             but.style.backgroundColor="#375d7f";
@@ -107,7 +113,7 @@ $(document).ready(function() {
 
         hammertime.on('panend', function(e) {
           element.style.backgroundColor="#375d7f";
-          if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width)&&(mouseY>jeu.offsetTop && mouseY<canvas.height)) {
+          if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width-offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
             ctx.clearRect(0,0,canvas.width,canvas.height);
             ctx.fillStyle="#276D2A";
             ctx.fillRect(0,0,canvas.width,canvas.height);

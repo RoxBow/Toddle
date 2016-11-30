@@ -41,7 +41,13 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
            </div>
         </header>
         <div id="jeu">
-          <section class="leftBloc">
+          <section class="leftBloc" id="leftBloc">
+              <div class="wrap">
+                <div class='content'>
+                  <h2>Well Hello!</h2>
+                  <p>GROS ZIZI</p>
+                </div>
+              </div>
               <div class="bouton2" id="indice">
                 <img src="img/bulb.png" alt="Objectif"/>
               </div>
