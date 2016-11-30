@@ -1,5 +1,9 @@
 @import "general";
 
+body {
+    overflow: hidden;
+}
+
 .content {
     text-align: center;
     font-size: 2rem;
@@ -17,20 +21,35 @@
         }
     }
     .listeUser {
-        width: 50%;
+        width: 67%;
         float: left;
         overflow: scroll;
+        overflow-x: hidden;
         height: 450px;
         text-align: left;
-        padding: 0 0 0 15%;
+        padding: 0 0 0 10%;
+        margin: 0 2% 0 0;
         li {
             color: $blueToddle;
             &.own {
                 color: $pinkToddle;
             }
+            .nbr {
+                width: 13%;
+                display: inline-block;
+            }
+            .pseudo {
+                display: inline-block;
+            }
+            .time {
+                font-weight: normal;
+                float: right;
+                padding: 0 8%;
+            }
         }
     }
     .giftBlock {
+        padding: 8% 2% 0 0;
         .trait {
             border: 2px solid $pinkToddle;
             width: 20%;
@@ -58,4 +77,18 @@
     .fa-circle {
         color: $blueToddle;
     }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: $pinkToddle;    
+    border-radius: 8px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $blueToddle;
 }

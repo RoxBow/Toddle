@@ -64,6 +64,7 @@ html, body {
     button {
         background: none;
         border: none;
+        font-family: 'GothamRounded';
     }
     header {
         overflow: hidden;
@@ -116,6 +117,7 @@ html, body {
         overflow: auto;
         background-color: rgb(0,0,0);
         background-color: rgba(0,0,0,0.6);
+        text-align: center;
         .popup {
             background-color: #fefefe;
             border: 15px solid $pinkToddle;

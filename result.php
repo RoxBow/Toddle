@@ -1,6 +1,6 @@
 <?php
 
-include 'login.php';  // Ok.
+include 'login.php';
 
 session_start();
 
@@ -8,7 +8,8 @@ if(!isset($_SESSION['pseudo']) ){
     header("location: name.php");
 }
 
-$result = $bdd->prepare("SELECT pseudo FROM user");
+// Get all pseudo users
+$result = $bdd->prepare("SELECT pseudo, min, sec FROM user ORDER BY min, sec");
 $result->execute();
 
 ?>
@@ -36,16 +37,19 @@ $result->execute();
                         while ($row = $result->fetch(PDO::FETCH_ASSOC)){
                             $nbr++;
                             if($row['pseudo'] == $_SESSION['pseudo']){
-                                echo "<li class='own'>".$nbr.". ".$row['pseudo']."</li>";
+                                echo "<li class='own'><span class='nbr'>".$nbr.".</span> <span class='pseudo'>".$row['pseudo']."</span> <span class='time'>".$row['min']."m ".$row['sec']."s</span></li>";
                             }
-                            echo "<li><span>".$nbr.".</span> ".$row['pseudo']."</li>";
+                            else {
+                                echo "<li><span class='nbr'>".$nbr.".</span> <span class='pseudo'>".$row['pseudo']."</span> <span class='time'>".$row['min']."m ".$row['sec']."s</span></li>";
+                            }
+                            
                         }
                     ?>
                 </ul>
                 <div class="giftBlock">
                     <p>Un cadeau sera remis au plus rapide d'entre vous</p>
                     <hr class="trait">
-                    <p>Pour être informé du classement, pensez à nous laisser votre adresse e-mail !</p>
+                    <p>Afin d'être tenu informé du classement, pensez à nous laisser votre adresse e-mail !</p>
                     <button>
                         <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x"></i>
@@ -81,6 +85,16 @@ $result->execute();
     <script type="text/javascript">
         $(document).ready(function() {
             stopchrono(); // Arrête chrono
+            // Save time user in DB
+            $.ajax({
+                type: "POST",
+                url: "login.php",
+                data: { 'min': localMin, 'sec': localSec },
+                success: function(data) {
+                    console.log("Temps: "+localMin+" minutes et "+localSec+" secondes"  );
+                }
+            });
+            
             $("#minResult").prepend( localMin + " ");
             $("#secResult").prepend( localSec + " " );
             
@@ -92,6 +106,8 @@ $result->execute();
                     $(".overlay").fadeOut();
                 }
             });
+            
+            
         });
     </script>
 </body>

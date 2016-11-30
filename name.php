@@ -25,5 +25,11 @@
     
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/chrono.js"></script>
+    <script>
+        // Reset timer
+        localStorage.setItem("seconde", 0);
+        localStorage.setItem("minute", 0);
+    </script>
 </body>
 </html>

@@ -35,14 +35,18 @@ $(document).ready(function() {
         }
     });
 
-    setTimeout(function(){
-        $("#map").contents().find("rect").attr({"opacity":"0"});
-        $("#map").contents().find("#room30").attr({"fill":"red", "opacity":"1"});
-    }, 3000);
+    setInterval(function() {
+        var room30 = $("#map").contents().find("#room30");
+        //$("#map").contents().find("rect").attr({"opacity":"0"});
+        //$("#map").contents().find("#room30").attr({"fill":"red", "opacity":"1"});
+        
+        if (room30.attr("opacity") == '0') {
+            room30.attr({"fill":"red", "opacity":"1"});
+        }
+        else {
+            room30.attr({"opacity":"0"});
+        }
+    }, 500);
     
-    setTimeout(function(){
-        $("#map").contents().find("rect").attr({"opacity":"0"});
-        $("#map").contents().find("#room27").attr({"fill":"blue", "opacity":"1"});
-    }, 6000);
     
 });

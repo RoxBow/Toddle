@@ -55,8 +55,9 @@ html, body {
 .container button {
   background: none;
   border: none;
+  font-family: 'GothamRounded';
 }
-/* line 68, ../sass/general.scss */
+/* line 69, ../sass/general.scss */
 .container header {
   overflow: hidden;
   text-align: center;
@@ -64,37 +65,37 @@ html, body {
   margin: 0 0 15px 0;
   height: 15%;
 }
-/* line 74, ../sass/general.scss */
+/* line 75, ../sass/general.scss */
 .container header img {
   margin: 15px 0 0 0;
 }
-/* line 77, ../sass/general.scss */
+/* line 78, ../sass/general.scss */
 .container header .toddle_form {
   width: 10%;
   float: left;
 }
-/* line 81, ../sass/general.scss */
+/* line 82, ../sass/general.scss */
 .container header .toddle_text {
   width: 20%;
   margin: 3% 0 0 0;
 }
-/* line 85, ../sass/general.scss */
+/* line 86, ../sass/general.scss */
 .container header .blockRight {
   float: right;
   width: auto;
   margin: 5% 5% 0 0;
   font-size: 25px;
 }
-/* line 90, ../sass/general.scss */
+/* line 91, ../sass/general.scss */
 .container header .blockRight .name, .container header .blockRight .chrono {
   color: #F38F9A;
   display: inline-block;
 }
-/* line 94, ../sass/general.scss */
+/* line 95, ../sass/general.scss */
 .container header .blockRight .chrono {
   display: inline-block;
 }
-/* line 96, ../sass/general.scss */
+/* line 97, ../sass/general.scss */
 .container header .blockRight .chrono input {
   font-size: 25px;
   color: #F38F9A;
@@ -104,7 +105,7 @@ html, body {
   border: none;
   background: none;
 }
-/* line 108, ../sass/general.scss */
+/* line 109, ../sass/general.scss */
 .container .overlay {
   display: none;
   position: fixed;
@@ -116,8 +117,9 @@ html, body {
   overflow: auto;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
 }
-/* line 119, ../sass/general.scss */
+/* line 121, ../sass/general.scss */
 .container .overlay .popup {
   background-color: #fefefe;
   border: 15px solid #F38F9A;
@@ -132,14 +134,14 @@ html, body {
   right: 0;
   padding: 15px;
 }
-/* line 133, ../sass/general.scss */
+/* line 135, ../sass/general.scss */
 .container .overlay .close {
   color: #aaa;
   float: right;
   margin: 10px;
 }
 
-/* line 141, ../sass/general.scss */
+/* line 143, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -150,7 +152,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 151, ../sass/general.scss */
+/* line 153, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -162,59 +164,85 @@ html, body {
 }
 
 /* line 3, ../sass/result.scss */
+body {
+  overflow: hidden;
+}
+
+/* line 7, ../sass/result.scss */
 .content {
   text-align: center;
   font-size: 2rem;
   font-weight: 600;
   height: 83%;
 }
-/* line 8, ../sass/result.scss */
+/* line 12, ../sass/result.scss */
 .content p {
   text-transform: uppercase;
   color: #355E7E;
 }
-/* line 11, ../sass/result.scss */
+/* line 15, ../sass/result.scss */
 .content p.announce {
   color: #F38F9A;
   margin: 40px 0;
 }
-/* line 14, ../sass/result.scss */
+/* line 18, ../sass/result.scss */
 .content p.announce span {
   color: #355E7E;
 }
-/* line 19, ../sass/result.scss */
+/* line 23, ../sass/result.scss */
 .content .listeUser {
-  width: 50%;
+  width: 67%;
   float: left;
   overflow: scroll;
+  overflow-x: hidden;
   height: 450px;
   text-align: left;
-  padding: 0 0 0 15%;
+  padding: 0 0 0 10%;
+  margin: 0 2% 0 0;
 }
-/* line 26, ../sass/result.scss */
+/* line 32, ../sass/result.scss */
 .content .listeUser li {
   color: #355E7E;
 }
-/* line 28, ../sass/result.scss */
+/* line 34, ../sass/result.scss */
 .content .listeUser li.own {
   color: #F38F9A;
 }
-/* line 34, ../sass/result.scss */
+/* line 37, ../sass/result.scss */
+.content .listeUser li .nbr {
+  width: 13%;
+  display: inline-block;
+}
+/* line 41, ../sass/result.scss */
+.content .listeUser li .pseudo {
+  display: inline-block;
+}
+/* line 44, ../sass/result.scss */
+.content .listeUser li .time {
+  font-weight: normal;
+  float: right;
+  padding: 0 8%;
+}
+/* line 51, ../sass/result.scss */
+.content .giftBlock {
+  padding: 8% 2% 0 0;
+}
+/* line 53, ../sass/result.scss */
 .content .giftBlock .trait {
   border: 2px solid #F38F9A;
   width: 20%;
   margin: 20px auto;
 }
-/* line 39, ../sass/result.scss */
+/* line 58, ../sass/result.scss */
 .content .giftBlock p {
   font-size: 1.5rem;
 }
-/* line 42, ../sass/result.scss */
+/* line 61, ../sass/result.scss */
 .content .giftBlock .fa-circle {
   color: #F38F9A;
 }
 
-/* line 48, ../sass/result.scss */
+/* line 67, ../sass/result.scss */
 .popup input {
   border-radius: 50px;
   color: #355E7E;
@@ -225,7 +253,24 @@ html, body {
   margin: 30px 0;
   font-size: 30px;
 }
-/* line 58, ../sass/result.scss */
+/* line 77, ../sass/result.scss */
 .popup .fa-circle {
   color: #355E7E;
+}
+
+/* line 82, ../sass/result.scss */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* line 86, ../sass/result.scss */
+::-webkit-scrollbar-track {
+  background-color: #F38F9A;
+  border-radius: 8px;
+}
+
+/* line 91, ../sass/result.scss */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #355E7E;
 }
