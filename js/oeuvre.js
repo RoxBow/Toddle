@@ -82,8 +82,14 @@ $(document).ready(function() {
         });
         hm3.on('tap', function(e) {
           $('.overlay').fadeToggle();
-          $('.wrap').toggleClass('active');
-          return false;
+          if ($('.wrap2').hasClass('active')) {
+            $('.wrap2').toggleClass('active');
+            setTimeout(function(){
+            $('.wrap').toggleClass('active');
+            },700);
+          } else{
+            $('.wrap').toggleClass('active');
+          }
         });
 
         hm4.on('press', function(e) {
@@ -94,8 +100,14 @@ $(document).ready(function() {
         });
         hm4.on('tap', function(e) {
           $('.overlay').fadeToggle();
-          $('.wrap2').toggleClass('active');
-          return false;
+          if ($('.wrap').hasClass('active')) {
+            $('.wrap').toggleClass('active');
+            setTimeout(function(){
+            $('.wrap2').toggleClass('active');
+            },700);
+          } else {
+            $('.wrap2').toggleClass('active');
+          }
         });
 
           /*Drag & drop du bouton vert*/
@@ -104,10 +116,10 @@ $(document).ready(function() {
 
         hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
           /*A voir*/
-        hm.get('press').set({ time: 0 });
-        hm2.get('press').set({ time: 0 });
-        hm3.get('press').set({ time: 0 });
-        hm4.get('press').set({ time: 0 });
+        hm.get('press').set({ time: 100 });
+        hm2.get('press').set({ time: 100 });
+        hm3.get('press').set({ time: 100 });
+        hm4.get('press').set({ time: 100 });
 
         hammertime.on('pan', function(e) {
               mouseX = e.center.x;

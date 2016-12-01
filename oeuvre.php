@@ -38,7 +38,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 <form name="chrono" class="chrono">
                     <input type="text" name="minute" id="min">min
                     <input type="text" name="seconde" id="sec">s
-                </form>
+                </form><br/>
            </div>
         </header>
         <div id="jeu">
@@ -66,7 +66,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
           </section>
           <section class="rightBloc">
               <div class="codeBloc">
-                  <h2>Défi N.1</h2></br>
+                  <h2>D&#201;FI 1/7</h2></br>
                   <div>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vulputate risus id metus laoreet porta. Nam pellentesque quam et lobortis pellentesque. Quisque massa odio, auctor eu metus a, viverra tincidunt justo. In ullamcorper velit eros, quis consequat nulla dapibus sit amet. Nulla cursus tortor ac sapien rutrum porta. Suspendisse potenti. Duis a diam accumsan, commodo ligula a, malesuada leo.</p>
                   </div>

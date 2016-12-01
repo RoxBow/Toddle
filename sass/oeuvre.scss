@@ -83,13 +83,12 @@
               transition: all 600ms;
               transform: translateY(0px);
               transition: all 0.5s;
-              border: 5px solid $pinkToddle;
+              border: 7px solid $pinkToddle;
             }
             .wrap.active:before {
               height: 2000px;
               width: 2000px;
-
-              border-radius: 50%;
+              border-radius: 75%;
               top: 50%;
               left: 50%;
               margin-left: -1000px;
