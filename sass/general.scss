@@ -65,28 +65,33 @@ html, body {
         background: none;
         border: none;
         font-family: 'GothamRounded';
+        text-transform: uppercase;
+        font-weight: 600;
     }
     header {
+        position: relative;
         overflow: hidden;
         text-align: center;
         width: 100%;
         margin: 0 0 15px 0;
         height: 15%;
-        img {
-            margin: 15px 0 0 0;
-        }
         .toddle_form {
-            width: 10%;
+            height: 80%;
             float: left;
         }
         .toddle_text {
-            width: 20%;
-            margin: 3% 0 0 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 25%;
+            margin: auto;
+            height: 50%;
         }
         .blockRight {
-            float: right;
+            position: absolute;
+            right: 5%;
+            top: 40%;
             width: auto;
-            margin: 5% 5% 0 0;
             font-size: 25px;
             .name, .chrono {
                 color: $pinkToddle;
@@ -134,8 +139,10 @@ html, body {
         }
         .close {
             color: #aaa;
-            float: right;
-            margin: 10px;
+            position: absolute;
+            right: 2%;
+            top: 2%;
+            font-size: 4vw;
         }
     } // .overlay
 }

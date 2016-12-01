@@ -56,46 +56,51 @@ html, body {
 .container button {
   background: none;
   border: none;
+  font-family: 'GothamRounded';
+  text-transform: uppercase;
+  font-weight: 600;
 }
-/* line 68, ../sass/general.scss */
+/* line 71, ../sass/general.scss */
 .container header {
+  position: relative;
   overflow: hidden;
   text-align: center;
   width: 100%;
   margin: 0 0 15px 0;
   height: 15%;
 }
-/* line 74, ../sass/general.scss */
-.container header img {
-  margin: 15px 0 0 0;
-}
-/* line 77, ../sass/general.scss */
+/* line 78, ../sass/general.scss */
 .container header .toddle_form {
-  width: 10%;
+  height: 80%;
   float: left;
 }
-/* line 81, ../sass/general.scss */
+/* line 82, ../sass/general.scss */
 .container header .toddle_text {
-  width: 20%;
-  margin: 3% 0 0 0;
-}
-/* line 85, ../sass/general.scss */
-.container header .blockRight {
-  float: right;
-  width: auto;
-  margin: 5% 5% 0 0;
-  font-size: 25px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  margin: auto;
+  height: 50%;
 }
 /* line 90, ../sass/general.scss */
+.container header .blockRight {
+  position: absolute;
+  right: 5%;
+  top: 40%;
+  width: auto;
+  font-size: 25px;
+}
+/* line 96, ../sass/general.scss */
 .container header .blockRight .name, .container header .blockRight .chrono {
   color: #F38F9A;
   display: inline-block;
 }
-/* line 94, ../sass/general.scss */
+/* line 100, ../sass/general.scss */
 .container header .blockRight .chrono {
   display: inline-block;
 }
-/* line 96, ../sass/general.scss */
+/* line 102, ../sass/general.scss */
 .container header .blockRight .chrono input {
   font-size: 25px;
   color: #F38F9A;
@@ -105,7 +110,7 @@ html, body {
   border: none;
   background: none;
 }
-/* line 108, ../sass/general.scss */
+/* line 114, ../sass/general.scss */
 .container .overlay {
   display: none;
   position: fixed;
@@ -117,8 +122,9 @@ html, body {
   overflow: auto;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
 }
-/* line 119, ../sass/general.scss */
+/* line 126, ../sass/general.scss */
 .container .overlay .popup {
   background-color: #fefefe;
   border: 15px solid #F38F9A;
@@ -133,14 +139,16 @@ html, body {
   right: 0;
   padding: 15px;
 }
-/* line 133, ../sass/general.scss */
+/* line 140, ../sass/general.scss */
 .container .overlay .close {
   color: #aaa;
-  float: right;
-  margin: 10px;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 4vw;
 }
 
-/* line 141, ../sass/general.scss */
+/* line 150, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -151,7 +159,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 151, ../sass/general.scss */
+/* line 160, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -162,7 +170,17 @@ html, body {
   height: 70px;
 }
 
-/* line 8, ../sass/oeuvre.scss */
+/* line 4, ../sass/oeuvre.scss */
+.overlay {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 15, ../sass/oeuvre.scss */
 .container #jeu {
   width: 100%;
   height: 83%;
@@ -170,59 +188,186 @@ html, body {
   padding-left: 2%;
   padding-right: 2%;
 }
-/* line 14, ../sass/oeuvre.scss */
+/* line 21, ../sass/oeuvre.scss */
 .container #jeu .leftBloc {
   float: left;
   width: 48%;
   height: 92%;
-  /*Enlever overflow si possible*/
   overflow: hidden;
+  /*1ere Pop Up*/
+  /*2eme Pop up*/
 }
-/* line 20, ../sass/oeuvre.scss */
+/* line 26, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .bouton2 {
+  z-index: 1100;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f3939e;
+  background-color: #F38F9A;
   width: 70px;
   height: 70px;
   border-radius: 35px;
   bottom: 10%;
 }
-/* line 29, ../sass/oeuvre.scss */
+/* line 36, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .bouton2 > img {
   width: 50%;
 }
-/* line 33, ../sass/oeuvre.scss */
+/* line 40, ../sass/oeuvre.scss */
 .container #jeu .leftBloc #indice {
   left: 3%;
   position: absolute;
 }
-/* line 37, ../sass/oeuvre.scss */
+/* line 44, ../sass/oeuvre.scss */
 .container #jeu .leftBloc #but {
   right: 53%;
   position: absolute;
 }
-/* line 42, ../sass/oeuvre.scss */
+/* line 49, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .wrap {
+  z-index: 1000;
+  position: absolute;
+  overflow: hidden;
+  width: 40%;
+  height: 65%;
+  left: 5%;
+  top: 22%;
+  padding: 20px 50px;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.5s;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+/* line 64, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .wrap .content {
+  opacity: 0;
+}
+/* line 67, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .wrap:before {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  content: "";
+  top: 100%;
+  left: 0;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 80, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .wrap.active {
+  display: block;
+  visibility: visible;
+  transition: all 600ms;
+  transform: translateY(0px);
+  transition: all 0.5s;
+  border: 5px solid #F38F9A;
+}
+/* line 88, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .wrap.active:before {
+  height: 2000px;
+  width: 2000px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  margin-left: -1000px;
+  margin-top: -1000px;
+  display: block;
+  -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 101, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .wrap.active .content {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 109, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .wrap2 {
+  z-index: 1000;
+  position: absolute;
+  overflow: hidden;
+  width: 40%;
+  height: 65%;
+  left: 5%;
+  top: 22%;
+  padding: 20px 50px;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.5s;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+/* line 124, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .wrap2 .content {
+  opacity: 0;
+}
+/* line 127, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .wrap2:before {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  content: "";
+  top: 100%;
+  left: 100%;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 140, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .wrap2.active {
+  display: block;
+  visibility: visible;
+  transition: all 600ms;
+  transform: translateY(0px);
+  transition: all 0.5s;
+  border: 5px solid #F38F9A;
+}
+/* line 148, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .wrap2.active:before {
+  height: 2000px;
+  width: 2000px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  margin-left: -1000px;
+  margin-top: -1000px;
+  display: block;
+  -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+/* line 160, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .wrap2.active .content {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+/* line 167, ../sass/oeuvre.scss */
 .container #jeu .rightBloc {
   float: right;
-  background: #FEFBFB;
   width: 50%;
   height: 92%;
   /*margin-right: 2%;*/
 }
-/* line 49, ../sass/oeuvre.scss */
+/* line 173, ../sass/oeuvre.scss */
 .container #jeu .rightBloc h2 {
   text-align: center;
   padding: 5px;
   margin: 0;
 }
-/* line 54, ../sass/oeuvre.scss */
+/* line 178, ../sass/oeuvre.scss */
 .container #jeu .rightBloc > div {
   padding: 10px;
   width: 100%;
 }
-/* line 58, ../sass/oeuvre.scss */
+/* line 182, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .codeBloc {
   /*text-align: justify;*/
   font-family: "GothamRounded", sans-serif;
@@ -231,36 +376,36 @@ html, body {
   bottom: 0;
   height: 45%;
 }
-/* line 65, ../sass/oeuvre.scss */
+/* line 189, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .codeBloc h2 {
-  color: #f3939e;
+  color: #F38F9A;
   font-weight: bold;
   font-size: 24px;
 }
-/* line 71, ../sass/oeuvre.scss */
+/* line 195, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc {
   height: 55%;
   /*Les pourcentages de positionnement sont en relation avec le div avec l'id: jeu et non relatif à la div de classe:rightBloc*/
 }
-/* line 73, ../sass/oeuvre.scss */
+/* line 197, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc .bouton {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f3939e;
+  background-color: #F38F9A;
   width: 50px;
   height: 50px;
   border-radius: 25px;
   color: white;
 }
-/* line 83, ../sass/oeuvre.scss */
+/* line 207, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc .etiq {
   cursor: move;
   border-radius: 25px;
   width: 20%;
   padding: 15px;
   margin: 10px auto;
-  background: #365F7F;
+  background: #355E7E;
   color: #fff;
   font-family: "GothamRounded", sans-serif;
   text-align: center;
@@ -268,49 +413,49 @@ html, body {
   que la position absolute des etiquettes prennent en compte 
   le parent de la div de droite, c-à-d la div jeu pour avoir de bonnes coordonées pour le drop*/
 }
-/* line 98, ../sass/oeuvre.scss */
+/* line 222, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #vert {
   position: absolute;
   margin-top: 2.5%;
   margin-left: 1.5%;
 }
-/* line 103, ../sass/oeuvre.scss */
+/* line 227, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #rouge {
   position: absolute;
   margin-top: 2.5%;
   margin-left: 25.5%;
 }
-/* line 108, ../sass/oeuvre.scss */
+/* line 232, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #jaune {
   position: absolute;
   margin-top: 10%;
   margin-left: 1.5%;
 }
-/* line 113, ../sass/oeuvre.scss */
+/* line 237, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #carre {
   position: absolute;
   margin-top: 10%;
   margin-left: 25.5%;
 }
-/* line 118, ../sass/oeuvre.scss */
+/* line 242, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #rond {
   position: absolute;
   margin-top: 17.5%;
   margin-left: 1.5%;
 }
-/* line 123, ../sass/oeuvre.scss */
+/* line 247, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #violet {
   position: absolute;
   margin-top: 17.5%;
   margin-left: 25.5%;
 }
-/* line 128, ../sass/oeuvre.scss */
+/* line 252, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #undo {
   position: absolute;
   margin-top: 25%;
   margin-left: 9%;
 }
-/* line 134, ../sass/oeuvre.scss */
+/* line 258, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #valider {
   position: absolute;
   margin-top: 25%;

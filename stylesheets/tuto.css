@@ -56,46 +56,50 @@ html, body {
   background: none;
   border: none;
   font-family: 'GothamRounded';
+  text-transform: uppercase;
+  font-weight: 600;
 }
-/* line 69, ../sass/general.scss */
+/* line 71, ../sass/general.scss */
 .container header {
+  position: relative;
   overflow: hidden;
   text-align: center;
   width: 100%;
   margin: 0 0 15px 0;
   height: 15%;
 }
-/* line 75, ../sass/general.scss */
-.container header img {
-  margin: 15px 0 0 0;
-}
 /* line 78, ../sass/general.scss */
 .container header .toddle_form {
-  width: 10%;
+  height: 80%;
   float: left;
 }
 /* line 82, ../sass/general.scss */
 .container header .toddle_text {
-  width: 20%;
-  margin: 3% 0 0 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  margin: auto;
+  height: 50%;
 }
-/* line 86, ../sass/general.scss */
+/* line 90, ../sass/general.scss */
 .container header .blockRight {
-  float: right;
+  position: absolute;
+  right: 5%;
+  top: 40%;
   width: auto;
-  margin: 5% 5% 0 0;
   font-size: 25px;
 }
-/* line 91, ../sass/general.scss */
+/* line 96, ../sass/general.scss */
 .container header .blockRight .name, .container header .blockRight .chrono {
   color: #F38F9A;
   display: inline-block;
 }
-/* line 95, ../sass/general.scss */
+/* line 100, ../sass/general.scss */
 .container header .blockRight .chrono {
   display: inline-block;
 }
-/* line 97, ../sass/general.scss */
+/* line 102, ../sass/general.scss */
 .container header .blockRight .chrono input {
   font-size: 25px;
   color: #F38F9A;
@@ -105,7 +109,7 @@ html, body {
   border: none;
   background: none;
 }
-/* line 109, ../sass/general.scss */
+/* line 114, ../sass/general.scss */
 .container .overlay {
   display: none;
   position: fixed;
@@ -119,7 +123,7 @@ html, body {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
-/* line 121, ../sass/general.scss */
+/* line 126, ../sass/general.scss */
 .container .overlay .popup {
   background-color: #fefefe;
   border: 15px solid #F38F9A;
@@ -134,14 +138,16 @@ html, body {
   right: 0;
   padding: 15px;
 }
-/* line 135, ../sass/general.scss */
+/* line 140, ../sass/general.scss */
 .container .overlay .close {
   color: #aaa;
-  float: right;
-  margin: 10px;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 4vw;
 }
 
-/* line 143, ../sass/general.scss */
+/* line 150, ../sass/general.scss */
 .btn_toddle, .container .lessons .lesson .content .understood {
   background: #355E7E;
   padding: 20px;
@@ -152,7 +158,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 153, ../sass/general.scss */
+/* line 160, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;

@@ -45,14 +45,19 @@ if(empty($_SESSION['start'])) {
                         <label for="picture">TROUVÉ ?</label>
                     </div>
                 </form>
-                <button type="button" class="help_map"><i class="fa fa-question fa-lg" aria-hidden="true"></i></button>
+                <button type="button" class="help_map">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-question fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                    </span>
+                </button>
             </div>
         </div>
         
         <!-- POPUP -->
         <div class="overlay">
           <div class="popup">
-            <i class="fa fa-times fa-3x close" aria-hidden="true"></i>
+            <i class="fa fa-times close" aria-hidden="true"></i>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sit iste nobis inventore magni odit nihil! Voluptatem adipisci libero rerum minus, alias fuga in deleniti?</p>
           </div>
         </div>

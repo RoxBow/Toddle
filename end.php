@@ -1,7 +1,5 @@
 <?php
 
-include 'login.php';
-
 session_start();
 
 if(!isset($_SESSION['pseudo']) ){
@@ -33,6 +31,6 @@ if(!isset($_SESSION['pseudo']) ){
     </div>
   
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/main.js"></script>    
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -9,30 +9,36 @@
         height: auto;
     }
     .group_btn {
-        text-align: center;
+        display: flex;
+        justify-content: center;
         form {
-            display: inline-block;
+            margin-right: 4%;
             .container_input {
                 display: inline-block;
                 position: relative;
-                width: 300px;
                 input {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    width: 300px;
+                    width: 100%;
                     height: 100%;
-                    padding: 14px 0;
                     opacity: 0;
                 }
                 label {
                     @extend .btn_toddle;
-                    margin-right: 50px;
+                    font-size: 3vw;
+                    display: block;
                 }
             } // .container_input
         }
         .help_map {
-            @extend .btn_help;
+            font-size: 2.7vw;
+            .fa-circle {
+                color: $pinkToddle;
+            }
+            .fa-question {
+                color: #fff;
+            }
         }
     }
 } // .container

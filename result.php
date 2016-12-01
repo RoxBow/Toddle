@@ -29,7 +29,7 @@ $result->execute();
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
         </header>
         <div class="content">
-            <p class="announce">Félicitations <?php echo $_SESSION['pseudo']; ?> !<br>Vous avez résolu tous les défis<br>en <span id="minResult">minutes</span>  et <span id="secResult">secondes</span>  </p>
+            <p class="announce">Félicitations <span><?php echo $_SESSION['pseudo']; ?></span> !<br>Vous avez résolu tous les défis<br>en <span id="minResult">minutes</span>  et <span id="secResult">secondes</span>.<br>Vous terminez à la <span><?php echo $_SESSION['nbrUser']; ?>ème</span> position </p>
             <section>
                 <ul class="listeUser">
                     <?php
@@ -38,6 +38,7 @@ $result->execute();
                             $nbr++;
                             if($row['pseudo'] == $_SESSION['pseudo']){
                                 echo "<li class='own'><span class='nbr'>".$nbr.".</span> <span class='pseudo'>".$row['pseudo']."</span> <span class='time'>".$row['min']."m ".$row['sec']."s</span></li>";
+                                $_SESSION['nbrUser'] = $nbr;
                             }
                             else {
                                 echo "<li><span class='nbr'>".$nbr.".</span> <span class='pseudo'>".$row['pseudo']."</span> <span class='time'>".$row['min']."m ".$row['sec']."s</span></li>";
@@ -51,7 +52,7 @@ $result->execute();
                     <hr class="trait">
                     <p>Afin d'être tenu informé du classement, pensez à nous laisser votre adresse e-mail !</p>
                     <button>
-                        <span class="fa-stack fa-4x">
+                        <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-envelope fa-stack-1x fa-inverse" aria-hidden="true"></i>
                         </span>
@@ -63,12 +64,12 @@ $result->execute();
         <!-- POPUP -->
         <div class="overlay">
           <div class="popup">
-           <i class="fa fa-times fa-3x close" aria-hidden="true"></i>
+           <i class="fa fa-times close" aria-hidden="true"></i>
             <form action="login.php" method="post">
                 <label for="pseudo">Veuillez entrer votre adresse e-mail</label>
                 <input type="text" name="mail" id="mail" placeholder="jean@gmail.com" />
                 <button name="submit" type="submit" >
-                    <span class="fa-stack fa-4x">
+                    <span class="fa-stack">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-check fa-stack-1x fa-inverse" aria-hidden="true"></i>
                     </span>
@@ -102,12 +103,10 @@ $result->execute();
                 if( $(".fa-envelope").is(e.target) ){
                     $(".overlay").fadeIn();
                 }
-                else if ( $(".close").is(e.target) ) {
+                else if ( $(".close").is(e.target) || !$(".popup").is(e.target)) {
                     $(".overlay").fadeOut();
                 }
             });
-            
-            
         });
     </script>
 </body>

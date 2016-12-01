@@ -4,28 +4,20 @@
 
 .container {
     text-align: center;
+    display: flex;
+    align-items: center;
     .logo_toddle {
-        width: 450px;
+        width: 45%;
         height: auto;
         margin: 0 auto;
         display: block;
     }
     .launch {
         background: $blueToddle;
-        padding: 20px;
+        padding: 2%;
         color: #fff;
         border: none;
         border-radius: 50px;
-        font-size: 30px;
-        margin: 0 auto;
-    }
-    .content {
-        height: 69%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        margin: auto;
+        font-size: 3.5vw;
     }
 }

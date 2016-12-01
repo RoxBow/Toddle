@@ -56,46 +56,50 @@ html, body {
   background: none;
   border: none;
   font-family: 'GothamRounded';
+  text-transform: uppercase;
+  font-weight: 600;
 }
-/* line 69, ../sass/general.scss */
+/* line 71, ../sass/general.scss */
 .container header {
+  position: relative;
   overflow: hidden;
   text-align: center;
   width: 100%;
   margin: 0 0 15px 0;
   height: 15%;
 }
-/* line 75, ../sass/general.scss */
-.container header img {
-  margin: 15px 0 0 0;
-}
 /* line 78, ../sass/general.scss */
 .container header .toddle_form {
-  width: 10%;
+  height: 80%;
   float: left;
 }
 /* line 82, ../sass/general.scss */
 .container header .toddle_text {
-  width: 20%;
-  margin: 3% 0 0 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  margin: auto;
+  height: 50%;
 }
-/* line 86, ../sass/general.scss */
+/* line 90, ../sass/general.scss */
 .container header .blockRight {
-  float: right;
+  position: absolute;
+  right: 5%;
+  top: 40%;
   width: auto;
-  margin: 5% 5% 0 0;
   font-size: 25px;
 }
-/* line 91, ../sass/general.scss */
+/* line 96, ../sass/general.scss */
 .container header .blockRight .name, .container header .blockRight .chrono {
   color: #F38F9A;
   display: inline-block;
 }
-/* line 95, ../sass/general.scss */
+/* line 100, ../sass/general.scss */
 .container header .blockRight .chrono {
   display: inline-block;
 }
-/* line 97, ../sass/general.scss */
+/* line 102, ../sass/general.scss */
 .container header .blockRight .chrono input {
   font-size: 25px;
   color: #F38F9A;
@@ -105,7 +109,7 @@ html, body {
   border: none;
   background: none;
 }
-/* line 109, ../sass/general.scss */
+/* line 114, ../sass/general.scss */
 .container .overlay {
   display: none;
   position: fixed;
@@ -119,7 +123,7 @@ html, body {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
-/* line 121, ../sass/general.scss */
+/* line 126, ../sass/general.scss */
 .container .overlay .popup {
   background-color: #fefefe;
   border: 15px solid #F38F9A;
@@ -134,15 +138,17 @@ html, body {
   right: 0;
   padding: 15px;
 }
-/* line 135, ../sass/general.scss */
+/* line 140, ../sass/general.scss */
 .container .overlay .close {
   color: #aaa;
-  float: right;
-  margin: 10px;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 4vw;
 }
 
-/* line 143, ../sass/general.scss */
-.btn_toddle, .container .container_form button {
+/* line 150, ../sass/general.scss */
+.btn_toddle {
   background: #355E7E;
   padding: 20px;
   color: #fff;
@@ -152,7 +158,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 153, ../sass/general.scss */
+/* line 160, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -165,50 +171,46 @@ html, body {
 
 /* line 6, ../sass/name.scss */
 .container .container_form {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 83%;
+  height: 80%;
 }
-/* line 10, ../sass/name.scss */
+/* line 12, ../sass/name.scss */
 .container .container_form form {
-  font-size: 50px;
-  height: 50%;
   text-align: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  right: 0;
 }
-/* line 21, ../sass/name.scss */
+/* line 15, ../sass/name.scss */
 .container .container_form label {
   display: block;
   color: #F38F9A;
+  font-size: 5vw;
 }
-/* line 25, ../sass/name.scss */
+/* line 20, ../sass/name.scss */
 .container .container_form input {
   border-radius: 50px;
   color: #355E7E;
   border: 2px solid #355E7E;
   text-align: center;
-  padding: 12px 30px;
+  padding: 1.2% 3%;
+  margin: 3% 0;
   display: inline-block;
-  margin: 30px 0;
-  font-size: 30px;
+  font-size: 3vw;
 }
-/* line 35, ../sass/name.scss */
+/* line 29, ../sass/name.scss */
+.container .container_form input.error {
+  border: 2px solid red;
+  margin-bottom: 0;
+}
+/* line 34, ../sass/name.scss */
 .container .container_form .error {
-  width: 50%;
-  margin: 20px auto;
+  margin: 3% auto;
   color: red;
-  font-size: 1.3rem;
+  font-size: 2vw;
 }
-/* line 41, ../sass/name.scss */
+/* line 39, ../sass/name.scss */
 .container .container_form button {
-  border-radius: 100px;
-  display: block;
-  padding: 20px 22px;
-  font-weight: bold;
-  margin: 10px auto 0 auto;
+  font-size: 4vw;
+  margin: 2% auto 0 auto;
 }
