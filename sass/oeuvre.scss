@@ -1,7 +1,14 @@
 // ### Style oeuvre.php ###
 
 @import "general";
-
+.overlay{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+}
 .container {
     header{
     }
@@ -17,10 +24,11 @@
             height: 92%;
             overflow: hidden;
             .bouton2{
+                z-index: 1100;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #f3939e;
+                background-color: $pinkToddle;
                 width: 70px;
                 height: 70px;
                 border-radius: 35px;
@@ -37,13 +45,15 @@
                 right: 53%;
                 position: absolute;
             }
+                /*1ere Pop Up*/
             .wrap {
+            z-index: 1000;
               position: absolute;
               overflow: hidden;
               width: 40%;
               height: 65%;
               left: 5%;
-              top: 19%;
+              top: 22%;
               padding: 20px 50px;
               display: block;
               border-radius: 4px;
@@ -62,7 +72,7 @@
               content: "";
               top: 100%;
               left: 0;
-              color: #fff;
+              color: #fff; 
               border-radius: 50%;
               -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
               transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -70,10 +80,10 @@
             .wrap.active {
               display: block;
               visibility: visible;
-              box-shadow: 2px 3px 16px silver;
               transition: all 600ms;
               transform: translateY(0px);
               transition: all 0.5s;
+              border: 5px solid $pinkToddle;
             }
             .wrap.active:before {
               height: 2000px;
@@ -94,11 +104,68 @@
               opacity: 1;
               transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
             }
-          
+            /*2eme Pop up*/
+
+            .wrap2 {
+                z-index: 1000;
+              position: absolute;
+              overflow: hidden;
+              width: 40%;
+              height: 65%;
+              left: 5%;
+              top: 22%;
+              padding: 20px 50px;
+              display: block;
+              border-radius: 4px;
+              transition: all 0.5s;
+              visibility: hidden;
+              transform: translateY(20px);
+            }
+            .wrap2 .content {
+              opacity: 0;
+            }
+            .wrap2:before {
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              background: white;
+              content: "";
+              top: 100%;
+              left: 100%;
+              color: #fff; 
+              border-radius: 50%;
+              -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+              transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+            .wrap2.active {
+              display: block;
+              visibility: visible;
+              transition: all 600ms;
+              transform: translateY(0px);
+              transition: all 0.5s;
+              border: 5px solid $pinkToddle;
+            }
+            .wrap2.active:before {
+              height: 2000px;
+              width: 2000px;
+              border-radius: 50%;
+              top: 50%;
+              left: 50%;
+              margin-left: -1000px;
+              margin-top: -1000px;
+              display: block;
+              -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+              transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+            .wrap2.active .content {
+              position: relative;
+              z-index: 1;
+              opacity: 1;
+              transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            }
         }
         .rightBloc {
             float: right;
-            background: #FEFBFB;
             width: 50%;
             height: 92%;
             /*margin-right: 2%;*/
@@ -120,7 +187,7 @@
                 bottom: 0;
                 height: 45%;
                 h2{
-                    color: #f3939e;
+                    color: $pinkToddle;
                     font-weight: bold;
                     font-size: 24px;
                 }
@@ -131,7 +198,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #f3939e;
+                    background-color: $pinkToddle;
                     width: 50px;
                     height: 50px;
                     border-radius: 25px;
@@ -143,7 +210,7 @@
                     width: 20%;
                     padding: 15px;
                     margin: 10px auto;
-                    background: #365F7F;
+                    background: $blueToddle;
                     color: #fff;
                     font-family: "GothamRounded", sans-serif;
                     text-align: center;

@@ -28,6 +28,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
     <link rel="stylesheet" href="stylesheets/oeuvre.css" media="all">
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="container">
        <header>
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
@@ -43,6 +44,12 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
         <div id="jeu">
           <section class="leftBloc" id="leftBloc">
               <div class="wrap">
+                <div class='content'>
+                  <h2>Well Hello!</h2>
+                  <p>GROS ZIZI</p>
+                </div>
+              </div>
+              <div class="wrap2">
                 <div class='content'>
                   <h2>Well Hello!</h2>
                   <p>GROS ZIZI</p>
