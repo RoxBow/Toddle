@@ -1,12 +1,11 @@
 
-var canvas=document.getElementById("canvas");
 var jeu = document.getElementById("jeu");
 var leftBloc = document.getElementById("leftBloc");
-var ctx=canvas.getContext("2d");
-canvas.width=window.innerWidth/2;
-canvas.height=leftBloc.offsetHeight;
+var indicecontent = document.getElementById("indicecontent");
 ctx.fillStyle="#002FA7";
 ctx.fillRect(0,0,canvas.width,canvas.height);
+ctx2.fillStyle="#9F00FF";
+ctx2.fillRect(0,0,canvas2.width,canvas2.height);
 
 /* #####    CHRONO      ##### */
 
@@ -49,6 +48,8 @@ $(document).ready(function() {
         var offset = $("#jeu").offset();
         var mouseX, mouseY;
 
+        var actif;
+
         var hm = new Hammer(undo);
         var hm2 = new Hammer(valider);
         var hm3 = new Hammer(indice);
@@ -56,70 +57,71 @@ $(document).ready(function() {
 
         	/*Réactions au touch*/
 
-        hm.on('press', function(e) {
-            undo.style.backgroundColor=bleuToddle;
-        });
-        hm.on('pressup', function(e) {
-            undo.style.backgroundColor=pinkToddle;
-        });
-
         hm.on('tap', function(e) {
             cUndo();
-        });
-
-        hm2.on('press', function(e) {
-            valider.style.backgroundColor=bleuToddle;
-        });
-        hm2.on('pressup', function(e) {
-            valider.style.backgroundColor=pinkToddle;
-        });
-
-        hm3.on('press', function(e) {
-            indice.style.backgroundColor=bleuToddle;
-        });
-        hm3.on('pressup', function(e) {
-            indice.style.backgroundColor=pinkToddle;
-        });
-        hm3.on('tap', function(e) {
-          $('.overlay').fadeToggle();
-          if ($('.wrap2').hasClass('active')) {
-            $('.wrap2').toggleClass('active');
+            $("#undo").toggleClass('bluebouton');
             setTimeout(function(){
-            $('.wrap').toggleClass('active');
-            },700);
+                $('#undo').toggleClass('bluebouton');
+              },150);
+        });
+
+        hm2.on('tap', function(e) {
+            cUndo();
+            $("#valider").toggleClass('bluebouton');
+            setTimeout(function(){
+                $('#valider').toggleClass('bluebouton');
+              },150);
+        });
+
+        hm3.on('tap', function(e) {
+          /*Affichage Pop-up*/
+
+          if ($('.wrap2').hasClass('active')) {
+
+            $('.wrap2').toggleClass('active');
+            $('#but').toggleClass('bluebouton');
+              /*Enlever les deux overlay suivant pour lanimation de 
+              transition entre les deux pop-up, si le noir doit disparaitre, ou pas*/
+            $('.overlay').fadeToggle();
+
+            setTimeout(function(){
+                $('.wrap').toggleClass('active');
+                $('#indice').toggleClass('bluebouton');
+                $('.overlay').fadeToggle();
+              },700);
+
           } else{
             $('.wrap').toggleClass('active');
+            $('#indice').toggleClass('bluebouton');
+             $('.overlay').fadeToggle();
           }
+
+          /*Réaction du bouton*/
         });
 
-        hm4.on('press', function(e) {
-            but.style.backgroundColor=bleuToddle;
-        });
-        hm4.on('pressup', function(e) {
-            but.style.backgroundColor=pinkToddle;
-        });
         hm4.on('tap', function(e) {
-          $('.overlay').fadeToggle();
+
           if ($('.wrap').hasClass('active')) {
+
             $('.wrap').toggleClass('active');
-            setTimeout(function(){
-            $('.wrap2').toggleClass('active');
-            },700);
+            $('#indice').toggleClass('bluebouton');
+            $('.overlay').fadeToggle();
+
+              setTimeout(function(){
+                $('.wrap2').toggleClass('active');
+                $('#but').toggleClass('bluebouton');
+                $('.overlay').fadeToggle();
+              },700);
           } else {
             $('.wrap2').toggleClass('active');
+            $('#but').toggleClass('bluebouton');
+            $('.overlay').fadeToggle();
           }
         });
 
           /*Drag & drop du bouton vert*/
 
         var hammertime = new Hammer(element);
-
-        hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-          /*A voir*/
-        hm.get('press').set({ time: 100 });
-        hm2.get('press').set({ time: 100 });
-        hm3.get('press').set({ time: 100 });
-        hm4.get('press').set({ time: 100 });
 
         hammertime.on('pan', function(e) {
               mouseX = e.center.x;
@@ -131,7 +133,7 @@ $(document).ready(function() {
 
         hammertime.on('panend', function(e) {
           element.style.backgroundColor=bleuToddle;
-          if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width-offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
+          if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width+offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
             ctx.clearRect(0,0,canvas.width,canvas.height);
             ctx.fillStyle="#276D2A";
             ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -158,7 +160,7 @@ $(document).ready(function() {
 
         hammertime2.on('panend', function(e) {
             element2.style.backgroundColor=bleuToddle;
-                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width-offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
+                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width+offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
                   ctx.fillStyle="#ED1C24";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -184,7 +186,7 @@ $(document).ready(function() {
             });
             hammertime3.on('panend', function(e) {
             element3.style.backgroundColor=bleuToddle;
-                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width-offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
+                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width+offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
                   ctx.fillStyle="#FECC0B";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -211,7 +213,7 @@ $(document).ready(function() {
 
         hammertime4.on('panend', function(e) {
             element4.style.backgroundColor=bleuToddle;
-                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width-offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
+                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width+offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
                   ctx.beginPath();
                   ctx.strokeStyle="white";
                   ctx.lineWidth=4;
@@ -239,7 +241,7 @@ $(document).ready(function() {
             });
             hammertime5.on('panend', function(e) {
                 element5.style.backgroundColor=bleuToddle;
-                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width-offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
+                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width+offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
                   ctx.beginPath();
                   ctx.strokeStyle="white";
                   ctx.lineWidth=4;
@@ -268,7 +270,8 @@ $(document).ready(function() {
 
         hammertime6.on('panend', function(e) {
                 element6.style.backgroundColor=bleuToddle;
-                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width-offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
+                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width+offleft)&&(mouseY>jeu.offsetTop+offset.top && mouseY<canvas.height+offset.top)) {
+                  ctx.clearRect(0,0,canvas.width,canvas.height);
                   ctx.fillStyle="#9F00FF";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
                   element6.style.left = "51%";
