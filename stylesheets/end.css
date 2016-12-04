@@ -178,36 +178,35 @@ body {
 .content {
   text-align: center;
   font-size: 2.7rem;
-  height: 59%;
   margin: 10% 0;
   color: #355E7E;
 }
-/* line 13, ../sass/end.scss */
+/* line 12, ../sass/end.scss */
 .content img {
   width: 20%;
   vertical-align: text-bottom;
 }
-/* line 17, ../sass/end.scss */
+/* line 16, ../sass/end.scss */
 .content hr {
   border: 2px solid #F38F9A;
   width: 50%;
-  margin: 40px auto;
+  margin: 4% auto;
 }
-/* line 22, ../sass/end.scss */
+/* line 21, ../sass/end.scss */
 .content p {
   text-transform: uppercase;
 }
-/* line 24, ../sass/end.scss */
+/* line 23, ../sass/end.scss */
 .content p:first-child {
   font-weight: 600;
 }
-/* line 27, ../sass/end.scss */
+/* line 26, ../sass/end.scss */
 .content p.render {
   width: 75%;
-  margin: 0 auto 35px auto;
+  margin: 0 auto 3.5% auto;
 }
-/* line 32, ../sass/end.scss */
+/* line 31, ../sass/end.scss */
 .content button {
   background: #F38F9A;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }

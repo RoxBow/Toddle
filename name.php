@@ -7,17 +7,19 @@ if(isset($_POST['pseudo'])){
     $result = $bdd->prepare("SELECT pseudo FROM user");
     $result->execute();
 
+    $pseudo = trim($_POST['pseudo']); // Remove space before and after string
+    
     // Check error pseudo
     $error = null;
-    if (strlen($_POST['pseudo']) < 3){
+    if (strlen($pseudo) < 3){
         $error = "Pseudo trop court (entre 3 et 10 caractères).";
     }
-    else if (strlen($_POST['pseudo']) > 10){
+    else if (strlen($pseudo) > 10){
         $error = "Pseudo trop long (entre 3 et 10 caractères).";
     }
     else {
         while ($row = $result->fetch(PDO::FETCH_ASSOC)){
-            if($_POST['pseudo'] === $row['pseudo']){
+            if(strtolower($pseudo) === strtolower($row['pseudo']) ){
                 $error = "Pseudo déjà utilisé.";
                 break;
             }
@@ -25,8 +27,8 @@ if(isset($_POST['pseudo'])){
     }
     
     // No error then save pseudo
-    if(strlen($error) == null) {
-        $_SESSION['pseudo'] = $_POST['pseudo'];
+    if($error == null) {
+        $_SESSION['pseudo'] = $pseudo;
         $request = $bdd->prepare("INSERT INTO user (pseudo) VALUES ('".$_SESSION['pseudo']."')"); // prepare command 
         $request->execute(); // Add pseudo to DB
         header('Location: tuto.php');

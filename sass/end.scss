@@ -7,7 +7,6 @@ body {
 .content {
     text-align: center;
     font-size: 2.7rem;
-    height: 59%;
     margin: 10% 0;
     color: $blueToddle;
     img {
@@ -17,7 +16,7 @@ body {
     hr {
         border: 2px solid #F38F9A;
         width: 50%;
-        margin: 40px auto;
+        margin: 4% auto;
     }
     p {
         text-transform: uppercase;
@@ -26,12 +25,12 @@ body {
         }
         &.render {
             width: 75%;
-            margin: 0 auto 35px auto;
+            margin: 0 auto 3.5% auto;
         }
     }
     button {
         @extend .btn_toddle;
         background: $pinkToddle;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }

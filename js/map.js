@@ -41,7 +41,7 @@ $(document).ready(function() {
         //$("#map").contents().find("#room30").attr({"fill":"red", "opacity":"1"});
         
         if (room30.attr("opacity") == '0') {
-            room30.attr({"fill":"red", "opacity":"1"});
+            room30.attr({"fill":"#F38F9A", "opacity":".8"});
         }
         else {
             room30.attr({"opacity":"0"});

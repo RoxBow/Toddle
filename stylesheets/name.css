@@ -214,3 +214,7 @@ html, body {
   font-size: 4vw;
   margin: 2% auto 0 auto;
 }
+/* line 42, ../sass/name.scss */
+.container .container_form button .fa-circle {
+  color: #355E7E;
+}

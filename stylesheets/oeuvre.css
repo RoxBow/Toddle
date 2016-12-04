@@ -214,16 +214,20 @@ html, body {
   width: 50%;
 }
 /* line 40, ../sass/oeuvre.scss */
+.container #jeu .leftBloc .bluebouton {
+  background-color: #355E7E;
+}
+/* line 43, ../sass/oeuvre.scss */
 .container #jeu .leftBloc #indice {
   left: 3%;
   position: absolute;
 }
-/* line 44, ../sass/oeuvre.scss */
+/* line 47, ../sass/oeuvre.scss */
 .container #jeu .leftBloc #but {
   right: 53%;
   position: absolute;
 }
-/* line 49, ../sass/oeuvre.scss */
+/* line 53, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .wrap {
   z-index: 1000;
   position: absolute;
@@ -239,11 +243,11 @@ html, body {
   visibility: hidden;
   transform: translateY(20px);
 }
-/* line 64, ../sass/oeuvre.scss */
+/* line 68, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .wrap .content {
   opacity: 0;
 }
-/* line 67, ../sass/oeuvre.scss */
+/* line 71, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .wrap:before {
   position: absolute;
   width: 1px;
@@ -257,20 +261,20 @@ html, body {
   -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-/* line 80, ../sass/oeuvre.scss */
+/* line 84, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .wrap.active {
   display: block;
   visibility: visible;
   transition: all 600ms;
   transform: translateY(0px);
   transition: all 0.5s;
-  border: 5px solid #F38F9A;
+  border: 7px solid #F38F9A;
 }
-/* line 88, ../sass/oeuvre.scss */
+/* line 92, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .wrap.active:before {
   height: 2000px;
   width: 2000px;
-  border-radius: 50%;
+  border-radius: 75%;
   top: 50%;
   left: 50%;
   margin-left: -1000px;
@@ -279,14 +283,14 @@ html, body {
   -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-/* line 101, ../sass/oeuvre.scss */
+/* line 104, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .wrap.active .content {
   position: relative;
   z-index: 1;
   opacity: 1;
   transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
-/* line 109, ../sass/oeuvre.scss */
+/* line 112, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .wrap2 {
   z-index: 1000;
   position: absolute;
@@ -295,18 +299,23 @@ html, body {
   height: 65%;
   left: 5%;
   top: 22%;
-  padding: 20px 50px;
+  padding: 10px;
   display: block;
   border-radius: 4px;
   transition: all 0.5s;
   visibility: hidden;
   transform: translateY(20px);
 }
-/* line 124, ../sass/oeuvre.scss */
+/* line 127, ../sass/oeuvre.scss */
+.container #jeu .leftBloc #indicecontent {
+  width: 100%;
+  height: 100%;
+}
+/* line 131, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .wrap2 .content {
   opacity: 0;
 }
-/* line 127, ../sass/oeuvre.scss */
+/* line 134, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .wrap2:before {
   position: absolute;
   width: 1px;
@@ -320,7 +329,7 @@ html, body {
   -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-/* line 140, ../sass/oeuvre.scss */
+/* line 147, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .wrap2.active {
   display: block;
   visibility: visible;
@@ -329,7 +338,7 @@ html, body {
   transition: all 0.5s;
   border: 5px solid #F38F9A;
 }
-/* line 148, ../sass/oeuvre.scss */
+/* line 155, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .wrap2.active:before {
   height: 2000px;
   width: 2000px;
@@ -342,32 +351,34 @@ html, body {
   -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-/* line 160, ../sass/oeuvre.scss */
+/* line 167, ../sass/oeuvre.scss */
 .container #jeu .leftBloc .wrap2.active .content {
   position: relative;
   z-index: 1;
   opacity: 1;
   transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  width: 100%;
+  height: 100%;
 }
-/* line 167, ../sass/oeuvre.scss */
+/* line 176, ../sass/oeuvre.scss */
 .container #jeu .rightBloc {
   float: right;
   width: 50%;
   height: 92%;
   /*margin-right: 2%;*/
 }
-/* line 173, ../sass/oeuvre.scss */
+/* line 182, ../sass/oeuvre.scss */
 .container #jeu .rightBloc h2 {
   text-align: center;
   padding: 5px;
   margin: 0;
 }
-/* line 178, ../sass/oeuvre.scss */
+/* line 187, ../sass/oeuvre.scss */
 .container #jeu .rightBloc > div {
   padding: 10px;
   width: 100%;
 }
-/* line 182, ../sass/oeuvre.scss */
+/* line 191, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .codeBloc {
   /*text-align: justify;*/
   font-family: "GothamRounded", sans-serif;
@@ -376,18 +387,18 @@ html, body {
   bottom: 0;
   height: 45%;
 }
-/* line 189, ../sass/oeuvre.scss */
+/* line 198, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .codeBloc h2 {
   color: #F38F9A;
   font-weight: bold;
   font-size: 24px;
 }
-/* line 195, ../sass/oeuvre.scss */
+/* line 204, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc {
   height: 55%;
   /*Les pourcentages de positionnement sont en relation avec le div avec l'id: jeu et non relatif à la div de classe:rightBloc*/
 }
-/* line 197, ../sass/oeuvre.scss */
+/* line 206, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc .bouton {
   display: flex;
   align-items: center;
@@ -398,7 +409,11 @@ html, body {
   border-radius: 25px;
   color: white;
 }
-/* line 207, ../sass/oeuvre.scss */
+/* line 216, ../sass/oeuvre.scss */
+.container #jeu .rightBloc .etiqBloc .bluebouton {
+  background-color: #355E7E;
+}
+/* line 219, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc .etiq {
   cursor: move;
   border-radius: 25px;
@@ -413,49 +428,49 @@ html, body {
   que la position absolute des etiquettes prennent en compte 
   le parent de la div de droite, c-à-d la div jeu pour avoir de bonnes coordonées pour le drop*/
 }
-/* line 222, ../sass/oeuvre.scss */
+/* line 234, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #vert {
   position: absolute;
   margin-top: 2.5%;
   margin-left: 1.5%;
 }
-/* line 227, ../sass/oeuvre.scss */
+/* line 239, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #rouge {
   position: absolute;
   margin-top: 2.5%;
   margin-left: 25.5%;
 }
-/* line 232, ../sass/oeuvre.scss */
+/* line 244, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #jaune {
   position: absolute;
   margin-top: 10%;
   margin-left: 1.5%;
 }
-/* line 237, ../sass/oeuvre.scss */
+/* line 249, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #carre {
   position: absolute;
   margin-top: 10%;
   margin-left: 25.5%;
 }
-/* line 242, ../sass/oeuvre.scss */
+/* line 254, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #rond {
   position: absolute;
   margin-top: 17.5%;
   margin-left: 1.5%;
 }
-/* line 247, ../sass/oeuvre.scss */
+/* line 259, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #violet {
   position: absolute;
   margin-top: 17.5%;
   margin-left: 25.5%;
 }
-/* line 252, ../sass/oeuvre.scss */
+/* line 264, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #undo {
   position: absolute;
   margin-top: 25%;
   margin-left: 9%;
 }
-/* line 258, ../sass/oeuvre.scss */
+/* line 270, ../sass/oeuvre.scss */
 .container #jeu .rightBloc .etiqBloc #valider {
   position: absolute;
   margin-top: 25%;

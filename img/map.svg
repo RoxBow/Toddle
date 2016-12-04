@@ -262,177 +262,51 @@
 
 <!-- ALLEE CENTRALE //////////////////////////// -->
 
-	<a xlink:href="https://www.centrepompidou.fr/id/c9Xx6a9/r5Xx6B5" xlink:show="new">
 		<rect class="overlay" id="allee-nord" x="256.168" y="520.252" opacity="0" fill="#CCCCCC" width="884.211" height="122.521"/>
-		<title class="infobulle">All&#233;e centrale nord</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cEBRLE4/rKbE7j8/fr" xlink:show="new">
 		<rect class="overlay" id="allee-sud" x="1171.053" y="520.252" opacity="0" fill="#CCCCCC" width="1083.309" height="90.17"/>
-		<title class="infobulle">All&#233;e centrale sud</title></a>
-
 
 <!-- SALLES ////////////////////////// -->
 
-	<a xlink:href="https://www.centrepompidou.fr/id/cq55j9e/rR884ng" xlink:show="new">
 		<rect class="overlay" id="room1_1_" x="2117.245" y="618.606" opacity="0" fill="#CCCCCC" width="137.117" height="154.714"/>
-		<title class="infobulle">Salle 1 : Hommage &#224; Jacqueline Picasso</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cBgEpBB/r6XeKe7" xlink:show="new">
 		<rect class="overlay" id="room2_1_" x="2120.629" y="437.697" opacity="0" fill="#CCCCCC" width="128.961" height="82.556"/>
-		<title class="infobulle">Exposition-dossier 2 : Les Stein</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cKbzAp4/roy7KGR" xlink:show="new">
 		<rect class="overlay" id="room3_1_" x="2119.946" y="337.773" opacity="0" fill="#CCCCCC" width="130.207" height="102.158"/>
-		<title class="infobulle">Salle 3 : Expressionnismes</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cRLz8g7/rMbzgob" xlink:show="new">
 		<rect class="overlay" id="room4" x="2119.946" y="279.282" opacity="0" fill="#CCCCCC" width="130.207" height="58.49"/>
-		<title class="infobulle">Salle 4 : Georges Rouault</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cby7ERd/rEB7o57" xlink:show="new">
 		<rect class="overlay" id="room5" x="1931.817" y="437.697" opacity="0" fill="#CCCCCC" width="150.471" height="82.556"/>
-		<title class="infobulle">Salle 5 : Fauvisme</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/crX7EMj/rGB7oXk" xlink:show="new">
 		<rect class="overlay" id="room6" x="1931.018" y="279.282" opacity="0" fill="#CCCCCC" width="151.924" height="160.648"/>
-		<title class="infobulle">Salle 6 : Henri Matisse</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cKbzGX6/reX7546" xlink:show="new">
 		<rect class="overlay" id="room7" x="1929.182" y="201.361" opacity="0" fill="#CCCCCC" width="156.338" height="77.923"/>
-		<title class="infobulle">Salle 7 : Henri Matisse et la chapelle de Vence</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cXy7Edp/rEB7oap" xlink:show="new">
 		<rect class="overlay" id="room8_1_" x="1743.225" y="437.697" opacity="0" fill="#CCCCCC" width="150.471" height="82.556"/>
-		<title class="infobulle">Salle 8 : Fernand L&#233;ger</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cnXzARx/r9X7EMB" xlink:show="new">
 		<rect class="overlay" id="room9_1_" x="1743.288" y="320.882" opacity="0" fill="#CCCCCC" width="151.924" height="119.049"/>
-		<title class="infobulle">Salle 9 : Georges Braque et Pablo Picasso</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cEB7oX9/r4yL5ER" xlink:show="new">
 		<rect class="overlay" id="room10_1_" x="1555.366" y="437.697" opacity="0" fill="#CCCCCC" width="150.471" height="82.556"/>
-		<title class="infobulle">Salle 10 : Pablo Picasso</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cEB7oA9/rrX755L" xlink:show="new">
 		<rect class="overlay" id="room11_1_" x="1554.567" y="279.282" opacity="0" fill="#CCCCCC" width="151.924" height="160.648"/>
-		<title class="infobulle">Salle 11 : Cubismes</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cgXeAKd/rBgExjB" xlink:show="new">
 		<rect class="overlay" id="room12_1_" x="1552.731" y="201.361" opacity="0" fill="#CCCCCC" width="156.338" height="77.923"/>
-		<title class="infobulle">Exposition-dossier 12 : Wilhelm Uhde</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cXy7ERa/r8Xz5aq" xlink:show="new">
 		<rect class="overlay" id="room13_1_" x="1366.401" y="437.697" opacity="0" fill="#CCCCCC" width="150.471" height="82.556"/>
-		<title class="infobulle">Salle 13 : Franti&#353;ek Kupka</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cxXzGKq/rRLzeRp" xlink:show="new">
 		<rect class="overlay" id="room14_1_" x="1365.602" y="279.282" opacity="0" fill="#CCCCCC" width="151.924" height="160.648"/>
-		<title class="infobulle">Salle 14 : Vassily Kandinsky</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cgX75bA/rnXzKKy" xlink:show="new">
 		<rect class="overlay" id="room15_1_" x="1363.766" y="201.361" opacity="0" fill="#CCCCCC" width="156.338" height="77.923"/>
-		<title class="infobulle">Salle 15 : Robert et Sonia Delaunay</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cgX75nA/rdy7Ke7" xlink:show="new">
 		<rect class="overlay" id="room16_1_" x="1178.34" y="437.697" opacity="0" fill="#CCCCCC" width="150.469" height="82.556"/>
-		<title class="infobulle">Salle 16 : De Stijl</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/c6X7Exx/rEB7okn" xlink:show="new">
 		<rect class="overlay" id="room17_1_" x="1177.541" y="279.282" opacity="0" fill="#CCCCCC" width="151.924" height="160.648"/>
-		<title class="infobulle">Salle 17 : Bauhaus</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cAB7R57/rKbzEob" xlink:show="new">
 		<rect class="overlay" id="room18_1_" x="1175.705" y="201.361" opacity="0" fill="#CCCCCC" width="156.336" height="77.923"/>
-		<title class="infobulle">Salle 18 : Constructivismes</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/c8Xzxap/rqyLd8X" xlink:show="new">
 		<rect class="overlay" id="room19" x="992.996" y="415.426" opacity="0" fill="#CCCCCC" width="148.196" height="104.74"/>
-		<title class="infobulle">Salle 19 : Dada</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cLbzAnK/r5X7xk6" xlink:show="new">
 		<rect class="overlay" id="room20" x="991.863" y="295.541" opacity="0" fill="#CCCCCC" width="153.057" height="119.885"/>
-		<title class="infobulle">Salle 20 : Marcel Duchamp, Man Ray, Francis Picabia</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cBgzRnL/rMbzAMX" xlink:show="new">
 		<rect class="overlay" id="room21" x="992.996" y="201.277" opacity="0" fill="#CCCCCC" width="148.196" height="95.902"/>
-		<title class="infobulle">Exposition-dossier 21 : Andr&#233; Breton</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cpX7nAa/rzy7nR5" xlink:show="new">
 		<rect class="overlay" id="room22" x="804.459" y="415.51" opacity="0" fill="#CCCCCC" width="148.196" height="104.74"/>
-		<title class="infobulle">Salle 22 : Balthus, Andr&#233; Derain, Pierre Klossowski</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cxXz5LM/rky7Kzq" xlink:show="new">
 		<rect class="overlay" id="room23" x="802.596" y="295.541" opacity="0" fill="#CCCCCC" width="150.696" height="119.885"/>
-		<title class="infobulle">Salle 23 : Alberto Giacometti</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cpXaerA/rbyagGA" xlink:show="new">
 		<rect class="overlay" id="room24" x="802.596" y="201.361" opacity="0" fill="#CCCCCC" width="153.292" height="95.902"/>
-		<title class="infobulle">Exposition-dossier 24 : Robert Lebel</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/c8X9K4R/reXGKBL" xlink:show="new">
 		<rect class="overlay" id="room25" x="613.348" y="437.697" opacity="0" fill="#CCCCCC" width="148.196" height="82.556"/>
-		<title class="infobulle">Exposition-dossier 25 : Sigfried et Carola Giedion</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cky7KLB/r7yL5ee" xlink:show="new">
 		<rect class="overlay" id="room26" x="613.69" y="279.202" opacity="0" fill="#CCCCCC" width="148.393" height="158.493"/>
-		<title class="infobulle">Salle 26 : Jean Dubuffet</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cRLz8b7/rKbzA97" xlink:show="new">
 		<rect class="overlay" id="room27" x="611.484" y="201.361" opacity="0" fill="#CCCCCC" width="153.292" height="77.923"/>
-		<title class="infobulle">Salle 27 : CoBrA</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/c9X75e9/r6X75E5" xlink:show="new">
 		<rect class="overlay" id="room28" x="426.43" y="437.697" opacity="0" fill="#CCCCCC" width="148.196" height="82.556"/>
-		<title class="infobulle">Salle 28 : Art cin&#233;tique</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cpX78rr/rRLzrz4" xlink:show="new">
 		<rect class="overlay" id="room29" x="423.001" y="279.202" opacity="0" fill="#CCCCCC" width="151.924" height="158.493"/>
-		<title class="infobulle">Salle 29 : Expressionnisme abstrait</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/czy7nx7/rdy7K6k" xlink:show="new">
 		<rect class="overlay" id="room30" x="424.566" y="201.361" opacity="0" fill="#CCCCCC" width="153.292" height="77.923"/>
-		<title class="infobulle">Salle 30 : Abstractions gestuelles</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cjXzERe/rKbzAn8" xlink:show="new">
 		<rect class="overlay" id="room31" x="234.376" y="437.696" opacity="0" fill="#CCCCCC" width="153.292" height="81.148"/>
-		<title class="infobulle">Salle 31 : Fluxus</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/crX75ao/r5X78zj" xlink:show="new">
 		<rect class="overlay" id="room32" x="233.538" y="279.202" opacity="0" fill="#CCCCCC" width="151.924" height="158.493"/>
-		<title class="infobulle">Salle 32 : Nouveau R&#233;alisme</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/c4yLERB/r4yL58z" xlink:show="new">
 		<rect class="overlay" id="room33" x="234.376" y="201.361" opacity="0" fill="#CCCCCC" width="153.292" height="77.923"/>
-		<title class="infobulle">Salle 33 : Lettrisme</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/coyaga6/rxXkG76" xlink:show="new">
 		<rect class="overlay" id="room34" x="55.663" y="437.697" opacity="0" fill="#CCCCCC" width="143.986" height="82.556"/>
-		<title class="infobulle">Exposition-dossier 34 : Alain Jouffroy</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/czy7nR8/rky7Abz" xlink:show="new">
 		<rect class="overlay" id="room35" x="55.663" y="279.202" opacity="0" fill="#CCCCCC" width="143.178" height="158.493"/>
-		<title class="infobulle">Salle 35 : Pop Art</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cEB7oA4/rxXznpB" xlink:show="new">
 		<rect class="overlay" id="room36" x="256.168" y="642.774" opacity="0" fill="#CCCCCC" width="130.807" height="130.546"/>
-		<title class="infobulle">Salle 36 : Mati&#232;re-Concept</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/ceX7Ex4/raX7Exg" xlink:show="new">
 		<rect class="overlay" id="room37" x="423.261" y="642.774" opacity="0" fill="#CCCCCC" width="151.365" height="130.546"/>
-		<title class="infobulle">Salle 37 : Jean Prouv&#233;</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cqyLERr/rrX7E7K" xlink:show="new">
 		<rect class="overlay" id="room38" x="612.447" y="642.774" opacity="0" fill="#CCCCCC" width="151.365" height="130.546"/>
-		<title class="infobulle">Salle 38 : Spatialismes</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cp8XyrE/rAoB4My" xlink:show="new">
 		<rect class="overlay" id="room39" x="800.285" y="642.774" opacity="0" fill="#CCCCCC" width="151.365" height="130.546"/>
-		<title class="infobulle">Salle 39 : Un art pauvre</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/ckKKBjG/rEoo4aE" xlink:show="new">
 		<rect class="overlay" id="room40" x="993.275" y="642.774" opacity="0" fill="#CCCCCC" width="137.117" height="130.546"/>
-		<title class="infobulle">Salle 40 : Un art pauvre</title></a>
-
 
 <!-- LES TRAVERSES ////////////////////// -->
 
@@ -446,63 +320,24 @@
 		<title class="infobulle">TitreIci</title></a>
 /////////////////////////////////////// -->
 
-	<a xlink:href="https://www.centrepompidou.fr/id/ckydMEg/ryXxz56" xlink:show="new">
 		<rect class="overlay" id="alleeC" x="1705.313" y="410.275" opacity="0" fill="#CCCCCC" width="38.863" height="108.569"/>
-		<title class="infobulle">Exposition-dossier : Blaise Cendrars</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cXyGgnL/rMbn5eg" xlink:show="new">
 		<rect class="overlay" id="alleeD" x="1516.098" y="380.406" opacity="0" fill="#CCCCCC" width="38.865" height="139.76"/>
-		<title class="infobulle">Exposition-dossier : Oswald de Andrade</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cpXaeAG/rxXkEnK" xlink:show="new">
 		<rect class="overlay" id="alleeE" x="1326.589" y="382.112" opacity="0" fill="#CCCCCC" width="38.363" height="138.055"/>
-		<title class="infobulle">Exposition-dossier : Les cours de Vassily Kandinsky au Bauhaus</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/c5X9EKG/rnXGp5q" xlink:show="new">
 		<rect class="overlay" id="alleeF" x="954.13" y="382.008" opacity="0" fill="#CCCCCC" width="38.865" height="138.158"/>
-		<title class="infobulle">Exposition-dossier : Aim&#233; C&#233;saire</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/c5X9E6K/rrXaAXB" xlink:show="new">
 		<rect class="overlay" id="alleeG" x="760.619" y="382.112" opacity="0" fill="#CCCCCC" width="37.838" height="138.055"/>
-		<title class="infobulle">Exposition-dossier : Francis Ponge</title></a>
 
 <!-- Traverse H de l'autre côté de la rue - expo Banham -->
-	<a xlink:href="" xlink:show="new">
 		<rect class="overlay" id="alleeH" x="574.825" y="638.012" opacity="0" fill="#CCCCCC" width="38.865" height="135.852"/>
-		<title class="infobulle"></title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cLb85LM/ryXeGbG" xlink:show="new">
 		<rect class="overlay" id="alleeI" x="385.992" y="199.177" opacity="0" fill="#CCCCCC" width="38.865" height="320.99"/>
-		<title class="infobulle">Exposition-dossier : Bernard Gheerbrant</title></a>
 
 
 <!-- LES TERRASSES ////////////////////// -->
 
-	<a xlink:href="https://www.centrepompidou.fr/id/cbqoj6b/rKeA8y" xlink:show="new">
 		<rect class="overlay" id="terrasse-sud_1_" x="2278.795" y="187.733" opacity="0" fill="#CCCCCC" width="89.117" height="598.147"/>
-		<title class="infobulle">Terrasse sud</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/cEbRakG/r88eK5R" xlink:show="new">
 		<rect class="overlay" id="terrasse-ouest" x="1147.255" y="617.789" opacity="0" fill="#CCCCCC" width="589.574" height="168.091"/>
-		<title class="infobulle">Terrasse ouest</title></a>
-
-	<a xlink:href="https://www.centrepompidou.fr/id/ck4Mbxj/r8xX54" xlink:show="new">
 		<rect class="overlay" id="terrasse-nord_1_" x="41.811" y="541.807" opacity="0" fill="#CCCCCC" width="183.805" height="244.073"/>
-		<title class="infobulle">Terrasse nord</title></a>
 
 </g>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!--/////////////////////// PLAN /////////////////////////////////////////////////////-->
 

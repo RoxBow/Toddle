@@ -1,3 +1,5 @@
+var oeuvre, newOeuvre;
+
 $(document).ready(function() {
     // button launch experience
     $(".launch",".container").click(function() {
@@ -29,4 +31,40 @@ $(document).ready(function() {
             return false;
         });
     });
+    
+    // Our own oeuvre picture
+    oeuvre = new Image();
+    oeuvre.src = "img/retour.png";
+    newOeuvre = getBase64Image(oeuvre);
 });
+
+// Compare 2 pictures when user add his one
+function getFile() {
+    var userFile = document.querySelector('#picture').files[0]; // Img
+    // When user takes his photo
+    if (userFile) {
+        console.log(userFile);
+        var diff = resemble(userFile).compareTo(newOeuvre).ignoreColors().onComplete(function(data){
+            console.log(data);
+        });
+    }
+}
+
+// Transform img in encode base 64 with canvas
+function getBase64Image(img) {
+    // Create an empty canvas element
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    // Copy the image contents to the canvas
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+
+    // Get the data-URL formatted image
+    // Firefox supports PNG and JPEG. You could check img.src to
+    // guess the original format, but be aware the using "image/jpg"
+    // will re-encode the image.
+    var dataURL = canvas.toDataURL("image/png");
+    return dataURL;
+}

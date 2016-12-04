@@ -148,7 +148,7 @@ html, body {
 }
 
 /* line 150, ../sass/general.scss */
-.btn_toddle, .container .lessons .lesson .content .understood {
+.btn_toddle, .container .lessons .lesson.up .understood {
   background: #355E7E;
   padding: 20px;
   color: #fff;
@@ -170,91 +170,202 @@ html, body {
 }
 
 /* line 6, ../sass/tuto.scss */
-.container .lessons {
-  height: 83%;
-  width: 100%;
+.container p {
+  text-align: center;
 }
 /* line 9, ../sass/tuto.scss */
+.container .entete {
+  color: #355E7E;
+  margin: 0 0 2% 0;
+}
+/* line 12, ../sass/tuto.scss */
+.container .entete p {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 2.2vw;
+}
+/* line 16, ../sass/tuto.scss */
+.container .entete p:first-child {
+  width: auto;
+  font-size: 3.2vw;
+  font-weight: 600;
+  margin: 0% 0 2% 0;
+}
+/* line 22, ../sass/tuto.scss */
+.container .entete p span {
+  color: #F38F9A;
+}
+/* line 27, ../sass/tuto.scss */
+.container .lessons {
+  height: 59%;
+  width: 100%;
+  color: #fff;
+}
+/* line 31, ../sass/tuto.scss */
 .container .lessons .lesson {
   width: 10%;
   height: 100%;
   float: left;
   text-align: center;
-  display: flex;
   position: relative;
-  flex-direction: column;
-  justify-content: center;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   transition: all 1s ease;
 }
-/* line 21, ../sass/tuto.scss */
-.container .lessons .lesson * {
+/* line 40, ../sass/tuto.scss */
+.container .lessons .lesson .content *, .container .lessons .lesson .fa-chevron-left {
   display: none;
 }
-/* line 24, ../sass/tuto.scss */
+/* line 43, ../sass/tuto.scss */
+.container .lessons .lesson .content {
+  color: #fff;
+}
+/* line 45, ../sass/tuto.scss */
+.container .lessons .lesson .content hr {
+  border: 4px solid #fff;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
+}
+/* line 54, ../sass/tuto.scss */
+.container .lessons .lesson .content .number {
+  box-sizing: content-box;
+  display: inline-block;
+  font-weight: bold;
+  border: none;
+  width: auto;
+  height: auto;
+  margin: 12% 0 2% 0;
+  line-height: inherit;
+  font-size: 5.4vw;
+}
+/* line 66, ../sass/tuto.scss */
+.container .lessons .lesson .fa-chevron-left {
+  position: absolute;
+  left: -9.5%;
+  bottom: 6%;
+  color: #fff;
+  font-size: 5.5vw;
+}
+/* line 73, ../sass/tuto.scss */
 .container .lessons .lesson:first-child {
   border-radius: 20px 0 0 20px;
   background: #F8B195;
 }
-/* line 27, ../sass/tuto.scss */
+/* line 76, ../sass/tuto.scss */
 .container .lessons .lesson:first-child .understood {
   color: #F8B195;
 }
-/* line 31, ../sass/tuto.scss */
+/* line 80, ../sass/tuto.scss */
 .container .lessons .lesson:nth-child(2) {
   background: #F38F9A;
 }
-/* line 33, ../sass/tuto.scss */
+/* line 82, ../sass/tuto.scss */
 .container .lessons .lesson:nth-child(2) .understood {
   color: #F38F9A;
 }
-/* line 37, ../sass/tuto.scss */
+/* line 86, ../sass/tuto.scss */
 .container .lessons .lesson:last-child {
   border-radius: 0 20px 20px 0;
   background: #355E7E;
 }
-/* line 40, ../sass/tuto.scss */
+/* line 89, ../sass/tuto.scss */
 .container .lessons .lesson:last-child .understood {
   color: #355E7E;
 }
-/* line 45, ../sass/tuto.scss */
+/* line 94, ../sass/tuto.scss */
 .container .lessons .lesson.up {
   width: 80%;
 }
-/* line 47, ../sass/tuto.scss */
-.container .lessons .lesson.up * {
+/* line 96, ../sass/tuto.scss */
+.container .lessons .lesson.up .fa-chevron-left {
   display: block;
 }
-/* line 51, ../sass/tuto.scss */
-.container .lessons .lesson .fa-chevron-left {
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  color: white;
+/* line 100, ../sass/tuto.scss */
+.container .lessons .lesson.up .content hr {
+  display: none;
 }
-/* line 58, ../sass/tuto.scss */
-.container .lessons .lesson .content .number {
-  font-size: 110px;
+/* line 103, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .number {
+  margin: 2% 0 2% 0;
+  font-size: 7vw;
   box-sizing: content-box;
   border-radius: 50%;
-  border: 10px solid #fff;
+  border: 7px solid #fff;
   display: inline-block;
-  color: #fff;
   font-weight: bold;
-  width: 180px;
-  line-height: 180px;
-  height: 180px;
+  width: 10%;
+  line-height: 80px;
 }
-/* line 70, ../sass/tuto.scss */
-.container .lessons .lesson .content .explication {
-  margin: 50px 0;
-  font-size: 22px;
-  color: #fff;
-  width: 80VW;
+/* line 114, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .group_gif {
+  width: 50%;
+  margin: 2% auto;
 }
-/* line 76, ../sass/tuto.scss */
-.container .lessons .lesson .content .understood {
+/* line 117, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .group_gif img {
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 123, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .map {
+  width: 50%;
+  margin: 2% auto;
+}
+/* line 127, ../sass/tuto.scss */
+.container .lessons .lesson.up .content p {
+  font-size: 2vw;
+  width: 60vw;
+  margin: 0 auto;
+}
+/* line 132, ../sass/tuto.scss */
+.container .lessons .lesson.up .content ul {
+  margin: 2% 12% 0 0;
+}
+/* line 135, ../sass/tuto.scss */
+.container .lessons .lesson.up .content ul li {
+  width: 50%;
+  float: left;
+  margin: 0 0 3% 0;
+}
+/* line 139, ../sass/tuto.scss */
+.container .lessons .lesson.up .content ul li p, .container .lessons .lesson.up .content ul li img {
+  display: inline-block;
+}
+/* line 142, ../sass/tuto.scss */
+.container .lessons .lesson.up .content ul li p {
+  width: 100%;
+  margin: 2% 0;
+}
+/* line 146, ../sass/tuto.scss */
+.container .lessons .lesson.up .content ul li img {
+  width: 19%;
+  animation: animate_icon .9s infinite linear alternate;
+}
+/* line 152, ../sass/tuto.scss */
+.container .lessons .lesson.up .content * {
+  display: block;
+}
+/* line 157, ../sass/tuto.scss */
+.container .lessons .lesson.up .understood {
   background: #fff;
-  padding: 8px 70px;
+  position: absolute;
+  right: 2%;
+  bottom: 3%;
+  padding: 0;
+  width: 9%;
+  height: 16%;
+}
+
+@keyframes animate_icon {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
 }
