@@ -5,150 +5,119 @@
 /* ###### FONTS ###### */
 @font-face {
   font-family: "GothamRounded";
-  src: url(../fonts/GothamRoundedBook.ttf);
-}
+  src: url(../fonts/GothamRoundedBook.ttf); }
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedBold.ttf);
-  font-weight: bold;
-}
+  font-weight: bold; }
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedMedium.ttf);
-  font-weight: 600;
-}
+  font-weight: 600; }
 @font-face {
   font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata.otf);
-}
-/* line 39, ../sass/general.scss */
+  src: url(../fonts/Inconsolata.otf); }
 html, body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
   font-family: "GothamRounded", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
-/* line 48, ../sass/general.scss */
 .fa {
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
-/* line 52, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
-  position: relative;
-}
-/* line 57, ../sass/general.scss */
-.container * {
-  outline: none;
-  box-sizing: border-box;
-}
-/* line 61, ../sass/general.scss */
-.container input {
-  font-family: 'GothamRounded';
-}
-/* line 64, ../sass/general.scss */
-.container button {
-  background: none;
-  border: none;
-  font-family: 'GothamRounded';
-  text-transform: uppercase;
-  font-weight: 600;
-}
-/* line 71, ../sass/general.scss */
-.container header {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  width: 100%;
-  margin: 0 0 15px 0;
-  height: 15%;
-}
-/* line 78, ../sass/general.scss */
-.container header .toddle_form {
-  height: 80%;
-  float: left;
-}
-/* line 82, ../sass/general.scss */
-.container header .toddle_text {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 25%;
-  margin: auto;
-  height: 50%;
-}
-/* line 90, ../sass/general.scss */
-.container header .blockRight {
-  position: absolute;
-  right: 5%;
-  top: 40%;
-  width: auto;
-  font-size: 25px;
-}
-/* line 96, ../sass/general.scss */
-.container header .blockRight .name, .container header .blockRight .chrono {
-  color: #F38F9A;
-  display: inline-block;
-}
-/* line 100, ../sass/general.scss */
-.container header .blockRight .chrono {
-  display: inline-block;
-}
-/* line 102, ../sass/general.scss */
-.container header .blockRight .chrono input {
-  font-size: 25px;
-  color: #F38F9A;
-  display: inline-block;
-  width: 50px;
-  text-align: center;
-  border: none;
-  background: none;
-}
-/* line 114, ../sass/general.scss */
-.container .overlay {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-}
-/* line 126, ../sass/general.scss */
-.container .overlay .popup {
-  background-color: #fefefe;
-  border: 15px solid #F38F9A;
-  border-radius: 15px;
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  left: 0;
-  right: 0;
-  padding: 15px;
-}
-/* line 140, ../sass/general.scss */
-.container .overlay .close {
-  color: #aaa;
-  position: absolute;
-  right: 2%;
-  top: 2%;
-  font-size: 4vw;
-}
+  position: relative; }
+  .container * {
+    outline: none;
+    box-sizing: border-box; }
+  .container input {
+    font-family: 'GothamRounded'; }
+  .container button {
+    background: none;
+    border: none;
+    font-family: 'GothamRounded';
+    text-transform: uppercase;
+    font-weight: 600; }
+  .container header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 15px 0;
+    height: 15%; }
+    .container header .toddle_form {
+      height: 80%;
+      float: left; }
+    .container header .toddle_text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 25%;
+      margin: auto;
+      height: 50%; }
+    .container header .blockRight {
+      position: absolute;
+      right: 5%;
+      top: 40%;
+      width: auto;
+      font-size: 25px; }
+      .container header .blockRight .name, .container header .blockRight .chrono {
+        color: #F38F9A;
+        display: inline-block; }
+      .container header .blockRight .chrono {
+        display: inline-block; }
+        .container header .blockRight .chrono input {
+          font-size: 25px;
+          color: #F38F9A;
+          display: inline-block;
+          width: 50px;
+          text-align: center;
+          border: none;
+          background: none; }
+  .container .overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center; }
+    .container .overlay .popup {
+      background-color: #fefefe;
+      border: 15px solid #F38F9A;
+      border-radius: 15px;
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      color: #355E7E;
+      font-size: 20px; }
+      .container .overlay .popup .sous-titre {
+        color: #F38F9A;
+        font-size: 32px;
+        font-weight: bold; }
+    .container .overlay .close {
+      color: #aaa;
+      position: absolute;
+      right: 2%;
+      top: 2%;
+      font-size: 4vw; }
 
-/* line 150, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -156,10 +125,8 @@ html, body {
   border: none;
   border-radius: 50px;
   font-size: 30px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
-/* line 160, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -167,312 +134,294 @@ html, body {
   border-radius: 35px;
   font-size: 30px;
   width: 70px;
-  height: 70px;
-}
+  height: 70px; }
 
-/* line 4, ../sass/oeuvre.scss */
 .overlay {
   position: absolute;
   display: none;
   width: 100%;
   height: 100%;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+  background-color: rgba(0, 0, 0, 0.5); }
 
-/* line 15, ../sass/oeuvre.scss */
+.container #win {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  display: none; }
+  .container #win .title {
+    font-weight: bold;
+    color: #F38F9A;
+    font-size: 54px; }
+  .container #win .titlesuite {
+    color: #F38F9A;
+    font-size: 42px; }
+  .container #win .content-win {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 3.75%;
+    padding-top: 2%;
+    border: 5px solid #355E7E;
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    color: #355E7E;
+    font-size: 26px; }
+    .container #win .content-win hr {
+      border: 3px solid #F38F9A;
+      border-radius: 25px;
+      width: 70%;
+      margin: 3% auto; }
+    .container #win .content-win .continuer {
+      color: #fff;
+      background-color: #355E7E;
+      width: 35%;
+      height: 75px;
+      border-radius: 50px;
+      font-size: 35px; }
+    .container #win .content-win .name {
+      color: #F38F9A; }
+.container #loose {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  display: none; }
+  .container #loose .content-loose {
+    width: 70%;
+    height: 60%;
+    margin-left: 15%;
+    margin-top: 15%;
+    border: 5px solid #F38F9A;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50px; }
 .container #jeu {
   width: 100%;
   height: 83%;
-  /*Décalage compensé dans .rightBloc pour pas de bug dans les coordonnées pour le drop des étiquettes*/
+  /*D├®calage compens├® dans .rightBloc pour pas de bug dans les coordonn├®es pour le drop des ├®tiquettes*/
   padding-left: 2%;
-  padding-right: 2%;
-}
-/* line 21, ../sass/oeuvre.scss */
-.container #jeu .leftBloc {
-  float: left;
-  width: 48%;
-  height: 92%;
-  overflow: hidden;
-  /*1ere Pop Up*/
-  /*2eme Pop up*/
-}
-/* line 26, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .bouton2 {
-  z-index: 1100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F38F9A;
-  width: 70px;
-  height: 70px;
-  border-radius: 35px;
-  bottom: 10%;
-}
-/* line 36, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .bouton2 > img {
-  width: 50%;
-}
-/* line 40, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .bluebouton {
-  background-color: #355E7E;
-}
-/* line 43, ../sass/oeuvre.scss */
-.container #jeu .leftBloc #indice {
-  left: 3%;
-  position: absolute;
-}
-/* line 47, ../sass/oeuvre.scss */
-.container #jeu .leftBloc #but {
-  right: 53%;
-  position: absolute;
-}
-/* line 53, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .wrap {
-  z-index: 1000;
-  position: absolute;
-  overflow: hidden;
-  width: 40%;
-  height: 65%;
-  left: 5%;
-  top: 22%;
-  padding: 20px 50px;
-  display: block;
-  border-radius: 4px;
-  transition: all 0.5s;
-  visibility: hidden;
-  transform: translateY(20px);
-}
-/* line 68, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .wrap .content {
-  opacity: 0;
-}
-/* line 71, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .wrap:before {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  background: white;
-  content: "";
-  top: 100%;
-  left: 0;
-  color: #fff;
-  border-radius: 50%;
-  -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-/* line 84, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .wrap.active {
-  display: block;
-  visibility: visible;
-  transition: all 600ms;
-  transform: translateY(0px);
-  transition: all 0.5s;
-  border: 7px solid #F38F9A;
-}
-/* line 92, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .wrap.active:before {
-  height: 2000px;
-  width: 2000px;
-  border-radius: 75%;
-  top: 50%;
-  left: 50%;
-  margin-left: -1000px;
-  margin-top: -1000px;
-  display: block;
-  -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-/* line 104, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .wrap.active .content {
-  position: relative;
-  z-index: 1;
-  opacity: 1;
-  transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-/* line 112, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .wrap2 {
-  z-index: 1000;
-  position: absolute;
-  overflow: hidden;
-  width: 40%;
-  height: 65%;
-  left: 5%;
-  top: 22%;
-  padding: 10px;
-  display: block;
-  border-radius: 4px;
-  transition: all 0.5s;
-  visibility: hidden;
-  transform: translateY(20px);
-}
-/* line 127, ../sass/oeuvre.scss */
-.container #jeu .leftBloc #indicecontent {
-  width: 100%;
-  height: 100%;
-}
-/* line 131, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .wrap2 .content {
-  opacity: 0;
-}
-/* line 134, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .wrap2:before {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  background: white;
-  content: "";
-  top: 100%;
-  left: 100%;
-  color: #fff;
-  border-radius: 50%;
-  -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-/* line 147, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .wrap2.active {
-  display: block;
-  visibility: visible;
-  transition: all 600ms;
-  transform: translateY(0px);
-  transition: all 0.5s;
-  border: 5px solid #F38F9A;
-}
-/* line 155, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .wrap2.active:before {
-  height: 2000px;
-  width: 2000px;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  margin-left: -1000px;
-  margin-top: -1000px;
-  display: block;
-  -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-/* line 167, ../sass/oeuvre.scss */
-.container #jeu .leftBloc .wrap2.active .content {
-  position: relative;
-  z-index: 1;
-  opacity: 1;
-  transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  width: 100%;
-  height: 100%;
-}
-/* line 176, ../sass/oeuvre.scss */
-.container #jeu .rightBloc {
-  float: right;
-  width: 50%;
-  height: 92%;
-  /*margin-right: 2%;*/
-}
-/* line 182, ../sass/oeuvre.scss */
-.container #jeu .rightBloc h2 {
-  text-align: center;
-  padding: 5px;
-  margin: 0;
-}
-/* line 187, ../sass/oeuvre.scss */
-.container #jeu .rightBloc > div {
-  padding: 10px;
-  width: 100%;
-}
-/* line 191, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .codeBloc {
-  /*text-align: justify;*/
-  font-family: "GothamRounded", sans-serif;
-  font-size: 16px;
-  padding: 15px;
-  bottom: 0;
-  height: 45%;
-}
-/* line 198, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .codeBloc h2 {
-  color: #F38F9A;
-  font-weight: bold;
-  font-size: 24px;
-}
-/* line 204, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .etiqBloc {
-  height: 55%;
-  /*Les pourcentages de positionnement sont en relation avec le div avec l'id: jeu et non relatif à la div de classe:rightBloc*/
-}
-/* line 206, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .etiqBloc .bouton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F38F9A;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  color: white;
-}
-/* line 216, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .etiqBloc .bluebouton {
-  background-color: #355E7E;
-}
-/* line 219, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .etiqBloc .etiq {
-  cursor: move;
-  border-radius: 25px;
-  width: 20%;
-  padding: 15px;
-  margin: 10px auto;
-  background: #355E7E;
-  color: #fff;
-  font-family: "GothamRounded", sans-serif;
-  text-align: center;
-  /*Pas de position: relative car jai besoin pour le drag&drop, 
-  que la position absolute des etiquettes prennent en compte 
-  le parent de la div de droite, c-à-d la div jeu pour avoir de bonnes coordonées pour le drop*/
-}
-/* line 234, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .etiqBloc #vert {
-  position: absolute;
-  margin-top: 2.5%;
-  margin-left: 1.5%;
-}
-/* line 239, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .etiqBloc #rouge {
-  position: absolute;
-  margin-top: 2.5%;
-  margin-left: 25.5%;
-}
-/* line 244, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .etiqBloc #jaune {
-  position: absolute;
-  margin-top: 10%;
-  margin-left: 1.5%;
-}
-/* line 249, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .etiqBloc #carre {
-  position: absolute;
-  margin-top: 10%;
-  margin-left: 25.5%;
-}
-/* line 254, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .etiqBloc #rond {
-  position: absolute;
-  margin-top: 17.5%;
-  margin-left: 1.5%;
-}
-/* line 259, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .etiqBloc #violet {
-  position: absolute;
-  margin-top: 17.5%;
-  margin-left: 25.5%;
-}
-/* line 264, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .etiqBloc #undo {
-  position: absolute;
-  margin-top: 25%;
-  margin-left: 9%;
-}
-/* line 270, ../sass/oeuvre.scss */
-.container #jeu .rightBloc .etiqBloc #valider {
-  position: absolute;
-  margin-top: 25%;
-  margin-left: 33.5%;
-}
+  padding-right: 2%; }
+  .container #jeu .leftBloc {
+    float: left;
+    width: 48%;
+    height: 92%;
+    overflow: hidden;
+    /*1ere Pop Up*/
+    /*2eme Pop up*/ }
+    .container #jeu .leftBloc .bouton2 {
+      z-index: 1100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #F38F9A;
+      width: 70px;
+      height: 70px;
+      border-radius: 35px;
+      bottom: 10%; }
+      .container #jeu .leftBloc .bouton2 > img {
+        width: 50%; }
+    .container #jeu .leftBloc .bluebouton {
+      background-color: #355E7E; }
+    .container #jeu .leftBloc #indice {
+      left: 3%;
+      position: absolute; }
+    .container #jeu .leftBloc #but {
+      right: 53%;
+      position: absolute; }
+    .container #jeu .leftBloc .wrap {
+      z-index: 1000;
+      position: absolute;
+      overflow: hidden;
+      width: 40%;
+      height: 65%;
+      left: 5%;
+      top: 22%;
+      padding: 20px 50px;
+      display: block;
+      border-radius: 4px;
+      transition: all 0.5s;
+      visibility: hidden;
+      transform: translateY(20px); }
+    .container #jeu .leftBloc .wrap .content {
+      opacity: 0; }
+    .container #jeu .leftBloc .wrap:before {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      background: white;
+      content: "";
+      top: 100%;
+      left: 0;
+      color: #fff;
+      border-radius: 50%;
+      -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .container #jeu .leftBloc .wrap.active {
+      display: block;
+      visibility: visible;
+      transition: all 600ms;
+      transform: translateY(0px);
+      transition: all 0.5s;
+      border: 7px solid #F38F9A; }
+    .container #jeu .leftBloc .wrap.active:before {
+      height: 2000px;
+      width: 2000px;
+      border-radius: 75%;
+      top: 50%;
+      left: 50%;
+      margin-left: -1000px;
+      margin-top: -1000px;
+      display: block;
+      -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .container #jeu .leftBloc .wrap.active .content {
+      position: relative;
+      z-index: 1;
+      opacity: 1;
+      transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    .container #jeu .leftBloc .wrap2 {
+      z-index: 1000;
+      position: absolute;
+      overflow: hidden;
+      width: 40%;
+      height: 65%;
+      left: 5%;
+      top: 22%;
+      padding: 10px;
+      display: block;
+      border-radius: 4px;
+      transition: all 0.5s;
+      visibility: hidden;
+      transform: translateY(20px); }
+    .container #jeu .leftBloc #indicecontent {
+      width: 100%;
+      height: 100%; }
+    .container #jeu .leftBloc .wrap2 .content {
+      opacity: 0; }
+    .container #jeu .leftBloc .wrap2:before {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      background: white;
+      content: "";
+      top: 100%;
+      left: 100%;
+      color: #fff;
+      border-radius: 50%;
+      -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .container #jeu .leftBloc .wrap2.active {
+      display: block;
+      visibility: visible;
+      transition: all 600ms;
+      transform: translateY(0px);
+      transition: all 0.5s;
+      border: 5px solid #F38F9A; }
+    .container #jeu .leftBloc .wrap2.active:before {
+      height: 2000px;
+      width: 2000px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      margin-left: -1000px;
+      margin-top: -1000px;
+      display: block;
+      -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .container #jeu .leftBloc .wrap2.active .content {
+      position: relative;
+      z-index: 1;
+      opacity: 1;
+      transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      width: 100%;
+      height: 100%; }
+  .container #jeu .rightBloc {
+    float: right;
+    width: 50%;
+    height: 92%;
+    /*margin-right: 2%;*/ }
+    .container #jeu .rightBloc h2 {
+      text-align: center;
+      padding: 5px;
+      margin: 0; }
+    .container #jeu .rightBloc > div {
+      padding: 10px;
+      width: 100%; }
+    .container #jeu .rightBloc .codeBloc {
+      /*text-align: justify;*/
+      font-family: "GothamRounded", sans-serif;
+      font-size: 16px;
+      padding: 15px;
+      bottom: 0;
+      height: 45%; }
+      .container #jeu .rightBloc .codeBloc h2 {
+        color: #F38F9A;
+        font-weight: bold;
+        font-size: 24px; }
+    .container #jeu .rightBloc .etiqBloc {
+      height: 55%;
+      /*Les pourcentages de positionnement sont en relation avec le div avec l'id: jeu et non relatif ├á la div de classe:rightBloc*/ }
+      .container #jeu .rightBloc .etiqBloc .bouton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F38F9A;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        color: white; }
+      .container #jeu .rightBloc .etiqBloc .bluebouton {
+        background-color: #355E7E; }
+      .container #jeu .rightBloc .etiqBloc .etiq {
+        cursor: move;
+        border-radius: 25px;
+        width: 20%;
+        padding: 15px;
+        margin: 10px auto;
+        background: #355E7E;
+        color: #fff;
+        font-family: "GothamRounded", sans-serif;
+        text-align: center;
+        /*Pas de position: relative car jai besoin pour le drag&drop, 
+        que la position absolute des etiquettes prennent en compte 
+        le parent de la div de droite, c-├á-d la div jeu pour avoir de bonnes coordon├®es pour le drop*/ }
+      .container #jeu .rightBloc .etiqBloc #vert {
+        position: absolute;
+        margin-top: 2.5%;
+        margin-left: 1.5%; }
+      .container #jeu .rightBloc .etiqBloc #rouge {
+        position: absolute;
+        margin-top: 2.5%;
+        margin-left: 25.5%; }
+      .container #jeu .rightBloc .etiqBloc #jaune {
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 1.5%; }
+      .container #jeu .rightBloc .etiqBloc #carre {
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 25.5%; }
+      .container #jeu .rightBloc .etiqBloc #rond {
+        position: absolute;
+        margin-top: 17.5%;
+        margin-left: 1.5%; }
+      .container #jeu .rightBloc .etiqBloc #violet {
+        position: absolute;
+        margin-top: 17.5%;
+        margin-left: 25.5%; }
+      .container #jeu .rightBloc .etiqBloc #undo {
+        position: absolute;
+        margin-top: 25%;
+        margin-left: 9%; }
+      .container #jeu .rightBloc .etiqBloc #valider {
+        position: absolute;
+        margin-top: 25%;
+        margin-left: 33.5%; }
+
+/*# sourceMappingURL=oeuvre.css.map */

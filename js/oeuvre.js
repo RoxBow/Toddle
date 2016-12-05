@@ -42,6 +42,7 @@ $(document).ready(function() {
     chrono();
 });
 
+
 /*Intéractions sur la page*/
 
 
@@ -100,7 +101,7 @@ $(document).ready(function() {
             });
         });
 
-        $("#continuer").click(function(){
+        $(".continuer").click(function(){
           window.location.replace("result.php");
         });
 

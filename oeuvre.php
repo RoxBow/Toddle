@@ -32,13 +32,31 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
     <div class="container">
       <div id="win">
           <div class="content-win">
-            <p>T'as gagner <?php echo $_SESSION['pseudo'];?>&nbsp;!</p><br/>
-            <input type="button" name="continuer" value="continuer" id="continuer">
+            <p class="title">
+              F&#201;LICITATIONS !
+            </p>
+            <hr>
+            <p class="text-win">
+              Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+            </p>
+            <p>
+              Tu as réussi le premier défi !
+            </p>
+            <br>
+            <p>
+              Il consistait à transformer l'oeuvre de Yves Klein pour te faire découvrir l'algorithmique.
+            </p>
+            <br>
+            <p>
+              Récapitulons, ce que tu viens de mettre en application: <br>
+            </p>
+            <br>
+            <button class="continuer">D&#201;FI SUIVANT</button>
           </div>
       </div>
       <div id="loose">
           <div class="content-loose">
-            <p>Les deux images ne conrrespondent pas <?php echo $_SESSION['pseudo']; ?>&nbsp;!</p><br/>
+            <p>Les deux images ne conrrespondent pas <?php echo $_SESSION['pseudo']; ?>&nbsp;!</p><br>
             <input type="button" name="continuer" value="continuer" id="rechercher">
           </div>
       </div>
@@ -50,7 +68,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 <form name="chrono" class="chrono">
                     <input type="text" name="minute" id="min">min
                     <input type="text" name="seconde" id="sec">s
-                </form><br/>
+                </form><br>
            </div>
         </header>
         <div id="jeu">

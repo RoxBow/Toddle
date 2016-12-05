@@ -4,150 +4,119 @@
 /* ###### FONTS ###### */
 @font-face {
   font-family: "GothamRounded";
-  src: url(../fonts/GothamRoundedBook.ttf);
-}
+  src: url(../fonts/GothamRoundedBook.ttf); }
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedBold.ttf);
-  font-weight: bold;
-}
+  font-weight: bold; }
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedMedium.ttf);
-  font-weight: 600;
-}
+  font-weight: 600; }
 @font-face {
   font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata.otf);
-}
-/* line 39, ../sass/general.scss */
+  src: url(../fonts/Inconsolata.otf); }
 html, body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
   font-family: "GothamRounded", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
-/* line 48, ../sass/general.scss */
 .fa {
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
-/* line 52, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
-  position: relative;
-}
-/* line 57, ../sass/general.scss */
-.container * {
-  outline: none;
-  box-sizing: border-box;
-}
-/* line 61, ../sass/general.scss */
-.container input {
-  font-family: 'GothamRounded';
-}
-/* line 64, ../sass/general.scss */
-.container button {
-  background: none;
-  border: none;
-  font-family: 'GothamRounded';
-  text-transform: uppercase;
-  font-weight: 600;
-}
-/* line 71, ../sass/general.scss */
-.container header {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  width: 100%;
-  margin: 0 0 15px 0;
-  height: 15%;
-}
-/* line 78, ../sass/general.scss */
-.container header .toddle_form {
-  height: 80%;
-  float: left;
-}
-/* line 82, ../sass/general.scss */
-.container header .toddle_text {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 25%;
-  margin: auto;
-  height: 50%;
-}
-/* line 90, ../sass/general.scss */
-.container header .blockRight {
-  position: absolute;
-  right: 5%;
-  top: 40%;
-  width: auto;
-  font-size: 25px;
-}
-/* line 96, ../sass/general.scss */
-.container header .blockRight .name, .container header .blockRight .chrono {
-  color: #F38F9A;
-  display: inline-block;
-}
-/* line 100, ../sass/general.scss */
-.container header .blockRight .chrono {
-  display: inline-block;
-}
-/* line 102, ../sass/general.scss */
-.container header .blockRight .chrono input {
-  font-size: 25px;
-  color: #F38F9A;
-  display: inline-block;
-  width: 50px;
-  text-align: center;
-  border: none;
-  background: none;
-}
-/* line 114, ../sass/general.scss */
-.container .overlay {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-}
-/* line 126, ../sass/general.scss */
-.container .overlay .popup {
-  background-color: #fefefe;
-  border: 15px solid #F38F9A;
-  border-radius: 15px;
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  left: 0;
-  right: 0;
-  padding: 15px;
-}
-/* line 140, ../sass/general.scss */
-.container .overlay .close {
-  color: #aaa;
-  position: absolute;
-  right: 2%;
-  top: 2%;
-  font-size: 4vw;
-}
+  position: relative; }
+  .container * {
+    outline: none;
+    box-sizing: border-box; }
+  .container input {
+    font-family: 'GothamRounded'; }
+  .container button {
+    background: none;
+    border: none;
+    font-family: 'GothamRounded';
+    text-transform: uppercase;
+    font-weight: 600; }
+  .container header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 15px 0;
+    height: 15%; }
+    .container header .toddle_form {
+      height: 80%;
+      float: left; }
+    .container header .toddle_text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 25%;
+      margin: auto;
+      height: 50%; }
+    .container header .blockRight {
+      position: absolute;
+      right: 5%;
+      top: 40%;
+      width: auto;
+      font-size: 25px; }
+      .container header .blockRight .name, .container header .blockRight .chrono {
+        color: #F38F9A;
+        display: inline-block; }
+      .container header .blockRight .chrono {
+        display: inline-block; }
+        .container header .blockRight .chrono input {
+          font-size: 25px;
+          color: #F38F9A;
+          display: inline-block;
+          width: 50px;
+          text-align: center;
+          border: none;
+          background: none; }
+  .container .overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center; }
+    .container .overlay .popup {
+      background-color: #fefefe;
+      border: 15px solid #F38F9A;
+      border-radius: 15px;
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      color: #355E7E;
+      font-size: 20px; }
+      .container .overlay .popup .sous-titre {
+        color: #F38F9A;
+        font-size: 32px;
+        font-weight: bold; }
+    .container .overlay .close {
+      color: #aaa;
+      position: absolute;
+      right: 2%;
+      top: 2%;
+      font-size: 4vw; }
 
-/* line 150, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -155,10 +124,8 @@ html, body {
   border: none;
   border-radius: 50px;
   font-size: 30px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
-/* line 160, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -166,130 +133,85 @@ html, body {
   border-radius: 35px;
   font-size: 30px;
   width: 70px;
-  height: 70px;
-}
+  height: 70px; }
 
-/* line 3, ../sass/result.scss */
 body {
-  overflow: hidden;
-}
+  overflow: hidden; }
 
-/* line 7, ../sass/result.scss */
 .content {
   text-align: center;
   font-size: 3vw;
-  font-weight: 600;
-}
-/* line 11, ../sass/result.scss */
-.content p {
-  text-transform: uppercase;
-  color: #355E7E;
-}
-/* line 14, ../sass/result.scss */
-.content p.announce {
-  color: #F38F9A;
-  margin: 4% 0;
-}
-/* line 17, ../sass/result.scss */
-.content p.announce span {
-  color: #355E7E;
-}
-/* line 22, ../sass/result.scss */
-.content .listeUser {
-  width: 67%;
-  float: left;
-  overflow: scroll;
-  overflow-x: hidden;
-  height: 42vw;
-  text-align: left;
-  padding: 0 0 0 10%;
-  margin: 0 2% 0 0;
-}
-/* line 31, ../sass/result.scss */
-.content .listeUser li {
-  color: #355E7E;
-}
-/* line 33, ../sass/result.scss */
-.content .listeUser li.own {
-  color: #F38F9A;
-}
-/* line 36, ../sass/result.scss */
-.content .listeUser li .nbr {
-  width: 13%;
-  display: inline-block;
-}
-/* line 40, ../sass/result.scss */
-.content .listeUser li .pseudo {
-  display: inline-block;
-}
-/* line 43, ../sass/result.scss */
-.content .listeUser li .time {
-  font-weight: normal;
-  float: right;
-  padding: 0 8%;
-}
-/* line 50, ../sass/result.scss */
-.content .giftBlock {
-  padding: 3.5% 2% 0 0;
-  font-size: 2.5vw;
-}
-/* line 53, ../sass/result.scss */
-.content .giftBlock .trait {
-  border: 2px solid #F38F9A;
-  width: 20%;
-  margin: 2% auto;
-}
-/* line 58, ../sass/result.scss */
-.content .giftBlock button {
-  font-size: 4vw;
-}
-/* line 60, ../sass/result.scss */
-.content .giftBlock button .fa-circle {
-  color: #F38F9A;
-}
+  font-weight: 600; }
+  .content p {
+    text-transform: uppercase;
+    color: #355E7E; }
+    .content p.announce {
+      color: #F38F9A;
+      margin: 4% 0; }
+      .content p.announce span {
+        color: #355E7E; }
+  .content .listeUser {
+    width: 67%;
+    float: left;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 42vw;
+    text-align: left;
+    padding: 0 0 0 10%;
+    margin: 0 2% 0 0; }
+    .content .listeUser li {
+      color: #355E7E; }
+      .content .listeUser li.own {
+        color: #F38F9A; }
+      .content .listeUser li .nbr {
+        width: 13%;
+        display: inline-block; }
+      .content .listeUser li .pseudo {
+        display: inline-block; }
+      .content .listeUser li .time {
+        font-weight: normal;
+        float: right;
+        padding: 0 8%; }
+  .content .giftBlock {
+    padding: 3.5% 2% 0 0;
+    font-size: 2.5vw; }
+    .content .giftBlock .trait {
+      border: 2px solid #F38F9A;
+      width: 20%;
+      margin: 2% auto; }
+    .content .giftBlock button {
+      font-size: 4vw; }
+      .content .giftBlock button .fa-circle {
+        color: #F38F9A; }
 
-/* line 66, ../sass/result.scss */
 .popup {
   display: flex;
-  align-items: center;
-}
-/* line 69, ../sass/result.scss */
-.popup label {
-  font-size: 2vw;
-}
-/* line 72, ../sass/result.scss */
-.popup input {
-  border-radius: 50px;
-  color: #355E7E;
-  border: 2px solid #355E7E;
-  text-align: center;
-  padding: 2% 3%;
-  display: inline-block;
-  margin: 5% 0;
-  font-size: 3vw;
-}
-/* line 82, ../sass/result.scss */
-.popup button {
-  font-size: 3.5vw;
-}
-/* line 84, ../sass/result.scss */
-.popup button .fa-circle {
-  color: #355E7E;
-}
+  align-items: center; }
+  .popup label {
+    font-size: 2vw; }
+  .popup input {
+    border-radius: 50px;
+    color: #355E7E;
+    border: 2px solid #355E7E;
+    text-align: center;
+    padding: 2% 3%;
+    display: inline-block;
+    margin: 5% 0;
+    font-size: 3vw; }
+  .popup button {
+    font-size: 3.5vw; }
+    .popup button .fa-circle {
+      color: #355E7E; }
 
-/* line 90, ../sass/result.scss */
 ::-webkit-scrollbar {
-  width: 5px;
-}
+  width: 5px; }
 
-/* line 94, ../sass/result.scss */
 ::-webkit-scrollbar-track {
   background-color: #F38F9A;
-  border-radius: 8px;
-}
+  border-radius: 8px; }
 
-/* line 99, ../sass/result.scss */
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #355E7E;
-}
+  background-color: #355E7E; }
+
+/*# sourceMappingURL=result.css.map */
