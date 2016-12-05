@@ -52,7 +52,7 @@ if(isset($_POST['pseudo'])){
         </header>
         <div class="container_form">
             <form action="" method="post">
-                <label for="pseudo">Veuillez choisir un pseudo</label>
+                <label for="pseudo">Choisis un pseudo</label>
                 <input required type="text" name="pseudo" id="pseudo" placeholder="Pseudo" />
                 <p class="error"> <?php echo $error; ?></p>
                 <button name="submit" type="submit" >

@@ -29,7 +29,7 @@ $result->execute();
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
         </header>
         <div class="content">
-            <p class="announce">Félicitations <span><?php echo $_SESSION['pseudo']; ?></span> !<br>Vous avez résolu tous les défis<br>en <span id="minResult">minutes</span>  et <span id="secResult">secondes</span>.<br>Vous terminez à la <span><?php echo $_SESSION['nbrUser']; ?>ème</span> position </p>
+            <p class="announce">Félicitations <span><?php echo $_SESSION['pseudo']; ?></span> !<br>Tu as résolu tous les défis<br>en <span id="minResult">minutes</span>  et <span id="secResult">secondes</span>.<br>Tu termines à la <span><?php echo $_SESSION['nbrUser']; ?>ème</span> position </p>
             <section>
                 <ul class="listeUser">
                     <?php
@@ -50,7 +50,7 @@ $result->execute();
                 <div class="giftBlock">
                     <p>Un cadeau sera remis au plus rapide d'entre vous</p>
                     <hr class="trait">
-                    <p>Afin d'être tenu informé du classement, pensez à nous laisser votre adresse e-mail !</p>
+                    <p>Afin d'être tenu informé du classement, pense à nous laisser votre adresse e-mail !</p>
                     <button>
                         <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x"></i>

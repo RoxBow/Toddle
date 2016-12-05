@@ -136,6 +136,14 @@ html, body {
             left: 0;
             right: 0;
             padding: 15px;
+            color: $blueToddle;
+            font-size: 20px;
+          
+            .sous-titre{
+                color: $pinkToddle;
+                font-size: 32px;
+                font-weight: bold;
+            }
         }
         .close {
             color: #aaa;

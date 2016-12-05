@@ -58,7 +58,10 @@ if(empty($_SESSION['start'])) {
         <div class="overlay">
           <div class="popup">
             <i class="fa fa-times close" aria-hidden="true"></i>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo sit iste nobis inventore magni odit nihil! Voluptatem adipisci libero rerum minus, alias fuga in deleniti?</p>
+            <p>
+                <span class="sous-titre">Indice 1</span><br/><br/>
+                La première oeuvre devant laquelle tu dois te rendre, est une oeuvre monochrome d'un artiste français du XXe siècle. Il est connu pour son travail autour d'une couleur particulière.
+            </p>
           </div>
         </div>
         <!-- POPUP -->
