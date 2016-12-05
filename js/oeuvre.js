@@ -61,7 +61,7 @@ $(document).ready(function() {
         var element5 = document.getElementById("rond");
         var element6 = document.getElementById("violet");
         var offleft = $("#jeu").css("padding-left").slice(0,2);
-        var offset = $("#jeu").offset();
+        var offset = $("#leftBloc").offset();
         var mouseX, mouseY;
 
         var actif;
@@ -89,9 +89,23 @@ $(document).ready(function() {
               },150);
             resemble(avalider).compareTo(validation).onComplete(function(data){
               if (data.misMatchPercentage<40.00) {
-                window.location.replace("result.php");
+                $('#win').fadeIn(500);
+
+              } else{
+                $('#loose').fadeIn(500);
+                $('.wrap2').toggleClass('active');
+                $('#but').toggleClass('bluebouton');
+                $('.overlay').fadeToggle();
               }
             });
+        });
+
+        $("#continuer").click(function(){
+          window.location.replace("result.php");
+        });
+
+        $("#rechercher").click(function(){
+          $('#loose').fadeOut(500);
         });
 
         hm3.on('tap', function(e) {
@@ -154,7 +168,7 @@ $(document).ready(function() {
 
         hammertime.on('panend', function(e) {
           element.style.backgroundColor=bleuToddle;
-          if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width+offleft)&&(mouseY>jeu.offsetTop && mouseY<canvas.height+offset.top)) {
+          if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop && mouseY<canvas.height+offset.top)) {
             ctx.clearRect(0,0,canvas.width,canvas.height);
             ctx.fillStyle="#276D2A";
             ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -181,7 +195,7 @@ $(document).ready(function() {
 
         hammertime2.on('panend', function(e) {
             element2.style.backgroundColor=bleuToddle;
-                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width+offleft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
+                if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
                   ctx.fillStyle="#ED1C24";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -207,7 +221,7 @@ $(document).ready(function() {
             });
             hammertime3.on('panend', function(e) {
             element3.style.backgroundColor=bleuToddle;
-                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width+offleft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
+                if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
                   ctx.fillStyle="#FECC0B";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
@@ -234,7 +248,7 @@ $(document).ready(function() {
 
         hammertime4.on('panend', function(e) {
             element4.style.backgroundColor=bleuToddle;
-                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width+offleft)&&(mouseY>jeu.offsetTop && mouseY<canvas.height+offset.top)) {
+                if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop && mouseY<canvas.height+offset.top)) {
                   ctx.beginPath();
                   ctx.strokeStyle="white";
                   ctx.lineWidth=4;
@@ -262,7 +276,7 @@ $(document).ready(function() {
             });
             hammertime5.on('panend', function(e) {
                 element5.style.backgroundColor=bleuToddle;
-                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width+offleft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
+                if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
                   ctx.beginPath();
                   ctx.strokeStyle="white";
                   ctx.lineWidth=4;
@@ -291,7 +305,7 @@ $(document).ready(function() {
 
         hammertime6.on('panend', function(e) {
                 element6.style.backgroundColor=bleuToddle;
-                if ((mouseX>jeu.offsetLeft+offleft && mouseX<canvas.width+offleft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
+                if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
                   ctx.fillStyle="#9F00FF";
                   ctx.fillRect(0,0,canvas.width,canvas.height);

@@ -30,6 +30,18 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
 <body>
     <div class="overlay"></div>
     <div class="container">
+      <div id="win">
+          <div class="content-win">
+            <p>T'as gagner <?php echo $_SESSION['pseudo'];?>&nbsp;!</p><br/>
+            <input type="button" name="continuer" value="continuer" id="continuer">
+          </div>
+      </div>
+      <div id="loose">
+          <div class="content-loose">
+            <p>Les deux images ne conrrespondent pas <?php echo $_SESSION['pseudo']; ?>&nbsp;!</p><br/>
+            <input type="button" name="continuer" value="continuer" id="rechercher">
+          </div>
+      </div>
        <header>
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
