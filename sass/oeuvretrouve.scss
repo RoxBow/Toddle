@@ -1,0 +1,45 @@
+// ### Style oeuvre.php ###
+
+@import "general";
+
+.container {
+    header{
+    }
+    .rose{
+    	color: $pinkToddle;
+    }
+    .congratulate{
+    	text-align: center;
+    	color: $blueToddle;
+    	font-size: 24px;
+    	font-weight: 600;
+    	width: 90vw;
+    	margin-left: 5vw;
+    	.title{
+    		font-size: 54px;
+    		color: $pinkToddle;
+    		font-weight: 600;
+    	}
+    	hr {
+			border: 3px solid $pinkToddle;
+			border-radius: 25px;
+			width: 70%;
+			margin: 3% auto;
+        }
+        .text-go{
+        	font-weight: 600;
+        	font-size: 40px;
+        }
+        .go{
+        	background-color: $blueToddle;
+        	color: white;
+        	width: 120px;
+        	height: 120px;
+        	border-radius: 60px;
+        	font-size: 50px;
+        }
+        .go:active{
+        	background-color: $pinkToddle;
+        }
+    }
+}

@@ -152,7 +152,7 @@ html, body {
   z-index: 10000;
   display: none; }
   .container #win .title {
-    font-weight: bold;
+    font-weight: 600;
     color: #F38F9A;
     font-size: 54px; }
   .container #win .titlesuite {
@@ -362,7 +362,7 @@ html, body {
       height: 45%; }
       .container #jeu .rightBloc .codeBloc h2 {
         color: #F38F9A;
-        font-weight: bold;
+        font-weight: 600;
         font-size: 24px; }
     .container #jeu .rightBloc .etiqBloc {
       height: 55%;
