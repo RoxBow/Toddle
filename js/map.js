@@ -29,6 +29,7 @@ $(document).ready(function() {
         /* POPUP HELP */
         if( $(".help_map").is(e.target) || $(".fa-question").is(e.target) ){
             $(".overlay").fadeIn();
+            $("#indice").css("animation-play-state","paused");
         }
         else if ( !$(".popup").is(e.target) ) {
             $(".overlay").fadeOut();

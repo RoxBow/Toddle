@@ -9,10 +9,12 @@
         height: auto;
     }
     .group_btn {
-        display: flex;
-        justify-content: center;
+        width: 100%;
+        position: relative;
         form {
-            margin-right: 4%;
+            position: absolute;
+            width: 30%;
+            margin-left: 30%;
             .container_input {
                 display: inline-block;
                 position: relative;
@@ -32,6 +34,10 @@
             } // .container_input
         }
         .help_map {
+            position: absolute;
+            animation: tremblement 2s ease-in 1s infinite;
+            top: -2px;
+            margin-left: 51%;
             font-size: 2.7vw;
             .fa-circle {
                 color: $pinkToddle;
@@ -46,3 +52,15 @@
         align-items: center;
     }
 } // .container
+
+@keyframes tremblement {
+    0% {margin-left: 51%}
+    4% {margin-left: 52%}
+    8% {margin-left: 50%}
+    12% {margin-left: 52%}
+    16% {margin-left: 50%}
+    20% {margin-left: 52%}
+    24% {margin-left: 50%}
+    28% {margin-left: 51%}
+    100% {margin-left: 51%}
+}

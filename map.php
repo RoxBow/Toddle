@@ -45,7 +45,7 @@ if(empty($_SESSION['start'])) {
                         <label for="picture">TROUVÉ ?</label>
                     </div>
                 </form>
-                <button type="button" class="help_map">
+                <button id="indice" type="button" class="help_map">
                     <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-question fa-stack-1x fa-inverse" aria-hidden="true"></i>
@@ -57,7 +57,7 @@ if(empty($_SESSION['start'])) {
         <!-- POPUP -->
         <div class="overlay">
           <div class="popup">
-            <i class="fa fa-times close" aria-hidden="true"></i>
+            <i class="fa fa-times close" aria-hidden="true" id="close"></i>
             <p>
                 <span class="sous-titre">Indice 1</span><br/><br/>
                 La première oeuvre devant laquelle tu dois te rendre, est une oeuvre monochrome d'un artiste français du XXe siècle. Il est connu pour son travail autour d'une couleur particulière.
