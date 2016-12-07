@@ -6,40 +6,56 @@
     header{
     }
     .rose{
-    	color: $pinkToddle;
+        color: $pinkToddle;
     }
     .congratulate{
-    	text-align: center;
-    	color: $blueToddle;
-    	font-size: 24px;
-    	font-weight: 600;
-    	width: 90vw;
-    	margin-left: 5vw;
-    	.title{
-    		font-size: 54px;
-    		color: $pinkToddle;
-    		font-weight: 600;
-    	}
-    	hr {
-			border: 3px solid $pinkToddle;
-			border-radius: 25px;
-			width: 70%;
-			margin: 3% auto;
+        text-align: center;
+        color: $blueToddle;
+        font-size: 24px;
+        font-weight: 600;
+        width: 90vw;
+        margin-left: 5vw;
+        .title{
+            font-size: 54px;
+            color: $pinkToddle;
+            font-weight: 600;
+        }
+        hr {
+            border: 3px solid $pinkToddle;
+            border-radius: 25px;
+            width: 70%;
+            margin: 2.5% auto;
         }
         .text-go{
-        	font-weight: 600;
-        	font-size: 40px;
+            font-weight: 600;
+            font-size: 40px;
+            width: 75%;
+            margin-top: 2.5%;
         }
         .go{
-        	background-color: $blueToddle;
-        	color: white;
-        	width: 120px;
-        	height: 120px;
-        	border-radius: 60px;
-        	font-size: 50px;
+            background-color: $blueToddle;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            font-size: 50px;
+            position: absolute;
+            margin-top: -95px;
+            margin-left: 22vw;
         }
         .go:active{
-        	background-color: $pinkToddle;
+            background-color: $pinkToddle;
+        }
+        .fonction{
+            font-size: 32px;
+            color: $pinkToddle;
+        }
+        .parentheses{
+            font-size: 32px;            
+            color: $blueToddle;
+        }
+        .bold{
+            font-weight: bold;
         }
     }
 }

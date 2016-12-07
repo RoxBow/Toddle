@@ -39,7 +39,21 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-              Tu vas découvrir un principipe fondamental de la programmation:&nbsp;<span class="rose">l'Algorithmique</span>.
+              Tu vas découvrir un principipe fondamental de la programmation:&nbsp;<span class="rose">l'Algorithmique</span>. 
+            </p>
+            <br>
+            <p>
+                L'algorithmique définit des règles dans le but d'effectuer une action. Ces règles portent le nom de l'action que l'on veut effectuer. Elles s'écrivent d'une manière particulière.
+            </p>
+            <br>
+            <p>
+                <span class="bold">Exemple:</span> Je veux dessiner un rond. En algorithmique on va écrire ce que l'on veut faire, suivi de parenthèses:
+            <br>
+            <span class="fonction bold">DessinerUnRond</span><span class="parentheses bold">()</span>
+            </p>
+            <br>
+            <p>
+                Si notre action est composé de plusieurs mots, on ne met pas d'espace entre les mots et chaque nouveau mot est écrit avec une majuscule.
             </p>
             <br>
             <p class="text-go rose">
