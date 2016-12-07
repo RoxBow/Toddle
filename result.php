@@ -122,8 +122,7 @@ $result->execute();
             });
             
             // Scroll to position user in list
-            $('.listeUser').animate({ scrollTop: $(".own").offset().top / 2 }, 700);
-
+            $('.listeUser').animate({ scrollTop: $(".own").position().top - 500 }, 700);
         });
     </script>
 </body>
