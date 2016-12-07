@@ -120,6 +120,10 @@ $result->execute();
                     document.location.href = "end.php"; // Redirect to last page
                 }
             });
+            
+            // Scroll to position user in list
+            $('.listeUser').animate({ scrollTop: $(".own").offset().top / 2 }, 700);
+
         });
     </script>
 </body>

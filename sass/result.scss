@@ -13,7 +13,7 @@ body {
         color: $blueToddle;
         &.announce {
             color: $pinkToddle;
-            margin: 4% 0;
+            margin: 2% 0 3% 0;
             span {
                 color: $blueToddle;
             }
@@ -48,7 +48,7 @@ body {
         }
     }
     .giftBlock {
-        padding: 3.5% 2% 0 0;
+        padding: 2.5% 2% 0 0;
         font-size: 2.5vw;
         .trait {
             border: 2px solid $pinkToddle;
@@ -57,10 +57,14 @@ body {
         }
         button {
             font-size: 4vw;
+            .fa-stack {
+                margin-top: 5%;
+            }
             .fa-circle {
                 color: $pinkToddle;
             }
         }
+        
     }
 }
 .popup {

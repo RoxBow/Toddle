@@ -212,7 +212,7 @@ body {
 /* line 14, ../sass/result.scss */
 .content p.announce {
   color: #F38F9A;
-  margin: 4% 0;
+  margin: 2% 0 3% 0;
 }
 /* line 17, ../sass/result.scss */
 .content p.announce span {
@@ -254,7 +254,7 @@ body {
 }
 /* line 50, ../sass/result.scss */
 .content .giftBlock {
-  padding: 3.5% 2% 0 0;
+  padding: 2.5% 2% 0 0;
   font-size: 2.5vw;
 }
 /* line 53, ../sass/result.scss */
@@ -268,20 +268,24 @@ body {
   font-size: 4vw;
 }
 /* line 60, ../sass/result.scss */
+.content .giftBlock button .fa-stack {
+  margin-top: 5%;
+}
+/* line 63, ../sass/result.scss */
 .content .giftBlock button .fa-circle {
   color: #F38F9A;
 }
 
-/* line 66, ../sass/result.scss */
+/* line 70, ../sass/result.scss */
 .popup {
   display: flex;
   align-items: center;
 }
-/* line 69, ../sass/result.scss */
+/* line 73, ../sass/result.scss */
 .popup label {
   font-size: 2vw;
 }
-/* line 72, ../sass/result.scss */
+/* line 76, ../sass/result.scss */
 .popup input {
   border-radius: 50px;
   color: #355E7E;
@@ -292,27 +296,27 @@ body {
   margin: 5% 0;
   font-size: 3vw;
 }
-/* line 82, ../sass/result.scss */
+/* line 86, ../sass/result.scss */
 .popup button {
   font-size: 3.5vw;
 }
-/* line 84, ../sass/result.scss */
+/* line 88, ../sass/result.scss */
 .popup button .fa-circle {
   color: #355E7E;
 }
 
-/* line 90, ../sass/result.scss */
+/* line 94, ../sass/result.scss */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* line 94, ../sass/result.scss */
+/* line 98, ../sass/result.scss */
 ::-webkit-scrollbar-track {
   background-color: #F38F9A;
   border-radius: 8px;
 }
 
-/* line 99, ../sass/result.scss */
+/* line 103, ../sass/result.scss */
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #355E7E;
