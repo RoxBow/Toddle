@@ -3,6 +3,7 @@
 @import "general";
 
 .container {
+    position: relative;
     .container_form {
         display: flex;
         justify-content: center;

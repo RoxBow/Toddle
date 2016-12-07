@@ -57,9 +57,19 @@ $result->execute();
                         <i class="fa fa-envelope fa-stack-1x fa-inverse" aria-hidden="true"></i>
                         </span>
                     </button>
+                    <button>
+                        <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-arrow-right fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                        </span>
+                    </button>
                 </div>
             </section>
         </div>
+        <footer>
+            <img src="img/logo_pompidou.png" alt="pompidou">
+            <img src="img/logo_gris_avec.png" alt="avec">
+        </footer>
         
         <!-- POPUP -->
         <div class="overlay">
@@ -101,10 +111,13 @@ $result->execute();
             
             $(document).click(function (e) {
                 if( $(".fa-envelope").is(e.target) ){
-                    $(".overlay").fadeIn();
+                    $(".overlay").fadeIn(); // Open popup
                 }
-                else if ( $(".close").is(e.target) || !$(".popup").is(e.target)) {
+                else if ( $(".close").is(e.target) || $(".overlay").is(e.target)) {
                     $(".overlay").fadeOut();
+                }
+                if( $(".fa-arrow-right").is(e.target) ){
+                    document.location.href = "end.php"; // Redirect to last page
                 }
             });
         });

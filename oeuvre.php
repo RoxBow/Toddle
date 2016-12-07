@@ -95,7 +95,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
           </section>
           <section class="rightBloc">
               <div class="codeBloc">
-                  <h2>D&#201;FI 1/7</h2></br>
+                  <h2>D&#201;FI 1/7</h2><br>
                   <div>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vulputate risus id metus laoreet porta. Nam pellentesque quam et lobortis pellentesque. Quisque massa odio, auctor eu metus a, viverra tincidunt justo. In ullamcorper velit eros, quis consequat nulla dapibus sit amet. Nulla cursus tortor ac sapien rutrum porta. Suspendisse potenti. Duis a diam accumsan, commodo ligula a, malesuada leo.</p>
                   </div>
@@ -113,6 +113,10 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               </div>
           </section>
         </div>
+        <footer>
+            <img src="img/logo_pompidou.png" alt="pompidou">
+            <img src="img/logo_gris_avec.png" alt="avec">
+        </footer>
     </div>
     
     <script src="js/jquery-3.1.1.min.js"></script>

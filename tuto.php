@@ -62,7 +62,7 @@ if( !isset($_SESSION['pseudo']) ){
                     <ul>
                         <li>
                             <img src="img/ampoule.png" alt="ampoule">
-                            <p>Aide toi des indices</p>
+                            <p>Aide toi des indices et du plan</p>
                         </li>
                         <li>
                             <img src="img/retour.png" alt="fleche">
@@ -70,7 +70,7 @@ if( !isset($_SESSION['pseudo']) ){
                         </li>
                         <li>
                             <img src="img/drapeau.png" alt="drapeau">
-                            <p>Ne perd pas de vue ton objectif</p>
+                            <p>Ne perds pas de vue ton objectif</p>
                         </li>
                         <li>
                             <img src="img/valide.png" alt="coche">

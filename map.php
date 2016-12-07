@@ -53,13 +53,17 @@ if(empty($_SESSION['start'])) {
                 </button>
             </div>
         </div>
+        <footer>
+            <img src="img/logo_pompidou.png" alt="pompidou">
+            <img src="img/logo_gris_avec.png" alt="avec">
+        </footer>
         
         <!-- POPUP -->
         <div class="overlay">
           <div class="popup">
             <i class="fa fa-times close" aria-hidden="true" id="close"></i>
             <p>
-                <span class="sous-titre">Indice 1</span><br/><br/>
+                <span class="sous-titre">Indice 1</span>
                 La première oeuvre devant laquelle tu dois te rendre, est une oeuvre monochrome d'un artiste français du XXe siècle. Il est connu pour son travail autour d'une couleur particulière.
             </p>
           </div>

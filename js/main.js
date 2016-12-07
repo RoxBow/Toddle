@@ -34,7 +34,7 @@ $(document).ready(function() {
     
     // Our own oeuvre picture
     oeuvre = new Image();
-    oeuvre.src = "img/retour.png";
+    oeuvre.src = "img/oeuvreTest.png";
     newOeuvre = getBase64Image(oeuvre);
 });
 
@@ -46,6 +46,9 @@ function getFile() {
         console.log(userFile);
         var diff = resemble(userFile).compareTo(newOeuvre).ignoreColors().onComplete(function(data){
             console.log(data);
+            if (data.misMatchPercentage < 20.00) {
+                document.location.href = "oeuvretrouve.php";
+            }
         });
     }
 }

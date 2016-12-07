@@ -22,7 +22,11 @@ if( !isset($_SESSION['pseudo']) ){
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
             <div class="blockRight">
-                <p class="name"><?php echo $_SESSION['pseudo']; ?></p>
+                <p class="name"><?php echo $_SESSION['pseudo']." - "; ?></p>
+                <form name="chrono" class="chrono">
+                    <input type="text" name="minute" id="min" readonly>min
+                    <input type="text" name="seconde" id="sec" readonly>s
+                </form>
             </div>
         </header>
         <section class="congratulate">
@@ -44,9 +48,34 @@ if( !isset($_SESSION['pseudo']) ){
             <br>
             <a href="oeuvre.php"><button class="go">GO</button></a>
         </section>
+        <footer>
+            <img src="img/logo_pompidou.png" alt="pompidou">
+            <img src="img/logo_gris_avec.png" alt="avec">
+        </footer>
     </div>
     
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/chrono.js"></script>
+    <script>
+        /* #####    CHRONO      ##### */
+
+        // Update time script
+        sec = localSec;
+        min = localMin;
+
+        // When page is left
+        $(window).bind('beforeunload',function(){
+            localStorage.setItem("seconde", $("#sec").val() );
+            localStorage.setItem("minute", $("#min").val() );
+        });
+
+        $(document).ready(function() {
+            /* ### CHRONO ### */
+            $("#sec").val(localSec);
+            $("#min").val(localMin);
+            chrono();
+        });
+    </script>
 </body>
 </html>
