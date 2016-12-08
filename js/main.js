@@ -36,6 +36,22 @@ $(document).ready(function() {
     oeuvre = new Image();
     oeuvre.src = "img/oeuvreTest.png";
     newOeuvre = getBase64Image(oeuvre);
+
+    /*Apparition page credits*/
+    $("footer>img").click(function(){
+      $(".credits").css("display","block");
+      $( ".credits" ).animate({
+        marginTop: "0%"
+      }, 2000);
+    });
+    $("#croix").click(function(){
+      $( ".credits" ).animate({
+        marginTop: "100%"
+      }, 2000);
+      setTimeout(function(){
+        $(".credits").css("display","none");
+      }, 2000);
+    });    
 });
 
 // Compare 2 pictures when user add his one

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../stylesheets/reset.css);
 @import url(../stylesheets/font-awesome.min.css);
 /* ###### VARIABLES ###### */
@@ -23,6 +24,40 @@ html, body {
   height: 100%;
   font-family: "GothamRounded", "Verdana", "Arial", "Helvetica", sans-serif;
   font-size: 16px; }
+
+/* ###### CR├ëDITS ###### */
+.credits {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin-top: 100%;
+  padding: 50px 30px;
+  z-index: 10000;
+  background-color: white; }
+  .credits #croix {
+    position: absolute;
+    right: 10%;
+    color: #aaa; }
+  .credits .title {
+    font-size: 72px;
+    font-weight: 600;
+    color: #F38F9A;
+    width: 100%;
+    text-align: center; }
+  .credits .justify {
+    text-align: justify; }
+  .credits .content {
+    font-size: 20px;
+    color: #355E7E;
+    font-weight: 600;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 50px; }
+  .credits .logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px; }
 
 .fa {
   vertical-align: middle; }

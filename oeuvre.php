@@ -28,6 +28,9 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
     <link rel="stylesheet" href="stylesheets/oeuvre.css" media="all">
 </head>
 <body>
+    <?php
+        include 'credits.php';
+    ?>
     <div class="overlay"></div>
     <div class="container">
       <div id="win">
@@ -96,10 +99,15 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
           <section class="rightBloc">
               <div class="codeBloc">
                   <h2>D&#201;FI 1/7</h2><br>
-                  <div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vulputate risus id metus laoreet porta. Nam pellentesque quam et lobortis pellentesque. Quisque massa odio, auctor eu metus a, viverra tincidunt justo. In ullamcorper velit eros, quis consequat nulla dapibus sit amet. Nulla cursus tortor ac sapien rutrum porta. Suspendisse potenti. Duis a diam accumsan, commodo ligula a, malesuada leo.</p>
+                  <div class="consignes">
+                      <p>
+                        Aide toi des fonctions algorithmiques mises à ta disposition ci-dessous, pour transformer le bleu d’Yves Klein, en violet. Ajoute-y 3 carrés en haut à gauche.
+                      </p>
+                      <br>
+                      <p>
+                        Glisse la fonction qui te semble appropriée sur l’oeuvre. Si tu penses avoir réussi la transformation comme demandé, il ne te reste plus qu’à valider.
+                      </p>
                   </div>
-                  <!-- <button>Valider mon oeuvre <i class="fa fa-play-circle fa-3x" aria-hidden="true"></i></button> -->
               </div>
               <div class="etiqBloc" id="etiqBloc">
                   <div class="etiq" id="vert">ChangerEnVert()</div>
@@ -127,6 +135,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
     <script src="js/resemble.js"></script>
     <script src="js/chrono.js"></script>
     <script src="js/oeuvre.js"></script>
-
+    <script>
+    </script>
 </body>
 </html>

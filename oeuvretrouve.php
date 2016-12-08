@@ -17,6 +17,9 @@ if( !isset($_SESSION['pseudo']) ){
     <link rel="stylesheet" href="stylesheets/oeuvretrouve.css" media="all">
 </head>
 <body>
+    <?php
+        include 'credits.php';
+    ?>
     <div class="container">
         <header>
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
