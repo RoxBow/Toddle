@@ -25,13 +25,13 @@ $("footer>img").click(function(){
   $(".credits").css("display","block");
   $( ".credits" ).animate({
     marginTop: "0%"
-  }, 2000);
+  }, 1000);
 });
 $("#croix").click(function(){
   $( ".credits" ).animate({
     marginTop: "100%"
-  }, 2000);
+  }, 1000);
   setTimeout(function(){
     $(".credits").css("display","none");
-  }, 2000);
+  }, 1000);
 });

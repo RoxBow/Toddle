@@ -74,6 +74,18 @@ $(document).ready(function() {
 
         	/*Réactions au touch*/
 
+        $(".overlay").click(function(){
+          if ($('.wrap2').hasClass('active')) {
+            $('.wrap2').toggleClass('active');
+            $('#but').toggleClass('bluebouton');
+          }
+          if ($('.wrap').hasClass('active')) {
+            $('.wrap').toggleClass('active');
+            $('#indice').toggleClass('bluebouton');
+          }
+          $(this).fadeOut(500);
+        });
+
         hm.on('tap', function(e) {
             cUndo();
             $("#undo").toggleClass('bluebouton');
@@ -105,7 +117,7 @@ $(document).ready(function() {
           window.location.replace("result.php");
         });
 
-        $("#rechercher").click(function(){
+        $(".rechercher").click(function(){
           $('#loose').fadeOut(500);
         });
 

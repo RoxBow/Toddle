@@ -237,16 +237,41 @@ html, body {
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 10000;
   display: none; }
-  .container #loose .content-loose {
-    width: 70%;
-    height: 60%;
-    margin-left: 15%;
-    margin-top: 15%;
-    border: 5px solid #F38F9A;
+  .container #loose .p-loose {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+  .container #loose .title {
+    font-weight: 600;
+    color: #F38F9A;
+    font-size: 54px; }
+  .container #loose .content-loose {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 3.75%;
+    padding-top: 2%;
+    border: 5px solid #355E7E;
     background-color: white;
-    border-radius: 50px; }
+    border-radius: 50px;
+    text-align: center;
+    color: #355E7E;
+    font-size: 26px; }
+    .container #loose .content-loose hr {
+      border: 3px solid #F38F9A;
+      border-radius: 25px;
+      width: 70%;
+      margin: 3% auto; }
+    .container #loose .content-loose .rechercher {
+      color: #fff;
+      background-color: #355E7E;
+      width: 35%;
+      height: 75px;
+      border-radius: 50px;
+      font-size: 35px; }
+    .container #loose .content-loose .name {
+      color: #F38F9A; }
 .container #jeu {
   width: 100%;
   height: 83%;

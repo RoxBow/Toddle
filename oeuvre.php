@@ -54,13 +54,30 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               Récapitulons, ce que tu viens de mettre en application: <br>
             </p>
             <br>
+            <p>
+              Tu devais rendre l'oeuvre violet et y ajouter trois carrés. Tu as donc selectionné les fonctions changerEnViolet() et MettreUnCarre() qui t'ont permis de 
+            </p>
             <button class="continuer">D&#201;FI SUIVANT</button>
           </div>
       </div>
       <div id="loose">
           <div class="content-loose">
-            <p>Les deux images ne conrrespondent pas <?php echo $_SESSION['pseudo']; ?>&nbsp;!</p><br>
-            <input type="button" name="continuer" value="continuer" id="rechercher">
+            <p class="title">
+              F&#201;LICITATIONS !
+            </p>
+            <hr>
+            <p class="text-loose">
+              Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+            </p>
+            <p>
+              Il y a un petit soucis sur ta transformation.
+            </p>
+            <br>
+            <p>
+              Regarde bien à nouveau l'objectif que tu dois accomplir.
+            </p>
+            <br>
+            <button class="rechercher">Retour</button>
           </div>
       </div>
        <header>
