@@ -79,8 +79,8 @@ $result->execute();
           <div class="popup">
            <i class="fa fa-times close" aria-hidden="true"></i>
             <form action="login.php" method="post">
-                <label for="pseudo">Veuillez entrer votre adresse e-mail</label>
-                <input type="text" name="mail" id="mail" placeholder="jean@gmail.com" />
+                <label for="pseudo">Pense à nous laisser ton mail</label>
+                <input type="text" name="mail" id="mail" placeholder="jean@gmail.com" autocomplete="off" />
                 <button name="submit" type="submit" >
                     <span class="fa-stack">
                     <i class="fa fa-circle fa-stack-2x"></i>

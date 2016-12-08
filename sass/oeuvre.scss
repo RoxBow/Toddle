@@ -10,8 +10,6 @@
     background-color: rgba(0,0,0,0.5);
 }
 .container {
-    header{
-    }
     #win{
         position: absolute;
         width: 100%;
@@ -54,6 +52,7 @@
               height: 75px;
               border-radius: 50px;
               font-size: 35px;
+              margin: 4% 0;
             }
             .name{
               color: $pinkToddle;

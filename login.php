@@ -16,6 +16,7 @@ try {
 if(isset($_POST['mail'])){
     $requestMail = $bdd->prepare("UPDATE user SET mail='".$_POST['mail']."' WHERE pseudo='".$_SESSION['pseudo']."'");
     $requestMail->execute();
+    header('Location: result.php');
 }
 else if(isset($_POST['min'], $_POST['sec'])){
     $requestTime = $bdd->prepare("UPDATE user SET min='".$_POST['min']."', sec='".$_POST['sec']."' WHERE pseudo='".$_SESSION['pseudo']."'");

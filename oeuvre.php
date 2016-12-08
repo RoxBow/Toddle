@@ -95,8 +95,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
           <section class="leftBloc" id="leftBloc">
               <div class="wrap">
                 <div class='content'>
-                  <h2>Well Hello!</h2>
-                  <p>GROS ZIZI</p>
+                    <h2>Indice</h2>
                 </div>
               </div>
               <div class="wrap2">

@@ -31,7 +31,7 @@ $(document).ready(function() {
             $(".overlay").fadeIn();
             $("#indice").css("animation-play-state","paused");
         }
-        else if ( !$(".popup").is(e.target) ) {
+        else if ( $(".overlay").is(e.target) || $(".close").is(e.target) ) {
             $(".overlay").fadeOut();
         }
     });

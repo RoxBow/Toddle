@@ -8,6 +8,7 @@ if(isset($_POST['pseudo'])){
     $result->execute();
 
     $pseudo = trim($_POST['pseudo']); // Remove space before and after string
+    $pseudo = strip_tags($pseudo);
     
     // Check error pseudo
     $error = null;
@@ -56,7 +57,7 @@ if(isset($_POST['pseudo'])){
         <div class="container_form">
             <form action="" method="post">
                 <label for="pseudo">Choisis un pseudo</label>
-                <input required type="text" name="pseudo" id="pseudo" placeholder="Pseudo" />
+                <input required type="text" name="pseudo" id="pseudo" placeholder="Pseudo" autocomplete="off" />
                 <p class="error"> <?php echo $error; ?></p>
                 <button name="submit" type="submit" >
                     <span class="fa-stack ">
