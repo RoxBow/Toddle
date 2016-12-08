@@ -30,8 +30,8 @@ $("footer>img").click(function(){
 $("#croix").click(function(){
   $( ".credits" ).animate({
     marginTop: "100%"
-  }, 1000);
+  }, 750);
   setTimeout(function(){
     $(".credits").css("display","none");
-  }, 1000);
+  }, 750);
 });
