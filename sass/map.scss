@@ -14,7 +14,7 @@
         form {
             position: absolute;
             width: 30%;
-            margin-left: 30%;
+            margin-left: 34%;
             .container_input {
                 display: inline-block;
                 position: relative;
@@ -37,7 +37,7 @@
             position: absolute;
             animation: tremblement 2s ease-in 1s infinite;
             top: -2px;
-            margin-left: 51%;
+            margin-left: 55%;
             font-size: 2.7vw;
             .fa-circle {
                 color: $pinkToddle;
@@ -47,20 +47,41 @@
             }
         }
     }
-    .popup{
+    .popup2{
         display: flex;
         align-items: center;
+        background-color: #fefefe;
+        border: 15px solid #F38F9A;
+        border-radius: 15px;
+        position: absolute;
+        width: 75%;
+        height: 50%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        right: 0;
+        padding: 40px;
+        color: #355E7E;
+        font-size: 24px;
+        .sous-titre2{
+                color: $pinkToddle;
+                font-size: 2.2rem;
+                font-weight: bold;
+                margin-bottom: 4%;
+                display: block;
+        }
     }
 } // .container
 
 @keyframes tremblement {
-    0% {margin-left: 51%}
-    4% {margin-left: 52%}
-    8% {margin-left: 50%}
-    12% {margin-left: 52%}
-    16% {margin-left: 50%}
-    20% {margin-left: 52%}
-    24% {margin-left: 50%}
-    28% {margin-left: 51%}
-    100% {margin-left: 51%}
+    0% {margin-left: 55%}
+    4% {margin-left: 56%}
+    8% {margin-left: 54%}
+    12% {margin-left: 56%}
+    16% {margin-left: 54%}
+    20% {margin-left: 56%}
+    24% {margin-left: 54%}
+    28% {margin-left: 55%}
+    100% {margin-left: 55%}
 }

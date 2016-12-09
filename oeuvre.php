@@ -67,7 +67,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
       <div id="loose">
           <div class="content-loose">
             <p class="title">
-              F&#201;LICITATIONS !
+              RAT&#201;&nbsp;!
             </p>
             <hr>
             <p class="text-loose">

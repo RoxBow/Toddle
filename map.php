@@ -63,10 +63,10 @@ if(empty($_SESSION['start'])) {
         
         <!-- POPUP -->
         <div class="overlay">
-          <div class="popup">
+          <div class="popup2">
             <i class="fa fa-times close" aria-hidden="true" id="close"></i>
             <p>
-                <span class="sous-titre">Indice 1</span>
+                <span class="sous-titre2">Indice 1</span>
                 La première oeuvre devant laquelle tu dois te rendre, est une oeuvre monochrome d'un artiste français du XXe siècle. Il est connu pour son travail autour d'une couleur particulière.
             </p>
           </div>
