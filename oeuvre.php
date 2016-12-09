@@ -55,8 +55,12 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </p>
             <br>
             <p>
-              Tu devais rendre l'oeuvre violet et y ajouter trois carrés. Tu as donc selectionné les fonctions changerEnViolet() et MettreUnCarre() qui t'ont permis de 
+              Tu devais rendre l'oeuvre violet et y ajouter trois carrés.
+              <br>
+              Tu as donc selectionné les fonctions: <br>
+              <span class="name">ChangerEnViolet</span><span class="parentheses">()</span> et <span class="name">MettreUnCarré</span><span class="parentheses">()</span> qui t'ont permis de réaliser ton objectif ! 
             </p>
+            
             <button class="continuer">D&#201;FI SUIVANT</button>
           </div>
       </div>
