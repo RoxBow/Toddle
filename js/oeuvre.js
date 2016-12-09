@@ -45,7 +45,6 @@ $(document).ready(function() {
 
 /*Intéractions sur la page*/
 
-
       $( document ).ready(function() {
 
       	cPush();
@@ -95,15 +94,27 @@ $(document).ready(function() {
         });
 
         hm2.on('tap', function(e) {
+            console.log(e);
             var validation = canvas.toDataURL();
             $("#valider").toggleClass('bluebouton');
             setTimeout(function(){
+                
                 $('#valider').toggleClass('bluebouton');
               },150);
             resemble(avalider).compareTo(validation).onComplete(function(data){
-              if (data.misMatchPercentage<40.00) {
+              if (data.misMatchPercentage < 40.00) {
+                    stopchrono(); // Arrête chrono
+                    // Save time user in DB
+                    $.ajax({
+                        type: "POST",
+                        url: "login.php",
+                        data: { 'min': localStorage.getItem("minute"), 'sec': localStorage.getItem("seconde") },
+                        success: function(data) {
+                            console.log("Temps: "+localStorage.getItem("minute")+" minutes et "+localStorage.getItem("seconde")+" secondes"  );
+                        }
+                    });
                 $('#win').fadeIn(500);
-
+                  
               } else{
                 $('#loose').fadeIn(500);
                 $('.wrap2').toggleClass('active');

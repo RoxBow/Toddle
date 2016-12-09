@@ -99,6 +99,12 @@ html, body {
   font-family: 'GothamRounded';
 }
 /* line 105, ../sass/general.scss */
+.container img {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+/* line 110, ../sass/general.scss */
 .container button {
   background: none;
   border: none;
@@ -106,7 +112,7 @@ html, body {
   text-transform: uppercase;
   font-weight: 600;
 }
-/* line 112, ../sass/general.scss */
+/* line 117, ../sass/general.scss */
 .container header {
   position: relative;
   overflow: hidden;
@@ -115,12 +121,12 @@ html, body {
   margin: 0 0 15px 0;
   height: 15%;
 }
-/* line 119, ../sass/general.scss */
+/* line 124, ../sass/general.scss */
 .container header .toddle_form {
   height: 80%;
   float: left;
 }
-/* line 123, ../sass/general.scss */
+/* line 128, ../sass/general.scss */
 .container header .toddle_text {
   position: absolute;
   left: 0;
@@ -129,7 +135,7 @@ html, body {
   margin: auto;
   height: 50%;
 }
-/* line 131, ../sass/general.scss */
+/* line 136, ../sass/general.scss */
 .container header .blockRight {
   position: absolute;
   right: 5%;
@@ -137,16 +143,16 @@ html, body {
   width: auto;
   font-size: 25px;
 }
-/* line 137, ../sass/general.scss */
+/* line 142, ../sass/general.scss */
 .container header .blockRight .name, .container header .blockRight .chrono {
   color: #F38F9A;
   display: inline-block;
 }
-/* line 141, ../sass/general.scss */
+/* line 146, ../sass/general.scss */
 .container header .blockRight .chrono {
   display: inline-block;
 }
-/* line 143, ../sass/general.scss */
+/* line 148, ../sass/general.scss */
 .container header .blockRight .chrono input {
   font-size: 25px;
   color: #F38F9A;
@@ -156,7 +162,7 @@ html, body {
   border: none;
   background: none;
 }
-/* line 155, ../sass/general.scss */
+/* line 160, ../sass/general.scss */
 .container footer {
   width: 100%;
   text-align: right;
@@ -164,13 +170,13 @@ html, body {
   bottom: 1%;
   right: 2%;
 }
-/* line 161, ../sass/general.scss */
+/* line 166, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 167, ../sass/general.scss */
+/* line 172, ../sass/general.scss */
 .container .overlay {
   display: none;
   position: fixed;
@@ -184,7 +190,7 @@ html, body {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
-/* line 179, ../sass/general.scss */
+/* line 184, ../sass/general.scss */
 .container .overlay .popup {
   background-color: #fefefe;
   border: 15px solid #F38F9A;
@@ -201,7 +207,7 @@ html, body {
   color: #355E7E;
   font-size: 20px;
 }
-/* line 194, ../sass/general.scss */
+/* line 199, ../sass/general.scss */
 .container .overlay .popup .sous-titre {
   color: #F38F9A;
   font-size: 2.2rem;
@@ -209,7 +215,7 @@ html, body {
   margin-bottom: 4%;
   display: block;
 }
-/* line 202, ../sass/general.scss */
+/* line 207, ../sass/general.scss */
 .container .overlay .close {
   color: #aaa;
   position: absolute;
@@ -218,7 +224,7 @@ html, body {
   font-size: 4vw;
 }
 
-/* line 212, ../sass/general.scss */
+/* line 217, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -229,7 +235,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 222, ../sass/general.scss */
+/* line 227, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;

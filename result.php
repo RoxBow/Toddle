@@ -12,6 +12,16 @@ if(!isset($_SESSION['pseudo']) ){
 $result = $bdd->prepare("SELECT pseudo, min, sec FROM user ORDER BY min, sec");
 $result->execute();
 
+$nbr = 0;
+while ($row = $result->fetch(PDO::FETCH_ASSOC)){
+    $nbr++;
+    if($row['pseudo'] == $_SESSION['pseudo']){
+        $_SESSION['min'] = $row['min'];
+        $_SESSION['sec'] = $row['sec'];
+        $_SESSION['nbrUser'] = $nbr;
+    }
+}
+
 ?>
 
 <!doctype html>
@@ -32,21 +42,22 @@ $result->execute();
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
         </header>
         <div class="content">
-            <p class="announce">Félicitations <span><?php echo $_SESSION['pseudo']; ?></span> !<br>Tu as résolu tous les défis<br>en <span id="minResult">minutes</span>  et <span id="secResult">secondes</span>.<br>Tu termines à la <span><?php echo $_SESSION['nbrUser']; ?>ème</span> position </p>
+            <p class="announce">Félicitations <span><?php echo $_SESSION['pseudo']; ?></span> !<br>Tu as résolu tous les défis<br>en <span id="minResult"><?php echo $_SESSION['min'];?> minutes</span>  et <span id="secResult"><?php echo $_SESSION['sec'];?> secondes</span>.<br>Tu termines à la <span><?php echo $_SESSION['nbrUser']; ?>ème</span> position </p>
             <section>
                 <ul class="listeUser">
                     <?php
+                    
+                        $search = $bdd->prepare("SELECT pseudo, min, sec FROM user ORDER BY min, sec");
+                        $search->execute();
                         $nbr = 0;
-                        while ($row = $result->fetch(PDO::FETCH_ASSOC)){
+                        while ($row = $search->fetch(PDO::FETCH_ASSOC)){
                             $nbr++;
                             if($row['pseudo'] == $_SESSION['pseudo']){
-                                echo "<li class='own'><span class='nbr'>".$nbr.".</span> <span class='pseudo'>".$row['pseudo']."</span> <span class='time'>".$row['min']."m ".$row['sec']."s</span></li>";
-                                $_SESSION['nbrUser'] = $nbr;
+                                echo "<li class='own'><span class='nbr'>".$_SESSION['nbrUser'].".</span> <span class='pseudo'>".$_SESSION['pseudo']."</span> <span class='time'>".$_SESSION['min']."m ".$_SESSION['sec']."s</span></li>";
                             }
                             else {
                                 echo "<li><span class='nbr'>".$nbr.".</span> <span class='pseudo'>".$row['pseudo']."</span> <span class='time'>".$row['min']."m ".$row['sec']."s</span></li>";
                             }
-                            
                         }
                     ?>
                 </ul>
@@ -98,20 +109,6 @@ $result->execute();
     <script src="js/chrono.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            stopchrono(); // Arrête chrono
-            // Save time user in DB
-            $.ajax({
-                type: "POST",
-                url: "login.php",
-                data: { 'min': localMin, 'sec': localSec },
-                success: function(data) {
-                    console.log("Temps: "+localMin+" minutes et "+localSec+" secondes"  );
-                }
-            });
-            
-            $("#minResult").prepend( localMin + " ");
-            $("#secResult").prepend( localSec + " " );
-            
             $(document).click(function (e) {
                 if( $(".fa-envelope").is(e.target) ){
                     $(".overlay").fadeIn(); // Open popup
