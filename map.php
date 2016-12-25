@@ -75,10 +75,9 @@ if(empty($_SESSION['start'])) {
     </div>
     
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/resemble.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/resemble.js"></script>
     <script src="js/map.js"></script>
     <script src="js/chrono.js"></script>
-   
 </body>
 </html>

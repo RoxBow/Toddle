@@ -192,8 +192,7 @@ html, body {
 }
 /* line 184, ../sass/general.scss */
 .container .overlay .popup {
-  background-color: #fefefe;
-  border: 15px solid #F38F9A;
+  background-color: #fff;
   border-radius: 15px;
   position: absolute;
   width: 50%;
@@ -207,7 +206,7 @@ html, body {
   color: #355E7E;
   font-size: 20px;
 }
-/* line 199, ../sass/general.scss */
+/* line 198, ../sass/general.scss */
 .container .overlay .popup .sous-titre {
   color: #F38F9A;
   font-size: 2.2rem;
@@ -215,7 +214,13 @@ html, body {
   margin-bottom: 4%;
   display: block;
 }
-/* line 207, ../sass/general.scss */
+/* line 205, ../sass/general.scss */
+.container .overlay .popup .error {
+  margin: 3% auto;
+  color: red;
+  font-size: 2vw;
+}
+/* line 211, ../sass/general.scss */
 .container .overlay .close {
   color: #aaa;
   position: absolute;
@@ -224,7 +229,7 @@ html, body {
   font-size: 4vw;
 }
 
-/* line 217, ../sass/general.scss */
+/* line 221, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -235,7 +240,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 227, ../sass/general.scss */
+/* line 231, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;

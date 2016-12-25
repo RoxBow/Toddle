@@ -4,8 +4,19 @@ include 'login.php';
 
 session_start();
 
+$emailSaved = false;
+
 if(!isset($_SESSION['pseudo']) ){
     header("location: name.php");
+}
+
+if(isset($_POST['mail'])){
+    $mail = trim($_POST['mail']); // Remove space before and after string
+    $mail = strip_tags($mail);
+    
+    $requestMail = $bdd->prepare("UPDATE user SET mail='".$_POST['mail']."' WHERE pseudo='".$_SESSION['pseudo']."'");
+    $requestMail->execute();
+    $emailSaved = true;
 }
 
 // Get all pseudo users
@@ -67,14 +78,14 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
                     <p>Afin d'être tenu informé du classement, pense à nous laisser votre adresse e-mail !</p>
                     <button>
                         <span class="fa-stack">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-envelope fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-envelope fa-stack-1x fa-inverse" aria-hidden="true"></i>
                         </span>
                     </button>
                     <button>
                         <span class="fa-stack">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-arrow-right fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-arrow-right fa-stack-1x fa-inverse" aria-hidden="true"></i>
                         </span>
                     </button>
                 </div>
@@ -89,26 +100,51 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
         <div class="overlay">
           <div class="popup">
            <i class="fa fa-times close" aria-hidden="true"></i>
-            <form action="login.php" method="post">
-                <label for="pseudo">Pense à nous laisser ton mail</label>
+            <form action="" method="post" id="formMail">
+                <label for="pseudo">Pense à nous laisser ton adresse mail</label>
                 <input type="text" name="mail" id="mail" placeholder="jean@gmail.com" autocomplete="off" />
-                <button name="submit" type="submit" >
+                <p class="error"> <?php echo $error; ?></p>
+                <button name="submit" class="sendMail">
                     <span class="fa-stack">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-check fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-check fa-stack-1x fa-inverse" aria-hidden="true"></i>
                     </span>
                 </button>
             </form>
           </div>
         </div>
         <!-- POPUP -->
-    </div>
+        
+        <?php
+            if($emailSaved === true){
+                echo "<div class='blocEmail'>
+                <span class='fa-stack'>
+                    <i class='fa fa-circle fa-stack-2x'></i>
+                    <i class='fa fa-check fa-stack-1x fa-inverse' aria-hidden='true'></i>
+                </span>
+                <p>Adresse email bien enregistré</p>
+                </div>";
+            }
+        ?>
+        
+    </div> <!-- .container -->
   
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/chrono.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+            
+              $(".blocEmail").animate({
+                top: "5%"
+              }, 1500, function() {
+                setTimeout(function(){
+                    $(".blocEmail").animate({
+                        top: "-30%"
+                    }, 1500);
+                }, 500);
+              });
+            
             $(document).click(function (e) {
                 if( $(".fa-envelope").is(e.target) ){
                     $(".overlay").fadeIn(); // Open popup
@@ -121,9 +157,25 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
                 }
             });
             
+            // Check onclick if mail entered is correct
+            $(".sendMail").click(function(e) {
+                if(validateEmail($("#mail").val()) === false){
+                    e.preventDefault();
+                    $(".error").text("Adresse mail invalide");
+                }
+                else if(validateEmail($("#mail").val()) === true) {
+                    $('form#formMail').submit();
+                }
+            });
+            
             // Scroll to position user in list
             $('.listeUser').animate({ scrollTop: $(".own").position().top - 500 }, 700);
         });
+        
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
     </script>
 </body>
 </html>

@@ -192,8 +192,7 @@ html, body {
 }
 /* line 184, ../sass/general.scss */
 .container .overlay .popup {
-  background-color: #fefefe;
-  border: 15px solid #F38F9A;
+  background-color: #fff;
   border-radius: 15px;
   position: absolute;
   width: 50%;
@@ -207,7 +206,7 @@ html, body {
   color: #355E7E;
   font-size: 20px;
 }
-/* line 199, ../sass/general.scss */
+/* line 198, ../sass/general.scss */
 .container .overlay .popup .sous-titre {
   color: #F38F9A;
   font-size: 2.2rem;
@@ -215,7 +214,13 @@ html, body {
   margin-bottom: 4%;
   display: block;
 }
-/* line 207, ../sass/general.scss */
+/* line 205, ../sass/general.scss */
+.container .overlay .popup .error {
+  margin: 3% auto;
+  color: red;
+  font-size: 2vw;
+}
+/* line 211, ../sass/general.scss */
 .container .overlay .close {
   color: #aaa;
   position: absolute;
@@ -224,7 +229,7 @@ html, body {
   font-size: 4vw;
 }
 
-/* line 217, ../sass/general.scss */
+/* line 221, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -235,7 +240,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 227, ../sass/general.scss */
+/* line 231, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -308,7 +313,7 @@ body {
 /* line 50, ../sass/result.scss */
 .content .giftBlock {
   padding: 2.5% 2% 0 0;
-  font-size: 2.5vw;
+  font-size: 2.4vw;
 }
 /* line 53, ../sass/result.scss */
 .content .giftBlock .trait {
@@ -329,16 +334,38 @@ body {
   color: #F38F9A;
 }
 
-/* line 70, ../sass/result.scss */
+/* line 71, ../sass/result.scss */
+.blocEmail {
+  position: absolute;
+  top: -30%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  background: #fff;
+  width: 35%;
+  margin: auto;
+  border: 2px solid black;
+  padding: 3%;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+/* line 84, ../sass/result.scss */
+.blocEmail .fa-stack {
+  margin-bottom: 2%;
+  font-size: 2rem;
+  color: #355E7E;
+}
+
+/* line 91, ../sass/result.scss */
 .popup {
   display: flex;
   align-items: center;
 }
-/* line 73, ../sass/result.scss */
+/* line 94, ../sass/result.scss */
 .popup label {
   font-size: 2vw;
 }
-/* line 76, ../sass/result.scss */
+/* line 97, ../sass/result.scss */
 .popup input {
   border-radius: 50px;
   color: #355E7E;
@@ -349,27 +376,27 @@ body {
   margin: 5% 0;
   font-size: 3vw;
 }
-/* line 86, ../sass/result.scss */
+/* line 107, ../sass/result.scss */
 .popup button {
   font-size: 3.5vw;
 }
-/* line 88, ../sass/result.scss */
+/* line 109, ../sass/result.scss */
 .popup button .fa-circle {
   color: #355E7E;
 }
 
-/* line 94, ../sass/result.scss */
+/* line 115, ../sass/result.scss */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* line 98, ../sass/result.scss */
+/* line 119, ../sass/result.scss */
 ::-webkit-scrollbar-track {
   background-color: #F38F9A;
   border-radius: 8px;
 }
 
-/* line 103, ../sass/result.scss */
+/* line 124, ../sass/result.scss */
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #355E7E;

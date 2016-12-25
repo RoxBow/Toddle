@@ -35,6 +35,7 @@ if(isset($_POST['pseudo'])){
         header('Location: tuto.php');
     }
 }
+
 ?>
 
 <!doctype html>

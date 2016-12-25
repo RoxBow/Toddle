@@ -49,7 +49,7 @@ body {
     }
     .giftBlock {
         padding: 2.5% 2% 0 0;
-        font-size: 2.5vw;
+        font-size: 2.4vw;
         .trait {
             border: 2px solid $pinkToddle;
             width: 20%;
@@ -67,6 +67,27 @@ body {
         
     }
 }
+
+.blocEmail {
+    position: absolute;
+    top: -30%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    background: #fff;
+    width: 35%;
+    margin: auto;
+    border: 2px solid black;
+    padding: 3%;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    .fa-stack {
+        margin-bottom: 2%;
+        font-size: 2rem;
+        color: $blueToddle;
+    }
+}
+
 .popup {
     display: flex;
     align-items: center;

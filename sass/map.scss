@@ -47,11 +47,10 @@
             }
         }
     }
-    .popup2{
+    .popup2 {
         display: flex;
         align-items: center;
-        background-color: #fefefe;
-        border: 15px solid #F38F9A;
+        background-color: #fff;
         border-radius: 15px;
         position: absolute;
         width: 75%;
@@ -64,12 +63,12 @@
         padding: 40px;
         color: #355E7E;
         font-size: 24px;
-        .sous-titre2{
-                color: $pinkToddle;
-                font-size: 2.2rem;
-                font-weight: bold;
-                margin-bottom: 4%;
-                display: block;
+        .sous-titre2 {
+            color: $pinkToddle;
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 4%;
+            display: block;
         }
     }
 } // .container
