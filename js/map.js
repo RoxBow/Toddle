@@ -62,13 +62,14 @@ function getFile() {
     // When user takes his photo
     if (userFile) {
         console.log(userFile);
-        var diff = resemble(userFile).compareTo(newOeuvre).ignoreColors().scaleToSameSize().onComplete(function (data) {
+        var diff = resemble(userFile).compareTo(newOeuvre).scaleToSameSize().onComplete(function (data) {
             console.log(data);
-            if (data.misMatchPercentage < 50.00) {
+            console.log(data.misMatchPercentage);
+            if (data.misMatchPercentage > 50.00) {
                 document.location.href = "oeuvretrouve.php";
             }
             else {
-                alert(data.misMatchPercentage + " de ressemblance doit être inférieur à 50%.");
+                alert(data.misMatchPercentage + " de ressemblance doit être supérieur à 50%.");
                 console.log(data.misMatchPercentage);
             }
         });
