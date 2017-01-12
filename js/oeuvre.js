@@ -22,7 +22,6 @@ ctx2.stroke();
 /*On récupère les données du canvas d'objectif*/
 var avalider = canvas2.toDataURL();
 
-
 /* #####    CHRONO      ##### */
 
 // Update time script
@@ -42,11 +41,9 @@ $(document).ready(function() {
     chrono();
 });
 
-
 /*Intéractions sur la page*/
 
       $( document ).ready(function() {
-
       	cPush();
         
         var etiqBloc = document.getElementById("etiqBloc");
@@ -124,8 +121,18 @@ $(document).ready(function() {
             });
         });
 
+          // Redirection or not after level complete
         $(".continuer").click(function(){
-          window.location.replace("result.php");
+            if(levelUser < 5){
+               nbrLevel++;
+                localStorage.setItem("levelUser", nbrLevel);
+                
+                window.location.replace("map.php");
+            }
+            else {
+                alert("LEVEL: "+levelUser);
+                //window.location.replace("result.php");
+            }
         });
 
         $(".rechercher").click(function(){

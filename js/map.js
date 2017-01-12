@@ -1,6 +1,6 @@
 sec = 0; // Init sec
 min = 0; // Init min
-        
+
 var valSec, valMin;
 
 // When page is left
@@ -38,22 +38,22 @@ $(document).ready(function() {
 
     // Blink room on map
     setInterval(function() {
-        var room30 = $("#map").contents().find("#room30");
+        var numRoom = $("#map").contents().find("#room"+currentRoom);
         //$("#map").contents().find("#room30").attr({"fill":"red", "opacity":"1"});
-        
-        if (room30.attr("opacity") == '0') {
-            room30.attr({"fill":"#F38F9A", "opacity":".8"});
+        if (numRoom.attr("opacity") == '0') {
+            numRoom.attr({"fill":"#F38F9A", "opacity":".8"});
         }
         else {
-            room30.attr({"opacity":"0"});
+            numRoom.attr({"opacity":"0"});
         }
     }, 500);
     
     // Our own oeuvre picture
     oeuvre = new Image();
-    oeuvre.src = "img/oeuvreTest.png";
+    oeuvre.src = currentArt;
     newOeuvre = getBase64Image(oeuvre);
-
+    console.log(currentArt);
+    alert(levelUser);
 });
 
 // Compare 2 pictures when user add his one
@@ -65,7 +65,7 @@ function getFile() {
         var diff = resemble(userFile).compareTo(newOeuvre).scaleToSameSize().onComplete(function (data) {
             console.log(data);
             console.log(data.misMatchPercentage);
-            if (data.misMatchPercentage > 50.00) {
+            if (data.misMatchPercentage < 50.00) {
                 document.location.href = "oeuvretrouve.php";
             }
             else {

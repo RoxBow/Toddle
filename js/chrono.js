@@ -10,7 +10,6 @@ localSec = localSec.replace(/\s/g, '');
 localMin = localMin.replace(/\s/g, '');
 
 function chrono(){
-    
     centi++; // dixième
     if (centi > 9){
         centi = 0;

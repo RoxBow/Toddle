@@ -81,6 +81,7 @@ if(isset($_POST['pseudo'])){
         // Reset timer
         localStorage.setItem("seconde", 0);
         localStorage.setItem("minute", 0);
+        localStorage.setItem("levelUser", 1);
     </script>
 </body>
 </html>

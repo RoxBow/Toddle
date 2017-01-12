@@ -58,7 +58,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               Tu devais rendre l'oeuvre violet et y ajouter trois carrés.
               <br>
               Tu as donc selectionné les fonctions: <br>
-              <span class="name">ChangerEnViolet</span><span class="parentheses">()</span> et <span class="name">MettreUnCarré</span><span class="parentheses">()</span> qui t'ont permis de réaliser ton objectif ! 
+              <span class="name">ChangerEnViolet</span><span class="parentheses">()</span> et <span class="name">MettreUnCarré</span><span class="parentheses">()</span> qui t'ont permis de réaliser ton objectif !
             </p>
             
             <button class="continuer">D&#201;FI SUIVANT</button>
@@ -118,7 +118,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
           </section>
           <section class="rightBloc">
               <div class="codeBloc">
-                  <h2>D&#201;FI 1/7</h2><br>
+                  <h2>D&#201;FI <span id="levelUser"></span>/7</h2><br>
                   <div class="consignes">
                       <p>
                         Aide toi des fonctions algorithmiques mises à ta disposition ci-dessous, pour transformer le bleu d’Yves Klein, en violet. Ajoute-y 3 carrés en haut à gauche.
@@ -149,11 +149,10 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
     
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/hammer-time.min.js"></script>
-<!--     <script src="code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->    
-        <!--<script src="js/main.js"></script>-->
     <script src="js/global.js"></script>
     <script src="js/resemble.js"></script>
     <script src="js/chrono.js"></script>
+    <script src="js/canvas.js"></script>
     <script src="js/oeuvre.js"></script>
     <script>
     </script>
