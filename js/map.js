@@ -52,8 +52,6 @@ $(document).ready(function() {
     oeuvre = new Image();
     oeuvre.src = currentArt;
     newOeuvre = getBase64Image(oeuvre);
-    console.log(currentArt);
-    alert(levelUser);
 });
 
 // Compare 2 pictures when user add his one
@@ -64,12 +62,12 @@ function getFile() {
         console.log(userFile);
         var diff = resemble(userFile).compareTo(newOeuvre).scaleToSameSize().onComplete(function (data) {
             console.log(data);
-            console.log(data.misMatchPercentage);
             if (data.misMatchPercentage < 50.00) {
+                alert(data.misMatchPercentage);
                 document.location.href = "oeuvretrouve.php";
             }
             else {
-                alert(data.misMatchPercentage + " de ressemblance doit être supérieur à 50%.");
+                alert(data.misMatchPercentage + " de difference, il doit être supérieur à 50%.");
                 console.log(data.misMatchPercentage);
             }
         });

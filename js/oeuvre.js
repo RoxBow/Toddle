@@ -124,7 +124,7 @@ $(document).ready(function() {
           // Redirection or not after level complete
         $(".continuer").click(function(){
             if(levelUser < 5){
-               nbrLevel++;
+                nbrLevel++;
                 localStorage.setItem("levelUser", nbrLevel);
                 
                 window.location.replace("map.php");

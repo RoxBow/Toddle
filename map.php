@@ -83,6 +83,7 @@ if(empty($_SESSION['start'])) {
     <script>
         console.log("Level: "+localStorage.getItem("levelUser"));
         console.log("ROOM: "+currentRoom);
+        console.log("OEUVRE: "+currentArt);
         
     </script>
 </body>
