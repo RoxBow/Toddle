@@ -21,6 +21,8 @@ $(document).ready(function() {
     chrono();
 });
 
+/* #####    CHRONO END     ##### */
+
 function init() {
     canvas = document.getElementById("mycanvas");
     context = canvas.getContext("2d");

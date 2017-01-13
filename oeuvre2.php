@@ -43,25 +43,25 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 </form><br>
            </div>
         </header>
-            <section>
-                <div class="consignes">
-                    <p>A l'aide de la fonction <span class="rose">DessinerLignes()</span>, ajoute ou supprime des lignes afin de recréer l'oeuvre.</p>
-                    <br>
-                </div>
-                <canvas id="mycanvas"></canvas>
-                <div class="button" id="plus"><p>+</p></div>
-                <div class="button" id="moins"><p>-</p></div>
+        <section>
+            <div class="consignes">
+                <p>&Agrave; l'aide de la fonction <span class="rose">DessinerLignes()</span>, ajoute ou supprime des lignes afin de recréer l'oeuvre.</p>
+                <br>
+            </div>
+            <canvas id="mycanvas"></canvas>
+            <div class="button" id="plus"><p>+</p></div>
+            <div class="button" id="moins"><p>-</p></div>
 
-                <div class="result">
-                    <div class="buttonV" id="but">
-                        <img src="img/flag.png" alt="Indice"/>
-                    </div>
-                    <p>DessinerLignes(<span id="nbLignes"></span>)</p>
-                    <div class="buttonV" id="valider">
-                        <i class="fa fa-check fa-2x" aria-hidden="true"></i>
-                    </div>
+            <div class="result">
+                <div class="buttonV" id="but">
+                    <img src="img/flag.png" alt="Indice"/>
                 </div>
-            </section>
+                <p>DessinerLignes(<span id="nbLignes"></span>)</p>
+                <div class="buttonV" id="valider">
+                    <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                </div>
+            </div>
+        </section>
         <footer>
             <img src="img/logo_pompidou.png" alt="pompidou">
             <img src="img/logo_gris_avec.png" alt="avec">
