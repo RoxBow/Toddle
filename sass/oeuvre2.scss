@@ -1,0 +1,85 @@
+// ### Style oeuvre2.php ###
+@import "general";
+.overlay{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+}
+.container{
+    .rose{
+        color: $pinkToddle;
+    }
+    font-weight: 600;
+    canvas {
+        margin: 0 auto;
+        width: 700px;
+        height: 450px;
+        display: block;
+    }
+    .consignes{
+        text-align: center;
+        font-size: 18px;
+        color: $blueToddle;
+    }
+    .result{
+        width: 100%;
+        text-align: center;
+        font-size: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        #but{
+            left: 62.5px;
+        }
+        #valider{
+            right: 62.5px;
+        }
+    }
+    .result p{
+        margin: 5px 0;
+    }
+    .button{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        width: 75px;
+        height: 75px;
+        border-radius: 37.5px;
+        background-color: $pinkToddle;
+        color: white;
+        font-size: 75px;
+        margin-top: -25%;
+        position: absolute;
+        &:active{
+            background-color: $blueToddle;
+        }
+    }
+    .buttonV{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $pinkToddle;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        color: white;
+        font-size: 15px;
+        position: absolute;
+        & > img{
+            width: 50%;
+        }
+        &:active{
+            background-color: $blueToddle;
+        }
+    }
+    #moins{
+        left: 50px;
+        font-size: 70px;
+    }
+    #plus{
+        right: 50px;
+    }
+}
