@@ -1,16 +1,31 @@
-var oeuvre, newOeuvre;
+var countClick = 0;
 
 $(document).ready(function () {
+    // Check if tablet mode is portrait or landscape
+    if(window.innerHeight > window.innerWidth){
+        alert("Tourne la tablette en paysage!");
+    }
+    
+    // Check if user change orientation tablet
+    window.addEventListener("orientationchange", function() {
+        if(screen.orientation.type == "portrait-primary"){
+            alert("Tourne la tablette en paysage!");
+        }
+    });
+    
     // button launch experience
     $(".launch", ".container").click(function () {
         location.href = "name.php";
     });
 
-    // button re-launch experience
-    $(".retry", ".content").click(function () {
-        location.href = "index.html";
+    $("#reset",".content").click(function () {
+        countClick += 1;
+        console.log(countClick);
+        if (countClick == 2) {
+            location.href = "index.html";
+        }
     });
-
+    
     /* ### TUTO ### */
     $('.lesson', '.lessons').each(function () {
         $('.lesson', '.lessons').click(function (e) {

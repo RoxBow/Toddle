@@ -2,12 +2,11 @@
 var currentArt, currentRoom;
 
 // Variable oeuvre
-const roomKlein = "27";
-const roomMondrian = "17";
-const roomTram4 = "35";
-const roomMasMenos = "29";
-const roomMasomenos = "31";
-const roomMariale = "33";
+const roomKlein = "allee-nord";
+const roomMondrian = "allee-sud";
+const roomTram4 = "room28";
+const roomMasomenos = "allee-nord";
+const roomJauneViolet = "room39";
 
 // Variable cache level
 var levelUser = localStorage.getItem("levelUser");
@@ -22,23 +21,23 @@ switch (levelUser) {
         $("#levelUser").text(levelUser);
         break;
     case "2":
-        currentArt = "img/mondrian.png";
-        currentRoom = roomMondrian;
-        $("#levelUser").text(levelUser);
-        break;
-    case "3":
-        currentArt = "img/tram4.png";
-        currentRoom = roomTram4;
-        $("#levelUser").text(levelUser);
-        break;
-    case "4":
         currentArt = "img/masomenos.png";
         currentRoom = roomMasomenos;
         $("#levelUser").text(levelUser);
         break;
+    case "3":
+        currentArt = "img/trames4.png";
+        currentRoom = roomTram4;
+        $("#levelUser").text(levelUser);
+        break;
+    case "4":
+        currentArt = "img/mondrian.png";
+        currentRoom = roomMondrian;
+        $("#levelUser").text(levelUser);
+        break;
     case "5":
-        currentArt = "img/mariale.png";
-        currentRoom = roomMariale;
+        currentArt = "img/jauneauviolet.png";
+        currentRoom = roomJauneViolet;
         $("#levelUser").text(levelUser);
         break;
     default:

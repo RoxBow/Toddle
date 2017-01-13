@@ -3,6 +3,29 @@ min = 0; // Init min
 
 var valSec, valMin;
 
+var oeuvre, newOeuvre;
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.cancelFullScreen) {
+      document.cancelFullScreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen();
+    }
+  }
+}
+
 // When page is left
 $(window).bind('beforeunload',function(){
     valSec = $("#sec").val();
@@ -13,6 +36,13 @@ $(window).bind('beforeunload',function(){
 });
 
 $(document).ready(function() {
+    
+    
+    $('#fs').on('click', function() {
+        console.log('full')
+        toggleFullScreen();
+    });
+    
     /* CHRONO */
     if(localSec != 0 || localMin != 0){
         // Update time script
@@ -38,7 +68,7 @@ $(document).ready(function() {
 
     // Blink room on map
     setInterval(function() {
-        var numRoom = $("#map").contents().find("#room"+currentRoom);
+        var numRoom = $("#map").contents().find("#"+currentRoom);
         //$("#map").contents().find("#room30").attr({"fill":"red", "opacity":"1"});
         if (numRoom.attr("opacity") == '0') {
             numRoom.attr({"fill":"#F38F9A", "opacity":".8"});
@@ -56,24 +86,26 @@ function getFile() {
     // Our own oeuvre picture
     oeuvre = new Image();
     oeuvre.src = currentArt;
-    newOeuvre = getBase64Image(oeuvre);
-    
-    var userFile = document.querySelector('#picture').files[0]; // Img
-    // When user takes his photo
-    if (userFile) {
-        console.log(userFile);
-        var diff = resemble(userFile).compareTo(newOeuvre).scaleToSameSize().onComplete(function (data) {
-            console.log(data);
-            if (data.misMatchPercentage < 50.00) {
-                alert(data.misMatchPercentage);
-                document.location.href = "oeuvretrouve.php";
-            }
-            else {
-                alert(data.misMatchPercentage + " de difference, il doit être supérieur à 50%.");
-                console.log(data.misMatchPercentage);
-            }
-        });
-    }
+    oeuvre.onload = function(){
+        newOeuvre = getBase64Image(oeuvre);
+        
+        var userFile = document.querySelector('#picture').files[0]; // Img
+        // When user takes his photo
+        if (userFile) {
+            console.log(userFile);
+            var diff = resemble(userFile).compareTo(newOeuvre).scaleToSameSize().onComplete(function (data) {
+                console.log(data);
+                if (data.misMatchPercentage < 50.00) {
+                    alert(data.misMatchPercentage);
+                    document.location.href = "oeuvretrouve.php";
+                }
+                else {
+                    alert(data.misMatchPercentage + " de difference, il doit être supérieur à 50%.");
+                    console.log(data.misMatchPercentage);
+                }
+            });
+        }
+    };
 }
 
 // Transform img in encode base 64 with canvas

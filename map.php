@@ -27,6 +27,9 @@ if(empty($_SESSION['start'])) {
     <?php
         include 'credits.php';
     ?>
+    
+    <input type="button" id="fs" value="fullscreen">
+    
     <div class="container">
        <header>
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
