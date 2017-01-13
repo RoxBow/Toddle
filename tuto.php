@@ -13,7 +13,7 @@ if( !isset($_SESSION['pseudo']) ){
 <head>
     <meta charset="UTF-8">
     <title>Toodle - Interactive game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="stylesheets/tuto.css" media="all">
 </head>
 <body>
@@ -27,7 +27,7 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <div class="entete">
             <p>Bienvenue <span><?php echo $_SESSION['pseudo']; ?></span> !</p>
-            <p>L’expérience Toddle te propose de partir à la découverte du code informatique, tout en jouant avec les oeuvres du Centre Georges Pompidou !<br>L’expérience est composée de 7 défis, répartis sur l’ensemble du dernier étage.</p>
+            <p>Découvre le code informatique avec Toddle au centre Georges Pompidou, en résolvant nos 5 défis.</p>
         </div>
         <section class="lessons">
             <div class="lesson up">

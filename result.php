@@ -30,6 +30,12 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
         $_SESSION['min'] = $row['min'];
         $_SESSION['sec'] = $row['sec'];
         $_SESSION['nbrUser'] = $nbr;
+        if($nbr == 1){
+            $place = "er";
+        }
+        else {
+            $place = "ème";
+        }
     }
 }
 
@@ -53,7 +59,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
         </header>
         <div class="content">
-            <p class="announce">Félicitations <span><?php echo $_SESSION['pseudo']; ?></span> !<br>Tu as résolu tous les défis<br>en <span id="minResult"><?php echo $_SESSION['min'];?> minutes</span>  et <span id="secResult"><?php echo $_SESSION['sec'];?> secondes</span>.<br>Tu termines à la <span><?php echo $_SESSION['nbrUser']; ?>ème</span> position </p>
+            <p class="announce">Félicitations <span><?php echo $_SESSION['pseudo']; ?></span> !<br>Tu as résolu tous les défis<br>en <span id="minResult"><?php echo $_SESSION['min'];?> minutes</span>  et <span id="secResult"><?php echo $_SESSION['sec'];?> secondes</span>.<br>Tu termines à la <span><?php echo $_SESSION['nbrUser'].$place; ?></span> position </p>
             <section>
                 <ul class="listeUser">
                     <?php

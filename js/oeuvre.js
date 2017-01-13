@@ -126,12 +126,10 @@ $(document).ready(function() {
             if(levelUser < 5){
                 nbrLevel++;
                 localStorage.setItem("levelUser", nbrLevel);
-                
                 window.location.replace("map.php");
             }
             else {
-                alert("LEVEL: "+levelUser);
-                //window.location.replace("result.php");
+                window.location.replace("result.php");
             }
         });
 

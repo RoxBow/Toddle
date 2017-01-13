@@ -55,7 +55,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </p>
             <br>
             <p>
-              Tu devais rendre l'oeuvre violet et y ajouter trois carrés.
+              Tu devais rendre l'oeuvre violette et y ajouter trois carrés.
               <br>
               Tu as donc selectionné les fonctions: <br>
               <span class="name">ChangerEnViolet</span><span class="parentheses">()</span> et <span class="name">MettreUnCarré</span><span class="parentheses">()</span> qui t'ont permis de réaliser ton objectif !
@@ -118,7 +118,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
           </section>
           <section class="rightBloc">
               <div class="codeBloc">
-                  <h2>D&#201;FI <span id="levelUser"></span>/7</h2><br>
+                  <h2>DÉFI <span id="levelUser"></span>/5</h2><br>
                   <div class="consignes">
                       <p>
                         Aide toi des fonctions algorithmiques mises à ta disposition ci-dessous, pour transformer le bleu d’Yves Klein, en violet. Ajoute-y 3 carrés en haut à gauche.

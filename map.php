@@ -77,14 +77,13 @@ if(empty($_SESSION['start'])) {
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/global.js"></script>
-    <script src="js/resemble.js"></script>
     <script src="js/map.js"></script>
     <script src="js/chrono.js"></script>
+    <script src="js/resemble.js"></script>
     <script>
         console.log("Level: "+localStorage.getItem("levelUser"));
         console.log("ROOM: "+currentRoom);
         console.log("OEUVRE: "+currentArt);
-        
     </script>
 </body>
 </html>

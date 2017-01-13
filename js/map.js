@@ -48,14 +48,16 @@ $(document).ready(function() {
         }
     }, 500);
     
-    // Our own oeuvre picture
-    oeuvre = new Image();
-    oeuvre.src = currentArt;
-    newOeuvre = getBase64Image(oeuvre);
+    
 });
 
 // Compare 2 pictures when user add his one
 function getFile() {
+    // Our own oeuvre picture
+    oeuvre = new Image();
+    oeuvre.src = currentArt;
+    newOeuvre = getBase64Image(oeuvre);
+    
     var userFile = document.querySelector('#picture').files[0]; // Img
     // When user takes his photo
     if (userFile) {
