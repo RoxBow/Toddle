@@ -3,13 +3,16 @@ var countClick = 0;
 $(document).ready(function () {
     // Check if tablet mode is portrait or landscape
     if(window.innerHeight > window.innerWidth){
-        alert("Tourne la tablette en paysage!");
+        $(".container").append("<div class='overlay orientation'><div class='content'><img src='img/orientation.png' alt='tablet'><p>Tourne la tablette.</p></div></div>");
     }
     
     // Check if user change orientation tablet
     window.addEventListener("orientationchange", function() {
         if(screen.orientation.type == "portrait-primary"){
-            alert("Tourne la tablette en paysage!");
+            $(".container").append("<div class='overlay orientation'><div class='content'><img src='img/orientation.png' alt='tablet'><p>Tourne la tablette.</p></div></div>");
+        }
+        else {
+            $(".orientation").remove();
         }
     });
     

@@ -228,8 +228,42 @@ html, body {
   top: 2%;
   font-size: 4vw;
 }
+/* line 219, ../sass/general.scss */
+.container .overlay.orientation {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* line 222, ../sass/general.scss */
+.container .overlay.orientation .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: inline-block;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: #fff;
+  text-align: center;
+  width: 80%;
+  height: 45%;
+  padding: 8%;
+  border-radius: 5%;
+}
+/* line 236, ../sass/general.scss */
+.container .overlay.orientation .content img {
+  width: 50%;
+  display: inline-block;
+  margin: auto;
+  right: 0;
+}
+/* line 242, ../sass/general.scss */
+.container .overlay.orientation .content p {
+  font-size: 7vw;
+  color: #F38F9A;
+  margin: 7% 0;
+}
 
-/* line 221, ../sass/general.scss */
+/* line 252, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -240,7 +274,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 231, ../sass/general.scss */
+/* line 262, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;

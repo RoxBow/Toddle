@@ -25,7 +25,7 @@
         }
     }
     .lessons {
-        height: 59%;
+        height: 68%;
         width: 100%;
         color: #fff;
         .lesson {
@@ -105,11 +105,12 @@
                         font-size: 7vw;
                         box-sizing: content-box;
                         border-radius: 50%;
-                        border: 7px solid #fff;
+                        border: 1vw solid #fff;
                         display: inline-block;
                         font-weight: bold;
-                        width: 10%;
-                        line-height: 80px;
+                        width: 10vw;
+                        height: 10vw;
+                        line-height: 10vw;
                     }
                     .group_gif {
                         width: 50%;
@@ -161,8 +162,8 @@
                     right: 2%;
                     bottom: 3%;
                     padding: 0;
-                    width: 9%;
-                    height: 16%;
+                    width: 8vw;
+                    height: 8vw;
                 }
             } // .lesson + .up
         } // .lesson

@@ -27,9 +27,7 @@ if(empty($_SESSION['start'])) {
     <?php
         include 'credits.php';
     ?>
-    
-    <input type="button" id="fs" value="fullscreen">
-    
+
     <div class="container">
        <header>
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
@@ -65,7 +63,7 @@ if(empty($_SESSION['start'])) {
         </footer>
         
         <!-- POPUP -->
-        <div class="overlay">
+        <div class="overlay" id="indiceBloc">
           <div class="popup2">
             <i class="fa fa-times close" aria-hidden="true" id="close"></i>
             <p>

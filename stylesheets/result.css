@@ -228,8 +228,42 @@ html, body {
   top: 2%;
   font-size: 4vw;
 }
+/* line 219, ../sass/general.scss */
+.container .overlay.orientation {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* line 222, ../sass/general.scss */
+.container .overlay.orientation .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: inline-block;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: #fff;
+  text-align: center;
+  width: 80%;
+  height: 45%;
+  padding: 8%;
+  border-radius: 5%;
+}
+/* line 236, ../sass/general.scss */
+.container .overlay.orientation .content img {
+  width: 50%;
+  display: inline-block;
+  margin: auto;
+  right: 0;
+}
+/* line 242, ../sass/general.scss */
+.container .overlay.orientation .content p {
+  font-size: 7vw;
+  color: #F38F9A;
+  margin: 7% 0;
+}
 
-/* line 221, ../sass/general.scss */
+/* line 252, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -240,7 +274,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 231, ../sass/general.scss */
+/* line 262, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -334,7 +368,7 @@ body {
   color: #F38F9A;
 }
 
-/* line 71, ../sass/result.scss */
+/* line 70, ../sass/result.scss */
 .blocEmail {
   position: absolute;
   top: -30%;
@@ -344,28 +378,28 @@ body {
   background: #fff;
   width: 35%;
   margin: auto;
-  border: 2px solid black;
+  border: 2px solid #000;
   padding: 3%;
   font-size: 1.5rem;
   border-radius: 10px;
 }
-/* line 84, ../sass/result.scss */
+/* line 83, ../sass/result.scss */
 .blocEmail .fa-stack {
   margin-bottom: 2%;
   font-size: 2rem;
   color: #355E7E;
 }
 
-/* line 91, ../sass/result.scss */
+/* line 93, ../sass/result.scss */
 .popup {
   display: flex;
   align-items: center;
 }
-/* line 94, ../sass/result.scss */
+/* line 96, ../sass/result.scss */
 .popup label {
   font-size: 2vw;
 }
-/* line 97, ../sass/result.scss */
+/* line 99, ../sass/result.scss */
 .popup input {
   border-radius: 50px;
   color: #355E7E;
@@ -376,27 +410,27 @@ body {
   margin: 5% 0;
   font-size: 3vw;
 }
-/* line 107, ../sass/result.scss */
+/* line 109, ../sass/result.scss */
 .popup button {
   font-size: 3.5vw;
 }
-/* line 109, ../sass/result.scss */
+/* line 111, ../sass/result.scss */
 .popup button .fa-circle {
   color: #355E7E;
 }
 
-/* line 115, ../sass/result.scss */
+/* line 117, ../sass/result.scss */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* line 119, ../sass/result.scss */
+/* line 121, ../sass/result.scss */
 ::-webkit-scrollbar-track {
   background-color: #F38F9A;
   border-radius: 8px;
 }
 
-/* line 124, ../sass/result.scss */
+/* line 126, ../sass/result.scss */
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #355E7E;

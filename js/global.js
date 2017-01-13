@@ -1,12 +1,12 @@
 /* GLOBAL VARIABLE */
 var currentArt, currentRoom;
 
-// Variable oeuvre
+// CONST our arts
 const roomKlein = "allee-nord";
-const roomMondrian = "allee-sud";
-const roomTram4 = "room28";
 const roomMasomenos = "allee-nord";
+const roomTram4 = "room28";
 const roomJauneViolet = "room39";
+const roomMondrian = "allee-sud";
 
 // Variable cache level
 var levelUser = localStorage.getItem("levelUser");
@@ -31,13 +31,13 @@ switch (levelUser) {
         $("#levelUser").text(levelUser);
         break;
     case "4":
-        currentArt = "img/mondrian.png";
-        currentRoom = roomMondrian;
+        currentArt = "img/jauneauviolet.png";
+        currentRoom = roomJauneViolet;
         $("#levelUser").text(levelUser);
         break;
     case "5":
-        currentArt = "img/jauneauviolet.png";
-        currentRoom = roomJauneViolet;
+        currentArt = "img/mondrian.png";
+        currentRoom = roomMondrian;
         $("#levelUser").text(levelUser);
         break;
     default:

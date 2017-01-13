@@ -103,7 +103,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
         </footer>
         
         <!-- POPUP -->
-        <div class="overlay">
+        <div class="overlay blocPoppin">
           <div class="popup">
            <i class="fa fa-times close" aria-hidden="true"></i>
             <form action="" method="post" id="formMail">
@@ -122,6 +122,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
         <!-- POPUP -->
         
         <?php
+            // Display it if email is saved
             if($emailSaved === true){
                 echo "<div class='blocEmail'>
                 <span class='fa-stack'>
@@ -152,10 +153,10 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
             
             $(document).click(function (e) {
                 if( $(".fa-envelope").is(e.target) ){
-                    $(".overlay").fadeIn(); // Open popup
+                    $(".blocPoppin").fadeIn(); // Open popup
                 }
-                else if ( $(".close").is(e.target) || $(".overlay").is(e.target)) {
-                    $(".overlay").fadeOut();
+                else if ( $(".blocPoppin").is(e.target) || $(".close").is(e.target) ) {
+                    $(".blocPoppin").fadeOut();
                 }
                 if( $(".fa-arrow-right").is(e.target) ){
                     document.location.href = "end.php"; // Redirect to last page

@@ -228,8 +228,42 @@ html, body {
   top: 2%;
   font-size: 4vw;
 }
+/* line 219, ../sass/general.scss */
+.container .overlay.orientation {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* line 222, ../sass/general.scss */
+.container .overlay.orientation .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: inline-block;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: #fff;
+  text-align: center;
+  width: 80%;
+  height: 45%;
+  padding: 8%;
+  border-radius: 5%;
+}
+/* line 236, ../sass/general.scss */
+.container .overlay.orientation .content img {
+  width: 50%;
+  display: inline-block;
+  margin: auto;
+  right: 0;
+}
+/* line 242, ../sass/general.scss */
+.container .overlay.orientation .content p {
+  font-size: 7vw;
+  color: #F38F9A;
+  margin: 7% 0;
+}
 
-/* line 221, ../sass/general.scss */
+/* line 252, ../sass/general.scss */
 .btn_toddle, .container .group_btn form .container_input label {
   background: #355E7E;
   padding: 20px;
@@ -240,7 +274,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 231, ../sass/general.scss */
+/* line 262, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -251,32 +285,36 @@ html, body {
   height: 70px;
 }
 
-/* line 4, ../sass/map.scss */
+/* line 3, ../sass/map.scss */
+.container {
+  position: relative;
+}
+/* line 5, ../sass/map.scss */
 .container .content {
   height: 83%;
 }
-/* line 7, ../sass/map.scss */
+/* line 8, ../sass/map.scss */
 .container .map {
   width: 100%;
   height: auto;
 }
-/* line 11, ../sass/map.scss */
+/* line 12, ../sass/map.scss */
 .container .group_btn {
   width: 100%;
   position: relative;
 }
-/* line 14, ../sass/map.scss */
+/* line 15, ../sass/map.scss */
 .container .group_btn form {
   position: absolute;
   width: 30%;
   margin-left: 34%;
 }
-/* line 18, ../sass/map.scss */
+/* line 19, ../sass/map.scss */
 .container .group_btn form .container_input {
   display: inline-block;
   position: relative;
 }
-/* line 21, ../sass/map.scss */
+/* line 22, ../sass/map.scss */
 .container .group_btn form .container_input input {
   position: absolute;
   top: 0;
@@ -285,12 +323,12 @@ html, body {
   height: 100%;
   opacity: 0;
 }
-/* line 29, ../sass/map.scss */
+/* line 30, ../sass/map.scss */
 .container .group_btn form .container_input label {
   font-size: 3vw;
   display: block;
 }
-/* line 36, ../sass/map.scss */
+/* line 37, ../sass/map.scss */
 .container .group_btn .help_map {
   position: absolute;
   animation: tremblement 2s ease-in 1s infinite;
@@ -298,15 +336,15 @@ html, body {
   margin-left: 55%;
   font-size: 2.7vw;
 }
-/* line 42, ../sass/map.scss */
+/* line 43, ../sass/map.scss */
 .container .group_btn .help_map .fa-circle {
   color: #F38F9A;
 }
-/* line 45, ../sass/map.scss */
+/* line 46, ../sass/map.scss */
 .container .group_btn .help_map .fa-question {
   color: #fff;
 }
-/* line 50, ../sass/map.scss */
+/* line 51, ../sass/map.scss */
 .container .popup2 {
   display: flex;
   align-items: center;
@@ -324,13 +362,38 @@ html, body {
   color: #355E7E;
   font-size: 24px;
 }
-/* line 66, ../sass/map.scss */
+/* line 67, ../sass/map.scss */
 .container .popup2 .sous-titre2 {
   color: #F38F9A;
   font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 4%;
   display: block;
+}
+/* line 75, ../sass/map.scss */
+.container .badPicture {
+  position: absolute;
+  top: -30%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  background: #fff;
+  width: 35%;
+  margin: auto;
+  border: 2px solid #000;
+  padding: 3%;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+/* line 88, ../sass/map.scss */
+.container .badPicture .fa-stack {
+  margin-bottom: 2%;
+  font-size: 2rem;
+  color: red;
+}
+/* line 92, ../sass/map.scss */
+.container .badPicture .fa-stack .fa-times {
+  color: #fff;
 }
 
 @keyframes tremblement {

@@ -5,27 +5,6 @@ var valSec, valMin;
 
 var oeuvre, newOeuvre;
 
-function toggleFullScreen() {
-  if (!document.fullscreenElement &&    // alternative standard method
-      !document.mozFullScreenElement && !document.webkitFullscreenElement) {  // current working methods
-    if (document.documentElement.requestFullscreen) {
-      document.documentElement.requestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) {
-      document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullscreen) {
-      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-    }
-  } else {
-    if (document.cancelFullScreen) {
-      document.cancelFullScreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.webkitCancelFullScreen) {
-      document.webkitCancelFullScreen();
-    }
-  }
-}
-
 // When page is left
 $(window).bind('beforeunload',function(){
     valSec = $("#sec").val();
@@ -36,13 +15,6 @@ $(window).bind('beforeunload',function(){
 });
 
 $(document).ready(function() {
-    
-    
-    $('#fs').on('click', function() {
-        console.log('full')
-        toggleFullScreen();
-    });
-    
     /* CHRONO */
     if(localSec != 0 || localMin != 0){
         // Update time script
@@ -53,23 +25,24 @@ $(document).ready(function() {
         $("#min").val(localMin);
     }
     
-    chrono(); // Launch chrono
+    // Launch chrono
+    chrono();
     
     $(document).click(function (e) {
         /* POPUP HELP */
         if( $(".help_map").is(e.target) || $(".fa-question").is(e.target) ){
-            $(".overlay").fadeIn();
+            $("#indiceBloc").fadeIn();
             $("#indice").css("animation-play-state","paused");
         }
-        else if ( $(".overlay").is(e.target) || $(".close").is(e.target) ) {
-            $(".overlay").fadeOut();
+        else if ( $("#indiceBloc").is(e.target) || $(".close").is(e.target) ) {
+            $("#indiceBloc").fadeOut();
         }
     });
 
     // Blink room on map
     setInterval(function() {
         var numRoom = $("#map").contents().find("#"+currentRoom);
-        //$("#map").contents().find("#room30").attr({"fill":"red", "opacity":"1"});
+        
         if (numRoom.attr("opacity") == '0') {
             numRoom.attr({"fill":"#F38F9A", "opacity":".8"});
         }
@@ -77,8 +50,6 @@ $(document).ready(function() {
             numRoom.attr({"opacity":"0"});
         }
     }, 500);
-    
-    
 });
 
 // Compare 2 pictures when user add his one
@@ -86,6 +57,7 @@ function getFile() {
     // Our own oeuvre picture
     oeuvre = new Image();
     oeuvre.src = currentArt;
+    // Oeuvre is load
     oeuvre.onload = function(){
         newOeuvre = getBase64Image(oeuvre);
         
@@ -96,12 +68,21 @@ function getFile() {
             var diff = resemble(userFile).compareTo(newOeuvre).scaleToSameSize().onComplete(function (data) {
                 console.log(data);
                 if (data.misMatchPercentage < 50.00) {
-                    alert(data.misMatchPercentage);
+                    console.log(data.misMatchPercentage);
                     document.location.href = "oeuvretrouve.php";
                 }
                 else {
-                    alert(data.misMatchPercentage + " de difference, il doit être supérieur à 50%.");
-                    console.log(data.misMatchPercentage);
+                    console.log(data.misMatchPercentage + " de différence, il doit être supérieur à 50%.");
+                    $(".container").append("<div class='badPicture'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x'></i><i class='fa fa-times fa-stack-1x fa-inverse' aria-hidden='true'></i></span><p>Ce n'est pas la bonne oeuvre ou réessaie.</p></div>");
+                    $(".badPicture").animate({
+                        top: "5%"
+                      }, 1500, function() {
+                        setTimeout(function(){
+                            $(".badPicture").animate({
+                                top: "-30%"
+                            }, 1500);
+                        }, 600);
+                      });
                 }
             });
         }

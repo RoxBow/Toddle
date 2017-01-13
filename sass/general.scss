@@ -215,6 +215,37 @@ html, body {
             top: 2%;
             font-size: 4vw;
         }
+        // Orientation tablet mode
+        &.orientation {
+            display: block;
+            background-color: rgba(0,0,0,0.8);
+            .content {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                display: inline-block;
+                right: 0;
+                left: 0;
+                margin: auto;
+                background: #fff;
+                text-align: center;
+                width: 80%;
+                height: 45%;
+                padding: 8%;
+                border-radius: 5%;
+                img {
+                    width: 50%;
+                    display: inline-block;
+                    margin: auto;
+                    right: 0;
+                }
+                p {
+                    font-size: 7vw;
+                    color: #F38F9A;
+                    margin: 7% 0;
+                }
+            } // .content
+        }
     } // .overlay
 }
 
