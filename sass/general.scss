@@ -33,7 +33,13 @@ $beigeToddle : #F8B195;
 // Code Font
 @font-face {
     font-family: "Inconsolata";
-    src: url(../fonts/Inconsolata.otf);
+    src: url(../fonts/Inconsolata-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inconsolata";
+    src: url(../fonts/Inconsolata-Bold.ttf);
+    font-weight: bold;
 }
 
 html, body {

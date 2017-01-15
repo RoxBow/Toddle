@@ -292,7 +292,7 @@ html, body {
 }
 
 /* line 275, ../sass/general.scss */
-.btn_toddle, .container .group_btn form .container_input label {
+.btn_toddle {
   background: #355E7E;
   padding: 20px;
   color: #fff;
@@ -313,143 +313,141 @@ html, body {
   height: 70px;
 }
 
-/* line 3, ../sass/map.scss */
-.container {
-  position: relative;
-}
-/* line 5, ../sass/map.scss */
-.container .content {
-  height: 83%;
-}
-/* line 8, ../sass/map.scss */
-.container .map {
-  width: 100%;
-  height: auto;
-}
-/* line 12, ../sass/map.scss */
-.container .group_btn {
-  width: 100%;
-  position: relative;
-}
-/* line 15, ../sass/map.scss */
-.container .group_btn form {
+/* line 3, ../sass/jauneviolet.scss */
+.overlay {
   position: absolute;
-  width: 30%;
-  margin-left: 34%;
-}
-/* line 19, ../sass/map.scss */
-.container .group_btn form .container_input {
-  display: inline-block;
-  position: relative;
-}
-/* line 22, ../sass/map.scss */
-.container .group_btn form .container_input input {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: none;
   width: 100%;
   height: 100%;
-  opacity: 0;
-}
-/* line 30, ../sass/map.scss */
-.container .group_btn form .container_input label {
-  font-size: 3vw;
-  display: block;
-}
-/* line 37, ../sass/map.scss */
-.container .group_btn .help_map {
-  position: absolute;
-  animation: tremblement 2s ease-in 1s infinite;
-  top: -2px;
-  margin-left: 55%;
-  font-size: 2.7vw;
-}
-/* line 43, ../sass/map.scss */
-.container .group_btn .help_map .fa-circle {
-  color: #F38F9A;
-}
-/* line 46, ../sass/map.scss */
-.container .group_btn .help_map .fa-question {
-  color: #fff;
-}
-/* line 51, ../sass/map.scss */
-.container .popup2 {
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 15px;
-  position: absolute;
-  width: 75%;
-  height: 50%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  left: 0;
-  right: 0;
-  padding: 40px;
-  color: #355E7E;
-  font-size: 24px;
-}
-/* line 67, ../sass/map.scss */
-.container .popup2 .sous-titre2 {
-  color: #F38F9A;
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-bottom: 4%;
-  display: block;
-}
-/* line 75, ../sass/map.scss */
-.container .badPicture {
-  position: absolute;
-  top: -30%;
-  text-align: center;
-  left: 0;
-  right: 0;
-  background: #fff;
-  width: 35%;
-  margin: auto;
-  border: 2px solid #000;
-  padding: 3%;
-  font-size: 1.5rem;
-  border-radius: 10px;
-}
-/* line 88, ../sass/map.scss */
-.container .badPicture .fa-stack {
-  margin-bottom: 2%;
-  font-size: 2rem;
-  color: red;
-}
-/* line 92, ../sass/map.scss */
-.container .badPicture .fa-stack .fa-times {
-  color: #fff;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-@keyframes tremblement {
-  0% {
-    margin-left: 55%;
-  }
-  4% {
-    margin-left: 56%;
-  }
-  8% {
-    margin-left: 54%;
-  }
-  12% {
-    margin-left: 56%;
-  }
-  16% {
-    margin-left: 54%;
-  }
-  20% {
-    margin-left: 56%;
-  }
-  24% {
-    margin-left: 54%;
-  }
-  28% {
-    margin-left: 55%;
-  }
-  100% {
-    margin-left: 55%;
-  }
+/* line 13, ../sass/jauneviolet.scss */
+.container h2 {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+/* line 18, ../sass/jauneviolet.scss */
+.container .consignes {
+  text-align: center;
+  font-size: 18px;
+  color: #355E7E;
+  width: 80%;
+  margin: 0 auto;
+  font-weight: 600;
+}
+/* line 26, ../sass/jauneviolet.scss */
+.container .leftBloc {
+  width: 50%;
+  float: left;
+  padding-left: 1%;
+  position: relative;
+}
+/* line 31, ../sass/jauneviolet.scss */
+.container .leftBloc .bouton2 {
+  position: absolute;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F38F9A;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  bottom: 1%;
+}
+/* line 42, ../sass/jauneviolet.scss */
+.container .leftBloc .bouton2 > img {
+  width: 50%;
+}
+/* line 45, ../sass/jauneviolet.scss */
+.container .leftBloc .bouton2:active {
+  background-color: #355E7E;
+}
+/* line 49, ../sass/jauneviolet.scss */
+.container .leftBloc #indice {
+  left: 3%;
+}
+/* line 52, ../sass/jauneviolet.scss */
+.container .leftBloc #but {
+  right: 7.5%;
+}
+/* line 55, ../sass/jauneviolet.scss */
+.container .leftBloc canvas {
+  width: 100%;
+  background: #EFE9D3;
+}
+/* line 60, ../sass/jauneviolet.scss */
+.container .rightBloc {
+  width: 50%;
+  float: right;
+}
+/* line 63, ../sass/jauneviolet.scss */
+.container .rightBloc .code {
+  padding: 10px;
+  background-color: #F2F2F2;
+  width: 90%;
+  font-family: "Inconsolata", "GothamRounded", "Arial";
+}
+/* line 68, ../sass/jauneviolet.scss */
+.container .rightBloc .code #chaude {
+  margin: 0 0 1% 0;
+}
+/* line 71, ../sass/jauneviolet.scss */
+.container .rightBloc .code .blueColor {
+  color: #557CC3;
+}
+/* line 74, ../sass/jauneviolet.scss */
+.container .rightBloc .code .violetColor {
+  color: #8A5CAF;
+}
+/* line 77, ../sass/jauneviolet.scss */
+.container .rightBloc .code .indent1 {
+  padding-left: 30px;
+}
+/* line 80, ../sass/jauneviolet.scss */
+.container .rightBloc .code .indent2 {
+  padding-left: 40px;
+}
+/* line 83, ../sass/jauneviolet.scss */
+.container .rightBloc .code .indent3 {
+  padding-left: 50px;
+}
+/* line 86, ../sass/jauneviolet.scss */
+.container .rightBloc .code .contentChaud, .container .rightBloc .code .contentFroid {
+  display: inline-block;
+}
+/* line 89, ../sass/jauneviolet.scss */
+.container .rightBloc .code .colors {
+  vertical-align: top;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin: 0 2px;
+}
+/* line 96, ../sass/jauneviolet.scss */
+.container .rightBloc .code select {
+  -webkit-appearance: none;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+/* line 102, ../sass/jauneviolet.scss */
+.container .rightBloc .code input {
+  border: none;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  background: none;
+  outline: none;
+  font-size: 18px;
+  color: red;
+  width: 40px;
+  margin: 0 4px;
+}
+/* line 113, ../sass/jauneviolet.scss */
+.container .rightBloc .code #nameFunction {
+  color: inherit;
+  width: 140px;
 }

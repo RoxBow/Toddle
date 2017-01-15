@@ -19,9 +19,14 @@
 }
 @font-face {
   font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata.otf);
+  src: url(../fonts/Inconsolata-Regular.ttf);
 }
-/* line 39, ../sass/general.scss */
+@font-face {
+  font-family: "Inconsolata";
+  src: url(../fonts/Inconsolata-Bold.ttf);
+  font-weight: bold;
+}
+/* line 45, ../sass/general.scss */
 html, body {
   padding: 0;
   margin: 0;
@@ -32,7 +37,7 @@ html, body {
 }
 
 /* ###### CRÉDITS ###### */
-/* line 50, ../sass/general.scss */
+/* line 56, ../sass/general.scss */
 .credits {
   position: absolute;
   display: none;
@@ -43,13 +48,13 @@ html, body {
   z-index: 10000;
   background-color: white;
 }
-/* line 51, ../sass/general.scss */
+/* line 57, ../sass/general.scss */
 .credits #croix {
   position: absolute;
   right: 10%;
   color: #aaa;
 }
-/* line 64, ../sass/general.scss */
+/* line 70, ../sass/general.scss */
 .credits .title {
   font-size: 72px;
   font-weight: 600;
@@ -57,11 +62,11 @@ html, body {
   width: 100%;
   text-align: center;
 }
-/* line 71, ../sass/general.scss */
+/* line 77, ../sass/general.scss */
 .credits .justify {
   text-align: justify;
 }
-/* line 74, ../sass/general.scss */
+/* line 80, ../sass/general.scss */
 .credits .content {
   font-size: 20px;
   color: #355E7E;
@@ -70,62 +75,62 @@ html, body {
   margin-left: 5%;
   margin-top: 50px;
 }
-/* line 82, ../sass/general.scss */
+/* line 88, ../sass/general.scss */
 .credits .logo {
   display: inline-block;
   vertical-align: middle;
   width: 100px;
 }
 
-/* line 89, ../sass/general.scss */
+/* line 95, ../sass/general.scss */
 .fa {
   vertical-align: middle;
 }
 
 /* ###### Class for colors ###### */
-/* line 94, ../sass/general.scss */
+/* line 100, ../sass/general.scss */
 .rose {
   color: #F38F9A;
 }
 
-/* line 97, ../sass/general.scss */
+/* line 103, ../sass/general.scss */
 .bleu {
   color: #355E7E;
 }
 
-/* line 100, ../sass/general.scss */
+/* line 106, ../sass/general.scss */
 .beige {
   color: #F8B195;
 }
 
-/* line 103, ../sass/general.scss */
+/* line 109, ../sass/general.scss */
 .noir {
   color: black;
 }
 
-/* line 106, ../sass/general.scss */
+/* line 112, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 111, ../sass/general.scss */
+/* line 117, ../sass/general.scss */
 .container * {
   outline: none;
   box-sizing: border-box;
 }
-/* line 115, ../sass/general.scss */
+/* line 121, ../sass/general.scss */
 .container input {
   font-family: 'GothamRounded';
 }
-/* line 118, ../sass/general.scss */
+/* line 124, ../sass/general.scss */
 .container img {
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   user-select: none;
 }
-/* line 123, ../sass/general.scss */
+/* line 129, ../sass/general.scss */
 .container button {
   background: none;
   border: none;
@@ -133,7 +138,7 @@ html, body {
   text-transform: uppercase;
   font-weight: 600;
 }
-/* line 130, ../sass/general.scss */
+/* line 136, ../sass/general.scss */
 .container header {
   position: relative;
   overflow: hidden;
@@ -142,12 +147,12 @@ html, body {
   margin: 0 0 15px 0;
   height: 15%;
 }
-/* line 137, ../sass/general.scss */
+/* line 143, ../sass/general.scss */
 .container header .toddle_form {
   height: 80%;
   float: left;
 }
-/* line 141, ../sass/general.scss */
+/* line 147, ../sass/general.scss */
 .container header .toddle_text {
   position: absolute;
   left: 0;
@@ -156,7 +161,7 @@ html, body {
   margin: auto;
   height: 50%;
 }
-/* line 149, ../sass/general.scss */
+/* line 155, ../sass/general.scss */
 .container header .blockRight {
   position: absolute;
   right: 5%;
@@ -166,11 +171,11 @@ html, body {
   font-weight: normal;
   color: #F38F9A;
 }
-/* line 157, ../sass/general.scss */
+/* line 163, ../sass/general.scss */
 .container header .blockRight .name, .container header .blockRight .chrono {
   display: inline-block;
 }
-/* line 161, ../sass/general.scss */
+/* line 167, ../sass/general.scss */
 .container header .blockRight .chrono input {
   font-size: 2.5vw;
   color: #F38F9A;
@@ -180,11 +185,11 @@ html, body {
   border: none;
   background: none;
 }
-/* line 171, ../sass/general.scss */
+/* line 177, ../sass/general.scss */
 .container header .blockRight .defi {
   text-align: right;
 }
-/* line 176, ../sass/general.scss */
+/* line 182, ../sass/general.scss */
 .container footer {
   width: 100%;
   text-align: right;
@@ -192,14 +197,14 @@ html, body {
   bottom: 1%;
   right: 1%;
 }
-/* line 182, ../sass/general.scss */
+/* line 188, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
   vertical-align: middle;
   margin-right: 1%;
 }
-/* line 189, ../sass/general.scss */
+/* line 195, ../sass/general.scss */
 .container .overlay {
   display: none;
   position: fixed;
@@ -213,7 +218,7 @@ html, body {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
-/* line 201, ../sass/general.scss */
+/* line 207, ../sass/general.scss */
 .container .overlay .popup {
   background-color: #fff;
   border-radius: 15px;
@@ -229,7 +234,7 @@ html, body {
   color: #355E7E;
   font-size: 20px;
 }
-/* line 215, ../sass/general.scss */
+/* line 221, ../sass/general.scss */
 .container .overlay .popup .sous-titre {
   color: #F38F9A;
   font-size: 2.2rem;
@@ -237,13 +242,13 @@ html, body {
   margin-bottom: 4%;
   display: block;
 }
-/* line 222, ../sass/general.scss */
+/* line 228, ../sass/general.scss */
 .container .overlay .popup .error {
   margin: 3% auto;
   color: red;
   font-size: 2vw;
 }
-/* line 228, ../sass/general.scss */
+/* line 234, ../sass/general.scss */
 .container .overlay .close {
   color: #aaa;
   position: absolute;
@@ -251,12 +256,12 @@ html, body {
   top: 2%;
   font-size: 4vw;
 }
-/* line 236, ../sass/general.scss */
+/* line 242, ../sass/general.scss */
 .container .overlay.orientation {
   display: block;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 239, ../sass/general.scss */
+/* line 245, ../sass/general.scss */
 .container .overlay.orientation .content {
   position: absolute;
   top: 0;
@@ -272,21 +277,21 @@ html, body {
   padding: 8%;
   border-radius: 5%;
 }
-/* line 253, ../sass/general.scss */
+/* line 259, ../sass/general.scss */
 .container .overlay.orientation .content img {
   width: 50%;
   display: inline-block;
   margin: auto;
   right: 0;
 }
-/* line 259, ../sass/general.scss */
+/* line 265, ../sass/general.scss */
 .container .overlay.orientation .content p {
   font-size: 7vw;
   color: #F38F9A;
   margin: 7% 0;
 }
 
-/* line 269, ../sass/general.scss */
+/* line 275, ../sass/general.scss */
 .btn_toddle, .content button {
   background: #355E7E;
   padding: 20px;
@@ -297,7 +302,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 279, ../sass/general.scss */
+/* line 285, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
