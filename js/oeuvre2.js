@@ -64,7 +64,9 @@ $("#moins").on("click",function(){
     }
 });
 
-
+$(".rechercher").on("click",function(){
+    $('#loose').fadeOut(500);
+});
 
 // Draw forms
 function render() {
@@ -167,10 +169,10 @@ function creationLine2(y,x) {
 }
 
 function win(){
-    alert('Bravo, tu as réussi !');
+    $('#win').fadeIn(500);
 }
 function lose(){
-    alert("Regarde atentivement l'oeuvre !");
+    $('#loose').fadeIn(500);
 }
 // When document is loaded
 (function () {

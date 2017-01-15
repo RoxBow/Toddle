@@ -38,28 +38,28 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé l'oeuvre indiquée ! Il s'agit d'&nbsp;&quot;IKB3 Monochrome Bleu"<br> d'Yves Klein.
+              Tu as trouvé l'oeuvre indiquée ! Il s'agit de&nbsp;&quot;Mas o Menos"<br> de Frank Stella.
             </p>
             <br>
             <p>
-              Tu vas découvrir un principipe fondamental de la programmation:&nbsp;<span class="rose">l'Algorithmique</span>. 
+              D&eacute;couvrons ensemble les <span class="rose">paramètres</span>.
             </p>
             <br>
             <p>
-                L'algorithmique permet d'effectuer des actions. Elles s'écrivent d'une manière particulière.
+                Les paramètres sont des indications sur l'action que nous voulons effectuer.
             </p>
             <br>
             <p>
-                <span class="bold">Exemple:</span> Je veux dessiner un rond. En algorithmique on écrira l'action comme suivant:
+                <span class="bold">Exemple:</span> Je veux dessiner trois rond.<br> Nous allons dessiner un rond trois fois ! En algorithmique on écrira cela ainsi:
             <br>
-            <span class="fonction bold">DessinerUnRond</span><span class="parentheses bold">();</span>
+            <span class="fonction bold">DessinerUnRond</span><span class="parentheses bold">(<span class="rose">3</span>);</span>
             </p>
             <br>
             <p class="text-go rose">
               PR&Ecirc;T &Agrave; RELEVER LE D&Eacute;FI ? <br>
             </p>
             <br>
-            <a href="oeuvre.php"><button class="go">GO</button></a>
+            <a href="oeuvre2.php"><button class="go">GO</button></a>
         </section>
         <?php
             include 'footer.php';

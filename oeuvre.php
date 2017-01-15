@@ -47,18 +47,13 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </p>
             <br>
             <p>
-              Il consistait à transformer l'oeuvre de Yves Klein pour te faire découvrir l'algorithmique.
-            </p>
-            <br>
-            <p>
               Récapitulons, ce que tu viens de mettre en application: <br>
             </p>
             <br>
             <p>
-              Tu devais rendre l'oeuvre violette et y ajouter trois carrés.
+              Tu as retrouvé l'oeuvres de Yves Klein en utilisant la fonction:
               <br>
-              Tu as donc selectionné les fonctions: <br>
-              <span class="name">ChangerEnViolet</span><span class="parentheses">()</span> et <span class="name">MettreUnCarré</span><span class="parentheses">()</span> qui t'ont permis de réaliser ton objectif !
+              <span class="name">ChangerEnBleu</span><span class="parentheses">()</span>.
             </p>
             
             <button class="continuer">D&#201;FI SUIVANT</button>
@@ -70,6 +65,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               RAT&#201;&nbsp;!
             </p>
             <hr>
+            <br>
             <p class="text-loose">
               Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
@@ -121,7 +117,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                   <h2>DÉFI <span id="levelUser"></span>/5</h2><br>
                   <div class="consignes">
                       <p>
-                        Aide toi des fonctions algorithmiques mises à ta disposition ci-dessous, pour transformer le bleu d’Yves Klein, en violet. Ajoute-y 3 carrés en haut à gauche.
+                        Aide toi des fonctions algorithmiques mises à ta disposition ci-dessous, pour recréer l'oeuvre de Yves Klein.
                       </p>
                       <br>
                       <p>
@@ -132,7 +128,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               <div class="etiqBloc" id="etiqBloc">
                   <div class="etiq" id="vert">ChangerEnVert()</div>
                   <div class="etiq" id="rouge">ChangerEnRouge()</div>
-                  <div class="etiq" id="jaune">ChangerEnJaune()</div>
+                  <div class="etiq" id="jaune">ChangerEnBleu()</div>
                   <div class="etiq" id="carre">MettreUnCarré()</div>
                   <div class="etiq" id="violet">ChangerEnViolet()</div>
                   <div class="etiq" id="rond">MettreUnCercle()</div>

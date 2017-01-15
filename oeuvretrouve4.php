@@ -38,28 +38,33 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé l'oeuvre indiquée ! Il s'agit d'&nbsp;&quot;IKB3 Monochrome Bleu"<br> d'Yves Klein.
+              Tu as trouvé cette oeuvre ! "4 DOUBLES TRAMES, TRAITS MINCES 0°- 22°5 - 45°- 67°5" est celle de François Morellet.
             </p>
             <br>
             <p>
-              Tu vas découvrir un principipe fondamental de la programmation:&nbsp;<span class="rose">l'Algorithmique</span>. 
+              D&eacute;couvrons ensemble les <span class="rose">variables</span>.
+            </p>
+            <p>
+                Ce sont des "boites" où l'on peut mettre des chiffres par exemple.
             </p>
             <br>
             <p>
-                L'algorithmique permet d'effectuer des actions. Elles s'écrivent d'une manière particulière.
-            </p>
-            <br>
-            <p>
-                <span class="bold">Exemple:</span> Je veux dessiner un rond. En algorithmique on écrira l'action comme suivant:
-            <br>
-            <span class="fonction bold">DessinerUnRond</span><span class="parentheses bold">();</span>
+                <span class="bold">Exemple:</span> Je veux dessiner 6 chats. Je mets le chiffre "6" dans une boite se nommant "nbChats" comme suivant:
+                <br>
+                <br>
+                <span class="rose">var</span> nbChats = 6;
+                <br>
+                <br>
+                <!-- "<span class="rose">var</span>" nous disant que ce qui suit est une boite. -->
+                Dessinons ces chats: <span class="bold">DessinerUnChat(<span class="rose">nbChats</span>);</span>
+                <br>
             </p>
             <br>
             <p class="text-go rose">
               PR&Ecirc;T &Agrave; RELEVER LE D&Eacute;FI ? <br>
             </p>
             <br>
-            <a href="oeuvre.php"><button class="go">GO</button></a>
+            <a href="oeuvre3.php"><button class="go">GO</button></a>
         </section>
         <?php
             include 'footer.php';

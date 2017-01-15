@@ -62,6 +62,19 @@ html, body {
 .fa {
   vertical-align: middle; }
 
+/* ###### Class for colors ###### */
+.rose {
+  color: #F38F9A; }
+
+.bleu {
+  color: #355E7E; }
+
+.beige {
+  color: #F8B195; }
+
+.noir {
+  color: black; }
+
 .container {
   background: #fff;
   width: 100%;
@@ -123,11 +136,12 @@ html, body {
     text-align: right;
     position: absolute;
     bottom: 1%;
-    right: 2%; }
+    right: 1%; }
     .container footer img {
       width: 5%;
       display: inline-block;
-      vertical-align: middle; }
+      vertical-align: middle;
+      margin-right: 1%; }
   .container .overlay {
     display: none;
     position: fixed;
@@ -170,6 +184,32 @@ html, body {
       right: 2%;
       top: 2%;
       font-size: 4vw; }
+    .container .overlay.orientation {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.8); }
+      .container .overlay.orientation .content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: inline-block;
+        right: 0;
+        left: 0;
+        margin: auto;
+        background: #fff;
+        text-align: center;
+        width: 80%;
+        height: 45%;
+        padding: 8%;
+        border-radius: 5%; }
+        .container .overlay.orientation .content img {
+          width: 50%;
+          display: inline-block;
+          margin: auto;
+          right: 0; }
+        .container .overlay.orientation .content p {
+          font-size: 7vw;
+          color: #F38F9A;
+          margin: 7% 0; }
 
 .btn_toddle {
   background: #355E7E;
@@ -199,6 +239,10 @@ html, body {
 
 .container {
   font-weight: 600; }
+  .container h2 {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 10px; }
   .container .consignes {
     text-align: center;
     font-size: 18px;
@@ -208,7 +252,27 @@ html, body {
   .container .leftBloc {
     width: 50%;
     float: left;
-    padding-left: 1%; }
+    padding-left: 1%;
+    position: relative; }
+    .container .leftBloc .bouton2 {
+      position: absolute;
+      z-index: 1100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #F38F9A;
+      width: 70px;
+      height: 70px;
+      border-radius: 35px;
+      bottom: 1%; }
+      .container .leftBloc .bouton2 > img {
+        width: 50%; }
+      .container .leftBloc .bouton2:active {
+        background-color: #355E7E; }
+    .container .leftBloc #indice {
+      left: 3%; }
+    .container .leftBloc #but {
+      right: 7.5%; }
     .container .leftBloc .souscontainer {
       width: 470px;
       height: 470px;
@@ -224,8 +288,14 @@ html, body {
     float: right; }
     .container .rightBloc .code {
       padding: 10px;
-      background-color: #bcbcbc;
+      background-color: rgba(188, 188, 188, 0.2);
       width: 90%; }
+      .container .rightBloc .code .alinea1 {
+        margin-left: 7px; }
+      .container .rightBloc .code .alinea2 {
+        margin-left: 14px; }
+      .container .rightBloc .code .alinea3 {
+        margin-left: 21px; }
     .container .rightBloc .columns {
       display: flex;
       margin-top: 25px;

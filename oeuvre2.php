@@ -32,6 +32,53 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
         include 'credits.php';
     ?>
     <div class="container">
+        <div id="win">
+          <div class="content-win">
+            <p class="title">
+              F&#201;LICITATIONS !
+            </p>
+            <hr>
+            <p class="text-win">
+              Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+            </p>
+            <p>
+              Tu as réussi le premier défi !
+            </p>
+            <br>
+            <p>
+              Récapitulons, ce que tu viens de mettre en application: <br>
+            </p>
+            <br>
+            <p>
+              Tu as retrouvé l'oeuvres de Yves Klein en utilisant la fonction:
+              <br>
+              <span class="name">ChangerEnBleu</span><span class="parentheses">()</span>.
+            </p>
+            
+            <a href="map.php"><button class="continuer">D&#201;FI SUIVANT</button></a>
+          </div>
+      </div>
+      <div id="loose">
+          <div class="content-loose">
+            <p class="title">
+              RAT&#201;&nbsp;!
+            </p>
+            <hr>
+            <br>
+            <p class="text-loose">
+              Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+            </p>
+            <p>
+              Il y a un petit soucis sur ta transformation.
+            </p>
+            <br>
+            <p>
+              Regarde bien à nouveau l'objectif que tu dois accomplir.
+            </p>
+            <br>
+            <button class="rechercher">Retour</button>
+          </div>
+      </div>
        <header>
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
@@ -44,6 +91,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
            </div>
         </header>
         <section>
+            <h2 class="rose">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
                 <p>&Agrave; l'aide de la fonction <span class="rose">DessinerLignes()</span>, ajoute ou supprime des lignes afin de recréer l'oeuvre.</p>
                 <br>

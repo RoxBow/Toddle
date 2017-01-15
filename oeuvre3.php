@@ -44,11 +44,18 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
            </div>
         </header>
         <section>
+            <h2 class="rose">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
                 <p>&Agrave; l'aide des curseurs et de l'aperçu sur le code, modifie la valeur des angles dans les fonctions, afin de recréer l'oeuvre.</p>
                 <br>
             </div>
             <div class="leftBloc">
+                <div class="bouton2" id="indice">
+                    <img src="img/bulb.png" alt="Objectif"/>
+                </div>
+                <div class="bouton2" id="but">
+                    <img src="img/flag.png" alt="Indice"/>
+                </div>
                 <div class="souscontainer">
                     <div class="content">
                         <canvas id="myCanvas"></canvas>

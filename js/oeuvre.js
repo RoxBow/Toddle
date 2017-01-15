@@ -4,20 +4,13 @@ var leftBloc = document.getElementById("leftBloc");
 var indicecontent = document.getElementById("indicecontent");
 
 /*Le canvas de travail*/
-ctx.fillStyle="#002FA7";
+ctx.fillStyle="#9F00FF";
 ctx.fillRect(0,0,canvas.width,canvas.height);
 
 /*Le canvas d'objectif*/
-ctx2.fillStyle="#9F00FF";
+ctx2.fillStyle="#002FA7";
 ctx2.fillRect(0,0,canvas2.width,canvas2.height);
 
-ctx2.beginPath();
-ctx2.strokeStyle="white";
-ctx2.lineWidth=4;
-ctx2.rect(30, 20, 85, 85);
-ctx2.rect(135, 20, 85, 85);
-ctx2.rect(30, 125, 85, 85);
-ctx2.stroke();
 
 /*On récupère les données du canvas d'objectif*/
 var avalider = canvas2.toDataURL();
@@ -67,6 +60,7 @@ $(document).ready(function() {
         var hm2 = new Hammer(valider);
         var hm3 = new Hammer(indice);
         var hm4 = new Hammer(but);
+
 
         	/*Réactions au touch*/
 
@@ -186,6 +180,8 @@ $(document).ready(function() {
           /*Drag & drop du bouton vert*/
 
         var hammertime = new Hammer(element);
+        hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
 
         hammertime.on('pan', function(e) {
               mouseX = e.center.x;
@@ -213,6 +209,8 @@ $(document).ready(function() {
             /*Drag & drop du bouton rouge*/
 
         var hammertime2 = new Hammer(element2);
+        hammertime2.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
 
         hammertime2.on('pan', function(e) {
               mouseX = e.center.x;
@@ -240,6 +238,7 @@ $(document).ready(function() {
             /*Drag & drop du bouton jaune*/
 
         var hammertime3 = new Hammer(element3);
+        hammertime3.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
             hammertime3.on('pan', function(e) {
               mouseX = e.center.x;
@@ -252,7 +251,7 @@ $(document).ready(function() {
             element3.style.backgroundColor=bleuToddle;
                 if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
-                  ctx.fillStyle="#FECC0B";
+                  ctx.fillStyle="#002FA7";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
                   element3.style.left = "51%";
                   element3.style.top = "52.5%";
@@ -266,6 +265,7 @@ $(document).ready(function() {
       /*Drag & drop du bouton carre*/
 
         var hammertime4 = new Hammer(element4);
+        hammertime4.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
         hammertime4.on('pan', function(e) {
               mouseX = e.center.x;
@@ -295,6 +295,7 @@ $(document).ready(function() {
         /*Drag & drop du bouton pour le cercle*/
 
         var hammertime5 = new Hammer(element5);
+        hammertime5.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
             hammertime5.on('pan', function(e) {
               mouseX = e.center.x;
@@ -323,6 +324,7 @@ $(document).ready(function() {
         /*Drag & drop du pour le changement en violet*/
 
         var hammertime6 = new Hammer(element6);
+        hammertime6.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
         hammertime6.on('pan', function(e) {
               mouseX = e.center.x;

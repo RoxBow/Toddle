@@ -9,15 +9,118 @@
     background-color: rgba(0,0,0,0.5);
 }
 .container{
-    .rose{
-        color: $pinkToddle;
-    }
     font-weight: 600;
+    #win{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        z-index: 10000;
+        display: none;
+        .title{
+          font-weight: 600;
+          color: $pinkToddle;
+          font-size: 54px;
+        }
+        .titlesuite{
+          color: $pinkToddle;
+          font-size: 42px;
+        }
+        .content-win{
+            width: 70%;
+            height: 70%;
+            margin-left: 15%;
+            margin-top: 11%;
+            padding-top: 2%;
+            background-color: white;
+            border-radius: 50px;
+            text-align: center;
+            color: $blueToddle;
+            font-size: 26px;
+            p{
+              width: 70%;
+              margin-left: 15%;
+            }
+            hr {
+              border: 3px solid $pinkToddle;
+              border-radius: 25px;
+              width: 70%;
+              margin: 3% auto;
+            }
+            .continuer{
+              color: #fff;
+              background-color: $blueToddle;
+              width: 35%;
+              height: 75px;
+              border-radius: 50px;
+              font-size: 30px;
+              margin: 4% 0;
+            }
+            .name{
+              color: $pinkToddle;
+            }
+            .parentheses{
+              color: $blueToddle;
+              font-weight: bold;
+            }
+        } 
+    }
+    #loose{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        z-index: 10000;
+        display: none;
+        .title{
+          font-weight: 600;
+          color: $pinkToddle;
+          font-size: 54px;
+        }
+        .content-loose{
+            width: 70%;
+            height: 70%;
+            margin-top: 11%;
+            margin-left: 15%;
+            padding-top: 2%;
+            background-color: white;
+            border-radius: 50px;
+            text-align: center;
+            color: $blueToddle;
+            font-size: 26px;
+            p{
+              width: 70%;
+              margin-left: 15%;
+            }
+            hr {
+              border: 3px solid $pinkToddle;
+              border-radius: 25px;
+              width: 70%;
+              margin: 3% auto;
+            }
+            .rechercher{
+              color: #fff;
+              background-color: $blueToddle;
+              width: 35%;
+              height: 75px;
+              border-radius: 50px;
+              font-size: 35px;
+            }
+            .name{
+              color: $pinkToddle;
+            }
+        } 
+    }
     canvas {
         margin: 0 auto;
         width: 700px;
         height: 450px;
         display: block;
+    }
+    h2{
+        text-align: center;
+        font-size: 24px;
+        padding-bottom: 10px;
     }
     .consignes{
         text-align: center;
