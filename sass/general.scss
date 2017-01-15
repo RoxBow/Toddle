@@ -151,15 +151,15 @@ html, body {
             right: 5%;
             top: 40%;
             width: auto;
-            font-size: 25px;
+            font-size: 2.5vw;
+            font-weight: normal;
+            color: $pinkToddle;
             .name, .chrono {
-                color: $pinkToddle;
                 display: inline-block;
             }
             .chrono {
-                display: inline-block;
                 input {
-                    font-size: 25px;
+                    font-size: 2.5vw;
                     color: $pinkToddle;
                     display: inline-block;
                     width: 50px;
@@ -167,6 +167,9 @@ html, body {
                     border: none;
                     background: none;
                 }
+            }
+            .defi {
+                text-align: right;
             }
         } // .blockRight
     } // header

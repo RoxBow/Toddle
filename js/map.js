@@ -52,6 +52,8 @@ $(document).ready(function() {
     }, 500);
 });
 
+/* ### COMPARE 2 PICTURES ### */
+
 // Compare 2 pictures when user add his one
 function getFile() {
     // Our own oeuvre picture

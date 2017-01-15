@@ -87,13 +87,14 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 <form name="chrono" class="chrono">
                     <input type="text" name="minute" id="min">min
                     <input type="text" name="seconde" id="sec">s
-                </form><br>
+                </form>
+                <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
            </div>
         </header>
         <section>
             <h2 class="rose">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
-                <p>&Agrave; l'aide de la fonction <span class="rose">DessinerLignes()</span>, ajoute ou supprime des lignes afin de recréer l'oeuvre.</p>
+                <p>À l'aide de la fonction <span class="rose">DessinerLignes()</span>, ajoute ou supprime des lignes afin de recréer l'oeuvre.</p>
                 <br>
             </div>
             <canvas id="mycanvas"></canvas>

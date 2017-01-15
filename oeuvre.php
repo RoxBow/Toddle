@@ -36,7 +36,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
       <div id="win">
           <div class="content-win">
             <p class="title">
-              F&#201;LICITATIONS !
+              FÉLICITATIONS !
             </p>
             <hr>
             <p class="text-win">
@@ -56,7 +56,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               <span class="name">ChangerEnBleu</span><span class="parentheses">()</span>.
             </p>
             
-            <button class="continuer">D&#201;FI SUIVANT</button>
+            <button class="continuer">DÉFI SUIVANT</button>
           </div>
       </div>
       <div id="loose">
@@ -88,7 +88,8 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 <form name="chrono" class="chrono">
                     <input type="text" name="minute" id="min">min
                     <input type="text" name="seconde" id="sec">s
-                </form><br>
+                </form>
+                <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
            </div>
         </header>
         <div id="jeu">

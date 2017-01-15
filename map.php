@@ -38,6 +38,7 @@ if(empty($_SESSION['start'])) {
                     <input type="text" name="minute" id="min" readonly>min
                     <input type="text" name="seconde" id="sec" readonly>s
                 </form>
+                <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
             </div>
         </header>
         <div class="content">
@@ -65,10 +66,10 @@ if(empty($_SESSION['start'])) {
         <div class="overlay" id="indiceBloc">
           <div class="popup2">
             <i class="fa fa-times close" aria-hidden="true" id="close"></i>
-            <p>
-                <span class="sous-titre2">Indice 1</span>
-                La première oeuvre devant laquelle tu dois te rendre, est une oeuvre monochrome d'un artiste français du XXe siècle. Il est connu pour son travail autour d'une couleur particulière.
-            </p>
+            <div>
+                <h3 class="sous-titre2">Indice 1</h3>
+                <span id="indiceMap">La première oeuvre devant laquelle tu dois te rendre, est une oeuvre monochrome d'un artiste français du XXe siècle. Il est connu pour son travail autour d'une couleur particulière.</span>
+            </div>
           </div>
         </div>
         <!-- POPUP -->
