@@ -65,10 +65,9 @@ if( !isset($_SESSION['pseudo']) ){
             <br>
             <a href="oeuvre.php"><button class="go">GO</button></a>
         </section>
-        <footer>
-            <img src="img/logo_pompidou.png" alt="pompidou">
-            <img src="img/logo_gris_avec.png" alt="avec">
-        </footer>
+        <?php
+            include 'footer.php';
+        ?>
     </div>
     
     <script src="js/jquery-3.1.1.min.js"></script>

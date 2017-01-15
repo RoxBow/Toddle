@@ -57,10 +57,9 @@ if(empty($_SESSION['start'])) {
                 </button>
             </div>
         </div>
-        <footer>
-            <img src="img/logo_pompidou.png" alt="pompidou">
-            <img src="img/logo_gris_avec.png" alt="avec">
-        </footer>
+        <?php
+            include 'footer.php';
+        ?>
         
         <!-- POPUP -->
         <div class="overlay" id="indiceBloc">

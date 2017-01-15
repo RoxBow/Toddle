@@ -68,10 +68,9 @@ if(isset($_POST['pseudo'])){
                 </button>
             </form>
         </div>
-        <footer>
-            <img src="img/logo_pompidou.png" alt="pompidou">
-            <img src="img/logo_gris_avec.png" alt="avec">
-        </footer>
+        <?php
+            include 'footer.php';
+        ?>
     </div>
     
     <script src="js/jquery-3.1.1.min.js"></script>
