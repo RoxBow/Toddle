@@ -30,11 +30,12 @@ if( !isset($_SESSION['pseudo']) ){
                     <input type="text" name="minute" id="min" readonly>min
                     <input type="text" name="seconde" id="sec" readonly>s
                 </form>
+                <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
             </div>
         </header>
         <section class="congratulate">
             <p class="title">
-              F&#201;LICITATIONS !
+              FÉLICITATIONS !
             </p>
             <hr>
             <p>
@@ -73,6 +74,7 @@ if( !isset($_SESSION['pseudo']) ){
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/chrono.js"></script>
+    <script src="js/global.js"></script>
     <script>
         /* #####    CHRONO      ##### */
 

@@ -40,12 +40,13 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 <form name="chrono" class="chrono">
                     <input type="text" name="minute" id="min">min
                     <input type="text" name="seconde" id="sec">s
-                </form><br>
+                </form>
+                <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
            </div>
         </header>
         <section>
             <div class="consignes">
-                <p>&Agrave; l'aide des curseurs et de l'aperçu sur le code, modifie la valeur des angles dans les fonctions, afin de recréer l'oeuvre.</p>
+                <p>À l'aide des curseurs et de l'aperçu sur le code, modifie la valeur des angles dans les fonctions, afin de recréer l'oeuvre.</p>
                 <br>
             </div>
             <div class="leftBloc">

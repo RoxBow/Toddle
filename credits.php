@@ -1,9 +1,9 @@
 <div class="credits">
     <i id="croix" class="fa fa-times fa-3x" aria-hidden="true"></i>
-    <p class="title">CR&Eacute;DITS</p>
+    <p class="title">CRÉDITS</p>
     <div class="content">
         <span class="justify">Toddle a été réalisée et développée par l’agence AVEC dans le cadre d’un projet étudiant en licence professionnelle CRRW à l’IUT Champs-sur Marne et en partenariat avec le Centre Pompidou de Paris. 
-    Le projet a pu prendre forme grâce au soutien et la participation de Valérie Jottereau, chef de département et Odile, responsable/contact au musée.</span>
+    Le projet a pu prendre forme grâce au soutien et la participation de Valérie Jottereau, chef de département et Odile Fayet, responsable de la Fête du Code.</span>
         <br>
         <br>
         <br>
@@ -14,8 +14,6 @@
             <br> - François Morellet - 4 doubles trames, traits minces ( 0° - 22°5 - 45° - 67°5)
             <br> - François Morellet - Du jaune au violet
             <br> - Yves Klein - IKB3 monochrome bleu
-            <br> - Sonia Delaunay - Le bal bullier
-            <br>
         </p>
         <br>
         <br>
