@@ -18,10 +18,6 @@ if(!isset($_SESSION['pseudo']) ){
 </head>
 <body>
     <div class="container">
-       <header>
-            <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
-            <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
-        </header>
         <div class="content">
             <p>Merci d'avoir joué<br> et appris avec <img src="img/toddle_text.png" id="reset" alt="toddle"></p>
             <hr>
