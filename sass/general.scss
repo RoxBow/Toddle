@@ -89,7 +89,20 @@ html, body {
 .fa {
     vertical-align: middle; // Centrage des icones par defaut
 }
+/* ###### Class for colors ###### */
 
+.rose{
+    color:$pinkToddle;
+}
+.bleu{
+    color:$blueToddle;
+}
+.beige{
+    color:$beigeToddle;
+}
+.noir{
+    color:black;
+}
 .container {
     background: #fff;
     width: 100%;

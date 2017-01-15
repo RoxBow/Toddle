@@ -59,19 +59,25 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 </div>
             </div>
             <div class="rightBloc">
-                <div class="code">
-                    <p>var angle = <span id="val1">0</span></p>
-                    <p>var angle2 = <span id="val2">0</span></p>
-                    <p>var angle3 = <span id="val3">0</span></p>
-                    <p>var angle4 = <span id="val4">0</span></p>
-                    <p>DessinerGrille1();</p>
-                    <p>DessinerGrille2();</p>
-                    <p>DessinerGrille3();</p>
-                    <p>DessinerGrille4();</p>
-                    <p>TournerGrille1()</p>
-                    <p>TournerGrille1()</p>
-                    <p>TournerGrille1()</p>
-                    <p>TournerGrille1()</p>
+                <div class="code bleu">
+                    <p class="alinea1"><span class="rose">var</span> angle = <span class="noir" id="val1">0</span></p>
+                    <p class="alinea1"><span class="rose">var</span> angle2 = <span class="noir" id="val2">0</span></p>
+                    <p class="alinea1"><span class="rose">var</span> angle3 = <span class="noir" id="val3">0</span></p>
+                    <p class="alinea1"><span class="rose">var</span> angle4 = <span class="noir" id="val4">0</span></p>
+                    <br>
+                    <p class="alinea2">DessinerGrille1();</p>
+                    <p class="alinea2">DessinerGrille2();</p>
+                    <p class="alinea2">DessinerGrille3();</p>
+                    <p class="alinea2">DessinerGrille4();</p>
+                    <br>
+                    <p class="alinea3">TournerGrille1(<span class="
+                    noir">angle</span>);</p>
+                    <p class="alinea3">TournerGrille1(<span class="
+                    noir">angle2</span>);</p>
+                    <p class="alinea3">TournerGrille1(<span class="
+                    noir">angle3</span>);</p>
+                    <p class="alinea3">TournerGrille1(<span class="
+                    noir">angle4</span>);</p>
                 </div>
                 <div class="columns">
                     <div class="gauche">
