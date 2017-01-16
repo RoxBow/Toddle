@@ -21,6 +21,7 @@ $(document).ready(function () {
         location.href = "name.php";
     });
 
+    // Two tap on toddle -> Reset app
     $("#reset",".content").click(function () {
         countClick += 1;
         console.log(countClick);
@@ -30,13 +31,14 @@ $(document).ready(function () {
     });
     
     /* ### TUTO ### */
-    $('.lesson', '.lessons').each(function () {
+    
         $('.lesson', '.lessons').click(function (e) {
             e.preventDefault();
 
             if ($(e.target).hasClass('understood')) {
                 // add "up" class to lesson selected and hide others
-                $(e.target).parent().parent().toggleClass('up').next(".lesson").addClass("up");
+                //$(e.target).parent().parent().toggleClass('up').next(".lesson").addClass("up");
+                $(this).toggleClass('up').next(".lesson").addClass("up");
             } else if ($(e.target).hasClass('fa-chevron-left')) {
                 // click on arrow left, open previous lesson
                 $(e.target).parent().toggleClass('up').prev(".lesson").addClass("up");
@@ -47,7 +49,7 @@ $(document).ready(function () {
 
             return false;
         });
-    });
+    
 
     /*Apparition page credits*/
     $("footer>img").click(function () {

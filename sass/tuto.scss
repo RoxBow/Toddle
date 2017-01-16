@@ -83,16 +83,26 @@
                     color: $pinkToddle;
                 }
             }
-            &:last-child{
-                border-radius: 0 20px 20px 0;
+            &:nth-child(3){
                 background: $blueToddle;
                 .understood {
                     color: $blueToddle;
                 }
             }
+            &:last-child{
+                border-radius: 0 20px 20px 0;
+                background: #fff;
+                border: 5px solid $blueToddle;
+                .number, .understood {
+                    color: $blueToddle;
+                }
+                hr {
+                    border-color: $blueToddle;
+                }
+            }
             // "up" class for lesson selected
             &.up {
-                width: 80%;
+                width: 70%;
                 .fa-chevron-left {
                     display: block;
                 }
@@ -101,16 +111,19 @@
                         display: none;
                     }
                     .number {
-                        margin: 2% 0 2% 0;
+                        margin: 2% auto 2% auto;
                         font-size: 7vw;
                         box-sizing: content-box;
                         border-radius: 50%;
                         border: 1vw solid #fff;
-                        display: inline-block;
+                        display: block;
                         font-weight: bold;
                         width: 10vw;
                         height: 10vw;
                         line-height: 10vw;
+                        &.spec {
+                            border-color: $blueToddle;
+                        }
                     }
                     .group_gif {
                         width: 50%;
@@ -150,9 +163,39 @@
                             }
                         }
                     } // ul
+                    .blocL4 {
+                        text-align: center;
+                        width: 50%;
+                        float: left;
+                        color: $blueToddle;
+                        .containerImg {
+                            background: $blueToddle;
+                            display: block;
+                            border-radius: 50%;
+                            width: 10vw;
+                            height: 10vw;
+                            line-height: 10vw;
+                            margin: 0 auto;
+                            img {
+                                padding-bottom: 6%;
+                                width: 68%;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                        }
+                        p {
+                            display: inline-block;
+                            width: auto;
+                            margin: 6% 0;
+                            padding: 0 7%;
+                            font-weight: 600;
+                            
+                        }
+                    } // .blocL4
                     * {
                         display: block;
                     }
+                    
                 } // .content
                 
                 .understood {
@@ -164,6 +207,17 @@
                     padding: 0;
                     width: 8vw;
                     height: 8vw;
+                    &.go {
+                        background: $blueToddle;
+                        color: #fff;
+                        right: 0;
+                        left: 0;
+                        bottom: 6%;
+                        margin: auto;
+                        width: 10vw;
+                        height: 10vw;
+                        font-size: 4.5vw;
+                    }
                 }
             } // .lesson + .up
         } // .lesson

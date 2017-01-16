@@ -77,7 +77,23 @@ if( !isset($_SESSION['pseudo']) ){
                             <p>Valide si tu penses avoir trouvé</p>
                         </li>
                     </ul>
-                    <button class="understood">GO</button>
+                    <button class="understood">OK</button>
+                </div>
+            </div>
+            <div class="lesson">
+               <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                <div class="content">
+                    <p class="number spec">4</p>
+                    <hr>
+                    <div class="blocL4">
+                        <span class="containerImg"><img src="img/chrono.png" alt="chrono"></span>
+                        <p>Un chronomètre débutera dès le début de l'aventure !</p>
+                    </div>
+                    <div class="blocL4">
+                        <span class="containerImg"><img src="img/gift.png" alt="cadeau"></span>
+                        <p>Les trois plus rapides d'entre vous auront le droit à une surprise !</p>
+                    </div>
+                    <button class="understood go">GO</button>
                 </div>
             </div>
         </section>
