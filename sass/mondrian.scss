@@ -9,6 +9,7 @@
 }
 
 .container {
+    font-weight: 600;
     h2 {
         text-align: center;
         font-size: 24px;
@@ -61,7 +62,7 @@
         .code {
             padding: 10px;
             background-color: #F2F2F2;
-            width: 90%;
+            width: 96%;
             font-family: "Inconsolata", "GothamRounded", "Arial";
             input {
                 border: none;
@@ -94,5 +95,97 @@
                 -webkit-appearance: none;
             }
         } // .code
+        .selection{
+            margin-top: 20px;
+            display: flex;
+            .choix{
+                text-align: center;
+                span:nth-child(1){
+                    float: left;
+                }
+                span:nth-child(3){
+                    float: right;
+                }
+            }
+            .selecteurs{
+                font-size: 30px;
+                margin:  3px;
+                &:active{
+                    color:$beigeToddle;
+                }
+            }
+            .valeurs{
+                color: $pinkToddle;
+                font-size: 27px;
+                margin-top: 3px;
+            }
+            .couleur{
+                text-align: center;
+                width: 27%;
+            }
+            .orientation{
+                @extend .couleur;
+                width: 45%;
+                margin-left: 5%;
+                margin-right: 5%;
+              
+            }
+            .nombre{
+                @extend .couleur;
+                width: 15%;
+            }
+        } // .selection
+        .controles{
+            margin-top: 20px;
+            display: flex;
+            .bouton2{
+                z-index: 1100;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $pinkToddle;
+                width:60px;
+                height: 60px;
+                border-radius: 30px;
+                bottom: 10%;
+                margin-left: 6%;
+                & > img{
+                    width: 50%;
+                }
+                &:active{
+                    background-color: $blueToddle;
+                }
+            }
+            .bouton{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $pinkToddle;
+                width: 60px;
+                height: 60px;
+                border-radius: 30px;
+                color: white;
+                margin-left: 15.5%;
+                &:active{
+                    background-color: $blueToddle;
+                }
+            }
+            #valider{
+                width: 30%;
+                margin-left: 19%;
+            }
+            .bva{
+              color: #fff;
+              background-color: $blueToddle;
+              width: 100%;
+              height: 60px;
+              border-radius: 50px;
+              font-size: 20px;
+              margin-top:0.5%;
+              &:active{
+                    background-color: $pinkToddle;
+                }
+            }
+        } // .controles
     } // .rightBloc
 }

@@ -31,6 +31,7 @@
             font-size: 40px;
             width: 75%;
             margin-top: 2.5%;
+            margin-left: 2vw;
         }
         .go{
             background-color: $blueToddle;
@@ -41,7 +42,7 @@
             font-size: 50px;
             position: absolute;
             margin-top: -95px;
-            margin-left: 22vw;
+            margin-left: 25vw;
         }
         .go:active{
             background-color: $pinkToddle;
@@ -57,5 +58,9 @@
         .bold{
             font-weight: bold;
         }
+    }
+    .congratulate2{
+        @extend .congratulate;
+        margin-top: 10vh;
     }
 }

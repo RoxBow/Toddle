@@ -32,6 +32,48 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
         include 'credits.php';
     ?>
     <div class="container">
+        <div class="container">
+            <div id="win">
+              <div class="content-win">
+                <p class="title">
+                  F&#201;LICITATIONS !
+                </p>
+                <hr>
+                <p class="text-win">
+                  Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+                </p>
+                <p>
+                  Tu as réussi le troisième défi !
+                </p>
+                <br>
+                <p>
+                  Récapitulons, ce que tu viens de mettre en application: <br>
+                </p>
+                <br>
+                <p>
+                  Tu as recréé l'oeuvre de François Morellet en associant les bonnes valeurs d'angles dans les variables: <span class="rose">angle1</span>,<span class="rose"> angle2</span>,<span class="rose"> angle3</span>,<span class="rose"> angle4</span>.
+                  <br>
+                </p>
+                
+                <a href="map.php"><button class="continuer">D&#201;FI SUIVANT</button></a>
+              </div>
+          </div>
+          <div id="loose">
+              <div class="content-loose">
+                <p class="title">
+                  RAT&#201;&nbsp;!
+                </p>
+                <hr>
+                <p class="text-loose">
+                  Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+                </p>
+                <p>
+                    Regarde bien le nom de l'oeuvre et recommence !
+                </p>
+                <br>
+                <button class="rechercher">Retour</button>
+              </div>
+          </div>
         <header>
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
@@ -90,18 +132,18 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 <div class="columns">
                     <div class="gauche">
                         <div><span id="output1"></span>°</div>
-                        <input type="range" class="range" name="a" min="0" max="180" step="0.5" value="0"/>
+                        <input type="range" class="range" name="a" min="0" max="70" step="0.5" value="0"/>
                         
-                        <div><span id="output2"></span>°</div>
-                        <input type="range" class="range2" name="a" min="0" max="180" step="0.5" value="0"/>
+                        <div><span id="output3"></span>°</div>
+                        <input type="range" class="range3" name="a" min="0" max="70" step="0.5" value="0"/>
                         
                     </div>
                     <div class="droite">
-                        <div><span id="output3"></span>°</div>
-                        <input type="range" class="range3" name="a" min="0" max="180" step="0.5" value="0"/>
+                        <div><span id="output2"></span>°</div>
+                        <input type="range" class="range2" name="a" min="0" max="70" step="0.5" value="0"/>
 
                         <div><span id="output4"></span>°</div>
-                        <input type="range" class="range4" name="a" min="0" max="180" step="0.5" value="0"/>
+                        <input type="range" class="range4" name="a" min="0" max="70" step="0.5" value="0"/>
                         <div class="buttonV" id="valider">
                             <i class="fa fa-check fa-2x" aria-hidden="true"></i>
                         </div>

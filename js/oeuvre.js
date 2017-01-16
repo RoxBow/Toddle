@@ -4,7 +4,7 @@ var leftBloc = document.getElementById("leftBloc");
 var indicecontent = document.getElementById("indicecontent");
 
 /*Le canvas de travail*/
-ctx.fillStyle="#9F00FF";
+ctx.fillStyle="#ED1C24";
 ctx.fillRect(0,0,canvas.width,canvas.height);
 
 /*Le canvas d'objectif*/
@@ -120,10 +120,10 @@ $(document).ready(function() {
             if(levelUser < 5){
                 nbrLevel++;
                 localStorage.setItem("levelUser", nbrLevel);
-                window.location.replace("map.php");
+                document.location.replace("map.php");
             }
             else {
-                window.location.replace("result.php");
+                document.location.replace("result.php");
             }
         });
 
@@ -224,7 +224,7 @@ $(document).ready(function() {
             element2.style.backgroundColor=bleuToddle;
                 if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
-                  ctx.fillStyle="#ED1C24";
+                  ctx.fillStyle="#FEEB34";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
                   element2.style.left = "51%";
                   element2.style.top = "52.5%";

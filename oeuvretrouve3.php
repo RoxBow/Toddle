@@ -38,14 +38,14 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé cette oeuvre ! "4 DOUBLES TRAMES, TRAITS MINCES 0°- 22°5 - 45°- 67°5" est celle de François Morellet.
+              Tu as trouvé "4 DOUBLES TRAMES, TRAITS MINCES 0°- 22°5 - 45°- 67°5" de François Morellet !
             </p>
             <br>
             <p>
               D&eacute;couvrons ensemble les <span class="rose">variables</span>.
             </p>
             <p>
-                Ce sont des "boites" où l'on peut mettre des chiffres par exemple.
+                Ce sont des "boites" où l'on peut mettre des données (chiffres, mots...).
             </p>
             <br>
             <p>

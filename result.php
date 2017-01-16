@@ -97,10 +97,9 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
                 </div>
             </section>
         </div>
-        <footer>
-            <img src="img/logo_pompidou.png" alt="pompidou">
-            <img src="img/logo_gris_avec.png" alt="avec">
-        </footer>
+        <?php
+            include 'footer.php';
+        ?>
         
         <!-- POPUP -->
         <div class="overlay blocPoppin">

@@ -70,11 +70,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-              Il y a un petit soucis sur ta transformation.
-            </p>
-            <br>
-            <p>
-              Regarde bien à nouveau l'objectif que tu dois accomplir.
+                Regarde bien l'oeuvre et recommence !
             </p>
             <br>
             <button class="rechercher">Retour</button>
@@ -128,7 +124,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               </div>
               <div class="etiqBloc" id="etiqBloc">
                   <div class="etiq" id="vert">ChangerEnVert()</div>
-                  <div class="etiq" id="rouge">ChangerEnRouge()</div>
+                  <div class="etiq" id="rouge">ChangerEnJaune()</div>
                   <div class="etiq" id="jaune">ChangerEnBleu()</div>
                   <div class="etiq" id="carre">MettreUnCarré()</div>
                   <div class="etiq" id="violet">ChangerEnViolet()</div>

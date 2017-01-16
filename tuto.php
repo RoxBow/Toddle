@@ -27,7 +27,7 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <div class="entete">
             <p>Bienvenue <span><?php echo $_SESSION['pseudo']; ?></span> !</p>
-            <p>Découvre le code informatique avec Toddle au <br>centre Georges Pompidou, en résolvant nos 5 défis.</p>
+            <p>Découvre le code informatique avec Toddle au <br>Centre Georges Pompidou, en résolvant nos 5 défis.</p>
         </div>
         <section class="lessons">
             <div class="lesson up">

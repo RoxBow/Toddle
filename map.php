@@ -67,7 +67,7 @@ if(empty($_SESSION['start'])) {
           <div class="popup2">
             <i class="fa fa-times close" aria-hidden="true" id="close"></i>
             <div>
-                <h3 class="sous-titre2">Indice 1</h3>
+                <h3 class="sous-titre2">INDICE</h3>
                 <span id="indiceMap">La première oeuvre devant laquelle tu dois te rendre, est une oeuvre monochrome d'un artiste français du XXe siècle. Il est connu pour son travail autour d'une couleur particulière.</span>
             </div>
           </div>

@@ -1,3 +1,8 @@
+var range1 = 0;
+var range2 = 0;
+var range3 = 0;
+var range4 = 0;
+
 /* #####    CHRONO      ##### */
 
 // Update time script
@@ -18,6 +23,28 @@ $(document).ready(function() {
 });
 
 /* #####    CHRONO END     ##### */
+
+$("#valider").on("click",function(){
+	console.log(range1+","+range2+","+range3+","+range4);
+    if (test(range1,range2,range3,range4)){
+        win();
+    } else {
+        lose();
+    }
+});
+$(".continuer").on("click",function(){
+    if(levelUser < 5){
+        nbrLevel++;
+        localStorage.setItem("levelUser", nbrLevel);
+        document.location.replace("map.php");
+    }
+    else {
+        document.location.replace("result.php");
+    }
+});
+$(".rechercher").on("click",function(){
+    $('#loose').fadeOut(500);
+});
 
 	var canvas;
 	var ctx;
@@ -43,19 +70,6 @@ $(document).ready(function() {
 
 		canvas4.width = 700;
 		canvas4.height = 700;
-
-		/*canvas.width =2000;
-		canvas.height =  2000;
-
-		canvas2.width =2000;
-		canvas2.height =  2000;
-
-		canvas3.width =2000;
-		canvas3.height =  2000;
-
-		canvas4.width =2000;
-		canvas4.height =  2000;*/
-		
 		//Lancement des dessins
 		draw();
 	}
@@ -109,6 +123,19 @@ $(document).ready(function() {
 	(function () {
 	    init();
 	})();
+
+	function test(a,b,c,d){
+		if ((a==0||b==0||c==0||d==0)) {
+			if ((a==22.5||b==22.5||c==22.5||d==22.5)) {
+				if ((a==45||b==45||c==45||d==45)) {
+					if ((a==67.5||b==67.5||c==67.5||d==67.5)) {
+						return true;
+					}	else return false;
+				}	else return false;
+			}	else return false;
+		} 	else return false;
+	}
+
 	$(function() {
 
         $('#output1').text($('.range').val()); // Valeur par défaut
@@ -117,7 +144,9 @@ $(document).ready(function() {
             $('#output1').text($set);
             $("#val1").text($set);
             $("#myCanvas").css("transform","rotate("+$set+"deg)");
+            range1 = $set;
         });
+
 
         $('#output2').text($('.range2').val()); // Valeur par défaut
         $('.range2').on('input', function() {
@@ -125,7 +154,9 @@ $(document).ready(function() {
             $('#output2').text($set);
             $("#val2").text($set);
             $("#myCanvas2").css("transform","rotate("+$set+"deg)");
+            range2 = $set;
         });
+
 
         $('#output3').text($('.range3').val()); // Valeur par défaut
         $('.range3').on('input', function() {
@@ -133,7 +164,9 @@ $(document).ready(function() {
             $('#output3').text($set);
             $("#val3").text($set);
             $("#myCanvas3").css("transform","rotate("+$set+"deg)");
+            range3 = $set;
         });
+
 
         $('#output4').text($('.range4').val()); // Valeur par défaut
         $('.range4').on('input', function() {
@@ -141,6 +174,14 @@ $(document).ready(function() {
             $('#output4').text($set);
             $("#val4").text($set);
             $("#myCanvas4").css("transform","rotate("+$set+"deg)");
+            range4 = $set;
         });
 
     });
+
+function win(){
+    $('#win').fadeIn(500);
+}
+function lose(){
+    $('#loose').fadeIn(500);
+}

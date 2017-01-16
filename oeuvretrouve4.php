@@ -32,39 +32,30 @@ if( !isset($_SESSION['pseudo']) ){
                 </form>
             </div>
         </header>
-        <section class="congratulate">
+        <section class="congratulate2">
             <p class="title">
               F&#201;LICITATIONS !
             </p>
             <hr>
             <p>
-              Tu as trouvé cette oeuvre ! "4 DOUBLES TRAMES, TRAITS MINCES 0°- 22°5 - 45°- 67°5" est celle de François Morellet.
+              Tu as retrouvé New York City de Piet Mondrian !
             </p>
             <br>
             <p>
-              D&eacute;couvrons ensemble les <span class="rose">variables</span>.
+              Tu vas utiliser tout ce que tu as vu auparavant pour le prochain defi, c'est-à-dire:
             </p>
             <p>
-                Ce sont des "boites" où l'on peut mettre des chiffres par exemple.
+                Les fonctions: <span class="rose">DessinerUneLigne();</span><br>
+                Les paramètres: DessinerUneLigne(<span class="rose">5</span>);
+                Les variables: <span class="rose">var</span> nbLignes = <span class="rose">5</span> 
             </p>
             <br>
-            <p>
-                <span class="bold">Exemple:</span> Je veux dessiner 6 chats. Je mets le chiffre "6" dans une boite se nommant "nbChats" comme suivant:
-                <br>
-                <br>
-                <span class="rose">var</span> nbChats = 6;
-                <br>
-                <br>
-                <!-- "<span class="rose">var</span>" nous disant que ce qui suit est une boite. -->
-                Dessinons ces chats: <span class="bold">DessinerUnChat(<span class="rose">nbChats</span>);</span>
-                <br>
-            </p>
             <br>
             <p class="text-go rose">
               PR&Ecirc;T &Agrave; RELEVER LE D&Eacute;FI ? <br>
             </p>
             <br>
-            <a href="oeuvre3.php"><button class="go">GO</button></a>
+            <a href="oeuvre4.php"><button class="go">GO</button></a>
         </section>
         <?php
             include 'footer.php';

@@ -42,7 +42,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-              Tu as réussi le premier défi !
+              Tu as réussi le second défi !
             </p>
             <br>
             <p>
@@ -50,9 +50,8 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </p>
             <br>
             <p>
-              Tu as retrouvé l'oeuvres de Yves Klein en utilisant la fonction:
+              Tu as recomposé l'oeuvres de Frank stella en utilisant "<span class="rose">27</span>" en paramètre de la fonction <span class="rose">DessinerLignes()</span>.
               <br>
-              <span class="name">ChangerEnBleu</span><span class="parentheses">()</span>.
             </p>
             
             <a href="map.php"><button class="continuer">D&#201;FI SUIVANT</button></a>
@@ -69,11 +68,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-              Il y a un petit soucis sur ta transformation.
-            </p>
-            <br>
-            <p>
-              Regarde bien à nouveau l'objectif que tu dois accomplir.
+                Regarde bien l'oeuvre et recommence !
             </p>
             <br>
             <button class="rechercher">Retour</button>
@@ -105,7 +100,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 <div class="buttonV" id="but">
                     <img src="img/flag.png" alt="Indice"/>
                 </div>
-                <p>DessinerLignes(<span id="nbLignes"></span>)</p>
+                <p class="bleu">DessinerLignes(<span id="nbLignes" class="rose"></span>)</p>
                 <div class="buttonV" id="valider">
                     <i class="fa fa-check fa-2x" aria-hidden="true"></i>
                 </div>

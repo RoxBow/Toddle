@@ -64,6 +64,16 @@ $("#moins").on("click",function(){
     }
 });
 
+$(".continuer").on("click",function(){
+    if(levelUser < 5){
+        nbrLevel++;
+        localStorage.setItem("levelUser", nbrLevel);
+        document.location.replace("map.php");
+    }
+    else {
+        document.location.replace("result.php");
+    }
+});
 $(".rechercher").on("click",function(){
     $('#loose').fadeOut(500);
 });

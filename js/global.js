@@ -27,7 +27,7 @@ switch (levelUser) {
         currentRoom = roomMasomenos;
         $("#levelUser").text(levelUser);
         $("#nbrDefi",".defi").text(levelUser);
-        $("#indiceMap",".popup2").text("La deuxième oeuvre devant laquelle tu dois te rendre, est un tableau de grande taille, constitué de lignes horizontales, d’un peintre américain minimaliste du XXe siècle.");
+        $("#indiceMap",".popup2").text("La deuxième oeuvre devant laquelle tu dois te rendre, est un tableau de grande taille, constitué de lignes horizontales brisées, d’un peintre américain minimaliste du XXe siècle.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "3":
@@ -38,17 +38,17 @@ switch (levelUser) {
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "4":
-        currentArt = "img/jauneauviolet.png";
-        currentRoom = roomJauneViolet;
-        $("#levelUser").text(levelUser);
-        $("#indiceMap",".popup2").text("La quatrième oeuvre devant laquelle tu dois te rendre, est un double tableau d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. Ce tableau aborde le dégradé grâce à des formes géométriques simples.");
-        $("#nbrDefi",".defi").text(levelUser);
-        break;
-    case "5":
         currentArt = "img/mondrian.png";
         currentRoom = roomMondrian;
         $("#levelUser").text(levelUser);
         $("#indiceMap",".popup2").text("La dernière oeuvre devant laquelle tu dois te rendre, est un tableau d’un peintre néerlandais du XXe siècle. Le tableau est composés de lignes aux couleur primaires, pouvant rappeler le plan d’une célèbre ville américaine.");
+        $("#nbrDefi",".defi").text(levelUser);
+        break;
+    case "5":
+        currentArt = "img/jauneauviolet.png";
+        currentRoom = roomJauneViolet;
+        $("#levelUser").text(levelUser);
+        $("#indiceMap",".popup2").text("La quatrième oeuvre devant laquelle tu dois te rendre, est un double tableau d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. Ce tableau aborde le dégradé grâce à des formes géométriques simples.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
     default:

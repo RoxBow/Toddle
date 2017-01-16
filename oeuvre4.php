@@ -44,8 +44,8 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
            </div>
         </header>
-        <section>
-            <h2 class="rose">DÉFI <span id="levelUser"></span>/5</h2>
+        <section class="bleu">
+            <h2 class="rose six">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
                 <p>Remplis les informations manquantes</p>
                 <br>
@@ -79,10 +79,51 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                         <option value="red">Rouge</option>
                         <option value="blue">Bleu</option>
                     </select>)
-                </p>
-        
+                    </p>
                   <button class="valide">Valider</button>
                 </div>
+                <div class="selection">
+                    <div class="couleur">
+                        <p>Couleur</p>
+                        <div class="choix">
+                        <span class="selecteurs" id="coumoins">
+                        <
+                        </span>
+                        <span class="valeurs" id="couleur"></span>
+                        <span class="selecteurs" id="couplus">></span>
+                        </div>
+                    </div>
+                    <div class="orientation">
+                        <p>Orientation</p>
+                        <div class="choix">
+                        <span class="selecteurs">
+                        <
+                        </span>
+                        <span class="valeurs" id="orientation">Horizontales</span>
+                        <span class="selecteurs">></span>
+                        </div>
+                    </div>
+                    <div class="nombre">
+                        <p>Nombre</p>
+                        <div class="choix">
+                        <span class="selecteurs">
+                        <
+                        </span>
+                        <span class="valeurs" id="nombre">7</span>
+                        <span class="selecteurs">></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="controles">
+                    <div class="bouton2" id="indice">
+                        <img src="img/bulb.png" alt="Objectif"/>
+                    </div>
+                    <div id="valider">
+                        <button class="bva">AJOUTER</button>
+                    </div>
+                    <div class="bouton">
+                        <i class="fa fa-check fa-2x" aria-hidden="true"></i></div>
+                    </div>
             </div>
         </section>
         <?php

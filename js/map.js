@@ -71,19 +71,19 @@ function getFile() {
                 console.log(data);
                 if (data.misMatchPercentage < 50.00) {
                     console.log(data.misMatchPercentage);
-                    document.location.href = "oeuvretrouve.php";
+                    document.location.href = "oeuvretrouve"+levelUser+".php";
                 }
                 else {
                     console.log(data.misMatchPercentage + " de différence, il doit être supérieur à 50%.");
-                    $(".container").append("<div class='badPicture'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x'></i><i class='fa fa-times fa-stack-1x fa-inverse' aria-hidden='true'></i></span><p>Ce n'est pas la bonne oeuvre ou réessaie.</p></div>");
+                    $(".container").append("<div class='badPicture'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x rose'></i><i class='fa fa-times fa-stack-1x fa-inverse' aria-hidden='true'></i></span><p>Ce n'est pas la bonne oeuvre.</p></div>");
                     $(".badPicture").animate({
-                        top: "5%"
+                        top: "3%"
                       }, 1500, function() {
                         setTimeout(function(){
                             $(".badPicture").animate({
                                 top: "-30%"
                             }, 1500);
-                        }, 600);
+                        }, 1000);
                       });
                 }
             });

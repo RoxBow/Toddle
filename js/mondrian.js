@@ -16,6 +16,8 @@ $(document).ready(function() {
     $("#min").val(localMin);
     chrono();
     
+/* ##### CHRONO  END  ##### */
+
     ctx.save(); // Save default state ctx
     $( ".valide" ).click(function() {
         colorLine = $("#color").val();
@@ -46,13 +48,63 @@ var ctx;
 
 var nbrLine, colorLine, x1, x2, y1, y2;
 
+// Variables pour les fonctions
+var couleurs=["Jaune","Rouge","Bleu"];
+var orientation=["Horizontales","Verticales"];
+var couselect=0;
+var oriselect=0;
+
 function init() {
     canvas = document.getElementById("myCanvas");
     ctx = canvas.getContext("2d");
     
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
+    $("#couleur").text(couleurs[couselect]);
 }
+
+$("#couplus").on("click",function(){
+    if (couselect==2) {
+        couselect=0;
+        $("#couleur").text(couleurs[couselect]);
+    } else{
+        couselect++; 
+        $("#couleur").text(couleurs[couselect]);
+    };   
+});
+
+$("#coumoins").on("click",function(){
+    if (couselect==0) {
+        couselect=2;
+        $("#couleur").text(couleurs[couselect]);
+    } else{
+        couselect--; 
+        $("#couleur").text(couleurs[couselect]);
+    };
+});
+
+$("#oriplus").on("click",function(){
+    if (oriselect==1) {
+        oriselect=0;
+        $("#orientation").text(orientation[oriselect]);
+    } else{
+        oriselect++; 
+        $("#orientation").text(orientation[oriselect]);
+    };   
+});
+
+$("#orimoins").on("click",function(){
+    if (oriselect==0) {
+        oriselect=2;
+        $("#orientation").text(orientation[oriselect]);
+    } else{
+        oriselect--; 
+        $("#orientation").text(orientation[oriselect]);
+    };
+});
+
+
 
 function createLine(sens, x1, y1, color){
     if(sens === "vertical"){

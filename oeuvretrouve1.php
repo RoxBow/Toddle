@@ -39,7 +39,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé l'oeuvre indiquée ! Il s'agit d'&nbsp;&quot;IKB3 Monochrome Bleu"<br> d'Yves Klein.
+              Tu as trouvé l'oeuvre indiquée !<br> Il s'agit d'&nbsp;&quot;IKB3 Monochrome Bleu" d'Yves Klein.
             </p>
             <br>
             <p>
@@ -51,7 +51,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-                <span class="bold">Exemple:</span> Je veux dessiner un rond. En algorithmique on écrira l'action comme suivant:
+                <span class="bold">Exemple:</span> Je veux dessiner un rond. En algorithmique on écrira:
             <br>
             <span class="fonction bold">DessinerUnRond</span><span class="parentheses bold">();</span>
             </p>

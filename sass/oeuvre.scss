@@ -27,9 +27,9 @@
         }
         .content-win{
             width: 70%;
-            height: 70%;
+            height: 65%;
             margin-left: 15%;
-            margin-top: 11%;
+            margin-top: 13%;
             padding-top: 2%;
             background-color: white;
             border-radius: 50px;
@@ -78,8 +78,8 @@
         }
         .content-loose{
             width: 70%;
-            height: 70%;
-            margin-top: 11%;
+            height: 45%;
+            margin-top: 20%;
             margin-left: 15%;
             padding-top: 2%;
             background-color: white;
@@ -88,8 +88,8 @@
             color: $blueToddle;
             font-size: 26px;
             p{
-              width: 70%;
-              margin-left: 15%;
+              width: 75%;
+              margin-left: 12.5%;
             }
             hr {
               border: 3px solid $pinkToddle;
@@ -104,6 +104,7 @@
               height: 75px;
               border-radius: 50px;
               font-size: 35px;
+              margin-top:0.5%;
             }
             .name{
               color: $pinkToddle;
