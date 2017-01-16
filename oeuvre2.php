@@ -50,7 +50,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </p>
             <br>
             <p>
-              Tu as recomposé l'oeuvres de Frank stella en utilisant "<span class="rose">27</span>" en paramètre de la fonction <span class="rose">DessinerLignes()</span>.
+              Tu as recomposé l'oeuvre de Frank stella en utilisant "<span class="rose">27</span>" en paramètre de la fonction <span class="rose">DessinerLignes()</span>.
               <br>
             </p>
             

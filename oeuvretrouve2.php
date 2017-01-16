@@ -50,7 +50,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-                <span class="bold">Exemple:</span> Je veux dessiner trois rond.<br> Nous allons dessiner un rond trois fois ! En algorithmique on écrira :
+                <span class="bold">Exemple:</span> Je veux dessiner trois ronds.<br> Nous allons dessiner un rond trois fois ! En algorithmique on écrira :
             <br>
             <span class="fonction bold">DessinerUnRond</span><span class="parentheses bold">(<span class="rose">3</span>);</span>
             </p>
