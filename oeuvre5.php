@@ -51,7 +51,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             <p>
                 As-tu été assez rapide pour gagner une récompense ?<br><br>Découvre-le tout de suite !
             </p>
-            <a href="map.php"><button class="continuer">R&#201;SULTAT</button></a>
+            <a href="result.php"><button class="continuer">R&#201;SULTAT</button></a>
             </div>
         </div>
         <div id="loose">

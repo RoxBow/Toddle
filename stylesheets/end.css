@@ -36,22 +36,24 @@ html, body {
   width: 100%;
   height: 100%;
   margin-top: 100%;
-  padding: 50px 30px;
   z-index: 10000;
   background-color: white; }
   .credits #croix {
     position: absolute;
     right: 10%;
-    color: #aaa; }
+    color: #aaa;
+    margin-top: 50px; }
   .credits .title {
     font-size: 72px;
     font-weight: 600;
     color: #F38F9A;
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    padding: 50px 30px; }
   .credits .justify {
     text-align: justify; }
   .credits .content {
+    padding-left: 30px;
     font-size: 20px;
     color: #355E7E;
     font-weight: 600;

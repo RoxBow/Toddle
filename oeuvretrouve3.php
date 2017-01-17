@@ -38,7 +38,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé "4 DOUBLES TRAMES, TRAITS MINCES 0°- 22°5 - 45°- 67°5" de François Morellet !
+              Tu as trouvé "4 doubles trames, traits minces (0°- 22°5 - 45°- 67°5)" de François Morellet !
             </p>
             <br>
             <p>
