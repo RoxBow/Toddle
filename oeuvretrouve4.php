@@ -42,12 +42,12 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-              Tu vas utiliser tout ce que tu as vu auparavant pour le prochain defi, c'est-à-dire:
+              Tu vas utiliser tout ce que tu as vu auparavant pour le prochain defi:<br><br>
             </p>
             <p>
-                Les fonctions: <span class="rose">DessinerUneLigne();</span><br>
-                Les paramètres: DessinerUneLigne(<span class="rose">5</span>);
-                Les variables: <span class="rose">var</span> nbLignes = <span class="rose">5</span> 
+                - Les fonctions: <span class="rose">DessinerUneLigne();</span><br>
+                - Les paramètres: DessinerUneLigne(<span class="rose">5</span>);<br>
+                - Les variables: <span class="rose">var</span> nbLignes = <span class="rose">5</span> 
             </p>
             <br>
             <br>

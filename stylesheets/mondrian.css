@@ -247,6 +247,92 @@ html, body {
 
 .container {
   font-weight: 600; }
+  .container #win {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none; }
+    .container #win .title {
+      font-weight: 600;
+      color: #F38F9A;
+      font-size: 54px; }
+    .container #win .titlesuite {
+      color: #F38F9A;
+      font-size: 42px; }
+    .container #win .content-win {
+      width: 70%;
+      height: 63%;
+      margin-left: 15%;
+      margin-top: 13%;
+      padding-top: 3.5%;
+      background-color: white;
+      border-radius: 50px;
+      text-align: center;
+      color: #355E7E;
+      font-size: 26px; }
+      .container #win .content-win p {
+        width: 70%;
+        margin-left: 15%; }
+      .container #win .content-win hr {
+        border: 3px solid #F38F9A;
+        border-radius: 25px;
+        width: 70%;
+        margin: 3% auto; }
+      .container #win .content-win .continuer {
+        color: #fff;
+        background-color: #355E7E;
+        width: 35%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 30px;
+        margin: 4% 0; }
+      .container #win .content-win .name {
+        color: #F38F9A; }
+      .container #win .content-win .parentheses {
+        color: #355E7E;
+        font-weight: bold; }
+  .container #loose {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none; }
+    .container #loose .title {
+      font-weight: 600;
+      color: #F38F9A;
+      font-size: 54px; }
+    .container #loose .content-loose {
+      width: 70%;
+      height: 45%;
+      margin-top: 20%;
+      margin-left: 15%;
+      padding-top: 2%;
+      background-color: white;
+      border-radius: 50px;
+      text-align: center;
+      color: #355E7E;
+      font-size: 26px; }
+      .container #loose .content-loose p {
+        width: 75%;
+        margin-left: 12.5%; }
+      .container #loose .content-loose hr {
+        border: 3px solid #F38F9A;
+        border-radius: 25px;
+        width: 70%;
+        margin: 3% auto; }
+      .container #loose .content-loose .rechercher {
+        color: #fff;
+        background-color: #355E7E;
+        width: 35%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 35px;
+        margin-top: 0.5%; }
+      .container #loose .content-loose .name {
+        color: #F38F9A; }
   .container h2 {
     text-align: center;
     font-size: 24px;
@@ -259,9 +345,12 @@ html, body {
     margin: 0 auto;
     font-weight: 600; }
   .container .leftBloc {
-    width: 50%;
+    overflow: hidden;
+    border: 1px solid;
+    width: 48%;
+    height: 500px;
     float: left;
-    padding-left: 1%;
+    margin-left: 1%;
     position: relative; }
     .container .leftBloc .bouton2 {
       position: absolute;
@@ -291,7 +380,17 @@ html, body {
       padding: 10px;
       background-color: #F2F2F2;
       width: 96%;
-      font-family: "Inconsolata", "GothamRounded", "Arial"; }
+      font-family: "Inconsolata", "GothamRounded", "Arial";
+      height: 250px;
+      overflow-y: scroll; }
+      .container .rightBloc .code::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #F38F9A; }
+      .container .rightBloc .code::-webkit-scrollbar {
+        width: 7px; }
+      .container .rightBloc .code::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background-color: #355E7E; }
       .container .rightBloc .code input {
         border: none;
         border-bottom: 1px solid black;
@@ -319,7 +418,7 @@ html, body {
       .container .rightBloc .code input[type=number]::-webkit-outer-spin-button {
         -webkit-appearance: none; }
     .container .rightBloc .selection {
-      margin-top: 20px;
+      margin-top: 60px;
       display: flex; }
       .container .rightBloc .selection .choix {
         text-align: center; }
@@ -344,7 +443,7 @@ html, body {
         margin-left: 5%;
         margin-right: 5%; }
       .container .rightBloc .selection .nombre {
-        width: 15%; }
+        width: 16%; }
     .container .rightBloc .controles {
       margin-top: 20px;
       display: flex; }
@@ -358,7 +457,7 @@ html, body {
         height: 60px;
         border-radius: 30px;
         bottom: 10%;
-        margin-left: 6%; }
+        margin-left: 8%; }
         .container .rightBloc .controles .bouton2 > img {
           width: 50%; }
         .container .rightBloc .controles .bouton2:active {
@@ -372,12 +471,12 @@ html, body {
         height: 60px;
         border-radius: 30px;
         color: white;
-        margin-left: 15.5%; }
+        margin-left: 14.5%; }
         .container .rightBloc .controles .bouton:active {
           background-color: #355E7E; }
-      .container .rightBloc .controles #valider {
+      .container .rightBloc .controles #ajouter {
         width: 30%;
-        margin-left: 19%; }
+        margin-left: 20%; }
       .container .rightBloc .controles .bva {
         color: #fff;
         background-color: #355E7E;

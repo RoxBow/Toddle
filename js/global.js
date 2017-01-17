@@ -41,14 +41,14 @@ switch (levelUser) {
         currentArt = "img/mondrian.png";
         currentRoom = roomMondrian;
         $("#levelUser").text(levelUser);
-        $("#indiceMap",".popup2").text("La dernière oeuvre devant laquelle tu dois te rendre, est un tableau d’un peintre néerlandais du XXe siècle. Le tableau est composés de lignes aux couleur primaires, pouvant rappeler le plan d’une célèbre ville américaine.");
+        $("#indiceMap",".popup2").text("La quatrième oeuvre devant laquelle tu dois te rendre, est un tableau d’un peintre néerlandais du XXe siècle. Le tableau est composés de lignes aux couleur primaires, pouvant rappeler le plan d’une célèbre ville américaine.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "5":
         currentArt = "img/jauneauviolet.png";
         currentRoom = roomJauneViolet;
         $("#levelUser").text(levelUser);
-        $("#indiceMap",".popup2").text("La quatrième oeuvre devant laquelle tu dois te rendre, est un double tableau d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. Ce tableau aborde le dégradé grâce à des formes géométriques simples.");
+        $("#indiceMap",".popup2").text("La dernière oeuvre devant laquelle tu dois te rendre, est un double tableau d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. Ce tableau aborde le dégradé grâce à des formes géométriques simples.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
     default:

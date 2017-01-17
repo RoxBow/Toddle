@@ -94,16 +94,7 @@ $(document).ready(function() {
               },150);
             resemble(avalider).compareTo(validation).onComplete(function(data){
               if (data.misMatchPercentage < 40.00) {
-                    stopchrono(); // Arrête chrono
-                    // Save time user in DB
-                    $.ajax({
-                        type: "POST",
-                        url: "login.php",
-                        data: { 'min': localStorage.getItem("minute"), 'sec': localStorage.getItem("seconde") },
-                        success: function(data) {
-                            console.log("Temps: "+localStorage.getItem("minute")+" minutes et "+localStorage.getItem("seconde")+" secondes"  );
-                        }
-                    });
+                
                 $('#win').fadeIn(500);
                   
               } else{

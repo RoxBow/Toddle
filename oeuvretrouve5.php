@@ -38,25 +38,24 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé cette oeuvre ! "4 DOUBLES TRAMES, TRAITS MINCES 0°- 22°5 - 45°- 67°5" est celle de François Morellet.
+              Tu as retrouvé la dernière oeuvre du parcours ! "Du Jaune au Violet" a été réalisée par François Morellet.
             </p>
             <br>
             <p>
-              D&eacute;couvrons ensemble les <span class="rose">variables</span>.
+              D&eacute;couvrons ensemble les <span class="rose">boucles</span>.
             </p>
             <p>
-                Ce sont des "boites" où l'on peut mettre des chiffres par exemple.
+                Elles nous permettent d'effectuer une action plusieurs fois automatiquement.
             </p>
             <br>
             <p>
-                <span class="bold">Exemple:</span> Je veux dessiner 6 chats. Je mets le chiffre "6" dans une boite se nommant "nbChats" comme suivant:
+                <span class="bold">Exemple:</span> Je veux dessiner 6 souris. <br>
+                <span class="rose">for(</span>&nbsp;&nbsp;var souris&nbsp;=&nbsp;0;&nbsp;&nbsp; souris&nbsp;<&nbsp;6; &nbsp;&nbsp; souris&nbsp;=&nbsp;souris+1&nbsp;&nbsp;){<br>
                 <br>
+                    <span class="fct">DessinerSouris();</span>
                 <br>
-                <span class="rose">var</span> nbChats = 6;
+                <span class="accolade">}</span>
                 <br>
-                <br>
-                <!-- "<span class="rose">var</span>" nous disant que ce qui suit est une boite. -->
-                Dessinons ces chats: <span class="bold">DessinerUnChat(<span class="rose">nbChats</span>);</span>
                 <br>
             </p>
             <br>
@@ -64,7 +63,7 @@ if( !isset($_SESSION['pseudo']) ){
               PR&Ecirc;T &Agrave; RELEVER LE D&Eacute;FI ? <br>
             </p>
             <br>
-            <a href="oeuvre3.php"><button class="go">GO</button></a>
+            <a href="oeuvre5.php"><button class="go">GO</button></a>
         </section>
         <?php
             include 'footer.php';

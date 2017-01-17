@@ -43,7 +43,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                   Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
                 </p>
                 <p>
-                  Tu as réussi le troisième défi !
+                  Tu as réussi le quatrième défi !
                 </p>
                 <br>
                 <p>
@@ -51,7 +51,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 </p>
                 <br>
                 <p>
-                  Tu as recréé l'oeuvre de François Morellet en associant les bonnes valeurs d'angles dans les variables: <span class="rose">angle1</span>,<span class="rose"> angle2</span>,<span class="rose"> angle3</span>,<span class="rose"> angle4</span>.
+                  Tu as recréé l'oeuvre de Piet Mondrian en associant toutes les bonnes valeurs aux arguments de la fonction <span class="rose">DessinerUneLigne();</span>.
                   <br>
                 </p>
                 

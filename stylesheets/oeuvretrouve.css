@@ -281,6 +281,10 @@ html, body {
     color: #355E7E; }
   .container .congratulate .bold, .container .congratulate2 .bold {
     font-weight: bold; }
+  .container .congratulate .accolade, .container .congratulate2 .accolade {
+    margin-left: -67%; }
+  .container .congratulate .fct, .container .congratulate2 .fct {
+    margin-left: -30%; }
 .container .congratulate2 {
   margin-top: 10vh; }
 

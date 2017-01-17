@@ -32,6 +32,42 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
         include 'credits.php';
     ?>
     <div class="container">
+        <div id="win">
+            <div class="content-win">
+            <p class="title">
+              F&#201;LICITATIONS !
+            </p>
+            <hr>
+            <p class="text-win">
+              Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+            </p>
+            <p>
+              Tu as réussi le quatrième défi !
+            </p>
+            <br>
+            <p>
+              Tu as donc compris les variables et comment les utiliser comme paramètres d'une fonction. <br><br>
+              Découvre ton dernier défi !
+            </p>
+            <a href="map.php"><button class="continuer">D&#201;FI SUIVANT</button></a>
+            </div>
+        </div>
+        <div id="loose">
+            <div class="content-loose">
+            <p class="title">
+              RAT&#201;&nbsp;!
+            </p>
+            <hr>
+            <p class="text-loose">
+              Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+            </p>
+            <p>
+                Regarde attentivement l'oeuvre et recommence !
+            </p>
+            <br>
+            <button class="rechercher">Retour</button>
+            </div>
+        </div>
         <header>
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
@@ -47,40 +83,17 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
         <section class="bleu">
             <h2 class="rose six">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
-                <p>Remplis les informations manquantes</p>
+                <p>Recréé l'oeuvre de Piet Mondrian en donnant des arguments à la fonction suivante: DessinerUneLigne(couleur, sens, nombre).</p>
                 <br>
             </div>
             <div class="leftBloc">
-                <div class="bouton2" id="indice">
-                    <img src="img/bulb.png" alt="Objectif"/>
-                </div>
-                <div class="bouton2" id="but">
-                    <img src="img/flag.png" alt="Indice"/>
-                </div>
                 <div class="souscontainer">
                     <canvas id="myCanvas"></canvas>
                 </div>
             </div>
             <div class="rightBloc">
                 <div class="code bleu">
-                    <p> function creationLigne (x1, y1, x2, y2, couleur){<br>
-                        context.beginPath();<br>
-                        context.moveTo(x, y);<br>
-                        context.lineTo(x2, y2);<br>
-                        context.lineWidth = 20;<br>
-                        context.strokeStyle = color;<br>
-                        context.stroke();<br>
-                    }<br>
-                    creationLigne(<select name="sens" id="sens">
-                        <option value="vertical">Vertical</option>
-                        <option value="horizontal">Horizontal</option>
-                    </select>,<input type="number" id="x1"  value="0"/>,<input type="number" id="y1" value="0" disabled />,<select name="color" id="color">
-                        <option value="yellow">Jaune</option>
-                        <option value="red">Rouge</option>
-                        <option value="blue">Bleu</option>
-                    </select>)
-                    </p>
-                  <button class="valide">Valider</button>
+                    <p>CréerCadre();</p>
                 </div>
                 <div class="selection">
                     <div class="couleur">
@@ -96,21 +109,21 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                     <div class="orientation">
                         <p>Orientation</p>
                         <div class="choix">
-                        <span class="selecteurs">
+                        <span class="selecteurs" id="orimoins">
                         <
                         </span>
-                        <span class="valeurs" id="orientation">Horizontales</span>
-                        <span class="selecteurs">></span>
+                        <span class="valeurs" id="orientation"></span>
+                        <span class="selecteurs" id="oriplus">></span>
                         </div>
                     </div>
                     <div class="nombre">
                         <p>Nombre</p>
                         <div class="choix">
-                        <span class="selecteurs">
+                        <span class="selecteurs" id="nbmoins">
                         <
                         </span>
-                        <span class="valeurs" id="nombre">7</span>
-                        <span class="selecteurs">></span>
+                        <span class="valeurs" id="nombre"></span>
+                        <span class="selecteurs" id="nbplus">></span>
                         </div>
                     </div>
                 </div>
@@ -118,10 +131,10 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                     <div class="bouton2" id="indice">
                         <img src="img/bulb.png" alt="Objectif"/>
                     </div>
-                    <div id="valider">
+                    <div id="ajouter">
                         <button class="bva">AJOUTER</button>
                     </div>
-                    <div class="bouton">
+                    <div class="bouton" id="valider">
                         <i class="fa fa-check fa-2x" aria-hidden="true"></i></div>
                     </div>
             </div>

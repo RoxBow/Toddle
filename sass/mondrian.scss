@@ -10,6 +10,108 @@
 
 .container {
     font-weight: 600;
+    #win{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        z-index: 10000;
+        display: none;
+        .title{
+          font-weight: 600;
+          color: $pinkToddle;
+          font-size: 54px;
+        }
+        .titlesuite{
+          color: $pinkToddle;
+          font-size: 42px;
+        }
+        .content-win{
+            width: 70%;
+            height: 63%;
+            margin-left: 15%;
+            margin-top: 13%;
+            padding-top: 3.5%;
+            background-color: white;
+            border-radius: 50px;
+            text-align: center;
+            color: $blueToddle;
+            font-size: 26px;
+            p{
+              width: 70%;
+              margin-left: 15%;
+            }
+            hr {
+              border: 3px solid $pinkToddle;
+              border-radius: 25px;
+              width: 70%;
+              margin: 3% auto;
+            }
+            .continuer{
+              color: #fff;
+              background-color: $blueToddle;
+              width: 35%;
+              height: 75px;
+              border-radius: 50px;
+              font-size: 30px;
+              margin: 4% 0;
+            }
+            .name{
+              color: $pinkToddle;
+            }
+            .parentheses{
+              color: $blueToddle;
+              font-weight: bold;
+            }
+        } 
+    }
+    #loose{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        z-index: 10000;
+        display: none;
+        .title{
+          font-weight: 600;
+          color: $pinkToddle;
+          font-size: 54px;
+        }
+        .content-loose{
+            width: 70%;
+            height: 45%;
+            margin-top: 20%;
+            margin-left: 15%;
+            padding-top: 2%;
+            background-color: white;
+            border-radius: 50px;
+            text-align: center;
+            color: $blueToddle;
+            font-size: 26px;
+            p{
+              width: 75%;
+              margin-left: 12.5%;
+            }
+            hr {
+              border: 3px solid $pinkToddle;
+              border-radius: 25px;
+              width: 70%;
+              margin: 3% auto;
+            }
+            .rechercher{
+              color: #fff;
+              background-color: $blueToddle;
+              width: 35%;
+              height: 75px;
+              border-radius: 50px;
+              font-size: 35px;
+              margin-top: 0.5%;
+            }
+            .name{
+              color: $pinkToddle;
+            }
+        } 
+    }
     h2 {
         text-align: center;
         font-size: 24px;
@@ -24,9 +126,12 @@
         font-weight: 600;
     }
     .leftBloc {
-        width: 50%;
+        overflow: hidden;
+        border: 1px solid;
+        width: 48%;
+        height: 500px;
         float: left;
-        padding-left: 1%;
+        margin-left: 1%;
         position: relative;
         .bouton2 {
             position: absolute;
@@ -64,6 +169,25 @@
             background-color: #F2F2F2;
             width: 96%;
             font-family: "Inconsolata", "GothamRounded", "Arial";
+            height: 250px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar-track
+            {
+                
+                border-radius: 10px;
+                background-color: $pinkToddle;
+            }
+
+            &::-webkit-scrollbar
+            {
+                width: 7px;
+            }
+
+            &::-webkit-scrollbar-thumb
+            {
+                border-radius: 20px;
+                background-color: $blueToddle;
+            }
             input {
                 border: none;
                 border-bottom: 1px solid black;
@@ -96,7 +220,7 @@
             }
         } // .code
         .selection{
-            margin-top: 20px;
+            margin-top: 60px;
             display: flex;
             .choix{
                 text-align: center;
@@ -132,7 +256,7 @@
             }
             .nombre{
                 @extend .couleur;
-                width: 15%;
+                width: 16%;
             }
         } // .selection
         .controles{
@@ -148,7 +272,7 @@
                 height: 60px;
                 border-radius: 30px;
                 bottom: 10%;
-                margin-left: 6%;
+                margin-left: 8%;
                 & > img{
                     width: 50%;
                 }
@@ -165,14 +289,14 @@
                 height: 60px;
                 border-radius: 30px;
                 color: white;
-                margin-left: 15.5%;
+                margin-left: 14.5%;
                 &:active{
                     background-color: $blueToddle;
                 }
             }
-            #valider{
+            #ajouter{
                 width: 30%;
-                margin-left: 19%;
+                margin-left: 20%;
             }
             .bva{
               color: #fff;

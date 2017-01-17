@@ -58,6 +58,12 @@
         .bold{
             font-weight: bold;
         }
+        .accolade{
+            margin-left: -67%;
+        }
+        .fct{
+            margin-left: -30%;
+        }
     }
     .congratulate2{
         @extend .congratulate;
