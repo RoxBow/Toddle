@@ -133,15 +133,15 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 <div class="columns">
                     <div class="gauche">
                         <div><span id="output1"></span>°</div>
-                        <input type="range" class="range" name="a" min="0" max="70" step="0.5" value="0"/>
+                        <input type="range" class="range" name="a" min="0" max="45" step="0.5" value="0"/>
                         
                         <div><span id="output3"></span>°</div>
-                        <input type="range" class="range3" name="a" min="0" max="70" step="0.5" value="0"/>
+                        <input type="range" class="range3" name="a" min="0" max="45" step="0.5" value="0"/>
                         
                     </div>
                     <div class="droite">
                         <div><span id="output2"></span>°</div>
-                        <input type="range" class="range2" name="a" min="0" max="70" step="0.5" value="0"/>
+                        <input type="range" class="range2" name="a" min="0" max="50" step="0.5" value="0"/>
 
                         <div><span id="output4"></span>°</div>
                         <input type="range" class="range4" name="a" min="0" max="70" step="0.5" value="0"/>
