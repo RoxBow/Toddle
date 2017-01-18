@@ -117,6 +117,14 @@
             /*Décalage compensé dans .rightBloc pour pas de bug dans les coordonnées pour le drop des étiquettes*/
         padding-left: 2%;
         padding-right: 2%;
+        #handclick{
+          top: 57%;
+          left: 57%;
+          z-index: 10000;
+          animation-duration: 2s;
+          animation-name: slide;
+          animation-iteration-count: infinite;
+        }
         .leftBloc {
             float: left;
             width: 48%;
@@ -376,4 +384,15 @@
             }
         }
     }
+}
+@keyframes slide {
+  from {
+    top: 57%;
+    left:57%;
+  }
+
+  to {
+    top: 48%;
+    left:18%;
+  }
 }

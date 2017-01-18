@@ -11,6 +11,14 @@
 
 .container{
     font-weight: 600;
+    #handclick{
+      top: 62%;
+      left: 22%;
+      z-index: 10000;
+      animation-duration: 3s;
+      animation-name: slide;
+      animation-iteration-count: infinite;
+    }
     #win{
         position: absolute;
         width: 100%;
@@ -178,7 +186,18 @@
         display: flex;
         justify-content: center;
         margin-top: 15px;
-
+        .colorsG, .colorsD {
+            display: inline-block;
+        }
+        .colors {
+            vertical-align: top;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-top: 3px;
+        }
         .bouton2 {
             align-self: flex-end;
             display: flex;
@@ -213,7 +232,7 @@
 
         }
         #codegauche{
-            width: 40%;
+            width: 41%;
             border: 1px solid;
             height: 200px;
             margin: 10px;
@@ -222,11 +241,11 @@
                 margin-left: 10px;
             }
             .indent2{
-                margin-left: 30px;
+                margin-left: 20px;
             }
         }
         #codedroit{
-            width: 40%;
+            width: 41%;
             border: 1px solid;
             height: 200px;
             margin: 10px;
@@ -235,7 +254,7 @@
                 margin-left: 10px;
             }
             .indent2{
-                margin-left: 30px;
+                margin-left: 20px;
             }
         }
     }
@@ -252,4 +271,20 @@ footer {
         vertical-align: middle;
         margin-right: 1%;
     }
+}
+@keyframes slide {
+  0% {
+    top: 62%;
+    left:21%;
+  }
+
+  50% {
+    top: 80%;
+    left:22%;
+  }
+
+  0% {
+    top: 62%;
+    left:22%;
+  }
 }

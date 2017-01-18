@@ -83,6 +83,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
            </div>
         </header>
         <section>
+            <img src="img/h3.png" alt="Mouvement à faire" id="handclick">
             <h2 class="rose">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
                 <p>Choisis la teinte correspondante pour chaque zone, et ajoute le nombre de carré dans le code.</p>
@@ -109,17 +110,18 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 </div>
                 <div id="codegauche">
                     <p>
-                        <p class="indent1">for( var compteur = 0; compteur<<span id="nbgauche" class="rose"></span>; compteur++){</p>
-                            <p class="indent2">var couleur = </p>
-                            <p class="indent2">DessinerCarré(compteur);</p>
+                        <p class="indent1">for( var compteur = 0; compteur<<span id="nbgauche" class="rose"></span>;&nbsp;&nbsp;compteur++){</p><br>
+
+                            <p class="indent2">var couleurs = [<span id="colorsG"></span>]</p>
+                            <p class="indent2">DessinerCarré(compteur);</p><br>
                         <p class="indent1">}</p>
                     </p>
                 </div>
                 <div id="codedroit">
                     <p>
-                        <p class="indent1">for( var compteur = 0; compteur<<span id="nbdroit" class="rose"></span>; compteur++){</p>
-                            <p class="indent2">var couleur = </p>
-                            <p class="indent2">DessinerCarré(compteur);</p>
+                        <p class="indent1">for( var compteur = 0; compteur<<span id="nbdroit" class="rose"></span>; compteur++){</p><br>
+                            <p class="indent2">var couleurs = [<span id="colorsD"></span>]</p>
+                            <p class="indent2">DessinerCarré(compteur);</p><br>
                         <p class="indent1">}</p>
                     </p>
                 </div>

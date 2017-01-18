@@ -53,6 +53,7 @@ $(document).ready(function() {
         gauche="chaud";
         ctx.clearRect(0,0,293,canvas.height);
         dessiner();
+        colors();
 
     });
     $("#froidG").on("click", function(){
@@ -63,6 +64,7 @@ $(document).ready(function() {
         gauche="froid";
         ctx.clearRect(0,0,293,canvas.height);
         dessiner();
+        colors();
     });
     //Selection right
     $("#chaudD").on("click", function(){
@@ -73,6 +75,7 @@ $(document).ready(function() {
         droite="chaud";
         ctx.clearRect(298,0,canvas.width,canvas.height);
         dessiner2();
+        colors2();
     });
     $("#froidD").on("click", function(){
         $("#chaudD").addClass("bleu");
@@ -82,7 +85,9 @@ $(document).ready(function() {
         droite="froid";
         ctx.clearRect(298,0,canvas.width,canvas.height);
         dessiner2();
+        colors2();
     });
+
 });
 
 function init() {
@@ -90,9 +95,8 @@ function init() {
     ctx = canvas.getContext("2d");
     canvas.width = 600;
     canvas.height = 250;
-    
-    /*initSquares();
-    render();*/
+    colors();
+    colors2();
 }
 
 function dessiner(){
@@ -131,6 +135,32 @@ function dessiner2(){
     }
 }
 
+function colors(){
+    $("#colorsG").html("");
+    if (gauche=="froid") {
+        for(var i = 0; i < teinteFroide.length; i++){
+            $("#colorsG").append("<span class='colors' style='background:#"+teinteFroide[i]+"'></span>");
+        }
+    } else{
+        for(var i = 0; i < teinteFroide.length; i++){
+            $("#colorsG").append("<span class='colors' style='background:#"+teinteChaude[i]+"'></span>");
+        }
+    }
+}
+
+function colors2(){
+    $("#colorsD").html("");
+    if (droite=="froid") {
+        for(var i = 0; i < teinteFroide.length; i++){
+            $("#colorsD").append("<span class='colors' style='background:#"+teinteFroide[i]+"'></span>");
+        }
+    } else{
+        for(var i = 0; i < teinteFroide.length; i++){
+            $("#colorsD").append("<span class='colors' style='background:#"+teinteChaude[i]+"'></span>");
+        }
+    }
+}
+
 function win(){
     $('#win').fadeIn(500);
 }
@@ -143,7 +173,7 @@ $(".rechercher").on("click",function(){
 });
 
 $("#valider").on("click", function(){
-    if (nbGauche==7 && nbDroite==7) {
+    if (nbGauche==7 && nbDroite==7 && gauche=="froid" && droite=="chaud") {
         stopchrono(); // Arrête chrono
         // Save time user in DB
         $.ajax({

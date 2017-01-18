@@ -87,6 +87,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
            </div>
         </header>
         <section>
+            <img src="img/h3.png" alt="Mouvement à faire" id="handclick">
             <h2 class="rose">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
                 <p>À l'aide des curseurs et de l'aperçu sur le code, modifie la valeur des angles dans les fonctions, afin de recréer l'oeuvre.</p>

@@ -56,39 +56,45 @@ $(document).ready(function() {
 
 // Compare 2 pictures when user add his one
 function getFile() {
-    // Our own oeuvre picture
-    oeuvre = new Image();
-    oeuvre.src = currentArt;
-    // Oeuvre is load
-    oeuvre.onload = function(){
-        newOeuvre = getBase64Image(oeuvre);
-        
-        var userFile = document.querySelector('#picture').files[0]; // Img
-        // When user takes his photo
-        if (userFile) {
-            console.log(userFile);
-            var diff = resemble(userFile).compareTo(newOeuvre).scaleToSameSize().onComplete(function (data) {
-                console.log(data);
-                if (data.misMatchPercentage < 50.00) {
-                    console.log(data.misMatchPercentage);
-                    document.location.href = "oeuvretrouve"+levelUser+".php";
-                }
-                else {
-                    console.log(data.misMatchPercentage + " de différence, il doit être supérieur à 50%.");
-                    $(".container").append("<div class='badPicture'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x rose'></i><i class='fa fa-times fa-stack-1x fa-inverse' aria-hidden='true'></i></span><p>Ce n'est pas la bonne oeuvre.</p></div>");
-                    $(".badPicture").animate({
-                        top: "3%"
-                      }, 1500, function() {
-                        setTimeout(function(){
-                            $(".badPicture").animate({
-                                top: "-30%"
-                            }, 1500);
-                        }, 1000);
-                      });
-                }
-            });
-        }
-    };
+    //Lancement loader
+    $("#overlayChargement").fadeIn(500);
+    setTimeout(function(){
+        // Our own oeuvre picture
+        oeuvre = new Image();
+        oeuvre.src = currentArt;
+        // Oeuvre is load
+        oeuvre.onload = function(){
+            newOeuvre = getBase64Image(oeuvre);
+            
+            var userFile = document.querySelector('#picture').files[0]; // Img
+            // When user takes his photo
+            if (userFile) {
+                console.log(userFile);
+                var diff = resemble(userFile).compareTo(newOeuvre).scaleToSameSize().onComplete(function (data) {
+                    console.log(data);
+                    if (data.misMatchPercentage < 50.00) {
+                        console.log(data.misMatchPercentage);
+                        document.location.href = "oeuvretrouve"+levelUser+".php";
+                    }
+                    else {
+                        $("#overlayChargement").fadeOut(500);
+                        console.log(data.misMatchPercentage + " de différence, il doit être supérieur à 50%.");
+                        $(".container").append("<div class='badPicture'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x rose'></i><i class='fa fa-times fa-stack-1x fa-inverse' aria-hidden='true'></i></span><p>Ce n'est pas la bonne oeuvre.</p></div>");
+                        $(".badPicture").animate({
+                            top: "3%"
+                          }, 1500, function() {
+                            setTimeout(function(){
+                                $(".badPicture").animate({
+                                    top: "-30%"
+                                }, 1500);
+                            }, 1000);
+                          });
+                    }
+                });
+            }
+        };
+    }, 500);
+
 }
 
 // Transform img in encode base 64 with canvas

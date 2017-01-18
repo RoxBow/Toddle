@@ -9,6 +9,14 @@
 }
 .container{
     font-weight: 600;
+    #handclick{
+      top: 67%;
+      left: 47%;
+      z-index: 10000;
+      animation-duration: 2s;
+      animation-name: slide;
+      animation-iteration-count: infinite;
+    }
     #win{
         position: absolute;
         width: 100%;
@@ -251,4 +259,15 @@
             margin-top: -10px;
         }
     }
+}
+@keyframes slide {
+  from {
+    top: 67%;
+    left:47%;
+  }
+
+  to {
+    top: 67%;
+    left:65%;
+  }
 }

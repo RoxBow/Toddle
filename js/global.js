@@ -75,3 +75,10 @@ $("#croix").click(function () {
         $(".credits").css("display", "none");
     }, 750);
 });
+
+//Arret des tutos
+
+$("body").one("click", function(){
+    $("#handclick").css("animation-play-state","paused");
+    $("#handclick").css("display","none");
+});

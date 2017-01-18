@@ -29,6 +29,16 @@ if(empty($_SESSION['start'])) {
     ?>
 
     <div class="container">
+        <div id="overlayChargement">
+            <div class="cs-loader-inner">
+                <label> ●</label>
+                <label> ●</label>
+                <label> ●</label>
+                <label> ●</label>
+                <label> ●</label>
+                <label> ●</label>
+            </div>
+        </div>
        <header>
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">

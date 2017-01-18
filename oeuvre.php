@@ -89,6 +89,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
            </div>
         </header>
         <div id="jeu">
+          <img src="img/h3.png" alt="Mouvement à faire" id="handclick">
           <section class="leftBloc" id="leftBloc">
               <div class="wrap">
                 <div class='content'>
