@@ -94,7 +94,6 @@ function getFile() {
             }
         };
     }, 500);
-
 }
 
 // Transform img in encode base 64 with canvas

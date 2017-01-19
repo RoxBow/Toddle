@@ -26,12 +26,11 @@ $(document).ready(function () {
         countClick += 1;
         console.log(countClick);
         if (countClick == 2) {
-            location.href = "index.html";
+            location.href = "index.php";
         }
     });
     
     /* ### TUTO ### */
-    
         $('.lesson', '.lessons').click(function (e) {
             e.preventDefault();
 
@@ -43,13 +42,12 @@ $(document).ready(function () {
                 // click on arrow left, open previous lesson
                 $(e.target).parent().toggleClass('up').prev(".lesson").addClass("up");
             }
-            if ($(e.target).hasClass('understood') && $(e.target).parent().parent().is(':last-child')) {
+            if ($(e.target).hasClass('go') && $(e.target).parent().parent().is(':last-child')) {
                 location.href = "map.php"; // Redirect to map after making tuto
             }
 
             return false;
         });
-    
 
     /*Apparition page credits*/
     $("footer>img").click(function () {
