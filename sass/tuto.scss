@@ -71,7 +71,7 @@
                 font-size: 5.5vw;
             }
             &:first-child {
-                border-radius: 20px 0 0 20px;
+                border-radius: 20px 0 0 0;
                 background: $beigeToddle;
                 .understood{
                     color: $beigeToddle;
@@ -90,7 +90,7 @@
                 }
             }
             &:last-child{
-                border-radius: 0 20px 20px 0;
+                border-radius: 0 20px 0 0;
                 background: #fff;
                 border: 5px solid $blueToddle;
                 .number, .understood {

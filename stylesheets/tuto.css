@@ -5,31 +5,39 @@
 /* ###### FONTS ###### */
 @font-face {
   font-family: "GothamRounded";
-  src: url(../fonts/GothamRoundedBook.ttf); }
+  src: url(../fonts/GothamRoundedBook.ttf);
+}
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedBold.ttf);
-  font-weight: bold; }
+  font-weight: bold;
+}
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedMedium.ttf);
-  font-weight: 600; }
+  font-weight: 600;
+}
 @font-face {
   font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata-Regular.ttf); }
+  src: url(../fonts/Inconsolata-Regular.ttf);
+}
 @font-face {
   font-family: "Inconsolata";
   src: url(../fonts/Inconsolata-Bold.ttf);
-  font-weight: bold; }
+  font-weight: bold;
+}
+/* line 45, ../sass/general.scss */
 html, body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
   font-family: "GothamRounded", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
-/* ###### CR├ëDITS ###### */
+/* ###### CRÉDITS ###### */
+/* line 56, ../sass/general.scss */
 .credits {
   position: absolute;
   display: none;
@@ -37,196 +45,278 @@ html, body {
   height: 100%;
   margin-top: 100%;
   z-index: 10000;
-  background-color: white; }
-  .credits #croix {
-    position: absolute;
-    right: 10%;
-    color: #aaa;
-    margin-top: 50px; }
-  .credits .title {
-    font-size: 72px;
-    font-weight: 600;
-    color: #F38F9A;
-    width: 100%;
-    text-align: center;
-    padding: 50px 30px; }
-  .credits .justify {
-    text-align: justify; }
-  .credits .content {
-    padding-left: 30px;
-    font-size: 20px;
-    color: #355E7E;
-    font-weight: 600;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 50px; }
-  .credits .logo {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100px; }
+  background-color: white;
+}
+/* line 57, ../sass/general.scss */
+.credits #croix {
+  position: absolute;
+  right: 10%;
+  color: #aaa;
+  margin-top: 50px;
+}
+/* line 70, ../sass/general.scss */
+.credits .title {
+  font-size: 72px;
+  font-weight: 600;
+  color: #F38F9A;
+  width: 100%;
+  text-align: center;
+  padding: 50px 30px;
+}
+/* line 78, ../sass/general.scss */
+.credits .justify {
+  text-align: justify;
+}
+/* line 81, ../sass/general.scss */
+.credits .content {
+  padding-left: 30px;
+  font-size: 20px;
+  color: #355E7E;
+  font-weight: 600;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 50px;
+}
+/* line 90, ../sass/general.scss */
+.credits .logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+}
 
 /* ###### HANDCLICK TUTO ###### */
+/* line 99, ../sass/general.scss */
 #handclick {
   position: absolute;
   width: 110px;
-  height: 110px; }
+  height: 110px;
+}
 
+/* line 105, ../sass/general.scss */
 .fa {
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 /* ###### Class for colors ###### */
+/* line 110, ../sass/general.scss */
 .rose {
-  color: #F38F9A; }
+  color: #F38F9A;
+}
 
+/* line 113, ../sass/general.scss */
 .bleu {
-  color: #355E7E; }
+  color: #355E7E;
+}
 
+/* line 116, ../sass/general.scss */
 .beige {
-  color: #F8B195; }
+  color: #F8B195;
+}
 
+/* line 119, ../sass/general.scss */
 .noir {
-  color: black; }
+  color: black;
+}
 
+/* line 122, ../sass/general.scss */
 .six {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
+/* line 125, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
-  position: relative; }
-  .container * {
-    outline: none;
-    box-sizing: border-box; }
-  .container input {
-    font-family: 'GothamRounded'; }
-  .container img {
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    user-select: none; }
-  .container button {
-    background: none;
-    border: none;
-    font-family: 'GothamRounded';
-    text-transform: uppercase;
-    font-weight: 600; }
-  .container header {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    width: 100%;
-    margin: 0 0 15px 0;
-    height: 15%; }
-    .container header .toddle_form {
-      height: 80%;
-      float: left; }
-    .container header .toddle_text {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 25%;
-      margin: auto;
-      height: 50%; }
-    .container header .blockRight {
-      position: absolute;
-      right: 5%;
-      top: 40%;
-      width: auto;
-      font-size: 2.5vw;
-      font-weight: normal;
-      color: #F38F9A; }
-      .container header .blockRight .name, .container header .blockRight .chrono {
-        display: inline-block; }
-      .container header .blockRight .chrono input {
-        font-size: 2.5vw;
-        color: #F38F9A;
-        display: inline-block;
-        width: 50px;
-        text-align: center;
-        border: none;
-        background: none; }
-      .container header .blockRight .defi {
-        text-align: right; }
-  .container footer {
-    width: 100%;
-    text-align: right;
-    position: absolute;
-    bottom: 1%;
-    right: 1%; }
-    .container footer img {
-      width: 5%;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 1%; }
-  .container .overlay {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: black;
-    background-color: rgba(0, 0, 0, 0.6);
-    text-align: center; }
-    .container .overlay .popup {
-      background-color: #fff;
-      border-radius: 15px;
-      position: absolute;
-      width: 50%;
-      height: 50%;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      left: 0;
-      right: 0;
-      padding: 15px;
-      color: #355E7E;
-      font-size: 20px; }
-      .container .overlay .popup .sous-titre {
-        color: #F38F9A;
-        font-size: 2.2rem;
-        font-weight: bold;
-        margin-bottom: 4%;
-        display: block; }
-      .container .overlay .popup .error {
-        margin: 3% auto;
-        color: red;
-        font-size: 2vw; }
-    .container .overlay .close {
-      color: #aaa;
-      position: absolute;
-      right: 2%;
-      top: 2%;
-      font-size: 4vw; }
-    .container .overlay.orientation {
-      display: block;
-      background-color: rgba(0, 0, 0, 0.8); }
-      .container .overlay.orientation .content {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        display: inline-block;
-        right: 0;
-        left: 0;
-        margin: auto;
-        background: #fff;
-        text-align: center;
-        width: 80%;
-        height: 45%;
-        padding: 8%;
-        border-radius: 5%; }
-        .container .overlay.orientation .content img {
-          width: 50%;
-          display: inline-block;
-          margin: auto;
-          right: 0; }
-        .container .overlay.orientation .content p {
-          font-size: 7vw;
-          color: #F38F9A;
-          margin: 7% 0; }
+  position: relative;
+}
+/* line 130, ../sass/general.scss */
+.container * {
+  outline: none;
+  box-sizing: border-box;
+}
+/* line 135, ../sass/general.scss */
+.container *:not(input) {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari*/
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently */
+}
+/* line 143, ../sass/general.scss */
+.container input {
+  font-family: 'GothamRounded';
+}
+/* line 146, ../sass/general.scss */
+.container button {
+  background: none;
+  border: none;
+  font-family: 'GothamRounded';
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/* line 153, ../sass/general.scss */
+.container header {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  margin: 0 0 15px 0;
+  height: 15%;
+}
+/* line 160, ../sass/general.scss */
+.container header .toddle_form {
+  height: 80%;
+  float: left;
+}
+/* line 164, ../sass/general.scss */
+.container header .toddle_text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  margin: auto;
+  height: 50%;
+}
+/* line 172, ../sass/general.scss */
+.container header .blockRight {
+  position: absolute;
+  right: 5%;
+  top: 3vw;
+  width: auto;
+  font-size: 2.5vw;
+  font-weight: normal;
+  color: #F38F9A;
+}
+/* line 180, ../sass/general.scss */
+.container header .blockRight .name, .container header .blockRight .chrono {
+  display: inline-block;
+}
+/* line 184, ../sass/general.scss */
+.container header .blockRight .chrono input {
+  font-size: 2.5vw;
+  color: #F38F9A;
+  display: inline-block;
+  width: 6vw;
+  text-align: center;
+  border: none;
+  background: none;
+}
+/* line 194, ../sass/general.scss */
+.container header .blockRight .defi {
+  text-align: right;
+}
+/* line 199, ../sass/general.scss */
+.container footer {
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+}
+/* line 205, ../sass/general.scss */
+.container footer img {
+  width: 5%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1%;
+}
+/* line 212, ../sass/general.scss */
+.container .overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+/* line 224, ../sass/general.scss */
+.container .overlay .popup {
+  background-color: #fff;
+  border-radius: 15px;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  color: #355E7E;
+  font-size: 20px;
+}
+/* line 238, ../sass/general.scss */
+.container .overlay .popup .sous-titre {
+  color: #F38F9A;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 4%;
+  display: block;
+}
+/* line 245, ../sass/general.scss */
+.container .overlay .popup .error {
+  margin: 3% auto;
+  color: red;
+  font-size: 2vw;
+}
+/* line 251, ../sass/general.scss */
+.container .overlay .close {
+  color: #aaa;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 4vw;
+}
+/* line 259, ../sass/general.scss */
+.container .overlay.orientation {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* line 262, ../sass/general.scss */
+.container .overlay.orientation .content-orientation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: inline-block;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: #fff;
+  text-align: center;
+  width: 80%;
+  height: 45%;
+  padding: 8%;
+  border-radius: 5%;
+}
+/* line 276, ../sass/general.scss */
+.container .overlay.orientation .content-orientation img {
+  width: 50%;
+  display: inline-block;
+  margin: auto;
+  right: 0;
+}
+/* line 282, ../sass/general.scss */
+.container .overlay.orientation .content-orientation p {
+  text-transform: uppercase;
+  font-size: 5vw;
+  color: #F38F9A;
+  margin: 7% 0;
+}
 
+/* line 293, ../sass/general.scss */
 .btn_toddle, .container .lessons .lesson.up .understood {
   background: #355E7E;
   padding: 20px;
@@ -234,8 +324,10 @@ html, body {
   border: none;
   border-radius: 50px;
   font-size: 30px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
+/* line 303, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -243,182 +335,268 @@ html, body {
   border-radius: 35px;
   font-size: 30px;
   width: 70px;
-  height: 70px; }
+  height: 70px;
+}
 
+/* line 6, ../sass/tuto.scss */
 .container p {
-  text-align: center; }
+  text-align: center;
+}
+/* line 9, ../sass/tuto.scss */
 .container .entete {
   color: #355E7E;
-  margin: 0 0 2% 0; }
-  .container .entete p {
-    width: 70%;
-    margin: 0 auto;
-    font-size: 2.2vw; }
-    .container .entete p:first-child {
-      width: auto;
-      font-size: 3.2vw;
-      font-weight: 600;
-      margin: 0% 0 2% 0; }
-    .container .entete p span {
-      color: #F38F9A; }
+  margin: 0 0 2% 0;
+}
+/* line 12, ../sass/tuto.scss */
+.container .entete p {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 2.2vw;
+}
+/* line 16, ../sass/tuto.scss */
+.container .entete p:first-child {
+  width: auto;
+  font-size: 3.2vw;
+  font-weight: 600;
+  margin: 0% 0 2% 0;
+}
+/* line 22, ../sass/tuto.scss */
+.container .entete p span {
+  color: #F38F9A;
+}
+/* line 27, ../sass/tuto.scss */
 .container .lessons {
   height: 68%;
   width: 100%;
-  color: #fff; }
-  .container .lessons .lesson {
-    width: 10%;
-    height: 100%;
-    float: left;
-    text-align: center;
-    position: relative;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    transition: all 1s ease; }
-    .container .lessons .lesson .content *, .container .lessons .lesson .fa-chevron-left {
-      display: none; }
-    .container .lessons .lesson .content {
-      color: #fff; }
-      .container .lessons .lesson .content hr {
-        border: 4px solid #fff;
-        display: block;
-        margin: 0;
-        padding: 0;
-        border-radius: 5px;
-        width: 50%;
-        margin: 0 auto; }
-      .container .lessons .lesson .content .number {
-        box-sizing: content-box;
-        display: inline-block;
-        font-weight: bold;
-        border: none;
-        width: auto;
-        height: auto;
-        margin: 12% 0 2% 0;
-        line-height: inherit;
-        font-size: 5.4vw; }
-    .container .lessons .lesson .fa-chevron-left {
-      position: absolute;
-      left: -9.5%;
-      bottom: 6%;
-      color: #fff;
-      font-size: 5.5vw; }
-    .container .lessons .lesson:first-child {
-      border-radius: 20px 0 0 20px;
-      background: #F8B195; }
-      .container .lessons .lesson:first-child .understood {
-        color: #F8B195; }
-    .container .lessons .lesson:nth-child(2) {
-      background: #F38F9A; }
-      .container .lessons .lesson:nth-child(2) .understood {
-        color: #F38F9A; }
-    .container .lessons .lesson:nth-child(3) {
-      background: #355E7E; }
-      .container .lessons .lesson:nth-child(3) .understood {
-        color: #355E7E; }
-    .container .lessons .lesson:last-child {
-      border-radius: 0 20px 20px 0;
-      background: #fff;
-      border: 5px solid #355E7E; }
-      .container .lessons .lesson:last-child .number, .container .lessons .lesson:last-child .understood {
-        color: #355E7E; }
-      .container .lessons .lesson:last-child hr {
-        border-color: #355E7E; }
-    .container .lessons .lesson.up {
-      width: 70%; }
-      .container .lessons .lesson.up .fa-chevron-left {
-        display: block; }
-      .container .lessons .lesson.up .content hr {
-        display: none; }
-      .container .lessons .lesson.up .content .number {
-        margin: 2% auto 2% auto;
-        font-size: 7vw;
-        box-sizing: content-box;
-        border-radius: 50%;
-        border: 1vw solid #fff;
-        display: block;
-        font-weight: bold;
-        width: 10vw;
-        height: 10vw;
-        line-height: 10vw; }
-        .container .lessons .lesson.up .content .number.spec {
-          border-color: #355E7E; }
-      .container .lessons .lesson.up .content .group_gif {
-        width: 50%;
-        margin: 2% auto; }
-        .container .lessons .lesson.up .content .group_gif img {
-          width: 50%;
-          display: inline-block;
-          vertical-align: middle; }
-      .container .lessons .lesson.up .content .map {
-        width: 50%;
-        margin: 2% auto; }
-      .container .lessons .lesson.up .content p {
-        font-size: 2vw;
-        width: 62vw;
-        margin: 0 auto; }
-      .container .lessons .lesson.up .content ul {
-        margin: 2% 12% 0 0; }
-        .container .lessons .lesson.up .content ul li {
-          width: 50%;
-          float: left;
-          margin: 0 0 3% 0; }
-          .container .lessons .lesson.up .content ul li p, .container .lessons .lesson.up .content ul li img {
-            display: inline-block; }
-          .container .lessons .lesson.up .content ul li p {
-            width: 100%;
-            margin: 2% 0; }
-          .container .lessons .lesson.up .content ul li img {
-            width: 19%;
-            animation: animate_icon .9s infinite linear alternate; }
-      .container .lessons .lesson.up .content .blocL4 {
-        text-align: center;
-        width: 50%;
-        float: left;
-        color: #355E7E; }
-        .container .lessons .lesson.up .content .blocL4 .containerImg {
-          background: #355E7E;
-          display: block;
-          border-radius: 50%;
-          width: 10vw;
-          height: 10vw;
-          line-height: 10vw;
-          margin: 0 auto; }
-          .container .lessons .lesson.up .content .blocL4 .containerImg img {
-            padding-bottom: 6%;
-            width: 68%;
-            display: inline-block;
-            vertical-align: middle; }
-        .container .lessons .lesson.up .content .blocL4 p {
-          display: inline-block;
-          width: auto;
-          margin: 6% 0;
-          padding: 0 7%;
-          font-weight: 600; }
-      .container .lessons .lesson.up .content * {
-        display: block; }
-      .container .lessons .lesson.up .understood {
-        background: #fff;
-        position: absolute;
-        right: 2%;
-        bottom: 3%;
-        padding: 0;
-        width: 8vw;
-        height: 8vw; }
-        .container .lessons .lesson.up .understood.go {
-          background: #355E7E;
-          color: #fff;
-          right: 0;
-          left: 0;
-          bottom: 6%;
-          margin: auto;
-          width: 10vw;
-          height: 10vw;
-          font-size: 4.5vw; }
+  color: #fff;
+}
+/* line 31, ../sass/tuto.scss */
+.container .lessons .lesson {
+  width: 10%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  position: relative;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
+}
+/* line 40, ../sass/tuto.scss */
+.container .lessons .lesson .content *, .container .lessons .lesson .fa-chevron-left {
+  display: none;
+}
+/* line 43, ../sass/tuto.scss */
+.container .lessons .lesson .content {
+  color: #fff;
+}
+/* line 45, ../sass/tuto.scss */
+.container .lessons .lesson .content hr {
+  border: 4px solid #fff;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
+}
+/* line 54, ../sass/tuto.scss */
+.container .lessons .lesson .content .number {
+  box-sizing: content-box;
+  display: inline-block;
+  font-weight: bold;
+  border: none;
+  width: auto;
+  height: auto;
+  margin: 12% 0 2% 0;
+  line-height: inherit;
+  font-size: 5.4vw;
+}
+/* line 66, ../sass/tuto.scss */
+.container .lessons .lesson .fa-chevron-left {
+  position: absolute;
+  left: -9.5%;
+  bottom: 6%;
+  color: #fff;
+  font-size: 5.5vw;
+}
+/* line 73, ../sass/tuto.scss */
+.container .lessons .lesson:first-child {
+  border-radius: 20px 0 0 0;
+  background: #F8B195;
+}
+/* line 76, ../sass/tuto.scss */
+.container .lessons .lesson:first-child .understood {
+  color: #F8B195;
+}
+/* line 80, ../sass/tuto.scss */
+.container .lessons .lesson:nth-child(2) {
+  background: #F38F9A;
+}
+/* line 82, ../sass/tuto.scss */
+.container .lessons .lesson:nth-child(2) .understood {
+  color: #F38F9A;
+}
+/* line 86, ../sass/tuto.scss */
+.container .lessons .lesson:nth-child(3) {
+  background: #355E7E;
+}
+/* line 88, ../sass/tuto.scss */
+.container .lessons .lesson:nth-child(3) .understood {
+  color: #355E7E;
+}
+/* line 92, ../sass/tuto.scss */
+.container .lessons .lesson:last-child {
+  border-radius: 0 20px 0 0;
+  background: #fff;
+  border: 5px solid #355E7E;
+}
+/* line 96, ../sass/tuto.scss */
+.container .lessons .lesson:last-child .number, .container .lessons .lesson:last-child .understood {
+  color: #355E7E;
+}
+/* line 99, ../sass/tuto.scss */
+.container .lessons .lesson:last-child hr {
+  border-color: #355E7E;
+}
+/* line 104, ../sass/tuto.scss */
+.container .lessons .lesson.up {
+  width: 70%;
+}
+/* line 106, ../sass/tuto.scss */
+.container .lessons .lesson.up .fa-chevron-left {
+  display: block;
+}
+/* line 110, ../sass/tuto.scss */
+.container .lessons .lesson.up .content hr {
+  display: none;
+}
+/* line 113, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .number {
+  margin: 2% auto 2% auto;
+  font-size: 7vw;
+  box-sizing: content-box;
+  border-radius: 50%;
+  border: 1vw solid #fff;
+  display: block;
+  font-weight: bold;
+  width: 10vw;
+  height: 10vw;
+  line-height: 10vw;
+}
+/* line 124, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .number.spec {
+  border-color: #355E7E;
+}
+/* line 128, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .group_gif {
+  width: 50%;
+  margin: 2% auto;
+}
+/* line 131, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .group_gif img {
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 137, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .map {
+  width: 50%;
+  margin: 2% auto;
+}
+/* line 141, ../sass/tuto.scss */
+.container .lessons .lesson.up .content p {
+  font-size: 2vw;
+  width: 62vw;
+  margin: 0 auto;
+}
+/* line 146, ../sass/tuto.scss */
+.container .lessons .lesson.up .content ul {
+  margin: 2% 12% 0 0;
+}
+/* line 149, ../sass/tuto.scss */
+.container .lessons .lesson.up .content ul li {
+  width: 50%;
+  float: left;
+  margin: 0 0 3% 0;
+}
+/* line 153, ../sass/tuto.scss */
+.container .lessons .lesson.up .content ul li p, .container .lessons .lesson.up .content ul li img {
+  display: inline-block;
+}
+/* line 156, ../sass/tuto.scss */
+.container .lessons .lesson.up .content ul li p {
+  width: 100%;
+  margin: 2% 0;
+}
+/* line 160, ../sass/tuto.scss */
+.container .lessons .lesson.up .content ul li img {
+  width: 19%;
+  animation: animate_icon .9s infinite linear alternate;
+}
+/* line 166, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .blocL4 {
+  text-align: center;
+  width: 50%;
+  float: left;
+  color: #355E7E;
+}
+/* line 171, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .blocL4 .containerImg {
+  background: #355E7E;
+  display: block;
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vw;
+  line-height: 10vw;
+  margin: 0 auto;
+}
+/* line 179, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .blocL4 .containerImg img {
+  padding-bottom: 6%;
+  width: 68%;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 186, ../sass/tuto.scss */
+.container .lessons .lesson.up .content .blocL4 p {
+  display: inline-block;
+  width: auto;
+  margin: 6% 0;
+  padding: 0 7%;
+  font-weight: 600;
+}
+/* line 195, ../sass/tuto.scss */
+.container .lessons .lesson.up .content * {
+  display: block;
+}
+/* line 201, ../sass/tuto.scss */
+.container .lessons .lesson.up .understood {
+  background: #fff;
+  position: absolute;
+  right: 2%;
+  bottom: 3%;
+  padding: 0;
+  width: 8vw;
+  height: 8vw;
+}
+/* line 210, ../sass/tuto.scss */
+.container .lessons .lesson.up .understood.go {
+  background: #355E7E;
+  color: #fff;
+  right: 0;
+  left: 0;
+  bottom: 6%;
+  margin: auto;
+  width: 10vw;
+  height: 10vw;
+  font-size: 4.5vw;
+}
 
 @keyframes animate_icon {
   0% {
-    transform: scale(1); }
+    transform: scale(1);
+  }
   100% {
-    transform: scale(1.15); } }
-
-/*# sourceMappingURL=tuto.css.map */
+    transform: scale(1.15);
+  }
+}

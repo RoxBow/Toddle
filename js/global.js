@@ -55,30 +55,63 @@ switch (levelUser) {
         document.location.href = "index.html";
 }
 
-//Couleurs de l'appli
+// Couleurs de l'appli
 var pinkToddle = "#F38F9A";
 var bleuToddle = "#355E7E";
 var beigeToddle = "#F8B195";
 
-//Positions crédits
-$("footer>img").click(function () {
-    $(".credits").css("display", "block");
-    $(".credits").animate({
-        marginTop: "0%"
-    }, 1000);
-});
-$("#croix").click(function () {
-    $(".credits").animate({
-        marginTop: "100%"
-    }, 750);
-    setTimeout(function () {
-        $(".credits").css("display", "none");
-    }, 750);
-});
-
-//Arret des tutos
-
+// Arrêt des tutos
 $("body").one("click", function(){
     $("#handclick").css("animation-play-state","paused");
     $("#handclick").css("display","none");
 });
+
+// Check orientation tablet
+doOnOrientationChange();
+window.addEventListener('orientationchange', doOnOrientationChange);
+
+$(document).ready(function () {
+    var countClick = 0;
+    
+    // 3 tap on toddle img left (header) -> Skip level (oeuvres)
+    $("#skip","header").click(function () {
+        countClick += 1;
+        if (countClick == 3) {
+            nbrLevel++;
+            localStorage.setItem("levelUser", nbrLevel);
+            document.location.replace("map.php");
+        }
+    });
+    
+    //Positions crédits
+    $("footer>img").click(function () {
+        $(".credits").css("display", "block");
+        $(".credits").animate({
+            marginTop: "0%"
+        }, 1000);
+    });
+
+    $("#croix").click(function () {
+        $(".credits").animate({
+            marginTop: "100%"
+        }, 750);
+        setTimeout(function () {
+            $(".credits").css("display", "none");
+        }, 750);
+    });
+
+});
+
+
+// Detect orientation tablet
+function doOnOrientationChange() {
+    switch(window.orientation) {
+      case -90:
+      case 90:
+        $(".orientation").remove();
+        break;
+      case 0:
+        $(".container").append("<div class='overlay orientation'><div class='content-orientation'><img src='img/orientation.png' alt='tablet'><p>Tourne la tablette</p></div></div>");
+        break;
+    }
+}

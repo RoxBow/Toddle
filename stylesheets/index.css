@@ -135,17 +135,26 @@ html, body {
   outline: none;
   box-sizing: border-box;
 }
-/* line 134, ../sass/general.scss */
+/* line 135, ../sass/general.scss */
+.container *:not(input) {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari*/
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently */
+}
+/* line 143, ../sass/general.scss */
 .container input {
   font-family: 'GothamRounded';
 }
-/* line 137, ../sass/general.scss */
-.container img {
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-/* line 142, ../sass/general.scss */
+/* line 146, ../sass/general.scss */
 .container button {
   background: none;
   border: none;
@@ -153,7 +162,7 @@ html, body {
   text-transform: uppercase;
   font-weight: 600;
 }
-/* line 149, ../sass/general.scss */
+/* line 153, ../sass/general.scss */
 .container header {
   position: relative;
   overflow: hidden;
@@ -162,12 +171,12 @@ html, body {
   margin: 0 0 15px 0;
   height: 15%;
 }
-/* line 156, ../sass/general.scss */
+/* line 160, ../sass/general.scss */
 .container header .toddle_form {
   height: 80%;
   float: left;
 }
-/* line 160, ../sass/general.scss */
+/* line 164, ../sass/general.scss */
 .container header .toddle_text {
   position: absolute;
   left: 0;
@@ -176,35 +185,35 @@ html, body {
   margin: auto;
   height: 50%;
 }
-/* line 168, ../sass/general.scss */
+/* line 172, ../sass/general.scss */
 .container header .blockRight {
   position: absolute;
   right: 5%;
-  top: 40%;
+  top: 3vw;
   width: auto;
   font-size: 2.5vw;
   font-weight: normal;
   color: #F38F9A;
 }
-/* line 176, ../sass/general.scss */
+/* line 180, ../sass/general.scss */
 .container header .blockRight .name, .container header .blockRight .chrono {
   display: inline-block;
 }
-/* line 180, ../sass/general.scss */
+/* line 184, ../sass/general.scss */
 .container header .blockRight .chrono input {
   font-size: 2.5vw;
   color: #F38F9A;
   display: inline-block;
-  width: 50px;
+  width: 6vw;
   text-align: center;
   border: none;
   background: none;
 }
-/* line 190, ../sass/general.scss */
+/* line 194, ../sass/general.scss */
 .container header .blockRight .defi {
   text-align: right;
 }
-/* line 195, ../sass/general.scss */
+/* line 199, ../sass/general.scss */
 .container footer {
   width: 100%;
   text-align: right;
@@ -212,14 +221,14 @@ html, body {
   bottom: 1%;
   right: 1%;
 }
-/* line 201, ../sass/general.scss */
+/* line 205, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
   vertical-align: middle;
   margin-right: 1%;
 }
-/* line 208, ../sass/general.scss */
+/* line 212, ../sass/general.scss */
 .container .overlay {
   display: none;
   position: fixed;
@@ -233,7 +242,7 @@ html, body {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
-/* line 220, ../sass/general.scss */
+/* line 224, ../sass/general.scss */
 .container .overlay .popup {
   background-color: #fff;
   border-radius: 15px;
@@ -249,7 +258,7 @@ html, body {
   color: #355E7E;
   font-size: 20px;
 }
-/* line 234, ../sass/general.scss */
+/* line 238, ../sass/general.scss */
 .container .overlay .popup .sous-titre {
   color: #F38F9A;
   font-size: 2.2rem;
@@ -257,13 +266,13 @@ html, body {
   margin-bottom: 4%;
   display: block;
 }
-/* line 241, ../sass/general.scss */
+/* line 245, ../sass/general.scss */
 .container .overlay .popup .error {
   margin: 3% auto;
   color: red;
   font-size: 2vw;
 }
-/* line 247, ../sass/general.scss */
+/* line 251, ../sass/general.scss */
 .container .overlay .close {
   color: #aaa;
   position: absolute;
@@ -271,13 +280,13 @@ html, body {
   top: 2%;
   font-size: 4vw;
 }
-/* line 255, ../sass/general.scss */
+/* line 259, ../sass/general.scss */
 .container .overlay.orientation {
   display: block;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 258, ../sass/general.scss */
-.container .overlay.orientation .content {
+/* line 262, ../sass/general.scss */
+.container .overlay.orientation .content-orientation {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -292,21 +301,22 @@ html, body {
   padding: 8%;
   border-radius: 5%;
 }
-/* line 272, ../sass/general.scss */
-.container .overlay.orientation .content img {
+/* line 276, ../sass/general.scss */
+.container .overlay.orientation .content-orientation img {
   width: 50%;
   display: inline-block;
   margin: auto;
   right: 0;
 }
-/* line 278, ../sass/general.scss */
-.container .overlay.orientation .content p {
-  font-size: 7vw;
+/* line 282, ../sass/general.scss */
+.container .overlay.orientation .content-orientation p {
+  text-transform: uppercase;
+  font-size: 5vw;
   color: #F38F9A;
   margin: 7% 0;
 }
 
-/* line 288, ../sass/general.scss */
+/* line 293, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -317,7 +327,7 @@ html, body {
   margin: 0 auto;
 }
 
-/* line 298, ../sass/general.scss */
+/* line 303, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -405,31 +415,37 @@ body {
 /* line 63, ../sass/index.scss */
 .cs-loader-inner label:nth-child(6) {
   -webkit-animation: anim 2s infinite ease-in-out;
+  -moz-animation: anim 2s infinite ease-in-out;
   animation: anim 2s infinite ease-in-out;
 }
-/* line 67, ../sass/index.scss */
+/* line 68, ../sass/index.scss */
 .cs-loader-inner label:nth-child(5) {
   -webkit-animation: anim 2s 100ms infinite ease-in-out;
+  -moz-animation: anim 2s 100ms infinite ease-in-out;
   animation: anim 2s 100ms infinite ease-in-out;
 }
-/* line 71, ../sass/index.scss */
+/* line 73, ../sass/index.scss */
 .cs-loader-inner label:nth-child(4) {
   -webkit-animation: anim 2s 200ms infinite ease-in-out;
+  -moz-animation: anim 2s 200ms infinite ease-in-out;
   animation: anim 2s 200ms infinite ease-in-out;
 }
-/* line 75, ../sass/index.scss */
+/* line 78, ../sass/index.scss */
 .cs-loader-inner label:nth-child(3) {
   -webkit-animation: anim 2s 300ms infinite ease-in-out;
+  -moz-animation: anim 2s 300ms infinite ease-in-out;
   animation: anim 2s 300ms infinite ease-in-out;
 }
-/* line 79, ../sass/index.scss */
+/* line 83, ../sass/index.scss */
 .cs-loader-inner label:nth-child(2) {
   -webkit-animation: anim 2s 400ms infinite ease-in-out;
+  -moz-animation: anim 2s 400ms infinite ease-in-out;
   animation: anim 2s 400ms infinite ease-in-out;
 }
-/* line 83, ../sass/index.scss */
+/* line 88, ../sass/index.scss */
 .cs-loader-inner label:nth-child(1) {
   -webkit-animation: anim 2s 500ms infinite ease-in-out;
+  -moz-animation: anim 2s 500ms infinite ease-in-out;
   animation: anim 2s 500ms infinite ease-in-out;
 }
 

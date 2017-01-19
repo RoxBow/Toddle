@@ -34,7 +34,7 @@ $(document).ready(function() {
             $("#indiceBloc").fadeIn();
             $("#indice").css("animation-play-state","paused");
         }
-        else if ( $("#indiceBloc").is(e.target) || $(".close").is(e.target) ) {
+        else if ( $("#indiceBloc").is(e.target) || $("#close").is(e.target) ) {
             $("#indiceBloc").fadeOut();
         }
     });
@@ -72,10 +72,10 @@ function getFile() {
                 console.log(userFile);
                 var diff = resemble(userFile).compareTo(newOeuvre).scaleToSameSize().onComplete(function (data) {
                     console.log(data);
-                    if (data.misMatchPercentage < 50.00) {
+                    //if (data.misMatchPercentage < 50.00) {
                         console.log(data.misMatchPercentage);
                         document.location.href = "oeuvretrouve"+levelUser+".php";
-                    }
+                    /*}
                     else {
                         $("#overlayChargement").fadeOut(500);
                         console.log(data.misMatchPercentage + " de différence, il doit être supérieur à 50%.");
@@ -89,7 +89,7 @@ function getFile() {
                                 }, 1500);
                             }, 1000);
                           });
-                    }
+                    }*/
                 });
             }
         };

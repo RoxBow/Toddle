@@ -13,7 +13,11 @@ if( !isset($_SESSION['pseudo']) ){
 <head>
     <meta charset="UTF-8">
     <title>Toodle - Interactive game</title>
-    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Full Screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.min.js"></script>
     <link rel="stylesheet" href="stylesheets/tuto.css" media="all">
 </head>
 <body>
@@ -100,6 +104,28 @@ if( !isset($_SESSION['pseudo']) ){
     </div>
     
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/global.js"></script>
+    <script type="application/javascript">
+        $(document).ready(function () {
+            /* ### TUTO ### */
+            $('.lesson', '.lessons').click(function (e) {
+                e.preventDefault();
+
+                if ($(e.target).hasClass('understood')) {
+                    // add "up" class to lesson selected and hide others
+                    //$(e.target).parent().parent().toggleClass('up').next(".lesson").addClass("up");
+                    $(this).toggleClass('up').next(".lesson").addClass("up");
+                } else if ($(e.target).hasClass('fa-chevron-left')) {
+                    // click on arrow left, open previous lesson
+                    $(e.target).parent().toggleClass('up').prev(".lesson").addClass("up");
+                }
+                if ($(e.target).hasClass('understood') && $(e.target).parent().parent().is(':last-child')) {
+                    location.href = "map.php"; // Redirect to map after making tuto
+                }
+
+                return false;
+            });
+        });
+    </script>
 </body>
 </html>

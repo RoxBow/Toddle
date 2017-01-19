@@ -22,10 +22,14 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
 <!doctype html>
 <html class="no-js" lang="fr">
 <head>
-        <meta charset="UTF-8">
-        <title>Jaune au violet</title>
-        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="stylesheet" href="stylesheets/jauneviolet.css" media="all">
+    <meta charset="UTF-8">
+    <title>Jaune au violet</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Full Screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/jauneviolet.css" media="all">
 </head>
 <body>
     <?php
@@ -35,7 +39,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
         <div id="win">
             <div class="content-win">
             <p class="title">
-              F&#201;LICITATIONS !
+              FÉLICITATIONS !
             </p>
             <hr>
             <p class="text-win">
@@ -51,7 +55,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             <p>
                 As-tu été assez rapide pour gagner une récompense ?<br><br>Découvre-le tout de suite !
             </p>
-            <a href="result.php"><button class="continuer">R&#201;SULTAT</button></a>
+            <a href="result.php"><button class="continuer">RÉSULTAT</button></a>
             </div>
         </div>
         <div id="loose">
@@ -71,7 +75,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </div>
         </div>
         <header>
-            <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
+            <img src="img/toddle_form.png" alt="toddle" class="toddle_form" id="skip">
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
             <div class="blockRight">
                 <p class="name"><?php echo $_SESSION['pseudo']." - "; ?></p>
@@ -110,7 +114,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 </div>
                 <div id="codegauche">
                     <p>
-                        <p class="indent1">for( var compteur = 0; compteur<<span id="nbgauche" class="rose"></span>;&nbsp;&nbsp;compteur++){</p><br>
+                        <p class="indent1">for( var compteur = 0; compteur&lsaquo;<span id="nbgauche" class="rose"></span>;&nbsp;&nbsp;compteur++){</p><br>
 
                             <p class="indent2">var couleurs = [<span id="colorsG"></span>]</p>
                             <p class="indent2">DessinerCarré(compteur);</p><br>
@@ -119,7 +123,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 </div>
                 <div id="codedroit">
                     <p>
-                        <p class="indent1">for( var compteur = 0; compteur<<span id="nbdroit" class="rose"></span>; compteur++){</p><br>
+                        <p class="indent1">for( var compteur = 0; compteur&lsaquo;<span id="nbdroit" class="rose"></span>; compteur++){</p><br>
                             <p class="indent2">var couleurs = [<span id="colorsD"></span>]</p>
                             <p class="indent2">DessinerCarré(compteur);</p><br>
                         <p class="indent1">}</p>

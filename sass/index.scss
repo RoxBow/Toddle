@@ -62,26 +62,32 @@ body {
     }
     label:nth-child(6) {
       -webkit-animation: anim 2s infinite ease-in-out;
+      -moz-animation: anim 2s infinite ease-in-out;
       animation: anim 2s infinite ease-in-out;
     }
     label:nth-child(5) {
       -webkit-animation: anim 2s 100ms infinite ease-in-out;
+      -moz-animation: anim 2s 100ms infinite ease-in-out;
       animation: anim 2s 100ms infinite ease-in-out;
     }
     label:nth-child(4) {
       -webkit-animation: anim 2s 200ms infinite ease-in-out;
+      -moz-animation: anim 2s 200ms infinite ease-in-out;
       animation: anim 2s 200ms infinite ease-in-out;
     }
     label:nth-child(3) {
       -webkit-animation: anim 2s 300ms infinite ease-in-out;
+      -moz-animation: anim 2s 300ms infinite ease-in-out;
       animation: anim 2s 300ms infinite ease-in-out;
     }
     label:nth-child(2) {
       -webkit-animation: anim 2s 400ms infinite ease-in-out;
+      -moz-animation: anim 2s 400ms infinite ease-in-out;
       animation: anim 2s 400ms infinite ease-in-out;
     }
     label:nth-child(1) {
       -webkit-animation: anim 2s 500ms infinite ease-in-out;
+      -moz-animation: anim 2s 500ms infinite ease-in-out;
       animation: anim 2s 500ms infinite ease-in-out;
     }
 }

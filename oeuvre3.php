@@ -22,10 +22,14 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
 <!doctype html>
 <html class="no-js" lang="fr">
 <head>
-        <meta charset="UTF-8">
-        <title>Grille: oeuvre 3</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="stylesheets/oeuvre3.css" media="all">
+    <meta charset="UTF-8">
+    <title>Grille: oeuvre 3</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Full Screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/oeuvre3.css" media="all">
 </head>
 <body>
     <?php
@@ -36,7 +40,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             <div id="win">
               <div class="content-win">
                 <p class="title">
-                  F&#201;LICITATIONS !
+                  FÉLICITATIONS !
                 </p>
                 <hr>
                 <p class="text-win">
@@ -55,7 +59,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                   <br>
                 </p>
                 
-                <a href="map.php"><button class="continuer">D&#201;FI SUIVANT</button></a>
+                <a href="map.php"><button class="continuer">DÉFI SUIVANT</button></a>
               </div>
           </div>
           <div id="loose">
@@ -75,7 +79,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               </div>
           </div>
         <header>
-            <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
+            <img src="img/toddle_form.png" alt="toddle" class="toddle_form" id="skip">
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
             <div class="blockRight">
                 <p class="name"><?php echo $_SESSION['pseudo']." - "; ?></p>

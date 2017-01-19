@@ -130,14 +130,18 @@ html, body {
     * {
         outline: none; // remove border browser
         box-sizing: border-box;
+       
+    }
+    *:not(input) {
+       -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none; /* Safari*/
+          -khtml-user-select: none; /* Konqueror */
+          -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently */
     }
     input {
         font-family: 'GothamRounded';
-    }
-    img {
-        -webkit-user-select:none;
-        -webkit-touch-callout:none;
-        user-select: none;
     }
     button {
         background: none;
@@ -168,7 +172,7 @@ html, body {
         .blockRight {
             position: absolute;
             right: 5%;
-            top: 40%;
+            top: 3vw;
             width: auto;
             font-size: 2.5vw;
             font-weight: normal;
@@ -181,7 +185,7 @@ html, body {
                     font-size: 2.5vw;
                     color: $pinkToddle;
                     display: inline-block;
-                    width: 50px;
+                    width: 6vw;
                     text-align: center;
                     border: none;
                     background: none;
@@ -255,7 +259,7 @@ html, body {
         &.orientation {
             display: block;
             background-color: rgba(0,0,0,0.8);
-            .content {
+            .content-orientation {
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -276,7 +280,8 @@ html, body {
                     right: 0;
                 }
                 p {
-                    font-size: 7vw;
+                    text-transform: uppercase;
+                    font-size: 5vw;
                     color: #F38F9A;
                     margin: 7% 0;
                 }

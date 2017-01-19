@@ -13,7 +13,11 @@ if( !isset($_SESSION['pseudo']) ){
 <head>
     <meta charset="UTF-8">
     <title>Toodle - Interactive game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Full Screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.min.js"></script>
     <link rel="stylesheet" href="stylesheets/oeuvretrouve.css" media="all">
 </head>
 <body>
@@ -34,7 +38,7 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <section class="congratulate">
             <p class="title">
-              F&#201;LICITATIONS !
+              FÉLICITATIONS !
             </p>
             <hr>
             <p>
@@ -42,7 +46,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-              D&eacute;couvrons ensemble les <span class="rose">boucles</span>.
+              Découvrons ensemble les <span class="rose">boucles</span>.
             </p>
             <p>
                 Elles nous permettent d'effectuer une action plusieurs fois automatiquement.
@@ -60,10 +64,10 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p class="text-go rose">
-              PR&Ecirc;T &Agrave; RELEVER LE D&Eacute;FI ? <br>
+              PRÊT &Agrave; RELEVER LE DÉFI ? <br>
             </p>
             <br>
-            <a href="oeuvre5.php"><button class="go">GO</button></a>
+            <button class="go" id="oeuvretrouve5go">GO</button>
         </section>
         <?php
             include 'footer.php';
@@ -71,7 +75,7 @@ if( !isset($_SESSION['pseudo']) ){
     </div>
     
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/global.js"></script>
     <script src="js/chrono.js"></script>
     <script>
         /* #####    CHRONO      ##### */
@@ -91,6 +95,10 @@ if( !isset($_SESSION['pseudo']) ){
             $("#sec").val(localSec);
             $("#min").val(localMin);
             chrono();
+            
+            $("#oeuvretrouve5go").click(function() {
+                location.href = "oeuvre5.php";
+            });
         });
     </script>
 </body>

@@ -22,10 +22,14 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
 <!doctype html>
 <html class="no-js" lang="fr">
 <head>
-        <meta charset="UTF-8">
-        <title>Jaune au violet</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="stylesheets/mondrian.css" media="all">
+    <meta charset="UTF-8">
+    <title>Jaune au violet</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Full Screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/mondrian.css" media="all">
 </head>
 <body>
     <?php
@@ -35,7 +39,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
         <div id="win">
             <div class="content-win">
             <p class="title">
-              F&#201;LICITATIONS !
+              FÉLICITATIONS !
             </p>
             <hr>
             <p class="text-win">
@@ -69,7 +73,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </div>
         </div>
         <header>
-            <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
+            <img src="img/toddle_form.png" alt="toddle" class="toddle_form" id="skip">
             <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
             <div class="blockRight">
                 <p class="name"><?php echo $_SESSION['pseudo']." - "; ?></p>
@@ -100,30 +104,30 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                         <p>Couleur</p>
                         <div class="choix">
                         <span class="selecteurs" id="coumoins">
-                        <
+                        &lsaquo;
                         </span>
                         <span class="valeurs" id="couleur"></span>
-                        <span class="selecteurs" id="couplus">></span>
+                        <span class="selecteurs" id="couplus">&rsaquo;</span>
                         </div>
                     </div>
                     <div class="orientation">
                         <p>Orientation</p>
                         <div class="choix">
                         <span class="selecteurs" id="orimoins">
-                        <
+                        &lsaquo;
                         </span>
                         <span class="valeurs" id="orientation"></span>
-                        <span class="selecteurs" id="oriplus">></span>
+                        <span class="selecteurs" id="oriplus">&rsaquo;</span>
                         </div>
                     </div>
                     <div class="nombre">
                         <p>Nombre</p>
                         <div class="choix">
                         <span class="selecteurs" id="nbmoins">
-                        <
+                        &lsaquo;
                         </span>
                         <span class="valeurs" id="nombre"></span>
-                        <span class="selecteurs" id="nbplus">></span>
+                        <span class="selecteurs" id="nbplus">&rsaquo;</span>
                         </div>
                     </div>
                 </div>

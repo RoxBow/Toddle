@@ -13,7 +13,11 @@ if(!isset($_SESSION['pseudo']) ){
 <head>
     <meta charset="UTF-8">
     <title>Toodle - Interactive game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Full Screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.min.js"></script>
     <link rel="stylesheet" href="stylesheets/end.css" media="all">
 </head>
 <body>
@@ -26,6 +30,19 @@ if(!isset($_SESSION['pseudo']) ){
     </div>
   
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/global.js"></script>
+    <script>
+        $(document).ready(function () {
+            var countClick = 0;
+            
+            // Two tap on toddle (end.php) -> Reset app
+            $("#reset",".content").click(function () {
+                countClick += 1;
+                if (countClick == 2) {
+                    location.href = "index.php";
+                }
+            });
+        });
+    </script>
 </body>
 </html>

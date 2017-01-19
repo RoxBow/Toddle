@@ -5,31 +5,39 @@
 /* ###### FONTS ###### */
 @font-face {
   font-family: "GothamRounded";
-  src: url(../fonts/GothamRoundedBook.ttf); }
+  src: url(../fonts/GothamRoundedBook.ttf);
+}
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedBold.ttf);
-  font-weight: bold; }
+  font-weight: bold;
+}
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedMedium.ttf);
-  font-weight: 600; }
+  font-weight: 600;
+}
 @font-face {
   font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata-Regular.ttf); }
+  src: url(../fonts/Inconsolata-Regular.ttf);
+}
 @font-face {
   font-family: "Inconsolata";
   src: url(../fonts/Inconsolata-Bold.ttf);
-  font-weight: bold; }
+  font-weight: bold;
+}
+/* line 45, ../sass/general.scss */
 html, body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
   font-family: "GothamRounded", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
-/* ###### CR├ëDITS ###### */
+/* ###### CRÉDITS ###### */
+/* line 56, ../sass/general.scss */
 .credits {
   position: absolute;
   display: none;
@@ -37,196 +45,278 @@ html, body {
   height: 100%;
   margin-top: 100%;
   z-index: 10000;
-  background-color: white; }
-  .credits #croix {
-    position: absolute;
-    right: 10%;
-    color: #aaa;
-    margin-top: 50px; }
-  .credits .title {
-    font-size: 72px;
-    font-weight: 600;
-    color: #F38F9A;
-    width: 100%;
-    text-align: center;
-    padding: 50px 30px; }
-  .credits .justify {
-    text-align: justify; }
-  .credits .content {
-    padding-left: 30px;
-    font-size: 20px;
-    color: #355E7E;
-    font-weight: 600;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 50px; }
-  .credits .logo {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100px; }
+  background-color: white;
+}
+/* line 57, ../sass/general.scss */
+.credits #croix {
+  position: absolute;
+  right: 10%;
+  color: #aaa;
+  margin-top: 50px;
+}
+/* line 70, ../sass/general.scss */
+.credits .title {
+  font-size: 72px;
+  font-weight: 600;
+  color: #F38F9A;
+  width: 100%;
+  text-align: center;
+  padding: 50px 30px;
+}
+/* line 78, ../sass/general.scss */
+.credits .justify {
+  text-align: justify;
+}
+/* line 81, ../sass/general.scss */
+.credits .content {
+  padding-left: 30px;
+  font-size: 20px;
+  color: #355E7E;
+  font-weight: 600;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 50px;
+}
+/* line 90, ../sass/general.scss */
+.credits .logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+}
 
 /* ###### HANDCLICK TUTO ###### */
+/* line 99, ../sass/general.scss */
 #handclick {
   position: absolute;
   width: 110px;
-  height: 110px; }
+  height: 110px;
+}
 
+/* line 105, ../sass/general.scss */
 .fa {
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 /* ###### Class for colors ###### */
+/* line 110, ../sass/general.scss */
 .rose {
-  color: #F38F9A; }
+  color: #F38F9A;
+}
 
+/* line 113, ../sass/general.scss */
 .bleu {
-  color: #355E7E; }
+  color: #355E7E;
+}
 
+/* line 116, ../sass/general.scss */
 .beige {
-  color: #F8B195; }
+  color: #F8B195;
+}
 
+/* line 119, ../sass/general.scss */
 .noir {
-  color: black; }
+  color: black;
+}
 
+/* line 122, ../sass/general.scss */
 .six {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
+/* line 125, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
-  position: relative; }
-  .container * {
-    outline: none;
-    box-sizing: border-box; }
-  .container input {
-    font-family: 'GothamRounded'; }
-  .container img {
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    user-select: none; }
-  .container button {
-    background: none;
-    border: none;
-    font-family: 'GothamRounded';
-    text-transform: uppercase;
-    font-weight: 600; }
-  .container header {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    width: 100%;
-    margin: 0 0 15px 0;
-    height: 15%; }
-    .container header .toddle_form {
-      height: 80%;
-      float: left; }
-    .container header .toddle_text {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 25%;
-      margin: auto;
-      height: 50%; }
-    .container header .blockRight {
-      position: absolute;
-      right: 5%;
-      top: 40%;
-      width: auto;
-      font-size: 2.5vw;
-      font-weight: normal;
-      color: #F38F9A; }
-      .container header .blockRight .name, .container header .blockRight .chrono {
-        display: inline-block; }
-      .container header .blockRight .chrono input {
-        font-size: 2.5vw;
-        color: #F38F9A;
-        display: inline-block;
-        width: 50px;
-        text-align: center;
-        border: none;
-        background: none; }
-      .container header .blockRight .defi {
-        text-align: right; }
-  .container footer {
-    width: 100%;
-    text-align: right;
-    position: absolute;
-    bottom: 1%;
-    right: 1%; }
-    .container footer img {
-      width: 5%;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 1%; }
-  .container .overlay {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: black;
-    background-color: rgba(0, 0, 0, 0.6);
-    text-align: center; }
-    .container .overlay .popup {
-      background-color: #fff;
-      border-radius: 15px;
-      position: absolute;
-      width: 50%;
-      height: 50%;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      left: 0;
-      right: 0;
-      padding: 15px;
-      color: #355E7E;
-      font-size: 20px; }
-      .container .overlay .popup .sous-titre {
-        color: #F38F9A;
-        font-size: 2.2rem;
-        font-weight: bold;
-        margin-bottom: 4%;
-        display: block; }
-      .container .overlay .popup .error {
-        margin: 3% auto;
-        color: red;
-        font-size: 2vw; }
-    .container .overlay .close {
-      color: #aaa;
-      position: absolute;
-      right: 2%;
-      top: 2%;
-      font-size: 4vw; }
-    .container .overlay.orientation {
-      display: block;
-      background-color: rgba(0, 0, 0, 0.8); }
-      .container .overlay.orientation .content {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        display: inline-block;
-        right: 0;
-        left: 0;
-        margin: auto;
-        background: #fff;
-        text-align: center;
-        width: 80%;
-        height: 45%;
-        padding: 8%;
-        border-radius: 5%; }
-        .container .overlay.orientation .content img {
-          width: 50%;
-          display: inline-block;
-          margin: auto;
-          right: 0; }
-        .container .overlay.orientation .content p {
-          font-size: 7vw;
-          color: #F38F9A;
-          margin: 7% 0; }
+  position: relative;
+}
+/* line 130, ../sass/general.scss */
+.container * {
+  outline: none;
+  box-sizing: border-box;
+}
+/* line 135, ../sass/general.scss */
+.container *:not(input) {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari*/
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently */
+}
+/* line 143, ../sass/general.scss */
+.container input {
+  font-family: 'GothamRounded';
+}
+/* line 146, ../sass/general.scss */
+.container button {
+  background: none;
+  border: none;
+  font-family: 'GothamRounded';
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/* line 153, ../sass/general.scss */
+.container header {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  margin: 0 0 15px 0;
+  height: 15%;
+}
+/* line 160, ../sass/general.scss */
+.container header .toddle_form {
+  height: 80%;
+  float: left;
+}
+/* line 164, ../sass/general.scss */
+.container header .toddle_text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  margin: auto;
+  height: 50%;
+}
+/* line 172, ../sass/general.scss */
+.container header .blockRight {
+  position: absolute;
+  right: 5%;
+  top: 3vw;
+  width: auto;
+  font-size: 2.5vw;
+  font-weight: normal;
+  color: #F38F9A;
+}
+/* line 180, ../sass/general.scss */
+.container header .blockRight .name, .container header .blockRight .chrono {
+  display: inline-block;
+}
+/* line 184, ../sass/general.scss */
+.container header .blockRight .chrono input {
+  font-size: 2.5vw;
+  color: #F38F9A;
+  display: inline-block;
+  width: 6vw;
+  text-align: center;
+  border: none;
+  background: none;
+}
+/* line 194, ../sass/general.scss */
+.container header .blockRight .defi {
+  text-align: right;
+}
+/* line 199, ../sass/general.scss */
+.container footer {
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+}
+/* line 205, ../sass/general.scss */
+.container footer img {
+  width: 5%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1%;
+}
+/* line 212, ../sass/general.scss */
+.container .overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+/* line 224, ../sass/general.scss */
+.container .overlay .popup {
+  background-color: #fff;
+  border-radius: 15px;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  color: #355E7E;
+  font-size: 20px;
+}
+/* line 238, ../sass/general.scss */
+.container .overlay .popup .sous-titre {
+  color: #F38F9A;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 4%;
+  display: block;
+}
+/* line 245, ../sass/general.scss */
+.container .overlay .popup .error {
+  margin: 3% auto;
+  color: red;
+  font-size: 2vw;
+}
+/* line 251, ../sass/general.scss */
+.container .overlay .close {
+  color: #aaa;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 4vw;
+}
+/* line 259, ../sass/general.scss */
+.container .overlay.orientation {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* line 262, ../sass/general.scss */
+.container .overlay.orientation .content-orientation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: inline-block;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: #fff;
+  text-align: center;
+  width: 80%;
+  height: 45%;
+  padding: 8%;
+  border-radius: 5%;
+}
+/* line 276, ../sass/general.scss */
+.container .overlay.orientation .content-orientation img {
+  width: 50%;
+  display: inline-block;
+  margin: auto;
+  right: 0;
+}
+/* line 282, ../sass/general.scss */
+.container .overlay.orientation .content-orientation p {
+  text-transform: uppercase;
+  font-size: 5vw;
+  color: #F38F9A;
+  margin: 7% 0;
+}
 
+/* line 293, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -234,8 +324,10 @@ html, body {
   border: none;
   border-radius: 50px;
   font-size: 30px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
+/* line 303, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -243,59 +335,93 @@ html, body {
   border-radius: 35px;
   font-size: 30px;
   width: 70px;
-  height: 70px; }
+  height: 70px;
+}
 
+/* line 3, ../sass/result.scss */
 body {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
+/* line 7, ../sass/result.scss */
 .content {
   text-align: center;
   font-size: 3vw;
-  font-weight: 600; }
-  .content p {
-    text-transform: uppercase;
-    color: #355E7E; }
-    .content p.announce {
-      color: #F38F9A;
-      margin: 2% 0 3% 0; }
-      .content p.announce span {
-        color: #355E7E; }
-  .content .listeUser {
-    width: 67%;
-    float: left;
-    overflow: scroll;
-    overflow-x: hidden;
-    height: 42vw;
-    text-align: left;
-    padding: 0 0 0 10%;
-    margin: 0 2% 0 0; }
-    .content .listeUser li {
-      color: #355E7E; }
-      .content .listeUser li.own {
-        color: #F38F9A; }
-      .content .listeUser li .nbr {
-        width: 13%;
-        display: inline-block; }
-      .content .listeUser li .pseudo {
-        display: inline-block; }
-      .content .listeUser li .time {
-        font-weight: normal;
-        float: right;
-        padding: 0 8%; }
-  .content .giftBlock {
-    padding: 2.5% 2% 0 0;
-    font-size: 2.4vw; }
-    .content .giftBlock .trait {
-      border: 2px solid #F38F9A;
-      width: 20%;
-      margin: 2% auto; }
-    .content .giftBlock button {
-      font-size: 4vw; }
-      .content .giftBlock button .fa-stack {
-        margin-top: 5%; }
-      .content .giftBlock button .fa-circle {
-        color: #F38F9A; }
+  font-weight: 600;
+}
+/* line 11, ../sass/result.scss */
+.content p {
+  text-transform: uppercase;
+  color: #355E7E;
+}
+/* line 14, ../sass/result.scss */
+.content p.announce {
+  color: #F38F9A;
+  margin: 2% 0 3% 0;
+}
+/* line 17, ../sass/result.scss */
+.content p.announce span {
+  color: #355E7E;
+}
+/* line 22, ../sass/result.scss */
+.content .listeUser {
+  width: 67%;
+  float: left;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 42vw;
+  text-align: left;
+  padding: 0 0 0 10%;
+  margin: 0 2% 0 0;
+}
+/* line 31, ../sass/result.scss */
+.content .listeUser li {
+  color: #355E7E;
+}
+/* line 33, ../sass/result.scss */
+.content .listeUser li.own {
+  color: #F38F9A;
+}
+/* line 36, ../sass/result.scss */
+.content .listeUser li .nbr {
+  width: 13%;
+  display: inline-block;
+}
+/* line 40, ../sass/result.scss */
+.content .listeUser li .pseudo {
+  display: inline-block;
+}
+/* line 43, ../sass/result.scss */
+.content .listeUser li .time {
+  font-weight: normal;
+  float: right;
+  padding: 0 8%;
+}
+/* line 50, ../sass/result.scss */
+.content .giftBlock {
+  padding: 2.5% 2% 0 0;
+  font-size: 2.4vw;
+}
+/* line 53, ../sass/result.scss */
+.content .giftBlock .trait {
+  border: 2px solid #F38F9A;
+  width: 20%;
+  margin: 2% auto;
+}
+/* line 58, ../sass/result.scss */
+.content .giftBlock button {
+  font-size: 4vw;
+}
+/* line 60, ../sass/result.scss */
+.content .giftBlock button .fa-stack {
+  margin-top: 5%;
+}
+/* line 63, ../sass/result.scss */
+.content .giftBlock button .fa-circle {
+  color: #F38F9A;
+}
 
+/* line 70, ../sass/result.scss */
 .blocEmail {
   position: absolute;
   top: -30%;
@@ -308,40 +434,57 @@ body {
   border: 2px solid #000;
   padding: 3%;
   font-size: 1.5rem;
-  border-radius: 10px; }
-  .blocEmail .fa-stack {
-    margin-bottom: 2%;
-    font-size: 2rem;
-    color: #355E7E; }
+  border-radius: 10px;
+}
+/* line 83, ../sass/result.scss */
+.blocEmail .fa-stack {
+  margin-bottom: 2%;
+  font-size: 2rem;
+  color: #355E7E;
+}
 
+/* line 93, ../sass/result.scss */
 .popup {
   display: flex;
-  align-items: center; }
-  .popup label {
-    font-size: 2vw; }
-  .popup input {
-    border-radius: 50px;
-    color: #355E7E;
-    border: 2px solid #355E7E;
-    text-align: center;
-    padding: 2% 3%;
-    display: inline-block;
-    margin: 5% 0;
-    font-size: 3vw; }
-  .popup button {
-    font-size: 3.5vw; }
-    .popup button .fa-circle {
-      color: #355E7E; }
+  align-items: center;
+}
+/* line 96, ../sass/result.scss */
+.popup label {
+  font-size: 2vw;
+}
+/* line 99, ../sass/result.scss */
+.popup input {
+  border-radius: 50px;
+  color: #355E7E;
+  border: 2px solid #355E7E;
+  text-align: center;
+  padding: 2% 3%;
+  display: inline-block;
+  margin: 5% 0;
+  font-size: 3vw;
+}
+/* line 109, ../sass/result.scss */
+.popup button {
+  font-size: 3.5vw;
+}
+/* line 111, ../sass/result.scss */
+.popup button .fa-circle {
+  color: #355E7E;
+}
 
+/* line 117, ../sass/result.scss */
 ::-webkit-scrollbar {
-  width: 5px; }
+  width: 5px;
+}
 
+/* line 121, ../sass/result.scss */
 ::-webkit-scrollbar-track {
   background-color: #F38F9A;
-  border-radius: 8px; }
+  border-radius: 8px;
+}
 
+/* line 126, ../sass/result.scss */
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #355E7E; }
-
-/*# sourceMappingURL=result.css.map */
+  background-color: #355E7E;
+}
