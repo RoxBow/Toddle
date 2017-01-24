@@ -27,12 +27,9 @@
             <img src="img/logo_toddle.png" alt="toddle" class="logo_toddle" />
             <button type="button" class="launch">COMMENCER L'EXPÉRIENCE</button>
         </div>
-        <footer>
-            <img src="img/iut.png" alt="pompidou">
-            <img src="img/upem.png" alt="pompidou">
-            <img src="img/logo_pompidou.png" alt="pompidou">
-            <img src="img/logo_gris_avec.png" alt="avec">
-        </footer>
+        <?php
+            include 'footer.php';
+        ?>
     </div>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/global.js"></script>

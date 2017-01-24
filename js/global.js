@@ -14,6 +14,8 @@ var nbrLevel = levelUser;
 
 levelUser = levelUser.replace(/\s/g, ''); // Remove spaces
 
+// Variable compteur slider crédits
+var countSlider = 0;
 switch (levelUser) {
     case "1":
         currentArt = "img/kleinBlue.png";
@@ -51,8 +53,6 @@ switch (levelUser) {
         $("#indiceMap",".popup2").text("La dernière oeuvre devant laquelle tu dois te rendre, est un double tableau d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. Ce tableau aborde le dégradé grâce à des formes géométriques simples.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
-    default:
-        document.location.href = "index.html";
 }
 
 // Couleurs de l'appli
@@ -72,7 +72,7 @@ window.addEventListener('orientationchange', doOnOrientationChange);
 
 $(document).ready(function () {
     var countClick = 0;
-    
+
     // 3 tap on toddle img left (header) -> Skip level (oeuvres)
     $("#skip","header").click(function () {
         countClick += 1;
@@ -100,8 +100,47 @@ $(document).ready(function () {
         }, 750);
     });
 
+    //Slider crédits
+    $("#chevronGauche").on("click",function(){
+        if (countSlider==1 || countSlider==2) {
+            $("#sous-texte").animate({
+                marginLeft: "+=100%"
+            }, 1000);
+            countSlider--;
+            changeRond();
+        }
+
+    });
+    $("#chevronDroite").on("click",function(){
+        if (countSlider==0 || countSlider==1) {
+            $("#sous-texte").animate({
+                marginLeft: "-=100%"
+            }, 1000);
+            countSlider++;
+            changeRond();
+        }
+    });
+
 });
 
+//Changements points crédits
+function changeRond(){
+    if (countSlider==0) {
+        $("#a1").attr("src","img/pc-plein.png");
+        $("#a2").attr("src","img/pc-vide.png");
+        $("#a3").attr("src","img/pc-vide.png");
+    } else{
+        if (countSlider==1) {
+            $("#a1").attr("src","img/pc-vide.png");
+            $("#a2").attr("src","img/pc-plein.png");
+            $("#a3").attr("src","img/pc-vide.png");
+        } else{
+            $("#a1").attr("src","img/pc-vide.png");
+            $("#a2").attr("src","img/pc-vide.png");
+            $("#a3").attr("src","img/pc-plein.png");
+        }
+    }
+}
 
 // Detect orientation tablet
 function doOnOrientationChange() {

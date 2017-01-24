@@ -30,6 +30,12 @@ $beigeToddle : #F8B195;
     font-weight: 600;
 }
 
+@font-face {
+    font-family: "GothamRounded";
+    src: url(../fonts/GothamRoundedItalic.otf);
+    font-style: italic;
+}
+
 // Code Font
 @font-face {
     font-family: "Inconsolata";
@@ -69,29 +75,110 @@ html, body {
     background-color: rgba(255,255,255,1);
     .title{
         font-size: 72px;
-        font-weight: 600;
         color: $pinkToddle;
+        font-weight: 600;
         width: 100%;
         text-align: center;
-        padding: 50px 30px;
-    }
-    .justify{
-        text-align: justify;
+        padding-top: 50px;
+        padding-bottom: 20px;
     }
     .content{
-        padding-left: 30px;
         font-size: 20px;
         color: $blueToddle;
         font-weight: 600;
-        width: 90%;
-        margin-left: 5%;
-        margin-top: 50px;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 20px;
+        .chevron{
+            width: 40px;
+            margin-top: 22%;
+            position: absolute;
+        }
+        #chevronDroite{
+            right: 3%;
+        }
+        #chevronGauche{
+            transform: rotate(180deg);
+            left: 3%;
+        }
+        .ariane{
+            text-align: center;
+            .apoint{
+                width: 20px;
+                margin: 0 10px;
+            }
+        }
+        .texte{
+            width: 100%;
+            margin-top: 20px;
+            height: 400px;
+            overflow: hidden;
+            #sous-texte{
+                display: flex;
+                height: 380px;
+                width: 300%;
+                & > *{
+                    width: 100%;
+                    padding: 0 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .sright {
+                        padding-right: 15px;
+                        overflow-y: scroll;
+                        &::-webkit-scrollbar-track
+                        {
+                            
+                            border-radius: 10px;
+                            background-color: $pinkToddle;
+                        }
+
+                        &::-webkit-scrollbar
+                        {
+                            width: 7px;
+                            margin-left: 5px;
+                        }
+
+                        &::-webkit-scrollbar-thumb
+                        {
+                            border-radius: 20px;
+                            background-color: $blueToddle;
+                        }
+                    }
+                }
+            }
+        }
+        .justify{
+            text-align: justify;
+        }
+        .bottom{
+            width: 120%;
+            margin-left: -10%;
+            .flexbottom{
+                display: flex;
+                align-items: stretch;
+                & > *{
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 18px;
+                    flex-direction: column;
+                    .antoine{
+                        margin-top: 17px;
+                    }
+                    .fct{
+                        margin-top: 7px;
+                    }
+                }
+                .logo{
+                    align-self: flex-start;
+                    width: 100px;
+                }
+            }
+        }
     }
-    .logo{
-        display: inline-block;
-        vertical-align: middle;
-        width: 100px;
-    }
+    
 }
 
 /* ###### HANDCLICK TUTO ###### */
@@ -122,6 +209,15 @@ html, body {
 .six{
     font-weight:600;
 }
+.bold{
+    font-weight: bold;
+}
+.center{
+    text-align: center;
+}
+i{
+    font-style: italic;
+}
 .container {
     background: #fff;
     width: 100%;
@@ -131,14 +227,6 @@ html, body {
         outline: none; // remove border browser
         box-sizing: border-box;
        
-    }
-    *:not(input) {
-       -webkit-touch-callout: none; /* iOS Safari */
-          -webkit-user-select: none; /* Safari*/
-          -khtml-user-select: none; /* Konqueror */
-          -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently */
     }
     input {
         font-family: 'GothamRounded';
