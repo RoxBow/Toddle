@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
     <script type="text/javascript" charset="utf-8" src="js/appframework.ui.min.js"></script>
     <link rel="stylesheet" href="stylesheets/index.css" media="all">
+    <link rel="icon" type="image/png" href="img/iconewebclip.png" />
+    <link rel="apple-touch-icon" href="img/iconewebclip.png"/>
 </head>
 <body>
     <?php

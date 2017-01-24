@@ -323,12 +323,14 @@ i {
 .container {
   font-weight: 600; }
   .container #handclick {
-    top: 62%;
-    left: 22%;
+    top: 83%;
+    left: 42%;
     z-index: 10000;
     animation-duration: 3s;
     animation-name: slide;
-    animation-iteration-count: infinite; }
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-play-state: running; }
   .container #win {
     position: absolute;
     width: 100%;
@@ -509,6 +511,8 @@ i {
       height: 200px;
       margin: 10px;
       font-size: 24px; }
+      .container .sousBloc #codegauche #nbgauche {
+        font-size: 52px; }
       .container .sousBloc #codegauche .indent1 {
         margin-left: 10px; }
       .container .sousBloc #codegauche .indent2 {
@@ -519,6 +523,8 @@ i {
       height: 200px;
       margin: 10px;
       font-size: 24px; }
+      .container .sousBloc #codedroit #nbdroit {
+        font-size: 52px; }
       .container .sousBloc #codedroit .indent1 {
         margin-left: 10px; }
       .container .sousBloc #codedroit .indent2 {
@@ -538,13 +544,13 @@ footer {
 
 @keyframes slide {
   0% {
-    top: 62%;
-    left: 21%; }
+    top: 83%;
+    left: 42%; }
   50% {
-    top: 80%;
-    left: 22%; }
+    top: 65%;
+    left: 42%; }
   0% {
-    top: 62%;
-    left: 22%; } }
+    top: 83%;
+    left: 42%; } }
 
 /*# sourceMappingURL=jauneviolet.css.map */

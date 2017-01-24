@@ -26,13 +26,32 @@ $("#nbgauche").text(nbGauche);
 var nbDroite = 0;
 $("#nbdroit").text(nbDroite);
 
-
-
-
 var teinteFroide = ["4C4C6E", "375D8F", "0071B5", "728B74", "BEB140", "E5C200", "FFD700", "FFFF00"];
 var teinteChaude = ["644762", "96354C", "BA0000", "D44D00", "FBA800", "FEC100", "FFD700", "FFFF00"];
 
+
+
+
 $(document).ready(function() {
+
+    /*//Animation pour tuto
+    var tuto = setInterval(function(){ myTimer() }, 3000);
+    $("#handclick").css("animation-play-state","running");
+
+    function myTimer() {
+        $("#nbgauche").text(0);
+        setTimeout(function(){ $("#nbgauche").text(1); }, 250);
+        setTimeout(function(){ $("#nbgauche").text(2); }, 750);
+        setTimeout(function(){ $("#nbgauche").text(3); }, 1500);
+        setTimeout(function(){ $("#nbgauche").text(2); }, 2250);
+        setTimeout(function(){ $("#nbgauche").text(1); }, 2500);
+        setTimeout(function(){ $("#nbgauche").text(0); }, 3000);
+    }
+
+    function myStopFunction() {
+        clearInterval(tuto);
+    }*/
+
     /* ### CHRONO ### */
     $("#sec").val(localSec);
     $("#min").val(localMin);
@@ -208,67 +227,126 @@ hmcg.on('panstart', function(e) {
 hmcg.on('pan', function(e) {
     mouseY = e.center.y ;
 
+    //Faire descendre les valeurs pour la gauche
+    if (mouseY==(mouseYS+5)) {
+        nbGauche--;
+        if (nbGauche==-1){
+            nbGauche = 0;
+        }
+        $("#nbgauche").text(nbGauche);
+    }
     if (mouseY==(mouseYS+10)) {
-        nbGauche++;
-        if (nbGauche==9){
-            nbGauche = 8;
+        nbGauche--;
+        if (nbGauche==-1){
+            nbGauche = 0;
+        }
+        $("#nbgauche").text(nbGauche);
+    }
+    if (mouseY==(mouseYS+15)) {
+        nbGauche--;
+        if (nbGauche==-1){
+            nbGauche = 0;
         }
         $("#nbgauche").text(nbGauche);
     }
     if (mouseY==(mouseYS+20)) {
-        nbGauche++;
-        if (nbGauche==9){
-            nbGauche = 8;
+        nbGauche--;
+        if (nbGauche==-1){
+            nbGauche = 0;
+        }
+        $("#nbgauche").text(nbGauche);
+    }
+    if (mouseY==(mouseYS+25)) {
+        nbGauche--;
+        if (nbGauche==-1){
+            nbGauche = 0;
         }
         $("#nbgauche").text(nbGauche);
     }
     if (mouseY==(mouseYS+30)) {
-        nbGauche++;
-        if (nbGauche==9){
-            nbGauche = 8;
+        nbGauche--;
+        if (nbGauche==-1){
+            nbGauche = 0;
+        }
+        $("#nbgauche").text(nbGauche);
+    }
+    if (mouseY==(mouseYS+35)) {
+        nbGauche--;
+        if (nbGauche==-1){
+            nbGauche = 0;
         }
         $("#nbgauche").text(nbGauche);
     }
     if (mouseY==(mouseYS+40)) {
+        nbGauche--;
+        if (nbGauche==-1){
+            nbGauche = 0;
+        }
+        $("#nbgauche").text(nbGauche);
+    }
+
+
+    //Faire monter les valeurs pour la gauche
+    if (mouseY==(mouseYS-5)) {
         nbGauche++;
         if (nbGauche==9){
             nbGauche = 8;
         }
         $("#nbgauche").text(nbGauche);
     }
-
     if (mouseY==(mouseYS-10)) {
-        nbGauche--;
-        if (nbGauche==-1){
-            nbGauche = 0;
+        nbGauche++;
+        if (nbGauche==9){
+            nbGauche = 8;
+        }
+        $("#nbgauche").text(nbGauche);
+    }
+    if (mouseY==(mouseYS-15)) {
+        nbGauche++;
+        if (nbGauche==9){
+            nbGauche = 8;
         }
         $("#nbgauche").text(nbGauche);
     }
     if (mouseY==(mouseYS-20)) {
-        nbGauche--;
-        if (nbGauche==-1){
-            nbGauche = 0;
+        nbGauche++;
+        if (nbGauche==9){
+            nbGauche = 8;
+        }
+        $("#nbgauche").text(nbGauche);
+    }
+    if (mouseY==(mouseYS-25)) {
+        nbGauche++;
+        if (nbGauche==9){
+            nbGauche = 8;
         }
         $("#nbgauche").text(nbGauche);
     }
     if (mouseY==(mouseYS-30)) {
-        nbGauche--;
-        if (nbGauche==-1){
-            nbGauche = 0;
+        nbGauche++;
+        if (nbGauche==9){
+            nbGauche = 8;
+        }
+        $("#nbgauche").text(nbGauche);
+    }
+    if (mouseY==(mouseYS-35)) {
+        nbGauche++;
+        if (nbGauche==9){
+            nbGauche = 8;
         }
         $("#nbgauche").text(nbGauche);
     }
     if (mouseY==(mouseYS-40)) {
-        nbGauche--;
-        if (nbGauche==-1){
-            nbGauche = 0;
+        nbGauche++;
+        if (nbGauche==9){
+            nbGauche = 8;
         }
         $("#nbgauche").text(nbGauche);
     }
 });
 
 hmcg.on('panend', function(e) {
-    ctx.clearRect(0,0,293,canvas.height);
+    ctx.clearRect(0,0,297,canvas.height);
     dessiner();
 });
 
@@ -281,60 +359,118 @@ hmcd.on('panstart', function(e) {
 hmcd.on('pan', function(e) {
     mouseY = e.center.y ;
 
+    //Faire descendre les valeurs pour la droite
+    if (mouseY==(mouseYS+5)) {
+        nbDroite--;
+        if (nbDroite==-1){
+            nbDroite = 0;
+        }
+        $("#nbdroit").text(nbDroite);
+    }
     if (mouseY==(mouseYS+10)) {
-        nbDroite++;
-        if (nbDroite==9){
-            nbDroite = 8;
+        nbDroite--;
+        if (nbDroite==-1){
+            nbDroite = 0;
+        }
+        $("#nbdroit").text(nbDroite);
+    }
+    if (mouseY==(mouseYS+15)) {
+        nbDroite--;
+        if (nbDroite==-1){
+            nbDroite = 0;
         }
         $("#nbdroit").text(nbDroite);
     }
     if (mouseY==(mouseYS+20)) {
-        nbDroite++;
-        if (nbDroite==9){
-            nbDroite = 8;
+        nbDroite--;
+        if (nbDroite==-1){
+            nbDroite = 0;
+        }
+        $("#nbdroit").text(nbDroite);
+    }
+    if (mouseY==(mouseYS+25)) {
+        nbDroite--;
+        if (nbDroite==-1){
+            nbDroite = 0;
         }
         $("#nbdroit").text(nbDroite);
     }
     if (mouseY==(mouseYS+30)) {
-        nbDroite++;
-        if (nbDroite==9){
-            nbDroite = 8;
+        nbDroite--;
+        if (nbDroite==-1){
+            nbDroite = 0;
+        }
+        $("#nbdroit").text(nbDroite);
+    }
+    if (mouseY==(mouseYS+35)) {
+        nbDroite--;
+        if (nbDroite==-1){
+            nbDroite = 0;
         }
         $("#nbdroit").text(nbDroite);
     }
     if (mouseY==(mouseYS+40)) {
+        nbDroite--;
+        if (nbDroite==-1){
+            nbDroite = 0;
+        }
+        $("#nbdroit").text(nbDroite);
+    }
+
+    //Faire monter les valeurs pour la droite
+    if (mouseY==(mouseYS-10)) {
         nbDroite++;
         if (nbDroite==9){
             nbDroite = 8;
         }
         $("#nbdroit").text(nbDroite);
     }
-
-    if (mouseY==(mouseYS-10)) {
-        nbDroite--;
-        if (nbDroite==-1){
-            nbDroite = 0;
-        }
-        $("#nbdroit").text(nbDroite);
-    }
     if (mouseY==(mouseYS-20)) {
-        nbDroite--;
-        if (nbDroite==-1){
-            nbDroite = 0;
+        nbDroite++;
+        if (nbDroite==9){
+            nbDroite = 8;
         }
         $("#nbdroit").text(nbDroite);
     }
     if (mouseY==(mouseYS-30)) {
-        nbDroite--;
-        if (nbDroite==-1){
-            nbDroite = 0;
+        nbDroite++;
+        if (nbDroite==9){
+            nbDroite = 8;
         }
         $("#nbdroit").text(nbDroite);
     }
     if (mouseY==(mouseYS-40)) {
-        nbDroite--;
-        if (nbDroite==-1){
-            nbDroite = 0;
+        nbDroite++;
+        if (nbDroite==9){
+            nbDroite = 8;
+        }
+        $("#nbdroit").text(nbDroite);
+    }
+    if (mouseY==(mouseYS-10)) {
+        nbDroite++;
+        if (nbDroite==9){
+            nbDroite = 8;
+        }
+        $("#nbdroit").text(nbDroite);
+    }
+    if (mouseY==(mouseYS-20)) {
+        nbDroite++;
+        if (nbDroite==9){
+            nbDroite = 8;
+        }
+        $("#nbdroit").text(nbDroite);
+    }
+    if (mouseY==(mouseYS-30)) {
+        nbDroite++;
+        if (nbDroite==9){
+            nbDroite = 8;
+        }
+        $("#nbdroit").text(nbDroite);
+    }
+    if (mouseY==(mouseYS-40)) {
+        nbDroite++;
+        if (nbDroite==9){
+            nbDroite = 8;
         }
         $("#nbdroit").text(nbDroite);
     }

@@ -64,6 +64,8 @@ var beigeToddle = "#F8B195";
 $("body").one("click", function(){
     $("#handclick").css("animation-play-state","paused");
     $("#handclick").css("display","none");
+    /*myStopFunction();*/
+    $("#nbgauche").text(nbGauche);
 });
 
 // Check orientation tablet

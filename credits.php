@@ -14,7 +14,7 @@
             <div id="sous-texte">
                 <div id="first-view">
                     <p class="justify">
-                        Toddle a été réalisée et développée par l’agence AVEC dans le cadre d’un projet étudiant en licence professionnelle CRRW à l’IUT Champs-sur Marne et en partenariat avec le Centre Pompidou de Paris. 
+                        Toddle a été réalisée et développée par l’agence AVEC dans le cadre d’un projet étudiant en licence professionnelle CRRW (2016-2017) à l’IUT Champs-sur Marne et en partenariat avec le Centre Pompidou de Paris. 
                     </p>
                     <br>
                     <br>
@@ -59,7 +59,7 @@
                         <br><br><br><br>
 
 
-                        <span class="rose">2. MODALITÉ DE PARTICIPATION :</span>
+                        <span class="rose">2. MODALITÉS DE PARTICIPATION :</span>
                         <br><br>
                         Toute participation effectuée contrairement au dispositif mis en place, rendra la participation invalide. Tout participant suspecté de fraude pourra être écarté du concours par l’agence AVEC sans que celle-ci n’ait à se justifier.<br><br>
                         Toute participation incomplète ou réalisée sous une autre forme que celle prévue dans le présent règlement sera considérée comme nulle. La même sanction s’appliquera en cas de multi-participation.
