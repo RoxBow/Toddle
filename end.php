@@ -23,9 +23,9 @@ if(!isset($_SESSION['pseudo']) ){
 <body>
     <div class="container">
         <div class="content">
-            <p>Merci d'avoir joué<br> et appris avec <img src="img/toddle_text.png" id="reset" alt="toddle"></p>
+            <p>Merci d'avoir participé<br> à l'expérience <img src="img/toddle_text.png" id="reset" alt="toddle"> !</p>
             <hr>
-            <p class="render">Remets la tablette au point de départ</p>
+            <p class="render">Remets la tablette <br> au point de départ</p>
         </div>
     </div>
   

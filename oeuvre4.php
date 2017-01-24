@@ -50,7 +50,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </p>
             <br>
             <p>
-              Tu as donc compris les variables et comment les utiliser comme paramètres d'une fonction. <br><br>
+              Tu as donc compris <span class="bold">les variables</span> et comment les utiliser comme <span class="bold">paramètres</span> d'une <span class="bold">fonction</span>. <br><br>
               Découvre ton dernier défi !
             </p>
             <a href="map.php"><button class="continuer">D&#201;FI SUIVANT</button></a>
@@ -93,6 +93,11 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             <div class="leftBloc">
                 <div class="souscontainer">
                     <canvas id="myCanvas"></canvas>
+                    <canvas id="myCanvas2"></canvas>
+                    <canvas id="myCanvas3"></canvas>
+                    <canvas id="myCanvas4"></canvas>
+                    <canvas id="myCanvas5"></canvas>
+                    <canvas id="myCanvas6"></canvas>
                 </div>
             </div>
             <div class="rightBloc">

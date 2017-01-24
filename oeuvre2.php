@@ -54,7 +54,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </p>
             <br>
             <p>
-              Tu as recomposé l'oeuvre de Frank stella en utilisant "<span class="rose">27</span>" en paramètre de la fonction <span class="rose">DessinerLignes()</span>.
+              Tu as recomposé l'oeuvre de Frank stella en utilisant "<span class="rose">27</span>" <span class="bold">en paramètre de la fonction</span> <span class="rose">DessinerLignes()</span>.
               <br>
             </p>
             
@@ -93,7 +93,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
         <section>
             <h2 class="rose">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
-                <p>À l'aide de la fonction <span class="rose">DessinerLignes()</span>, ajoute ou supprime des lignes afin de recréer l'oeuvre.</p>
+                <p>À l'aide de <span class="bold">la fonction</span> <span class="rose">DessinerLignes()</span>, ajoute ou supprime des lignes afin de recréer l'oeuvre.</p>
                 <br>
             </div>
             <canvas id="mycanvas"></canvas>

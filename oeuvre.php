@@ -55,7 +55,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </p>
             <br>
             <p>
-              Tu as retrouvé l'oeuvres de Yves Klein en utilisant la fonction:
+              Tu as retrouvé l'&#156;uvre de Yves Klein en utilisant <span class="bold">la fonction</span>:
               <br>
               <span class="name">ChangerEnBleu</span><span class="parentheses">()</span>.
             </p>
@@ -119,11 +119,11 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                   <h2>DÉFI <span id="levelUser"></span>/5</h2><br>
                   <div class="consignes">
                       <p>
-                        Aide toi des fonctions algorithmiques mises à ta disposition ci-dessous, pour recréer l'oeuvre de Yves Klein.
+                        Aide-toi des <span class="bold">fonctions algorithmiques</span> mises à ta disposition ci-dessous, pour recréer l'&#156;uvre de Yves Klein.
                       </p>
                       <br>
                       <p>
-                        Glisse la fonction qui te semble appropriée sur l’oeuvre. Si tu penses avoir réussi la transformation comme demandé, il ne te reste plus qu’à valider.
+                        Glisse <span class="bold">la fonction</span> qui te semble appropriée sur l’&#156;uvre. Si tu penses avoir réussi la transformation comme demandé, il ne te reste plus qu’à valider.
                       </p>
                   </div>
               </div>

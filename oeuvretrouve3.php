@@ -42,14 +42,14 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé "4 doubles trames, traits minces (0°- 22°5 - 45°- 67°5)" de François Morellet !
+              Tu as trouvé "<i>4 doubles trames, traits minces (0°- 22°5 - 45°- 67°5) (1926)</i>" de François Morellet !
             </p>
             <br>
             <p>
-              D&eacute;couvrons ensemble les <span class="rose">variables</span>.
+              D&eacute;couvrons ensemble <span class="bold rose">les variables</span>.
             </p>
             <p>
-                Ce sont des "boites" où l'on peut mettre des données (chiffres, mots...).
+                Ce sont des "<span class="bold">boites</span>" où l'on peut mettre <span class="bold">des données</span> (chiffres, mots...).
             </p>
             <br>
             <p>

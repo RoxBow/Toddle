@@ -42,19 +42,19 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé l'oeuvre indiquée ! Il s'agit de&nbsp;&quot;Mas o Menos"<br> de Frank Stella.
+              Tu as trouvé l'&#156;uvre indiquée ! Il s'agit de&nbsp;&quot;<i>Mas o Menos (1964)</i>"<br> de Frank Stella.
             </p>
             <br>
             <p>
-              D&eacute;couvrons ensemble les <span class="rose">paramètres</span>.
+              D&eacute;couvrons ensemble <span class="bold rose">les paramètres</span>.
             </p>
             <br>
             <p>
-                Les paramètres sont des indications sur l'action que nous voulons effectuer.
+                <span class="bold">Les paramètres</span> sont des indications sur l'action que nous voulons effectuer.
             </p>
             <br>
             <p>
-                <span class="bold">Exemple:</span> Je veux dessiner trois ronds.<br> Nous allons dessiner un rond trois fois ! En algorithmique on écrira :
+                <span class="bold">Exemple:</span> Je veux dessiner trois ronds.<br> Nous allons dessiner un rond trois fois ! <span class="bold">En algorithmique</span> on écrira :
             <br>
             <span class="fonction bold">DessinerUnRond</span><span class="parentheses bold">(<span class="rose">3</span>);</span>
             </p>

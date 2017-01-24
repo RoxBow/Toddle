@@ -42,16 +42,16 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as retrouvé New York City de Piet Mondrian !
+              Tu as retrouvé <i>New York City (1942)</i> de Piet Mondrian !
             </p>
             <br>
             <p>
               Tu vas utiliser tout ce que tu as vu auparavant pour le prochain defi:<br><br>
             </p>
             <p>
-                - Les fonctions: <span class="rose">DessinerUneLigne();</span><br>
-                - Les paramètres: DessinerUneLigne(<span class="rose">5</span>);<br>
-                - Les variables: <span class="rose">var</span> nbLignes = <span class="rose">5</span> 
+                - <span class="bold">Les fonctions</span>: <span class="rose">DessinerUneLigne();</span><br>
+                - <span class="bold">Les paramètres</span>: DessinerUneLigne(<span class="rose">5</span>);<br>
+                - <span class="bold">Les variables</span>: <span class="rose">var</span> nbLignes = <span class="rose">5</span> 
             </p>
             <br>
             <br>

@@ -85,7 +85,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
                 <div class="giftBlock">
                     <p>Un cadeau sera remis au plus rapide d'entre vous</p>
                     <hr class="trait">
-                    <p>Afin d'être tenu informé du classement, pense à nous laisser ton adresse e-mail !</p>
+                    <p>Si tu veux être informé(e) du classement, pense à nous laisser ton adresse e-mail !</p>
                     <button>
                         <span class="fa-stack">
                             <i class="fa fa-circle fa-stack-2x"></i>

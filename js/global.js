@@ -21,7 +21,7 @@ switch (levelUser) {
         currentArt = "img/kleinBlue.png";
         currentRoom = roomKlein;
         $("#levelUser").text(levelUser);
-        $("#indiceMap",".popup2").text("La première oeuvre devant laquelle tu dois te rendre, est une oeuvre monochrome d'un artiste français du XXe siècle. Il est connu pour son travail autour d'une couleur particulière.");
+        $("#indiceMap",".popup2").html("La première &#156;uvre devant laquelle tu dois te rendre, est une oeuvre monochrome d'un artiste français du XXe siècle. Il est connu pour son travail autour d'une couleur particulière.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "2":
@@ -29,28 +29,28 @@ switch (levelUser) {
         currentRoom = roomMasomenos;
         $("#levelUser").text(levelUser);
         $("#nbrDefi",".defi").text(levelUser);
-        $("#indiceMap",".popup2").text("La deuxième oeuvre devant laquelle tu dois te rendre, est un tableau de grande taille, constitué de lignes horizontales brisées, d’un peintre américain minimaliste du XXe siècle.");
+        $("#indiceMap",".popup2").html("La deuxième &#156;uvre devant laquelle tu dois te rendre, est un tableau de grande taille, constitué de lignes horizontales brisées, d’un peintre américain minimaliste du XXe siècle.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "3":
         currentArt = "img/trames4.png";
         currentRoom = roomTram4;
         $("#levelUser").text(levelUser);
-        $("#indiceMap",".popup2").text("La troisième oeuvre devant laquelle tu dois te rendre, est un tableau en noir et blanc d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. La structure de ce tableau est très précise puisque les minces lignes qui le composent sont disposées mathématiquement sur la toile.");
+        $("#indiceMap",".popup2").html("La troisième &#156;uvre devant laquelle tu dois te rendre, est un tableau en noir et blanc d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. La structure de ce tableau est très précise puisque les minces lignes qui le composent sont disposées mathématiquement sur la toile.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "4":
         currentArt = "img/mondrian.png";
         currentRoom = roomMondrian;
         $("#levelUser").text(levelUser);
-        $("#indiceMap",".popup2").text("La quatrième oeuvre devant laquelle tu dois te rendre, est un tableau d’un peintre néerlandais du XXe siècle. Le tableau est composés de lignes aux couleur primaires, pouvant rappeler le plan d’une célèbre ville américaine.");
+        $("#indiceMap",".popup2").html("La quatrième &#156;uvre devant laquelle tu dois te rendre, est un tableau d’un peintre néerlandais du XXe siècle. Le tableau est composés de lignes aux couleur primaires, pouvant rappeler le plan d’une célèbre ville américaine.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "5":
         currentArt = "img/jauneauviolet.png";
         currentRoom = roomJauneViolet;
         $("#levelUser").text(levelUser);
-        $("#indiceMap",".popup2").text("La dernière oeuvre devant laquelle tu dois te rendre, est un double tableau d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. Ce tableau aborde le dégradé grâce à des formes géométriques simples.");
+        $("#indiceMap",".popup2").html("La dernière &#156;uvre devant laquelle tu dois te rendre, est un double tableau d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. Ce tableau aborde le dégradé grâce à des formes géométriques simples.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
 }

@@ -43,15 +43,15 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé l'oeuvre indiquée !<br> Il s'agit d'&nbsp;&quot;IKB3 Monochrome Bleu" d'Yves Klein.
+              Tu as trouvé l'&#156;uvre indiquée !<br> Il s'agit d'&nbsp;&quot;<i>IKB3 Monochrome Bleu (1960)</i>" d'Yves Klein.
             </p>
             <br>
             <p>
-              Tu vas découvrir un principipe fondamental de la programmation:&nbsp;<span class="rose">l'Algorithmique</span>. 
+              Tu vas découvrir un principipe fondamental de la programmation:&nbsp;<span class="rose">l'algorithmique</span>. 
             </p>
             <br>
             <p>
-                L'algorithmique permet d'effectuer des actions. Elles s'écrivent d'une manière particulière.
+                <span class="bold">L'algorithmique</span> permet d'effectuer des actions. Elles s'écrivent d'une manière particulière.
             </p>
             <br>
             <p>

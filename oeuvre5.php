@@ -50,7 +50,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </p>
             <br>
             <p>
-                Tu as compris les bases de la programmation informatique !
+                Tu as compris <span class="bold">les bases de la programmation informatique</span> !
             </p>
             <p>
                 As-tu été assez rapide pour gagner une récompense ?<br><br>Découvre-le tout de suite !

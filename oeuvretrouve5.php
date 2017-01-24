@@ -42,11 +42,11 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as retrouvé la dernière oeuvre du parcours ! "Du Jaune au Violet" a été réalisée par François Morellet.
+              Tu as retrouvé la dernière oeuvre du parcours ! "<i>Du Jaune au Violet (1956)</i>" a été réalisée par François Morellet.
             </p>
             <br>
             <p>
-              Découvrons ensemble les <span class="rose">boucles</span>.
+              Découvrons ensemble <span class="bold rose">les boucles</span>.
             </p>
             <p>
                 Elles nous permettent d'effectuer une action plusieurs fois automatiquement.

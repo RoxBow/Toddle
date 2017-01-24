@@ -41,9 +41,16 @@ var result6=0;
 function init() {
     canvas = document.getElementById("myCanvas");
     ctx = canvas.getContext("2d");
-    
-    canvas.width = window.innerWidth;
-    canvas.height = 1100;
+    canvas2 = document.getElementById("myCanvas2");
+    ctx2 = canvas2.getContext("2d");
+    canvas3 = document.getElementById("myCanvas3");
+    ctx3 = canvas3.getContext("2d");
+    canvas4 = document.getElementById("myCanvas4");
+    ctx4 = canvas4.getContext("2d");
+    canvas5 = document.getElementById("myCanvas5");
+    ctx5 = canvas5.getContext("2d");
+    canvas6 = document.getElementById("myCanvas6");
+    ctx6 = canvas6.getContext("2d");
 
     $("#couleur").text(couleurs[couselect]);
     $("#orientation").text(orientation[oriselect]);
@@ -139,6 +146,10 @@ $(".bva").click(function() {
     createLine(sens, nb, colorLine);
 });
 
+function jauneV(){
+
+}
+
 function createLine(orientation, nombre, color){
     if (color=="Jaune") {
         colorname="yellow";
@@ -159,98 +170,166 @@ function createLine(orientation, nombre, color){
         y2 = y1;
     }
 
-    ctx.beginPath();
-    for (var i=0; i<nombre; i++){
-        if(orientation === "Verticales"){
+    
+    if(orientation === "Verticales"){
             if (colorname==="yellow") {
-                if (i==0){ x1=30; }
-                if (i==1){ x1=100; }
-                if (i==2){ x1=400; }
-                if (i==3){ x1=680; }
-                if (i==4){ x1=730; }
-                if (i==5){ x1=810; }
-                if (i==6){ x1=880; }
-                if (i==7){ x1=980; result=1; }
-                if (i==8){ x1=260; }
-                if (i==9){ x1=80; }
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+                ctx.beginPath();
+                for (var i=0; i<nombre; i++){
+                    result=0;
+                    if (i==0){ x1=10; }
+                    if (i==1){ x1=35; }
+                    if (i==2){ x1=125; }
+                    if (i==3){ x1=195; }
+                    if (i==4){ x1=220; }
+                    if (i==5){ x1=250; }
+                    if (i==6){ x1=267; }
+                    if (i==7){ x1=290; result=1; }
+                    if (i==8){ x1=257; result=0;}
+                    if (i==9){ x1=150; }
+                    x2 = x1;
+                    y1 = 0;
+                    y2 = canvas.height;
+                    ctx.moveTo(x1, y1);
+                    ctx.lineTo(x2, y2);
+                    ctx.lineWidth = 5;
+                    ctx.strokeStyle = colorname;
+                    ctx.stroke();
+                }
+                
             }
             if (colorname==="red") {
-                if (i==0){ x1=350; }
-                if (i==1){ x1=950; result2=1; }
-                if (i==2){ x1=400; }
-                if (i==3){ x1=680; }
-                if (i==4){ x1=730; }
-                if (i==5){ x1=810; }
-                if (i==6){ x1=880; }
-                if (i==7){ x1=980; }
-                if (i==8){ x1=260; }
-                if (i==9){ x1=80; }
+                ctx2.clearRect(0,0,canvas2.width,canvas2.height);
+                ctx2.beginPath();
+                for (var i=0; i<nombre; i++){
+                    result2=0;
+                    if (i==0){ x1=95; }
+                    if (i==1){ x1=285; result2=1; }
+                    if (i==2){ x1=0; result2=0;}
+                    if (i==3){ x1=100; }
+                    if (i==4){ x1=50; }
+                    if (i==5){ x1=200; }
+                    if (i==6){ x1=250; }
+                    if (i==7){ x1=295; }
+                    if (i==8){ x1=175; }
+                    if (i==9){ x1=278; }
+                    x2 = x1;
+                    y1 = 0;
+                    y2 = canvas2.height;
+                    ctx2.moveTo(x1, y1);
+                    ctx2.lineTo(x2, y2);
+                    ctx2.lineWidth = 5;
+                    ctx2.strokeStyle = colorname;
+                    ctx2.stroke();
+                }
             }
             if (colorname==="blue") {
-                if (i==0){ x1=50; result3=1; }
-                if (i==1){ x1=100; }
-                if (i==2){ x1=200; }
-                if (i==3){ x1=600; }
-                if (i==4){ x1=550; }
-                if (i==5){ x1=870; }
-                if (i==6){ x1=450; }
-                if (i==7){ x1=111; }
-                if (i==8){ x1=222; }
-                if (i==9){ x1=333; }
+                ctx3.clearRect(0,0,canvas3.width,canvas3.height);
+                ctx3.beginPath();
+                for (var i=0; i<nombre; i++){
+                    result3=0;
+                    if (i==0){ x1=22; result3=1; }
+                    if (i==1){ x1=100; result3=0;}
+                    if (i==2){ x1=200; }
+                    if (i==3){ x1=25; }
+                    if (i==4){ x1=50; }
+                    if (i==5){ x1=125; }
+                    if (i==6){ x1=243; }
+                    if (i==7){ x1=159; }
+                    if (i==8){ x1=257; }
+                    if (i==9){ x1=222; }
+                    x2 = x1;
+                    y1 = 0;
+                    y2 = canvas3.height;
+                    ctx3.moveTo(x1, y1);
+                    ctx3.lineTo(x2, y2);
+                    ctx3.lineWidth = 5;
+                    ctx3.strokeStyle = colorname;
+                    ctx3.stroke();
+                }
             }
-            x2 = x1;
-            y1 = 0;
-            y2 = canvas.height;
         }
+
         if(orientation === "Horizontales"){
             if (colorname==="yellow") {
-                if (i==0){ y1=50; }
-                if (i==1){ y1=250; }
-                if (i==2){ y1=450; }
-                if (i==3){ y1=650; }
-                if (i==4){ y1=800; }
-                if (i==5){ y1=860; }
-                if (i==6){ y1=980; result4=1; }
-                if (i==7){ y1=100; }
-                if (i==8){ y1=200; }
-                if (i==9){ y1=500; }
+                ctx4.clearRect(0,0,canvas4.width,canvas4.height);
+                ctx4.beginPath();
+                for (var i=0; i<nombre; i++){
+                    result4=0;
+                    if (i==0){ y1=15; }
+                    if (i==1){ y1=35; }
+                    if (i==2){ y1=65; }
+                    if (i==3){ y1=95; }
+                    if (i==4){ y1=120; }
+                    if (i==5){ y1=130; }
+                    if (i==6){ y1=145; result4=1; }
+                    if (i==7){ y1=160; result4=0;}
+                    if (i==8){ y1=25; }
+                    if (i==9){ y1=110; }
+                    x1 = 0;
+                    x2 = canvas4.width;
+                    y2 = y1;
+                    ctx4.moveTo(x1, y1);
+                    ctx4.lineTo(x2, y2);
+                    ctx4.lineWidth = 2;
+                    ctx4.strokeStyle = colorname;
+                    ctx4.stroke();
+                }
+                
             }
             if (colorname==="red") {
-                if (i==0){ y1=30; }
-                if (i==1){ y1=680; result5=1; }
-                if (i==2){ y1=400; }
-                if (i==3){ y1=780; }
-                if (i==4){ y1=830; }
-                if (i==5){ y1=210; }
-                if (i==6){ y1=350; }
-                if (i==7){ y1=100; }
-                if (i==8){ y1=950; }
-                if (i==9){ y1=0; }
+                ctx5.clearRect(0,0,canvas5.width,canvas5.height);
+                ctx5.beginPath();
+                for (var i=0; i<nombre; i++){
+                    result5=0;
+                    if (i==0){ y1=7; }
+                    if (i==1){ y1=100; result5=1; }
+                    if (i==2){ y1=50; result5=0;}
+                    if (i==3){ y1=110; }
+                    if (i==4){ y1=150; }
+                    if (i==5){ y1=200; }
+                    if (i==6){ y1=250; }
+                    if (i==7){ y1=295; }
+                    if (i==8){ y1=173; }
+                    if (i==9){ y1=163; }
+                    x1 = 0;
+                    x2 = canvas5.width;
+                    y2 = y1;
+                    ctx5.moveTo(x1, y1);
+                    ctx5.lineTo(x2, y2);
+                    ctx5.lineWidth = 2;
+                    ctx5.strokeStyle = colorname;
+                    ctx5.stroke();
+                }
             }
             if (colorname==="blue") {
-                if (i==0){ y1=75; }
-                if (i==1){ y1=425; }
-                if (i==2){ y1=950; result6=1; }
-                if (i==3){ y1=600; }
-                if (i==4){ y1=250; }
-                if (i==5){ y1=170; }
-                if (i==6){ y1=315; }
-                if (i==7){ y1=555; }
-                if (i==8){ y1=666; }
-                if (i==9){ y1=999; }
+                ctx6.clearRect(0,0,canvas6.width,canvas6.height);
+                ctx6.beginPath();
+                for (var i=0; i<nombre; i++){
+                    result6=0;
+                    if (i==0){ y1=18; }
+                    if (i==1){ y1=58; }
+                    if (i==2){ y1=140; result6=1;}
+                    if (i==3){ y1=25; result6=0;}
+                    if (i==4){ y1=50; }
+                    if (i==5){ y1=125; }
+                    if (i==6){ y1=243; }
+                    if (i==7){ y1=159; }
+                    if (i==8){ y1=111; }
+                    if (i==9){ y1=123; }
+                    x1 = 0;
+                    x2 = canvas6.width;
+                    y2 = y1;
+                    ctx6.moveTo(x1, y1);
+                    ctx6.lineTo(x2, y2);
+                    ctx6.lineWidth = 2;
+                    ctx6.strokeStyle = colorname;
+                    ctx6.stroke();
+                }
             }
-            x1 = 0;
-            x2 = canvas.width;
-            y2 = y1;
-
         }
-        ctx.moveTo(x1, y1);
-        ctx.lineTo(x2, y2);
-    }
-    ctx.lineWidth = 20;
-    ctx.strokeStyle = colorname;
-    ctx.stroke();
     if (nombre!=0) {
+        $(".code").append("<p>EffacerLigne("+color+","+orientation+")</p>");
         $(".code").append("<p>DessinerUneLigne("+color+","+orientation+","+nombre+")</p>");
     }   
 }

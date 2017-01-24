@@ -38,7 +38,7 @@ if( !isset($_SESSION['pseudo']) ){
                 <div class="content">
                     <p class="number">1</p>
                     <hr>
-                    <p>Aide toi du plan de l’étage mis à ta disposition pour partir à la recherche du tableau demandé !</p>
+                    <p>Aide-toi du plan de l’étage mis à ta disposition et pars à la recherche du tableau demandé !</p>
                     <img src="img/tuto1.gif" alt="map" class="map">
                     <p>La salle où tu dois te rendre clignotera sur le plan !</p>
                     <button class="understood">OK</button>
@@ -49,7 +49,7 @@ if( !isset($_SESSION['pseudo']) ){
                 <div class="content">
                     <p class="number">2</p>
                     <hr>
-                    <p>Tu penses avoir trouvé l’oeuvre grâce aux indices et au plan ? Clique sur le bouton "trouvé" et prends la en photo !</p>
+                    <p>Tu penses avoir trouvé l’&#156;uvre grâce aux indices et au plan ? Clique sur le bouton "trouvé" et prends-la en photo !</p>
                     <div class="group_gif">
                         <img src="img/tuto2_1.gif" alt="trouvé"><img src="img/tuto2_2.gif" alt="photo">
                     </div>
@@ -62,7 +62,7 @@ if( !isset($_SESSION['pseudo']) ){
                 <div class="content">
                     <p class="number">3</p>
                     <hr>
-                    <p>Une fois l’oeuvre trouvée, tiens toi prêt à relever le défi correspondant !</p>
+                    <p>Une fois l’&#156;uvre trouvée, tiens-toi prêt à relever le défi correspondant !</p>
                     <ul>
                         <li>
                             <img src="img/ampoule.png" alt="ampoule">

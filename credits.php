@@ -20,12 +20,12 @@
                     <br>
                     <br>
                     <p>
-                        Oeuvres ayant été utilisées dans l’application Toddle:
-                        <br> - Yves Klein - <i>IKB3 monochrome bleu</i>
-                        <br> - Franck Stella - <i>Mas o menos</i>
-                        <br> - François Morellet - <i>4 doubles trames, traits minces ( 0° - 22°5 - 45° - 67°5)</i>
-                        <br> - Piet Mondrian - <i>New York City</i>
-                        <br> - François Morellet - <i>Du jaune au violet</i>
+                        &#140;uvres ayant été utilisées dans l’application Toddle:
+                        <br> - Yves Klein - <i>IKB3 monochrome bleu (1960)</i> 
+                        <br> - Franck Stella - <i>Mas o menos (1964)</i> 
+                        <br> - François Morellet - <i>4 doubles trames, traits minces ( 0° - 22°5 - 45° - 67°5) (1926)</i> 
+                        <br> - Piet Mondrian - <i>New York City (1942)</i> 
+                        <br> - François Morellet - <i>Du jaune au violet (1956)</i> 
                     </p>
                 </div>
                 <div id="second-view">
