@@ -7,10 +7,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.min.js"></script>
     <link rel="stylesheet" href="stylesheets/index.css" media="all">
+    
+    <link rel="apple-touch-icon" sizes="125x125" href="img/iconewebclip.png"> <!-- Icon webclip -->
     <link rel="icon" type="image/png" href="img/iconewebclip.png" />
-    <link rel="apple-touch-icon" href="img/iconewebclip.png"/>
+    <meta name="apple-mobile-web-app-title" content="Toddle"> <!-- Name webclip -->
 </head>
 <body>
     <?php
@@ -27,7 +28,20 @@
           </div>
         <div class="content">
             <img src="img/logo_toddle.png" alt="toddle" class="logo_toddle" />
-            <button type="button" class="launch">COMMENCER L'EXPÉRIENCE</button>
+            <div class="blocBtn">
+               <div class="btnChoice">
+                   <button type="button" class="lang selected" value="french">FRANÇAIS</button>
+                    <button type="button" class="lang" value="english">ENGLISH</button>
+               </div>
+                <button type="button" class="launch" id="startFrench">COMMENCER L'EXPÉRIENCE</button>
+                
+            </div>
+            <button id="validLang" class="valide">
+                <span class="fa-stack ">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-check fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                </span>
+            </button>
         </div>
         <?php
             include 'footer.php';
@@ -37,9 +51,35 @@
     <script src="js/global.js"></script>
     <script>
         $(document).ready(function () {
+            $(".lang",".blocBtn").click(function () {
+                if(!$(this).hasClass("selected")){
+                    $(".lang").toggleClass("selected");
+                }
+            });
+            
+            $(".launch", ".content").click(function () {
+                $(this).animate({
+                    left: "100%",
+                    opacity: 0
+                }, 700, "linear", function() {
+                    $(this).css("display","none");
+                    $(".btnChoice, .valide",".content").css("display","flex");
+                    
+                    $(".btnChoice, .valide",".content").animate({
+                        right: "0%",
+                        opacity: 1
+                    });
+                });
+            });
+            
              // button launch experience
-            $(".launch", ".container").click(function () {
-                location.href = "name.php";
+            $("#validLang", ".container").click(function () {
+                if($(".selected").attr("value") == "french"){
+                    location.href = "name.php";
+                }
+                else if($(".selected").attr("value") == "english") {
+                    location.href = "name.php";
+                }
             });
         });
     </script>

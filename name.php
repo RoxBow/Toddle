@@ -42,12 +42,11 @@ if(isset($_POST['pseudo'])){
 <html class="no-js" lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Application web</title>
+    <title>Toodle - Interactive game</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.min.js"></script>
     <link rel="stylesheet" href="stylesheets/name.css" media="all">
 </head>
 <body>

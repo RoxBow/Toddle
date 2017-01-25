@@ -65,7 +65,7 @@ $("body").one("click", function(){
     $("#handclick").css("animation-play-state","paused");
     $("#handclick").css("display","none");
     /*myStopFunction();*/
-    $("#nbgauche").text(nbGauche);
+    //$("#nbgauche").text(nbGauche);
 });
 
 // Check orientation tablet
@@ -143,6 +143,9 @@ function changeRond(){
         }
     }
 }
+
+// Disable scroll
+document.ontouchmove = function(e){ e.preventDefault(); }
 
 // Detect orientation tablet
 function doOnOrientationChange() {
