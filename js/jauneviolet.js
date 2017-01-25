@@ -20,6 +20,8 @@ var square;
 
 var squares, taille;
 
+var tuto, tuto2;
+
 var currentColor = "000";
 var nbGauche = 0;
 $("#nbgauche").text(nbGauche);
@@ -29,38 +31,28 @@ $("#nbdroit").text(nbDroite);
 var teinteFroide = ["4C4C6E", "375D8F", "0071B5", "728B74", "BEB140", "E5C200", "FFD700", "FFFF00"];
 var teinteChaude = ["644762", "96354C", "BA0000", "D44D00", "FBA800", "FEC100", "FFD700", "FFFF00"];
 
+// Arrêt des tutos
+$("body").one("click", function(){
+    $("#handclick").css("animation-play-state","paused");
+    $("#handclick").css("display","none");
+    clearInterval(tuto);
+    clearTimeout(tuto2);
+    $("#nbgauche").text(nbGauche);
+});
 
+//Animation pour tuto
+tuto = setInterval(function(){ myTimer() }, 3000);
 
+function myTimer() {
+    tuto2=setTimeout(function(){ $("#nbgauche").text(1); }, 250)+setTimeout(function(){ $("#nbgauche").text(2); }, 500) +setTimeout(function(){ $("#nbgauche").text(3); }, 1000)+setTimeout(function(){ $("#nbgauche").text(2); }, 1750)+setTimeout(function(){ $("#nbgauche").text(1); }, 2000)+setTimeout(function(){ $("#nbgauche").text(0); }, 2250);
+}
 
 $(document).ready(function() {
-
-    /*//Animation pour tuto
-    var tuto = setInterval(function(){ myTimer() }, 3000);
-    $("#handclick").css("animation-play-state","running");
-
-    function myTimer() {
-        $("#nbgauche").text(0);
-        setTimeout(function(){ $("#nbgauche").text(1); }, 250);
-        setTimeout(function(){ $("#nbgauche").text(2); }, 750);
-        setTimeout(function(){ $("#nbgauche").text(3); }, 1500);
-        setTimeout(function(){ $("#nbgauche").text(2); }, 2250);
-        setTimeout(function(){ $("#nbgauche").text(1); }, 2500);
-        setTimeout(function(){ $("#nbgauche").text(0); }, 3000);
-    }
-
-    function myStopFunction() {
-        clearInterval(tuto);
-    }*/
 
     /* ### CHRONO ### */
     $("#sec").val(localSec);
     $("#min").val(localMin);
     chrono();
-
-    /*for(var i = 0; i < teinteChaude.length; i++){
-        $(".contentChaud").append("<span class='colors' style='background:#"+teinteChaude[i]+"'></span>");
-        $(".contentFroid").append("<span class='colors' style='background:#"+teinteFroide[i]+"'></span>");
-    }*/
 
 
     //Selection left

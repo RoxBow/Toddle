@@ -60,14 +60,6 @@ var pinkToddle = "#F38F9A";
 var bleuToddle = "#355E7E";
 var beigeToddle = "#F8B195";
 
-// Arrêt des tutos
-$("body").one("click", function(){
-    $("#handclick").css("animation-play-state","paused");
-    $("#handclick").css("display","none");
-    /*myStopFunction();*/
-    //$("#nbgauche").text(nbGauche);
-});
-
 // Check orientation tablet
 doOnOrientationChange();
 window.addEventListener('orientationchange', doOnOrientationChange);
