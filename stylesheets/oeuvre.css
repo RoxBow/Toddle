@@ -70,7 +70,8 @@ html, body {
       right: 3%; }
     .credits .content #chevronGauche {
       transform: rotate(180deg);
-      left: 3%; }
+      left: 3%;
+      display: none; }
     .credits .content .ariane {
       text-align: center; }
       .credits .content .ariane .apoint {
