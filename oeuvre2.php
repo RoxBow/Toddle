@@ -96,8 +96,12 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 <br>
             </div>
             <canvas id="mycanvas"></canvas>
-            <div class="button" id="plus"><p>+</p></div>
-            <div class="button" id="moins"><p>-</p></div>
+            <div class="button" id="plus">
+                <p><i class="fa fa-plus-circle" aria-hidden="true"></i></p>
+            </div>
+            <div class="button" id="moins">
+                <p><i class="fa fa-minus-circle" aria-hidden="true"></i></p>
+            </div>
 
             <div class="result">
                 <p class="bleu">DessinerLignes(<span id="nbLignes" class="rose"></span>)</p>

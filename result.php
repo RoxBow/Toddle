@@ -14,12 +14,11 @@ if(isset($_POST['mail'])){
     $mail = trim($_POST['mail']); // Remove space before and after string
     $mail = strip_tags($mail);
     
-    $requestMail = $bdd->prepare("UPDATE user SET mail='".$_POST['mail']."' WHERE pseudo='".$_SESSION['pseudo']."'");
+    $requestMail = $bdd->prepare("UPDATE user SET mail='".$mail."' WHERE pseudo='".$_SESSION['pseudo']."'");
     $requestMail->execute();
     $emailSaved = true;
     
-    $pseudo = "Vince";
-     $to  = 'concours.toddle@gmail.com';
+    $to  = $mail;
 
      // Sujet
      $subject = 'Toddle';
@@ -31,7 +30,6 @@ if(isset($_POST['mail'])){
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 
     <title>Toddle mail</title>
     <style type="text/css">
@@ -117,7 +115,7 @@ if(isset($_POST['mail'])){
                     <tbody>
                       <tr>
                         <td style="vertical-align:top;">
-                          <p class="name" style="margin:0;font-size:1.1em;color:#F38F9A;font-size:2em;font-weight:600;">'.$pseudo.'</p>
+                          <p class="name" style="margin:0;font-size:1.1em;color:#F38F9A;font-size:2em;font-weight:600;">'.$_SESSION['pseudo'].'</p>
                         </td>
                       </tr>
                       <tr>

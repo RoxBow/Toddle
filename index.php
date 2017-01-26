@@ -73,7 +73,7 @@
             });
             
              // button launch experience
-            $("#validLang", ".container").click(function () {
+            $("#validLang .fa", ".container").click(function () {
                 if($(".selected").attr("value") == "french"){
                     location.href = "name.php";
                 }

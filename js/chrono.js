@@ -6,8 +6,10 @@ var localSec = localStorage.getItem("seconde");
 var localMin = localStorage.getItem("minute");
 
 // Remove spaces when page is refresh
-localSec = localSec.replace(/\s/g, '');
-localMin = localMin.replace(/\s/g, '');
+if(localSec != null || localMin != null){
+    localSec = localSec.replace(/\s/g, '');
+    localMin = localMin.replace(/\s/g, '');
+}
 
 function chrono(){
     centi++; // dixième

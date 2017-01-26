@@ -163,16 +163,6 @@ $(".rechercher").on("click",function(){
 
 $("#valider").on("click", function(){
     if (result==1 && result2==1 && result3==1 && result4==1 && result5==1 && result6==1) {
-        stopchrono(); // Arrête chrono
-        // Save time user in DB
-        $.ajax({
-            type: "POST",
-            url: "login.php",
-            data: { 'min': localStorage.getItem("minute"), 'sec': localStorage.getItem("seconde") },
-            success: function(data) {
-                console.log("Temps: "+localStorage.getItem("minute")+" minutes et "+localStorage.getItem("seconde")+" secondes"  );
-            }
-        });
         win();
     } else lose();
 });

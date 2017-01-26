@@ -158,6 +158,20 @@
         &:active{
             background-color: $blueToddle;
         }
+        &#moins, &#plus {
+            background: none;
+            border-radius: 0;
+            font-size: 5rem;
+            .fa {
+                color: $pinkToddle;
+            }
+        }
+        &#moins{
+            left: 50px;
+        }
+        &#plus{
+            right: 50px;
+        }
     }
     .buttonV{
         display: flex;
@@ -177,11 +191,5 @@
             background-color: $blueToddle;
         }
     }
-    #moins{
-        left: 50px;
-        font-size: 70px;
-    }
-    #plus{
-        right: 50px;
-    }
+    
 }

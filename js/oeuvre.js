@@ -13,8 +13,6 @@ var verification2 = 2;
 var cpush=0;
 var tuto=0;
 
-/* #####    CHRONO      ##### */
-
 // Update time script
 sec = localSec;
 min = localMin;
@@ -25,16 +23,13 @@ $(window).bind('beforeunload',function(){
     localStorage.setItem("minute", $("#min").val() );
 });
 
-$(document).ready(function() {
-    /* ### CHRONO ### */
-    $("#sec").val(localSec);
-    $("#min").val(localMin);
-    chrono();
-});
-
 /*Intéractions sur la page*/
 
-      $( document ).ready(function() {
+      $(document).ready(function() {
+          /* ### CHRONO ### */
+            $("#sec").val(localSec);
+            $("#min").val(localMin);
+            chrono();
       	
         /*######################################"*/
 
@@ -98,16 +93,6 @@ $(document).ready(function() {
               $('#loose').fadeIn(500);
           } else{
             if (validation==1 && verification2==1) {
-              stopchrono(); // Arrête chrono
-              // Save time user in DB
-              $.ajax({
-                  type: "POST",
-                  url: "login.php",
-                  data: { 'min': localStorage.getItem("minute"), 'sec': localStorage.getItem("seconde") },
-                  success: function(data) {
-                      console.log("Temps: "+localStorage.getItem("minute")+" minutes et "+localStorage.getItem("seconde")+" secondes"  );
-                  }
-              });
               $('#win').fadeIn(500);
             }
           }
@@ -118,6 +103,8 @@ $(document).ready(function() {
             if(levelUser < 5){
                 nbrLevel++;
                 localStorage.setItem("levelUser", nbrLevel);
+                localStorage.setItem("seconde", $("#sec").val() );
+                localStorage.setItem("minute", $("#min").val() );
                 document.location.replace("map.php");
             }
             else {

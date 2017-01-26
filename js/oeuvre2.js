@@ -2,8 +2,6 @@ var canvas, context;
 var nbLignes = 1;
 var resultat = 27;
 
-/* #####    CHRONO      ##### */
-
 // Update time script
 sec = localSec;
 min = localMin;
@@ -36,16 +34,6 @@ function init() {
 $("#valider").on("click",function(){
     var lines=$("#nbLignes").text();
     if (lines==resultat){
-        stopchrono(); // Arrête chrono
-        // Save time user in DB
-        $.ajax({
-            type: "POST",
-            url: "login.php",
-            data: { 'min': localStorage.getItem("minute"), 'sec': localStorage.getItem("seconde") },
-            success: function(data) {
-                console.log("Temps: "+localStorage.getItem("minute")+" minutes et "+localStorage.getItem("seconde")+" secondes"  );
-            }
-        });
         win();
     } else {
         lose();
@@ -78,6 +66,8 @@ $(".continuer").on("click",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
+        localStorage.setItem("seconde", $("#sec").val() );
+        localStorage.setItem("minute", $("#min").val() );
         document.location.replace("map.php");
     }
     else {

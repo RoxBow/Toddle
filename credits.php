@@ -4,12 +4,12 @@
     <div class="content">
         
         <div class="ariane">
-            <img class="apoint" id="a1" src="img/pc-plein.png" alt="#"/>
-            <img class="apoint" id="a2" src="img/pc-vide.png" alt="#"/>
-            <img class="apoint" id="a3" src="img/pc-vide.png" alt="#"/>
+            <img class="apoint" id="a1" src="img/pc-plein.png" alt="rond"/>
+            <img class="apoint" id="a2" src="img/pc-vide.png" alt="rond"/>
+            <img class="apoint" id="a3" src="img/pc-vide.png" alt="rond"/>
         </div>
-        <img src="img/chevron.png" class="chevron" id="chevronDroite" alt="#">
-        <img src="img/chevron.png" class="chevron" id="chevronGauche" alt="#">
+        <img src="img/chevron.png" class="chevron" id="chevronDroite" alt="chevron">
+        <img src="img/chevron.png" class="chevron" id="chevronGauche" alt="chevron">
         <div class="texte">
             <div id="sous-texte">
                 <div id="first-view">
@@ -44,7 +44,7 @@
                     </p>
                 </div>
                 <div id="third-view">
-                    <p class="center">RÉGLEMENT</p>
+                    <p class="center">RÈGLEMENT</p>
                     <br>
                     <p class="justify sright">
                         <span class="rose">1. PARTICIPANTS :</span>

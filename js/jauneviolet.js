@@ -192,6 +192,10 @@ $(".rechercher").on("click",function(){
     $('#loose').fadeOut(500);
 });
 
+$(".continuer").click(function(){
+    document.location.href = "result.php";
+});
+
 $("#valider").on("click", function(){
     if (nbGauche==7 && nbDroite==7 && gauche=="froid" && droite=="chaud") {
         stopchrono(); // Arrête chrono
@@ -199,9 +203,9 @@ $("#valider").on("click", function(){
         $.ajax({
             type: "POST",
             url: "login.php",
-            data: { 'min': localStorage.getItem("minute"), 'sec': localStorage.getItem("seconde") },
+            data: { 'min': $("#min").val(), 'sec': $("#sec").val() },
             success: function(data) {
-                console.log("Temps: "+localStorage.getItem("minute")+" minutes et "+localStorage.getItem("seconde")+" secondes"  );
+                console.log("Temps: "+$("#min").val()+" minutes et "+$("#sec").val()+" secondes"  );
             }
         });
         win();

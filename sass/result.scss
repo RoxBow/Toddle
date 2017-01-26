@@ -4,68 +4,70 @@ body {
     overflow: hidden;
 }
 
-.content {
-    text-align: center;
-    font-size: 3vw;
-    font-weight: 600;
-    p {
-        text-transform: uppercase;
-        color: $blueToddle;
-        &.announce {
-            color: $pinkToddle;
-            margin: 2% 0 3% 0;
-            span {
-                color: $blueToddle;
-            }
-        }
-    }
-    .listeUser {
-        width: 67%;
-        float: left;
-        overflow: scroll;
-        overflow-x: hidden;
-        height: 42vw;
-        text-align: left;
-        padding: 0 0 0 10%;
-        margin: 0 2% 0 0;
-        li {
+.container {
+    .content {
+        text-align: center;
+        font-size: 3vw;
+        font-weight: 600;
+        p {
+            text-transform: uppercase;
             color: $blueToddle;
-            &.own {
+            &.announce {
                 color: $pinkToddle;
-            }
-            .nbr {
-                width: 13%;
-                display: inline-block;
-            }
-            .pseudo {
-                display: inline-block;
-            }
-            .time {
-                font-weight: normal;
-                float: right;
-                padding: 0 8%;
+                margin: 2% 0 3% 0;
+                span {
+                    color: $blueToddle;
+                }
             }
         }
-    }
-    .giftBlock {
-        padding: 2.5% 2% 0 0;
-        font-size: 2.4vw;
-        .trait {
-            border: 2px solid $pinkToddle;
-            width: 20%;
-            margin: 2% auto;
-        }
-        button {
-            font-size: 4vw;
-            .fa-stack {
-                margin-top: 5%;
+        .listeUser {
+            width: 67%;
+            float: left;
+            overflow: scroll;
+            overflow-x: hidden;
+            height: 42vw;
+            text-align: left;
+            padding: 0 0 0 10%;
+            margin: 0 2% 0 0;
+            li {
+                color: $blueToddle;
+                &.own {
+                    color: $pinkToddle;
+                }
+                .nbr {
+                    width: 13%;
+                    display: inline-block;
+                }
+                .pseudo {
+                    display: inline-block;
+                }
+                .time {
+                    font-weight: normal;
+                    float: right;
+                    padding: 0 8%;
+                }
             }
-            .fa-circle {
-                color: $pinkToddle;
+        }
+        .giftBlock {
+            padding: 2.5% 2% 0 0;
+            font-size: 2.4vw;
+            .trait {
+                border: 2px solid $pinkToddle;
+                width: 20%;
+                margin: 2% auto;
+            }
+            button {
+                font-size: 4vw;
+                .fa-stack {
+                    margin-top: 5%;
+                }
+                .fa-circle {
+                    color: $pinkToddle;
+                }
             }
         }
-    }
-}
+    } // .content
+} // .container
 
 .blocEmail {
     position: absolute;

@@ -12,10 +12,13 @@ const roomMondrian = "allee-sud";
 var levelUser = localStorage.getItem("levelUser");
 var nbrLevel = levelUser;
 
-levelUser = levelUser.replace(/\s/g, ''); // Remove spaces
+if(levelUser != null){
+    levelUser = levelUser.replace(/\s/g, ''); // Remove spaces
+}
 
 // Variable compteur slider crédits
 var countSlider = 0;
+
 switch (levelUser) {
     case "1":
         currentArt = "img/kleinBlue.png";
