@@ -102,16 +102,25 @@ $(document).ready(function () {
             }, 1000);
             countSlider--;
             changeRond();
+            if(countSlider == 0){
+                $("#chevronGauche").fadeOut();
+            }
+            $("#chevronDroite").fadeIn();
         }
-
     });
+    
     $("#chevronDroite").on("click",function(){
         if (countSlider==0 || countSlider==1) {
             $("#sous-texte").animate({
                 marginLeft: "-=100%"
             }, 1000);
             countSlider++;
+            $("#chevronGauche").fadeIn();
+            
             changeRond();
+            
+            if(countSlider == 2)
+                $("#chevronDroite").fadeOut();
         }
     });
 
