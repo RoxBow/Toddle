@@ -148,8 +148,9 @@
                         //overflow: hidden;
                         margin: 2% 12% 0 0;
                         li {
-                            width: 50%;
-                            float: left;
+                            width: 49%;
+                            display: inline-block;
+                            vertical-align: top;
                             margin: 0 0 3% 0;
                             p, img {
                                 display: inline-block;
@@ -161,6 +162,14 @@
                             img {
                                 width: 19%;
                                 animation: animate_icon .9s infinite linear alternate;
+                            }
+                            .fa-stack {
+                                display: inline-block;
+                                font-size: 35px;
+                                animation: animate_icon .9s infinite linear alternate;
+                                .fa-question {
+                                    color: $blueToddle;
+                                }
                             }
                         }
                     } // ul

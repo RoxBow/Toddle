@@ -63,18 +63,23 @@ if( !isset($_SESSION['pseudo']) ){
                     <hr>
                     <p>Une fois l’&#156;uvre trouvée, tiens-toi prêt à relever le défi correspondant !</p>
                     <ul>
-                        <li>
-                            <img src="img/ampoule.png" alt="ampoule">
-                            <p>Aide toi des indices et du plan</p>
+                      <li>
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-question fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                            </span>
+                            <p>Aide toi des indices</p>
                         </li>
-                        <li>
+                       <li>
                             <img src="img/retour.png" alt="fleche">
                             <p>Annule tes erreurs</p>
                         </li>
                         <li>
-                            <img src="img/drapeau.png" alt="drapeau">
-                            <p>Ne perds pas de vue ton objectif</p>
+                            <img src="img/poubelleBlue.png" alt="poubelle">
+                            <p>Repars de zéro si tu es perdu</p>
                         </li>
+                        
+                        
                         <li>
                             <img src="img/valide.png" alt="coche">
                             <p>Valide si tu penses avoir trouvé</p>
