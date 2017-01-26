@@ -491,7 +491,7 @@ i {
         text-align: center; }
       .container #jeu .rightBloc .etiqBloc #rectangle {
         position: absolute;
-        margin-top: 2.5%;
+        margin-top: 17.5%;
         margin-left: 1.5%; }
       .container #jeu .rightBloc .etiqBloc #rouge {
         position: absolute;
@@ -509,7 +509,7 @@ i {
         margin-left: 1.5%; }
       .container #jeu .rightBloc .etiqBloc #rond {
         position: absolute;
-        margin-top: 17.5%;
+        margin-top: 2.5%;
         margin-left: 1.5%; }
       .container #jeu .rightBloc .etiqBloc #violet {
         position: absolute;

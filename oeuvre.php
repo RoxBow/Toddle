@@ -105,20 +105,20 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                         Aide-toi des <span class="bold">fonctions algorithmiques</span> mises à ta disposition ci-dessous, pour recréer l'&#156;uvre de Yves Klein.
                       </p>
                       <br>
-                      <p>
-                        Glisse <span class="bold">la fonction</span> qui te semble appropriée sur l’&#156;uvre. Si tu penses avoir réussi la transformation comme demandé, il ne te reste plus qu’à valider.
+                      <p id="secondeconsigne">
+                        Glisse <span class="bold">la fonction</span> qui te semble appropriée dans la zone pour déterminer le cadre de l'&#156;uvre que tu as devant toi.
                       </p>
                   </div>
               </div>
               <div class="etiqBloc" id="etiqBloc">
 
                   <div class="etiq" id="rectangle">CréerUnRectangle()</div>
-                  <div class="etiq" id="carre">MettreUnCarré()</div>
-                  <div class="etiq" id="rond">MettreUnCercle()</div>
+                  <div class="etiq" id="carre">CréerUnCarré()</div>
+                  <div class="etiq" id="rond">CréerUnCercle()</div>
 
-                  <div class="etiq" id="rouge">ChangerEnJaune()</div>
-                  <div class="etiq" id="jaune">ChangerEnBleu()</div>
-                  <div class="etiq" id="violet">ChangerEnViolet()</div>
+                  <div class="etiq" id="rouge">RemplirEnBleu1()</div>
+                  <div class="etiq" id="jaune">RemplirEnBleu2()</div>
+                  <div class="etiq" id="violet">RemplirEnBleu3()</div>
 
                   <div class="bouton" id="undo"><i class="fa fa-undo fa-2x" aria-hidden="true"></i></div>
                   <div class="bouton" id="valider"><i class="fa fa-check fa-2x" aria-hidden="true"></i></div>

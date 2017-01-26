@@ -77,6 +77,11 @@ $(document).ready(function() {
           if (validation==0 && verification ==1) {
             $( "#rectangle,#carre,#rond" ).css("z-index","5");
             $( "#rouge,#jaune,#violet" ).css("display","block");
+            $( "#secondeconsigne").toggle("slide");
+            setTimeout(function(){
+              $( "#secondeconsigne").text("Maintenant que le cadre est déterminé, glisse la bonne couleur dans ton rectangle pour finaliser le tableau de Yves Klein.");
+              $( "#secondeconsigne").toggle("slide");
+            }, 1000);
             $( "#rectangle,#carre,#rond,#rouge,#jaune,#violet" ).animate({
               left: "-=48.5%",
             }, 500);
@@ -135,7 +140,7 @@ $(document).ready(function() {
               mouseY = e.center.y ;
               element.style.backgroundColor=pinkToddle;
               element.style.left = (mouseX - element.offsetWidth/2)+"px";
-              element.style.top = (mouseY- element.offsetHeight)+"px";
+              element.style.top = (mouseY- element.offsetHeight*4.15)+"px";
         });
 
         hammertime.on('panend', function(e) {
@@ -155,7 +160,7 @@ $(document).ready(function() {
           }
         });
 
-            /*Drag & drop du bouton rouge*/
+            /*Drag & drop du bouton Bleu1*/
 
         var hammertime2 = new Hammer(element2);
         hammertime2.get('pan').set({ direction: Hammer.DIRECTION_ALL });
@@ -173,7 +178,7 @@ $(document).ready(function() {
             element2.style.backgroundColor=bleuToddle;
                 if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
-                  ctx.fillStyle="#FEEB34";
+                  ctx.fillStyle="#0000FF";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
                   element2.style.left = "2.5%";
                   element2.style.top = "52.5%";
@@ -185,7 +190,7 @@ $(document).ready(function() {
                 }
         });
 
-            /*Drag & drop du bouton jaune*/
+            /*Drag & drop du bouton BleuKlein*/
 
         var hammertime3 = new Hammer(element3);
         hammertime3.get('pan').set({ direction: Hammer.DIRECTION_ALL });
@@ -255,7 +260,7 @@ $(document).ready(function() {
               mouseY = e.center.y ;
               element5.style.backgroundColor=pinkToddle;
               element5.style.left = (mouseX - element5.offsetWidth/2)+"px";
-              element5.style.top = (mouseY- element5.offsetHeight*4.15)+"px";
+              element5.style.top = (mouseY- element5.offsetHeight)+"px";
             });
             hammertime5.on('panend', function(e) {
                 element5.style.backgroundColor=bleuToddle;
@@ -276,7 +281,7 @@ $(document).ready(function() {
                 }
             });
 
-        /*Drag & drop du pour le changement en violet*/
+        /*Drag & drop du pour le changement en Bleu3*/
 
         var hammertime6 = new Hammer(element6);
         hammertime6.get('pan').set({ direction: Hammer.DIRECTION_ALL });
@@ -293,7 +298,7 @@ $(document).ready(function() {
                 element6.style.backgroundColor=bleuToddle;
                 if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
-                  ctx.fillStyle="#9F00FF";
+                  ctx.fillStyle="#005890";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
                   element6.style.left = "2.5%";
                   element6.style.top = "52.5%";
