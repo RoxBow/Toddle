@@ -5,44 +5,35 @@
 /* ###### FONTS ###### */
 @font-face {
   font-family: "GothamRounded";
-  src: url(../fonts/GothamRoundedBook.ttf);
-}
+  src: url(../fonts/GothamRoundedBook.ttf); }
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedBold.ttf);
-  font-weight: bold;
-}
+  font-weight: bold; }
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedMedium.ttf);
-  font-weight: 600;
-}
+  font-weight: 600; }
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedItalic.otf);
-  font-style: italic;
-}
+  font-style: italic; }
 @font-face {
   font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata-Regular.ttf);
-}
+  src: url(../fonts/Inconsolata-Regular.ttf); }
 @font-face {
   font-family: "Inconsolata";
   src: url(../fonts/Inconsolata-Bold.ttf);
-  font-weight: bold;
-}
-/* line 51, ../sass/general.scss */
+  font-weight: bold; }
 html, body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
   font-family: "GothamRounded", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
-/* ###### CRÉDITS ###### */
-/* line 62, ../sass/general.scss */
+/* ###### CR├ëDITS ###### */
 .credits {
   position: absolute;
   display: none;
@@ -50,370 +41,260 @@ html, body {
   height: 100%;
   margin-top: 100%;
   z-index: 10000;
-  background-color: white;
-}
-/* line 63, ../sass/general.scss */
-.credits #croix {
-  position: absolute;
-  right: 10%;
-  color: #aaa;
-  margin-top: 50px;
-}
-/* line 76, ../sass/general.scss */
-.credits .title {
-  font-size: 72px;
-  color: #F38F9A;
-  font-weight: 600;
-  width: 100%;
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
-/* line 85, ../sass/general.scss */
-.credits .content {
-  font-size: 20px;
-  color: #355E7E;
-  font-weight: 600;
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 20px;
-}
-/* line 92, ../sass/general.scss */
-.credits .content .chevron {
-  width: 40px;
-  margin-top: 22%;
-  position: absolute;
-}
-/* line 97, ../sass/general.scss */
-.credits .content #chevronDroite {
-  right: 3%;
-}
-/* line 100, ../sass/general.scss */
-.credits .content #chevronGauche {
-  transform: rotate(180deg);
-  left: 3%;
-  display: none;
-}
-/* line 105, ../sass/general.scss */
-.credits .content .ariane {
-  text-align: center;
-}
-/* line 107, ../sass/general.scss */
-.credits .content .ariane .apoint {
-  width: 20px;
-  margin: 0 10px;
-}
-/* line 112, ../sass/general.scss */
-.credits .content .texte {
-  width: 100%;
-  margin-top: 20px;
-  height: 400px;
-  overflow: hidden;
-}
-/* line 117, ../sass/general.scss */
-.credits .content .texte #sous-texte {
-  display: flex;
-  height: 380px;
-  width: 300%;
-}
-/* line 121, ../sass/general.scss */
-.credits .content .texte #sous-texte > * {
-  width: 100%;
-  padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-/* line 127, ../sass/general.scss */
-.credits .content .texte #sous-texte > * .sright {
-  padding-right: 15px;
-  overflow-y: scroll;
-}
-/* line 130, ../sass/general.scss */
-.credits .content .texte #sous-texte > * .sright::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: #F38F9A;
-}
-/* line 137, ../sass/general.scss */
-.credits .content .texte #sous-texte > * .sright::-webkit-scrollbar {
-  width: 7px;
-  margin-left: 5px;
-}
-/* line 143, ../sass/general.scss */
-.credits .content .texte #sous-texte > * .sright::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background-color: #355E7E;
-}
-/* line 152, ../sass/general.scss */
-.credits .content .justify {
-  text-align: justify;
-}
-/* line 155, ../sass/general.scss */
-.credits .content .bottom {
-  width: 120%;
-  margin-left: -10%;
-}
-/* line 158, ../sass/general.scss */
-.credits .content .bottom .flexbottom {
-  display: flex;
-  align-items: stretch;
-}
-/* line 161, ../sass/general.scss */
-.credits .content .bottom .flexbottom > * {
-  width: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  flex-direction: column;
-}
-/* line 168, ../sass/general.scss */
-.credits .content .bottom .flexbottom > * .antoine {
-  margin-top: 17px;
-}
-/* line 171, ../sass/general.scss */
-.credits .content .bottom .flexbottom > * .fct {
-  margin-top: 7px;
-}
-/* line 175, ../sass/general.scss */
-.credits .content .bottom .flexbottom .logo {
-  align-self: flex-start;
-  width: 100px;
-}
+  background-color: white; }
+  .credits #croix {
+    position: absolute;
+    right: 10%;
+    color: #aaa;
+    margin-top: 50px; }
+  .credits .title {
+    font-size: 72px;
+    color: #F38F9A;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px; }
+  .credits .content {
+    font-size: 20px;
+    color: #355E7E;
+    font-weight: 600;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px; }
+    .credits .content .chevron {
+      width: 40px;
+      margin-top: 22%;
+      position: absolute; }
+    .credits .content #chevronDroite {
+      right: 3%; }
+    .credits .content #chevronGauche {
+      transform: rotate(180deg);
+      left: 3%;
+      display: none; }
+    .credits .content .ariane {
+      text-align: center; }
+      .credits .content .ariane .apoint {
+        width: 20px;
+        margin: 0 10px; }
+    .credits .content .texte {
+      width: 100%;
+      margin-top: 20px;
+      height: 400px;
+      overflow: hidden; }
+      .credits .content .texte #sous-texte {
+        display: flex;
+        height: 380px;
+        width: 300%; }
+        .credits .content .texte #sous-texte > * {
+          width: 100%;
+          padding: 0 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+          .credits .content .texte #sous-texte > * .sright {
+            padding-right: 15px;
+            overflow-y: scroll; }
+            .credits .content .texte #sous-texte > * .sright::-webkit-scrollbar-track {
+              border-radius: 10px;
+              background-color: #F38F9A; }
+            .credits .content .texte #sous-texte > * .sright::-webkit-scrollbar {
+              width: 7px;
+              margin-left: 5px; }
+            .credits .content .texte #sous-texte > * .sright::-webkit-scrollbar-thumb {
+              border-radius: 20px;
+              background-color: #355E7E; }
+    .credits .content .justify {
+      text-align: justify; }
+    .credits .content .bottom {
+      width: 120%;
+      margin-left: -10%; }
+      .credits .content .bottom .flexbottom {
+        display: flex;
+        align-items: stretch; }
+        .credits .content .bottom .flexbottom > * {
+          width: 25%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          flex-direction: column; }
+          .credits .content .bottom .flexbottom > * .antoine {
+            margin-top: 17px; }
+          .credits .content .bottom .flexbottom > * .fct {
+            margin-top: 7px; }
+        .credits .content .bottom .flexbottom .logo {
+          align-self: flex-start;
+          width: 100px; }
 
 /* ###### HANDCLICK TUTO ###### */
-/* line 187, ../sass/general.scss */
 #handclick {
   position: absolute;
   width: 110px;
-  height: 110px;
-}
+  height: 110px; }
 
-/* line 193, ../sass/general.scss */
 .fa {
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 /* ###### Class for colors ###### */
-/* line 198, ../sass/general.scss */
 .rose {
-  color: #F38F9A;
-}
+  color: #F38F9A; }
 
-/* line 201, ../sass/general.scss */
 .bleu {
-  color: #355E7E;
-}
+  color: #355E7E; }
 
-/* line 204, ../sass/general.scss */
 .beige {
-  color: #F8B195;
-}
+  color: #F8B195; }
 
-/* line 207, ../sass/general.scss */
 .noir {
-  color: black;
-}
+  color: black; }
 
-/* line 210, ../sass/general.scss */
 .six {
-  font-weight: 600;
-}
+  font-weight: 600; }
 
-/* line 213, ../sass/general.scss */
 .bold {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-/* line 216, ../sass/general.scss */
 .center {
-  text-align: center;
-}
+  text-align: center; }
 
-/* line 219, ../sass/general.scss */
 i {
-  font-style: italic;
-}
+  font-style: italic; }
 
-/* line 222, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
-  position: relative;
-}
-/* line 227, ../sass/general.scss */
-.container * {
-  outline: none;
-  box-sizing: border-box;
-}
-/* line 232, ../sass/general.scss */
-.container input {
-  font-family: 'GothamRounded';
-}
-/* line 235, ../sass/general.scss */
-.container button {
-  background: none;
-  border: none;
-  font-family: 'GothamRounded';
-  text-transform: uppercase;
-  font-weight: 600;
-}
-/* line 242, ../sass/general.scss */
-.container header {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  width: 100%;
-  margin: 0 0 15px 0;
-  height: 15%;
-}
-/* line 249, ../sass/general.scss */
-.container header .toddle_form {
-  height: 80%;
-  float: left;
-}
-/* line 253, ../sass/general.scss */
-.container header .toddle_text {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 25%;
-  margin: auto;
-  height: 50%;
-}
-/* line 261, ../sass/general.scss */
-.container header .blockRight {
-  position: absolute;
-  right: 5%;
-  top: 3vw;
-  width: auto;
-  font-size: 2.5vw;
-  font-weight: normal;
-  color: #F38F9A;
-}
-/* line 269, ../sass/general.scss */
-.container header .blockRight .name, .container header .blockRight .chrono {
-  display: inline-block;
-}
-/* line 273, ../sass/general.scss */
-.container header .blockRight .chrono input {
-  font-size: 2.5vw;
-  color: #F38F9A;
-  display: inline-block;
-  width: 6vw;
-  text-align: center;
-  border: none;
-  background: none;
-}
-/* line 283, ../sass/general.scss */
-.container header .blockRight .defi {
-  text-align: right;
-}
-/* line 288, ../sass/general.scss */
-.container footer {
-  width: 100%;
-  text-align: right;
-  position: absolute;
-  bottom: 1%;
-  right: 1%;
-}
-/* line 294, ../sass/general.scss */
-.container footer img {
-  width: 5%;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 1%;
-}
-/* line 301, ../sass/general.scss */
-.container .overlay {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-}
-/* line 313, ../sass/general.scss */
-.container .overlay .popup {
-  background-color: #fff;
-  border-radius: 15px;
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  left: 0;
-  right: 0;
-  padding: 15px;
-  color: #355E7E;
-  font-size: 20px;
-}
-/* line 327, ../sass/general.scss */
-.container .overlay .popup .sous-titre {
-  color: #F38F9A;
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-bottom: 4%;
-  display: block;
-}
-/* line 334, ../sass/general.scss */
-.container .overlay .popup .error {
-  margin: 3% auto;
-  color: red;
-  font-size: 2vw;
-}
-/* line 340, ../sass/general.scss */
-.container .overlay .close {
-  color: #aaa;
-  position: absolute;
-  right: 2%;
-  top: 2%;
-  font-size: 4vw;
-}
-/* line 348, ../sass/general.scss */
-.container .overlay.orientation {
-  display: block;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-/* line 351, ../sass/general.scss */
-.container .overlay.orientation .content-orientation {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  display: inline-block;
-  right: 0;
-  left: 0;
-  margin: auto;
-  background: #fff;
-  text-align: center;
-  width: 80%;
-  height: 45%;
-  padding: 8%;
-  border-radius: 5%;
-}
-/* line 365, ../sass/general.scss */
-.container .overlay.orientation .content-orientation img {
-  width: 50%;
-  display: inline-block;
-  margin: auto;
-  right: 0;
-}
-/* line 371, ../sass/general.scss */
-.container .overlay.orientation .content-orientation p {
-  text-transform: uppercase;
-  font-size: 5vw;
-  color: #F38F9A;
-  margin: 7% 0;
-}
+  position: relative; }
+  .container * {
+    outline: none;
+    box-sizing: border-box; }
+  .container input {
+    font-family: 'GothamRounded'; }
+  .container button {
+    background: none;
+    border: none;
+    font-family: 'GothamRounded';
+    text-transform: uppercase;
+    font-weight: 600; }
+  .container header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 15px 0;
+    height: 15%; }
+    .container header .toddle_form {
+      height: 80%;
+      float: left; }
+    .container header .toddle_text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 25%;
+      margin: auto;
+      height: 50%; }
+    .container header .blockRight {
+      position: absolute;
+      right: 5%;
+      top: 3vw;
+      width: auto;
+      font-size: 2.5vw;
+      font-weight: normal;
+      color: #F38F9A; }
+      .container header .blockRight .name, .container header .blockRight .chrono {
+        display: inline-block; }
+      .container header .blockRight .chrono input {
+        font-size: 2.5vw;
+        color: #F38F9A;
+        display: inline-block;
+        width: 6vw;
+        text-align: center;
+        border: none;
+        background: none; }
+      .container header .blockRight .defi {
+        text-align: right; }
+  .container footer {
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    bottom: 1%;
+    right: 1%; }
+    .container footer img {
+      width: 5%;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1%; }
+  .container .overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center; }
+    .container .overlay .popup {
+      background-color: #fff;
+      border-radius: 15px;
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      color: #355E7E;
+      font-size: 20px; }
+      .container .overlay .popup .sous-titre {
+        color: #F38F9A;
+        font-size: 2.2rem;
+        font-weight: bold;
+        margin-bottom: 4%;
+        display: block; }
+      .container .overlay .popup .error {
+        margin: 3% auto;
+        color: red;
+        font-size: 2vw; }
+    .container .overlay .close {
+      color: #aaa;
+      position: absolute;
+      right: 2%;
+      top: 2%;
+      font-size: 4vw; }
+    .container .overlay.orientation {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.8); }
+      .container .overlay.orientation .content-orientation {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: inline-block;
+        right: 0;
+        left: 0;
+        margin: auto;
+        background: #fff;
+        text-align: center;
+        width: 80%;
+        height: 45%;
+        padding: 8%;
+        border-radius: 5%; }
+        .container .overlay.orientation .content-orientation img {
+          width: 50%;
+          display: inline-block;
+          margin: auto;
+          right: 0; }
+        .container .overlay.orientation .content-orientation p {
+          text-transform: uppercase;
+          font-size: 5vw;
+          color: #F38F9A;
+          margin: 7% 0; }
 
-/* line 382, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -421,10 +302,8 @@ i {
   border: none;
   border-radius: 50px;
   font-size: 30px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
-/* line 392, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -432,296 +311,210 @@ i {
   border-radius: 35px;
   font-size: 30px;
   width: 70px;
-  height: 70px;
-}
+  height: 70px; }
 
-/* line 2, ../sass/oeuvre3.scss */
 .overlay {
   position: absolute;
   display: none;
   width: 100%;
   height: 100%;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+  background-color: rgba(0, 0, 0, 0.5); }
 
-/* line 10, ../sass/oeuvre3.scss */
 .container {
-  font-weight: 600;
-}
-/* line 12, ../sass/oeuvre3.scss */
-.container #handclick {
-  top: 67%;
-  left: 47%;
-  z-index: 10000;
-  animation-duration: 2s;
-  animation-name: slide;
-  animation-iteration-count: infinite;
-}
-/* line 20, ../sass/oeuvre3.scss */
-.container #win {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 10000;
-  display: none;
-}
-/* line 27, ../sass/oeuvre3.scss */
-.container #win .title {
-  font-weight: 600;
-  color: #F38F9A;
-  font-size: 54px;
-}
-/* line 32, ../sass/oeuvre3.scss */
-.container #win .titlesuite {
-  color: #F38F9A;
-  font-size: 42px;
-}
-/* line 36, ../sass/oeuvre3.scss */
-.container #win .content-win {
-  width: 70%;
-  height: 70%;
-  margin-left: 15%;
-  margin-top: 11.5%;
-  padding-top: 3.5%;
-  background-color: white;
-  border-radius: 50px;
-  text-align: center;
-  color: #355E7E;
-  font-size: 26px;
-}
-/* line 47, ../sass/oeuvre3.scss */
-.container #win .content-win p {
-  width: 70%;
-  margin-left: 15%;
-}
-/* line 51, ../sass/oeuvre3.scss */
-.container #win .content-win hr {
-  border: 3px solid #F38F9A;
-  border-radius: 25px;
-  width: 70%;
-  margin: 3% auto;
-}
-/* line 57, ../sass/oeuvre3.scss */
-.container #win .content-win .continuer {
-  color: #fff;
-  background-color: #355E7E;
-  width: 35%;
-  height: 75px;
-  border-radius: 50px;
-  font-size: 30px;
-  margin: 4% 0;
-}
-/* line 66, ../sass/oeuvre3.scss */
-.container #win .content-win .name {
-  color: #F38F9A;
-}
-/* line 69, ../sass/oeuvre3.scss */
-.container #win .content-win .parentheses {
-  color: #355E7E;
-  font-weight: bold;
-}
-/* line 75, ../sass/oeuvre3.scss */
-.container #loose {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 10000;
-  display: none;
-}
-/* line 82, ../sass/oeuvre3.scss */
-.container #loose .title {
-  font-weight: 600;
-  color: #F38F9A;
-  font-size: 54px;
-}
-/* line 87, ../sass/oeuvre3.scss */
-.container #loose .content-loose {
-  width: 70%;
-  height: 45%;
-  margin-top: 20%;
-  margin-left: 15%;
-  padding-top: 2%;
-  background-color: white;
-  border-radius: 50px;
-  text-align: center;
-  color: #355E7E;
-  font-size: 26px;
-}
-/* line 98, ../sass/oeuvre3.scss */
-.container #loose .content-loose p {
-  width: 75%;
-  margin-left: 12.5%;
-}
-/* line 102, ../sass/oeuvre3.scss */
-.container #loose .content-loose hr {
-  border: 3px solid #F38F9A;
-  border-radius: 25px;
-  width: 70%;
-  margin: 3% auto;
-}
-/* line 108, ../sass/oeuvre3.scss */
-.container #loose .content-loose .rechercher {
-  color: #fff;
-  background-color: #355E7E;
-  width: 35%;
-  height: 75px;
-  border-radius: 50px;
-  font-size: 35px;
-  margin-top: 0.5%;
-}
-/* line 117, ../sass/oeuvre3.scss */
-.container #loose .content-loose .name {
-  color: #F38F9A;
-}
-/* line 122, ../sass/oeuvre3.scss */
-.container h2 {
-  text-align: center;
-  font-size: 24px;
-  padding-bottom: 10px;
-}
-/* line 127, ../sass/oeuvre3.scss */
-.container .consignes {
-  text-align: center;
-  font-size: 18px;
-  color: #355E7E;
-  width: 80%;
-  margin-left: 10%;
-}
-/* line 134, ../sass/oeuvre3.scss */
-.container .leftBloc {
-  width: 50%;
-  float: left;
-  padding-left: 1%;
-  position: relative;
-}
-/* line 139, ../sass/oeuvre3.scss */
-.container .leftBloc .souscontainer {
-  width: 470px;
-  height: 470px;
-  overflow: hidden;
-  position: relative;
-}
-/* line 145, ../sass/oeuvre3.scss */
-.container .leftBloc .souscontainer .content {
-  margin-top: -107px;
-  margin-left: -107px;
-}
-/* line 148, ../sass/oeuvre3.scss */
-.container .leftBloc .souscontainer .content canvas {
-  position: absolute;
-}
-/* line 154, ../sass/oeuvre3.scss */
-.container .rightBloc {
-  width: 50%;
-  float: right;
-}
-/* line 155, ../sass/oeuvre3.scss */
-.container .rightBloc .code {
-  padding: 10px;
-  background-color: rgba(188, 188, 188, 0.2);
-  width: 90%;
-}
-/* line 159, ../sass/oeuvre3.scss */
-.container .rightBloc .code .alinea1 {
-  margin-left: 7px;
-}
-/* line 162, ../sass/oeuvre3.scss */
-.container .rightBloc .code .alinea2 {
-  margin-left: 14px;
-}
-/* line 165, ../sass/oeuvre3.scss */
-.container .rightBloc .code .alinea3 {
-  margin-left: 21px;
-}
-/* line 169, ../sass/oeuvre3.scss */
-.container .rightBloc .columns {
-  display: flex;
-  margin-top: 25px;
-  color: #F38F9A;
-  font-size: 20px;
-}
-/* line 174, ../sass/oeuvre3.scss */
-.container .rightBloc .columns .gauche {
-  width: 50%;
-}
-/* line 177, ../sass/oeuvre3.scss */
-.container .rightBloc .columns .droite {
-  width: 50%;
-}
-/* line 180, ../sass/oeuvre3.scss */
-.container .rightBloc .columns span {
-  margin-left: 70%;
-}
-/* line 183, ../sass/oeuvre3.scss */
-.container .rightBloc .columns .buttonV {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F38F9A;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  color: white;
-  font-size: 15px;
-  margin-left: 60%;
-}
-/* line 194, ../sass/oeuvre3.scss */
-.container .rightBloc .columns .buttonV:active {
-  background-color: #355E7E;
-}
-/* line 201, ../sass/oeuvre3.scss */
-.container .rightBloc input[type=range] {
-  -webkit-appearance: none;
-  margin: 18px 0;
-  width: 80%;
-}
-/* line 206, ../sass/oeuvre3.scss */
-.container .rightBloc input[type=range]:focus {
-  outline: none;
-}
-/* line 209, ../sass/oeuvre3.scss */
-.container .rightBloc input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 17px;
-  background: #355E7E;
-  border-radius: 7.5px;
-}
-/* line 215, ../sass/oeuvre3.scss */
-.container .rightBloc input[type=range]::-webkit-slider-thumb {
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-  background: #F38F9A;
-  -webkit-appearance: none;
-  margin-top: -10px;
-}
-/* line 223, ../sass/oeuvre3.scss */
-.container .rightBloc input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 17px;
-  background: #355E7E;
-  border-radius: 7.5px;
-}
-/* line 229, ../sass/oeuvre3.scss */
-.container .rightBloc input[type=range]::-moz-range-thumb {
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-  background: #F38F9A;
-  -webkit-appearance: none;
-  margin-top: -10px;
-}
+  font-weight: 600; }
+  .container #handclick {
+    top: 67%;
+    left: 47%;
+    z-index: 10000;
+    animation-duration: 2s;
+    animation-name: slide;
+    animation-iteration-count: infinite; }
+  .container #win {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none; }
+    .container #win .title {
+      font-weight: 600;
+      color: #F38F9A;
+      font-size: 54px; }
+    .container #win .titlesuite {
+      color: #F38F9A;
+      font-size: 42px; }
+    .container #win .content-win {
+      width: 70%;
+      height: 70%;
+      margin-left: 15%;
+      margin-top: 11.5%;
+      padding-top: 3.5%;
+      background-color: white;
+      border-radius: 50px;
+      text-align: center;
+      color: #355E7E;
+      font-size: 26px; }
+      .container #win .content-win p {
+        width: 70%;
+        margin-left: 15%; }
+      .container #win .content-win hr {
+        border: 3px solid #F38F9A;
+        border-radius: 25px;
+        width: 70%;
+        margin: 3% auto; }
+      .container #win .content-win .continuer {
+        color: #fff;
+        background-color: #355E7E;
+        width: 35%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 30px;
+        margin: 4% 0; }
+      .container #win .content-win .name {
+        color: #F38F9A; }
+      .container #win .content-win .parentheses {
+        color: #355E7E;
+        font-weight: bold; }
+  .container #loose {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none; }
+    .container #loose .title {
+      font-weight: 600;
+      color: #F38F9A;
+      font-size: 54px; }
+    .container #loose .content-loose {
+      width: 70%;
+      height: 45%;
+      margin-top: 20%;
+      margin-left: 15%;
+      padding-top: 2%;
+      background-color: white;
+      border-radius: 50px;
+      text-align: center;
+      color: #355E7E;
+      font-size: 26px; }
+      .container #loose .content-loose p {
+        width: 75%;
+        margin-left: 12.5%; }
+      .container #loose .content-loose hr {
+        border: 3px solid #F38F9A;
+        border-radius: 25px;
+        width: 70%;
+        margin: 3% auto; }
+      .container #loose .content-loose .rechercher {
+        color: #fff;
+        background-color: #355E7E;
+        width: 35%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 35px;
+        margin-top: 0.5%; }
+      .container #loose .content-loose .name {
+        color: #F38F9A; }
+  .container h2 {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 10px; }
+  .container .consignes {
+    text-align: center;
+    font-size: 18px;
+    color: #355E7E;
+    width: 80%;
+    margin-left: 10%; }
+  .container .leftBloc {
+    width: 50%;
+    float: left;
+    padding-left: 1%;
+    position: relative; }
+    .container .leftBloc .souscontainer {
+      width: 470px;
+      height: 470px;
+      overflow: hidden;
+      position: relative; }
+      .container .leftBloc .souscontainer .content {
+        margin-top: -107px;
+        margin-left: -107px; }
+        .container .leftBloc .souscontainer .content canvas {
+          position: absolute; }
+  .container .rightBloc {
+    width: 50%;
+    float: right; }
+    .container .rightBloc .code {
+      padding: 10px;
+      background-color: rgba(188, 188, 188, 0.2);
+      width: 90%; }
+      .container .rightBloc .code .alinea1 {
+        margin-left: 7px; }
+      .container .rightBloc .code .alinea2 {
+        margin-left: 14px; }
+      .container .rightBloc .code .alinea3 {
+        margin-left: 21px; }
+    .container .rightBloc .columns {
+      display: flex;
+      margin-top: 25px;
+      color: #F38F9A;
+      font-size: 20px; }
+      .container .rightBloc .columns .gauche {
+        width: 50%; }
+      .container .rightBloc .columns .droite {
+        width: 50%; }
+      .container .rightBloc .columns span {
+        margin-left: 70%; }
+      .container .rightBloc .columns .buttonV {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F38F9A;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        color: white;
+        font-size: 15px;
+        margin-left: 60%; }
+        .container .rightBloc .columns .buttonV:active {
+          background-color: #355E7E; }
+    .container .rightBloc input[type=range] {
+      -webkit-appearance: none;
+      margin: 18px 0;
+      width: 80%; }
+    .container .rightBloc input[type=range]:focus {
+      outline: none; }
+    .container .rightBloc input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 17px;
+      background: #355E7E;
+      border-radius: 7.5px; }
+    .container .rightBloc input[type=range]::-webkit-slider-thumb {
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+      background: #F38F9A;
+      -webkit-appearance: none;
+      margin-top: -10px; }
+    .container .rightBloc input[type=range]::-moz-range-track {
+      width: 100%;
+      height: 17px;
+      background: #355E7E;
+      border-radius: 7.5px; }
+    .container .rightBloc input[type=range]::-moz-range-thumb {
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+      background: #F38F9A;
+      -webkit-appearance: none;
+      margin-top: -10px; }
 
 @keyframes slide {
   from {
     top: 67%;
-    left: 47%;
-  }
+    left: 47%; }
   to {
     top: 67%;
-    left: 65%;
-  }
-}
+    left: 65%; } }
+
+/*# sourceMappingURL=oeuvre3.css.map */

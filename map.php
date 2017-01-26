@@ -41,6 +41,9 @@ if(empty($_SESSION['start'])) {
                 <label> ●</label>
                 <label> ●</label>
             </div>
+            <div class="analyse">
+                <p>ANALYSE</p>
+            </div>
         </div>
        <header>
             <img src="img/toddle_form.png" alt="toddle" class="toddle_form">

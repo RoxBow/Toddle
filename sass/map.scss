@@ -12,6 +12,15 @@
         height: 100%;
         overflow: auto;
         background-color: rgba(0,0,0,0.9);
+        .analyse{
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          top: 56%;
+          font-weight: 600;
+          color: white;
+          font-size: 5vw;
+        }
     }
     .content {
         height: 83%;
