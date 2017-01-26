@@ -20,6 +20,7 @@ var square;
 
 var squares, taille;
 
+var tutod=0;
 var tuto, tuto2;
 
 var currentColor = "000";
@@ -31,23 +32,31 @@ $("#nbdroit").text(nbDroite);
 var teinteFroide = ["4C4C6E", "375D8F", "0071B5", "728B74", "BEB140", "E5C200", "FFD700", "FFFF00"];
 var teinteChaude = ["644762", "96354C", "BA0000", "D44D00", "FBA800", "FEC100", "FFD700", "FFFF00"];
 
-// Arrêt des tutos
-$("body").one("click", function(){
-    $("#handclick").css("animation-play-state","paused");
-    $("#handclick").css("display","none");
-    clearInterval(tuto);
-    clearTimeout(tuto2);
-    $("#nbgauche").text(nbGauche);
-});
-
 //Animation pour tuto
 tuto = setInterval(function(){ myTimer() }, 3000);
 
 function myTimer() {
-    tuto2=setTimeout(function(){ $("#nbgauche").text(1); }, 250)+setTimeout(function(){ $("#nbgauche").text(2); }, 500) +setTimeout(function(){ $("#nbgauche").text(3); }, 1000)+setTimeout(function(){ $("#nbgauche").text(2); }, 1750)+setTimeout(function(){ $("#nbgauche").text(1); }, 2000)+setTimeout(function(){ $("#nbgauche").text(0); }, 2250);
+    setTimeout(function(){ $("#nbgauche").text(1); }, 250);
+    setTimeout(function(){ $("#nbgauche").text(2); }, 500);
+    setTimeout(function(){ $("#nbgauche").text(3); }, 1000);
+    setTimeout(function(){ $("#nbgauche").text(2); }, 1750);
+    setTimeout(function(){ $("#nbgauche").text(1); }, 2000);
+    setTimeout(function(){ $("#nbgauche").text(0); }, 2250);
 }
 
 $(document).ready(function() {
+
+    function touche() {
+          if (tutod==0) {
+            $("#handclick").css("animation-play-state","paused");
+            $("#handclick").css("display","none");
+            clearInterval(tuto);
+            $("#nbgauche").text(nbGauche);
+            tutod=1;
+          }
+        }
+
+    document.body.addEventListener('touchstart', touche, false);
 
     /* ### CHRONO ### */
     $("#sec").val(localSec);

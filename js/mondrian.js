@@ -57,6 +57,16 @@ function init() {
     $("#nombre").text(nbselect);
 }
 
+$("#poubelle").on("click", function(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx2.clearRect(0,0,canvas2.width,canvas2.height);
+    ctx3.clearRect(0,0,canvas3.width,canvas3.height);
+    ctx4.clearRect(0,0,canvas4.width,canvas4.height);
+    ctx5.clearRect(0,0,canvas5.width,canvas5.height);
+    ctx6.clearRect(0,0,canvas6.width,canvas6.height);
+    $(".code").text("CréerCadre();");
+});
+
 $("#couplus").on("click",function(){
     if (couselect==2) {
         couselect=0;
@@ -135,6 +145,16 @@ $(".rechercher").on("click",function(){
 
 $("#valider").on("click", function(){
     if (result==1 && result2==1 && result3==1 && result4==1 && result5==1 && result6==1) {
+        stopchrono(); // Arrête chrono
+        // Save time user in DB
+        $.ajax({
+            type: "POST",
+            url: "login.php",
+            data: { 'min': localStorage.getItem("minute"), 'sec': localStorage.getItem("seconde") },
+            success: function(data) {
+                console.log("Temps: "+localStorage.getItem("minute")+" minutes et "+localStorage.getItem("seconde")+" secondes"  );
+            }
+        });
         win();
     } else lose();
 });
@@ -196,6 +216,7 @@ function createLine(orientation, nombre, color){
                     ctx.strokeStyle = colorname;
                     ctx.stroke();
                 }
+                cPush(canvas);
                 
             }
             if (colorname==="red") {
@@ -222,6 +243,7 @@ function createLine(orientation, nombre, color){
                     ctx2.strokeStyle = colorname;
                     ctx2.stroke();
                 }
+                cPush(canvas2);
             }
             if (colorname==="blue") {
                 ctx3.clearRect(0,0,canvas3.width,canvas3.height);
@@ -247,6 +269,7 @@ function createLine(orientation, nombre, color){
                     ctx3.strokeStyle = colorname;
                     ctx3.stroke();
                 }
+                cPush(canvas3);
             }
         }
 
@@ -275,7 +298,7 @@ function createLine(orientation, nombre, color){
                     ctx4.strokeStyle = colorname;
                     ctx4.stroke();
                 }
-                
+                cPush(canvas4);
             }
             if (colorname==="red") {
                 ctx5.clearRect(0,0,canvas5.width,canvas5.height);
@@ -301,6 +324,7 @@ function createLine(orientation, nombre, color){
                     ctx5.strokeStyle = colorname;
                     ctx5.stroke();
                 }
+                cPush(canvas5);
             }
             if (colorname==="blue") {
                 ctx6.clearRect(0,0,canvas6.width,canvas6.height);
@@ -326,6 +350,7 @@ function createLine(orientation, nombre, color){
                     ctx6.strokeStyle = colorname;
                     ctx6.stroke();
                 }
+                cPush(canvas6);
             }
         }
     if (nombre!=0) {
@@ -339,6 +364,32 @@ function win(){
 }
 function lose(){
     $('#loose').fadeIn(500);
+}
+
+/*functions for undo*/
+
+$("#undo").on("click", function(){
+    cUndo();
+});
+
+var cPushArray = new Array();
+var cStep = -1;
+
+function cPush(can) {
+    cStep++;
+    if (cStep < cPushArray.length) { 
+        cPushArray.length = cStep; 
+    }
+    cPushArray.push(can.toDataURL());
+}
+
+function cUndo() {
+    if (cStep > 0) {
+        cStep--;
+        var canvasPic = new Image();
+        canvasPic.src = cPushArray[cStep];
+        canvasPic.onload = function () { ctx.drawImage(canvasPic, 0, 0); }
+    }
 }
 
 // When document is loaded

@@ -429,8 +429,6 @@ i {
     align-items: center;
     justify-content: center;
     margin-top: -5px; }
-    .container .result #but {
-      left: 62.5px; }
     .container .result #valider {
       right: 62.5px; }
   .container .result p {

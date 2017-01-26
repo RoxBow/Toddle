@@ -94,22 +94,6 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
         <div id="jeu">
           <img src="img/h3.png" alt="Mouvement à faire" id="handclick">
           <section class="leftBloc" id="leftBloc">
-              <div class="wrap">
-                <div class='content'>
-                    <h2>Indice</h2>
-                </div>
-              </div>
-              <div class="wrap2">
-                <div id="indicecontent" class='content'>
-                  <canvas id="canvas2"></canvas>
-                </div>
-              </div>
-              <div class="bouton2" id="indice">
-                <img src="img/bulb.png" alt="Objectif"/>
-              </div>
-              <div class="bouton2" id="but">
-                <img src="img/flag.png" alt="Indice"/>
-              </div>
               <canvas id="canvas" class="box drag-target">
               </canvas>
           </section>
@@ -127,12 +111,15 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                   </div>
               </div>
               <div class="etiqBloc" id="etiqBloc">
-                  <div class="etiq" id="vert">ChangerEnVert()</div>
+
+                  <div class="etiq" id="rectangle">CréerUnRectangle()</div>
+                  <div class="etiq" id="carre">MettreUnCarré()</div>
+                  <div class="etiq" id="rond">MettreUnCercle()</div>
+
                   <div class="etiq" id="rouge">ChangerEnJaune()</div>
                   <div class="etiq" id="jaune">ChangerEnBleu()</div>
-                  <div class="etiq" id="carre">MettreUnCarré()</div>
                   <div class="etiq" id="violet">ChangerEnViolet()</div>
-                  <div class="etiq" id="rond">MettreUnCercle()</div>
+
                   <div class="bouton" id="undo"><i class="fa fa-undo fa-2x" aria-hidden="true"></i></div>
                   <div class="bouton" id="valider"><i class="fa fa-check fa-2x" aria-hidden="true"></i></div>
               </div>

@@ -4,16 +4,14 @@ var leftBloc = document.getElementById("leftBloc");
 var indicecontent = document.getElementById("indicecontent");
 
 /*Le canvas de travail*/
-ctx.fillStyle="#ED1C24";
+ctx.fillStyle="#FFF";
 ctx.fillRect(0,0,canvas.width,canvas.height);
 
-/*Le canvas d'objectif*/
-ctx2.fillStyle="#002FA7";
-ctx2.fillRect(0,0,canvas2.width,canvas2.height);
-
-
-/*On récupère les données du canvas d'objectif*/
-var avalider = canvas2.toDataURL();
+var validation = 0;
+var verification = 0;
+var verification2 = 2;
+var cpush=0;
+var tuto=0;
 
 /* #####    CHRONO      ##### */
 
@@ -37,14 +35,24 @@ $(document).ready(function() {
 /*Intéractions sur la page*/
 
       $( document ).ready(function() {
-      	cPush();
+      	
+        /*######################################"*/
+
+        function touche() {
+          if (tuto==0) {
+            $("#handclick").css("animation-play-state","paused");
+            $("#handclick").css("display","none");
+            tuto=1;
+          }
+        }
+
+        document.body.addEventListener('touchstart', touche, false);
+
+        cPush();
         
         var etiqBloc = document.getElementById("etiqBloc");
-        var undo = document.getElementById("undo");
         var valider = document.getElementById("valider");
-        var indice = document.getElementById("indice");
-        var but = document.getElementById("but");
-        var element = document.getElementById("vert");
+        var element = document.getElementById("rectangle");
         var element2 = document.getElementById("rouge");
         var element3 = document.getElementById("jaune");
         var element4 = document.getElementById("carre");
@@ -56,54 +64,48 @@ $(document).ready(function() {
 
         var actif;
 
-        var hm = new Hammer(undo);
-        var hm2 = new Hammer(valider);
-        var hm3 = new Hammer(indice);
-        var hm4 = new Hammer(but);
-
-
-        	/*Réactions au touch*/
-
-        $(".overlay").click(function(){
-          if ($('.wrap2').hasClass('active')) {
-            $('.wrap2').toggleClass('active');
-            $('#but').toggleClass('bluebouton');
-          }
-          if ($('.wrap').hasClass('active')) {
-            $('.wrap').toggleClass('active');
-            $('#indice').toggleClass('bluebouton');
-          }
-          $(this).fadeOut(500);
-        });
-
-        hm.on('tap', function(e) {
+        $("#undo").on("click", function(){
+          if (cpush==0) {
             cUndo();
-            $("#undo").toggleClass('bluebouton');
-            setTimeout(function(){
-                $('#undo').toggleClass('bluebouton');
-              },150);
+          }
+          if (cpush==1) {
+            cUndo2();
+          }
         });
 
-        hm2.on('tap', function(e) {
-            console.log(e);
-            var validation = canvas.toDataURL();
-            $("#valider").toggleClass('bluebouton');
-            setTimeout(function(){
-                
-                $('#valider').toggleClass('bluebouton');
-              },150);
-            resemble(avalider).compareTo(validation).onComplete(function(data){
-              if (data.misMatchPercentage < 40.00) {
-                
-                $('#win').fadeIn(500);
-                  
-              } else{
-                $('#loose').fadeIn(500);
-                $('.wrap2').toggleClass('active');
-                $('#but').toggleClass('bluebouton');
-                $('.overlay').fadeToggle();
-              }
-            });
+        $("#valider").on("click", function(){
+          if (validation==0 && verification ==1) {
+            $( "#rectangle,#carre,#rond" ).css("z-index","5");
+            $( "#rouge,#jaune,#violet" ).css("display","block");
+            $( "#rectangle,#carre,#rond,#rouge,#jaune,#violet" ).animate({
+              left: "-=48.5%",
+            }, 500);
+            $( "#rectangle,#carre,#rond" ).css("display","none");
+            validation=1;
+            cpush=1;
+            cPush2();
+          } else{
+            if (validation==0 && verification==0) {
+              $('#loose').fadeIn(500);
+            }
+          }
+          if (validation==1 && verification2 ==0) {
+              $('#loose').fadeIn(500);
+          } else{
+            if (validation==1 && verification2==1) {
+              stopchrono(); // Arrête chrono
+              // Save time user in DB
+              $.ajax({
+                  type: "POST",
+                  url: "login.php",
+                  data: { 'min': localStorage.getItem("minute"), 'sec': localStorage.getItem("seconde") },
+                  success: function(data) {
+                      console.log("Temps: "+localStorage.getItem("minute")+" minutes et "+localStorage.getItem("seconde")+" secondes"  );
+                  }
+              });
+              $('#win').fadeIn(500);
+            }
+          }
         });
 
           // Redirection or not after level complete
@@ -122,53 +124,7 @@ $(document).ready(function() {
           $('#loose').fadeOut(500);
         });
 
-        hm3.on('tap', function(e) {
-          /*Affichage Pop-up*/
-
-          if ($('.wrap2').hasClass('active')) {
-
-            $('.wrap2').toggleClass('active');
-            $('#but').toggleClass('bluebouton');
-              /*Enlever les deux overlay suivant pour lanimation de 
-              transition entre les deux pop-up, si le noir doit disparaitre, ou pas*/
-            $('.overlay').fadeToggle();
-
-            setTimeout(function(){
-                $('.wrap').toggleClass('active');
-                $('#indice').toggleClass('bluebouton');
-                $('.overlay').fadeToggle();
-              },700);
-
-          } else{
-            $('.wrap').toggleClass('active');
-            $('#indice').toggleClass('bluebouton');
-             $('.overlay').fadeToggle();
-          }
-
-          /*Réaction du bouton*/
-        });
-
-        hm4.on('tap', function(e) {
-
-          if ($('.wrap').hasClass('active')) {
-
-            $('.wrap').toggleClass('active');
-            $('#indice').toggleClass('bluebouton');
-            $('.overlay').fadeToggle();
-
-              setTimeout(function(){
-                $('.wrap2').toggleClass('active');
-                $('#but').toggleClass('bluebouton');
-                $('.overlay').fadeToggle();
-              },700);
-          } else {
-            $('.wrap2').toggleClass('active');
-            $('#but').toggleClass('bluebouton');
-            $('.overlay').fadeToggle();
-          }
-        });
-
-          /*Drag & drop du bouton vert*/
+          /*Drag & drop du bouton rectangle*/
 
         var hammertime = new Hammer(element);
         hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
@@ -186,10 +142,12 @@ $(document).ready(function() {
           element.style.backgroundColor=bleuToddle;
           if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop && mouseY<canvas.height+offset.top)) {
             ctx.clearRect(0,0,canvas.width,canvas.height);
-            ctx.fillStyle="#276D2A";
+            ctx.fillStyle="#FFF";
             ctx.fillRect(0,0,canvas.width,canvas.height);
+            ctx.strokeRect(0,0,canvas.width,canvas.height);
             element.style.left = "51%";
             element.style.top = "52.5%";
+            verification=1;
             cPush();
           } else{
               element.style.left = "51%";
@@ -217,11 +175,12 @@ $(document).ready(function() {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
                   ctx.fillStyle="#FEEB34";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
-                  element2.style.left = "51%";
+                  element2.style.left = "2.5%";
                   element2.style.top = "52.5%";
-                  cPush();
+                  verification2=0;
+                  cPush2();
                 } else{
-                    element2.style.left = "51%";
+                    element2.style.left = "2.5%";
                     element2.style.top = "52.5%";
                 }
         });
@@ -235,8 +194,8 @@ $(document).ready(function() {
               mouseX = e.center.x;
               mouseY = e.center.y ;
               element3.style.backgroundColor=pinkToddle;
-              element3.style.left = (mouseX - element3.offsetWidth/2)+"px";
-              element3.style.top = (mouseY- element3.offsetHeight*2.75)+"px";
+              element3.style.left = (mouseX - element3.offsetWidth*1.65)+"px";
+              element3.style.top = (mouseY- element3.offsetHeight*2.65)+"px";
             });
             hammertime3.on('panend', function(e) {
             element3.style.backgroundColor=bleuToddle;
@@ -244,11 +203,12 @@ $(document).ready(function() {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
                   ctx.fillStyle="#002FA7";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
-                  element3.style.left = "51%";
+                  element3.style.left = "2.5%";
                   element3.style.top = "52.5%";
-                  cPush();
+                  verification2=1;
+                  cPush2();
                 } else{
-                    element3.style.left = "51%";
+                    element3.style.left = "2.5%";
                     element3.style.top = "52.5%";
                 }
             });
@@ -262,20 +222,22 @@ $(document).ready(function() {
               mouseX = e.center.x;
               mouseY = e.center.y ;
               element4.style.backgroundColor=pinkToddle;
-              element4.style.left = (mouseX - element4.offsetWidth*1.75)+"px";
-              element4.style.top = (mouseY- element4.offsetHeight*2.75)+"px";
+              element4.style.left = (mouseX - element4.offsetWidth/2)+"px";
+              element4.style.top = (mouseY- element4.offsetHeight*2.65)+"px";
         });
 
         hammertime4.on('panend', function(e) {
             element4.style.backgroundColor=bleuToddle;
                 if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop && mouseY<canvas.height+offset.top)) {
+                  ctx.clearRect(0,0,canvas.width,canvas.height);
+                  ctx.fillStyle="#FFF";
+                  ctx.fillRect(0,0,canvas.width,canvas.height);
                   ctx.beginPath();
-                  ctx.strokeStyle="white";
-                  ctx.lineWidth=4;
-                  ctx.rect(mouseX-50, mouseY-(window.innerHeight*15/100)-65, 100, 100);
+                  ctx.rect(mouseX-165, mouseY-(window.innerHeight*15/100)-165, 300, 300);
                   ctx.stroke();
                   element4.style.left = "51%";
                   element4.style.top = "52.5%";
+                  verification=0;
                   cPush();
                 } else{
                     element4.style.left = "51%";
@@ -293,18 +255,20 @@ $(document).ready(function() {
               mouseY = e.center.y ;
               element5.style.backgroundColor=pinkToddle;
               element5.style.left = (mouseX - element5.offsetWidth/2)+"px";
-              element5.style.top = (mouseY- element5.offsetHeight*4.5)+"px";
+              element5.style.top = (mouseY- element5.offsetHeight*4.15)+"px";
             });
             hammertime5.on('panend', function(e) {
                 element5.style.backgroundColor=bleuToddle;
                 if ((mouseX>leftBloc.offsetLeft && mouseX<canvas.width+leftBloc.offsetLeft)&&(mouseY>jeu.offsetTop&& mouseY<canvas.height+offset.top)) {
+                  ctx.clearRect(0,0,canvas.width,canvas.height);
+                  ctx.fillStyle="#FFF";
+                  ctx.fillRect(0,0,canvas.width,canvas.height);
                   ctx.beginPath();
-                  ctx.strokeStyle="white";
-                  ctx.lineWidth=4;
-                  ctx.arc(mouseX-25,mouseY-(window.innerHeight*15/100),100,0,2*Math.PI);
+                  ctx.arc(mouseX-25,mouseY-(window.innerHeight*15/100),165,0,2*Math.PI);
                   ctx.stroke();
                   element5.style.left = "51%";
                   element5.style.top = "52.5%";
+                  verification=0;
                   cPush();
                 } else{
                     element5.style.left = "51%";
@@ -321,8 +285,8 @@ $(document).ready(function() {
               mouseX = e.center.x;
               mouseY = e.center.y;
               element6.style.backgroundColor=pinkToddle;
-              element6.style.left = (mouseX - element6.offsetWidth*1.75)+"px";
-              element6.style.top = (mouseY- element6.offsetHeight*4.5)+"px";
+              element6.style.left = (mouseX - element6.offsetWidth*1.65)+"px";
+              element6.style.top = (mouseY- element6.offsetHeight*4.2)+"px";
         });
 
         hammertime6.on('panend', function(e) {
@@ -331,11 +295,12 @@ $(document).ready(function() {
                   ctx.clearRect(0,0,canvas.width,canvas.height);
                   ctx.fillStyle="#9F00FF";
                   ctx.fillRect(0,0,canvas.width,canvas.height);
-                  element6.style.left = "51%";
+                  element6.style.left = "2.5%";
                   element6.style.top = "52.5%";
-                  cPush();
+                  verification2=0;
+                  cPush2();
                 } else{
-                    element6.style.left = "51%";
+                    element6.style.left = "2.5%";
                     element6.style.top = "52.5%";
                 }
         });
@@ -362,5 +327,27 @@ function cUndo() {
         var canvasPic = new Image();
         canvasPic.src = cPushArray[cStep];
         canvasPic.onload = function () { ctx.drawImage(canvasPic, 0, 0); }
+    }
+}
+
+/*functions for undo*/
+
+var cPushArray2 = new Array();
+var cStep2 = -1;
+
+function cPush2() {
+    cStep2++;
+    if (cStep2 < cPushArray2.length) { 
+      cPushArray2.length = cStep2; 
+    }
+    cPushArray2.push(canvas.toDataURL());
+}
+
+function cUndo2() {
+    if (cStep2 > 0) {
+        cStep2--;
+        var canvasPic2 = new Image();
+        canvasPic2.src = cPushArray2[cStep2];
+        canvasPic2.onload = function () { ctx.drawImage(canvasPic2, 0, 0); }
     }
 }

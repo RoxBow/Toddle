@@ -521,9 +521,9 @@ i {
         height: 60px;
         border-radius: 30px;
         bottom: 10%;
-        margin-left: 8%; }
+        margin-left: 5%; }
         .container .rightBloc .controles .bouton2 > img {
-          width: 50%; }
+          width: 70%; }
         .container .rightBloc .controles .bouton2:active {
           background-color: #355E7E; }
       .container .rightBloc .controles .bouton {
@@ -535,12 +535,24 @@ i {
         height: 60px;
         border-radius: 30px;
         color: white;
-        margin-left: 14.5%; }
+        margin-left: 5%; }
         .container .rightBloc .controles .bouton:active {
           background-color: #355E7E; }
+      .container .rightBloc .controles #undo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F38F9A;
+        width: 60px;
+        height: 60px;
+        margin-left: 5%;
+        border-radius: 30px;
+        color: white; }
+        .container .rightBloc .controles #undo:active {
+          background-color: #355E7E; }
       .container .rightBloc .controles #ajouter {
-        width: 30%;
-        margin-left: 20%; }
+        width: 40%;
+        margin-left: 5%; }
       .container .rightBloc .controles .bva {
         color: #fff;
         background-color: #355E7E;

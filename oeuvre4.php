@@ -136,9 +136,10 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                     </div>
                 </div>
                 <div class="controles">
-                    <div class="bouton2" id="indice">
-                        <img src="img/bulb.png" alt="Objectif"/>
+                    <div class="bouton2" id="poubelle">
+                        <img src="img/poubelle.png" alt="Objectif"/>
                     </div>
+                    <div id="undo"><i class="fa fa-undo fa-2x" aria-hidden="true"></i></div>
                     <div id="ajouter">
                         <button class="bva">AJOUTER</button>
                     </div>

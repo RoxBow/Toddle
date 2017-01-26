@@ -129,7 +129,8 @@
             float: left;
             width: 48%;
             height: 92%;
-            overflow: hidden;
+            position: relative;
+            z-index: 10;
             .bouton2{
                 z-index: 1100;
                 display: flex;
@@ -147,142 +148,12 @@
             .bluebouton{
                 background-color: $blueToddle;
             }
-            #indice{
-                left: 3%;
-                position: absolute;
-            }
-            #but{
-                right: 53%;
-                position: absolute;
-            }
-                /*1ere Pop Up*/
-            .wrap {
-            z-index: 1000;
-              position: absolute;
-              overflow: hidden;
-              width: 40%;
-              height: 65%;
-              left: 5%;
-              top: 22%;
-              padding: 20px 50px;
-              display: block;
-              border-radius: 4px;
-              transition: all 0.5s;
-              visibility: hidden;
-              transform: translateY(20px);
-            }
-            .wrap .content {
-              opacity: 0;
-            }
-            .wrap:before {
-              position: absolute;
-              width: 1px;
-              height: 1px;
-              background: white;
-              content: "";
-              top: 100%;
-              left: 0;
-              color: #fff; 
-              border-radius: 50%;
-              -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-              transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-            }
-            .wrap.active {
-              display: block;
-              visibility: visible;
-              transition: all 600ms;
-              transform: translateY(0px);
-              transition: all 0.5s;
-              border: 7px solid $pinkToddle;
-            }
-            .wrap.active:before {
-              height: 2000px;
-              width: 2000px;
-              border-radius: 75%;
-              top: 50%;
-              left: 50%;
-              margin-left: -1000px;
-              margin-top: -1000px;
-              display: block;
-              -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-              transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-            }
-            .wrap.active .content {
-              position: relative;
-              z-index: 1;
-              opacity: 1;
-              transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-            }
-            /*2eme Pop up*/
-            .wrap2 {
-                z-index: 1000;
-              position: absolute;
-              overflow: hidden;
-              width: 40%;
-              height: 65%;
-              left: 5%;
-              top: 22%;
-              padding: 10px;
-              display: block;
-              border-radius: 4px;
-              transition: all 0.5s;
-              visibility: hidden;
-              transform: translateY(20px);
-            }
-            #indicecontent{
-                width: 100%;
-                height: 100%;
-            }
-            .wrap2 .content {
-              opacity: 0;
-            }
-            .wrap2:before {
-              position: absolute;
-              width: 1px;
-              height: 1px;
-              background: white;
-              content: "";
-              top: 100%;
-              left: 100%;
-              color: #fff; 
-              border-radius: 50%;
-              -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-              transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-            }
-            .wrap2.active {
-              display: block;
-              visibility: visible;
-              transition: all 600ms;
-              transform: translateY(0px);
-              transition: all 0.5s;
-              border: 5px solid $pinkToddle;
-            }
-            .wrap2.active:before {
-              height: 2000px;
-              width: 2000px;
-              border-radius: 50%;
-              top: 50%;
-              left: 50%;
-              margin-left: -1000px;
-              margin-top: -1000px;
-              display: block;
-              -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-              transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
-            }
-            .wrap2.active .content {
-              position: relative;
-              z-index: 1;
-              opacity: 1;
-              transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-              width: 100%;
-              height: 100%;
-            }
         }
         .rightBloc {
             float: right;
             width: 50%;
             height: 92%;
-            /*margin-right: 2%;*/
+            overflow: hidden;
             h2 {
                 text-align: center;
                 padding: 5px;
@@ -294,15 +165,15 @@
             }
             .codeBloc {
                 /*text-align: justify;*/
-                font-family: "GothamRounded", sans-serif;
-                font-size: 16px;
+                
+                font-size: 19px;
                 padding: 15px;
                 bottom: 0;
                 height: 45%;
                 h2{
-                    color: $pinkToddle;
-                    font-weight: bold;
-                    font-size: 32px;
+                  color: $pinkToddle;
+                  font-weight: bold;
+                  font-size: 32px;
                 }
                 .consignes{
                   padding-top: 4%;
@@ -326,22 +197,22 @@
                 .bluebouton{
                     background-color: $blueToddle;
                 }
+                .hidden-gauche{
+                }
+                .hidden-droit{
+                }
                 .etiq {
-                    cursor: move;
+                    z-index: 15;
                     border-radius: 25px;
-                    width: 20%;
+                    width: 43%;
                     padding: 15px;
                     margin: 10px auto;
                     background: $blueToddle;
                     color: #fff;
-                    font-family: "GothamRounded", sans-serif;
                     text-align: center;
-                    /*Pas de position: relative car jai besoin pour le drag&drop, 
-                    que la position absolute des etiquettes prennent en compte 
-                    le parent de la div de droite, c-à-d la div jeu pour avoir de bonnes coordonées pour le drop*/
                 }
                     /*Les pourcentages de positionnement sont en relation avec le div avec l'id: jeu et non relatif à la div de classe:rightBloc*/
-                #vert{
+                #rectangle{
                     position: absolute;
                     margin-top: 2.5%;
                     margin-left: 1.5%;
@@ -349,17 +220,19 @@
                 #rouge{
                     position: absolute;
                     margin-top: 2.5%;
-                    margin-left: 25.5%;
+                    margin-left: 50%;
+                    display: none;
                 }
                 #jaune{
                     position: absolute;
                     margin-top: 10%;
-                    margin-left: 1.5%;
+                    margin-left: 50%;
+                    display: none;
                 }
                 #carre{
                     position: absolute;
                     margin-top: 10%;
-                    margin-left: 25.5%;
+                    margin-left: 1.5%;
                 }
                 #rond{
                     position: absolute;
@@ -369,7 +242,8 @@
                 #violet{
                     position: absolute;
                     margin-top: 17.5%;
-                    margin-left: 25.5%;
+                    margin-left: 50%;
+                    display: none;
                 }
                 #undo{
                     position: absolute;

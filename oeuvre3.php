@@ -97,12 +97,6 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 <br>
             </div>
             <div class="leftBloc">
-                <div class="bouton2" id="indice">
-                    <img src="img/bulb.png" alt="Objectif"/>
-                </div>
-                <div class="bouton2" id="but">
-                    <img src="img/flag.png" alt="Indice"/>
-                </div>
                 <div class="souscontainer">
                     <div class="content">
                         <canvas id="myCanvas"></canvas>

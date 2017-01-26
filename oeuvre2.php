@@ -100,9 +100,6 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             <div class="button" id="moins"><p>-</p></div>
 
             <div class="result">
-                <div class="buttonV" id="but">
-                    <img src="img/flag.png" alt="Indice"/>
-                </div>
                 <p class="bleu">DessinerLignes(<span id="nbLignes" class="rose"></span>)</p>
                 <div class="buttonV" id="valider">
                     <i class="fa fa-check fa-2x" aria-hidden="true"></i>

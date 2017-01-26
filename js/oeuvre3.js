@@ -3,6 +3,8 @@ var range2 = 0;
 var range3 = 0;
 var range4 = 0;
 
+
+var tuto = 0;
 /* #####    CHRONO      ##### */
 
 // Update time script
@@ -20,6 +22,16 @@ $(document).ready(function() {
     $("#sec").val(localSec);
     $("#min").val(localMin);
     chrono();
+
+    function touche() {
+          if (tuto==0) {
+            $("#handclick").css("animation-play-state","paused");
+            $("#handclick").css("display","none");
+            tuto=1;
+          }
+        }
+
+    document.body.addEventListener('touchstart', touche, false);
 });
 
 /* #####    CHRONO END     ##### */
@@ -27,6 +39,16 @@ $(document).ready(function() {
 $("#valider").on("click",function(){
 	console.log(range1+","+range2+","+range3+","+range4);
     if (test(range1,range2,range3,range4)){
+    	stopchrono(); // Arrête chrono
+        // Save time user in DB
+        $.ajax({
+            type: "POST",
+            url: "login.php",
+            data: { 'min': localStorage.getItem("minute"), 'sec': localStorage.getItem("seconde") },
+            success: function(data) {
+                console.log("Temps: "+localStorage.getItem("minute")+" minutes et "+localStorage.getItem("seconde")+" secondes"  );
+            }
+        });
         win();
     } else {
         lose();
