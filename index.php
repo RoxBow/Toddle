@@ -15,7 +15,7 @@
 </head>
 <body>
     <?php
-        include 'credits.php';
+        include 'fr/credits.php';
     ?>
     <div class="container">
           <div class="cs-loader-inner">
@@ -44,7 +44,7 @@
             </button>
         </div>
         <?php
-            include 'footer.php';
+            include 'fr/footer.php';
         ?>
     </div>
     <script src="js/jquery-3.1.1.min.js"></script>
@@ -75,10 +75,10 @@
              // button launch experience
             $("#validLang .fa", ".container").click(function () {
                 if($(".selected").attr("value") == "french"){
-                    location.href = "name.php";
+                    location.href = "fr/name.php";
                 }
                 else if($(".selected").attr("value") == "english") {
-                    location.href = "name.php";
+                    location.href = "en/name.php";
                 }
             });
         });
