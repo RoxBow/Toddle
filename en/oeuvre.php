@@ -39,44 +39,45 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
       <div id="win">
           <div class="content-win">
             <p class="title">
-              FÉLICITATIONS !
+              WELL DONE !
             </p>
             <hr>
             <p class="text-win">
-              Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+              Good job <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-              Tu as réussi le premier défi !
-            </p>
-            <br>
-            <p>
-              Récapitulons, ce que tu viens de mettre en application: <br>
+              You’ve succeeded in solving the first puzzle !
             </p>
             <br>
             <p>
-              Tu as retrouvé l'&#156;uvre de Yves Klein en utilisant <span class="bold">le fonctions</span>:
+              Let’s sum up what you just have put together :
+             <br>
+            </p>
+            <br>
+            <p>
+              You have reproduced Klein Blue by the French artist Yves Klein by using the <span class="bold">functions</span>:
               <br>
-              <span class="name">ChangerEnBleu</span><span class="parentheses">()</span> et <span class="name">RemplirEnBleu2</span><span class="parentheses">()</span>.
+              <span class="name">CreateRectangle</span><span class="parentheses">()</span> et <span class="name">FillInBlue</span><span class="parentheses">()</span>.
             </p>
             
-            <button class="continuer">DÉFI SUIVANT</button>
+            <button class="continuer">NEXT</button>
           </div>
       </div>
       <div id="loose">
           <div class="content-loose">
             <p class="title">
-              RAT&#201;&nbsp;!
+              OOPS !
             </p>
             <hr>
             <br>
             <p class="text-loose">
-              Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+              What a shame <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-                Regarde bien l'oeuvre et recommence !
+                Be sure to observe the artwork again and try again !
             </p>
             <br>
-            <button class="rechercher">Retour</button>
+            <button class="rechercher">Back</button>
           </div>
       </div>
        <header>
@@ -88,7 +89,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                     <input type="text" name="minute" id="min">min
                     <input type="text" name="seconde" id="sec">s
                 </form>
-                <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
+                <p class="defi">Challenge <span id="nbrDefi"></span>/5</p>
            </div>
         </header>
         <div id="jeu">
@@ -99,26 +100,26 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
           </section>
           <section class="rightBloc">
               <div class="codeBloc">
-                  <h2>DÉFI <span id="levelUser"></span>/5</h2><br>
+                  <h2>CHALLENGE <span id="levelUser"></span>/5</h2><br>
                   <div class="consignes">
                       <p>
-                        Aide-toi des <span class="bold">fonctions algorithmiques</span> mises à ta disposition ci-dessous, pour recréer l'&#156;uvre de Yves Klein.
+                        Using <span class="bold">algorithmic functions</span> available below, reproduce Yves Klein’s piece of art.
                       </p>
                       <br>
                       <p id="secondeconsigne">
-                        Glisse <span class="bold">la fonction</span> qui te semble appropriée dans la zone pour déterminer le cadre de l'&#156;uvre que tu as devant toi.
+                          Drag and drop the <span class="bold">function</span> that seems appropriate to reproduce the artwork.
                       </p>
                   </div>
               </div>
               <div class="etiqBloc" id="etiqBloc">
 
-                  <div class="etiq" id="rectangle">CréerUnRectangle()</div>
-                  <div class="etiq" id="carre">CréerUnCarré()</div>
-                  <div class="etiq" id="rond">CréerUnCercle()</div>
+                  <div class="etiq" id="rectangle">CreateRectangle()</div>
+                  <div class="etiq" id="carre">CreateSquare()</div>
+                  <div class="etiq" id="rond">CreateCircle()</div>
 
-                  <div class="etiq" id="rouge">RemplirEnBleu1()</div>
-                  <div class="etiq" id="jaune">RemplirEnBleu2()</div>
-                  <div class="etiq" id="violet">RemplirEnBleu3()</div>
+                  <div class="etiq" id="rouge">FillInBlue1()</div>
+                  <div class="etiq" id="jaune">FillInBlue2()</div>
+                  <div class="etiq" id="violet">FillInBlue3()</div>
 
                   <div class="bouton" id="undo"><i class="fa fa-undo fa-2x" aria-hidden="true"></i></div>
                   <div class="bouton" id="valider"><i class="fa fa-check fa-2x" aria-hidden="true"></i></div>

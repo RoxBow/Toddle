@@ -74,7 +74,12 @@ $(window).bind('beforeunload',function(){
             $( "#rouge,#jaune,#violet" ).css("display","block");
             $( "#secondeconsigne").toggle("slide");
             setTimeout(function(){
-              $( "#secondeconsigne").text("Maintenant que le cadre est déterminé, glisse la bonne couleur dans ton rectangle pour finaliser le tableau de Yves Klein.");
+                if(dir == "fr"){
+                    $("#secondeconsigne").text("Maintenant que le cadre est déterminé, glisse la bonne couleur dans ton rectangle pour finaliser le tableau de Yves Klein.");
+                }
+                else {
+                    $("#secondeconsigne").text("Now that you have set up the border, drag and drop the right colour in the rectangle pour to complete Yves Klein's painting");
+                }
               $( "#secondeconsigne").toggle("slide");
             }, 1000);
               $( "#rectangle,#carre,#rond,#rouge,#jaune,#violet" ).animate({

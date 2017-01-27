@@ -79,7 +79,13 @@ function getFile() {
                     else {
                         $("#overlayChargement").fadeOut(500);
                         console.log(data.misMatchPercentage + " de différence, il doit être supérieur à 50%.");
-                        $(".container").append("<div class='badPicture'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x rose'></i><i class='fa fa-times fa-stack-1x fa-inverse' aria-hidden='true'></i></span><p>Ce n'est pas la bonne oeuvre.</p></div>");
+                        if(dir == "fr"){
+                            $(".container").append("<div class='badPicture'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x rose'></i><i class='fa fa-times fa-stack-1x fa-inverse' aria-hidden='true'></i></span><p>Ce n'est pas la bonne oeuvre.</p></div>");
+                        }
+                        else {
+                            $(".container").append("<div class='badPicture'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x rose'></i><i class='fa fa-times fa-stack-1x fa-inverse' aria-hidden='true'></i></span><p>This is not the right one.</p></div>");
+                        }
+                        
                         $(".badPicture").animate({
                             top: "3%"
                           }, 1500, function() {

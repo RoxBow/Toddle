@@ -13,15 +13,15 @@ if(isset($_POST['pseudo'])){
     // Check error pseudo
     $error = null;
     if (strlen($pseudo) < 3){
-        $error = "Pseudo trop court (entre 3 et 10 caractères).";
+        $error = "This nickname is too short (betwwen 3 et 10 characters).";
     }
     else if (strlen($pseudo) > 10){
-        $error = "Pseudo trop long (entre 3 et 10 caractères).";
+        $error = "This nickname is too long (betwwen 3 et 10 characters).";
     }
     else {
         while ($row = $result->fetch(PDO::FETCH_ASSOC)){
             if(strtolower($pseudo) === strtolower($row['pseudo']) ){
-                $error = "Pseudo déjà utilisé.";
+                $error = "Nickname already used.";
                 break;
             }
         }
@@ -60,8 +60,8 @@ if(isset($_POST['pseudo'])){
         </header>
         <div class="container_form">
             <form action="" method="post">
-                <label for="pseudo">Choisis un pseudo</label>
-                <input required type="text" name="pseudo" id="pseudo" placeholder="Pseudo" autocomplete="off" />
+                <label for="pseudo">Choose a nickname</label>
+                <input required type="text" name="pseudo" id="pseudo" placeholder="Nickname" autocomplete="off" />
                 <p class="error"> <?php echo $error; ?></p>
                 <button name="submit" type="submit" >
                     <span class="fa-stack ">
