@@ -17,13 +17,13 @@ if( !isset($_SESSION['pseudo']) ){
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="stylesheets/tuto.css" media="all">
+    <link rel="stylesheet" href="../stylesheets/tuto.css" media="all">
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
-            <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
+            <img src="../img/toddle_form.png" alt="toddle" class="toddle_form">
+            <img src="../img/toddle_text.png" alt="toddle" class="toddle_text">
             <div class="blockRight">
                 <p class="name"><?php echo $_SESSION['pseudo']; ?></p>
             </div>
@@ -38,7 +38,7 @@ if( !isset($_SESSION['pseudo']) ){
                     <p class="number">1</p>
                     <hr>
                     <p>Aide-toi du plan de l’étage mis à ta disposition et pars à la recherche du tableau demandé !</p>
-                    <img src="img/tuto1.gif" alt="map" class="map">
+                    <img src="../img/tuto1.gif" alt="map" class="map">
                     <p>La salle où tu dois te rendre clignotera sur le plan !</p>
                     <button class="understood">OK</button>
                 </div>
@@ -50,7 +50,7 @@ if( !isset($_SESSION['pseudo']) ){
                     <hr>
                     <p>Tu penses avoir trouvé l’&#156;uvre grâce aux indices et au plan ? Clique sur le bouton "trouvé" et prends-la en photo !</p>
                     <div class="group_gif">
-                        <img src="img/tuto2_1.gif" alt="trouvé"><img src="img/tuto2_2.gif" alt="photo">
+                        <img src="../img/tuto2_1.gif" alt="trouvé"><img src="../img/tuto2_2.gif" alt="photo">
                     </div>
                     <p>Nous te dirons alors si tu es au bon endroit !</p>
                     <button class="understood">OK</button>
@@ -71,17 +71,17 @@ if( !isset($_SESSION['pseudo']) ){
                             <p>Aide toi des indices</p>
                         </li>
                        <li>
-                            <img src="img/retour.png" alt="fleche">
+                            <img src="../img/retour.png" alt="fleche">
                             <p>Annule tes erreurs</p>
                         </li>
                         <li>
-                            <img src="img/poubelleBlue.png" alt="poubelle">
+                            <img src="../img/poubelleBlue.png" alt="poubelle">
                             <p>Repars de zéro si tu es perdu</p>
                         </li>
                         
                         
                         <li>
-                            <img src="img/valide.png" alt="coche">
+                            <img src="../img/valide.png" alt="coche">
                             <p>Valide si tu penses avoir trouvé</p>
                         </li>
                     </ul>
@@ -94,11 +94,11 @@ if( !isset($_SESSION['pseudo']) ){
                     <p class="number spec">4</p>
                     <hr>
                     <div class="blocL4">
-                        <span class="containerImg"><img src="img/chrono.png" alt="chrono"></span>
+                        <span class="containerImg"><img src="../img/chrono.png" alt="chrono"></span>
                         <p>Un chronomètre débutera dès le début de l'aventure !</p>
                     </div>
                     <div class="blocL4">
-                        <span class="containerImg"><img src="img/gift.png" alt="cadeau"></span>
+                        <span class="containerImg"><img src="../img/gift.png" alt="cadeau"></span>
                         <p>Les trois plus rapides d'entre vous auront le droit à une surprise !</p>
                     </div>
                     <button class="understood go">GO</button>
@@ -107,8 +107,8 @@ if( !isset($_SESSION['pseudo']) ){
         </section>
     </div>
     
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/global.js"></script>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/global.js"></script>
     <script type="application/javascript">
         $(document).ready(function () {
             /* ### TUTO ### */

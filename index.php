@@ -15,7 +15,7 @@
 </head>
 <body>
     <?php
-        include 'fr/credits.php';
+        include 'credits.php';
     ?>
     <div class="container">
           <div class="cs-loader-inner">
@@ -44,7 +44,7 @@
             </button>
         </div>
         <?php
-            include 'fr/footer.php';
+            include 'footer.php';
         ?>
     </div>
     <script src="js/jquery-3.1.1.min.js"></script>

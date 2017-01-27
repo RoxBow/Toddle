@@ -1,6 +1,6 @@
 <?php
 
-include 'login.php';
+include '../login.php';
 
 session_start();
 
@@ -131,7 +131,7 @@ if(isset($_POST['mail'])){
                       </tr>
                       <tr>
                         <td style="vertical-align:top;">
-                          <button style="background:#355E7E;padding:2% 3%;font-size:1.4em;font-weight:600;border:none;border-radius:30px;margin:3% 0 0 0;cursor:pointer;"><a href="http://vincentdeplais.fr/project/avec/index.php" style="text-decoration:none;color:#fff;">VOIR LE CLASSEMENT</a></button>
+                          <button style="background:#355E7E;padding:2% 3%;font-size:1.4em;font-weight:600;border:none;border-radius:30px;margin:3% 0 0 0;cursor:pointer;"><a href="http://vincentdeplais.fr/toddle/index.php" style="text-decoration:none;color:#fff;">VOIR LE CLASSEMENT</a></button>
                         </td>
                       </tr>
                     </tbody>
@@ -159,8 +159,8 @@ if(isset($_POST['mail'])){
                   <table border="0" cellpadding="0" cellspacing="0" class="footer" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;margin:3% 0;text-align:center;">
                     <tr>
                       <td style="vertical-align:top;">
-                        <img src="http://vincentdeplais.fr/project/avec/img/logo_color_avec.png" alt="agence" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;display:inline-block;width:20%;vertical-align:middle;">
-                        <img src="http://vincentdeplais.fr/project/avec/img//logo_pompidou.png" alt="pompidou" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;display:inline-block;width:20%;vertical-align:middle;">
+                        <img src="http://vincentdeplais.fr/toddle/img/logo_color_avec.png" alt="agence" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;display:inline-block;width:20%;vertical-align:middle;">
+                        <img src="http://vincentdeplais.fr/toddle/img//logo_pompidou.png" alt="pompidou" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;display:inline-block;width:20%;vertical-align:middle;">
                       </td>
                     </tr>
                   </table>
@@ -220,7 +220,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="stylesheets/result.css" media="all">
+    <link rel="stylesheet" href="../stylesheets/result.css" media="all">
 </head>
 <body>
     <?php
@@ -228,8 +228,8 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
     ?>
     <div class="container">
        <header>
-            <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
-            <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
+            <img src="../img/toddle_form.png" alt="toddle" class="toddle_form">
+            <img src="../img/toddle_text.png" alt="toddle" class="toddle_text">
         </header>
         <div class="content">
             <p class="announce">Félicitations <span><?php echo $_SESSION['pseudo']; ?></span> !<br>Tu as résolu tous les défis<br>en <span id="minResult"><?php echo $_SESSION['min'];?> minutes</span>  et <span id="secResult"><?php echo $_SESSION['sec'];?> secondes</span>.<br>Tu termines à la <span><?php echo $_SESSION['nbrUser'].$place; ?></span> position </p>
@@ -308,9 +308,9 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
         
     </div> <!-- .container -->
   
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/global.js"></script>
-    <script src="js/chrono.js"></script>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/chrono.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
               $(".blocEmail").animate({

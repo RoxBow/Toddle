@@ -4,12 +4,12 @@
     <div class="content">
         
         <div class="ariane">
-            <img class="apoint" id="a1" src="../img/pc-plein.png" alt="rond"/>
-            <img class="apoint" id="a2" src="../img/pc-vide.png" alt="rond"/>
-            <img class="apoint" id="a3" src="../img/pc-vide.png" alt="rond"/>
+            <img class="apoint" id="a1" src="img/pc-plein.png" alt="rond"/>
+            <img class="apoint" id="a2" src="img/pc-vide.png" alt="rond"/>
+            <img class="apoint" id="a3" src="img/pc-vide.png" alt="rond"/>
         </div>
-        <img src="../img/chevron.png" class="chevron" id="chevronDroite" alt="chevron">
-        <img src="../img/chevron.png" class="chevron" id="chevronGauche" alt="chevron">
+        <img src="img/chevron.png" class="chevron" id="chevronDroite" alt="chevron">
+        <img src="img/chevron.png" class="chevron" id="chevronGauche" alt="chevron">
         <div class="texte">
             <div id="sous-texte">
                 <div id="first-view">
@@ -114,7 +114,7 @@
         
         <div class="bottom">
             <div class="flexbottom">
-                <img src="../img/logo_gris_avec.png" class="logo">
+                <img src="img/logo_gris_avec.png" class="logo">
                 <div>
                     <p class="bold antoine">ANTOINE LAURENS</p>
                     <p class="rose fct">Concepteur<br>Graphiste</p>

@@ -24,7 +24,7 @@ if(empty($_SESSION['start'])) {
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="stylesheets/map.css" media="all">
+    <link rel="stylesheet" href="../stylesheets/map.css" media="all">
 </head>
 <body>
     <?php
@@ -46,8 +46,8 @@ if(empty($_SESSION['start'])) {
             </div>
         </div>
        <header>
-            <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
-            <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
+            <img src="../img/toddle_form.png" alt="toddle" class="toddle_form">
+            <img src="../img/toddle_text.png" alt="toddle" class="toddle_text">
             <div class="blockRight">
                 <p class="name"><?php echo $_SESSION['pseudo']." - "; ?></p>
                 <form name="chrono" class="chrono">
@@ -58,7 +58,7 @@ if(empty($_SESSION['start'])) {
             </div>
         </header>
         <div class="content">
-            <object data="img/map.svg" type="image/svg+xml" id="map"></object> <!-- Import map -->
+            <object data="../img/map.svg" type="image/svg+xml" id="map"></object> <!-- Import map -->
             <div class="group_btn">
                 <form>
                     <div class="container_input">
@@ -91,11 +91,11 @@ if(empty($_SESSION['start'])) {
         <!-- POPUP -->
     </div>
     
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/global.js"></script>
-    <script src="js/map.js"></script>
-    <script src="js/chrono.js"></script>
-    <script src="js/resemble.js"></script>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/map.js"></script>
+    <script src="../js/chrono.js"></script>
+    <script src="../js/resemble.js"></script>
     <script>
         console.log("Level: "+localStorage.getItem("levelUser"));
         console.log("ROOM: "+currentRoom);

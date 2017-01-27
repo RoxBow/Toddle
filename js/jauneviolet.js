@@ -202,7 +202,7 @@ $("#valider").on("click", function(){
         // Save time user in DB
         $.ajax({
             type: "POST",
-            url: "login.php",
+            url: "../login.php",
             data: { 'min': $("#min").val(), 'sec': $("#sec").val() },
             success: function(data) {
                 console.log("Temps: "+$("#min").val()+" minutes et "+$("#sec").val()+" secondes"  );

@@ -21,14 +21,14 @@ var countSlider = 0;
 
 switch (levelUser) {
     case "1":
-        currentArt = "img/kleinBlue.png";
+        currentArt = "../img/kleinBlue.png";
         currentRoom = roomKlein;
         $("#levelUser").text(levelUser);
         $("#indiceMap",".popup2").html("La première &#156;uvre devant laquelle tu dois te rendre, est une oeuvre monochrome d'un artiste français du XXe siècle. Il est connu pour son travail autour d'une couleur particulière.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "2":
-        currentArt = "img/masomenos.png";
+        currentArt = "../img/masomenos.png";
         currentRoom = roomMasomenos;
         $("#levelUser").text(levelUser);
         $("#nbrDefi",".defi").text(levelUser);
@@ -36,21 +36,21 @@ switch (levelUser) {
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "3":
-        currentArt = "img/trames4.png";
+        currentArt = "../img/trames4.png";
         currentRoom = roomTram4;
         $("#levelUser").text(levelUser);
         $("#indiceMap",".popup2").html("La troisième &#156;uvre devant laquelle tu dois te rendre, est un tableau en noir et blanc d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. La structure de ce tableau est très précise puisque les minces lignes qui le composent sont disposées mathématiquement sur la toile.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "4":
-        currentArt = "img/mondrian.png";
+        currentArt = "../img/mondrian.png";
         currentRoom = roomMondrian;
         $("#levelUser").text(levelUser);
         $("#indiceMap",".popup2").html("La quatrième &#156;uvre devant laquelle tu dois te rendre, est un tableau d’un peintre néerlandais du XXe siècle. Le tableau est composés de lignes aux couleur primaires, pouvant rappeler le plan d’une célèbre ville américaine.");
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "5":
-        currentArt = "img/jauneauviolet.png";
+        currentArt = "../img/jauneauviolet.png";
         currentRoom = roomJauneViolet;
         $("#levelUser").text(levelUser);
         $("#indiceMap",".popup2").html("La dernière &#156;uvre devant laquelle tu dois te rendre, est un double tableau d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. Ce tableau aborde le dégradé grâce à des formes géométriques simples.");
@@ -132,18 +132,18 @@ $(document).ready(function () {
 //Changements points crédits
 function changeRond(){
     if (countSlider==0) {
-        $("#a1").attr("src","img/pc-plein.png");
-        $("#a2").attr("src","img/pc-vide.png");
-        $("#a3").attr("src","img/pc-vide.png");
+        $("#a1").attr("src","../img/pc-plein.png");
+        $("#a2").attr("src","../img/pc-vide.png");
+        $("#a3").attr("src","../img/pc-vide.png");
     } else{
         if (countSlider==1) {
-            $("#a1").attr("src","img/pc-vide.png");
-            $("#a2").attr("src","img/pc-plein.png");
-            $("#a3").attr("src","img/pc-vide.png");
+            $("#a1").attr("src","../img/pc-vide.png");
+            $("#a2").attr("src","../img/pc-plein.png");
+            $("#a3").attr("src","../img/pc-vide.png");
         } else{
-            $("#a1").attr("src","img/pc-vide.png");
-            $("#a2").attr("src","img/pc-vide.png");
-            $("#a3").attr("src","img/pc-plein.png");
+            $("#a1").attr("src","../img/pc-vide.png");
+            $("#a2").attr("src","../img/pc-vide.png");
+            $("#a3").attr("src","../img/pc-plein.png");
         }
     }
 }
@@ -159,7 +159,7 @@ function doOnOrientationChange() {
         $(".orientation").remove();
         break;
       case 0:
-        $(".container").append("<div class='overlay orientation'><div class='content-orientation'><img src='img/orientation.png' alt='tablet'><p>Tourne la tablette</p></div></div>");
+        $(".container").append("<div class='overlay orientation'><div class='content-orientation'><img src='../img/orientation.png' alt='tablet'><p>Tourne la tablette</p></div></div>");
         break;
     }
 }

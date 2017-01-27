@@ -1,6 +1,6 @@
 <?php
 
-include 'login.php';
+include '../login.php';
 
 if(isset($_POST['pseudo'])){
     // Get all pseudo users
@@ -47,7 +47,7 @@ if(isset($_POST['pseudo'])){
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="stylesheets/name.css" media="all">
+    <link rel="stylesheet" href="../stylesheets/name.css" media="all">
 </head>
 <body>
     <?php
@@ -55,8 +55,8 @@ if(isset($_POST['pseudo'])){
     ?>
     <div class="container">
         <header>
-            <img src="img/toddle_form.png" alt="toddle" class="toddle_form">
-            <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
+            <img src="../img/toddle_form.png" alt="toddle" class="toddle_form">
+            <img src="../img/toddle_text.png" alt="toddle" class="toddle_text">
         </header>
         <div class="container_form">
             <form action="" method="post">
@@ -76,9 +76,9 @@ if(isset($_POST['pseudo'])){
         ?>
     </div>
     
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/global.js"></script>
-    <script src="js/chrono.js"></script>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/chrono.js"></script>
     <script>
         // Reset timer
         localStorage.setItem("seconde", 0);
