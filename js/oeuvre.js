@@ -77,7 +77,7 @@ $(window).bind('beforeunload',function(){
               $( "#secondeconsigne").text("Maintenant que le cadre est déterminé, glisse la bonne couleur dans ton rectangle pour finaliser le tableau de Yves Klein.");
               $( "#secondeconsigne").toggle("slide");
             }, 1000);
-            $( "#rectangle,#carre,#rond,#rouge,#jaune,#violet" ).animate({
+              $( "#rectangle,#carre,#rond,#rouge,#jaune,#violet" ).animate({
               left: "-=48.5%",
             }, 500);
             $( "#rectangle,#carre,#rond" ).css("display","none");
@@ -87,13 +87,16 @@ $(window).bind('beforeunload',function(){
           } else{
             if (validation==0 && verification==0) {
               $('#loose').fadeIn(500);
-            }
-          }
-          if (validation==1 && verification2 ==0) {
-              $('#loose').fadeIn(500);
-          } else{
-            if (validation==1 && verification2==1) {
-              $('#win').fadeIn(500);
+            } else{
+                if (validation==1 && verification2 ==0) {
+                    $('#loose').fadeIn(500);
+                } else{
+                  if (validation==1 && verification2==1) {
+                    $('#win').fadeIn(500);
+                  } else{
+                    $('#loose').fadeIn(500);
+                  }
+                }
             }
           }
         });

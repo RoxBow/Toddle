@@ -28,7 +28,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="stylesheets/jauneviolet.css" media="all">
+    <link rel="stylesheet" href="../stylesheets/jauneviolet.css" media="all">
 </head>
 <body>
     <?php
@@ -74,8 +74,8 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </div>
         </div>
         <header>
-            <img src="img/toddle_form.png" alt="toddle" class="toddle_form" id="skip">
-            <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
+            <img src="../img/toddle_form.png" alt="toddle" class="toddle_form" id="skip">
+            <img src="../img/toddle_text.png" alt="toddle" class="toddle_text">
             <div class="blockRight">
                 <p class="name"><?php echo $_SESSION['pseudo']." - "; ?></p>
                 <form name="chrono" class="chrono">
@@ -86,7 +86,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
            </div>
         </header>
         <section>
-            <img src="img/h3.png" alt="Mouvement à faire" id="handclick">
+            <img src="../img/h3.png" alt="Mouvement à faire" id="handclick">
             <h2 class="rose">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
                 <p>Choisis la teinte correspondante pour chaque zone, et ajoute le nombre de carré dans le code.</p>
@@ -109,7 +109,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </div>
             <div class="sousBloc bleu">
                 <div class="bouton2" id="indice">
-                    <img src="img/bulb.png" alt="Objectif"/>
+                    <img src="../img/bulb.png" alt="Objectif"/>
                 </div>
                 <div id="codegauche">
                     <p>
@@ -138,10 +138,10 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
         ?>
     </div>
 
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/global.js"></script>
-    <script src="js/chrono.js"></script>
-    <script src="js/hammer-time.min.js"></script>
-    <script src="js/jauneviolet.js"></script>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/chrono.js"></script>
+    <script src="../js/hammer-time.min.js"></script>
+    <script src="../js/jauneviolet.js"></script>
 </body>
 </html>

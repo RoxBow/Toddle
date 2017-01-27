@@ -17,20 +17,20 @@ if(!isset($_SESSION['pseudo']) ){
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <script type="text/javascript" charset="utf-8" src="js/appframework.ui.min.js"></script>
-    <link rel="stylesheet" href="stylesheets/end.css" media="all">
+    <script type="text/javascript" charset="utf-8" src="../js/appframework.ui.min.js"></script>
+    <link rel="stylesheet" href="../stylesheets/end.css" media="all">
 </head>
 <body>
     <div class="container">
         <div class="content">
-            <p>Merci d'avoir participé<br> à l'expérience <img src="img/toddle_text.png" id="reset" alt="toddle"> !</p>
+            <p>Merci d'avoir participé<br> à l'expérience <img src="../img/toddle_text.png" id="reset" alt="toddle"> !</p>
             <hr>
             <p class="render">Remets la tablette <br> au point de départ</p>
         </div>
     </div>
   
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/global.js"></script>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/global.js"></script>
     <script>
         $(document).ready(function () {
             var countClick = 0;

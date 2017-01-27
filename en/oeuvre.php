@@ -28,7 +28,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="stylesheets/oeuvre.css" media="all">
+    <link rel="stylesheet" href="../stylesheets/oeuvre.css" media="all">
 </head>
 <body>
     <?php
@@ -80,8 +80,8 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
           </div>
       </div>
        <header>
-            <img src="img/toddle_form.png" alt="toddle" class="toddle_form" id="skip">
-            <img src="img/toddle_text.png" alt="toddle" class="toddle_text">
+            <img src="../img/toddle_form.png" alt="toddle" class="toddle_form" id="skip">
+            <img src="../img/toddle_text.png" alt="toddle" class="toddle_text">
             <div class="blockRight">
                 <p class="name"><?php echo $_SESSION['pseudo']." - "; ?></p>
                 <form name="chrono" class="chrono">
@@ -92,7 +92,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
            </div>
         </header>
         <div id="jeu">
-          <img src="img/h3.png" alt="Mouvement à faire" id="handclick">
+          <img src="../img/h3.png" alt="Mouvement à faire" id="handclick">
           <section class="leftBloc" id="leftBloc">
               <canvas id="canvas" class="box drag-target">
               </canvas>
@@ -130,13 +130,13 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
         ?>
     </div>
     
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/hammer-time.min.js"></script>
-    <script src="js/global.js"></script>
-    <script src="js/resemble.js"></script>
-    <script src="js/chrono.js"></script>
-    <script src="js/canvas.js"></script>
-    <script src="js/oeuvre.js"></script>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/hammer-time.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/resemble.js"></script>
+    <script src="../js/chrono.js"></script>
+    <script src="../js/canvas.js"></script>
+    <script src="../js/oeuvre.js"></script>
     <script>
     </script>
 </body>
