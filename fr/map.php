@@ -42,7 +42,7 @@ if(empty($_SESSION['start'])) {
                 <label> ●</label>
             </div>
             <div class="analyse">
-                <p>ANALYSE</p>
+                <p>EN COURS D'ANALYSE</p>
             </div>
         </div>
        <header>
