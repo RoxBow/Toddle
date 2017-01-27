@@ -37,6 +37,16 @@ $(document).ready(function() {
 $("#valider").on("click",function(){
 	console.log(range1+","+range2+","+range3+","+range4);
     if (test(range1,range2,range3,range4)){
+    	stopchrono(); // Arrête chrono
+        // Save time user in DB
+        $.ajax({
+            type: "POST",
+            url: "../login.php",
+            data: { 'min': $("#min").val(), 'sec': $("#sec").val() },
+            success: function(data) {
+                console.log("Temps: "+$("#min").val()+" minutes et "+$("#sec").val()+" secondes"  );
+            }
+        });
         win();
     } else {
         lose();
