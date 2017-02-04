@@ -12,7 +12,7 @@ body {
     overflow: hidden;
     .content {
         margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
-        transform: translateY(-53%); /* tiré de la moitié de sa propre hauteur */
+        transform: translateY(-52%); /* tiré de la moitié de sa propre hauteur */
         .blocBtn {
             margin: 2% auto;
             display: flex;
@@ -29,7 +29,9 @@ body {
             }
             button {
                 @extend .btn_toddle;
+                font-size: 3vw;
                 margin: 0 4%;
+                padding: 5.2%;
                 background: none;
                 border: 2px solid $blueToddle;
                 color: $blueToddle;
@@ -49,28 +51,30 @@ body {
                     font-size: 3.5vw;
                     margin: auto;
                     position: relative;
-                    
                 }
             } // button
         } // .blocBtn
         .valide {
             display: none;
             opacity: 0;
-            width: 10%;
-            position: absolute;
-            right: 0;
-            left: 0;
+            z-index: 100;
             font-size: 4vw;
-            margin: auto;
+            position: absolute;
             right: 100%;
-            
+            margin: auto;
+            left: 0;
+            transition: all .5s;
             .fa-circle {
                 color: $pinkToddle;
+            }
+            &.active {
+              right: 0%;
+              opacity: 1;
             }
         }
     }
     .logo_toddle {
-        width: 45%;
+        width: 40%;
         height: auto;
         margin: 0 auto;
         display: block;

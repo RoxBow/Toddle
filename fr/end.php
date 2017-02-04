@@ -39,7 +39,7 @@ if(!isset($_SESSION['pseudo']) ){
             $("#reset",".content").click(function () {
                 countClick += 1;
                 if (countClick == 2) {
-                    location.href = "index.php";
+                    location.href = "../index.php";
                 }
             });
         });

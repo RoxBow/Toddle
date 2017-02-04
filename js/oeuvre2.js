@@ -91,7 +91,7 @@ function render() {
 //Ligne gris clair
     context.beginPath();
     creationLine(10 * i, vars);
-    context.closePath();  
+    context.closePath();
     
     context.lineWidth = 2;
     context.strokeStyle = '#C5BDB2';

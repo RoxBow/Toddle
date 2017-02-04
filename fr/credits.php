@@ -1,4 +1,4 @@
-<div class="credits">
+<div class="credits" id="credit">
     <i id="croix" class="fa fa-times fa-3x" aria-hidden="true"></i>
     <p class="title">CRÉDITS</p>
     <div class="content">

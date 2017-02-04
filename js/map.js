@@ -1,18 +1,7 @@
 sec = 0; // Init sec
 min = 0; // Init min
 
-var valSec, valMin;
-
 var oeuvre, newOeuvre;
-
-// When page is left
-$(window).bind('beforeunload',function(){
-    valSec = $("#sec").val();
-    valMin = $("#min").val();
-    // Init global variable time
-    localStorage.setItem("seconde", valSec);
-    localStorage.setItem("minute", valMin);
-});
 
 $(document).ready(function() {
     /* CHRONO */
@@ -28,16 +17,29 @@ $(document).ready(function() {
     // Launch chrono
     chrono();
     
-    $(document).click(function (e) {
-        /* POPUP HELP */
+    $(document).bind( "click", function(e) {
+        // POPUP HELP
         if( $(".help_map").is(e.target) || $(".fa-question").is(e.target) ){
             $("#indiceBloc").fadeIn();
             $("#indice").css("animation-play-state","paused");
         }
-        else if ( $("#indiceBloc").is(e.target) || $("#close").is(e.target) ) {
-            $("#indiceBloc").fadeOut();
-        }
     });
+  
+    if($("#indiceBloc")){
+      $("#indiceBloc").bind( "click", function(e) {
+        if($("#indiceBloc").is(e.target)){
+          console.log(e.target);
+          $("#indiceBloc").fadeOut();
+        }
+      });
+    
+        /*$("#close").bind( "click", function() {
+        $("#indiceBloc").fadeOut();
+      });
+      */
+      
+      
+    }
 
     // Blink room on map
     setInterval(function() {
@@ -74,7 +76,10 @@ function getFile() {
                     console.log(data);
                     //if (data.misMatchPercentage < 50.00) {
                         console.log(data.misMatchPercentage);
-                        document.location.href = "oeuvretrouve"+levelUser+".php";
+                        
+                        localStorage.setItem("seconde", $("#sec").val());
+                        localStorage.setItem("minute", $("#min").val());
+                        document.location.replace("oeuvretrouve"+levelUser+".php");
                     /*}
                     else {
                         $("#overlayChargement").fadeOut(500);

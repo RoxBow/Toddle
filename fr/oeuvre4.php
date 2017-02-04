@@ -52,13 +52,13 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               Tu as donc compris <span class="bold">les variables</span> et comment les utiliser comme <span class="bold">paramètres</span> d'une <span class="bold">fonction</span>. <br><br>
               Découvre ton dernier défi !
             </p>
-            <a href="map.php"><button class="continuer">D&#201;FI SUIVANT</button></a>
+            <button class="continuer">DÉFI SUIVANT</button>
             </div>
         </div>
         <div id="loose">
             <div class="content-loose">
             <p class="title">
-              RAT&#201;&nbsp;!
+              RECOMMENCE !
             </p>
             <hr>
             <p class="text-loose">

@@ -31,7 +31,7 @@
             <div class="blocBtn">
                <div class="btnChoice">
                    <button type="button" class="lang selected" value="french">FRANÇAIS</button>
-                    <button type="button" class="lang" value="english">ENGLISH</button>
+                   <button type="button" class="lang" value="english">ENGLISH</button>
                </div>
                 <button type="button" class="launch" id="startFrench">COMMENCER L'EXPÉRIENCE</button>
                 
@@ -51,29 +51,33 @@
     <script src="js/global.js"></script>
     <script>
         $(document).ready(function () {
-            $(".lang",".blocBtn").click(function () {
+            $(".lang",".blocBtn").bind( "click", function() {
                 if(!$(this).hasClass("selected")){
                     $(".lang").toggleClass("selected");
                 }
             });
-            
-            $(".launch", ".content").click(function () {
+          
+            $(".launch", ".content").bind( "click", function() {
                 $(this).animate({
                     left: "100%",
                     opacity: 0
                 }, 700, "linear", function() {
                     $(this).css("display","none");
-                    $(".btnChoice, .valide",".content").css("display","flex");
+                    $(".btnChoice",".content").css("display","flex");
+                    $(".valide",".content").css("display","inline-block");
                     
-                    $(".btnChoice, .valide",".content").animate({
+                    $(".btnChoice",".content").animate({
                         right: "0%",
                         opacity: 1
                     });
+                  
+                    $(".valide",".content").addClass("active");
+                    
                 });
             });
             
              // button launch experience
-            $("#validLang .fa", ".container").click(function () {
+            $("#validLang .fa", ".container").bind( "click", function() {
                 if($(".selected").attr("value") == "french"){
                     location.href = "fr/name.php";
                 }

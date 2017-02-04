@@ -57,13 +57,13 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               <br>
             </p>
             
-            <a href="map.php"><button class="continuer">DÉFI SUIVANT</button></a>
+            <button class="continuer">DÉFI SUIVANT</button>
           </div>
       </div>
       <div id="loose">
           <div class="content-loose">
             <p class="title">
-              RAT&#201;&nbsp;!
+              RECOMMENCE !
             </p>
             <hr>
             <br>

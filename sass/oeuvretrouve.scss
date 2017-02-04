@@ -35,9 +35,8 @@
         }
         .go{
             background-color: $blueToddle;
-            color: white;
-            width: 100px;
-            height: 100px;
+            color: #fff;
+            padding: 2% 1%;
             border-radius: 50px;
             font-size: 50px;
             position: absolute;
@@ -52,7 +51,7 @@
             color: $pinkToddle;
         }
         .parentheses{
-            font-size: 32px;            
+            font-size: 32px;
             color: $blueToddle;
         }
         .bold{

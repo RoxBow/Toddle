@@ -92,7 +92,9 @@ if( !isset($_SESSION['pseudo']) ){
             chrono();
             
             $("#oeuvretrouve2go").click(function() {
-                location.href = "oeuvre2.php";
+              localStorage.setItem("seconde", $("#sec").val());
+              localStorage.setItem("minute", $("#min").val());
+              document.location.replace("oeuvre2.php");
             });
         });
     </script>

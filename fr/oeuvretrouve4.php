@@ -88,7 +88,9 @@ if( !isset($_SESSION['pseudo']) ){
             chrono();
             
             $("#oeuvretrouve4go").click(function() {
-                location.href = "oeuvre4.php";
+                localStorage.setItem("seconde", $("#sec").val());
+                localStorage.setItem("minute", $("#min").val());
+                document.location.replace("oeuvre4.php");
             });
         });
     </script>

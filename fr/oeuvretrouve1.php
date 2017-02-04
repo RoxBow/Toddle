@@ -80,12 +80,6 @@ if( !isset($_SESSION['pseudo']) ){
         sec = localSec;
         min = localMin;
 
-        // When page is left
-        $(window).bind('beforeunload',function(){
-            localStorage.setItem("seconde", $("#sec").val() );
-            localStorage.setItem("minute", $("#min").val() );
-        });
-
         $(document).ready(function() {
             /* ### CHRONO ### */
             $("#sec").val(localSec);
@@ -93,7 +87,9 @@ if( !isset($_SESSION['pseudo']) ){
             chrono();
           
           $("#oeuvretrouve1go").click(function() {
-            location.href = "oeuvre.php";
+              localStorage.setItem("seconde", $("#sec").val());
+              localStorage.setItem("minute", $("#min").val());
+              document.location.replace("oeuvre.php");
           });
         });
     </script>

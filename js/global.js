@@ -162,15 +162,30 @@ $(document).ready(function () {
 //Changements points crédits
 function changeRond(){
     if (countSlider==0) {
+        // (special) For index.php
+        $("#a1").on('error', function() { $(this).attr("src","img/pc-plein.png"); });
+        $("#a2").on('error', function() { $(this).attr("src","img/pc-vide.png"); });
+        $("#a3").on('error', function() { $(this).attr("src","img/pc-vide.png"); });
+        
         $("#a1").attr("src","../img/pc-plein.png");
         $("#a2").attr("src","../img/pc-vide.png");
         $("#a3").attr("src","../img/pc-vide.png");
     } else{
         if (countSlider==1) {
+            // (special) For index.php
+            $("#a1").on('error', function() { $(this).attr("src","img/pc-vide.png"); });
+            $("#a2").on('error', function() { $(this).attr("src","img/pc-plein.png"); });
+            $("#a3").on('error', function() { $(this).attr("src","img/pc-vide.png"); });
+            
             $("#a1").attr("src","../img/pc-vide.png");
             $("#a2").attr("src","../img/pc-plein.png");
             $("#a3").attr("src","../img/pc-vide.png");
-        } else{
+        } else {
+            // (special) For index.php
+            $("#a1").on('error', function() { $(this).attr("src","img/pc-vide.png"); });
+            $("#a2").on('error', function() { $(this).attr("src","img/pc-vide.png"); });
+            $("#a3").on('error', function() { $(this).attr("src","img/pc-plein.png"); });
+          
             $("#a1").attr("src","../img/pc-vide.png");
             $("#a2").attr("src","../img/pc-vide.png");
             $("#a3").attr("src","../img/pc-plein.png");
@@ -189,7 +204,8 @@ function doOnOrientationChange() {
         $(".orientation").remove();
         break;
       case 0:
-        $(".container").append("<div class='overlay orientation'><div class='content-orientation'><img src='../img/orientation.png' alt='tablet'><p>Tourne la tablette</p></div></div>");
+        $(".container").append("<div class='overlay orientation'><div class='content-orientation'><img src='../img/orientation.png' alt='tablet' class='imgOrientation'><p>Tourne la tablette</p></div></div>");
+        $(".imgOrientation").on('error', function() { $(this).attr("src","img/orientation.png"); });
         break;
     }
 }

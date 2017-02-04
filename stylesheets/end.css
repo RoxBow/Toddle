@@ -315,17 +315,18 @@ i {
   width: 100%;
   text-align: right;
   position: absolute;
+  z-index: 0;
   bottom: 1%;
   right: 1%;
 }
-/* line 293, ../sass/general.scss */
+/* line 294, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
   vertical-align: middle;
   margin-right: 1%;
 }
-/* line 300, ../sass/general.scss */
+/* line 301, ../sass/general.scss */
 .container .overlay {
   display: none;
   position: fixed;
@@ -339,7 +340,7 @@ i {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
-/* line 312, ../sass/general.scss */
+/* line 313, ../sass/general.scss */
 .container .overlay .popup {
   background-color: #fff;
   border-radius: 15px;
@@ -355,7 +356,7 @@ i {
   color: #355E7E;
   font-size: 20px;
 }
-/* line 326, ../sass/general.scss */
+/* line 327, ../sass/general.scss */
 .container .overlay .popup .sous-titre {
   color: #F38F9A;
   font-size: 2.2rem;
@@ -363,13 +364,13 @@ i {
   margin-bottom: 4%;
   display: block;
 }
-/* line 333, ../sass/general.scss */
+/* line 334, ../sass/general.scss */
 .container .overlay .popup .error {
   margin: 3% auto;
   color: red;
   font-size: 2vw;
 }
-/* line 339, ../sass/general.scss */
+/* line 340, ../sass/general.scss */
 .container .overlay .close {
   color: #aaa;
   position: absolute;
@@ -377,12 +378,12 @@ i {
   top: 2%;
   font-size: 4vw;
 }
-/* line 347, ../sass/general.scss */
+/* line 348, ../sass/general.scss */
 .container .overlay.orientation {
   display: block;
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* line 350, ../sass/general.scss */
+/* line 351, ../sass/general.scss */
 .container .overlay.orientation .content-orientation {
   position: absolute;
   top: 0;
@@ -398,14 +399,14 @@ i {
   padding: 8%;
   border-radius: 5%;
 }
-/* line 364, ../sass/general.scss */
+/* line 365, ../sass/general.scss */
 .container .overlay.orientation .content-orientation img {
   width: 50%;
   display: inline-block;
   margin: auto;
   right: 0;
 }
-/* line 370, ../sass/general.scss */
+/* line 371, ../sass/general.scss */
 .container .overlay.orientation .content-orientation p {
   text-transform: uppercase;
   font-size: 5vw;
@@ -413,7 +414,7 @@ i {
   margin: 7% 0;
 }
 
-/* line 381, ../sass/general.scss */
+/* line 382, ../sass/general.scss */
 .btn_toddle, .content button {
   background: #355E7E;
   padding: 20px;
@@ -424,7 +425,7 @@ i {
   margin: 0 auto;
 }
 
-/* line 391, ../sass/general.scss */
+/* line 392, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;

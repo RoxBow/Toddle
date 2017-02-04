@@ -95,9 +95,9 @@ if( !isset($_SESSION['pseudo']) ){
             $("#min").val(localMin);
             chrono();
             
-            $("#oeuvretrouve5go").click(function() {
-                location.href = "oeuvre5.php";
-            });
+              localStorage.setItem("seconde", $("#sec").val());
+              localStorage.setItem("minute", $("#min").val());
+              document.location.replace("oeuvre5.php");
         });
     </script>
 </body>

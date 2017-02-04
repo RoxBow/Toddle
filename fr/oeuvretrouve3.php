@@ -97,7 +97,9 @@ if( !isset($_SESSION['pseudo']) ){
             chrono();
             
             $("#oeuvretrouve3go").click(function() {
-                location.href = "oeuvre3.php";
+                localStorage.setItem("seconde", $("#sec").val());
+                localStorage.setItem("minute", $("#min").val());
+                document.location.replace("oeuvre3.php");
               });
         });
     </script>

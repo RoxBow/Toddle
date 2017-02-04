@@ -54,7 +54,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             </p>
             <br>
             <p>
-              Tu as retrouvé l'&#156;uvre de Yves Klein en utilisant <span class="bold">le fonctions</span>:
+              Tu as retrouvé l'&#156;uvre de Yves Klein en utilisant <span class="bold">les fonctions</span>:
               <br>
               <span class="name">CréerUnRectangle</span><span class="parentheses">()</span> et <span class="name">RemplirEnBleu2</span><span class="parentheses">()</span>.
             </p>
@@ -65,7 +65,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
       <div id="loose">
           <div class="content-loose">
             <p class="title">
-              RAT&#201;&nbsp;!
+              RECOMMENCE !
             </p>
             <hr>
             <br>

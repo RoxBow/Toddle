@@ -60,8 +60,8 @@ if(isset($_POST['pseudo'])){
         </header>
         <div class="container_form">
             <form action="" method="post">
-                <label for="pseudo">Choose a nickname</label>
-                <input required type="text" name="pseudo" id="pseudo" placeholder="Nickname" autocomplete="off" />
+                <label for="pseudo">Choose an username</label>
+                <input required type="text" name="pseudo" id="pseudo" placeholder="Username" autocomplete="off" />
                 <p class="error"> <?php echo $error; ?></p>
                 <button name="submit" type="submit" >
                     <span class="fa-stack ">

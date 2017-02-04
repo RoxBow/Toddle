@@ -29,7 +29,7 @@ if( !isset($_SESSION['pseudo']) ){
             </div>
         </header>
         <div class="entete">
-            <p>Bienvenue <span><?php echo $_SESSION['pseudo']; ?></span> !</p>
+            <p>Welcome <span><?php echo $_SESSION['pseudo']; ?></span> !</p>
             <p>Discover computer programming with Toddle within <br>the Centre Georges Pompidou by solving the 5 given challenges.</p>
         </div>
         <section class="lessons">
