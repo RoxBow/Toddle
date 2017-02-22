@@ -113,8 +113,8 @@
         } 
     }
     #handclick{
-        top: 72%;
-        left: 58.5%;
+        top: 71%;
+        left: 57%;
         z-index: 10000;
         animation-duration: 2s;
         animation-name: slide;
@@ -135,7 +135,6 @@
     }
     .leftBloc {
         overflow: hidden;
-        outline: 1px solid;
         width: 48%;
         height: 500px;
         float: left;
@@ -151,6 +150,12 @@
                 width: 100%;
                 height: 100%;
             }
+            #myCanvas{
+                z-index: 0;
+            }
+            #myCanvas2{
+                z-index: 2;
+            }
         }
     }
     .rightBloc {
@@ -160,8 +165,9 @@
             padding: 10px;
             background-color: #F2F2F2;
             width: 96%;
-            font-family: "Inconsolata", "GothamRounded", "Arial";
-            height: 250px;
+            font-family: "GothamRounded", "Inconsolata", "Arial";
+            font-size: 26px;
+            height: 202px;
             overflow-y: auto;
             &::-webkit-scrollbar-track
             {
@@ -180,164 +186,86 @@
                 border-radius: 20px;
                 background-color: $blueToddle;
             }
-            input {
-                border: none;
-                border-bottom: 1px solid black;
-                text-align: center;
-                background: none;
-                outline: none;
-                font-size: 20px;
-                color: red;
-                width: 50px;
-                margin: 0 4px;
-                &:disabled {
-                    background: #000;
-                }
+            .cadre{
+                border: 1px solid $pinkToddle;
+                padding: 5px;
+                content: "";
+                border-radius: 20px;
             }
-            button {
-                padding: 12px 16px;
-                background: none;
-                border: 2px solid black;
-                transition: all .3s;
-                border-radius: 8px;
-                cursor: pointer;
-                margin: 10px auto 0 auto;
-                display: block;
-                font-weight: bold;
-                font-size: 16px;
-            }
-            input[type=number]::-webkit-inner-spin-button,
-            input[type=number]::-webkit-outer-spin-button {
-                -webkit-appearance: none;
+            .cadre > *{
+                visibility: hidden;
             }
         } // .code
-        .selection{
-            margin-top: 60px;
-            display: flex;
-            .choix{
+        .etiquettes{
+            .etiq {
+                z-index: 10;
+                border-radius: 25px;
+                width: 20%;
+                padding: 15px;
+                background: $blueToddle;
+                color: #fff;
                 text-align: center;
-                span:nth-child(1){
-                    float: left;
-                }
-                span:nth-child(3){
-                    float: right;
-                }
+                position: absolute;
             }
-            .selecteurs{
-                font-size: 30px;
-                margin:  3px;
-                &:active{
-                    color:$beigeToddle;
-                }
+            #rouge{
+                top: 56%;
+                left: 52%;
             }
-            .valeurs{
-                color: $pinkToddle;
-                font-size: 27px;
-                margin-top: 3px;
-                display: inline-block;
+            #cligne{
+                top: 56%;
+                left: 77%;
             }
-            .couleur{
-                text-align: center;
-                width: 27%;
+            #ctriangle{
+                top: 77%;
+                left: 77%;
             }
-            .orientation{
-                @extend .couleur;
-                width: 45%;
-                margin-left: 5%;
-                margin-right: 5%;
-              
+            #dligne{
+                left: 52%;
+                top: 77%;
             }
-            .nombre{
-                @extend .couleur;
-                width: 16%;
+            #dtriangle{
+                top: 63%;
+                left: 77%;
             }
-        } // .selection
-        .controles{
-            margin-top: 20px;
+            #beige{
+                left: 52%;
+                top: 63%;
+            }
+            #drond{
+                top: 70%;
+                left: 77%;
+            }
+            #noir{
+                top: 70%;
+                left: 52%;
+            }
+        }
+        .bouton{
+            position: absolute;
+            top: 84%;
+            left: 59%;
             display: flex;
-            .bouton2{
-                z-index: 1100;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: $pinkToddle;
-                width:60px;
-                height: 60px;
-                border-radius: 30px;
-                bottom: 10%;
-                margin-left: 5%;
-                & > img{
-                    width: 70%;
-                }
-                &:active{
-                    background-color: $blueToddle;
-                }
+            align-items: center;
+            justify-content: center;
+            background-color: $pinkToddle;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            color: white;
+            &:active{
+                background-color: $blueToddle;
             }
-            .bouton{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: $pinkToddle;
-                width: 60px;
-                height: 60px;
-                border-radius: 30px;
-                color: white;
-                margin-left: 5%;
-                &:active{
-                    background-color: $blueToddle;
-                }
-
-            }
-            #undo{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: $pinkToddle;
-                width: 60px;
-                height: 60px;
-                margin-left: 5%;
-                border-radius: 30px;
-                color: white;
-                &:active{
-                    background-color: $blueToddle;
-                }
-            }
-            #ajouter{
-                width: 40%;
-                margin-left: 5%;
-            }
-            .bva{
-              color: #fff;
-              background-color: $blueToddle;
-              width: 100%;
-              height: 60px;
-              border-radius: 50px;
-              font-size: 20px;
-              margin-top:0.5%;
-              &:active{
-                    background-color: $pinkToddle;
-                }
-            }
-        } // .controles
+        }
     } // .rightBloc
 }
 @keyframes slide {
-  0% {
-    left:58.5%;
-    top:71%;
-    transform: scale(1.0);
-    -webkit-transform: scale(0.8);
+  from {
+    top: 71%;
+    left:57%;
   }
-  50%{
-    left:58%;
-    top:72%;
-    transform: scale(1.0);
-    -webkit-transform: scale(1.2);
-  }
-  100% {
-    left:58.5%;
-    top:71%;
-    transform: scale(1.0);
-    -webkit-transform: scale(0.8);
+
+  to {
+    top: 30%;
+    left:78%;
   }
 }

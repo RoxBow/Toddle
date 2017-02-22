@@ -22,6 +22,16 @@ $(document).ready(function() {
 var canvas;
 var ctx;
 
+var tuto=0;
+function touche() {
+    if (tuto==0) {
+        $("#handclick").css("animation-play-state","paused");
+        $("#handclick").css("display","none");
+        tuto=1;
+    }
+}
+document.body.addEventListener('touchstart', touche, false);
+
 var nbrLine, colorLine, x1, x2, y1, y2;
 
 // Variables pour les fonctions

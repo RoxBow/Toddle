@@ -16,7 +16,7 @@ $end = new DateTime($_SESSION['end']); // put actual date in date object
 $interval = $start->diff($end); // put diff date in interval
 print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
 */
-
+s
 ?>
 
 <!doctype html>
@@ -92,7 +92,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
            </div>
         </header>
         <div id="jeu">
-          <img src="../img/h3.png" alt="Mouvement à faire" id="handclick">
+          <img src="../img/h3.png" alt="Mouvement à faire" id="handclick"/>
           <section class="leftBloc" id="leftBloc">
               <canvas id="canvas" class="box drag-target">
               </canvas>

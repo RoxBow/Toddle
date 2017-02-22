@@ -28,7 +28,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="../stylesheets/mondrian.css" media="all">
+    <link rel="stylesheet" href="../stylesheets/oeuvre55.css" media="all">
 </head>
 <body>
     <?php
@@ -45,14 +45,16 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-              Tu as réussi le quatrième défi !
+                Tu as réussi le dernier défi !
             </p>
             <br>
             <p>
-              Tu as donc compris <span class="bold">les variables</span> et comment les utiliser comme <span class="bold">paramètres</span> d'une <span class="bold">fonction</span>. <br><br>
-              Découvre ton dernier défi !
+                Tu as compris <span class="bold">les bases de la programmation informatique</span> !
             </p>
-            <button class="continuer">DÉFI SUIVANT</button>
+            <p>
+                As-tu été assez rapide pour gagner une récompense ?<br><br>Découvre-le tout de suite !
+            </p>
+            <button class="continuer">RÉSULTAT</button>
             </div>
         </div>
         <div id="loose">
@@ -65,7 +67,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
               Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-                Regarde attentivement l'oeuvre et recommence !
+                Regarde attentivement l'oeuvre et ton code pour atteindre ton objectif !
             </p>
             <br>
             <button class="rechercher">Retour</button>
@@ -87,66 +89,40 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
             <img src="../img/h3.png" alt="Mouvement à faire" id="handclick"/>
             <h2 class="rose six">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
-                <p>Recréé l'oeuvre de Piet Mondrian en donnant des arguments à la fonction suivante: DessinerUneLigne(couleur, sens, nombre).</p>
+                <p>Complète le code suivant pour recréer l'oeuvre de Blabla. Glisse les étiquettes au bon endroit pour écrire ton code.</p>
                 <br>
             </div>
             <div class="leftBloc">
                 <div class="souscontainer">
                     <canvas id="myCanvas"></canvas>
                     <canvas id="myCanvas2"></canvas>
-                    <canvas id="myCanvas3"></canvas>
-                    <canvas id="myCanvas4"></canvas>
-                    <canvas id="myCanvas5"></canvas>
-                    <canvas id="myCanvas6"></canvas>
                 </div>
             </div>
             <div class="rightBloc">
                 <div class="code bleu">
-                    <p>CréerCadre();</p>
+                    <p>var couleurTriangle = <span class="cadre"><span id="noircache">noir</span></span>;</p>
+                    <br>
+                    <p><span class="cadre"><span id="varcache">var couleurLigne</span></span> = <span class="cadre"><span id="rougecache">rouge</span></span>;</p>
+                    <br>
+                    <p><span class="cadre"><span id="dtcache">dessinerTriangle</span></span>(<span class="cadre"><span id="ctcache">couleurTriangle</span></span>);</p>
+                    <br>
+                    <p><span class="cadre"><span id="dlcache">dessinerLigne</span></span>(couleurLigne);</p>
                 </div>
-                <div class="selection">
-                    <div class="couleur">
-                        <p>Couleur</p>
-                        <div class="choix">
-                        <span class="selecteurs" id="coumoins">
-                        &lsaquo;
-                        </span>
-                        <span class="valeurs" id="couleur"></span>
-                        <span class="selecteurs" id="couplus">&rsaquo;</span>
-                        </div>
-                    </div>
-                    <div class="orientation">
-                        <p>Orientation</p>
-                        <div class="choix">
-                        <span class="selecteurs" id="orimoins">
-                        &lsaquo;
-                        </span>
-                        <span class="valeurs" id="orientation"></span>
-                        <span class="selecteurs" id="oriplus">&rsaquo;</span>
-                        </div>
-                    </div>
-                    <div class="nombre">
-                        <p>Nombre</p>
-                        <div class="choix">
-                        <span class="selecteurs" id="nbmoins">
-                        &lsaquo;
-                        </span>
-                        <span class="valeurs" id="nombre"></span>
-                        <span class="selecteurs" id="nbplus">&rsaquo;</span>
-                        </div>
-                    </div>
+                <div class="etiquettes">
+                    <div class="etiq" id="rouge">rouge</div>
+                    <div class="etiq" id="cligne"> var couleurLigne</div>
+                    <div class="etiq" id="ctriangle">couleurTriangle</div>
+                    <div class="etiq" id="beige">beige</div>
+                    <div class="etiq" id="dligne">dessinerLigne</div>
+                    <div class="etiq" id="dtriangle">dessinerTriangle</div>
+
+                    <div class="etiq" id="drond">dessinerRond</div>
+                    <div class="etiq" id="noir">noir</div>
                 </div>
-                <div class="controles">
-                    <div class="bouton2" id="poubelle">
-                        <img src="../img/poubelle.png" alt="Objectif"/>
-                    </div>
-                    <div id="undo"><i class="fa fa-undo fa-2x" aria-hidden="true"></i></div>
-                    <div id="ajouter">
-                        <button class="bva">AJOUTER</button>
-                    </div>
-                    <div class="bouton" id="valider">
-                        <i class="fa fa-check fa-2x" aria-hidden="true"></i></div>
-                    </div>
+
+                <div class="bouton" id="valider">
+                    <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                </div>
             </div>
         </section>
         <?php
@@ -155,8 +131,9 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
     </div>
 
     <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/hammer-time.min.js"></script>
     <script src="../js/global.js"></script>
     <script src="../js/chrono.js"></script>
-    <script src="../js/mondrian.js"></script>
+    <script src="../js/oeuvre55.js"></script>
 </body>
 </html>

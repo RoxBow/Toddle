@@ -322,217 +322,201 @@ i {
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.5); }
 
-.container #win {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 10000;
-  display: none; }
-  .container #win .title {
-    font-weight: 600;
-    color: #F38F9A;
-    font-size: 54px; }
-  .container #win .titlesuite {
-    color: #F38F9A;
-    font-size: 42px; }
-  .container #win .content-win {
-    width: 70%;
-    height: 65%;
-    margin-left: 15%;
-    margin-top: 13%;
-    padding-top: 2%;
-    background-color: white;
-    border-radius: 50px;
-    text-align: center;
-    color: #355E7E;
-    font-size: 26px; }
-    .container #win .content-win p {
-      width: 75%;
-      margin-left: 15%; }
-    .container #win .content-win hr {
-      border: 3px solid #F38F9A;
-      border-radius: 25px;
-      width: 70%;
-      margin: 3% auto; }
-    .container #win .content-win .continuer {
-      color: #fff;
-      background-color: #355E7E;
-      width: 35%;
-      height: 75px;
-      border-radius: 50px;
-      font-size: 30px;
-      margin: 4% 0; }
-    .container #win .content-win .name {
-      color: #F38F9A; }
-    .container #win .content-win .parentheses {
-      color: #355E7E;
-      font-weight: bold; }
-.container #loose {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 10000;
-  display: none; }
-  .container #loose .title {
-    font-weight: 600;
-    color: #F38F9A;
-    font-size: 54px; }
-  .container #loose .content-loose {
-    width: 70%;
-    height: 45%;
-    margin-top: 20%;
-    margin-left: 15%;
-    padding-top: 2%;
-    background-color: white;
-    border-radius: 50px;
-    text-align: center;
-    color: #355E7E;
-    font-size: 26px; }
-    .container #loose .content-loose p {
-      width: 75%;
-      margin-left: 12.5%; }
-    .container #loose .content-loose hr {
-      border: 3px solid #F38F9A;
-      border-radius: 25px;
-      width: 70%;
-      margin: 3% auto; }
-    .container #loose .content-loose .rechercher {
-      color: #fff;
-      background-color: #355E7E;
-      width: 35%;
-      height: 75px;
-      border-radius: 50px;
-      font-size: 35px;
-      margin-top: 0.5%; }
-    .container #loose .content-loose .name {
-      color: #F38F9A; }
-.container #jeu {
-  width: 100%;
-  height: 83%;
-  /*D├®calage compens├® dans .rightBloc pour pas de bug dans les coordonn├®es pour le drop des ├®tiquettes*/
-  padding-left: 2%;
-  padding-right: 2%; }
-  .container #jeu #handclick {
-    top: 57%;
-    left: 57%;
+.container {
+  font-weight: 600; }
+  .container #handclick {
+    top: 63%;
+    left: 47%;
     z-index: 10000;
     animation-duration: 2s;
     animation-name: slide;
     animation-iteration-count: infinite; }
-  .container #jeu .leftBloc {
-    float: left;
-    width: 48%;
-    height: 92%;
-    position: relative;
-    z-index: 10; }
-    .container #jeu .leftBloc .bouton2 {
-      z-index: 1100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #F38F9A;
-      width: 70px;
-      height: 70px;
-      border-radius: 35px;
-      bottom: 10%; }
-      .container #jeu .leftBloc .bouton2 > img {
-        width: 50%; }
-    .container #jeu .leftBloc .bluebouton {
-      background-color: #355E7E; }
-  .container #jeu .rightBloc {
-    float: right;
-    width: 50%;
-    height: 92%;
-    overflow: hidden; }
-    .container #jeu .rightBloc h2 {
+  .container #win {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none; }
+    .container #win .title {
+      font-weight: 600;
+      color: #F38F9A;
+      font-size: 54px; }
+    .container #win .titlesuite {
+      color: #F38F9A;
+      font-size: 42px; }
+    .container #win .content-win {
+      width: 70%;
+      height: 70%;
+      margin-left: 15%;
+      margin-top: 11.5%;
+      padding-top: 3.5%;
+      background-color: white;
+      border-radius: 50px;
       text-align: center;
-      padding: 5px;
-      margin: 0; }
-    .container #jeu .rightBloc > div {
-      padding: 10px;
-      width: 100%; }
-    .container #jeu .rightBloc .codeBloc {
-      /*text-align: justify;*/
-      font-size: 19px;
-      padding: 15px;
-      bottom: 0;
-      height: 45%; }
-      .container #jeu .rightBloc .codeBloc h2 {
-        color: #F38F9A;
-        font-weight: bold;
-        font-size: 32px; }
-      .container #jeu .rightBloc .codeBloc .consignes {
-        padding-top: 4%;
-        font-weight: 600;
+      color: #355E7E;
+      font-size: 26px; }
+      .container #win .content-win p {
+        width: 70%;
+        margin-left: 15%; }
+      .container #win .content-win hr {
+        border: 3px solid #F38F9A;
+        border-radius: 25px;
+        width: 70%;
+        margin: 3% auto; }
+      .container #win .content-win .continuer {
+        color: #fff;
+        background-color: #355E7E;
+        width: 35%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 30px;
+        margin: 4% 0; }
+      .container #win .content-win .name {
+        color: #F38F9A; }
+      .container #win .content-win .parentheses {
         color: #355E7E;
-        text-align: justify; }
-    .container #jeu .rightBloc .etiqBloc {
-      height: 55%;
-      /*Les pourcentages de positionnement sont en relation avec le div avec l'id: jeu et non relatif ├á la div de classe:rightBloc*/ }
-      .container #jeu .rightBloc .etiqBloc .bouton {
+        font-weight: bold; }
+  .container #loose {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none; }
+    .container #loose .title {
+      font-weight: 600;
+      color: #F38F9A;
+      font-size: 54px; }
+    .container #loose .content-loose {
+      width: 70%;
+      height: 45%;
+      margin-top: 20%;
+      margin-left: 15%;
+      padding-top: 2%;
+      background-color: white;
+      border-radius: 50px;
+      text-align: center;
+      color: #355E7E;
+      font-size: 26px; }
+      .container #loose .content-loose p {
+        width: 75%;
+        margin-left: 12.5%; }
+      .container #loose .content-loose hr {
+        border: 3px solid #F38F9A;
+        border-radius: 25px;
+        width: 70%;
+        margin: 3% auto; }
+      .container #loose .content-loose .rechercher {
+        color: #fff;
+        background-color: #355E7E;
+        width: 35%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 35px;
+        margin-top: 0.5%; }
+      .container #loose .content-loose .name {
+        color: #F38F9A; }
+  .container h2 {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 10px; }
+  .container .consignes {
+    text-align: center;
+    font-size: 18px;
+    color: #355E7E;
+    width: 80%;
+    margin-left: 10%; }
+  .container .leftBloc {
+    width: 50%;
+    float: left;
+    padding-left: 1%;
+    position: relative; }
+    .container .leftBloc .souscontainer {
+      width: 470px;
+      height: 500px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid; }
+      .container .leftBloc .souscontainer .content canvas {
+        position: absolute; }
+  .container .rightBloc {
+    width: 50%;
+    float: right; }
+    .container .rightBloc .code {
+      padding: 10px;
+      background-color: rgba(188, 188, 188, 0.2);
+      width: 90%; }
+      .container .rightBloc .code .alinea1 {
+        margin-left: 7px; }
+      .container .rightBloc .code .alinea2 {
+        margin-left: 14px; }
+      .container .rightBloc .code .alinea3 {
+        margin-left: 21px; }
+    .container .rightBloc .columns {
+      display: flex;
+      margin-top: 25px;
+      color: #F38F9A;
+      font-size: 20px;
+      width: 90%; }
+      .container .rightBloc .columns .gauche {
+        width: 70%; }
+      .container .rightBloc .columns .droite {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      .container .rightBloc .columns span {
+        margin-left: 70%; }
+      .container .rightBloc .columns .buttonV {
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: #F38F9A;
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        color: white; }
-      .container #jeu .rightBloc .etiqBloc .bluebouton {
-        background-color: #355E7E; }
-      .container #jeu .rightBloc .etiqBloc .etiq {
-        z-index: 15;
-        border-radius: 25px;
-        width: 43%;
-        padding: 15px;
-        margin: 10px auto;
-        background: #355E7E;
-        color: #fff;
-        text-align: center; }
-      .container #jeu .rightBloc .etiqBloc #rectangle {
-        position: absolute;
-        margin-top: 17.5%;
-        margin-left: 1.5%; }
-      .container #jeu .rightBloc .etiqBloc #rouge {
-        position: absolute;
-        margin-top: 2.5%;
-        margin-left: 50%;
-        display: none; }
-      .container #jeu .rightBloc .etiqBloc #jaune {
-        position: absolute;
-        margin-top: 10%;
-        margin-left: 50%;
-        display: none; }
-      .container #jeu .rightBloc .etiqBloc #carre {
-        position: absolute;
-        margin-top: 10%;
-        margin-left: 1.5%; }
-      .container #jeu .rightBloc .etiqBloc #rond {
-        position: absolute;
-        margin-top: 2.5%;
-        margin-left: 1.5%; }
-      .container #jeu .rightBloc .etiqBloc #violet {
-        position: absolute;
-        margin-top: 17.5%;
-        margin-left: 50%;
-        display: none; }
-      .container #jeu .rightBloc .etiqBloc #undo {
-        position: absolute;
-        margin-top: 25%;
-        margin-left: 9%; }
-      .container #jeu .rightBloc .etiqBloc #valider {
-        position: absolute;
-        margin-top: 25%;
-        margin-left: 33.5%; }
+        width: 75px;
+        height: 75px;
+        border-radius: 37.5px;
+        color: white;
+        font-size: 15px; }
+        .container .rightBloc .columns .buttonV:active {
+          background-color: #355E7E; }
+    .container .rightBloc input[type=range] {
+      -webkit-appearance: none;
+      margin: 18px 0;
+      width: 80%; }
+    .container .rightBloc input[type=range]:focus {
+      outline: none; }
+    .container .rightBloc input[type=range]::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 17px;
+      background: #355E7E;
+      border-radius: 7.5px; }
+    .container .rightBloc input[type=range]::-webkit-slider-thumb {
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+      background: #F38F9A;
+      -webkit-appearance: none;
+      margin-top: -10px; }
+    .container .rightBloc input[type=range]::-moz-range-track {
+      width: 100%;
+      height: 17px;
+      background: #355E7E;
+      border-radius: 7.5px; }
+    .container .rightBloc input[type=range]::-moz-range-thumb {
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+      background: #F38F9A;
+      -webkit-appearance: none;
+      margin-top: -10px; }
 
 @keyframes slide {
   from {
-    top: 57%;
-    left: 57%; }
+    top: 63%;
+    left: 47%; }
   to {
-    top: 48%;
-    left: 18%; } }
+    top: 63%;
+    left: 65%; } }
 
-/*# sourceMappingURL=oeuvre.css.map */
+/*# sourceMappingURL=oeuvre33.css.map */

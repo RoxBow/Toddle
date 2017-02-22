@@ -322,217 +322,212 @@ i {
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.5); }
 
-.container #win {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 10000;
-  display: none; }
-  .container #win .title {
-    font-weight: 600;
-    color: #F38F9A;
-    font-size: 54px; }
-  .container #win .titlesuite {
-    color: #F38F9A;
-    font-size: 42px; }
-  .container #win .content-win {
-    width: 70%;
-    height: 65%;
-    margin-left: 15%;
-    margin-top: 13%;
-    padding-top: 2%;
-    background-color: white;
-    border-radius: 50px;
-    text-align: center;
-    color: #355E7E;
-    font-size: 26px; }
-    .container #win .content-win p {
-      width: 75%;
-      margin-left: 15%; }
-    .container #win .content-win hr {
-      border: 3px solid #F38F9A;
-      border-radius: 25px;
+.container {
+  font-weight: 600; }
+  .container #win {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none; }
+    .container #win .title {
+      font-weight: 600;
+      color: #F38F9A;
+      font-size: 54px; }
+    .container #win .titlesuite {
+      color: #F38F9A;
+      font-size: 42px; }
+    .container #win .content-win {
       width: 70%;
-      margin: 3% auto; }
-    .container #win .content-win .continuer {
-      color: #fff;
-      background-color: #355E7E;
-      width: 35%;
-      height: 75px;
+      height: 63%;
+      margin-left: 15%;
+      margin-top: 13%;
+      padding-top: 3.5%;
+      background-color: white;
       border-radius: 50px;
-      font-size: 30px;
-      margin: 4% 0; }
-    .container #win .content-win .name {
-      color: #F38F9A; }
-    .container #win .content-win .parentheses {
+      text-align: center;
       color: #355E7E;
-      font-weight: bold; }
-.container #loose {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 10000;
-  display: none; }
-  .container #loose .title {
-    font-weight: 600;
-    color: #F38F9A;
-    font-size: 54px; }
-  .container #loose .content-loose {
-    width: 70%;
-    height: 45%;
-    margin-top: 20%;
-    margin-left: 15%;
-    padding-top: 2%;
-    background-color: white;
-    border-radius: 50px;
-    text-align: center;
-    color: #355E7E;
-    font-size: 26px; }
-    .container #loose .content-loose p {
-      width: 75%;
-      margin-left: 12.5%; }
-    .container #loose .content-loose hr {
-      border: 3px solid #F38F9A;
-      border-radius: 25px;
+      font-size: 26px; }
+      .container #win .content-win p {
+        width: 70%;
+        margin-left: 15%; }
+      .container #win .content-win hr {
+        border: 3px solid #F38F9A;
+        border-radius: 25px;
+        width: 70%;
+        margin: 3% auto; }
+      .container #win .content-win .continuer {
+        color: #fff;
+        background-color: #355E7E;
+        width: 35%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 30px;
+        margin: 4% 0; }
+      .container #win .content-win .name {
+        color: #F38F9A; }
+      .container #win .content-win .parentheses {
+        color: #355E7E;
+        font-weight: bold; }
+  .container #loose {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none; }
+    .container #loose .title {
+      font-weight: 600;
+      color: #F38F9A;
+      font-size: 54px; }
+    .container #loose .content-loose {
       width: 70%;
-      margin: 3% auto; }
-    .container #loose .content-loose .rechercher {
-      color: #fff;
-      background-color: #355E7E;
-      width: 35%;
-      height: 75px;
+      height: 45%;
+      margin-top: 20%;
+      margin-left: 15%;
+      padding-top: 2%;
+      background-color: white;
       border-radius: 50px;
-      font-size: 35px;
-      margin-top: 0.5%; }
-    .container #loose .content-loose .name {
-      color: #F38F9A; }
-.container #jeu {
-  width: 100%;
-  height: 83%;
-  /*D├®calage compens├® dans .rightBloc pour pas de bug dans les coordonn├®es pour le drop des ├®tiquettes*/
-  padding-left: 2%;
-  padding-right: 2%; }
-  .container #jeu #handclick {
-    top: 57%;
+      text-align: center;
+      color: #355E7E;
+      font-size: 26px; }
+      .container #loose .content-loose p {
+        width: 75%;
+        margin-left: 12.5%; }
+      .container #loose .content-loose hr {
+        border: 3px solid #F38F9A;
+        border-radius: 25px;
+        width: 70%;
+        margin: 3% auto; }
+      .container #loose .content-loose .rechercher {
+        color: #fff;
+        background-color: #355E7E;
+        width: 35%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 35px;
+        margin-top: 0.5%; }
+      .container #loose .content-loose .name {
+        color: #F38F9A; }
+  .container #handclick {
+    top: 71%;
     left: 57%;
     z-index: 10000;
     animation-duration: 2s;
     animation-name: slide;
     animation-iteration-count: infinite; }
-  .container #jeu .leftBloc {
-    float: left;
+  .container h2 {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 10px; }
+  .container .consignes {
+    text-align: center;
+    font-size: 18px;
+    color: #355E7E;
+    width: 80%;
+    margin: 0 auto;
+    font-weight: 600; }
+  .container .leftBloc {
+    overflow: hidden;
     width: 48%;
-    height: 92%;
-    position: relative;
-    z-index: 10; }
-    .container #jeu .leftBloc .bouton2 {
-      z-index: 1100;
+    height: 500px;
+    float: left;
+    margin-left: 1%;
+    position: relative; }
+    .container .leftBloc .souscontainer {
+      height: 100%;
+      width: 100%;
+      overflow: hidden; }
+      .container .leftBloc .souscontainer canvas {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%; }
+      .container .leftBloc .souscontainer #myCanvas {
+        z-index: 0; }
+      .container .leftBloc .souscontainer #myCanvas2 {
+        z-index: 2; }
+  .container .rightBloc {
+    width: 50%;
+    float: right; }
+    .container .rightBloc .code {
+      padding: 10px;
+      background-color: #F2F2F2;
+      width: 96%;
+      font-family: "GothamRounded", "Inconsolata", "Arial";
+      font-size: 26px;
+      height: 202px;
+      overflow-y: auto; }
+      .container .rightBloc .code::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #F38F9A; }
+      .container .rightBloc .code::-webkit-scrollbar {
+        width: 7px; }
+      .container .rightBloc .code::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background-color: #355E7E; }
+      .container .rightBloc .code .cadre {
+        border: 1px solid #F38F9A;
+        padding: 5px;
+        content: "";
+        border-radius: 20px; }
+      .container .rightBloc .code .cadre > * {
+        visibility: hidden; }
+    .container .rightBloc .etiquettes .etiq {
+      z-index: 10;
+      border-radius: 25px;
+      width: 20%;
+      padding: 15px;
+      background: #355E7E;
+      color: #fff;
+      text-align: center;
+      position: absolute; }
+    .container .rightBloc .etiquettes #rouge {
+      top: 56%;
+      left: 52%; }
+    .container .rightBloc .etiquettes #cligne {
+      top: 56%;
+      left: 77%; }
+    .container .rightBloc .etiquettes #ctriangle {
+      top: 77%;
+      left: 77%; }
+    .container .rightBloc .etiquettes #dligne {
+      left: 52%;
+      top: 77%; }
+    .container .rightBloc .etiquettes #dtriangle {
+      top: 63%;
+      left: 77%; }
+    .container .rightBloc .etiquettes #beige {
+      left: 52%;
+      top: 63%; }
+    .container .rightBloc .etiquettes #drond {
+      top: 70%;
+      left: 77%; }
+    .container .rightBloc .etiquettes #noir {
+      top: 70%;
+      left: 52%; }
+    .container .rightBloc .bouton {
+      position: absolute;
+      top: 84%;
+      left: 59%;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: #F38F9A;
-      width: 70px;
-      height: 70px;
-      border-radius: 35px;
-      bottom: 10%; }
-      .container #jeu .leftBloc .bouton2 > img {
-        width: 50%; }
-    .container #jeu .leftBloc .bluebouton {
-      background-color: #355E7E; }
-  .container #jeu .rightBloc {
-    float: right;
-    width: 50%;
-    height: 92%;
-    overflow: hidden; }
-    .container #jeu .rightBloc h2 {
-      text-align: center;
-      padding: 5px;
-      margin: 0; }
-    .container #jeu .rightBloc > div {
-      padding: 10px;
-      width: 100%; }
-    .container #jeu .rightBloc .codeBloc {
-      /*text-align: justify;*/
-      font-size: 19px;
-      padding: 15px;
-      bottom: 0;
-      height: 45%; }
-      .container #jeu .rightBloc .codeBloc h2 {
-        color: #F38F9A;
-        font-weight: bold;
-        font-size: 32px; }
-      .container #jeu .rightBloc .codeBloc .consignes {
-        padding-top: 4%;
-        font-weight: 600;
-        color: #355E7E;
-        text-align: justify; }
-    .container #jeu .rightBloc .etiqBloc {
-      height: 55%;
-      /*Les pourcentages de positionnement sont en relation avec le div avec l'id: jeu et non relatif ├á la div de classe:rightBloc*/ }
-      .container #jeu .rightBloc .etiqBloc .bouton {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #F38F9A;
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        color: white; }
-      .container #jeu .rightBloc .etiqBloc .bluebouton {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      color: white; }
+      .container .rightBloc .bouton:active {
         background-color: #355E7E; }
-      .container #jeu .rightBloc .etiqBloc .etiq {
-        z-index: 15;
-        border-radius: 25px;
-        width: 43%;
-        padding: 15px;
-        margin: 10px auto;
-        background: #355E7E;
-        color: #fff;
-        text-align: center; }
-      .container #jeu .rightBloc .etiqBloc #rectangle {
-        position: absolute;
-        margin-top: 17.5%;
-        margin-left: 1.5%; }
-      .container #jeu .rightBloc .etiqBloc #rouge {
-        position: absolute;
-        margin-top: 2.5%;
-        margin-left: 50%;
-        display: none; }
-      .container #jeu .rightBloc .etiqBloc #jaune {
-        position: absolute;
-        margin-top: 10%;
-        margin-left: 50%;
-        display: none; }
-      .container #jeu .rightBloc .etiqBloc #carre {
-        position: absolute;
-        margin-top: 10%;
-        margin-left: 1.5%; }
-      .container #jeu .rightBloc .etiqBloc #rond {
-        position: absolute;
-        margin-top: 2.5%;
-        margin-left: 1.5%; }
-      .container #jeu .rightBloc .etiqBloc #violet {
-        position: absolute;
-        margin-top: 17.5%;
-        margin-left: 50%;
-        display: none; }
-      .container #jeu .rightBloc .etiqBloc #undo {
-        position: absolute;
-        margin-top: 25%;
-        margin-left: 9%; }
-      .container #jeu .rightBloc .etiqBloc #valider {
-        position: absolute;
-        margin-top: 25%;
-        margin-left: 33.5%; }
 
 @keyframes slide {
   from {
-    top: 57%;
+    top: 71%;
     left: 57%; }
   to {
-    top: 48%;
-    left: 18%; } }
+    top: 30%;
+    left: 78%; } }
 
-/*# sourceMappingURL=oeuvre.css.map */
+/*# sourceMappingURL=oeuvre55.css.map */
