@@ -473,7 +473,8 @@ i {
         content: "";
         border-radius: 20px; }
       .container .rightBloc .code .cadre > * {
-        visibility: hidden; }
+        visibility: hidden;
+        color: white; }
     .container .rightBloc .etiquettes .etiq {
       z-index: 10;
       border-radius: 25px;
