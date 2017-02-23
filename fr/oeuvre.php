@@ -16,7 +16,7 @@ $end = new DateTime($_SESSION['end']); // put actual date in date object
 $interval = $start->diff($end); // put diff date in interval
 print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
 */
-s
+
 ?>
 
 <!doctype html>

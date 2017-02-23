@@ -101,7 +101,7 @@ $(document).ready(function () {
     var countClick = 0;
 
     // 3 tap on toddle img left (header) -> Skip level (oeuvres)
-    $("#skip","header").click(function () {
+    $("#skip","header").on("touchstart", function () {
         countClick += 1;
         if (countClick == 3) {
             nbrLevel++;
@@ -193,8 +193,8 @@ function changeRond(){
     }
 }
 
-// Disable scroll
-document.ontouchmove = function(e){ e.preventDefault(); }
+$(document).on('touchmove', function(e){ e.preventDefault(); }); // Disable scroll
+$('.credits').on('touchmove', function (e) { e.stopPropagation(); }); // Allow scroll
 
 // Detect orientation tablet
 function doOnOrientationChange() {

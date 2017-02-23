@@ -152,34 +152,56 @@ $(".rechercher").on("click",function(){
         $("#myCanvas").css("transform","rotate(-90deg)");
         $("#myCanvas2").css("transform","rotate(-90deg)");
         $("#myCanvas3").css("transform","rotate(-90deg)");
+      
+      /* ######### */
+    $(".range").slider();
 
-        $('#output1').text($('.range').val()); // Valeur par défaut
-        $('.range').on('input', function() {
-            var $set = $(this).val();
-            $('#output1').text($set);
-            $("#val1").text($set);
-            $("#myCanvas").css("transform","rotate("+$set+"deg)");
-            range1 = $set;
-        });
-
-
-        $('#output2').text($('.range2').val()); // Valeur par défaut
-        $('.range2').on('input', function() {
-            var $set = $(this).val();
-            $('#output2').text($set);
-            $("#val2").text($set);
-            $("#myCanvas2").css("transform","rotate("+$set+"deg)");
-            range2 = $set;
-        });
-
-        $('#output3').text($('.range3').val()); // Valeur par défaut
-        $('.range3').on('input', function() {
-            var $set = $(this).val();
-            $('#output3').text($set);
-            $("#val3").text($set);
-            $("#myCanvas3").css("transform","rotate("+$set+"deg)");
-            range3 = $set;
-        });
+      $('.range').slider({
+        value:0,
+        min: -90,
+        max: 90,
+        step: 5,
+        //animate: "fast",
+      });
+      
+      $("#range1").slider({
+        slide: function(event, ui) {
+          var $set = ui.value;
+          $('#output1').text($set);
+          
+          $("#val1").text($set).css({"font-size":"1.5em", "color": pinkToddle});
+          $("#myCanvas").css("transform","rotate("+$set+"deg)");
+          range1 = $set;
+        }
+      });
+        
+        $("#range2").slider({
+        slide: function(event, ui) {
+          var $set = ui.value;
+          $('#output2').text($set);
+          
+          $("#val2").text($set).css({"font-size":"1.5em", color: pinkToddle});
+          $("#myCanvas2").css("transform","rotate("+$set+"deg)");
+          range2 = $set;
+        }
+      });
+                          
+        $("#range3").slider({
+        slide: function(event, ui) {
+          var $set = ui.value;
+          $('#output3').text($set);
+          $(".valDeg").css("font-size","1em");
+          $("#val3").text($set).css("font-size","1.5em");
+          $("#myCanvas3").css("transform","rotate("+$set+"deg)");
+          range3 = $set;
+        }
+      });
+      
+      $( ".range" ).on( "touchend", function() {
+        $(".valDeg").css({"font-size":"1em", "color": "#000"});
+      });
+      
+      
     });
 
 function win(){

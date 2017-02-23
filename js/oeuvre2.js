@@ -40,7 +40,7 @@ $("#valider").on("click",function(){
     }
 });
 
-$("#plus").on("click",function(){
+$("#plus").on("touchstart",function(){
     if (nbLignes>-1 && nbLignes <31 && nbLignes!=31) {
         nbLignes += 1;
         if (nbLignes==31) {
@@ -51,7 +51,7 @@ $("#plus").on("click",function(){
     }
 
 });
-$("#moins").on("click",function(){
+$("#moins").on("touchstart",function(){
     if (nbLignes>=0 && nbLignes <=30) {
         nbLignes -= 1;
         if (nbLignes==-1) {

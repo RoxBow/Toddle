@@ -29,12 +29,21 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
     <link rel="stylesheet" href="../stylesheets/oeuvre33.css" media="all">
+    <link rel="stylesheet" href="../stylesheets/jquery-ui.min.css" media="all">
+    
+    <style>
+      #slider {
+        width:  300px;
+      }
+  </style>
 </head>
 <body>
     <?php
         include 'credits.php';
     ?>
     <div class="container">
+                     
+
         <div class="container">
             <div id="win">
               <div class="content-win">
@@ -107,33 +116,36 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                 </div>
             </div>
             <div class="rightBloc">
+                
                 <div class="code bleu">
-                    <p class="alinea1"><span class="rose">var</span> angle = <span class="noir" id="val1">0</span>;</p>
-                    <p class="alinea1"><span class="rose">var</span> angle2 = <span class="noir" id="val2">0</span>;</p>
-                    <p class="alinea1"><span class="rose">var</span> angle3 = <span class="noir" id="val3">0</span>;</p>
+                    <p class="alinea1"><span class="rose">var</span> angle = <span class="noir valDeg" id="val1">0</span>;</p>
+                    <p class="alinea1"><span class="rose">var</span> angle2 = <span class="noir valDeg" id="val2">0</span>;</p>
+                    <p class="alinea1"><span class="rose">var</span> angle3 = <span class="noir valDeg" id="val3">0</span>;</p>
                     <br>
-                    <p class="alinea2">DessinerPointBlanc();</p>
-                    <p class="alinea2">DessinerLigne(noir);</p>
-                    <p class="alinea2">DessinerRectangle(gris);</p>
-                    <p class="alinea2">DessinerRectangle(noir);</p>
+                    <div class="alinea2">
+                      <p>DessinerPointBlanc();</p>
+                      <p>DessinerLigne(noir);</p>
+                      <p>DessinerRectangle(gris);</p>
+                      <p>DessinerRectangle(noir);</p>
+                    </div>
+                    
                     <br>
-                    <p class="alinea3">TournerRectangle(gris,<span class="
-                    noir">angle</span>);</p>
-                    <p class="alinea3">TournerRectangle(noir,<span class="
-                    noir">angle2</span>);</p>
-                    <p class="alinea3">TournerLigne(<span class="
-                    noir">angle3</span>);</p>
+                    <div class="alinea3">
+                      <p>TournerRectangle(gris,<span class="noir">angle</span>);</p>
+                      <p>TournerRectangle(noir,<span class="noir">angle2</span>);</p>
+                      <p>TournerLigne(<span class="noir">angle3</span>);</p>
+                    </div>
                 </div>
                 <div class="columns">
                     <div class="gauche">
-                        <div><span id="output1"></span>°</div>
-                        <input type="range" class="range" name="a" min="-90" max="90" step="5" value="-90"/>
+                        <div><span id="output1">0</span>°</div>
+                        <div class="range" id="range1"></div>
                         
-                        <div><span id="output2"></span>°</div>
-                        <input type="range" class="range2" name="a" min="-90" max="90" step="5" value="-90"/>
-
-                        <div><span id="output3"></span>°</div>
-                        <input type="range" class="range3" name="a" min="-90" max="90" step="5" value="-90"/>
+                        <div><span id="output2">0</span>°</div>
+                        <div class="range" id="range2"></div>
+                                              
+                        <div><span id="output3">0</span>°</div>
+                        <div class="range" id="range3"></div>
                     </div>
                     <div class="droite">
                         <div class="buttonV" id="valider">
@@ -151,6 +163,10 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
     <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/global.js"></script>
     <script src="../js/chrono.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/touchpunch.min.js"></script>
     <script src="../js/oeuvre33.js"></script>
+
+    
 </body>
 </html>
