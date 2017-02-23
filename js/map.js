@@ -17,7 +17,7 @@ $(document).ready(function() {
     // Launch chrono
     chrono();
     
-    $(document).bind( "click", function(e) {
+    $(document).bind( "touchstart", function(e) {
         // POPUP HELP
         if( $(".help_map").is(e.target) || $(".fa-question").is(e.target) ){
             $("#indiceBloc").fadeIn();
@@ -26,14 +26,14 @@ $(document).ready(function() {
     });
   
     if($("#indiceBloc")){
-      $("#indiceBloc").bind( "click", function(e) {
+      $("#indiceBloc").bind( "touchstart", function(e) {
         if($("#indiceBloc").is(e.target)){
           console.log(e.target);
           $("#indiceBloc").fadeOut();
         }
       });
     
-        /*$("#close").bind( "click", function() {
+        /*$("#close").bind( "touchstart", function() {
         $("#indiceBloc").fadeOut();
       });
       */

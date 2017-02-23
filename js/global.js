@@ -111,14 +111,14 @@ $(document).ready(function () {
     });
     
     //Positions crédits
-    $("footer>img").click(function () {
+    $("footer>img").on("touchstart",function () {
         $(".credits").css("display", "block");
         $(".credits").animate({
             marginTop: "0%"
         }, 1000);
     });
 
-    $("#croix").click(function () {
+    $("#croix").on("touchstart",function () {
         $(".credits").animate({
             marginTop: "100%"
         }, 750);
@@ -128,7 +128,7 @@ $(document).ready(function () {
     });
 
     //Slider crédits
-    $("#chevronGauche").on("click",function(){
+    $("#chevronGauche").on("touchstart",function(){
         if (countSlider==1 || countSlider==2) {
             $("#sous-texte").animate({
                 marginLeft: "+=100%"
@@ -142,7 +142,7 @@ $(document).ready(function () {
         }
     });
     
-    $("#chevronDroite").on("click",function(){
+    $("#chevronDroite").on("touchstart",function(){
         if (countSlider==0 || countSlider==1) {
             $("#sous-texte").animate({
                 marginLeft: "-=100%"

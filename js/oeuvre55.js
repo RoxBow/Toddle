@@ -98,7 +98,7 @@ function drawLigne(){
     }
 }
 
-$(".continuer").on("click",function(){
+$(".continuer").on("touchstart",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
@@ -108,11 +108,11 @@ $(".continuer").on("click",function(){
         document.location.replace("result.php");
     }
 });
-$(".rechercher").on("click",function(){
+$(".rechercher").on("touchstart",function(){
     $('#loose').fadeOut(500);
 });
 
-$("#valider").on("click", function(){
+$("#valider").on("touchstart", function(){
     if (dl==3&&dt==3) {
         win();
     } else lose();

@@ -74,7 +74,7 @@ function init() {
     $("#nombre").text(nbselect);
 }
 
-$("#poubelle").on("click", function(){
+$("#poubelle").on("touchstart", function(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
     ctx2.clearRect(0,0,canvas2.width,canvas2.height);
     ctx3.clearRect(0,0,canvas3.width,canvas3.height);
@@ -95,7 +95,7 @@ $("#poubelle").on("click", function(){
     cPush(canvas6,ctx6);
 });
 
-$("#couplus").on("click",function(){
+$("#couplus").on("touchstart",function(){
     if (couselect==2) {
         couselect=0;
         $("#couleur").text(couleurs[couselect]);
@@ -105,7 +105,7 @@ $("#couplus").on("click",function(){
     };   
 });
 
-$("#coumoins").on("click",function(){
+$("#coumoins").on("touchstart",function(){
     if (couselect==0) {
         couselect=2;
         $("#couleur").text(couleurs[couselect]);
@@ -115,7 +115,7 @@ $("#coumoins").on("click",function(){
     };
 });
 
-$("#oriplus").on("click",function(){
+$("#oriplus").on("touchstart",function(){
     if (oriselect==1) {
         oriselect=0;
         $("#orientation").text(orientation[oriselect]);
@@ -125,7 +125,7 @@ $("#oriplus").on("click",function(){
     };   
 });
 
-$("#orimoins").on("click",function(){
+$("#orimoins").on("touchstart",function(){
 
     if (oriselect==0) {
         oriselect=1;
@@ -136,7 +136,7 @@ $("#orimoins").on("click",function(){
     };
 });
 
-$("#nbplus").on("click",function(){
+$("#nbplus").on("touchstart",function(){
     if (nbselect==10) {
         nbselect=0;
         $("#nombre").text(nbselect);
@@ -146,7 +146,7 @@ $("#nbplus").on("click",function(){
     }
 });
 
-$("#nbmoins").on("click",function(){
+$("#nbmoins").on("touchstart",function(){
     if (nbselect==0) {
         nbselect=10;
         $("#nombre").text(nbselect);
@@ -157,7 +157,7 @@ $("#nbmoins").on("click",function(){
 
 });
 
-$(".continuer").on("click",function(){
+$(".continuer").on("touchstart",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
@@ -167,17 +167,17 @@ $(".continuer").on("click",function(){
         document.location.replace("result.php");
     }
 });
-$(".rechercher").on("click",function(){
+$(".rechercher").on("touchstart",function(){
     $('#loose').fadeOut(500);
 });
 
-$("#valider").on("click", function(){
+$("#valider").on("touchstart", function(){
     if (result==1 && result2==1 && result3==1 && result4==1 && result5==1 && result6==1) {
         win();
     } else lose();
 });
 
-$(".bva").click(function() {
+$(".bva").touchstart(function() {
     var colorLine = couleurs[couselect];
     var sens = orientation[oriselect];
     var nb = nbselect;
@@ -386,7 +386,7 @@ function lose(){
 
 /*functions for undo*/
 
-$("#undo").on("click", function(){
+$("#undo").on("touchstart", function(){
     cUndo();
 });
 
