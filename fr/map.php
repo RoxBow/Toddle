@@ -6,13 +6,6 @@ if(!isset($_SESSION['pseudo']) ){
     header("location: name.php");
 }
 
-/*
-### Chrono mode PHP ###
-if(empty($_SESSION['start'])) {
-    $_SESSION['start'] = date("h:i:s");
-}
-*/
-
 ?>
 
 <!doctype html>

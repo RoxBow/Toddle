@@ -34,7 +34,6 @@
                    <button type="button" class="lang" value="english">ENGLISH</button>
                </div>
                 <button type="button" class="launch" id="startFrench">COMMENCER L'EXPÉRIENCE</button>
-                
             </div>
             <button id="validLang" class="valide">
                 <span class="fa-stack ">
@@ -49,15 +48,15 @@
     </div>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/global.js"></script>
-    <script>
+    <script type="text/javascript">
         $(document).ready(function () {
-            $(".lang",".blocBtn").bind( "click", function() {
+            $(".lang",".blocBtn").on("touchstart", function() {
                 if(!$(this).hasClass("selected")){
                     $(".lang").toggleClass("selected");
                 }
             });
           
-            $(".launch", ".content").bind( "click", function() {
+            $(".launch", ".content").on("touchstart", function() {
                 $(this).animate({
                     left: "100%",
                     opacity: 0
@@ -77,7 +76,7 @@
             });
             
              // button launch experience
-            $("#validLang .fa", ".container").bind( "click", function() {
+            $("#validLang .fa", ".container").on("touchstart", function() {
                 if($(".selected").attr("value") == "french"){
                     location.href = "fr/name.php";
                 }

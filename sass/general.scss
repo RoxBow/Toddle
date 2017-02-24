@@ -71,7 +71,7 @@ html, body {
     width: 100%;
     height: 100%;
     margin-top: 100%;
-    z-index: 10000;
+    z-index: 5000;
     background-color: rgba(255,255,255,1);
     .title{
         font-size: 72px;
@@ -188,6 +188,7 @@ html, body {
     position: absolute;
     width: 110px;
     height: 110px;
+    z-index: 100;
 }
 
 .fa {
@@ -301,7 +302,7 @@ i{
     .overlay {
         display: none;
         position: fixed;
-        z-index: 1;
+        z-index: 100;
         left: 0;
         top: 0;
         width: 100%;
@@ -314,6 +315,7 @@ i{
             background-color: #fff;
             border-radius: 15px;
             position: absolute;
+            z-index: 200;
             width: 50%;
             height: 50%;
             top: 0;
@@ -348,6 +350,7 @@ i{
         &.orientation {
             display: block;
             background-color: rgba(0,0,0,0.8);
+            z-index: 9998;
             .content-orientation {
                 position: absolute;
                 top: 0;
@@ -362,6 +365,7 @@ i{
                 height: 45%;
                 padding: 8%;
                 border-radius: 5%;
+                z-index: 9999;
                 img {
                     width: 50%;
                     display: inline-block;

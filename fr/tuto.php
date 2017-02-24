@@ -109,10 +109,10 @@ if( !isset($_SESSION['pseudo']) ){
     
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/global.js"></script>
-    <script type="application/javascript">
+    <script type="text/javascript">
         $(document).ready(function () {
             /* ### TUTO ### */
-            $('.lesson', '.lessons').click(function (e) {
+            $('.lesson', '.lessons').on("touchstart", function (e) {
                 e.preventDefault();
 
                 if ($(e.target).hasClass('understood')) {

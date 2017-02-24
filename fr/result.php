@@ -184,7 +184,6 @@ if(isset($_POST['mail'])){
      $headers .= 'From: Toddle <concours.toddle@gmail.com>' . "\r\n";
      $headers .= "Content-Transfer-Encoding: 8bit\r\n";
 
-
      // Envoi
      mail($to, $subject, $message, $headers);
 }
@@ -301,7 +300,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
                     <i class='fa fa-circle fa-stack-2x'></i>
                     <i class='fa fa-check fa-stack-1x fa-inverse' aria-hidden='true'></i>
                 </span>
-                <p>Adresse email bien enregistré</p>
+                <p>Adresse email bien enregistrée</p>
                 </div>";
             }
         ?>
@@ -323,7 +322,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
                 }, 500);
               });
             
-            $(document).click(function (e) {
+            $(document).on("touchstart", function (e) {
                 if( $(".fa-envelope").is(e.target) ){
                     $(".blocPoppin").fadeIn(); // Open popup
                 }
@@ -336,7 +335,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
             });
             
             // Check onclick if mail entered is correct
-            $(".sendMail").click(function(e) {
+            $(".sendMail").on("touchstart", function(e) {
                 if(validateEmail($("#mail").val()) === false){
                     e.preventDefault();
                     $(".error").text("Adresse mail invalide");

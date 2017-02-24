@@ -4,6 +4,9 @@ min = 0; // Init min
 var oeuvre, newOeuvre;
 
 $(document).ready(function() {
+    // Launch chrono
+    chrono();
+
     /* CHRONO */
     if(localSec != 0 || localMin != 0){
         // Update time script
@@ -14,32 +17,15 @@ $(document).ready(function() {
         $("#min").val(localMin);
     }
     
-    // Launch chrono
-    chrono();
-    
-    $(document).bind( "touchstart", function(e) {
+    $(document).on( "touchstart", function(e) {
         // POPUP HELP
         if( $(".help_map").is(e.target) || $(".fa-question").is(e.target) ){
             $("#indiceBloc").fadeIn();
             $("#indice").css("animation-play-state","paused");
-        }
-    });
-  
-    if($("#indiceBloc")){
-      $("#indiceBloc").bind( "touchstart", function(e) {
-        if($("#indiceBloc").is(e.target)){
-          console.log(e.target);
+        } else if($("#indiceBloc").is(e.target) || $("#close", "#indiceBloc").is(e.target)){
           $("#indiceBloc").fadeOut();
         }
-      });
-    
-        /*$("#close").bind( "touchstart", function() {
-        $("#indiceBloc").fadeOut();
-      });
-      */
-      
-      
-    }
+    });
 
     // Blink room on map
     setInterval(function() {
@@ -47,8 +33,7 @@ $(document).ready(function() {
         
         if (numRoom.attr("opacity") == '0') {
             numRoom.attr({"fill":"#F38F9A", "opacity":".8"});
-        }
-        else {
+        } else {
             numRoom.attr({"opacity":"0"});
         }
     }, 500);

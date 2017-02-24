@@ -111,17 +111,15 @@ $(document).ready(function () {
     });
     
     //Positions crédits
-    $("footer>img").on("touchstart",function () {
+    $("footer>img").on("touchstart", function () {
         $(".credits").css("display", "block");
         $(".credits").animate({
             marginTop: "0%"
         }, 1000);
     });
 
-    $("#croix").on("touchstart",function () {
-        $(".credits").animate({
-            marginTop: "100%"
-        }, 750);
+    $("#croix").on("touchstart", function () {
+        $(".credits").animate({ marginTop: "100%" }, 750);
         setTimeout(function () {
             $(".credits").css("display", "none");
         }, 750);
@@ -193,6 +191,7 @@ function changeRond(){
     }
 }
 
+// ### Autorisation scroll ###
 $(document).on('touchmove', function(e){ e.preventDefault(); }); // Disable scroll
 $('.credits').on('touchmove', function (e) { e.stopPropagation(); }); // Allow scroll
 
