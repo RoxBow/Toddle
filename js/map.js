@@ -52,14 +52,14 @@ function getFile() {
         // Oeuvre is load
         oeuvre.onload = function(){
             newOeuvre = getBase64Image(oeuvre);
-            
             var userFile = document.querySelector('#picture').files[0]; // Img
             // When user takes his photo
             if (userFile) {
                 console.log(userFile);
                 var diff = resemble(userFile).compareTo(newOeuvre).scaleToSameSize().onComplete(function (data) {
                     console.log(data);
-                    //if (data.misMatchPercentage < 50.00) {
+                    console.log(data.misMatchPercentage);
+                    //if (data.misMatchPercentage > 0.00) {
                         console.log(data.misMatchPercentage);
                         
                         localStorage.setItem("seconde", $("#sec").val());
@@ -70,7 +70,7 @@ function getFile() {
                         $("#overlayChargement").fadeOut(500);
                         console.log(data.misMatchPercentage + " de différence, il doit être supérieur à 50%.");
                         if(dir == "fr"){
-                            $(".container").append("<div class='badPicture'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x rose'></i><i class='fa fa-times fa-stack-1x fa-inverse' aria-hidden='true'></i></span><p>Ce n'est pas la bonne oeuvre.</p></div>");
+                            $(".container").append("<div class='badPicture'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x rose'></i><i class='fa fa-times fa-stack-1x fa-inverse' aria-hidden='true'></i></span><p>Ce n'est pas la bonne oeuvre.</p><p style='font-size:2em;'>"+data.misMatchPercentage+"</p></div>");
                         }
                         else {
                             $(".container").append("<div class='badPicture'><span class='fa-stack'><i class='fa fa-circle fa-stack-2x rose'></i><i class='fa fa-times fa-stack-1x fa-inverse' aria-hidden='true'></i></span><p>This is not the right one.</p></div>");
@@ -87,6 +87,8 @@ function getFile() {
                           });
                     }*/
                 });
+              
+              console.log(diff);
             }
         };
     }, 500);
@@ -101,6 +103,7 @@ function getBase64Image(img) {
 
     // Copy the image contents to the canvas
     var ctx = canvas.getContext("2d");
+    
     ctx.drawImage(img, 0, 0);
 
     // Get the data-URL formatted image

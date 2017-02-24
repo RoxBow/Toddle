@@ -312,6 +312,8 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
     <script src="../js/chrono.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+              $('.listeUser').on('touchmove', function (e) { e.stopPropagation(); }); // Allow scroll
+          
               $(".blocEmail").animate({
                 top: "5%"
               }, 1500, function() {

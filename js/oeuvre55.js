@@ -98,21 +98,23 @@ function drawLigne(){
     }
 }
 
-$(".continuer").on("touchstart",function(){
+$(".continuer").on("click",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
+        localStorage.setItem("seconde", $("#sec").val() );
+        localStorage.setItem("minute", $("#min").val() );
         document.location.replace("map.php");
     }
     else {
         document.location.replace("result.php");
     }
 });
-$(".rechercher").on("touchstart",function(){
+$(".rechercher").on("click",function(){
     $('#loose').fadeOut(500);
 });
 
-$("#valider").on("touchstart", function(){
+$("#valider").on("click", function(){
     if (dl==3&&dt==3) {
         win();
     } else lose();

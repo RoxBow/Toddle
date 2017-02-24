@@ -89,7 +89,7 @@ if( !isset($_SESSION['pseudo']) ){
           $("#oeuvretrouve1go").click(function() {
               localStorage.setItem("seconde", $("#sec").val());
               localStorage.setItem("minute", $("#min").val());
-              document.location.replace("oeuvre33.php");
+              document.location.replace("oeuvre.php");
           });
         });
     </script>

@@ -9,8 +9,8 @@ dir = dir.slice(-2);
 // CONST our arts
 const roomKlein = "allee-nord";
 const roomMasomenos = "allee-nord";
-const roomTram4 = "room28";
-const roomJauneViolet = "room39";
+const roomCompo = "room40";
+const roomJericho = "room17";
 const roomMondrian = "allee-sud";
 
 // Variable cache level
@@ -51,7 +51,7 @@ switch (levelUser) {
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "3":
-        currentArt = "../img/trames4.png";
+        currentArt = "../img/compo.png";
         currentRoom = roomTram4;
         $("#levelUser").text(levelUser);
         if(dir == "fr"){
@@ -75,8 +75,8 @@ switch (levelUser) {
         $("#nbrDefi",".defi").text(levelUser);
         break;
     case "5":
-        currentArt = "../img/jauneauviolet.png";
-        currentRoom = roomJauneViolet;
+        currentArt = "../img/jericho.png";
+        currentRoom = roomJericho;
         $("#levelUser").text(levelUser);
         if(dir == "fr"){
             $("#indiceMap",".popup2").html("La dernière &#156;uvre devant laquelle tu dois te rendre, est un double tableau d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. Ce tableau aborde le dégradé grâce à des formes géométriques simples.");
@@ -193,7 +193,7 @@ function changeRond(){
 
 // ### Autorisation scroll ###
 $(document).on('touchmove', function(e){ e.preventDefault(); }); // Disable scroll
-$('.credits').on('touchmove', function (e) { e.stopPropagation(); }); // Allow scroll
+$('.third-view').on('touchmove', function (e) { e.stopPropagation(); }); // Allow scroll
 
 // Detect orientation tablet
 function doOnOrientationChange() {

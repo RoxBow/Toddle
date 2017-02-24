@@ -49,7 +49,7 @@ html, body {
   width: 100%;
   height: 100%;
   margin-top: 100%;
-  z-index: 10000;
+  z-index: 5000;
   background-color: white;
 }
 /* line 63, ../sass/general.scss */
@@ -187,71 +187,72 @@ html, body {
   position: absolute;
   width: 110px;
   height: 110px;
+  z-index: 100;
 }
 
-/* line 193, ../sass/general.scss */
+/* line 194, ../sass/general.scss */
 .fa {
   vertical-align: middle;
 }
 
 /* ###### Class for colors ###### */
-/* line 198, ../sass/general.scss */
+/* line 199, ../sass/general.scss */
 .rose {
   color: #F38F9A;
 }
 
-/* line 201, ../sass/general.scss */
+/* line 202, ../sass/general.scss */
 .bleu {
   color: #355E7E;
 }
 
-/* line 204, ../sass/general.scss */
+/* line 205, ../sass/general.scss */
 .beige {
   color: #F8B195;
 }
 
-/* line 207, ../sass/general.scss */
+/* line 208, ../sass/general.scss */
 .noir {
   color: black;
 }
 
-/* line 210, ../sass/general.scss */
+/* line 211, ../sass/general.scss */
 .six {
   font-weight: 600;
 }
 
-/* line 213, ../sass/general.scss */
+/* line 214, ../sass/general.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 216, ../sass/general.scss */
+/* line 217, ../sass/general.scss */
 .center {
   text-align: center;
 }
 
-/* line 219, ../sass/general.scss */
+/* line 220, ../sass/general.scss */
 i {
   font-style: italic;
 }
 
-/* line 222, ../sass/general.scss */
+/* line 223, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 227, ../sass/general.scss */
+/* line 228, ../sass/general.scss */
 .container * {
   outline: none;
   box-sizing: border-box;
 }
-/* line 231, ../sass/general.scss */
+/* line 232, ../sass/general.scss */
 .container input {
   font-family: 'GothamRounded';
 }
-/* line 234, ../sass/general.scss */
+/* line 235, ../sass/general.scss */
 .container button {
   background: none;
   border: none;
@@ -259,7 +260,7 @@ i {
   text-transform: uppercase;
   font-weight: 600;
 }
-/* line 241, ../sass/general.scss */
+/* line 242, ../sass/general.scss */
 .container header {
   position: relative;
   overflow: hidden;
@@ -268,12 +269,12 @@ i {
   margin: 0 0 15px 0;
   height: 15%;
 }
-/* line 248, ../sass/general.scss */
+/* line 249, ../sass/general.scss */
 .container header .toddle_form {
   height: 80%;
   float: left;
 }
-/* line 252, ../sass/general.scss */
+/* line 253, ../sass/general.scss */
 .container header .toddle_text {
   position: absolute;
   left: 0;
@@ -282,7 +283,7 @@ i {
   margin: auto;
   height: 50%;
 }
-/* line 260, ../sass/general.scss */
+/* line 261, ../sass/general.scss */
 .container header .blockRight {
   position: absolute;
   right: 5%;
@@ -292,11 +293,11 @@ i {
   font-weight: normal;
   color: #F38F9A;
 }
-/* line 268, ../sass/general.scss */
+/* line 269, ../sass/general.scss */
 .container header .blockRight .name, .container header .blockRight .chrono {
   display: inline-block;
 }
-/* line 272, ../sass/general.scss */
+/* line 273, ../sass/general.scss */
 .container header .blockRight .chrono input {
   font-size: 2.5vw;
   color: #F38F9A;
@@ -306,11 +307,11 @@ i {
   border: none;
   background: none;
 }
-/* line 282, ../sass/general.scss */
+/* line 283, ../sass/general.scss */
 .container header .blockRight .defi {
   text-align: right;
 }
-/* line 287, ../sass/general.scss */
+/* line 288, ../sass/general.scss */
 .container footer {
   width: 100%;
   text-align: right;
@@ -319,18 +320,18 @@ i {
   bottom: 1%;
   right: 1%;
 }
-/* line 294, ../sass/general.scss */
+/* line 295, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
   vertical-align: middle;
   margin-right: 1%;
 }
-/* line 301, ../sass/general.scss */
+/* line 302, ../sass/general.scss */
 .container .overlay {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
@@ -340,11 +341,12 @@ i {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
-/* line 313, ../sass/general.scss */
+/* line 314, ../sass/general.scss */
 .container .overlay .popup {
   background-color: #fff;
   border-radius: 15px;
   position: absolute;
+  z-index: 200;
   width: 50%;
   height: 50%;
   top: 0;
@@ -356,7 +358,7 @@ i {
   color: #355E7E;
   font-size: 20px;
 }
-/* line 327, ../sass/general.scss */
+/* line 329, ../sass/general.scss */
 .container .overlay .popup .sous-titre {
   color: #F38F9A;
   font-size: 2.2rem;
@@ -364,13 +366,13 @@ i {
   margin-bottom: 4%;
   display: block;
 }
-/* line 334, ../sass/general.scss */
+/* line 336, ../sass/general.scss */
 .container .overlay .popup .error {
   margin: 3% auto;
   color: red;
   font-size: 2vw;
 }
-/* line 340, ../sass/general.scss */
+/* line 342, ../sass/general.scss */
 .container .overlay .close {
   color: #aaa;
   position: absolute;
@@ -378,12 +380,13 @@ i {
   top: 2%;
   font-size: 4vw;
 }
-/* line 348, ../sass/general.scss */
+/* line 350, ../sass/general.scss */
 .container .overlay.orientation {
   display: block;
   background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9998;
 }
-/* line 351, ../sass/general.scss */
+/* line 354, ../sass/general.scss */
 .container .overlay.orientation .content-orientation {
   position: absolute;
   top: 0;
@@ -398,15 +401,16 @@ i {
   height: 45%;
   padding: 8%;
   border-radius: 5%;
+  z-index: 9999;
 }
-/* line 365, ../sass/general.scss */
+/* line 369, ../sass/general.scss */
 .container .overlay.orientation .content-orientation img {
   width: 50%;
   display: inline-block;
   margin: auto;
   right: 0;
 }
-/* line 371, ../sass/general.scss */
+/* line 375, ../sass/general.scss */
 .container .overlay.orientation .content-orientation p {
   text-transform: uppercase;
   font-size: 5vw;
@@ -414,7 +418,7 @@ i {
   margin: 7% 0;
 }
 
-/* line 382, ../sass/general.scss */
+/* line 386, ../sass/general.scss */
 .btn_toddle, .container .group_btn form .container_input label {
   background: #355E7E;
   padding: 20px;
@@ -425,7 +429,7 @@ i {
   margin: 0 auto;
 }
 
-/* line 392, ../sass/general.scss */
+/* line 396, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;

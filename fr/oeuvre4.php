@@ -115,7 +115,7 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                         <span class="selecteurs" id="couplus">&rsaquo;</span>
                         </div>
                     </div>
-                    <div class="orientation">
+                    <div class="orientationLigne">
                         <p>Orientation</p>
                         <div class="choix">
                         <span class="selecteurs" id="orimoins">

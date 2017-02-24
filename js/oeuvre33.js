@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 /* #####    CHRONO END     ##### */
 
-$("#valider").on("touchstart",function(){
+$("#valider").on("click",function(){
 	console.log(range1+","+range2+","+range3);
     if (test(range1,range2,range3)){
     	stopchrono(); // Arrête chrono
@@ -52,7 +52,7 @@ $("#valider").on("touchstart",function(){
         lose();
     }
 });
-$(".continuer").on("touchstart",function(){
+$(".continuer").on("click",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
@@ -64,7 +64,7 @@ $(".continuer").on("touchstart",function(){
         document.location.replace("result.php");
     }
 });
-$(".rechercher").on("touchstart",function(){
+$(".rechercher").on("click",function(){
     $('#loose').fadeOut(500);
 });
 
@@ -149,9 +149,6 @@ $(".rechercher").on("touchstart",function(){
 
 	$(function() {
 
-        $("#myCanvas").css("transform","rotate(-90deg)");
-        $("#myCanvas2").css("transform","rotate(-90deg)");
-        $("#myCanvas3").css("transform","rotate(-90deg)");
       
       /* ######### */
     $(".range").slider();
@@ -191,7 +188,7 @@ $(".rechercher").on("touchstart",function(){
           var $set = ui.value;
           $('#output3').text($set);
           $(".valDeg").css("font-size","1em");
-          $("#val3").text($set).css("font-size","1.5em");
+          $("#val3").text($set).css({"font-size":"1.5em", color: pinkToddle});
           $("#myCanvas3").css("transform","rotate("+$set+"deg)");
           range3 = $set;
         }

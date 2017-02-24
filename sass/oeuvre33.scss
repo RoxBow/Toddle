@@ -13,9 +13,9 @@
       transition: all .5s;
     }
     #handclick{
-      top: 63%;
-      left: 47%;
-      z-index: 10000;
+      top: 72.5%;
+      left: 62.3%;
+      z-index: 1000;
       animation-duration: 2s;
       animation-name: slide;
       animation-iteration-count: infinite;
@@ -160,7 +160,7 @@
             background-color: rgba(188,188,188,0.2);
             width: 90%;
             .alinea1{
-                line-height: 45px;
+                line-height: 44px;
                 margin-left: 7px;
             }
             .alinea2{
@@ -227,12 +227,12 @@
 }
 @keyframes slide {
   from {
-    top: 63%;
-    left:47%;
+    top: 72.5%;
+    left:62.3%;
   }
 
   to {
-    top: 63%;
-    left:65%;
+    top: 72.5%;
+    left:75%;
   }
 }

@@ -59,7 +59,7 @@ $(window).bind('beforeunload',function(){
 
         var actif;
 
-        $("#undo").on("touchstart", function(){
+        $("#undo").on("click", function(){
           if (cpush==0) {
             cUndo();
           }
@@ -68,7 +68,7 @@ $(window).bind('beforeunload',function(){
           }
         });
 
-        $("#valider").on("touchstart", function(){
+        $("#valider").on("click", function(){
           if (validation==0 && verification ==1) {
             $( "#rectangle,#carre,#rond" ).css("z-index","5");
             $( "#rouge,#jaune,#violet" ).css("display","block");
@@ -83,7 +83,7 @@ $(window).bind('beforeunload',function(){
               $( "#secondeconsigne").toggle("slide");
             }, 1000);
               $( "#rectangle,#carre,#rond,#rouge,#jaune,#violet" ).animate({
-              left: "-=48.5%",
+              left: "2.5%",
             }, 500);
             $( "#rectangle,#carre,#rond" ).css("display","none");
             validation=1;
@@ -107,7 +107,7 @@ $(window).bind('beforeunload',function(){
         });
 
           // Redirection or not after level complete
-        $(".continuer").on("touchstart",function(){
+        $(".continuer").click(function(){
             if(levelUser < 5){
                 nbrLevel++;
                 localStorage.setItem("levelUser", nbrLevel);
@@ -120,7 +120,7 @@ $(window).bind('beforeunload',function(){
             }
         });
 
-        $(".rechercher").on("touchstart",function(){
+        $(".rechercher").click(function(){
           $('#loose').fadeOut(500);
         });
 

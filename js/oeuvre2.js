@@ -31,7 +31,7 @@ function init() {
 }
 
 //nombre de lignes
-$("#valider").on("touchstart",function(){
+$("#valider").on("click",function(){
     var lines=$("#nbLignes").text();
     if (lines==resultat){
         win();
@@ -62,7 +62,7 @@ $("#moins").on("touchstart",function(){
     }
 });
 
-$(".continuer").on("touchstart",function(){
+$(".continuer").on("click",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
@@ -74,7 +74,7 @@ $(".continuer").on("touchstart",function(){
         document.location.replace("result.php");
     }
 });
-$(".rechercher").on("touchstart",function(){
+$(".rechercher").on("click",function(){
     $('#loose').fadeOut(500);
 });
 

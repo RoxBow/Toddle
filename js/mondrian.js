@@ -36,7 +36,7 @@ var nbrLine, colorLine, x1, x2, y1, y2;
 
 // Variables pour les fonctions
 var couleurs=["Jaune","Rouge","Bleu"];
-var orientation=["Horizontales","Verticales"];
+var orientationLigne=["Horizontales","Verticales"];
 var couselect=0;
 var oriselect=0;
 var nbselect=0;
@@ -70,11 +70,11 @@ function init() {
     cPush(canvas6,ctx6);
 
     $("#couleur").text(couleurs[couselect]);
-    $("#orientation").text(orientation[oriselect]);
+    $("#orientation").text(orientationLigne[oriselect]);
     $("#nombre").text(nbselect);
 }
 
-$("#poubelle").on("touchstart", function(){
+$("#poubelle").on("click", function(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
     ctx2.clearRect(0,0,canvas2.width,canvas2.height);
     ctx3.clearRect(0,0,canvas3.width,canvas3.height);
@@ -95,7 +95,7 @@ $("#poubelle").on("touchstart", function(){
     cPush(canvas6,ctx6);
 });
 
-$("#couplus").on("touchstart",function(){
+$("#couplus").on("click",function(){
     if (couselect==2) {
         couselect=0;
         $("#couleur").text(couleurs[couselect]);
@@ -105,7 +105,7 @@ $("#couplus").on("touchstart",function(){
     };   
 });
 
-$("#coumoins").on("touchstart",function(){
+$("#coumoins").on("click",function(){
     if (couselect==0) {
         couselect=2;
         $("#couleur").text(couleurs[couselect]);
@@ -115,28 +115,28 @@ $("#coumoins").on("touchstart",function(){
     };
 });
 
-$("#oriplus").on("touchstart",function(){
+$("#oriplus").on("click",function(){
     if (oriselect==1) {
         oriselect=0;
-        $("#orientation").text(orientation[oriselect]);
+        $("#orientation").text(orientationLigne[oriselect]);
     } else{
         oriselect++; 
-        $("#orientation").text(orientation[oriselect]);
+        $("#orientation").text(orientationLigne[oriselect]);
     };   
 });
 
-$("#orimoins").on("touchstart",function(){
+$("#orimoins").on("click",function(){
 
     if (oriselect==0) {
         oriselect=1;
-        $("#orientation").text(orientation[oriselect]);
+        $("#orientation").text(orientationLigne[oriselect]);
     } else{
         oriselect--; 
-        $("#orientation").text(orientation[oriselect]);
+        $("#orientation").text(orientationLigne[oriselect]);
     };
 });
 
-$("#nbplus").on("touchstart",function(){
+$("#nbplus").on("click",function(){
     if (nbselect==10) {
         nbselect=0;
         $("#nombre").text(nbselect);
@@ -146,18 +146,18 @@ $("#nbplus").on("touchstart",function(){
     }
 });
 
-$("#nbmoins").on("touchstart",function(){
+$("#nbmoins").on("click",function(){
     if (nbselect==0) {
         nbselect=10;
         $("#nombre").text(nbselect);
     } else{
         nbselect--;
         $("#nombre").text(nbselect);
-    }    
+    }
 
 });
 
-$(".continuer").on("touchstart",function(){
+$(".continuer").on("click",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
@@ -167,19 +167,19 @@ $(".continuer").on("touchstart",function(){
         document.location.replace("result.php");
     }
 });
-$(".rechercher").on("touchstart",function(){
+$(".rechercher").on("click",function(){
     $('#loose').fadeOut(500);
 });
 
-$("#valider").on("touchstart", function(){
+$("#valider").on("click", function(){
     if (result==1 && result2==1 && result3==1 && result4==1 && result5==1 && result6==1) {
         win();
     } else lose();
 });
 
-$(".bva").touchstart(function() {
+$(".bva").click(function() {
     var colorLine = couleurs[couselect];
-    var sens = orientation[oriselect];
+    var sens = orientationLigne[oriselect];
     var nb = nbselect;
     createLine(sens, nb, colorLine);
 });
@@ -188,7 +188,7 @@ function jauneV(){
 
 }
 
-function createLine(orientation, nombre, color){
+function createLine(orientationLigne, nombre, color){
     if (color=="Jaune") {
         colorname="yellow";
     } else if (color=="Bleu") {
@@ -197,11 +197,11 @@ function createLine(orientation, nombre, color){
         colorname="red";
     }
     var x1,x2,y1,y2;
-    if(orientation === "Verticales"){
+    if(orientationLigne === "Verticales"){
         x1 = 30;
         
     }
-    else if(orientation === "Horizontales") {
+    else if(orientationLigne === "Horizontales") {
         y1 = 50;
         x1 = 0;
         x2 = canvas.width;
@@ -209,7 +209,7 @@ function createLine(orientation, nombre, color){
     }
 
     
-    if(orientation === "Verticales"){
+    if(orientationLigne === "Verticales"){
             if (colorname==="yellow") {
                 ctx.clearRect(0,0,canvas.width,canvas.height);
                 ctx.beginPath();
@@ -291,7 +291,7 @@ function createLine(orientation, nombre, color){
             }
         }
 
-        if(orientation === "Horizontales"){
+        if(orientationLigne === "Horizontales"){
             if (colorname==="yellow") {
                 ctx4.clearRect(0,0,canvas4.width,canvas4.height);
                 ctx4.beginPath();
@@ -304,7 +304,7 @@ function createLine(orientation, nombre, color){
                     if (i==4){ y1=120; }
                     if (i==5){ y1=130; }
                     if (i==6){ y1=145; result4=1; }
-                    if (i==7){ y1=160; result4=0;}
+                    if (i==7){ y1=125; result4=0;}
                     if (i==8){ y1=25; }
                     if (i==9){ y1=110; }
                     x1 = 0;
@@ -372,8 +372,8 @@ function createLine(orientation, nombre, color){
             }
         }
     if (nombre!=0) {
-        $(".code").append("<p>EffacerLigne("+color+","+orientation+")</p>");
-        $(".code").append("<p>DessinerUneLigne("+color+","+orientation+","+nombre+")</p>");
+        $(".code").append("<p>EffacerLigne("+color+","+orientationLigne+")</p>");
+        $(".code").append("<p>DessinerUneLigne("+color+","+orientationLigne+","+nombre+")</p>");
     }   
 }
 
@@ -386,7 +386,7 @@ function lose(){
 
 /*functions for undo*/
 
-$("#undo").on("touchstart", function(){
+$("#undo").on("click", function(){
     cUndo();
 });
 
