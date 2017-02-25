@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 
@@ -6,24 +6,13 @@ if( !isset($_SESSION['pseudo']) ){
     header("location: name.php");
 }
 
-/*
-### Chrono mode PHP ###
-$start = new DateTime($_SESSION['start']); // put old date in date object
-
-$_SESSION['end'] = date("h:i:s"); // get actual date
-$end = new DateTime($_SESSION['end']); // put actual date in date object
-
-$interval = $start->diff($end); // put diff date in interval
-print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
-*/
-
 ?>
 
 <!doctype html>
 <html class="no-js" lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Jaune au violet</title>
+    <title>Toddle - Interactive game</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">

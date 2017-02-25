@@ -71,16 +71,14 @@
                     });
                   
                     $(".valide",".content").addClass("active");
-                    
                 });
             });
             
              // button launch experience
             $("#validLang .fa", ".container").on("touchstart", function() {
-                if($(".selected").attr("value") == "french"){
+                if($(".selected").attr("value") === "french"){
                     location.href = "fr/name.php";
-                }
-                else if($(".selected").attr("value") == "english") {
+                } else if($(".selected").attr("value") === "english") {
                     location.href = "en/name.php";
                 }
             });

@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 /* #####    CHRONO END     ##### */
 
-$("#valider").on("click",function(){
+$("#valider").on("touchstart",function(){
 	console.log(range1+","+range2+","+range3+","+range4);
     if (test(range1,range2,range3,range4)){
     	stopchrono(); // Arrête chrono
@@ -52,7 +52,8 @@ $("#valider").on("click",function(){
         lose();
     }
 });
-$(".continuer").on("click",function(){
+
+$(".continuer").on("touchstart",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
@@ -64,7 +65,7 @@ $(".continuer").on("click",function(){
         document.location.replace("result.php");
     }
 });
-$(".rechercher").on("click",function(){
+$(".rechercher").on("touchstart",function(){
     $('#loose').fadeOut(500);
 });
 

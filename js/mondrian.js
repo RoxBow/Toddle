@@ -1,5 +1,3 @@
-/* #####    CHRONO      ##### */
-
 // Update time script
 sec = localSec;
 min = localMin;
@@ -22,9 +20,9 @@ $(document).ready(function() {
 var canvas;
 var ctx;
 
-var tuto=0;
+var tuto = 0;
 function touche() {
-    if (tuto==0) {
+    if (tuto == 0) {
         $("#handclick").css("animation-play-state","paused");
         $("#handclick").css("display","none");
         tuto=1;
@@ -37,16 +35,18 @@ var nbrLine, colorLine, x1, x2, y1, y2;
 // Variables pour les fonctions
 var couleurs=["Jaune","Rouge","Bleu"];
 var orientationLigne=["Horizontales","Verticales"];
-var couselect=0;
-var oriselect=0;
-var nbselect=0;
+
+var couselect = 0,
+    oriselect = 0,
+    nbselect = 0;
+
 //Var pour compter le bon resultat
-var result=0;
-var result2=0;
-var result3=0;
-var result4=0;
-var result5=0;
-var result6=0;
+var result = 0,
+    result2=0,
+    result3=0,
+    result4=0,
+    result5=0,
+    result6=0;
 
 function init() {
     canvas = document.getElementById("myCanvas");
@@ -74,7 +74,7 @@ function init() {
     $("#nombre").text(nbselect);
 }
 
-$("#poubelle").on("click", function(){
+$("#poubelle").on("touchstart", function(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
     ctx2.clearRect(0,0,canvas2.width,canvas2.height);
     ctx3.clearRect(0,0,canvas3.width,canvas3.height);
@@ -95,48 +95,48 @@ $("#poubelle").on("click", function(){
     cPush(canvas6,ctx6);
 });
 
-$("#couplus").on("click",function(){
+$("#couplus").on("touchstart",function(){
     if (couselect==2) {
         couselect=0;
         $("#couleur").text(couleurs[couselect]);
     } else{
-        couselect++; 
-        $("#couleur").text(couleurs[couselect]);
-    };   
-});
-
-$("#coumoins").on("click",function(){
-    if (couselect==0) {
-        couselect=2;
-        $("#couleur").text(couleurs[couselect]);
-    } else{
-        couselect--; 
+        couselect++;
         $("#couleur").text(couleurs[couselect]);
     };
 });
 
-$("#oriplus").on("click",function(){
+$("#coumoins").on("touchstart",function(){
+    if (couselect==0) {
+        couselect=2;
+        $("#couleur").text(couleurs[couselect]);
+    } else{
+        couselect--;
+        $("#couleur").text(couleurs[couselect]);
+    };
+});
+
+$("#oriplus").on("touchstart",function(){
     if (oriselect==1) {
         oriselect=0;
         $("#orientation").text(orientationLigne[oriselect]);
     } else{
-        oriselect++; 
+        oriselect++;
         $("#orientation").text(orientationLigne[oriselect]);
-    };   
+    };
 });
 
-$("#orimoins").on("click",function(){
+$("#orimoins").on("touchstart",function(){
 
     if (oriselect==0) {
         oriselect=1;
         $("#orientation").text(orientationLigne[oriselect]);
     } else{
-        oriselect--; 
+        oriselect--;
         $("#orientation").text(orientationLigne[oriselect]);
     };
 });
 
-$("#nbplus").on("click",function(){
+$("#nbplus").on("touchstart",function(){
     if (nbselect==10) {
         nbselect=0;
         $("#nombre").text(nbselect);
@@ -146,7 +146,7 @@ $("#nbplus").on("click",function(){
     }
 });
 
-$("#nbmoins").on("click",function(){
+$("#nbmoins").on("touchstart",function(){
     if (nbselect==0) {
         nbselect=10;
         $("#nombre").text(nbselect);
@@ -157,36 +157,35 @@ $("#nbmoins").on("click",function(){
 
 });
 
-$(".continuer").on("click",function(){
+$(".continuer").on("touchstart",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
+        localStorage.setItem("seconde", $("#sec").val() );
+        localStorage.setItem("minute", $("#min").val() );
         document.location.replace("map.php");
     }
     else {
         document.location.replace("result.php");
     }
 });
-$(".rechercher").on("click",function(){
+
+$(".rechercher").on("touchstart",function(){
     $('#loose').fadeOut(500);
 });
 
-$("#valider").on("click", function(){
+$("#valider").on("touchstart", function(){
     if (result==1 && result2==1 && result3==1 && result4==1 && result5==1 && result6==1) {
         win();
     } else lose();
 });
 
-$(".bva").click(function() {
+$(".bva").on("touchstart", function() {
     var colorLine = couleurs[couselect];
     var sens = orientationLigne[oriselect];
     var nb = nbselect;
     createLine(sens, nb, colorLine);
 });
-
-function jauneV(){
-
-}
 
 function createLine(orientationLigne, nombre, color){
     if (color=="Jaune") {
@@ -371,10 +370,10 @@ function createLine(orientationLigne, nombre, color){
                 cPush(canvas6,ctx6);
             }
         }
-    if (nombre!=0) {
+    if (nombre != 0) {
         $(".code").append("<p>EffacerLigne("+color+","+orientationLigne+")</p>");
         $(".code").append("<p>DessinerUneLigne("+color+","+orientationLigne+","+nombre+")</p>");
-    }   
+    }
 }
 
 function win(){
@@ -385,8 +384,7 @@ function lose(){
 }
 
 /*functions for undo*/
-
-$("#undo").on("click", function(){
+$("#undo").on("touchstart", function(){
     cUndo();
 });
 
@@ -423,5 +421,5 @@ function cUndo() {
 
 // When document is loaded
 (function () {
-    init();  
+    init();
 })();

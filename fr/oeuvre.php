@@ -1,21 +1,10 @@
-<?php 
+<?php
 
 session_start();
 
 if( !isset($_SESSION['pseudo']) ){
     header("location: name.php");
 }
-
-/*
-### Chrono mode PHP ###
-$start = new DateTime($_SESSION['start']); // put old date in date object
-
-$_SESSION['end'] = date("h:i:s"); // get actual date
-$end = new DateTime($_SESSION['end']); // put actual date in date object
-
-$interval = $start->diff($end); // put diff date in interval
-print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
-*/
 
 ?>
 

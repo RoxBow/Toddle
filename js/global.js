@@ -52,7 +52,7 @@ switch (levelUser) {
         break;
     case "3":
         currentArt = "../img/compo.png";
-        currentRoom = roomTram4;
+        currentRoom = roomCompo;
         $("#levelUser").text(levelUser);
         if(dir == "fr"){
             $("#indiceMap",".popup2").html("La troisième &#156;uvre devant laquelle tu dois te rendre, est un tableau en noir et blanc d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. La structure de ce tableau est très précise puisque les minces lignes qui le composent sont disposées mathématiquement sur la toile.");
@@ -194,6 +194,7 @@ function changeRond(){
 // ### Autorisation scroll ###
 $(document).on('touchmove', function(e){ e.preventDefault(); }); // Disable scroll
 $('.third-view').on('touchmove', function (e) { e.stopPropagation(); }); // Allow scroll
+$('.codeBleu').on('touchmove', function (e) { e.stopPropagation(); }); // Allow scroll
 
 // Detect orientation tablet
 function doOnOrientationChange() {
@@ -203,6 +204,7 @@ function doOnOrientationChange() {
         $(".orientation").remove();
         break;
       case 0:
+      case 180:
         $(".container").append("<div class='overlay orientation'><div class='content-orientation'><img src='../img/orientation.png' alt='tablet' class='imgOrientation'><p>Tourne la tablette</p></div></div>");
         $(".imgOrientation").on('error', function() { $(this).attr("src","img/orientation.png"); });
         break;

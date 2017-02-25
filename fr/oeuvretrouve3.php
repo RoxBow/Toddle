@@ -96,11 +96,11 @@ if( !isset($_SESSION['pseudo']) ){
             $("#min").val(localMin);
             chrono();
             
-            $("#oeuvretrouve3go").click(function() {
+            $("#oeuvretrouve3go").on("touchstart", function() {
                 localStorage.setItem("seconde", $("#sec").val());
                 localStorage.setItem("minute", $("#min").val());
                 document.location.replace("oeuvre33.php");
-              });
+            });
         });
     </script>
 </body>

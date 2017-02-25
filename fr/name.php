@@ -8,7 +8,7 @@ if(isset($_POST['pseudo'])){
     $result->execute();
 
     $pseudo = trim($_POST['pseudo']); // Remove space before and after string
-    $pseudo = strip_tags($pseudo);
+    $pseudo = strip_tags($pseudo); // Supprime les balises HTML et PHP d'une chaîne
     
     // Check error pseudo
     $error = null;
@@ -21,7 +21,7 @@ if(isset($_POST['pseudo'])){
     else {
         while ($row = $result->fetch(PDO::FETCH_ASSOC)){
             if(strtolower($pseudo) === strtolower($row['pseudo']) ){
-                $error = "Pseudo déjà utilisé.";
+                $error = "Pseudo déjà utilisé";
                 break;
             }
         }
@@ -79,8 +79,8 @@ if(isset($_POST['pseudo'])){
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/global.js"></script>
     <script src="../js/chrono.js"></script>
-    <script>
-        // Reset timer
+    <script type="text/javascript">
+        // Reset timer & level
         localStorage.setItem("seconde", 0);
         localStorage.setItem("minute", 0);
         localStorage.setItem("levelUser", 1);

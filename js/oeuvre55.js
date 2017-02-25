@@ -1,5 +1,3 @@
-/* #####    CHRONO      ##### */
-
 // Update time script
 sec = localSec;
 min = localMin;
@@ -15,28 +13,26 @@ $(document).ready(function() {
     $("#sec").val(localSec);
     $("#min").val(localMin);
     chrono();
-    
-/* ##### CHRONO  END  ##### */
 });
 
 //Disparition de la main
-var tuto=0;
+var tuto = 0;
+
 function touche() {
-    if (tuto==0) {
+    if (tuto  == 0) {
         $("#handclick").css("animation-play-state","paused");
         $("#handclick").css("display","none");
-        tuto=1;
+        tuto = 1;
     }
 }
 
 document.body.addEventListener('touchstart', touche, false);
 
 //Variables pour l'affichage du dessin
-var dl=0;
-var dt=0;
+var dl = 0,
+    dt = 0;
 
 //Variable canvas et contexts
-
 var canvas,canvas2,ctx,ctx2;
 function init() {
 
@@ -98,7 +94,7 @@ function drawLigne(){
     }
 }
 
-$(".continuer").on("click",function(){
+$(".continuer").on("touchstart",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
@@ -107,17 +103,34 @@ $(".continuer").on("click",function(){
         document.location.replace("map.php");
     }
     else {
-        document.location.replace("result.php");
+      nbrLevel++;
+      localStorage.setItem("levelUser", nbrLevel);
+      localStorage.setItem("seconde", $("#sec").val() );
+      localStorage.setItem("minute", $("#min").val() );
+      document.location.replace("result.php");
     }
 });
-$(".rechercher").on("click",function(){
+
+$(".rechercher").on("touchstart",function(){
     $('#loose').fadeOut(500);
 });
 
-$("#valider").on("click", function(){
-    if (dl==3&&dt==3) {
+$("#valider").on("touchstart", function(){
+    if (dl == 3 && dt == 3) {
+        stopchrono(); // Arrête chrono
+        // Save time user in DB
+        $.ajax({
+            type: "POST",
+            url: "../login.php",
+            data: { 'min': $("#min").val(), 'sec': $("#sec").val() },
+            success: function(data) {
+                console.log("Temps: "+$("#min").val()+" minutes et "+$("#sec").val()+" secondes"  );
+            }
+        });
         win();
-    } else lose();
+    } else {
+      lose();
+    }
 });
 
 function hobjects(iden,hamm,haut,gauche){
@@ -134,7 +147,7 @@ function hobjects(iden,hamm,haut,gauche){
     });
 
     hamm.on('panend', function(e) {
-        test(iden,mouseX,mouseY,haut,gauche);   
+        test(iden,mouseX,mouseY,haut,gauche);
     });
 }
 
@@ -250,5 +263,5 @@ function lose(){
 
 // When document is loaded
 (function () {
-    init();  
+    init();
 })();

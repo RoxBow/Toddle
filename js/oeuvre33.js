@@ -1,9 +1,8 @@
-var range1 = 0;
-var range2 = 0;
-var range3 = 0;
-var range4 = 0;
-
-var tuto = 0;
+var range1 = 0,
+    range2 = 0,
+    range3 = 0,
+    range4 = 0,
+    tuto = 0;
 
 // When page is left
 $(window).bind('beforeunload',function(){
@@ -21,38 +20,27 @@ $(document).ready(function() {
     $("#min").val(localMin);
     chrono();
 
-    function touche() {
-          if (tuto==0) {
-            $("#handclick").css("animation-play-state","paused");
-            $("#handclick").css("display","none");
-            tuto=1;
-          }
-        }
+function touche() {
+  if (tuto == 0) {
+    $("#handclick").css("animation-play-state","paused");
+    $("#handclick").css("display","none");
+    tuto = 1;
+  }
+}
 
-    document.body.addEventListener('touchstart', touche, false);
+  document.body.addEventListener('touchstart', touche, false);
 });
 
-/* #####    CHRONO END     ##### */
-
-$("#valider").on("click",function(){
+$("#valider").on("touchstart",function(){
 	console.log(range1+","+range2+","+range3);
     if (test(range1,range2,range3)){
-    	stopchrono(); // Arrête chrono
-        // Save time user in DB
-        $.ajax({
-            type: "POST",
-            url: "../login.php",
-            data: { 'min': $("#min").val(), 'sec': $("#sec").val() },
-            success: function(data) {
-                console.log("Temps: "+$("#min").val()+" minutes et "+$("#sec").val()+" secondes"  );
-            }
-        });
         win();
     } else {
         lose();
     }
 });
-$(".continuer").on("click",function(){
+
+$(".continuer").on("touchstart",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
@@ -64,7 +52,8 @@ $(".continuer").on("click",function(){
         document.location.replace("result.php");
     }
 });
-$(".rechercher").on("click",function(){
+
+$(".rechercher").on("touchstart",function(){
     $('#loose').fadeOut(500);
 });
 
@@ -72,7 +61,7 @@ $(".rechercher").on("click",function(){
 	var ctx;
 
 	function init() {
-		canvas = document.getElementById("myCanvas");
+		canvas = document.getElementById("myCanvas1");
 		ctx = canvas.getContext("2d");
 		canvas2 = document.getElementById("myCanvas2");
 		ctx2 = canvas2.getContext("2d");
@@ -137,69 +126,60 @@ $(".rechercher").on("click",function(){
 		drawRect(125, 325, 175, 100, "black", ctx2);
 	}
 
-	(function () {
-	    init();
-	})();
-
 	function test(a,b,c){
 		if (a==-45&&b==-45&&c==45) {
             return true;
         } else return false;
 	}
 
-	$(function() {
+$(function() {
+  init();
+  /* #### SLIDER #### */
+$(".range").slider();
 
-      
-      /* ######### */
-    $(".range").slider();
+  $('.range').slider({
+    value:0,
+    min: -90,
+    max: 90,
+    step: 5,
+    //animate: "fast",
+  });
 
-      $('.range').slider({
-        value:0,
-        min: -90,
-        max: 90,
-        step: 5,
-        //animate: "fast",
-      });
-      
-      $("#range1").slider({
-        slide: function(event, ui) {
-          var $set = ui.value;
-          $('#output1').text($set);
-          
-          $("#val1").text($set).css({"font-size":"1.5em", "color": pinkToddle});
-          $("#myCanvas").css("transform","rotate("+$set+"deg)");
-          range1 = $set;
-        }
-      });
-        
-        $("#range2").slider({
-        slide: function(event, ui) {
-          var $set = ui.value;
-          $('#output2').text($set);
-          
-          $("#val2").text($set).css({"font-size":"1.5em", color: pinkToddle});
-          $("#myCanvas2").css("transform","rotate("+$set+"deg)");
-          range2 = $set;
-        }
-      });
-                          
-        $("#range3").slider({
-        slide: function(event, ui) {
-          var $set = ui.value;
-          $('#output3').text($set);
-          $(".valDeg").css("font-size","1em");
-          $("#val3").text($set).css({"font-size":"1.5em", color: pinkToddle});
-          $("#myCanvas3").css("transform","rotate("+$set+"deg)");
-          range3 = $set;
-        }
-      });
-      
-      $( ".range" ).on( "touchend", function() {
-        $(".valDeg").css({"font-size":"1em", "color": "#000"});
-      });
-      
-      
-    });
+  $("#range1").slider({
+    slide: function(event, ui) {
+      var valueOfRange = ui.value;
+      $('#output1').text(valueOfRange);
+      $("#val1").text(valueOfRange).css({"font-size":"1.5em", "color": pinkToddle});
+      $("#myCanvas1").css("transform","rotate("+valueOfRange+"deg)");
+      range1 = valueOfRange;
+    }
+  });
+
+    $("#range2").slider({
+    slide: function(event, ui) {
+      var valueOfRange = ui.value;
+      $('#output2').text(valueOfRange);
+      $("#val2").text(valueOfRange).css({"font-size":"1.5em", color: pinkToddle});
+      $("#myCanvas2").css("transform","rotate("+valueOfRange+"deg)");
+      range2 = valueOfRange;
+    }
+  });
+
+    $("#range3").slider({
+    slide: function(event, ui) {
+      var valueOfRange = ui.value;
+      $('#output3').text(valueOfRange);
+      $("#val3").text(valueOfRange).css({"font-size":"1.5em", color: pinkToddle});
+      $("#myCanvas3").css("transform","rotate("+valueOfRange+"deg)");
+      range3 = valueOfRange;
+    }
+  });
+
+  $( ".range" ).on( "touchend", function() {
+    $(".valDeg").css({"font-size":"1em", "color": "#000"});
+  });
+
+});
 
 function win(){
     $('#win').fadeIn(500);

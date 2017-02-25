@@ -13,8 +13,7 @@ $(window).bind('beforeunload',function(){
 var gauche = "froid";
 var droite = "chaud";
 
-var canvas;
-var ctx;
+var canvas, ctx;
 
 var square;
 
@@ -65,7 +64,7 @@ $(document).ready(function() {
 
 
     //Selection left
-    $("#chaudG").on("click", function(){
+    $("#chaudG").on("touchstart", function(){
         $("#chaudG").addClass("rose");
         $("#chaudG").removeClass("bleu");
         $("#froidG").addClass("bleu");
@@ -76,7 +75,7 @@ $(document).ready(function() {
         colors();
 
     });
-    $("#froidG").on("click", function(){
+    $("#froidG").on("touchstart", function(){
         $("#chaudG").addClass("bleu");
         $("#chaudG").removeClass("rose");
         $("#froidG").addClass("rose");
@@ -87,7 +86,7 @@ $(document).ready(function() {
         colors();
     });
     //Selection right
-    $("#chaudD").on("click", function(){
+    $("#chaudD").on("touchstart", function(){
         $("#chaudD").addClass("rose");
         $("#chaudD").removeClass("bleu");
         $("#froidD").addClass("bleu");
@@ -97,7 +96,7 @@ $(document).ready(function() {
         dessiner2();
         colors2();
     });
-    $("#froidD").on("click", function(){
+    $("#froidD").on("touchstart", function(){
         $("#chaudD").addClass("bleu");
         $("#chaudD").removeClass("rose");
         $("#froidD").addClass("rose");
@@ -196,7 +195,7 @@ $(".continuer").click(function(){
     document.location.href = "result.php";
 });
 
-$("#valider").on("click", function(){
+$("#valider").on("touchstart", function(){
     if (nbGauche==7 && nbDroite==7 && gauche=="froid" && droite=="chaud") {
         stopchrono(); // Arrête chrono
         // Save time user in DB
