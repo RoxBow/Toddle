@@ -50,6 +50,9 @@
     <script src="js/global.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            // Active animation loader
+            $("label",".cs-loader-inner").addClass("anim");
+          
             $(".lang",".blocBtn").on("touchstart", function() {
                 if(!$(this).hasClass("selected")){
                     $(".lang").toggleClass("selected");

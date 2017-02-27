@@ -610,45 +610,68 @@ i {
   padding: 0;
   text-align: center;
 }
-
-/* line 139, ../sass/map.scss */
-.cs-loader-inner label:first-child {
-  color: #F07381;
-}
-
-/* line 143, ../sass/map.scss */
-.cs-loader-inner label:nth-child(2) {
-  color: #355E7E;
-}
-
-/* line 147, ../sass/map.scss */
-.cs-loader-inner label:nth-child(3) {
-  color: #F8B195;
-}
-
-/* line 151, ../sass/map.scss */
-.cs-loader-inner label:nth-child(4) {
-  color: #F07381;
-}
-
-/* line 155, ../sass/map.scss */
-.cs-loader-inner label:nth-child(5) {
-  color: #355E7E;
-}
-
-/* line 159, ../sass/map.scss */
-.cs-loader-inner label:nth-child(6) {
-  color: #F8B195;
-}
-
-/* line 163, ../sass/map.scss */
+/* line 137, ../sass/map.scss */
 .cs-loader-inner label {
   font-size: 4rem;
   opacity: 0;
   display: inline-block;
 }
+/* line 142, ../sass/map.scss */
+.cs-loader-inner label:first-child {
+  color: #F07381;
+}
+/* line 143, ../sass/map.scss */
+.cs-loader-inner label:nth-child(2) {
+  color: #355E7E;
+}
+/* line 144, ../sass/map.scss */
+.cs-loader-inner label:nth-child(3) {
+  color: #F8B195;
+}
+/* line 145, ../sass/map.scss */
+.cs-loader-inner label:nth-child(4) {
+  color: #F07381;
+}
+/* line 146, ../sass/map.scss */
+.cs-loader-inner label:nth-child(5) {
+  color: #355E7E;
+}
+/* line 147, ../sass/map.scss */
+.cs-loader-inner label:nth-child(6) {
+  color: #F8B195;
+}
+/* line 148, ../sass/map.scss */
+.cs-loader-inner .anim:nth-child(6) {
+  -webkit-animation: anim 2s infinite ease-in-out;
+  animation: anim 2s infinite ease-in-out;
+}
+/* line 152, ../sass/map.scss */
+.cs-loader-inner .anim:nth-child(5) {
+  -webkit-animation: anim 2s 100ms infinite ease-in-out;
+  animation: anim 2s 100ms infinite ease-in-out;
+}
+/* line 156, ../sass/map.scss */
+.cs-loader-inner .anim:nth-child(4) {
+  -webkit-animation: anim 2s 200ms infinite ease-in-out;
+  animation: anim 2s 200ms infinite ease-in-out;
+}
+/* line 160, ../sass/map.scss */
+.cs-loader-inner .anim:nth-child(3) {
+  -webkit-animation: anim 2s 300ms infinite ease-in-out;
+  animation: anim 2s 300ms infinite ease-in-out;
+}
+/* line 164, ../sass/map.scss */
+.cs-loader-inner .anim:nth-child(2) {
+  -webkit-animation: anim 2s 400ms infinite ease-in-out;
+  animation: anim 2s 400ms infinite ease-in-out;
+}
+/* line 168, ../sass/map.scss */
+.cs-loader-inner .anim:nth-child(1) {
+  -webkit-animation: anim 2s 500ms infinite ease-in-out;
+  animation: anim 2s 500ms infinite ease-in-out;
+}
 
-@keyframes lol {
+@keyframes anim {
   0% {
     opacity: 0;
     transform: translateX(-300px);
@@ -662,7 +685,7 @@ i {
     transform: translateX(300px);
   }
 }
-@-webkit-keyframes lol {
+@-webkit-keyframes anim {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-300px);
@@ -675,39 +698,4 @@ i {
     opacity: 0;
     -webkit-transform: translateX(300px);
   }
-}
-/* line 199, ../sass/map.scss */
-.cs-loader-inner label:nth-child(6) {
-  -webkit-animation: lol 2s infinite ease-in-out;
-  animation: lol 2s infinite ease-in-out;
-}
-
-/* line 204, ../sass/map.scss */
-.cs-loader-inner label:nth-child(5) {
-  -webkit-animation: lol 2s 100ms infinite ease-in-out;
-  animation: lol 2s 100ms infinite ease-in-out;
-}
-
-/* line 209, ../sass/map.scss */
-.cs-loader-inner label:nth-child(4) {
-  -webkit-animation: lol 2s 200ms infinite ease-in-out;
-  animation: lol 2s 200ms infinite ease-in-out;
-}
-
-/* line 214, ../sass/map.scss */
-.cs-loader-inner label:nth-child(3) {
-  -webkit-animation: lol 2s 300ms infinite ease-in-out;
-  animation: lol 2s 300ms infinite ease-in-out;
-}
-
-/* line 219, ../sass/map.scss */
-.cs-loader-inner label:nth-child(2) {
-  -webkit-animation: lol 2s 400ms infinite ease-in-out;
-  animation: lol 2s 400ms infinite ease-in-out;
-}
-
-/* line 224, ../sass/map.scss */
-.cs-loader-inner label:nth-child(1) {
-  -webkit-animation: lol 2s 500ms infinite ease-in-out;
-  animation: lol 2s 500ms infinite ease-in-out;
 }

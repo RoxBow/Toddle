@@ -88,62 +88,48 @@ body {
     color: #000;
     padding: 0;
     text-align: center;
-}
     label {
       font-size: 4rem;
       opacity: 0;
       display:inline-block;
     }
-    label:first-child {
-      color: #F07381;
-    }
-    label:nth-of-type(2) {
-      color: #355E7E;
-    }
-    label:nth-of-type(3) {
-      color: #F8B195;
-    }
-    label:nth-of-type(4) {
-      color: #F07381;
-    }
-    label:nth-of-type(5) {
-      color: #355E7E;
-    }
-    label:nth-of-type(6) {
-      color: #F8B195;
-    }
-    label:nth-of-type(6) {
+    label:first-child { color: #F07381; }
+    label:nth-of-type(2) { color: #355E7E; }
+    label:nth-of-type(3) { color: #F8B195; }
+    label:nth-of-type(4) { color: #F07381; }
+    label:nth-of-type(5) { color: #355E7E; }
+    label:nth-of-type(6) { color: #F8B195; }
+    .anim:nth-of-type(6) {
         -moz-animation: anim 2s ease-in-out infinite;
         -webkit-animation: anim 2s ease-in-out infinite; /* Safari 4.0 - 8.0 */
         animation: anim 2s ease-in-out infinite;
     }
-    label:nth-of-type(5) {
+    .anim:nth-of-type(5) {
         -moz-animation: anim 2s ease-in-out 0.1s infinite;
         -webkit-animation: anim 2s ease-in-out 0.1s infinite; /* Safari 4.0 - 8.0 */
         animation: anim 2s ease-in-out 0.1s infinite;
     }
-    label:nth-of-type(4) {
+    .anim:nth-of-type(4) {
         -moz-animation: anim 2s ease-in-out 0.2s infinite;
         -webkit-animation: anim 2s ease-in-out 0.2s infinite; /* Safari 4.0 - 8.0 */
         animation: anim 2s ease-in-out 0.2s infinite;
     }
-    label:nth-of-type(3) {
+    .anim:nth-of-type(3) {
         -moz-animation: anim 2s ease-in-out 0.3s infinite;
         -webkit-animation: anim 2s ease-in-out 0.3s infinite; /* Safari 4.0 - 8.0 */
         animation: anim 2s ease-in-out 0.3s infinite;
     }
-    label:nth-of-type(2) {
+    .anim:nth-of-type(2) {
         -moz-animation: anim 2s ease-in-out 0.4s infinite;
         -webkit-animation: anim 2s ease-in-out 0.4s infinite; /* Safari 4.0 - 8.0 */
         animation: anim 2s ease-in-out 0.4s infinite;
-        
     }
-    label:nth-of-type(1) {
+    .anim:nth-of-type(1) {
         -moz-animation: anim 2s ease-in-out 0.5s infinite;
         -webkit-animation: anim 2s ease-in-out 0.5s infinite; /* Safari 4.0 - 8.0 */
         animation: anim 2s ease-in-out 0.5s infinite;
-      
     }
+}
 
 @keyframes anim {
   0% {

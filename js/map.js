@@ -4,6 +4,9 @@ min = 0; // Init min
 var oeuvre, newOeuvre;
 
 $(document).ready(function() {
+    // Launch loader
+    $("label",".cs-loader-inner").addClass("anim");
+  
     // Launch chrono
     chrono();
 
