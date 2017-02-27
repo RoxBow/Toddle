@@ -81,16 +81,19 @@ function drawTriangle(){
         ctx.lineTo(0,canvas.height);
         ctx.lineTo(canvas.width,canvas.height);
         ctx.fill();
+        ctx.closePath();
     }
 }
 function drawLigne(){
     if (dl==3) {
+        ctx2.fillStyle = '#f00';
         ctx2.beginPath();
         ctx2.moveTo(canvas.width/2,0);
+        ctx2.lineTo(canvas.width/2+6,6);
+        ctx2.lineTo(canvas.width/2+6,canvas.height);
         ctx2.lineTo(canvas.width/2,canvas.height);
-        ctx2.strokeStyle="red";
-        ctx2.lineWidth=4;
-        ctx2.stroke();
+        ctx2.closePath();
+        ctx2.fill();
     }
 }
 
