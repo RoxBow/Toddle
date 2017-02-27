@@ -62,13 +62,6 @@ function init() {
     canvas6 = document.getElementById("myCanvas6");
     ctx6 = canvas6.getContext("2d");
 
-    cPush(canvas,ctx);
-    cPush(canvas2,ctx2);
-    cPush(canvas3,ctx3);
-    cPush(canvas4,ctx4);
-    cPush(canvas5,ctx5);
-    cPush(canvas6,ctx6);
-
     $("#couleur").text(couleurs[couselect]);
     $("#orientation").text(orientationLigne[oriselect]);
     $("#nombre").text(nbselect);
@@ -82,17 +75,6 @@ $("#poubelle").on("touchstart", function(){
     ctx5.clearRect(0,0,canvas5.width,canvas5.height);
     ctx6.clearRect(0,0,canvas6.width,canvas6.height);
     $(".code").text("CréerCadre();");
-
-    //On vide le cache du undo
-    cPushArray = [];
-    context = [];
-    cStep = -1;
-    cPush(canvas,ctx);
-    cPush(canvas2,ctx2);
-    cPush(canvas3,ctx3);
-    cPush(canvas4,ctx4);
-    cPush(canvas5,ctx5);
-    cPush(canvas6,ctx6);
 });
 
 $("#couplus").on("touchstart",function(){
@@ -232,9 +214,7 @@ function createLine(orientationLigne, nombre, color){
                     ctx.lineWidth = 5;
                     ctx.strokeStyle = colorname;
                     ctx.stroke();
-                }
-                cPush(canvas,ctx);
-                
+                }               
             }
             if (colorname==="red") {
                 ctx2.clearRect(0,0,canvas2.width,canvas2.height);
@@ -260,7 +240,6 @@ function createLine(orientationLigne, nombre, color){
                     ctx2.strokeStyle = colorname;
                     ctx2.stroke();
                 }
-                cPush(canvas2,ctx2);
             }
             if (colorname==="blue") {
                 ctx3.clearRect(0,0,canvas3.width,canvas3.height);
@@ -286,7 +265,6 @@ function createLine(orientationLigne, nombre, color){
                     ctx3.strokeStyle = colorname;
                     ctx3.stroke();
                 }
-                cPush(canvas3,ctx3);
             }
         }
 
@@ -315,7 +293,6 @@ function createLine(orientationLigne, nombre, color){
                     ctx4.strokeStyle = colorname;
                     ctx4.stroke();
                 }
-                cPush(canvas4,ctx4);
             }
             if (colorname==="red") {
                 ctx5.clearRect(0,0,canvas5.width,canvas5.height);
@@ -341,7 +318,6 @@ function createLine(orientationLigne, nombre, color){
                     ctx5.strokeStyle = colorname;
                     ctx5.stroke();
                 }
-                cPush(canvas5,ctx5);
             }
             if (colorname==="blue") {
                 ctx6.clearRect(0,0,canvas6.width,canvas6.height);
@@ -367,7 +343,6 @@ function createLine(orientationLigne, nombre, color){
                     ctx6.strokeStyle = colorname;
                     ctx6.stroke();
                 }
-                cPush(canvas6,ctx6);
             }
         }
     if (nombre != 0) {
@@ -381,42 +356,6 @@ function win(){
 }
 function lose(){
     $('#loose').fadeIn(500);
-}
-
-/*functions for undo*/
-$("#undo").on("touchstart", function(){
-    cUndo();
-});
-
-var cPushArray = new Array();
-var context = new Array();
-var cStep = -1;
-
-function cPush(can,con) {
-    cStep++;
-    if (cStep < cPushArray.length) { 
-        cPushArray.length = cStep;
-        context.length = cStep; 
-    }
-    console.log(cStep);
-    console.log(can);
-    console.log(con);
-    cPushArray.push(can.toDataURL());
-    context.push(con);
-}
-
-function cUndo() {
-    if (cStep > 5) {
-        cStep--;
-        var canvasPic = new Image();
-        var cont = context[cStep];
-        console.log(cStep);
-        console.log(cont);
-        canvasPic.src = cPushArray[cStep];
-        console.log(canvasPic.src);
-        cont.clearRect(0,0,canvas.width,canvas.height);
-        canvasPic.onload = function () { cont.drawImage(canvasPic, 0, 0, canvas.width, canvas.height); }
-    }
 }
 
 // When document is loaded

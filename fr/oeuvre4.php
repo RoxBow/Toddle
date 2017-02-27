@@ -129,7 +129,6 @@ if( !isset($_SESSION['pseudo']) ){
                     <div class="bouton2" id="poubelle">
                         <img src="../img/poubelle.png" alt="Objectif"/>
                     </div>
-                    <div id="undo"><i class="fa fa-undo fa-2x" aria-hidden="true"></i></div>
                     <div id="ajouter">
                         <button class="bva">AJOUTER</button>
                     </div>
