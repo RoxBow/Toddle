@@ -84,7 +84,7 @@ $(window).bind('beforeunload',function(){
             }, 1000);
               $( "#rectangle,#carre,#rond,#rouge,#jaune,#violet" ).animate({
               left: "2.5%",
-            }, 500);
+            }, 1000);
             $( "#rectangle,#carre,#rond" ).css("display","none");
             validation=1;
             cpush=1;
