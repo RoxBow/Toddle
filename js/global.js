@@ -55,9 +55,9 @@ switch (levelUser) {
         currentRoom = roomCompo;
         $("#levelUser").text(levelUser);
         if(dir == "fr"){
-            $("#indiceMap",".popup2").html("La troisième &#156;uvre devant laquelle tu dois te rendre, est un tableau en noir et blanc d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. La structure de ce tableau est très précise puisque les minces lignes qui le composent sont disposées mathématiquement sur la toile.");
+            $("#indiceMap",".popup2").html("La troisième &#156;uvre devant laquelle tu dois te rendre est un tableau en noir et blanc d’un artiste allemand du XXe siècle, composé de formes géométriques simples. Pour trouver ce tableau tu dois trouver celui qui est composé d’une forme en relief.");
         } else {
-            $("#indiceMap",".popup2").html("The third piece of work where you must be going is a black and white painting of a French artist of the 20th century, precursor of geometrical abstraction. The structure of this painting is very precise since the thin lines composing it are arranged mathematically on the canvas.");
+            $("#indiceMap",".popup2").html("The third piece of work where you must be going is a black and white painting of a deutch artist of the 20th century, precursor of geometrical abstraction. The structure of this painting is very precise since the thin lines composing it are arranged mathematically on the canvas.");
         }
         
         $("#nbrDefi",".defi").text(levelUser);
@@ -67,7 +67,7 @@ switch (levelUser) {
         currentRoom = roomMondrian;
         $("#levelUser").text(levelUser);
         if(dir == "fr"){
-            $("#indiceMap",".popup2").html("La quatrième &#156;uvre devant laquelle tu dois te rendre, est un tableau d’un peintre néerlandais du XXe siècle. Le tableau est composés de lignes aux couleur primaires, pouvant rappeler le plan d’une célèbre ville américaine.");
+            $("#indiceMap",".popup2").html("La quatrième &#156;uvre devant laquelle tu dois te rendre, est un tableau d’un peintre néerlandais du XXe siècle. Le tableau est composé de lignes aux couleurs primaires, pouvant rappeler le plan d’une célèbre ville américaine.");
         } else {
             $("#indiceMap",".popup2").html("The fourth artwork which you should be looking for is a painting from a Dutch painter of the 20th century. The painting is composed of lines with primary colors, which can recall the plan of a famous American city.");
         }
@@ -79,7 +79,7 @@ switch (levelUser) {
         currentRoom = roomJericho;
         $("#levelUser").text(levelUser);
         if(dir == "fr"){
-            $("#indiceMap",".popup2").html("La dernière &#156;uvre devant laquelle tu dois te rendre, est un double tableau d’un artiste français du XXe siècle, précurseur de l’abstraction géométrique. Ce tableau aborde le dégradé grâce à des formes géométriques simples.");
+            $("#indiceMap",".popup2").html("La dernière &#156;uvre devant laquelle tu dois te rendre est un tableau d’un peintre américain du XXe siècle. Le cadre de ce tableau à la particularité de ne pas avoir une forme rectangulaire classique, et n’est composé que de 2 couleurs.");
         } else {
             $("#indiceMap",".popup2").html("Finally we are here: the last artwork you must find is a double painting by a French artist of the 20th century, precursor of geometrical abstraction. This painting approaches color gradiant using simple geometric shapes.");
         }
@@ -90,7 +90,7 @@ switch (levelUser) {
 
 // Couleurs de l'appli
 var pinkToddle = "#F38F9A";
-var bleuToddle = "#355E7E";
+var bleuToddle = "#355E7E"; 
 var beigeToddle = "#F8B195";
 
 // Check orientation tablet

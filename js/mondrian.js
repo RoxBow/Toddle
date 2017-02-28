@@ -65,6 +65,7 @@ function init() {
     $("#couleur").text(couleurs[couselect]);
     $("#orientation").text(orientationLigne[oriselect]);
     $("#nombre").text(nbselect);
+
 }
 
 $("#poubelle").on("touchstart", function(){
@@ -212,7 +213,7 @@ function createLine(orientationLigne, nombre, color){
                     ctx.moveTo(x1, y1);
                     ctx.lineTo(x2, y2);
                     ctx.lineWidth = 5;
-                    ctx.strokeStyle = colorname;
+                    ctx.strokeStyle = "#e4c900";
                     ctx.stroke();
                 }               
             }
@@ -237,7 +238,7 @@ function createLine(orientationLigne, nombre, color){
                     ctx2.moveTo(x1, y1);
                     ctx2.lineTo(x2, y2);
                     ctx2.lineWidth = 5;
-                    ctx2.strokeStyle = colorname;
+                    ctx2.strokeStyle = "#b82730";
                     ctx2.stroke();
                 }
             }
@@ -262,7 +263,7 @@ function createLine(orientationLigne, nombre, color){
                     ctx3.moveTo(x1, y1);
                     ctx3.lineTo(x2, y2);
                     ctx3.lineWidth = 5;
-                    ctx3.strokeStyle = colorname;
+                    ctx3.strokeStyle = "#124479";
                     ctx3.stroke();
                 }
             }
@@ -290,7 +291,7 @@ function createLine(orientationLigne, nombre, color){
                     ctx4.moveTo(x1, y1);
                     ctx4.lineTo(x2, y2);
                     ctx4.lineWidth = 2;
-                    ctx4.strokeStyle = colorname;
+                    ctx4.strokeStyle = "#e4c900";
                     ctx4.stroke();
                 }
             }
@@ -315,7 +316,7 @@ function createLine(orientationLigne, nombre, color){
                     ctx5.moveTo(x1, y1);
                     ctx5.lineTo(x2, y2);
                     ctx5.lineWidth = 2;
-                    ctx5.strokeStyle = colorname;
+                    ctx5.strokeStyle = "#b82730";
                     ctx5.stroke();
                 }
             }
@@ -340,7 +341,7 @@ function createLine(orientationLigne, nombre, color){
                     ctx6.moveTo(x1, y1);
                     ctx6.lineTo(x2, y2);
                     ctx6.lineWidth = 2;
-                    ctx6.strokeStyle = colorname;
+                    ctx6.strokeStyle = "#124479";
                     ctx6.stroke();
                 }
             }

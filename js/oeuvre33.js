@@ -85,22 +85,6 @@ $(".rechercher").on("touchstart",function(){
 		draw();
 	}
 
-	//Lignes verticales
-	function drawGrid (nbr, color, context){
-		var ecart = -60;
-		context.beginPath();
-		for(var i=0; i < nbr; i++){
-			context.moveTo(ecart, 0);
-			context.lineTo(ecart, canvas.height);
-			ecart += 12; // Space between line of ONE grid
-
-		}
-		context.strokeStyle = color;
-		context.stroke();
-		context.closePath();
-
-	} // End drawGrid
-
     function drawRect(posX,posY,wid,hei,color,context){
         context.fillStyle=color;
         context.fillRect(posX,posY,wid,hei);
@@ -119,9 +103,10 @@ $(".rechercher").on("touchstart",function(){
 	function draw (){
 		drawPoint(185, 70, 12, "white", ctx4);
 
-        drawRect(110, 121, 300, 4, "black", ctx);
+    drawRect(110, 121, 300, 4, "black", ctx);
 
-        drawRect(125, 275, 200, 100, "grey", ctx3);
+    drawRect(125, 265, 200, 100, "#eee", ctx3);
+    drawRect(125, 275, 200, 100, "grey", ctx3);
 
 		drawRect(125, 325, 175, 100, "black", ctx2);
 	}

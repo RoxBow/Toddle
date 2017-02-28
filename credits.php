@@ -23,9 +23,9 @@
                         &#140;uvres ayant été utilisées dans l’application Toddle:
                         <br> - Yves Klein - <i>IKB3 monochrome bleu (1960)</i> 
                         <br> - Franck Stella - <i>Mas o menos (1964)</i> 
-                        <br> - Friedrich Vordemberge - <i>Composition n°24</i> 
+                        <br> - Friedrich Vordemberge - <i>Composition n°24</i>  (1926)
                         <br> - Piet Mondrian - <i>New York City (1942)</i> 
-                        <br> - Barnett Newman - <i>Jericho</i> 
+                        <br> - Barnett Newman - <i>Jericho</i> (1968 - 1969)
                     </p>
                 </div>
                 <div id="second-view">

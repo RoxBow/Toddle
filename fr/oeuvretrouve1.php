@@ -42,7 +42,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé l'&#156;uvre indiquée !<br> Il s'agit d'&nbsp;&quot;<i>IKB3 Monochrome Bleu (1960)</i>" d'Yves Klein.
+              Tu as trouvé l'&#156;uvre indiquée !<br> Il s'agit d'&nbsp;&quot;<i>IKB3 Monochrome Bleu</i>" (1960) d'Yves Klein.
             </p>
             <br>
             <p>

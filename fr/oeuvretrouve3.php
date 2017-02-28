@@ -41,7 +41,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé "<i>Composition n° 24 (1926)</i>" de Friedrich Vordemberge-Gildewart !
+              Tu as trouvé "<i>Composition n° 24</i>" (1926) de Friedrich Vordemberge-Gildewart !
             </p>
             <br>
             <p>

@@ -73,6 +73,7 @@ $(window).bind('beforeunload',function(){
             $( "#rectangle,#carre,#rond" ).css("z-index","5");
             $( "#rouge,#jaune,#violet" ).css("display","block");
             $( "#secondeconsigne").toggle("slide");
+            $( "#rectangle,#carre,#rond" ).css("display","none");
             setTimeout(function(){
                 if(dir == "fr"){
                     $("#secondeconsigne").text("Maintenant que le cadre est déterminé, glisse la bonne couleur dans ton rectangle pour finaliser le tableau de Yves Klein.");
@@ -81,11 +82,10 @@ $(window).bind('beforeunload',function(){
                     $("#secondeconsigne").text("Now that you have set up the border, drag and drop the right colour in the rectangle pour to complete Yves Klein's painting");
                 }
               $( "#secondeconsigne").toggle("slide");
-            }, 1000);
               $( "#rectangle,#carre,#rond,#rouge,#jaune,#violet" ).animate({
-              left: "2.5%",
-            }, 1000);
-            $( "#rectangle,#carre,#rond" ).css("display","none");
+                left: "2.5%",
+              }, 500);
+            }, 500);
             validation=1;
             cpush=1;
             cPush2();

@@ -41,7 +41,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as retrouvé <i>New York City (1942)</i> de Piet Mondrian !
+              Tu as retrouvé "<i>New York City</i>" (1942) de Piet Mondrian !
             </p>
             <br>
             <p>

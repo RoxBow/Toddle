@@ -41,7 +41,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé l'&#156;uvre indiquée ! Il s'agit de&nbsp;&quot;<i>Mas o Menos (1964)</i>"<br> de Frank Stella.
+              Tu as trouvé l'&#156;uvre indiquée ! Il s'agit de&nbsp;&quot;<i>Mas o Menos</i>" (1964)<br> de Frank Stella.
             </p>
             <br>
             <p>

@@ -40,27 +40,24 @@ if( !isset($_SESSION['pseudo']) ){
               FÉLICITATIONS !
             </p>
             <hr>
+            <br>
             <p>
-              Tu as retrouvé la dernière oeuvre du parcours ! "<i>Du Jaune au Violet (1956)</i>" a été réalisée par François Morellet.
+              Tu as retrouvé la dernière oeuvre du parcours !<br> "<i>Jericho</i>" (1968 - 1969), réalisée par Barnett Newman.
+            </p>
+            <br>
+            <p class="bold">
+                Voici ta dernière épreuve:
             </p>
             <br>
             <p>
-              Découvrons ensemble <span class="bold rose">les boucles</span>.
-            </p>
-            <p>
-                Elles nous permettent d'effectuer une action plusieurs fois automatiquement.
+                Grâce à tout ce que tu viens d'apprendre, recrée l'oeuvre de<br> Newman avec le code !
             </p>
             <br>
             <p>
-                <span class="bold">Exemple:</span> Je veux dessiner 6 souris. <br>
-                <span class="rose">for(</span>&nbsp;&nbsp;var souris&nbsp;=&nbsp;0;&nbsp;&nbsp; souris&nbsp;<&nbsp;6; &nbsp;&nbsp; souris&nbsp;=&nbsp;souris+1&nbsp;&nbsp;){<br>
-                <br>
-                    <span class="fct">DessinerSouris();</span>
-                <br>
-                <span class="accolade">}</span>
-                <br>
-                <br>
+                Si tu a réussi les précédents défi, c'est que tu en est capable !
             </p>
+            <br>
+            <br>
             <br>
             <p class="text-go rose">
               PRÊT &Agrave; RELEVER LE DÉFI ? <br>
