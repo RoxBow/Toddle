@@ -41,7 +41,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as retrouvé <i>New York City (1942)</i> de Piet Mondrian !
+              Tu as retrouvé "<i>New York City</i>" (1942) de Piet Mondrian !
             </p>
             <br>
             <p>
@@ -87,8 +87,10 @@ if( !isset($_SESSION['pseudo']) ){
             $("#min").val(localMin);
             chrono();
             
-            $("#oeuvretrouve4go").click(function() {
-                location.href = "oeuvre4.php";
+            $("#oeuvretrouve4go").on("touchstart", function() {
+                localStorage.setItem("seconde", $("#sec").val());
+                localStorage.setItem("minute", $("#min").val());
+                document.location.replace("oeuvre4.php");
             });
         });
     </script>

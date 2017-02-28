@@ -1,4 +1,4 @@
-<div class="credits" id="credit">
+<div class="credits">
     <i id="croix" class="fa fa-times fa-3x" aria-hidden="true"></i>
     <p class="title">CRÉDITS</p>
     <div class="content">
@@ -14,7 +14,7 @@
             <div id="sous-texte">
                 <div id="first-view">
                     <p class="justify">
-                        Toddle a été réalisée et développée par l’agence AVEC dans le cadre d’un projet étudiant en licence professionnelle CRRW (2016-2017) à l’IUT Champs-sur Marne et en partenariat avec le Centre Pompidou de Paris. 
+                        Toddle a été réalisée et développée par l’agence AVEC dans le cadre d’un projet étudiant en licence professionnelle CRRW (2016-2017) à l’IUT Champs-sur Marne et en partenariat avec le Centre Georges Pompidou de Paris.
                     </p>
                     <br>
                     <br>
@@ -23,9 +23,9 @@
                         &#140;uvres ayant été utilisées dans l’application Toddle:
                         <br> - Yves Klein - <i>IKB3 monochrome bleu (1960)</i> 
                         <br> - Franck Stella - <i>Mas o menos (1964)</i> 
-                        <br> - François Morellet - <i>4 doubles trames, traits minces ( 0° - 22°5 - 45° - 67°5) (1926)</i> 
+                        <br> - Friedrich Vordemberge - <i>Composition n°24</i>  (1926)
                         <br> - Piet Mondrian - <i>New York City (1942)</i> 
-                        <br> - François Morellet - <i>Du jaune au violet (1956)</i> 
+                        <br> - Barnett Newman - <i>Jericho</i> (1968 - 1969)
                     </p>
                 </div>
                 <div id="second-view">

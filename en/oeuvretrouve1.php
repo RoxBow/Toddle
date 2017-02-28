@@ -38,29 +38,29 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <section class="congratulate">
             <p class="title">
-              WELL DONE !
+              FÉLICITATIONS !
             </p>
             <hr>
             <p>
-              You’ve found the right work !<br> You had to found &nbsp;&quot;<i>IKB3 Monochrome Bleu (1960)</i>" by Yves Klein.
+              Tu as trouvé l'&#156;uvre indiquée !<br> Il s'agit d'&nbsp;&quot;<i>IKB3 Monochrome Bleu</i>" (1960) d'Yves Klein.
             </p>
             <br>
             <p>
-              You will now be discovering a fundamental programming principle :&nbsp;<span class="rose">algorithms</span>.
+              Tu vas découvrir un principipe fondamental de la programmation:&nbsp;<span class="rose">l'algorithmique</span>. 
             </p>
             <br>
             <p>
-                <span class="bold">Algorithms</span> can be used to perform actions. These actions are written in a special way.
+                <span class="bold">L'algorithmique</span> permet d'effectuer des actions. Elles s'écrivent d'une manière particulière.
             </p>
             <br>
             <p>
-                <span class="bold">Example:</span> I want to draw a circle. In algorithmic, it will be written as:
+                <span class="bold">Exemple:</span> Je veux dessiner un rond. En algorithmique on écrira:
             <br>
-            <span class="fonction bold">DrawAcircle</span><span class="parentheses bold">();</span>
+            <span class="fonction bold">DessinerUnRond</span><span class="parentheses bold">();</span>
             </p>
             <br>
             <p class="text-go rose">
-              READY TO MEET THE CHALLENGE ? <br>
+              PRÊT À RELEVER LE DÉFI ? <br>
             </p>
             <br>
             <button class="go" id="oeuvretrouve1go">GO</button>
@@ -80,20 +80,16 @@ if( !isset($_SESSION['pseudo']) ){
         sec = localSec;
         min = localMin;
 
-        // When page is left
-        $(window).bind('beforeunload',function(){
-            localStorage.setItem("seconde", $("#sec").val() );
-            localStorage.setItem("minute", $("#min").val() );
-        });
-
         $(document).ready(function() {
             /* ### CHRONO ### */
             $("#sec").val(localSec);
             $("#min").val(localMin);
             chrono();
           
-          $("#oeuvretrouve1go").click(function() {
-            location.href = "oeuvre.php";
+          $("#oeuvretrouve1go").on("touchstart", function() {
+              localStorage.setItem("seconde", $("#sec").val());
+              localStorage.setItem("minute", $("#min").val());
+              document.location.replace("oeuvre.php");
           });
         });
     </script>

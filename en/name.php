@@ -8,20 +8,20 @@ if(isset($_POST['pseudo'])){
     $result->execute();
 
     $pseudo = trim($_POST['pseudo']); // Remove space before and after string
-    $pseudo = strip_tags($pseudo);
+    $pseudo = strip_tags($pseudo); // Supprime les balises HTML et PHP d'une chaîne
     
     // Check error pseudo
     $error = null;
     if (strlen($pseudo) < 3){
-        $error = "This nickname is too short (betwwen 3 et 10 characters).";
+        $error = "Pseudo trop court (entre 3 et 10 caractères).";
     }
     else if (strlen($pseudo) > 10){
-        $error = "This nickname is too long (betwwen 3 et 10 characters).";
+        $error = "Pseudo trop long (entre 3 et 10 caractères).";
     }
     else {
         while ($row = $result->fetch(PDO::FETCH_ASSOC)){
             if(strtolower($pseudo) === strtolower($row['pseudo']) ){
-                $error = "Nickname already used.";
+                $error = "Pseudo déjà utilisé";
                 break;
             }
         }
@@ -60,8 +60,8 @@ if(isset($_POST['pseudo'])){
         </header>
         <div class="container_form">
             <form action="" method="post">
-                <label for="pseudo">Choose an username</label>
-                <input required type="text" name="pseudo" id="pseudo" placeholder="Username" autocomplete="off" />
+                <label for="pseudo">Choisis un pseudo</label>
+                <input required type="text" name="pseudo" id="pseudo" placeholder="Pseudo" autocomplete="off" />
                 <p class="error"> <?php echo $error; ?></p>
                 <button name="submit" type="submit" >
                     <span class="fa-stack ">
@@ -79,8 +79,8 @@ if(isset($_POST['pseudo'])){
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/global.js"></script>
     <script src="../js/chrono.js"></script>
-    <script>
-        // Reset timer
+    <script type="text/javascript">
+        // Reset timer & level
         localStorage.setItem("seconde", 0);
         localStorage.setItem("minute", 0);
         localStorage.setItem("levelUser", 1);

@@ -12,12 +12,13 @@ if( !isset($_SESSION['pseudo']) ){
 <html class="no-js" lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Grille: oeuvre 3</title>
+    <title>Toddle - Interactive game</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="../stylesheets/oeuvre3.css" media="all">
+    <link rel="stylesheet" href="../stylesheets/oeuvre33.css" media="all">
+    <link rel="stylesheet" href="../stylesheets/jquery-ui.min.css" media="all">
 </head>
 <body>
     <?php
@@ -59,7 +60,7 @@ if( !isset($_SESSION['pseudo']) ){
               Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-                Regarde bien le nom de l'oeuvre et recommence !
+                Regarde bien l'oeuvre et recommence !
             </p>
             <br>
             <button class="rechercher">Retour</button>
@@ -87,7 +88,7 @@ if( !isset($_SESSION['pseudo']) ){
         <div class="leftBloc">
             <div class="souscontainer">
                 <div class="content">
-                    <canvas id="myCanvas"></canvas>
+                    <canvas id="myCanvas1"></canvas>
                     <canvas id="myCanvas2"></canvas>
                     <canvas id="myCanvas3"></canvas>
                     <canvas id="myCanvas4"></canvas>
@@ -96,45 +97,40 @@ if( !isset($_SESSION['pseudo']) ){
         </div>
         <div class="rightBloc">
             <div class="code bleu">
-                <p class="alinea1"><span class="rose">var</span> angle = <span class="noir" id="val1">0</span></p>
-                <p class="alinea1"><span class="rose">var</span> angle2 = <span class="noir" id="val2">0</span></p>
-                <p class="alinea1"><span class="rose">var</span> angle3 = <span class="noir" id="val3">0</span></p>
-                <p class="alinea1"><span class="rose">var</span> angle4 = <span class="noir" id="val4">0</span></p>
+                <p class="alinea1"><span class="rose">var</span> angle = <span class="noir valDeg" id="val1">0</span>;</p>
+                <p class="alinea1"><span class="rose">var</span> angle2 = <span class="noir valDeg" id="val2">0</span>;</p>
+                <p class="alinea1"><span class="rose">var</span> angle3 = <span class="noir valDeg" id="val3">0</span>;</p>
                 <br>
-                <p class="alinea2">DessinerGrille1();</p>
-                <p class="alinea2">DessinerGrille2();</p>
-                <p class="alinea2">DessinerGrille3();</p>
-                <p class="alinea2">DessinerGrille4();</p>
+                <div class="alinea2">
+                  <p>DessinerPointBlanc();</p>
+                  <p>DessinerLigne(noir);</p>
+                  <p>DessinerRectangle(gris);</p>
+                  <p>DessinerRectangle(noir);</p>
+                </div>
+
                 <br>
-                <p class="alinea3">TournerGrille1(<span class="
-                noir">angle</span>);</p>
-                <p class="alinea3">TournerGrille1(<span class="
-                noir">angle2</span>);</p>
-                <p class="alinea3">TournerGrille1(<span class="
-                noir">angle3</span>);</p>
-                <p class="alinea3">TournerGrille1(<span class="
-                noir">angle4</span>);</p>
+                <div class="alinea3">
+                  <p>TournerRectangle(gris,<span class="noir">angle</span>);</p>
+                  <p>TournerRectangle(noir,<span class="noir">angle2</span>);</p>
+                  <p>TournerLigne(<span class="noir">angle3</span>);</p>
+                </div>
             </div>
             <div class="columns">
                 <div class="gauche">
-                    <div><span id="output1"></span>°</div>
-                    <input type="range" class="range" name="a" min="0" max="45" step="0.5" value="0"/>
+                    <div><span id="output1">0</span>°</div>
+                    <div class="range" id="range1"></div>
 
-                    <div><span id="output3"></span>°</div>
-                    <input type="range" class="range3" name="a" min="0" max="45" step="0.5" value="0"/>
+                    <div><span id="output2">0</span>°</div>
+                    <div class="range" id="range2"></div>
 
+                    <div><span id="output3">0</span>°</div>
+                    <div class="range" id="range3"></div>
                 </div>
                 <div class="droite">
-                    <div><span id="output2"></span>°</div>
-                    <input type="range" class="range2" name="a" min="0" max="50" step="0.5" value="0"/>
-
-                    <div><span id="output4"></span>°</div>
-                    <input type="range" class="range4" name="a" min="0" max="70" step="0.5" value="0"/>
                     <div class="buttonV" id="valider">
-                        <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-check fa-3x" aria-hidden="true"></i>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -146,6 +142,10 @@ if( !isset($_SESSION['pseudo']) ){
     <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/global.js"></script>
     <script src="../js/chrono.js"></script>
-    <script src="../js/oeuvre3.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/touchpunch.min.js"></script>
+    <script src="../js/oeuvre33.js"></script>
+
+    
 </body>
 </html>

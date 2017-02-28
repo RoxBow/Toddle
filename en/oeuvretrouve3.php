@@ -41,7 +41,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé "<i>4 doubles trames, traits minces (0°- 22°5 - 45°- 67°5) (1926)</i>" de François Morellet !
+              Tu as trouvé "<i>Composition n° 24</i>" (1926) de Friedrich Vordemberge-Gildewart !
             </p>
             <br>
             <p>
@@ -96,9 +96,11 @@ if( !isset($_SESSION['pseudo']) ){
             $("#min").val(localMin);
             chrono();
             
-            $("#oeuvretrouve3go").click(function() {
-                location.href = "oeuvre3.php";
-              });
+            $("#oeuvretrouve3go").on("touchstart", function() {
+                localStorage.setItem("seconde", $("#sec").val());
+                localStorage.setItem("minute", $("#min").val());
+                document.location.replace("oeuvre33.php");
+            });
         });
     </script>
 </body>

@@ -41,7 +41,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p>
-              Tu as trouvé l'&#156;uvre indiquée ! Il s'agit de&nbsp;&quot;<i>Mas o Menos (1964)</i>"<br> de Frank Stella.
+              Tu as trouvé l'&#156;uvre indiquée ! Il s'agit de&nbsp;&quot;<i>Mas o Menos</i>" (1964)<br> de Frank Stella.
             </p>
             <br>
             <p>
@@ -91,8 +91,10 @@ if( !isset($_SESSION['pseudo']) ){
             $("#min").val(localMin);
             chrono();
             
-            $("#oeuvretrouve2go").click(function() {
-                location.href = "oeuvre2.php";
+            $("#oeuvretrouve2go").on("touchstart", function() {
+              localStorage.setItem("seconde", $("#sec").val());
+              localStorage.setItem("minute", $("#min").val());
+              document.location.replace("oeuvre2.php");
             });
         });
     </script>

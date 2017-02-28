@@ -1,21 +1,10 @@
-<?php 
+<?php
 
 session_start();
 
 if( !isset($_SESSION['pseudo']) ){
     header("location: name.php");
 }
-
-/*
-### Chrono mode PHP ###
-$start = new DateTime($_SESSION['start']); // put old date in date object
-
-$_SESSION['end'] = date("h:i:s"); // get actual date
-$end = new DateTime($_SESSION['end']); // put actual date in date object
-
-$interval = $start->diff($end); // put diff date in interval
-print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
-*/
 
 ?>
 
@@ -39,45 +28,44 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
       <div id="win">
           <div class="content-win">
             <p class="title">
-              WELL DONE !
+              FÉLICITATIONS !
             </p>
             <hr>
             <p class="text-win">
-              Good job <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+              Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-              You’ve succeeded in solving the first puzzle !
-            </p>
-            <br>
-            <p>
-              Let’s sum up what you just have put together :
-             <br>
+              Tu as réussi le premier défi !
             </p>
             <br>
             <p>
-              You have reproduced Klein Blue by the French artist Yves Klein by using the <span class="bold">functions</span>:
+              Récapitulons, ce que tu viens de mettre en application: <br>
+            </p>
+            <br>
+            <p>
+              Tu as retrouvé l'&#156;uvre de Yves Klein en utilisant <span class="bold">les fonctions</span>:
               <br>
-              <span class="name">CreateRectangle</span><span class="parentheses">()</span> et <span class="name">FillInBlue</span><span class="parentheses">()</span>.
+              <span class="name">CréerUnRectangle</span><span class="parentheses">()</span> et <span class="name">RemplirEnBleu2</span><span class="parentheses">()</span>.
             </p>
             
-            <button class="continuer">NEXT</button>
+            <button class="continuer">DÉFI SUIVANT</button>
           </div>
       </div>
       <div id="loose">
           <div class="content-loose">
             <p class="title">
-              OOPS !
+              RECOMMENCE !
             </p>
             <hr>
             <br>
             <p class="text-loose">
-              What a shame <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+              Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-                Be sure to observe the artwork again and try again !
+                Regarde bien l'oeuvre et recommence !
             </p>
             <br>
-            <button class="rechercher">Back</button>
+            <button class="rechercher">Retour</button>
           </div>
       </div>
        <header>
@@ -89,37 +77,37 @@ print $interval->format("Tu as mis %H:%I:%S"); // display diff between date
                     <input type="text" name="minute" id="min">min
                     <input type="text" name="seconde" id="sec">s
                 </form>
-                <p class="defi">Challenge <span id="nbrDefi"></span>/5</p>
+                <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
            </div>
         </header>
         <div id="jeu">
-          <img src="../img/h3.png" alt="Mouvement à faire" id="handclick">
+          <img src="../img/h3.png" alt="Mouvement à faire" id="handclick"/>
           <section class="leftBloc" id="leftBloc">
               <canvas id="canvas" class="box drag-target">
               </canvas>
           </section>
           <section class="rightBloc">
               <div class="codeBloc">
-                  <h2>CHALLENGE <span id="levelUser"></span>/5</h2><br>
+                  <h2>DÉFI <span id="levelUser"></span>/5</h2><br>
                   <div class="consignes">
                       <p>
-                        Using <span class="bold">algorithmic functions</span> available below, reproduce Yves Klein’s piece of art.
+                        Aide-toi des <span class="bold">fonctions algorithmiques</span> mises à ta disposition ci-dessous, pour recréer l'&#156;uvre de Yves Klein.
                       </p>
                       <br>
                       <p id="secondeconsigne">
-                          Drag and drop the <span class="bold">function</span> that seems appropriate to reproduce the artwork.
+                        Glisse <span class="bold">la fonction</span> qui te semble appropriée dans la zone pour déterminer le cadre de l'&#156;uvre que tu as devant toi.
                       </p>
                   </div>
               </div>
               <div class="etiqBloc" id="etiqBloc">
 
-                  <div class="etiq" id="rectangle">CreateRectangle()</div>
-                  <div class="etiq" id="carre">CreateSquare()</div>
-                  <div class="etiq" id="rond">CreateCircle()</div>
+                  <div class="etiq" id="rectangle">CréerUnRectangle()</div>
+                  <div class="etiq" id="carre">CréerUnCarré()</div>
+                  <div class="etiq" id="rond">CréerUnCercle()</div>
 
-                  <div class="etiq" id="rouge">FillInBlue1()</div>
-                  <div class="etiq" id="jaune">FillInBlue2()</div>
-                  <div class="etiq" id="violet">FillInBlue3()</div>
+                  <div class="etiq" id="rouge">RemplirEnBleu1()</div>
+                  <div class="etiq" id="jaune">RemplirEnBleu2()</div>
+                  <div class="etiq" id="violet">RemplirEnBleu3()</div>
 
                   <div class="bouton" id="undo"><i class="fa fa-undo fa-2x" aria-hidden="true"></i></div>
                   <div class="bouton" id="valider"><i class="fa fa-check fa-2x" aria-hidden="true"></i></div>

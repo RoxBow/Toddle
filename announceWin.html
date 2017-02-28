@@ -4,11 +4,26 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <title>Toddle mail</title>
+    <link rel="icon" type="image/png" href="img/iconewebclip.png" />
+    <title>Toddle - Annonce</title>
     <style>
-      /* -------------------------------------
-          GLOBAL RESETS
-      ------------------------------------- */
+      @font-face {
+        font-family: "GothamRounded";
+        src: url(fonts/GothamRoundedBook.ttf);
+      }
+
+      @font-face {
+        font-family: "GothamRounded";
+        src: url(fonts/GothamRoundedBold.ttf);
+        font-weight: bold;
+      }
+
+      @font-face {
+        font-family: "GothamRounded";
+        src: url(fonts/GothamRoundedMedium.ttf);
+        font-weight: 600;
+      }
+
       img {
         border: none;
         -ms-interpolation-mode: bicubic;
@@ -48,7 +63,7 @@
             padding: 20px;
             width: 580px;
             color: #355E7E;
-            font-family: "Arial", sans-serif;
+            font-family: "GothamRounded", "Arial", sans-serif;
             font-size: 16px;
         }
 
@@ -83,22 +98,26 @@
             text-align: center;
             text-transform: uppercase;
             margin: 0 0 3% 0;
-            font-weight: 600;
         }
         
         .header p {
             font-size: 1.1em;
+            font-weight: 600;
             color: #355e7e;
+        }
+        
+        .header .congratulation {
+            font-size: 2em;
+            font-weight: 600;
+            margin: 0 0 6% 0;
         }
         
         .header .name {
             color: #F38F9A;
-            font-size: 2em;
-            font-weight: 600;
         }
         
-        .header .thanks {
-            margin: 3% 0;
+        .header .position .nbr {
+            color: #F38F9A;
         }
         
         button {
@@ -108,8 +127,10 @@
             font-weight: 600;
             border: none;
             border-radius: 30px;
-            margin: 3% 0 0 0;
+            margin: 2% auto;
             cursor: pointer;
+            display: block;
+            
         }
         
         button a {
@@ -118,9 +139,13 @@
         }
         
         .main p {
-            margin: 1% 0;
-            font-weight: 600;
+            margin: 2% 0;
+            font-weight: normal;
             color: #355e7e;
+        }
+        
+        .main .toddle {
+            font-weight: 600;
         }
 
         .footer {
@@ -213,51 +238,41 @@
         <td>&nbsp;</td>
         <td class="container" align="center">
           <div class="content">
-
-            <!-- START CENTERED WHITE CONTAINER -->
-            <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
-            
               <table border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td>
-                    <p><img src="http://vincentdeplais.fr/project/avec/img/logo_toddle.png" alt="toddle" class="logoToddle" /></p>
+                    <p><img src="http://vincentdeplais.fr/toddle/img/logo_toddle.png" alt="toddle" class="logoToddle" /></p>
                     <hr class="separateur" >
                     <table border="0" cellpadding="0" cellspacing="0" class="header">
                       <tbody>
                         <tr>
-                          <td><p class="name">PSEUDO</p></td>
-                        </tr>
-                        <tr>
-                          <td><p class="thanks">MERCI D'AVOIR JOUÉ AVEC TODDLE !</p></td>
-                        </tr>
-                        <tr>
-                            <td><p>SI TU SOUHAITES VÉRIFIER TA POSITION,<br>LE CLASSEMENT EST DISPONIBLE EN CLIQUANT ICI :</p></td>
-                        </tr>
-                        <tr>
-                            <td>
-                               <button><a href="http://vincentdeplais.fr/project/avec/index.php">VOIR LE CLASSEMENT</a></button>
-                           </td>
+                          <td><p class="congratulation">FÉLICITATIONS</p></td>
                         </tr>
                       </tbody>
                     </table>
                     <table border="0" cellpadding="0" cellspacing="0" class="main">
                       <tbody>
                         <tr>
-                          <td><p>Nous te tiendrons informé si tu termines sur le podium, afin que tu viennes chercher ta récompense.</p></td>
+                          <td>
+                              <p>Nous t'invitons donc à venir au stand <span class="toddle">toddle</span> afin de venir chercher ta récompense !<br>
+                              Elle sera disponible jusq'au 5 mars au soir. Viens vite !</p>
+                          </td>
                         </tr>
                         <tr>
-                            <td><p>Nous espérons que l'expérience t'a plû et que tu voudras en savoir plus à propos de la programmation et du développement web.</p></td>
+                            <td>
+                               <button><a href="http://vincentdeplais.fr/toddle/classement/index.php">VOIR LE CLASSEMENT</a></button>
+                           </td>
                         </tr>
                         <tr>
-                            <td><p>À très vite,<br>L'équipe de développement</p></td>
+                            <td><p>À très vite,<br>L'équipe AVEC</p></td>
                         </tr>
                       </tbody>
                     </table>
                     <table border="0" cellpadding="0" cellspacing="0" class="footer">
                         <tr>
                           <td>
-                            <img src="http://vincentdeplais.fr/project/avec/img/logo_color_avec.png" alt="agence">
-                            <img src="http://vincentdeplais.fr/project/avec/img/logo_pompidou.png" alt="pompidou">
+                            <img src="http://vincentdeplais.fr/toddle/img/logo_color_avec.png" alt="agence">
+                            <img src="http://vincentdeplais.fr/toddle/img/logo_pompidou.png" alt="pompidou">
                           </td>
                         </tr>
                   </table>

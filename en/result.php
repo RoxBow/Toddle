@@ -21,7 +21,7 @@ if(isset($_POST['mail'])){
     $to  = $mail;
 
      // Sujet
-     $subject = 'Toddle';
+     $subject = 'Participation Toddle';
 
      // message
      $message = '
@@ -109,7 +109,7 @@ if(isset($_POST['mail'])){
             <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
               <tr>
                 <td style="vertical-align:top;">
-                  <p style="margin:0;"><img src="http://vincentdeplais.fr/project/avec/img/logoToddle.png" alt="toddle" class="logoToddle" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;width:45%;display:block;margin:0 auto;"/></p>
+                  <p style="margin:0;"><img src="http://vincentdeplais.fr/toddle/img/logoToddle.png" alt="toddle" class="logoToddle" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;width:45%;display:block;margin:0 auto;"/></p>
                   <hr class="separateur" style="width:100%;height:10px;background:#F38F9A;border-radius:100px;border:none;margin:5% 0;">
                   <table border="0" cellpadding="0" cellspacing="0" class="header" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;text-align:center;text-transform:uppercase;margin:0 0 3% 0;font-weight:600;">
                     <tbody>
@@ -131,7 +131,7 @@ if(isset($_POST['mail'])){
                       </tr>
                       <tr>
                         <td style="vertical-align:top;">
-                          <button style="background:#355E7E;padding:2% 3%;font-size:1.4em;font-weight:600;border:none;border-radius:30px;margin:3% 0 0 0;cursor:pointer;"><a href="http://vincentdeplais.fr/project/avec/index.php" style="text-decoration:none;color:#fff;">VOIR LE CLASSEMENT</a></button>
+                          <button style="background:#355E7E;padding:2% 3%;font-size:1.4em;font-weight:600;border:none;border-radius:30px;margin:3% 0 0 0;cursor:pointer;"><a href="http://vincentdeplais.fr/toddle/classement/" style="text-decoration:none;color:#fff;">VOIR LE CLASSEMENT</a></button>
                         </td>
                       </tr>
                     </tbody>
@@ -159,8 +159,8 @@ if(isset($_POST['mail'])){
                   <table border="0" cellpadding="0" cellspacing="0" class="footer" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;margin:3% 0;text-align:center;">
                     <tr>
                       <td style="vertical-align:top;">
-                        <img src="../http://vincentdeplais.fr/project/avec/img/logo_color_avec.png" alt="agence" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;display:inline-block;width:20%;vertical-align:middle;">
-                        <img src="../http://vincentdeplais.fr/project/avec/img//logo_pompidou.png" alt="pompidou" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;display:inline-block;width:20%;vertical-align:middle;">
+                        <img src="http://vincentdeplais.fr/toddle/img/logo_color_avec.png" alt="agence" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;display:inline-block;width:20%;vertical-align:middle;">
+                        <img src="http://vincentdeplais.fr/toddle/img/logo_pompidou.png" alt="pompidou" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;display:inline-block;width:20%;vertical-align:middle;">
                       </td>
                     </tr>
                   </table>
@@ -183,7 +183,6 @@ if(isset($_POST['mail'])){
      // En-têtes additionnels
      $headers .= 'From: Toddle <concours.toddle@gmail.com>' . "\r\n";
      $headers .= "Content-Transfer-Encoding: 8bit\r\n";
-
 
      // Envoi
      mail($to, $subject, $message, $headers);
@@ -301,7 +300,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
                     <i class='fa fa-circle fa-stack-2x'></i>
                     <i class='fa fa-check fa-stack-1x fa-inverse' aria-hidden='true'></i>
                 </span>
-                <p>Adresse email bien enregistré</p>
+                <p>Adresse email bien enregistrée</p>
                 </div>";
             }
         ?>
@@ -313,6 +312,8 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
     <script src="../js/chrono.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+              $('.listeUser').on('touchmove', function (e) { e.stopPropagation(); }); // Allow scroll
+          
               $(".blocEmail").animate({
                 top: "5%"
               }, 1500, function() {
@@ -323,7 +324,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
                 }, 500);
               });
             
-            $(document).click(function (e) {
+            $(document).on("touchstart", function (e) {
                 if( $(".fa-envelope").is(e.target) ){
                     $(".blocPoppin").fadeIn(); // Open popup
                 }
@@ -336,7 +337,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
             });
             
             // Check onclick if mail entered is correct
-            $(".sendMail").click(function(e) {
+            $(".sendMail").on("touchstart", function(e) {
                 if(validateEmail($("#mail").val()) === false){
                     e.preventDefault();
                     $(".error").text("Adresse mail invalide");

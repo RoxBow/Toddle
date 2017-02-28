@@ -17,7 +17,6 @@ if(!isset($_SESSION['pseudo']) ){
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Full Screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <script type="text/javascript" charset="utf-8" src="../js/appframework.ui.min.js"></script>
     <link rel="stylesheet" href="../stylesheets/end.css" media="all">
 </head>
 <body>
@@ -36,10 +35,10 @@ if(!isset($_SESSION['pseudo']) ){
             var countClick = 0;
             
             // Two tap on toddle (end.php) -> Reset app
-            $("#reset",".content").click(function () {
+            $("#reset",".content").on("touchstart", function () {
                 countClick += 1;
                 if (countClick == 2) {
-                    location.href = "index.php";
+                    location.href = "../index.php";
                 }
             });
         });

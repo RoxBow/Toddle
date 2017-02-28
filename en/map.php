@@ -6,13 +6,6 @@ if(!isset($_SESSION['pseudo']) ){
     header("location: name.php");
 }
 
-/*
-### Chrono mode PHP ###
-if(empty($_SESSION['start'])) {
-    $_SESSION['start'] = date("h:i:s");
-}
-*/
-
 ?>
 
 <!doctype html>
@@ -42,7 +35,7 @@ if(empty($_SESSION['start'])) {
                 <label> ●</label>
             </div>
             <div class="analyse">
-                <p>ANALYZING</p>
+                <p>EN COURS D'ANALYSE</p>
             </div>
         </div>
        <header>
@@ -54,7 +47,7 @@ if(empty($_SESSION['start'])) {
                     <input type="text" name="minute" id="min" readonly>min
                     <input type="text" name="seconde" id="sec" readonly>s
                 </form>
-                <p class="defi">Challenge <span id="nbrDefi"></span>/5</p>
+                <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
             </div>
         </header>
         <div class="content">
@@ -63,7 +56,7 @@ if(empty($_SESSION['start'])) {
                 <form>
                     <div class="container_input">
                         <input type="file" id="picture" name="picture" value="TROUVÉ ?" accept="image/*" capture="camera" onchange="getFile()">
-                        <label for="picture">FOUND ?</label>
+                        <label for="picture">TROUVÉ ?</label>
                     </div>
                 </form>
                 <button id="indice" type="button" class="help_map">
@@ -83,8 +76,8 @@ if(empty($_SESSION['start'])) {
           <div class="popup2">
             <i class="fa fa-times close" aria-hidden="true" id="close"></i>
             <div>
-                <h3 class="sous-titre2">CLUE</h3>
-                <span id="indiceMap">The very first artwork you must be going to is a monochrome (on only color) work of a French artist of the 20th century. He is known for his work around a particular color.</span>
+                <h3 class="sous-titre2">INDICE</h3>
+                <span id="indiceMap">La première oeuvre devant laquelle tu dois te rendre, est une oeuvre monochrome d'un artiste français du XXe siècle. Il est connu pour son travail autour d'une couleur particulière.</span>
             </div>
           </div>
         </div>
