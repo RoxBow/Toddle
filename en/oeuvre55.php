@@ -93,14 +93,14 @@ if( !isset($_SESSION['pseudo']) ){
                     <br>
                     <p><span class="cadre"><span id="varcache">var&nbsp;&nbsp;&nbsp;&nbsp;Linecolor&nbsp;&nbsp;</span></span> = <span class="cadre"><span id="rougecache">rouge</span></span>;</p>
                     <br>
-                    <p><span class="cadre"><span id="dtcache">&nbsp;dessinerTriangle</span></span>(<span class="cadre"><span id="ctcache">couleurTriangle</span></span>);</p>
+                    <p><span class="cadre"><span id="dtcache">&nbsp;dessinerTriangle</span></span>(<span class="cadre"><span id="ctcache">triangleColor</span></span>);</p>
                     <br>
-                    <p><span class="cadre"><span id="dlcache">dessinerLigne</span></span>(couleurLigne);</p>
+                    <p><span class="cadre"><span id="dlcache">dessinerLigne</span></span>(colorLine);</p>
                 </div>
                 <div class="etiquettes">
                     <div class="etiq" id="rouge">red</div>
-                    <div class="etiq" id="cligne"> var  Linecolor </div>
-                    <div class="etiq" id="ctriangle">TriangleColor</div>
+                    <div class="etiq" id="cligne"> var  colorLine </div>
+                    <div class="etiq" id="ctriangle">colorTriangle</div>
                     <div class="etiq" id="dligne">drawLigne</div>
                     <div class="etiq" id="dtriangle">drawTriangle</div>
                     <div class="etiq" id="noir">black</div>

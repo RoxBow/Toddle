@@ -46,7 +46,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-              Tu vas découvrir un principipe fondamental de la programmation:&nbsp;<span class="rose">l'algorithmique</span>. 
+              Tu vas découvrir un principe fondamental de la programmation:&nbsp;<span class="rose">l'algorithmique</span>. 
             </p>
             <br>
             <p>

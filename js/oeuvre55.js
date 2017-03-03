@@ -202,6 +202,7 @@ function test(identifiant,x,y,posTop,posLeft){
             break;
         case ctriangle:
             if ((x>=759 && x<971)&&(y>=324 && y<364)) {
+                ctcache.innerHTML=identifiant.innerHTML;
                 $("#ctcache").css('visibility','visible').parent().css('backgroundColor',pinkToddle);
                 identifiant.style.display="none";
                 dt++;
