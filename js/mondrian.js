@@ -223,7 +223,7 @@ function createLine(orientationLigne, nombre, color){
                 for (var i=0; i<nombre; i++){
                     result2=0;
                     if (i==0){ x1=95; }
-                    if (i==1){ x1=285; result2=1; }
+                    if (i==1){ x1=280; result2=1; }
                     if (i==2){ x1=5; result2=0;}
                     if (i==3){ x1=105; }
                     if (i==4){ x1=50; }
@@ -326,8 +326,8 @@ function createLine(orientationLigne, nombre, color){
                 for (var i=0; i<nombre; i++){
                     result6=0;
                     if (i==0){ y1=18; }
-                    if (i==1){ y1=58; }
-                    if (i==2){ y1=140; result6=1;}
+                    if (i==1){ y1=61; }
+                    if (i==2){ y1=142; result6=1;}
                     if (i==3){ y1=25; result6=0;}
                     if (i==4){ y1=50; }
                     if (i==5){ y1=125; }

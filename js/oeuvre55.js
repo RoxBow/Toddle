@@ -29,8 +29,11 @@ function touche() {
 document.body.addEventListener('touchstart', touche, false);
 
 //Variables pour l'affichage du dessin
-var dl = 0,
-    dt = 0;
+var dl = 0,dt = 0;
+var couleurDeLigne="red";
+var couleurDuTriangle="black";
+var inverse=false;
+var cache;
 
 //Variable canvas et contexts
 var canvas,canvas2,ctx,ctx2;
@@ -43,50 +46,57 @@ function init() {
 
     var rouge = document.getElementById("rouge");
     var rougeh;
-    hobjects(rouge,rougeh,56,52);
+    hobjects(rouge,rougeh,57,52);
 
     var cligne = document.getElementById("cligne");
     var cligneh;
-    hobjects(cligne,cligneh,56,77);
+    hobjects(cligne,cligneh,57,77);
 
     var ctriangle = document.getElementById("ctriangle");
     var ctriangleh;
-    hobjects(ctriangle,ctriangleh,77,77);
+    hobjects(ctriangle,ctriangleh,75,77);
 
     var dligne = document.getElementById("dligne");
     var dligneh;
-    hobjects(dligne,dligneh,77,52);
+    hobjects(dligne,dligneh,75,52);
 
     var dtriangle = document.getElementById("dtriangle");
     var dtriangleh;
-    hobjects(dtriangle,dtriangleh,63,77);
-
-    var beige = document.getElementById("beige");
-    var beigeh;
-    hobjects(beige,beigeh,63,52);
-
-    var drond = document.getElementById("drond");
-    var drondh;
-    hobjects(drond,drondh,70,77);
+    hobjects(dtriangle,dtriangleh,66,77);
 
     var noir = document.getElementById("noir");
     var noirh;
-    hobjects(noir,noirh,70,52);
+    hobjects(noir,noirh,66,52);
 }
 
 function drawTriangle(){
-    if (dt==3) {
+    console.log(inverse+" t "+couleurDeLigne);
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    if (inverse) {
+        cache=couleurDuTriangle;
+        couleurDuTriangle=couleurDeLigne;
+        couleurDeLigne=cache;
+    }
+    if (couleurDuTriangle&&dt==3) {
         ctx.beginPath();
         ctx.moveTo(canvas.width/2,0);
         ctx.lineTo(0,canvas.height);
         ctx.lineTo(canvas.width,canvas.height);
+        ctx.fillStyle=couleurDuTriangle;
         ctx.fill();
         ctx.closePath();
     }
 }
 function drawLigne(){
-    if (dl==3) {
-        ctx2.fillStyle = '#f00';
+    console.log(inverse+" l "+couleurDuTriangle);
+    ctx2.clearRect(0,0,canvas2.width,canvas2.height);
+    if (inverse) {
+        cache=couleurDeLigne;
+        couleurDeLigne=couleurDuTriangle;
+        couleurDeLigne=cache;
+    }
+    if (couleurDeLigne&&dl==3) {
+        ctx2.fillStyle=couleurDeLigne;
         ctx2.beginPath();
         ctx2.moveTo(canvas.width/2,0);
         ctx2.lineTo(canvas.width/2+6,6);
@@ -119,7 +129,7 @@ $(".rechercher").on("touchstart",function(){
 });
 
 $("#valider").on("touchstart", function(){
-    if (dl == 3 && dt == 3) {
+    if (dl == 3 && dt == 3 && couleurDeLigne=="red" && couleurDuTriangle=="black") {
         stopchrono(); // Arrête chrono
         // Save time user in DB
         $.ajax({
@@ -158,16 +168,30 @@ function test(identifiant,x,y,posTop,posLeft){
     switch(identifiant) {
         case rouge:
             if ((x>=787 && x<871)&&(y>=270 && y<310)) {
+                rougecache.innerHTML=identifiant.innerHTML;
                 $("#rougecache").css('visibility','visible');
                 $("#rougecache").parent().css('backgroundColor',pinkToddle);
                 identifiant.style.display="none";
+                couleurDeLigne="red";
                 dl++;
                 drawLigne();
-            } else {
-                identifiant.style.backgroundColor=bleuToddle;
-                identifiant.style.zIndex="10"
-                identifiant.style.left = posLeft+"%";
-                identifiant.style.top = posTop+"%";
+                cPush(rouge,rougecache,posTop,posLeft,"ligne",dl);
+            }else{
+                if ((x>=806 && x<867)&&(y>=220 && y<259)) {
+                    noircache.innerHTML=identifiant.innerHTML;
+                    $("#noircache").css('visibility','visible');
+                    $("#noircache").parent().css('backgroundColor',pinkToddle);
+                    identifiant.style.display="none";
+                    couleurDuTriangle="red";
+                    dt++;
+                    drawTriangle();
+                    cPush(rouge,noircache,posTop,posLeft,"triangle",dt);
+                } else {
+                    identifiant.style.backgroundColor=bleuToddle;
+                    identifiant.style.zIndex="10"
+                    identifiant.style.left = posLeft+"%";
+                    identifiant.style.top = posTop+"%";
+                }
             }
             break;
         case cligne:
@@ -177,6 +201,7 @@ function test(identifiant,x,y,posTop,posLeft){
                 identifiant.style.display="none";
                 dl++;
                 drawLigne();
+                cPush(cligne,varcache,posTop,posLeft,"ligne",dl);
             } else {
                 identifiant.style.backgroundColor=bleuToddle;
                 identifiant.style.zIndex="10"
@@ -191,6 +216,7 @@ function test(identifiant,x,y,posTop,posLeft){
                 identifiant.style.display="none";
                 dt++;
                 drawTriangle();
+                cPush(ctriangle,ctcache,posTop,posLeft,"triangle",dt);
             } else {
                 identifiant.style.backgroundColor=bleuToddle;
                 identifiant.style.zIndex="10"
@@ -200,11 +226,13 @@ function test(identifiant,x,y,posTop,posLeft){
             break;
         case dligne:
             if ((x>=521 && x<710)&&(y>=377 && y<414)) {
+                dlcache.innerHTML=identifiant.innerHTML;
                 $("#dlcache").css('visibility','visible');
                 $("#dlcache").parent().css('backgroundColor',pinkToddle);
                 identifiant.style.display="none";
                 dl++;
                 drawLigne();
+                cPush(dligne,dlcache,posTop,posLeft,"ligne",dl);
             } else {
                 identifiant.style.backgroundColor=bleuToddle;
                 identifiant.style.zIndex="10"
@@ -214,11 +242,13 @@ function test(identifiant,x,y,posTop,posLeft){
             break;
         case dtriangle:
             if ((x>=521 && x<743)&&(y>=324 && y<364)) {
+                dtcache.innerHTML=identifiant.innerHTML;
                 $("#dtcache").css('visibility','visible');
                 $("#dtcache").parent().css('backgroundColor',pinkToddle);
                 identifiant.style.display="none";
                 dt++;
                 drawTriangle();
+                cPush(dtriangle,dtcache,posTop,posLeft,"triangle",dt);
             } else {
                 identifiant.style.backgroundColor=bleuToddle;
                 identifiant.style.zIndex="10"
@@ -226,36 +256,80 @@ function test(identifiant,x,y,posTop,posLeft){
                 identifiant.style.top = posTop+"%";
             }
             break;
-        case beige:
-            identifiant.style.backgroundColor=bleuToddle;
-            identifiant.style.zIndex="10"
-            identifiant.style.left = posLeft+"%";
-            identifiant.style.top = posTop+"%";
-            break;
-        case drond:
-            identifiant.style.backgroundColor=bleuToddle;
-            identifiant.style.zIndex="10"
-            identifiant.style.left = posLeft+"%";
-            identifiant.style.top = posTop+"%";
-            break;
         case noir:
             if ((x>=806 && x<867)&&(y>=220 && y<259)) {
+                noircache.innerHTML=identifiant.innerHTML;
                 $("#noircache").css('visibility','visible');
                 $("#noircache").parent().css('backgroundColor',pinkToddle);
                 identifiant.style.display="none";
+                couleurDuTriangle="black";
                 dt++;
                 drawTriangle();
-            } else {
-                identifiant.style.backgroundColor=bleuToddle;
-                identifiant.style.zIndex="10"
-                identifiant.style.left = posLeft+"%";
-                identifiant.style.top = posTop+"%";
+                cPush(noir,noircache,posTop,posLeft,"triangle",dt);
+            } else{
+                if ((x>=787 && x<871)&&(y>=270 && y<310)) {
+                    rougecache.innerHTML=identifiant.innerHTML;
+                    $("#rougecache").css('visibility','visible');
+                    $("#rougecache").parent().css('backgroundColor',pinkToddle);
+                    identifiant.style.display="none";
+                    couleurDeLigne="black";
+                    dl++;
+                    drawLigne();
+                    cPush(noir,rougecache,posTop,posLeft,"ligne",dl);
+                }else {
+                    identifiant.style.backgroundColor=bleuToddle;
+                    identifiant.style.zIndex="10"
+                    identifiant.style.left = posLeft+"%";
+                    identifiant.style.top = posTop+"%";
+                }
             }
             break;
         default:
             alert("Un bug vient d'être constaté, retournez au stand pour y remédier");
     }
 }
+
+// Fonctions pour le undo //
+
+$("#undo").on('touchstart', function(){
+    cUndo();
+});
+
+var cPushArray = new Array();
+var cStep = -1;
+
+function cPush(etiquette,cache,top,left,type,index) {
+    cStep++;
+    if (cStep < cPushArray.length) {
+        cPushArray.length = cStep;
+    }
+    cPushArray.push([etiquette,cache,top,left,type,index]);
+}
+function cUndo() {
+    if (cStep >= 0) {
+        console.log(cStep);
+        $("#"+cPushArray[cStep][1].id).css("visibility","hidden").parent().css("background-color","#f2f2f2");
+
+        $("#"+cPushArray[cStep][0].id).css({
+            "display":"block",
+            "top":cPushArray[cStep][2]+"%",
+            "left":cPushArray[cStep][3]+"%",
+            "background-color":bleuToddle
+        });
+        
+        if(cPushArray[cStep][4]=="ligne"){
+            dl=cPushArray[cStep][5]-1;
+        } else {
+            dt=cPushArray[cStep][5]-1;
+        }
+
+        cStep--;
+    }
+    drawLigne();
+    drawTriangle();
+}
+
+// Fin undo //
 
 function win(){
     $('#win').fadeIn(500);

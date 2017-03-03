@@ -191,10 +191,30 @@
                 padding: 5px;
                 content: "";
                 border-radius: 20px;
-            }
-            .cadre > *{
-                visibility: hidden;
-                color: white;
+                #noircache{
+                    visibility: hidden;
+                    color: white;
+                }
+                #varcache{
+                    visibility: hidden;
+                    color: white;
+                }
+                #rougecache{
+                    visibility: hidden;
+                    color: white;
+                }
+                #dtcache{
+                    visibility: hidden;
+                    color: white;
+                }
+                #ctcache{
+                    visibility: hidden;
+                    color: white;
+                }
+                #dlcache{
+                    visibility: hidden;
+                    color: white;
+                }
             }
         } // .code
         .etiquettes{
@@ -209,42 +229,32 @@
                 position: absolute;
             }
             #rouge{
-                top: 56%;
+                top: 57%;
                 left: 52%;
             }
             #cligne{
-                top: 56%;
+                top: 57%;
                 left: 77%;
             }
             #ctriangle{
-                top: 77%;
+                top: 75%;
                 left: 77%;
             }
             #dligne{
+                top: 75%;
                 left: 52%;
-                top: 77%;
             }
             #dtriangle{
-                top: 63%;
-                left: 77%;
-            }
-            #beige{
-                left: 52%;
-                top: 63%;
-            }
-            #drond{
-                top: 70%;
+                top: 66%;
                 left: 77%;
             }
             #noir{
-                top: 70%;
+                top: 66%;
                 left: 52%;
             }
         }
         .bouton{
             position: absolute;
-            top: 84%;
-            left: 59%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -256,6 +266,14 @@
             &:active{
                 background-color: $blueToddle;
             }
+        }
+        #valider{
+            top: 83%;
+            left: 59%;
+        }
+        #undo{
+            top: 83%;
+            left: 84%;
         }
     } // .rightBloc
 }

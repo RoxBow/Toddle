@@ -5,44 +5,35 @@
 /* ###### FONTS ###### */
 @font-face {
   font-family: "GothamRounded";
-  src: url(../fonts/GothamRoundedBook.ttf);
-}
+  src: url(../fonts/GothamRoundedBook.ttf); }
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedBold.ttf);
-  font-weight: bold;
-}
+  font-weight: bold; }
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedMedium.ttf);
-  font-weight: 600;
-}
+  font-weight: 600; }
 @font-face {
   font-family: "GothamRounded";
   src: url(../fonts/GothamRoundedItalic.otf);
-  font-style: italic;
-}
+  font-style: italic; }
 @font-face {
   font-family: "Inconsolata";
-  src: url(../fonts/Inconsolata-Regular.ttf);
-}
+  src: url(../fonts/Inconsolata-Regular.ttf); }
 @font-face {
   font-family: "Inconsolata";
   src: url(../fonts/Inconsolata-Bold.ttf);
-  font-weight: bold;
-}
-/* line 51, ../sass/general.scss */
+  font-weight: bold; }
 html, body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
   font-family: "GothamRounded", "Verdana", "Arial", "Helvetica", sans-serif;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
-/* ###### CRÉDITS ###### */
-/* line 62, ../sass/general.scss */
+/* ###### CR├ëDITS ###### */
 .credits {
   position: absolute;
   display: none;
@@ -50,375 +41,265 @@ html, body {
   height: 100%;
   margin-top: 100%;
   z-index: 5000;
-  background-color: white;
-}
-/* line 63, ../sass/general.scss */
-.credits #croix {
-  position: absolute;
-  right: 10%;
-  color: #aaa;
-  margin-top: 50px;
-}
-/* line 76, ../sass/general.scss */
-.credits .title {
-  font-size: 72px;
-  color: #F38F9A;
-  font-weight: 600;
-  width: 100%;
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
-/* line 85, ../sass/general.scss */
-.credits .content {
-  font-size: 20px;
-  color: #355E7E;
-  font-weight: 600;
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 20px;
-}
-/* line 92, ../sass/general.scss */
-.credits .content .chevron {
-  width: 40px;
-  margin-top: 22%;
-  position: absolute;
-}
-/* line 97, ../sass/general.scss */
-.credits .content #chevronDroite {
-  right: 3%;
-}
-/* line 100, ../sass/general.scss */
-.credits .content #chevronGauche {
-  transform: rotate(180deg);
-  left: 3%;
-  display: none;
-}
-/* line 105, ../sass/general.scss */
-.credits .content .ariane {
-  text-align: center;
-}
-/* line 107, ../sass/general.scss */
-.credits .content .ariane .apoint {
-  width: 20px;
-  margin: 0 10px;
-}
-/* line 112, ../sass/general.scss */
-.credits .content .texte {
-  width: 100%;
-  margin-top: 20px;
-  height: 400px;
-  overflow: hidden;
-}
-/* line 117, ../sass/general.scss */
-.credits .content .texte #sous-texte {
-  display: flex;
-  height: 380px;
-  width: 300%;
-}
-/* line 121, ../sass/general.scss */
-.credits .content .texte #sous-texte > * {
-  width: 100%;
-  padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-/* line 127, ../sass/general.scss */
-.credits .content .texte #sous-texte > * .sright {
-  padding-right: 15px;
-  overflow-y: scroll;
-}
-/* line 130, ../sass/general.scss */
-.credits .content .texte #sous-texte > * .sright::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: #F38F9A;
-}
-/* line 137, ../sass/general.scss */
-.credits .content .texte #sous-texte > * .sright::-webkit-scrollbar {
-  width: 7px;
-  margin-left: 5px;
-}
-/* line 143, ../sass/general.scss */
-.credits .content .texte #sous-texte > * .sright::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background-color: #355E7E;
-}
-/* line 152, ../sass/general.scss */
-.credits .content .justify {
-  text-align: justify;
-}
-/* line 155, ../sass/general.scss */
-.credits .content .bottom {
-  width: 120%;
-  margin-left: -10%;
-}
-/* line 158, ../sass/general.scss */
-.credits .content .bottom .flexbottom {
-  display: flex;
-  align-items: stretch;
-}
-/* line 161, ../sass/general.scss */
-.credits .content .bottom .flexbottom > * {
-  width: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  flex-direction: column;
-}
-/* line 168, ../sass/general.scss */
-.credits .content .bottom .flexbottom > * .antoine {
-  margin-top: 17px;
-}
-/* line 171, ../sass/general.scss */
-.credits .content .bottom .flexbottom > * .fct {
-  margin-top: 7px;
-}
-/* line 175, ../sass/general.scss */
-.credits .content .bottom .flexbottom .logo {
-  align-self: flex-start;
-  width: 100px;
-}
+  background-color: white; }
+  .credits #croix {
+    position: absolute;
+    right: 10%;
+    color: #aaa;
+    margin-top: 50px; }
+  .credits .title {
+    font-size: 72px;
+    color: #F38F9A;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px; }
+  .credits .content {
+    font-size: 20px;
+    color: #355E7E;
+    font-weight: 600;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px; }
+    .credits .content .chevron {
+      width: 40px;
+      margin-top: 22%;
+      position: absolute; }
+    .credits .content #chevronDroite {
+      right: 3%; }
+    .credits .content #chevronGauche {
+      transform: rotate(180deg);
+      left: 3%;
+      display: none; }
+    .credits .content .ariane {
+      text-align: center; }
+      .credits .content .ariane .apoint {
+        width: 20px;
+        margin: 0 10px; }
+    .credits .content .texte {
+      width: 100%;
+      margin-top: 20px;
+      height: 400px;
+      overflow: hidden; }
+      .credits .content .texte #sous-texte {
+        display: flex;
+        height: 380px;
+        width: 300%; }
+        .credits .content .texte #sous-texte > * {
+          width: 100%;
+          padding: 0 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+          .credits .content .texte #sous-texte > * .sright {
+            padding-right: 15px;
+            overflow-y: scroll; }
+            .credits .content .texte #sous-texte > * .sright::-webkit-scrollbar-track {
+              border-radius: 10px;
+              background-color: #F38F9A; }
+            .credits .content .texte #sous-texte > * .sright::-webkit-scrollbar {
+              width: 7px;
+              margin-left: 5px; }
+            .credits .content .texte #sous-texte > * .sright::-webkit-scrollbar-thumb {
+              border-radius: 20px;
+              background-color: #355E7E; }
+    .credits .content .justify {
+      text-align: justify; }
+    .credits .content .bottom {
+      width: 120%;
+      margin-left: -10%; }
+      .credits .content .bottom .flexbottom {
+        display: flex;
+        align-items: stretch; }
+        .credits .content .bottom .flexbottom > * {
+          width: 25%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          flex-direction: column; }
+          .credits .content .bottom .flexbottom > * .antoine {
+            margin-top: 17px; }
+          .credits .content .bottom .flexbottom > * .fct {
+            margin-top: 7px; }
+        .credits .content .bottom .flexbottom .logo {
+          align-self: flex-start;
+          width: 100px; }
 
 /* ###### HANDCLICK TUTO ###### */
-/* line 187, ../sass/general.scss */
 #handclick {
   position: absolute;
   width: 110px;
   height: 110px;
-  z-index: 100;
-}
+  z-index: 100; }
 
-/* line 194, ../sass/general.scss */
 .fa {
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 /* ###### Class for colors ###### */
-/* line 199, ../sass/general.scss */
 .rose {
-  color: #F38F9A;
-}
+  color: #F38F9A; }
 
-/* line 202, ../sass/general.scss */
 .bleu {
-  color: #355E7E;
-}
+  color: #355E7E; }
 
-/* line 205, ../sass/general.scss */
 .beige {
-  color: #F8B195;
-}
+  color: #F8B195; }
 
-/* line 208, ../sass/general.scss */
 .noir {
-  color: black;
-}
+  color: black; }
 
-/* line 211, ../sass/general.scss */
 .six {
-  font-weight: 600;
-}
+  font-weight: 600; }
 
-/* line 214, ../sass/general.scss */
 .bold {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-/* line 217, ../sass/general.scss */
 .center {
-  text-align: center;
-}
+  text-align: center; }
 
-/* line 220, ../sass/general.scss */
 i {
-  font-style: italic;
-}
+  font-style: italic; }
 
-/* line 223, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
-  position: relative;
-}
-/* line 228, ../sass/general.scss */
-.container * {
-  outline: none;
-  box-sizing: border-box;
-}
-/* line 232, ../sass/general.scss */
-.container input {
-  font-family: 'GothamRounded';
-}
-/* line 235, ../sass/general.scss */
-.container button {
-  background: none;
-  border: none;
-  font-family: 'GothamRounded';
-  text-transform: uppercase;
-  font-weight: 600;
-}
-/* line 242, ../sass/general.scss */
-.container header {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  width: 100%;
-  margin: 0 0 15px 0;
-  height: 15%;
-}
-/* line 249, ../sass/general.scss */
-.container header .toddle_form {
-  height: 80%;
-  float: left;
-}
-/* line 253, ../sass/general.scss */
-.container header .toddle_text {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 25%;
-  margin: auto;
-  height: 50%;
-}
-/* line 261, ../sass/general.scss */
-.container header .blockRight {
-  position: absolute;
-  right: 5%;
-  top: 3vw;
-  width: auto;
-  font-size: 2.5vw;
-  font-weight: normal;
-  color: #F38F9A;
-}
-/* line 269, ../sass/general.scss */
-.container header .blockRight .name, .container header .blockRight .chrono {
-  display: inline-block;
-}
-/* line 273, ../sass/general.scss */
-.container header .blockRight .chrono input {
-  font-size: 2.5vw;
-  color: #F38F9A;
-  display: inline-block;
-  width: 6vw;
-  text-align: center;
-  border: none;
-  background: none;
-}
-/* line 283, ../sass/general.scss */
-.container header .blockRight .defi {
-  text-align: right;
-}
-/* line 288, ../sass/general.scss */
-.container footer {
-  width: 100%;
-  text-align: right;
-  position: absolute;
-  z-index: 0;
-  bottom: 1%;
-  right: 1%;
-}
-/* line 295, ../sass/general.scss */
-.container footer img {
-  width: 5%;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 1%;
-}
-/* line 302, ../sass/general.scss */
-.container .overlay {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-}
-/* line 314, ../sass/general.scss */
-.container .overlay .popup {
-  background-color: #fff;
-  border-radius: 15px;
-  position: absolute;
-  z-index: 200;
-  width: 50%;
-  height: 50%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  left: 0;
-  right: 0;
-  padding: 15px;
-  color: #355E7E;
-  font-size: 20px;
-}
-/* line 329, ../sass/general.scss */
-.container .overlay .popup .sous-titre {
-  color: #F38F9A;
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-bottom: 4%;
-  display: block;
-}
-/* line 336, ../sass/general.scss */
-.container .overlay .popup .error {
-  margin: 3% auto;
-  color: red;
-  font-size: 2vw;
-}
-/* line 342, ../sass/general.scss */
-.container .overlay .close {
-  color: #aaa;
-  position: absolute;
-  right: 2%;
-  top: 2%;
-  font-size: 4vw;
-}
-/* line 350, ../sass/general.scss */
-.container .overlay.orientation {
-  display: block;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 9998;
-}
-/* line 354, ../sass/general.scss */
-.container .overlay.orientation .content-orientation {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  display: inline-block;
-  right: 0;
-  left: 0;
-  margin: auto;
-  background: #fff;
-  text-align: center;
-  width: 80%;
-  height: 45%;
-  padding: 8%;
-  border-radius: 5%;
-  z-index: 9999;
-}
-/* line 369, ../sass/general.scss */
-.container .overlay.orientation .content-orientation img {
-  width: 50%;
-  display: inline-block;
-  margin: auto;
-  right: 0;
-}
-/* line 375, ../sass/general.scss */
-.container .overlay.orientation .content-orientation p {
-  text-transform: uppercase;
-  font-size: 5vw;
-  color: #F38F9A;
-  margin: 7% 0;
-}
+  position: relative; }
+  .container * {
+    outline: none;
+    box-sizing: border-box; }
+  .container input {
+    font-family: 'GothamRounded'; }
+  .container button {
+    background: none;
+    border: none;
+    font-family: 'GothamRounded';
+    text-transform: uppercase;
+    font-weight: 600; }
+  .container header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 15px 0;
+    height: 15%; }
+    .container header .toddle_form {
+      height: 80%;
+      float: left; }
+    .container header .toddle_text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 25%;
+      margin: auto;
+      height: 50%; }
+    .container header .blockRight {
+      position: absolute;
+      right: 5%;
+      top: 3vw;
+      width: auto;
+      font-size: 2.5vw;
+      font-weight: normal;
+      color: #F38F9A; }
+      .container header .blockRight .name, .container header .blockRight .chrono {
+        display: inline-block; }
+      .container header .blockRight .chrono input {
+        font-size: 2.5vw;
+        color: #F38F9A;
+        display: inline-block;
+        width: 6vw;
+        text-align: center;
+        border: none;
+        background: none; }
+      .container header .blockRight .defi {
+        text-align: right; }
+  .container footer {
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    z-index: 0;
+    bottom: 1%;
+    right: 1%; }
+    .container footer img {
+      width: 5%;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1%; }
+  .container .overlay {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center; }
+    .container .overlay .popup {
+      background-color: #fff;
+      border-radius: 15px;
+      position: absolute;
+      z-index: 200;
+      width: 50%;
+      height: 50%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      color: #355E7E;
+      font-size: 20px; }
+      .container .overlay .popup .sous-titre {
+        color: #F38F9A;
+        font-size: 2.2rem;
+        font-weight: bold;
+        margin-bottom: 4%;
+        display: block; }
+      .container .overlay .popup .error {
+        margin: 3% auto;
+        color: red;
+        font-size: 2vw; }
+    .container .overlay .close {
+      color: #aaa;
+      position: absolute;
+      right: 2%;
+      top: 2%;
+      font-size: 4vw; }
+    .container .overlay.orientation {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9998; }
+      .container .overlay.orientation .content-orientation {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: inline-block;
+        right: 0;
+        left: 0;
+        margin: auto;
+        background: #fff;
+        text-align: center;
+        width: 80%;
+        height: 45%;
+        padding: 8%;
+        border-radius: 5%;
+        z-index: 9999; }
+        .container .overlay.orientation .content-orientation img {
+          width: 50%;
+          display: inline-block;
+          margin: auto;
+          right: 0; }
+        .container .overlay.orientation .content-orientation p {
+          text-transform: uppercase;
+          font-size: 5vw;
+          color: #F38F9A;
+          margin: 7% 0; }
 
-/* line 386, ../sass/general.scss */
 .btn_toddle {
   background: #355E7E;
   padding: 20px;
@@ -426,10 +307,8 @@ i {
   border: none;
   border-radius: 50px;
   font-size: 30px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
-/* line 396, ../sass/general.scss */
 .btn_help {
   background: #F38F9A;
   color: #fff;
@@ -437,313 +316,236 @@ i {
   border-radius: 35px;
   font-size: 30px;
   width: 70px;
-  height: 70px;
-}
+  height: 70px; }
 
-/* line 2, ../sass/oeuvre55.scss */
 .overlay {
   position: absolute;
   display: none;
   width: 100%;
   height: 100%;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+  background-color: rgba(0, 0, 0, 0.5); }
 
-/* line 11, ../sass/oeuvre55.scss */
 .container {
-  font-weight: 600;
-}
-/* line 13, ../sass/oeuvre55.scss */
-.container #win {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 10000;
-  display: none;
-}
-/* line 20, ../sass/oeuvre55.scss */
-.container #win .title {
-  font-weight: 600;
-  color: #F38F9A;
-  font-size: 54px;
-}
-/* line 25, ../sass/oeuvre55.scss */
-.container #win .titlesuite {
-  color: #F38F9A;
-  font-size: 42px;
-}
-/* line 29, ../sass/oeuvre55.scss */
-.container #win .content-win {
-  width: 70%;
-  height: 67%;
-  margin-left: 15%;
-  margin-top: 13%;
-  padding-top: 3.5%;
-  background-color: white;
-  border-radius: 50px;
-  text-align: center;
-  color: #355E7E;
-  font-size: 26px;
-}
-/* line 40, ../sass/oeuvre55.scss */
-.container #win .content-win p {
-  width: 70%;
-  margin-left: 15%;
-}
-/* line 44, ../sass/oeuvre55.scss */
-.container #win .content-win hr {
-  border: 3px solid #F38F9A;
-  border-radius: 25px;
-  width: 70%;
-  margin: 3% auto;
-}
-/* line 50, ../sass/oeuvre55.scss */
-.container #win .content-win .continuer {
-  color: #fff;
-  background-color: #355E7E;
-  width: 35%;
-  height: 75px;
-  border-radius: 50px;
-  font-size: 30px;
-  margin: 4% 0;
-}
-/* line 59, ../sass/oeuvre55.scss */
-.container #win .content-win .name {
-  color: #F38F9A;
-}
-/* line 62, ../sass/oeuvre55.scss */
-.container #win .content-win .parentheses {
-  color: #355E7E;
-  font-weight: bold;
-}
-/* line 68, ../sass/oeuvre55.scss */
-.container #loose {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 10000;
-  display: none;
-}
-/* line 75, ../sass/oeuvre55.scss */
-.container #loose .title {
-  font-weight: 600;
-  color: #F38F9A;
-  font-size: 54px;
-}
-/* line 80, ../sass/oeuvre55.scss */
-.container #loose .content-loose {
-  width: 70%;
-  height: 45%;
-  margin-top: 20%;
-  margin-left: 15%;
-  padding-top: 2%;
-  background-color: white;
-  border-radius: 50px;
-  text-align: center;
-  color: #355E7E;
-  font-size: 26px;
-}
-/* line 91, ../sass/oeuvre55.scss */
-.container #loose .content-loose p {
-  width: 75%;
-  margin-left: 12.5%;
-}
-/* line 95, ../sass/oeuvre55.scss */
-.container #loose .content-loose hr {
-  border: 3px solid #F38F9A;
-  border-radius: 25px;
-  width: 70%;
-  margin: 3% auto;
-}
-/* line 101, ../sass/oeuvre55.scss */
-.container #loose .content-loose .rechercher {
-  color: #fff;
-  background-color: #355E7E;
-  width: 35%;
-  height: 75px;
-  border-radius: 50px;
-  font-size: 35px;
-  margin-top: 0.5%;
-}
-/* line 110, ../sass/oeuvre55.scss */
-.container #loose .content-loose .name {
-  color: #F38F9A;
-}
-/* line 115, ../sass/oeuvre55.scss */
-.container #handclick {
-  top: 71%;
-  left: 57%;
-  z-index: 10000;
-  animation-duration: 2s;
-  animation-name: slide;
-  animation-iteration-count: infinite;
-}
-/* line 123, ../sass/oeuvre55.scss */
-.container h2 {
-  text-align: center;
-  font-size: 24px;
-  padding-bottom: 10px;
-}
-/* line 128, ../sass/oeuvre55.scss */
-.container .consignes {
-  text-align: center;
-  font-size: 18px;
-  color: #355E7E;
-  width: 80%;
-  margin: 0 auto;
-  font-weight: 600;
-}
-/* line 136, ../sass/oeuvre55.scss */
-.container .leftBloc {
-  overflow: hidden;
-  width: 48%;
-  height: 500px;
-  float: left;
-  margin-left: 1%;
-  position: relative;
-}
-/* line 143, ../sass/oeuvre55.scss */
-.container .leftBloc .souscontainer {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-/* line 147, ../sass/oeuvre55.scss */
-.container .leftBloc .souscontainer canvas {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-/* line 153, ../sass/oeuvre55.scss */
-.container .leftBloc .souscontainer #myCanvas {
-  z-index: 0;
-}
-/* line 156, ../sass/oeuvre55.scss */
-.container .leftBloc .souscontainer #myCanvas2 {
-  z-index: 2;
-}
-/* line 161, ../sass/oeuvre55.scss */
-.container .rightBloc {
-  width: 50%;
-  float: right;
-}
-/* line 164, ../sass/oeuvre55.scss */
-.container .rightBloc .code {
-  padding: 10px;
-  background-color: #F2F2F2;
-  width: 96%;
-  font-family: "GothamRounded", "Inconsolata", "Arial";
-  font-size: 26px;
-  height: 202px;
-  overflow-y: auto;
-}
-/* line 172, ../sass/oeuvre55.scss */
-.container .rightBloc .code::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: #F38F9A;
-}
-/* line 179, ../sass/oeuvre55.scss */
-.container .rightBloc .code::-webkit-scrollbar {
-  width: 7px;
-}
-/* line 184, ../sass/oeuvre55.scss */
-.container .rightBloc .code::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background-color: #355E7E;
-}
-/* line 189, ../sass/oeuvre55.scss */
-.container .rightBloc .code .cadre {
-  border: 1px solid #F38F9A;
-  padding: 5px;
-  content: "";
-  border-radius: 20px;
-}
-/* line 195, ../sass/oeuvre55.scss */
-.container .rightBloc .code .cadre > * {
-  visibility: hidden;
-  color: white;
-}
-/* line 201, ../sass/oeuvre55.scss */
-.container .rightBloc .etiquettes .etiq {
-  z-index: 10;
-  border-radius: 25px;
-  width: 20%;
-  padding: 15px;
-  background: #355E7E;
-  color: #fff;
-  text-align: center;
-  position: absolute;
-}
-/* line 211, ../sass/oeuvre55.scss */
-.container .rightBloc .etiquettes #rouge {
-  top: 56%;
-  left: 52%;
-}
-/* line 215, ../sass/oeuvre55.scss */
-.container .rightBloc .etiquettes #cligne {
-  top: 56%;
-  left: 77%;
-}
-/* line 219, ../sass/oeuvre55.scss */
-.container .rightBloc .etiquettes #ctriangle {
-  top: 77%;
-  left: 77%;
-}
-/* line 223, ../sass/oeuvre55.scss */
-.container .rightBloc .etiquettes #dligne {
-  left: 52%;
-  top: 77%;
-}
-/* line 227, ../sass/oeuvre55.scss */
-.container .rightBloc .etiquettes #dtriangle {
-  top: 63%;
-  left: 77%;
-}
-/* line 231, ../sass/oeuvre55.scss */
-.container .rightBloc .etiquettes #beige {
-  left: 52%;
-  top: 63%;
-}
-/* line 235, ../sass/oeuvre55.scss */
-.container .rightBloc .etiquettes #drond {
-  top: 70%;
-  left: 77%;
-}
-/* line 239, ../sass/oeuvre55.scss */
-.container .rightBloc .etiquettes #noir {
-  top: 70%;
-  left: 52%;
-}
-/* line 244, ../sass/oeuvre55.scss */
-.container .rightBloc .bouton {
-  position: absolute;
-  top: 84%;
-  left: 59%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F38F9A;
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-  color: white;
-}
-/* line 256, ../sass/oeuvre55.scss */
-.container .rightBloc .bouton:active {
-  background-color: #355E7E;
-}
+  font-weight: 600; }
+  .container #win {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none; }
+    .container #win .title {
+      font-weight: 600;
+      color: #F38F9A;
+      font-size: 54px; }
+    .container #win .titlesuite {
+      color: #F38F9A;
+      font-size: 42px; }
+    .container #win .content-win {
+      width: 70%;
+      height: 67%;
+      margin-left: 15%;
+      margin-top: 13%;
+      padding-top: 3.5%;
+      background-color: white;
+      border-radius: 50px;
+      text-align: center;
+      color: #355E7E;
+      font-size: 26px; }
+      .container #win .content-win p {
+        width: 70%;
+        margin-left: 15%; }
+      .container #win .content-win hr {
+        border: 3px solid #F38F9A;
+        border-radius: 25px;
+        width: 70%;
+        margin: 3% auto; }
+      .container #win .content-win .continuer {
+        color: #fff;
+        background-color: #355E7E;
+        width: 35%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 30px;
+        margin: 4% 0; }
+      .container #win .content-win .name {
+        color: #F38F9A; }
+      .container #win .content-win .parentheses {
+        color: #355E7E;
+        font-weight: bold; }
+  .container #loose {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none; }
+    .container #loose .title {
+      font-weight: 600;
+      color: #F38F9A;
+      font-size: 54px; }
+    .container #loose .content-loose {
+      width: 70%;
+      height: 45%;
+      margin-top: 20%;
+      margin-left: 15%;
+      padding-top: 2%;
+      background-color: white;
+      border-radius: 50px;
+      text-align: center;
+      color: #355E7E;
+      font-size: 26px; }
+      .container #loose .content-loose p {
+        width: 75%;
+        margin-left: 12.5%; }
+      .container #loose .content-loose hr {
+        border: 3px solid #F38F9A;
+        border-radius: 25px;
+        width: 70%;
+        margin: 3% auto; }
+      .container #loose .content-loose .rechercher {
+        color: #fff;
+        background-color: #355E7E;
+        width: 35%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 35px;
+        margin-top: 0.5%; }
+      .container #loose .content-loose .name {
+        color: #F38F9A; }
+  .container #handclick {
+    top: 71%;
+    left: 57%;
+    z-index: 10000;
+    animation-duration: 2s;
+    animation-name: slide;
+    animation-iteration-count: infinite; }
+  .container h2 {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 10px; }
+  .container .consignes {
+    text-align: center;
+    font-size: 18px;
+    color: #355E7E;
+    width: 80%;
+    margin: 0 auto;
+    font-weight: 600; }
+  .container .leftBloc {
+    overflow: hidden;
+    width: 48%;
+    height: 500px;
+    float: left;
+    margin-left: 1%;
+    position: relative; }
+    .container .leftBloc .souscontainer {
+      height: 100%;
+      width: 100%;
+      overflow: hidden; }
+      .container .leftBloc .souscontainer canvas {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%; }
+      .container .leftBloc .souscontainer #myCanvas {
+        z-index: 0; }
+      .container .leftBloc .souscontainer #myCanvas2 {
+        z-index: 2; }
+  .container .rightBloc {
+    width: 50%;
+    float: right; }
+    .container .rightBloc .code {
+      padding: 10px;
+      background-color: #F2F2F2;
+      width: 96%;
+      font-family: "GothamRounded", "Inconsolata", "Arial";
+      font-size: 26px;
+      height: 202px;
+      overflow-y: auto; }
+      .container .rightBloc .code::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #F38F9A; }
+      .container .rightBloc .code::-webkit-scrollbar {
+        width: 7px; }
+      .container .rightBloc .code::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background-color: #355E7E; }
+      .container .rightBloc .code .cadre {
+        border: 1px solid #F38F9A;
+        padding: 5px;
+        content: "";
+        border-radius: 20px; }
+        .container .rightBloc .code .cadre #noircache {
+          visibility: hidden;
+          color: white; }
+        .container .rightBloc .code .cadre #varcache {
+          visibility: hidden;
+          color: white; }
+        .container .rightBloc .code .cadre #rougecache {
+          visibility: hidden;
+          color: white; }
+        .container .rightBloc .code .cadre #dtcache {
+          visibility: hidden;
+          color: white; }
+        .container .rightBloc .code .cadre #ctcache {
+          visibility: hidden;
+          color: white; }
+        .container .rightBloc .code .cadre #dlcache {
+          visibility: hidden;
+          color: white; }
+    .container .rightBloc .etiquettes .etiq {
+      z-index: 10;
+      border-radius: 25px;
+      width: 20%;
+      padding: 15px;
+      background: #355E7E;
+      color: #fff;
+      text-align: center;
+      position: absolute; }
+    .container .rightBloc .etiquettes #rouge {
+      top: 57%;
+      left: 52%; }
+    .container .rightBloc .etiquettes #cligne {
+      top: 57%;
+      left: 77%; }
+    .container .rightBloc .etiquettes #ctriangle {
+      top: 75%;
+      left: 77%; }
+    .container .rightBloc .etiquettes #dligne {
+      top: 75%;
+      left: 52%; }
+    .container .rightBloc .etiquettes #dtriangle {
+      top: 66%;
+      left: 77%; }
+    .container .rightBloc .etiquettes #noir {
+      top: 66%;
+      left: 52%; }
+    .container .rightBloc .bouton {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #F38F9A;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      color: white; }
+      .container .rightBloc .bouton:active {
+        background-color: #355E7E; }
+    .container .rightBloc #valider {
+      top: 83%;
+      left: 59%; }
+    .container .rightBloc #undo {
+      top: 83%;
+      left: 84%; }
 
 @keyframes slide {
   from {
     top: 71%;
-    left: 57%;
-  }
+    left: 57%; }
   to {
     top: 30%;
-    left: 78%;
-  }
-}
+    left: 78%; } }
+
+/*# sourceMappingURL=oeuvre55.css.map */
