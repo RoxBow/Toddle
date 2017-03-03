@@ -37,7 +37,7 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <section class="congratulate">
             <p class="title">
-              WEEL DONE !
+              WELL DONE !
             </p>
             <hr>
             <p>
@@ -52,7 +52,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-                <span class="bold">Example:</span> I need to draw 6 cats. I put the number "6" in a box named  "nbCats" just as follows:
+                <span class="bold">Example:</span> I need to draw 6 cats. I put the number "6" in a box named "nbCats" just as follows:
                 <br>
                 <br>
                 <span class="rose">var</span> nbCats = 6;

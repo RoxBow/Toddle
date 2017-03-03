@@ -61,7 +61,7 @@ if( !isset($_SESSION['pseudo']) ){
                 <div class="content">
                     <p class="number">3</p>
                     <hr>
-                    <p>Une fois l’&#156;uvre trouvée, tiens-toi prêt à relever le défi correspondant !</p>
+                    <p>Once you’ve found the right artwork, be ready and prepare yourself to meet the corresponding challenge !</p>
                     <ul>
                       <li>
                             <span class="fa-stack fa-lg">

@@ -38,10 +38,10 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-                You have understood <span class="bold">les programming bases</span> !
+                You have understood <span class="bold">programming bases</span> !
             </p>
             <p>
-                Have you been fast enough to win a reward ?<br><br>Discover it now!
+                Were you fast enough to win a reward ?<br><br>Discover it now!
             </p>
             <button class="continuer">RESULT</button>
             </div>

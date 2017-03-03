@@ -37,11 +37,11 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <section class="congratulate2">
             <p class="title">
-              WEEL DONE !
+              WELL DONE !
             </p>
             <hr>
             <p>
-              You have found the right artwork: "<i>New York City</i>" (1942) by Piet Mondrian !
+              You have found the right artwork: "<i>New York City</i>" (1942) by Piet Mondrian.
             </p>
             <br>
             <p>
@@ -52,7 +52,6 @@ if( !isset($_SESSION['pseudo']) ){
                 - <span class="bold">Parameters</span>: DrawALine(<span class="rose">5</span>);<br>
                 - <span class="bold">Variables</span>: <span class="rose">var</span> nbLines = <span class="rose">5</span> 
             </p>
-            <br>
             <br>
             <p class="text-go rose">
               READY TO MEET THE CHALLENGE ? <br>

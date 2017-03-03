@@ -46,7 +46,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-              Let’s learn together what<span class="bold rose">parameters</span> are.
+              Let’s learn together what<span class="bold rose"> parameters</span> are.
             </p>
             <br>
             <p>

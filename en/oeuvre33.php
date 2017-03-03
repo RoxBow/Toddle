@@ -43,7 +43,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-              You have recreated Klein Blue Piet Mondrian’s artwork by coupling the right<span class="bold"> values </span>with the <span class="bold">arguments</span> of the <span class="bold">functions</span>.
+              You have recreated Piet Mondrian’s artwork by coupling the right<span class="bold"> values </span>with the <span class="bold">arguments</span> of the <span class="bold">functions</span>.
               <br>
             </p>
             

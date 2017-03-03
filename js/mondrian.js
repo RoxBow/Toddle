@@ -32,7 +32,7 @@ document.body.addEventListener('touchstart', touche, false);
 var nbrLine, colorLine, x1, x2, y1, y2;
 
 // Variables pour les fonctions
-var couleurs=["Yellow","Red","Bleu"];
+var couleurs=["Yellow","Red","Blue"];
 var orientationLigne=["Horizontal","Vertical"];
 
 var couselect = 0,
@@ -177,7 +177,7 @@ $(".bva").on("touchstart", function() {
 function createLine(orientationLigne, nombre, color){
     if (color=="Yellow") {
         colorname="yellow";
-    } else if (color=="Bleu") {
+    } else if (color=="Blue") {
         colorname="blue";
     } else if (color=="Red") {
         colorname="red";

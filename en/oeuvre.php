@@ -43,7 +43,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-              You have reproduced Klein Blue by the French artist Yves Klein by using the <span class="bold">the functions</span>:
+              You have reproduced <i>Klein Blue</i> by the French artist Yves Klein by using the <span class="bold">the functions</span>:
               <br>
               <span class="name">CreateRectangle</span><span class="parentheses">()</span> et <span class="name">FillInBlue2</span><span class="parentheses">()</span>.
             </p>

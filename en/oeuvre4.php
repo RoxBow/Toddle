@@ -31,7 +31,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <hr>
             <p class="text-win">
-              Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+              Great <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
               You’ve solved the fourth puzzle !
@@ -116,7 +116,7 @@ if( !isset($_SESSION['pseudo']) ){
                         </div>
                     </div>
                     <div class="nombre">
-                        <p>Nombre</p>
+                        <p>Number</p>
                         <div class="choix">
                         <span class="selecteurs" id="nbmoins">
                         &lsaquo;
@@ -131,7 +131,7 @@ if( !isset($_SESSION['pseudo']) ){
                         <img src="../img/poubelle.png" alt="Objectif"/>
                     </div>
                     <div id="ajouter">
-                        <button class="bva">AJOUTER</button>
+                        <button class="bva">ADD</button>
                     </div>
                     <div class="bouton" id="valider">
                         <i class="fa fa-check fa-2x" aria-hidden="true"></i></div>

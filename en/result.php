@@ -256,7 +256,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
                 <div class="giftBlock">
                     <p>A prize will be given to the fastest ones amongst all the participants</p>
                     <hr class="trait">
-                    <p>If you ever wish to be kept updated of the ranking, consider giving us your email address.</p>
+                    <p>If you wish to be kept updated of the ranking, consider giving us your email.</p>
                     <button>
                         <span class="fa-stack">
                             <i class="fa fa-circle fa-stack-2x"></i>
