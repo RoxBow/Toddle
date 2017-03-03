@@ -7,11 +7,11 @@ var indicecontent = document.getElementById("indicecontent");
 ctx.fillStyle="#FFF";
 ctx.fillRect(0,0,canvas.width,canvas.height);
 
-var validation = 0;
-var verification = 0;
-var verification2 = 2;
-var cpush=0;
-var tuto=0;
+var validation = 0,
+    verification = 0,
+    verification2 = 2,
+    cpush = 0,
+    tuto = 0;
 
 // Update time script
 sec = localSec;
@@ -57,7 +57,6 @@ $(window).bind('beforeunload',function(){
         var offset = $("#leftBloc").offset();
         var mouseX, mouseY;
 
-        var actif;
 
         $("#undo").on("touchstart", function(){
           if (cpush==0) {

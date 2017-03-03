@@ -1,7 +1,7 @@
-var range1 = 0;
-var range2 = 0;
-var range3 = 0;
-var range4 = 0;
+var range1 = 0,
+    range2 = 0,
+    range3 = 0,
+    range4 = 0;
 
 var tuto = 0;
 
@@ -39,14 +39,6 @@ $("#valider").on("touchstart",function(){
     if (test(range1,range2,range3,range4)){
     	stopchrono(); // Arrête chrono
         // Save time user in DB
-        $.ajax({
-            type: "POST",
-            url: "../login.php",
-            data: { 'min': $("#min").val(), 'sec': $("#sec").val() },
-            success: function(data) {
-                console.log("Temps: "+$("#min").val()+" minutes et "+$("#sec").val()+" secondes"  );
-            }
-        });
         win();
     } else {
         lose();

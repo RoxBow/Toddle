@@ -90,7 +90,7 @@ switch (levelUser) {
 
 // Couleurs de l'appli
 var pinkToddle = "#F38F9A";
-var bleuToddle = "#355E7E"; 
+var bleuToddle = "#355E7E";
 var beigeToddle = "#F8B195";
 
 // Check orientation tablet

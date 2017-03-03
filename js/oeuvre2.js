@@ -1,4 +1,4 @@
-var canvas, context; 
+var canvas, context;
 var nbLignes = 1;
 var resultat = 27;
 
@@ -31,7 +31,7 @@ function init() {
 }
 
 //nombre de lignes
-$("#valider").on("click",function(){
+$("#valider").on("touchstart",function(){
     var lines=$("#nbLignes").text();
     if (lines==resultat){
         win();
@@ -62,7 +62,7 @@ $("#moins").on("touchstart",function(){
     }
 });
 
-$(".continuer").on("click",function(){
+$(".continuer").on("touchstart",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
@@ -74,7 +74,7 @@ $(".continuer").on("click",function(){
         document.location.replace("result.php");
     }
 });
-$(".rechercher").on("click",function(){
+$(".rechercher").on("touchstart",function(){
     $('#loose').fadeOut(500);
 });
 
@@ -88,7 +88,7 @@ function render() {
     //Angle de la pente
     vars= i*2;
 
-//Ligne gris clair
+    //Ligne gris clair
     context.beginPath();
     creationLine(10 * i, vars);
     context.closePath();
@@ -97,12 +97,11 @@ function render() {
     context.strokeStyle = '#C5BDB2';
     context.stroke();
 
-//Deuxieme ligne
-
+    //Deuxieme ligne
     context.beginPath();
-    //espacement entre les lignes    
+    //espacement entre les lignes
     creationLine2(10*i+2,vars);
-    context.closePath();  
+    context.closePath();
     
     context.lineWidth = 2;
     context.strokeStyle = '#565043';
@@ -111,9 +110,9 @@ function render() {
 //3ieme ligne
     
     context.beginPath();
-    //espacement entre les lignes    
+    //espacement entre les lignes
     creationLine2(10*i+4,vars);
-    context.closePath();  
+    context.closePath();
     
     context.lineWidth = 2;
     context.strokeStyle = '#565043';
@@ -122,9 +121,9 @@ function render() {
 //4ieme ligne
     
     context.beginPath();
-    //espacement entre les lignes    
+    //espacement entre les lignes
     creationLine2(10*i+6,vars);
-    context.closePath();  
+    context.closePath();
     
     context.lineWidth = 2;
     context.strokeStyle = '#565043';
@@ -133,7 +132,7 @@ function render() {
 //5ieme ligne
     
     context.beginPath();
-    //espacement entre les lignes    
+    //espacement entre les lignes
     creationLine2(10*i+8,vars);
     context.closePath();  
     
@@ -163,7 +162,6 @@ function creationLine(y,x) {
 
 function creationLine2(y,x) {
     var variations = x;
-    var x;
     y = y + 75;
 
     context.moveTo(20, y-20);

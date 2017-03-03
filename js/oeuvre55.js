@@ -45,28 +45,22 @@ function init() {
     ctx2 = canvas2.getContext("2d");
 
     var rouge = document.getElementById("rouge");
-    var rougeh;
-    hobjects(rouge,rougeh,57,52);
+    hobjects(rouge,57,52);
 
     var cligne = document.getElementById("cligne");
-    var cligneh;
-    hobjects(cligne,cligneh,57,77);
+    hobjects(cligne,57,77);
 
     var ctriangle = document.getElementById("ctriangle");
-    var ctriangleh;
-    hobjects(ctriangle,ctriangleh,75,77);
+    hobjects(ctriangle,75,77);
 
     var dligne = document.getElementById("dligne");
-    var dligneh;
-    hobjects(dligne,dligneh,75,52);
+    hobjects(dligne,75,52);
 
     var dtriangle = document.getElementById("dtriangle");
-    var dtriangleh;
-    hobjects(dtriangle,dtriangleh,66,77);
+    hobjects(dtriangle,66,77);
 
     var noir = document.getElementById("noir");
-    var noirh;
-    hobjects(noir,noirh,66,52);
+    hobjects(noir,66,52);
 }
 
 function drawTriangle(){
@@ -146,8 +140,8 @@ $("#valider").on("touchstart", function(){
     }
 });
 
-function hobjects(iden,hamm,haut,gauche){
-    hamm = new Hammer(iden);
+function hobjects(iden,haut,gauche){
+    var hamm = new Hammer(iden);
     hamm.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
     hamm.on('pan', function(e) {
@@ -169,8 +163,7 @@ function test(identifiant,x,y,posTop,posLeft){
         case rouge:
             if ((x>=787 && x<871)&&(y>=270 && y<310)) {
                 rougecache.innerHTML=identifiant.innerHTML;
-                $("#rougecache").css('visibility','visible');
-                $("#rougecache").parent().css('backgroundColor',pinkToddle);
+                $("#rougecache").css('visibility','visible').parent().css('backgroundColor',pinkToddle);
                 identifiant.style.display="none";
                 couleurDeLigne="red";
                 dl++;
@@ -179,8 +172,7 @@ function test(identifiant,x,y,posTop,posLeft){
             }else{
                 if ((x>=806 && x<867)&&(y>=220 && y<259)) {
                     noircache.innerHTML=identifiant.innerHTML;
-                    $("#noircache").css('visibility','visible');
-                    $("#noircache").parent().css('backgroundColor',pinkToddle);
+                    $("#noircache").css('visibility','visible').parent().css('backgroundColor',pinkToddle);
                     identifiant.style.display="none";
                     couleurDuTriangle="red";
                     dt++;
@@ -196,8 +188,7 @@ function test(identifiant,x,y,posTop,posLeft){
             break;
         case cligne:
             if ((x>=521 && x<751)&&(y>=271 && y<312)) {
-                $("#varcache").css('visibility','visible');
-                $("#varcache").parent().css('backgroundColor',pinkToddle);
+                $("#varcache").css('visibility','visible').parent().css('backgroundColor',pinkToddle);
                 identifiant.style.display="none";
                 dl++;
                 drawLigne();
@@ -211,8 +202,7 @@ function test(identifiant,x,y,posTop,posLeft){
             break;
         case ctriangle:
             if ((x>=759 && x<971)&&(y>=324 && y<364)) {
-                $("#ctcache").css('visibility','visible');
-                $("#ctcache").parent().css('backgroundColor',pinkToddle);
+                $("#ctcache").css('visibility','visible').parent().css('backgroundColor',pinkToddle);
                 identifiant.style.display="none";
                 dt++;
                 drawTriangle();
@@ -227,8 +217,7 @@ function test(identifiant,x,y,posTop,posLeft){
         case dligne:
             if ((x>=521 && x<710)&&(y>=377 && y<414)) {
                 dlcache.innerHTML=identifiant.innerHTML;
-                $("#dlcache").css('visibility','visible');
-                $("#dlcache").parent().css('backgroundColor',pinkToddle);
+                $("#dlcache").css('visibility','visible').parent().css('backgroundColor',pinkToddle);
                 identifiant.style.display="none";
                 dl++;
                 drawLigne();
@@ -243,8 +232,7 @@ function test(identifiant,x,y,posTop,posLeft){
         case dtriangle:
             if ((x>=521 && x<743)&&(y>=324 && y<364)) {
                 dtcache.innerHTML=identifiant.innerHTML;
-                $("#dtcache").css('visibility','visible');
-                $("#dtcache").parent().css('backgroundColor',pinkToddle);
+                $("#dtcache").css('visibility','visible').parent().css('backgroundColor',pinkToddle);;
                 identifiant.style.display="none";
                 dt++;
                 drawTriangle();
@@ -259,8 +247,7 @@ function test(identifiant,x,y,posTop,posLeft){
         case noir:
             if ((x>=806 && x<867)&&(y>=220 && y<259)) {
                 noircache.innerHTML=identifiant.innerHTML;
-                $("#noircache").css('visibility','visible');
-                $("#noircache").parent().css('backgroundColor',pinkToddle);
+                $("#noircache").css('visibility','visible').parent().css('backgroundColor',pinkToddle);
                 identifiant.style.display="none";
                 couleurDuTriangle="black";
                 dt++;
@@ -269,8 +256,7 @@ function test(identifiant,x,y,posTop,posLeft){
             } else{
                 if ((x>=787 && x<871)&&(y>=270 && y<310)) {
                     rougecache.innerHTML=identifiant.innerHTML;
-                    $("#rougecache").css('visibility','visible');
-                    $("#rougecache").parent().css('backgroundColor',pinkToddle);
+                    $("#rougecache").css('visibility','visible').parent().css('backgroundColor',pinkToddle);
                     identifiant.style.display="none";
                     couleurDeLigne="black";
                     dl++;

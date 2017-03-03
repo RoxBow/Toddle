@@ -17,8 +17,7 @@ $(document).ready(function() {
 /* ##### CHRONO  END  ##### */
 });
 
-var canvas;
-var ctx;
+var canvas, ctx;
 
 var tuto = 0;
 function touche() {
@@ -186,7 +185,6 @@ function createLine(orientationLigne, nombre, color){
     var x1,x2,y1,y2;
     if(orientationLigne === "Vertical"){
         x1 = 30;
-        
     }
     else if(orientationLigne === "Horizontal") {
         y1 = 50;
@@ -220,7 +218,7 @@ function createLine(orientationLigne, nombre, color){
                     ctx.lineWidth = 5;
                     ctx.strokeStyle = "#e4c900";
                     ctx.stroke();
-                }               
+                }
             }
             if (colorname==="red") {
                 ctx2.clearRect(0,0,canvas2.width,canvas2.height);
