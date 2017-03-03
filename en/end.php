@@ -22,9 +22,9 @@ if(!isset($_SESSION['pseudo']) ){
 <body>
     <div class="container">
         <div class="content">
-            <p>Merci d'avoir participé<br> à l'expérience <img src="../img/toddle_text.png" id="reset" alt="toddle"> !</p>
+            <p>Thank you for participating<br> in the <img src="../img/toddle_text.png" id="reset" alt="toddle"> experience !</p>
             <hr>
-            <p class="render">Remets la tablette <br> au point de départ</p>
+            <p class="render">Don’t forget to bring back the tablets at the starting point</p>
         </div>
     </div>
   

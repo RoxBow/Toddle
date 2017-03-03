@@ -78,7 +78,7 @@ if( !isset($_SESSION['pseudo']) ){
             <img src="../img/h3.png" alt="Mouvement à faire" id="handclick"/>
             <h2 class="rose six">CHALLENGE <span id="levelUser"></span>/5</h2>
             <div class="consignes">
-                <p>Fill up the following code in order to recreate Newman's piece of art.Drag and drop the tags in the right place to write code</p>
+                <p>Fill up the following code in order to recreate Newman's piece of art.<br>Drag and drop the tags in the right place to write code</p>
                 <br>
             </div>
             <div class="leftBloc">

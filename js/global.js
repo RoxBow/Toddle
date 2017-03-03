@@ -210,3 +210,15 @@ function doOnOrientationChange() {
         break;
     }
 }
+
+// ### Disparition vues 2 et 3 crédits lorsque l'on est en anglais ###
+
+if (dir=="en") {
+    $("#second-view , #third-view , #chevronDroite , .ariane").css("display","none");
+    $("#sous-texte").css("width","100%");
+    $(".justify").text("Toddle has been created and developped by AVEC agency, as part of a student project during the Bachelor's Degree CRWW (2016-2017) at IUT of Champs-sur Marne, in partnership with the Centre Georges Pompidou in Paris.");
+    $("#oeuvres").text("The following works have been used in Toddle:");
+    $(".develop").text("Developer");
+    $("#caro").text("Project Manager");
+    $("#antoine").text("Graphic Designer");
+}

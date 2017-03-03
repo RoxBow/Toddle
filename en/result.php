@@ -199,11 +199,14 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
         $_SESSION['min'] = $row['min'];
         $_SESSION['sec'] = $row['sec'];
         $_SESSION['nbrUser'] = $nbr;
-        if($nbr == 1){
-            $place = "er";
-        }
-        else {
-            $place = "ème";
+        if($nbr == 1 && $nbr == 21 && $nbr == 31 && $nbr == 41 && $nbr == 51 && $nbr == 61 && $nbr == 71 && $nbr == 81 && $nbr == 91 && $nbr == 101  ){
+            $place = "st";
+        } elseif ($nbr == 2 && $nbr == 22 && $nbr == 32 && $nbr == 42 && $nbr == 52 && $nbr == 62 && $nbr == 72 && $nbr == 82 && $nbr == 92 && $nbr == 102 ) {
+          $place = "nd";
+        } elseif ($nbr == 3 && $nbr == 23 && $nbr == 33 && $nbr == 43 && $nbr == 53 && $nbr == 63 && $nbr == 73 && $nbr == 83 && $nbr == 93 && $nbr == 103 ) {
+          $place = "rd";
+        } else {
+            $place = "th";
         }
     }
 }
@@ -231,7 +234,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
             <img src="../img/toddle_text.png" alt="toddle" class="toddle_text">
         </header>
         <div class="content">
-            <p class="announce">Félicitations <span><?php echo $_SESSION['pseudo']; ?></span> !<br>Tu as résolu tous les défis<br>en <span id="minResult"><?php echo $_SESSION['min'];?> minutes</span>  et <span id="secResult"><?php echo $_SESSION['sec'];?> secondes</span>.<br>Tu termines à la <span><?php echo $_SESSION['nbrUser'].$place; ?></span> position </p>
+            <p class="announce">Congratulations <span><?php echo $_SESSION['pseudo']; ?></span> !<br>You’ve solved all the puzzles <br>within <span id="minResult"><?php echo $_SESSION['min'];?> minutes</span> and <span id="secResult"><?php echo $_SESSION['sec'];?> seconds</span>.<br>You’ve reached the <span><?php echo $_SESSION['nbrUser'].$place; ?></span> place ! </p>
             <section>
                 <ul class="listeUser">
                     <?php
@@ -251,9 +254,9 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
                     ?>
                 </ul>
                 <div class="giftBlock">
-                    <p>Un cadeau sera remis au plus rapide d'entre vous</p>
+                    <p>A prize will be given to the fastest ones amongst all the participants</p>
                     <hr class="trait">
-                    <p>Si tu veux être informé(e) du classement, pense à nous laisser ton adresse e-mail !</p>
+                    <p>If you ever wish to be kept updated of the ranking, consider giving us your email address.</p>
                     <button>
                         <span class="fa-stack">
                             <i class="fa fa-circle fa-stack-2x"></i>
@@ -278,7 +281,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
           <div class="popup">
            <i class="fa fa-times close" aria-hidden="true"></i>
             <form action="" method="post" id="formMail">
-                <label for="pseudo">Pense à nous laisser ton adresse mail</label>
+                <label for="pseudo">Think about let your email address</label>
                 <input type="text" name="mail" id="mail" placeholder="jean@gmail.com" autocomplete="off" />
                 <p class="error"> <?php echo $error; ?></p>
                 <button name="submit" class="sendMail">
