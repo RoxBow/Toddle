@@ -57,7 +57,7 @@ switch (levelUser) {
         if(dir == "fr"){
             $("#indiceMap",".popup2").html("La troisième &#156;uvre devant laquelle tu dois te rendre est un tableau en noir et blanc d’un artiste allemand du XXe siècle, composé de formes géométriques simples. Pour trouver ce tableau tu dois trouver celui qui est composé d’une forme en relief.");
         } else {
-            $("#indiceMap",".popup2").html("The third piece of work where you must be going is a black and white painting of a deutch artist of the 20th century, precursor of geometrical abstraction. The structure of this painting is very precise since the thin lines composing it are arranged mathematically on the canvas.");
+            $("#indiceMap",".popup2").html("The third piece of work where you must be going is a black and white painting of a German artist of the 20th century. The painting is composed of simple eometric shapes but it has the peculiarity of having one in high-relief, you can not miss it.");
         }
         
         $("#nbrDefi",".defi").text(levelUser);
@@ -79,9 +79,9 @@ switch (levelUser) {
         currentRoom = roomJericho;
         $("#levelUser").text(levelUser);
         if(dir == "fr"){
-            $("#indiceMap",".popup2").html("La dernière &#156;uvre devant laquelle tu dois te rendre est un tableau d’un peintre américain du XXe siècle. Le cadre de ce tableau à la particularité de ne pas avoir une forme rectangulaire classique, et n’est composé que de 2 couleurs.");
+            $("#indiceMap",".popup2").html("La dernière &#156;uvre devant laquelle tu dois te rendre est un tableau d’un peintre américain du XXe siècle. Le cadre de ce tableau a la particularité de ne pas avoir une forme rectangulaire classique, et n’est composé que de 2 couleurs.");
         } else {
-            $("#indiceMap",".popup2").html("Finally we are here: the last artwork you must find is a double painting by a French artist of the 20th century, precursor of geometrical abstraction. This painting approaches color gradiant using simple geometric shapes.");
+            $("#indiceMap",".popup2").html("Finally we are here: the last artwork you must find is a painting by an American artist of the 20th century. This painting’s frame has the peculiarity of not having a rectangular shape, contrary to what’s commonly seen and used for paintings and it is only composed of two colours.");
         }
         
         $("#nbrDefi",".defi").text(levelUser);
@@ -193,7 +193,7 @@ function changeRond(){
 
 // ### Autorisation scroll ###
 $(document).on('touchmove', function(e){ e.preventDefault(); }); // Disable scroll
-$('.third-view').on('touchmove', function (e) { e.stopPropagation(); }); // Allow scroll
+$('.texte').on('touchmove', function (e) { e.stopPropagation(); }); // Allow scroll
 $('.codeBleu').on('touchmove', function (e) { e.stopPropagation(); }); // Allow scroll
 
 // Detect orientation tablet

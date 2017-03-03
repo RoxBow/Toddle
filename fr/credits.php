@@ -36,7 +36,7 @@
                         <br><br>
                         Conformément à la loi "informatique et libertés" du 6 janvier 1978 modifiée, vous disposez d'un droit d'accès et de rectification aux informations qui vous concernent.
                         <br><br>
-                        Vous pouvez accéder au informations vous concernant en vous adressant à l'agence AVEC.
+                        Vous pouvez accéder aux informations vous concernant en vous adressant à l'agence AVEC.
                         <br><br>
                         Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant.
                         <br><br>

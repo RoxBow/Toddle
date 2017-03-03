@@ -54,7 +54,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-                Si tu a réussi les précédents défi, c'est que tu en est capable !
+                Si tu as réussi les précédents défis, c'est que tu en es capable !
             </p>
             <br>
             <br>

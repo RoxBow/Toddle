@@ -42,7 +42,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-              Tu as recréé l'oeuvre de Piet Mondrian en associant toutes les bonnes <span class="bold">valeurs</span> aux <span class="bold">arguments de la fonction</span> <span class="rose">DessinerUneLigne();</span>.
+              Tu as recrée l'oeuvre de Piet Mondrian en associant toutes les bonnes <span class="bold">valeurs</span> aux <span class="bold">arguments de la fonction </span> <span class="rose">DessinerUneLigne();</span>.
               <br>
             </p>
 

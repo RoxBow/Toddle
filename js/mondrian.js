@@ -32,8 +32,15 @@ document.body.addEventListener('touchstart', touche, false);
 var nbrLine, colorLine, x1, x2, y1, y2;
 
 // Variables pour les fonctions
-var couleurs=["Yellow","Red","Blue"];
-var orientationLigne=["Horizontal","Vertical"];
+
+  var orientationLigne=["Horizontal","Vertical"];
+
+
+if(dir == "fr"){
+  var couleurs = ["Jaune","Rouge","Bleu"];
+} else {
+  var couleurs = ["Yellow","Red","Blue"];
+}
 
 var couselect = 0,
     oriselect = 0,
@@ -76,8 +83,7 @@ $("#poubelle").on("touchstart", function(){
     ctx6.clearRect(0,0,canvas6.width,canvas6.height);
     if(dir == "fr"){
         $(".code").text("CréerCadre();");
-    }
-    else {
+    } else {
         $(".code").text("CreateBorder();");
     }
 });
@@ -175,12 +181,24 @@ $(".bva").on("touchstart", function() {
 });
 
 function createLine(orientationLigne, nombre, color){
-    if (color=="Yellow") {
+    if (color == "Jaune" || color == "Yellow") {
+      if(dir == "fr"){
+        colorname="jaune";
+      } else {
         colorname="yellow";
-    } else if (color=="Blue") {
+      }
+    } else if (color == "Bleu" || color == "Blue") {
+      if(dir == "fr"){
+        colorname="bleu";
+      } else {
         colorname="blue";
-    } else if (color=="Red") {
+      }
+    } else if (color == "rouge" || color == "Red") {
+      if(dir == "fr"){
+        colorname="rouge";
+      } else {
         colorname="red";
+      }
     }
     var x1,x2,y1,y2;
     if(orientationLigne === "Vertical"){
@@ -195,7 +213,7 @@ function createLine(orientationLigne, nombre, color){
 
     
     if(orientationLigne === "Vertical"){
-            if (colorname==="yellow") {
+            if (colorname==="yellow" || colorname === "jaune") {
                 ctx.clearRect(0,0,canvas.width,canvas.height);
                 ctx.beginPath();
                 for (var i=0; i<nombre; i++){
@@ -220,7 +238,7 @@ function createLine(orientationLigne, nombre, color){
                     ctx.stroke();
                 }
             }
-            if (colorname==="red") {
+            if (colorname==="red" || colorname === "rouge") {
                 ctx2.clearRect(0,0,canvas2.width,canvas2.height);
                 ctx2.beginPath();
                 for (var i=0; i<nombre; i++){
@@ -245,7 +263,7 @@ function createLine(orientationLigne, nombre, color){
                     ctx2.stroke();
                 }
             }
-            if (colorname==="blue") {
+            if (colorname==="blue" || colorname === "bleu") {
                 ctx3.clearRect(0,0,canvas3.width,canvas3.height);
                 ctx3.beginPath();
                 for (var i=0; i<nombre; i++){
@@ -273,7 +291,7 @@ function createLine(orientationLigne, nombre, color){
         }
 
         if(orientationLigne === "Horizontal"){
-            if (colorname==="yellow") {
+            if (colorname==="yellow" || colorname === "jaune") {
                 ctx4.clearRect(0,0,canvas4.width,canvas4.height);
                 ctx4.beginPath();
                 for (var i=0; i<nombre; i++){
@@ -298,7 +316,7 @@ function createLine(orientationLigne, nombre, color){
                     ctx4.stroke();
                 }
             }
-            if (colorname==="red") {
+            if (colorname === "red" || colorname === "rouge") {
                 ctx5.clearRect(0,0,canvas5.width,canvas5.height);
                 ctx5.beginPath();
                 for (var i=0; i<nombre; i++){
@@ -323,7 +341,7 @@ function createLine(orientationLigne, nombre, color){
                     ctx5.stroke();
                 }
             }
-            if (colorname==="blue") {
+            if (colorname==="blue" || colorname === "bleu") {
                 ctx6.clearRect(0,0,canvas6.width,canvas6.height);
                 ctx6.beginPath();
                 for (var i=0; i<nombre; i++){

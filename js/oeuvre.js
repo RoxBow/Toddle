@@ -3,6 +3,14 @@ var jeu = document.getElementById("jeu");
 var leftBloc = document.getElementById("leftBloc");
 var indicecontent = document.getElementById("indicecontent");
 
+//Initialisations
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+//Affectations
+canvas.width = leftBloc.offsetWidth;
+canvas.height = leftBloc.offsetHeight;
+
 /*Le canvas de travail*/
 ctx.fillStyle="#FFF";
 ctx.fillRect(0,0,canvas.width,canvas.height);

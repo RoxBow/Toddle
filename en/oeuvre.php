@@ -124,7 +124,6 @@ if( !isset($_SESSION['pseudo']) ){
     <script src="../js/global.js"></script>
     <script src="../js/resemble.js"></script>
     <script src="../js/chrono.js"></script>
-    <script src="../js/canvas.js"></script>
     <script src="../js/oeuvre.js"></script>
     <script>
     </script>
