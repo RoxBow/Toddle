@@ -27,39 +27,39 @@ if( !isset($_SESSION['pseudo']) ){
         <div id="win">
             <div class="content-win">
             <p class="title">
-              FÉLICITATIONS !
+              WELL DONE
             </p>
             <hr>
             <p class="text-win">
-              Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+              Great <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-                Tu as réussi le dernier défi !
+                You’ve succeeded in solving the last challenge.
             </p>
             <br>
             <p>
-                Tu as compris <span class="bold">les bases de la programmation informatique</span> !
+                You have understood <span class="bold">les programming bases</span> !
             </p>
             <p>
-                As-tu été assez rapide pour gagner une récompense ?<br><br>Découvre-le tout de suite !
+                Have you been fast enough to win a reward ?<br><br>Discover it now!
             </p>
-            <button class="continuer">RÉSULTAT</button>
+            <button class="continuer">RESULT</button>
             </div>
         </div>
         <div id="loose">
             <div class="content-loose">
             <p class="title">
-              RECOMMENCE !
+              TRY AGAIN !
             </p>
             <hr>
             <p class="text-loose">
-              Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+              Sorry <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-                Regarde attentivement l'oeuvre et ton code pour atteindre ton objectif !
+                 Take another look at the artwork and look at your code !
             </p>
             <br>
-            <button class="rechercher">Retour</button>
+            <button class="rechercher">Try again</button>
             </div>
         </div>
         <header>
@@ -71,14 +71,14 @@ if( !isset($_SESSION['pseudo']) ){
                     <input type="text" name="minute" id="min">min
                     <input type="text" name="seconde" id="sec">s
                 </form>
-                <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
+                <p class="defi">Challenge <span id="nbrDefi"></span>/5</p>
            </div>
         </header>
         <section class="bleu">
             <img src="../img/h3.png" alt="Mouvement à faire" id="handclick"/>
-            <h2 class="rose six">DÉFI <span id="levelUser"></span>/5</h2>
+            <h2 class="rose six">CHALLENGE <span id="levelUser"></span>/5</h2>
             <div class="consignes">
-                <p>Complète le code suivant pour recréer l'oeuvre de Newman. Glisse les étiquettes au bon endroit pour écrire ton code.</p>
+                <p>Fill up the following code in order to recreate Newman's piece of art.Drag and drop the tags in the right place to write code</p>
                 <br>
             </div>
             <div class="leftBloc">
@@ -89,21 +89,21 @@ if( !isset($_SESSION['pseudo']) ){
             </div>
             <div class="rightBloc">
                 <div class="code bleu">
-                    <p>var couleurTriangle = <span class="cadre"><span id="noircache">noir</span></span>;</p>
+                    <p>var&nbsp;&nbsp;&nbsp;Trianglecolor&nbsp;&nbsp;= <span class="cadre"><span id="noircache">noir</span></span>;</p>
                     <br>
-                    <p><span class="cadre"><span id="varcache">var couleurLigne</span></span> = <span class="cadre"><span id="rougecache">rouge</span></span>;</p>
+                    <p><span class="cadre"><span id="varcache">var&nbsp;&nbsp;&nbsp;&nbsp;Linecolor&nbsp;&nbsp;</span></span> = <span class="cadre"><span id="rougecache">rouge</span></span>;</p>
                     <br>
-                    <p><span class="cadre"><span id="dtcache">dessinerTriangle</span></span>(<span class="cadre"><span id="ctcache">couleurTriangle</span></span>);</p>
+                    <p><span class="cadre"><span id="dtcache">&nbsp;dessinerTriangle</span></span>(<span class="cadre"><span id="ctcache">couleurTriangle</span></span>);</p>
                     <br>
                     <p><span class="cadre"><span id="dlcache">dessinerLigne</span></span>(couleurLigne);</p>
                 </div>
                 <div class="etiquettes">
-                    <div class="etiq" id="rouge">rouge</div>
-                    <div class="etiq" id="cligne"> var couleurLigne</div>
-                    <div class="etiq" id="ctriangle">couleurTriangle</div>
-                    <div class="etiq" id="dligne">dessinerLigne</div>
-                    <div class="etiq" id="dtriangle">dessinerTriangle</div>
-                    <div class="etiq" id="noir">noir</div>
+                    <div class="etiq" id="rouge">red</div>
+                    <div class="etiq" id="cligne"> var  Linecolor </div>
+                    <div class="etiq" id="ctriangle">TriangleColor</div>
+                    <div class="etiq" id="dligne">drawLigne</div>
+                    <div class="etiq" id="dtriangle">drawTriangle</div>
+                    <div class="etiq" id="noir">black</div>
                 </div>
 
                 <div class="bouton" id="valider">

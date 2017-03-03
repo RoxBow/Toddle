@@ -37,30 +37,30 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <section class="congratulate">
             <p class="title">
-              FÉLICITATIONS !
+              WELL DONE !
             </p>
             <hr>
             <br>
             <p>
-              Tu as retrouvé la dernière oeuvre du parcours !<br> "<i>Jericho</i>" (1968 - 1969), réalisée par Barnett Newman.
+              You found the last piece of art !<br> "<i>Jericho</i>" (1968 - 1969), by Barnett Newman.
             </p>
             <br>
             <p class="bold">
-                Voici ta dernière épreuve:
+                Here is your last challenge:
             </p>
             <br>
             <p>
-                Grâce à tout ce que tu viens d'apprendre, recrée l'oeuvre de<br> Newman avec le code !
+                Thanks to everything you have just learnt, reproduce the work<br>of Newman using the code!
             </p>
             <br>
             <p>
-                Si tu a réussi les précédents défi, c'est que tu en est capable !
+                If you have succeeded until now, it is gonna be ok !
             </p>
             <br>
             <br>
             <br>
             <p class="text-go rose">
-              PRÊT &Agrave; RELEVER LE DÉFI ? <br>
+              READY TO MEET THE CHALLENGE ? <br>
             </p>
             <br>
             <button class="go" id="oeuvretrouve5go">GO</button>
