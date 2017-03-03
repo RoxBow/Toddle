@@ -19,8 +19,8 @@
                     <br>
                     <br>
                     <br>
-                    <p id="lol">
-                        <p id="oeuvres">&#140;uvres ayant été utilisées dans l’application Toddle:</p>
+                    <p>
+                        &#140;uvres ayant été utilisées dans l’application Toddle:
                         <br> - Yves Klein - <i>IKB3 monochrome bleu</i>(1960) 
                         <br> - Franck Stella - <i>Mas o menos</i>(1964) 
                         <br> - Friedrich Vordemberge - <i>Composition n°24</i>  (1926)

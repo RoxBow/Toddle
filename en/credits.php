@@ -20,7 +20,7 @@
                     <br>
                     <br>
                     <p>
-                        &#140;uvres ayant été utilisées dans l’application Toddle:
+                        <span id="oeuvres">&#140;uvres ayant été utilisées dans l’application Toddle:</span>
                         <br> - Yves Klein - <i>IKB3 monochrome bleu (1960)</i> 
                         <br> - Franck Stella - <i>Mas o menos (1964)</i> 
                         <br> - Friedrich Vordemberge - <i>Composition n°24</i>  (1926)
@@ -117,19 +117,19 @@
                 <img src="../img/logo_gris_avec.png" class="logo">
                 <div>
                     <p class="bold antoine">ANTOINE LAURENS</p>
-                    <p class="rose fct">Concepteur<br>Graphiste</p>
+                    <p id="antoine" class="rose fct">Concepteur<br>Graphiste</p>
                 </div>
                 <div>
                     <p class="bold">VINCENT DEPLAIS</p>
-                    <p class="rose fct">Développeur</p>
+                    <p class="rose fct develop">Développeur</p>
                 </div>
                 <div>
                     <p class="bold">ELMAR TAVARES</p>
-                    <p class="rose fct">Développeur</p>
+                    <p class="rose fct develop">Développeur</p>
                 </div>
                 <div>
                     <p class="bold">CAROLINE TALIBON</p>
-                    <p class="rose fct">Chef de projet</p>
+                    <p id="caro" class="rose fct">Chef de projet</p>
                 </div>
                 <br>
             </div>

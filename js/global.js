@@ -220,5 +220,5 @@ if (dir=="en") {
     $("#oeuvres").text("The following works have been used in Toddle:");
     $(".develop").text("Developer");
     $("#caro").text("Project Manager");
-    $("#antoine").text("Graphic Designer");
+    $("#antoine").html("Graphic<br>Designer");
 }
