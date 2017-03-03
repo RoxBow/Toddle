@@ -35,7 +35,7 @@ if(!isset($_SESSION['pseudo']) ){
                 <label> ●</label>
             </div>
             <div class="analyse">
-                <p>EN COURS D'ANALYSE</p>
+                <p>ANALYSING</p>
             </div>
         </div>
        <header>
@@ -47,7 +47,7 @@ if(!isset($_SESSION['pseudo']) ){
                     <input type="text" name="minute" id="min" readonly>min
                     <input type="text" name="seconde" id="sec" readonly>s
                 </form>
-                <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
+                <p class="defi">Challenge <span id="nbrDefi"></span>/5</p>
             </div>
         </header>
         <div class="content">
@@ -56,7 +56,7 @@ if(!isset($_SESSION['pseudo']) ){
                 <form>
                     <div class="container_input">
                         <input type="file" id="picture" name="picture" value="TROUVÉ ?" accept="image/*" capture="camera" onchange="getFile()">
-                        <label for="picture">TROUVÉ ?</label>
+                        <label for="picture">FOUND ?</label>
                     </div>
                 </form>
                 <button id="indice" type="button" class="help_map">
@@ -76,8 +76,8 @@ if(!isset($_SESSION['pseudo']) ){
           <div class="popup2">
             <i class="fa fa-times close" aria-hidden="true" id="close"></i>
             <div>
-                <h3 class="sous-titre2">INDICE</h3>
-                <span id="indiceMap">La première oeuvre devant laquelle tu dois te rendre, est une oeuvre monochrome d'un artiste français du XXe siècle. Il est connu pour son travail autour d'une couleur particulière.</span>
+                <h3 class="sous-titre2">CLUE</h3>
+                <span id="indiceMap"></span>
             </div>
           </div>
         </div>

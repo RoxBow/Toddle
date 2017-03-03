@@ -78,7 +78,7 @@ if( !isset($_SESSION['pseudo']) ){
             <img src="../img/h3.png" alt="Mouvement à faire" id="handclick"/>
             <h2 class="rose six">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
-                <p>Complète le code suivant pour recréer l'oeuvre de Blabla. Glisse les étiquettes au bon endroit pour écrire ton code.</p>
+                <p>Complète le code suivant pour recréer l'oeuvre de Newman. Glisse les étiquettes au bon endroit pour écrire ton code.</p>
                 <br>
             </div>
             <div class="leftBloc">
@@ -101,17 +101,16 @@ if( !isset($_SESSION['pseudo']) ){
                     <div class="etiq" id="rouge">rouge</div>
                     <div class="etiq" id="cligne"> var couleurLigne</div>
                     <div class="etiq" id="ctriangle">couleurTriangle</div>
-                    <div class="etiq" id="beige">beige</div>
                     <div class="etiq" id="dligne">dessinerLigne</div>
                     <div class="etiq" id="dtriangle">dessinerTriangle</div>
-
-                    <div class="etiq" id="drond">dessinerRond</div>
                     <div class="etiq" id="noir">noir</div>
                 </div>
 
                 <div class="bouton" id="valider">
                     <i class="fa fa-check fa-2x" aria-hidden="true"></i>
                 </div>
+
+                <div class="bouton" id="undo"><i class="fa fa-undo fa-2x" aria-hidden="true"></i></div>
             </div>
         </section>
         <?php

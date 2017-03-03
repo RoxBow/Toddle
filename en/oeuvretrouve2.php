@@ -37,29 +37,30 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <section class="congratulate">
             <p class="title">
-              FÉLICITATIONS !
+              WELL DONE !
             </p>
             <hr>
             <p>
-              Tu as trouvé l'&#156;uvre indiquée ! Il s'agit de&nbsp;&quot;<i>Mas o Menos</i>" (1964)<br> de Frank Stella.
+              You’ve found the right artwork ! 
+              Frank Stella’s &quot;<i>Mas o Menos</i>" (1964)<br>.
             </p>
             <br>
             <p>
-              D&eacute;couvrons ensemble <span class="bold rose">les paramètres</span>.
+              Let’s learn together what<span class="bold rose">parameters</span> are.
             </p>
             <br>
             <p>
-                <span class="bold">Les paramètres</span> sont des indications sur l'action que nous voulons effectuer.
+                <span class="bold">The parameters</span> are indications of the action we want to perform.
             </p>
             <br>
             <p>
-                <span class="bold">Exemple:</span> Je veux dessiner trois ronds.<br> Nous allons dessiner un rond trois fois ! <span class="bold">En algorithmique</span> on écrira :
+                <span class="bold">Example:</span> I want to draw three circles.<br> We’re going to draw a circle three times through ! <span class="bold">In algorithmic</span> it will be written as:
             <br>
-            <span class="fonction bold">DessinerUnRond</span><span class="parentheses bold">(<span class="rose">3</span>);</span>
+            <span class="fonction bold">DrawACircle</span><span class="parentheses bold">(<span class="rose">3</span>);</span>
             </p>
             <br>
             <p class="text-go rose">
-              PRÊT À RELEVER LE DÉFI ? <br>
+              READY TO MEET THE CHALLENGE ? <br>
             </p>
             <br>
             <button class="go" id="oeuvretrouve2go">GO</button>

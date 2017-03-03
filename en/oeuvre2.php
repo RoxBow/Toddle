@@ -27,43 +27,43 @@ if( !isset($_SESSION['pseudo']) ){
         <div id="win">
           <div class="content-win">
             <p class="title">
-              FÉLICITATIONS !
+              WELL DONE !
             </p>
             <hr>
             <p class="text-win">
-              Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+              Great <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-              Tu as réussi le second défi !
-            </p>
-            <br>
-            <p>
-              Récapitulons, ce que tu viens de mettre en application: <br>
+              You’ve succeeded in solving the second challenge.
             </p>
             <br>
             <p>
-              Tu as recomposé l'oeuvre de Frank stella en utilisant "<span class="rose">27</span>" <span class="bold">en paramètre de la fonction</span> <span class="rose">DessinerLignes()</span>.
+              Let’s sum up what you learnt<br>
+            </p>
+            <br>
+            <p>
+              You have rebuilt Frank Stella’s work using "<span class="rose">27</span>" as a <span class="bold">parameter</span> of <span class="rose">theDrawLines()</span> function.
               <br>
             </p>
             
-            <button class="continuer">DÉFI SUIVANT</button>
+            <button class="continuer">NEXT</button>
           </div>
       </div>
       <div id="loose">
           <div class="content-loose">
             <p class="title">
-              RECOMMENCE !
+              OOPS !
             </p>
             <hr>
             <br>
             <p class="text-loose">
-              Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+              Sorry <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-                Regarde bien l'oeuvre et recommence !
+                Take another look at the artwork.
             </p>
             <br>
-            <button class="rechercher">Retour</button>
+            <button class="rechercher">Try again</button>
           </div>
       </div>
        <header>
@@ -75,13 +75,15 @@ if( !isset($_SESSION['pseudo']) ){
                     <input type="text" name="minute" id="min">min
                     <input type="text" name="seconde" id="sec">s
                 </form>
-                <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
+                <p class="defi">Challenge <span id="nbrDefi"></span>/5</p>
            </div>
         </header>
         <section>
             <h2 class="rose">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
-                <p>À l'aide de <span class="bold">la fonction</span> <span class="rose">DessinerLignes()</span>, ajoute ou supprime des lignes afin de recréer l'oeuvre.</p>
+                <p>
+                    Using <span class="rose">DrawLines() </span><span class="bold">function</span>, add or delete some lines to recreate the artwork you have found.
+                </p>
                 <br>
             </div>
             <canvas id="mycanvas"></canvas>
@@ -93,7 +95,7 @@ if( !isset($_SESSION['pseudo']) ){
             </div>
 
             <div class="result">
-                <p class="bleu">DessinerLignes(<span id="nbLignes" class="rose"></span>)</p>
+                <p class="bleu">DrawLines(<span id="nbLignes" class="rose"></span>)</p>
                 <div class="buttonV" id="valider">
                     <i class="fa fa-check fa-2x" aria-hidden="true"></i>
                 </div>

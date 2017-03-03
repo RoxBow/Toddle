@@ -29,17 +29,17 @@ if( !isset($_SESSION['pseudo']) ){
             </div>
         </header>
         <div class="entete">
-            <p>Bienvenue <span><?php echo $_SESSION['pseudo']; ?></span> !</p>
-            <p>Découvre le code informatique avec Toddle au <br>Centre Georges Pompidou, en résolvant nos 5 défis.</p>
+            <p>Welcome <span><?php echo $_SESSION['pseudo']; ?></span> !</p>
+            <p>Discover computer programming with Toddle within the Centre Georges Pompidou by solving the 5 given challenges.</p>
         </div>
         <section class="lessons">
             <div class="lesson up">
                 <div class="content">
                     <p class="number">1</p>
                     <hr>
-                    <p>Aide-toi du plan de l’étage mis à ta disposition et pars à la recherche du tableau demandé !</p>
+                    <p>Use the floor map entrusted to you by the app and start looking for the requested artwork !</p>
                     <img src="../img/tuto1.gif" alt="map" class="map">
-                    <p>La salle où tu dois te rendre clignotera sur le plan !</p>
+                    <p>The room where you must go will be blinking on the map !</p>
                     <button class="understood">OK</button>
                 </div>
             </div>
@@ -48,11 +48,11 @@ if( !isset($_SESSION['pseudo']) ){
                 <div class="content">
                     <p class="number">2</p>
                     <hr>
-                    <p>Tu penses avoir trouvé l’&#156;uvre grâce aux indices et au plan ? Clique sur le bouton "trouvé" et prends-la en photo !</p>
+                    <p>If you think you have found the artwork thanks to the clues and the map floor, click on the “Found” button and take a picture of the artwork !</p>
                     <div class="group_gif">
-                        <img src="../img/tuto2_1.gif" alt="trouvé"><img src="../img/tuto2_2.gif" alt="photo">
+                        <img src="../img/tuto_f_en.gif" alt="trouvé"><img src="../img/tuto2_2.gif" alt="photo">
                     </div>
-                    <p>Nous te dirons alors si tu es au bon endroit !</p>
+                    <p>We will let you know if you’re in the right place.</p>
                     <button class="understood">OK</button>
                 </div>
             </div>
@@ -68,21 +68,21 @@ if( !isset($_SESSION['pseudo']) ){
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-question fa-stack-1x fa-inverse" aria-hidden="true"></i>
                             </span>
-                            <p>Aide toi des indices</p>
+                            <p>Use the clues</p>
                         </li>
                        <li>
                             <img src="../img/retour.png" alt="fleche">
-                            <p>Annule tes erreurs</p>
+                            <p>Cancel your errors</p>
                         </li>
                         <li>
                             <img src="../img/poubelleBlue.png" alt="poubelle">
-                            <p>Repars de zéro si tu es perdu</p>
+                            <p>Reset from zero if it's a mess</p>
                         </li>
                         
                         
                         <li>
                             <img src="../img/valide.png" alt="coche">
-                            <p>Valide si tu penses avoir trouvé</p>
+                            <p>Valid if you have found</p>
                         </li>
                     </ul>
                     <button class="understood">OK</button>
@@ -95,11 +95,11 @@ if( !isset($_SESSION['pseudo']) ){
                     <hr>
                     <div class="blocL4">
                         <span class="containerImg"><img src="../img/chrono.png" alt="chrono"></span>
-                        <p>Un chronomètre débutera dès le début de l'aventure !</p>
+                        <p>A timer will start at the beginning of the adventure !</p>
                     </div>
                     <div class="blocL4">
                         <span class="containerImg"><img src="../img/gift.png" alt="cadeau"></span>
-                        <p>Les trois plus rapides d'entre vous auront le droit à une surprise !</p>
+                        <p>The three fastest amongst all the participants will be receiving a special gift !</p>
                     </div>
                     <button class="understood go">GO</button>
                 </div>

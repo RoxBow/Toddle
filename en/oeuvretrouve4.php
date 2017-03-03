@@ -37,25 +37,25 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <section class="congratulate2">
             <p class="title">
-              FÉLICITATIONS !
+              WEEL DONE !
             </p>
             <hr>
             <p>
-              Tu as retrouvé "<i>New York City</i>" (1942) de Piet Mondrian !
+              You have found the right artwork: "<i>New York City</i>" (1942) by Piet Mondrian !
             </p>
             <br>
             <p>
-              Tu vas utiliser tout ce que tu as vu auparavant pour le prochain defi:<br><br>
+              All the things you have learnt so far in the previous challenges will be needed in the next one:<br><br>
             </p>
             <p>
-                - <span class="bold">Les fonctions</span>: <span class="rose">DessinerUneLigne();</span><br>
-                - <span class="bold">Les paramètres</span>: DessinerUneLigne(<span class="rose">5</span>);<br>
-                - <span class="bold">Les variables</span>: <span class="rose">var</span> nbLignes = <span class="rose">5</span> 
+                - <span class="bold">Functions</span>: <span class="rose">DrawALine();</span><br>
+                - <span class="bold">Parameters</span>: DrawALine(<span class="rose">5</span>);<br>
+                - <span class="bold">Variables</span>: <span class="rose">var</span> nbLines = <span class="rose">5</span> 
             </p>
             <br>
             <br>
             <p class="text-go rose">
-              PRÊT À RELEVER LE DÉFI ? <br>
+              READY TO MEET THE CHALLENGE ? <br>
             </p>
             <br>
             <button class="go" id="oeuvretrouve4go">GO</button>

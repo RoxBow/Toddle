@@ -38,29 +38,30 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <section class="congratulate">
             <p class="title">
-              FÉLICITATIONS !
+              WELL DONE !
             </p>
             <hr>
             <p>
-              Tu as trouvé l'&#156;uvre indiquée !<br> Il s'agit d'&nbsp;&quot;<i>IKB3 Monochrome Bleu</i>" (1960) d'Yves Klein.
+                You’ve found the right work !
+                <br>You had to found&nbsp;&quot;<i>IKB3 Monochrome Bleu</i>" (1960) by Yves Klein.
             </p>
             <br>
             <p>
-              Tu vas découvrir un principipe fondamental de la programmation:&nbsp;<span class="rose">l'algorithmique</span>. 
+                You will now be discovering a fundamental programming principle:&nbsp;<span class="rose">algorithms</span>. 
             </p>
             <br>
             <p>
-                <span class="bold">L'algorithmique</span> permet d'effectuer des actions. Elles s'écrivent d'une manière particulière.
+                <span class="bold">Algorithms</span> can be used to perform actions. These actions are written in a special way.
             </p>
             <br>
             <p>
-                <span class="bold">Exemple:</span> Je veux dessiner un rond. En algorithmique on écrira:
+                <span class="bold">Example:</span> I want to draw a circle. In algorithmic, it will be written as:
             <br>
-            <span class="fonction bold">DessinerUnRond</span><span class="parentheses bold">();</span>
+            <span class="fonction bold">DrawACircle</span><span class="parentheses bold">();</span>
             </p>
             <br>
             <p class="text-go rose">
-              PRÊT À RELEVER LE DÉFI ? <br>
+              READY TO MEET THE CHALLENGE ? <br>
             </p>
             <br>
             <button class="go" id="oeuvretrouve1go">GO</button>

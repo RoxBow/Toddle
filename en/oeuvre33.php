@@ -28,42 +28,43 @@ if( !isset($_SESSION['pseudo']) ){
         <div id="win">
           <div class="content-win">
             <p class="title">
-              FÉLICITATIONS !
+              GOOD JOB !
             </p>
             <hr>
             <p class="text-win">
-              Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+              Great <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-              Tu as réussi le troisième défi !
-            </p>
-            <br>
-            <p>
-              Récapitulons, ce que tu viens de mettre en application: <br>
+              You’ve succeeded in solving the third challenge.
             </p>
             <br>
             <p>
-              Tu as recréé l'oeuvre de Piet Mondrian en associant toutes les bonnes <span class="bold">valeurs</span> aux <span class="bold">arguments de la fonction</span> <span class="rose">DessinerUneLigne();</span>.
+              Let’s sum up what you learnt<br>
+            </p>
+            <br>
+            <p>
+              You have recreated Klein Blue Piet Mondrian’s artwork by coupling the right<span class="bold"> values </span>with the <span class="bold">arguments</span> of the <span class="bold">functions</span>.
               <br>
             </p>
-
-            <button class="continuer">DÉFI SUIVANT</button>
+            
+            <button class="continuer">NEXT</button>
           </div>
       </div>
       <div id="loose">
           <div class="content-loose">
             <p class="title">
-              RECOMMENCE !
+              OOPS !
             </p>
             <hr>
+            <br>
             <p class="text-loose">
-              Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+              Sorry <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-                Regarde bien l'oeuvre et recommence !
+                Take another look at the artwork.
             </p>
             <br>
-            <button class="rechercher">Retour</button>
+            <button class="rechercher">Try again</button>
           </div>
       </div>
     <header>
@@ -75,14 +76,14 @@ if( !isset($_SESSION['pseudo']) ){
                 <input type="text" name="minute" id="min">min
                 <input type="text" name="seconde" id="sec">s
             </form>
-            <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
+            <p class="defi">Challenge <span id="nbrDefi"></span>/5</p>
        </div>
     </header>
     <section>
         <img src="../img/h3.png" alt="Mouvement à faire" id="handclick">
-        <h2 class="rose">DÉFI <span id="levelUser"></span>/5</h2>
+        <h2 class="rose">CHALLENGE <span id="levelUser"></span>/5</h2>
         <div class="consignes">
-            <p>À l'aide des curseurs et de l'aperçu sur le code, modifie <span class="bold">la valeur</span> des angles dans les fonctions, afin de recréer l'oeuvre.</p>
+            <p>Using the cursors and the code preview, change <span class="bold">the value </span> of the angles in the functions in order to recreate the artwork.</p>
             <br>
         </div>
         <div class="leftBloc">
@@ -102,17 +103,17 @@ if( !isset($_SESSION['pseudo']) ){
                 <p class="alinea1"><span class="rose">var</span> angle3 = <span class="noir valDeg" id="val3">0</span>;</p>
                 <br>
                 <div class="alinea2">
-                  <p>DessinerPointBlanc();</p>
-                  <p>DessinerLigne(noir);</p>
-                  <p>DessinerRectangle(gris);</p>
-                  <p>DessinerRectangle(noir);</p>
+                  <p>DrawCircle(white);</p>
+                  <p>DrawLine(black);</p>
+                  <p>DrawRectangle(grey);</p>
+                  <p>DrawRectangle(black);</p>
                 </div>
 
                 <br>
                 <div class="alinea3">
-                  <p>TournerRectangle(gris,<span class="noir">angle</span>);</p>
-                  <p>TournerRectangle(noir,<span class="noir">angle2</span>);</p>
-                  <p>TournerLigne(<span class="noir">angle3</span>);</p>
+                  <p>TurnRectangle(gris,<span class="noir">angle</span>);</p>
+                  <p>TurnRectangle(noir,<span class="noir">angle2</span>);</p>
+                  <p>TurnLigne(<span class="noir">angle3</span>);</p>
                 </div>
             </div>
             <div class="columns">

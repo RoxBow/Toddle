@@ -37,34 +37,33 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <section class="congratulate">
             <p class="title">
-              FÉLICITATIONS !
+              WEEL DONE !
             </p>
             <hr>
             <p>
-              Tu as trouvé "<i>Composition n° 24</i>" (1926) de Friedrich Vordemberge-Gildewart !
+              You found "<i>Composition n° 24</i>" (1926) by Friedrich Vordemberge-Gildewart.
             </p>
             <br>
             <p>
-              D&eacute;couvrons ensemble <span class="bold rose">les variables</span>.
+              Let’s learn together what <span class="bold rose">variables</span> are.
             </p>
             <p>
-                Ce sont des "<span class="bold">boites</span>" où l'on peut mettre <span class="bold">des données</span> (chiffres, mots...).
+                To put it simple, these are some kind of <span class="bold">"boxes"</span> where you can put <span class="bold">data</span> (numbers, words ...) necessary.
             </p>
             <br>
             <p>
-                <span class="bold">Exemple:</span> Je veux dessiner 6 chats. Je mets le chiffre "6" dans une boite se nommant "nbChats" comme suivant:
+                <span class="bold">Example:</span> I need to draw 6 cats. I put the number "6" in a box named  "nbCats" just as follows:
                 <br>
                 <br>
-                <span class="rose">var</span> nbChats = 6;
+                <span class="rose">var</span> nbCats = 6;
                 <br>
                 <br>
-                <!-- "<span class="rose">var</span>" nous disant que ce qui suit est une boite. -->
-                Dessinons ces chats: <span class="bold">DessinerUnChat(<span class="rose">nbChats</span>);</span>
+                Let’s draw some cats: <span class="bold">DrawACat(<span class="rose">nbCats</span>);</span>
                 <br>
             </p>
             <br>
             <p class="text-go rose">
-              PR&Ecirc;T À RELEVER LE DÉFI ? <br>
+              READY TO MEET THE CHALLENGE ? <br>
             </p>
             <br>
             <button class="go" id="oeuvretrouve3go">GO</button>

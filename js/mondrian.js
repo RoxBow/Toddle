@@ -33,8 +33,8 @@ document.body.addEventListener('touchstart', touche, false);
 var nbrLine, colorLine, x1, x2, y1, y2;
 
 // Variables pour les fonctions
-var couleurs=["Jaune","Rouge","Bleu"];
-var orientationLigne=["Horizontales","Verticales"];
+var couleurs=["Yellow","Red","Bleu"];
+var orientationLigne=["Horizontal","Vertical"];
 
 var couselect = 0,
     oriselect = 0,
@@ -75,7 +75,12 @@ $("#poubelle").on("touchstart", function(){
     ctx4.clearRect(0,0,canvas4.width,canvas4.height);
     ctx5.clearRect(0,0,canvas5.width,canvas5.height);
     ctx6.clearRect(0,0,canvas6.width,canvas6.height);
-    $(".code").text("CréerCadre();");
+    if(dir == "fr"){
+        $(".code").text("CréerCadre();");
+    }
+    else {
+        $(".code").text("CreateBorder();");
+    }
 });
 
 $("#couplus").on("touchstart",function(){
@@ -171,19 +176,19 @@ $(".bva").on("touchstart", function() {
 });
 
 function createLine(orientationLigne, nombre, color){
-    if (color=="Jaune") {
+    if (color=="Yellow") {
         colorname="yellow";
     } else if (color=="Bleu") {
         colorname="blue";
-    } else if (color=="Rouge") {
+    } else if (color=="Red") {
         colorname="red";
     }
     var x1,x2,y1,y2;
-    if(orientationLigne === "Verticales"){
+    if(orientationLigne === "Vertical"){
         x1 = 30;
         
     }
-    else if(orientationLigne === "Horizontales") {
+    else if(orientationLigne === "Horizontal") {
         y1 = 50;
         x1 = 0;
         x2 = canvas.width;
@@ -191,7 +196,7 @@ function createLine(orientationLigne, nombre, color){
     }
 
     
-    if(orientationLigne === "Verticales"){
+    if(orientationLigne === "Vertical"){
             if (colorname==="yellow") {
                 ctx.clearRect(0,0,canvas.width,canvas.height);
                 ctx.beginPath();
@@ -269,7 +274,7 @@ function createLine(orientationLigne, nombre, color){
             }
         }
 
-        if(orientationLigne === "Horizontales"){
+        if(orientationLigne === "Horizontal"){
             if (colorname==="yellow") {
                 ctx4.clearRect(0,0,canvas4.width,canvas4.height);
                 ctx4.beginPath();
@@ -347,8 +352,14 @@ function createLine(orientationLigne, nombre, color){
             }
         }
     if (nombre != 0) {
-        $(".code").append("<p>EffacerLigne("+color+","+orientationLigne+")</p>");
-        $(".code").append("<p>DessinerUneLigne("+color+","+orientationLigne+","+nombre+")</p>");
+        if(dir == "fr"){
+            $(".code").append("<p>EffacerLigne("+color+","+orientationLigne+")</p>");
+            $(".code").append("<p>DessinerLigne("+color+","+orientationLigne+","+nombre+")</p>");
+        }
+        else {
+            $(".code").append("<p>ClearLine("+color+","+orientationLigne+")</p>");
+            $(".code").append("<p>DrawLine("+color+","+orientationLigne+","+nombre+")</p>");
+        }
     }
 }
 

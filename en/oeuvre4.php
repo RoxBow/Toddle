@@ -27,39 +27,40 @@ if( !isset($_SESSION['pseudo']) ){
         <div id="win">
             <div class="content-win">
             <p class="title">
-              FÉLICITATIONS !
+              GOOD JOB !
             </p>
             <hr>
             <p class="text-win">
               Bravo <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-              Tu as réussi le quatrième défi !
+              You’ve solved the fourth puzzle !
             </p>
             <br>
             <p>
-              Tu as donc compris <span class="bold">les variables</span> et comment les utiliser comme <span class="bold">paramètres</span> d'une <span class="bold">fonction</span>. <br><br>
-              Découvre ton dernier défi !
+              You have now understood what <span class="bold">variables</span> are and how to use them in <span class="bold">parameters</span> within a <span class="bold">function</span>. <br><br>
+              Let’s move on to your last puzzle !
             </p>
-            <button class="continuer">DÉFI SUIVANT</button>
+            <button class="continuer">NEXT</button>
             </div>
         </div>
         <div id="loose">
-            <div class="content-loose">
+          <div class="content-loose">
             <p class="title">
-              RECOMMENCE !
+              OOPS !
             </p>
             <hr>
+            <br>
             <p class="text-loose">
-              Dommage <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
+              Sorry <span class="name"><?php echo $_SESSION['pseudo'];?></span>&nbsp;!
             </p>
             <p>
-                Regarde attentivement l'oeuvre et recommence !
+                Take another look at the artwork.
             </p>
             <br>
-            <button class="rechercher">Retour</button>
-            </div>
-        </div>
+            <button class="rechercher">Try again</button>
+          </div>
+      </div>
         <header>
             <img src="../img/toddle_form.png" alt="toddle" class="toddle_form" id="skip">
             <img src="../img/toddle_text.png" alt="toddle" class="toddle_text">
@@ -69,14 +70,14 @@ if( !isset($_SESSION['pseudo']) ){
                     <input type="text" name="minute" id="min">min
                     <input type="text" name="seconde" id="sec">s
                 </form>
-                <p class="defi">Défi <span id="nbrDefi"></span>/5</p>
+                <p class="defi">Challenge <span id="nbrDefi"></span>/5</p>
            </div>
         </header>
         <section class="bleu">
             <img src="../img/h3.png" alt="Mouvement à faire" id="handclick"/>
-            <h2 class="rose six">DÉFI <span id="levelUser"></span>/5</h2>
+            <h2 class="rose six">CHALLENGE <span id="levelUser"></span>/5</h2>
             <div class="consignes">
-                <p>Recréé l'oeuvre de Piet Mondrian en donnant des arguments à la fonction suivante: DessinerUneLigne(couleur, sens, nombre).</p>
+                <p>Reproduce the work of Piet Mondrian by giving arguments to the following function: DrawLine (color, orientation, number)</p>
                 <br>
             </div>
             <div class="leftBloc">
@@ -91,11 +92,11 @@ if( !isset($_SESSION['pseudo']) ){
             </div>
             <div class="rightBloc">
                 <div class="code bleu">
-                    <p>CréerCadre();</p>
+                    <p>Createborder();</p>
                 </div>
                 <div class="selection">
                     <div class="couleur">
-                        <p>Couleur</p>
+                        <p>Color</p>
                         <div class="choix">
                         <span class="selecteurs" id="coumoins">
                         &lsaquo;
@@ -105,7 +106,7 @@ if( !isset($_SESSION['pseudo']) ){
                         </div>
                     </div>
                     <div class="orientationLigne">
-                        <p>Orientation</p>
+                        <p>Direction</p>
                         <div class="choix">
                         <span class="selecteurs" id="orimoins">
                         &lsaquo;
