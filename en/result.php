@@ -120,18 +120,18 @@ if(isset($_POST['mail'])){
                       </tr>
                       <tr>
                         <td style="vertical-align:top;">
-                          <p class="thanks" style="font-size:1.1em;margin:3% 0;color:#355E7E;">MERCI D\'AVOIR JOUÉ AVEC TODDLE !</p>
+                          <p class="thanks" style="font-size:1.1em;margin:3% 0;color:#355E7E;">THANK YOU FOR TAKING PART IN THE TODDLE EXPERIENCE !</p>
                         </td>
                       </tr>
                       <tr>
                         <td style="vertical-align:top;">
-                          <p style="margin:0;font-size:1.1em;color:#355E7E;">SI TU SOUHAITES VÉRIFIER TA POSITION,<br>
-                            LE CLASSEMENT EST DISPONIBLE EN CLIQUANT ICI :</p>
+                          <p style="margin:0;font-size:1.1em;color:#355E7E;">YOU CAN CHECK THE RANK YOU ARE AT<br>
+                             BY CLICKING ON THE FOLLOWING LINK BELOW :</p>
                         </td>
                       </tr>
                       <tr>
                         <td style="vertical-align:top;">
-                          <button style="background:#355E7E;padding:2% 3%;font-size:1.4em;font-weight:600;border:none;border-radius:30px;margin:3% 0 0 0;cursor:pointer;"><a href="http://vincentdeplais.fr/toddle/classement/" style="text-decoration:none;color:#fff;">VOIR LE CLASSEMENT</a></button>
+                          <button style="background:#355E7E;padding:2% 3%;font-size:1.4em;font-weight:600;border:none;border-radius:30px;margin:3% 0 0 0;cursor:pointer;"><a href="http://vincentdeplais.fr/toddle/classement/" style="text-decoration:none;color:#fff;">CHECK THE RANKING</a></button>
                         </td>
                       </tr>
                     </tbody>
@@ -140,18 +140,18 @@ if(isset($_POST['mail'])){
                     <tbody>
                       <tr>
                         <td style="vertical-align:top;">
-                          <p style="margin:0;margin:1% 0;font-weight:600;color:#355E7E;">Nous te tiendrons informé si tu termines sur le podium, afin que tu viennes chercher ta récompense.</p>
+                          <p style="margin:0;margin:1% 0;font-weight:600;color:#355E7E;">YOU WILL BE KEPT INFORMED IF YOU FINISH AT THE TOP OF THE RANKING AND IF YOU HAVE WON A REWARD.</p>
                         </td>
                       </tr>
                       <tr>
                         <td style="vertical-align:top;">
-                          <p style="margin:0;margin:1% 0;font-weight:600;color:#355E7E;">Nous espérons que l\'expérience t\'a plû et que tu voudras en savoir plus à propos de la programmation et du développement web.</p>
+                          <p style="margin:0;margin:1% 0;font-weight:600;color:#355E7E;">WE HOPE YOU ENJOYED IT AND THAT IT WILL MAKE YOU WANT TO LEARN MORE ABOUT COMPUTER PROGRAMMING AND WEB DEVELOPMENT.</p>
                         </td>
                       </tr>
                       <tr>
                         <td style="vertical-align:top;">
-                          <p style="margin:0;margin:1% 0;font-weight:600;color:#355E7E;">À très vite,<br>
-                            L\'équipe de développement</p>
+                          <p style="margin:0;margin:1% 0;font-weight:600;color:#355E7E;">SEE YOU SOON,<br>
+                            TODDLE\'S DEVELOPMENT TEAM</p>
                         </td>
                       </tr>
                     </tbody>
