@@ -59,7 +59,7 @@ if( !isset($_SESSION['pseudo']) ){
                  Take another look at the artwork and look at your code !
             </p>
             <br>
-            <button class="rechercher">Try again</button>
+            <button class="rechercher">Retry</button>
             </div>
         </div>
         <header>
