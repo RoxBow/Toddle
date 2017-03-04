@@ -9,8 +9,8 @@ dir = dir.slice(-2);
 // CONST our arts
 const roomKlein = "allee-nord";
 const roomMasomenos = "allee-nord";
-const roomCompo = "room40";
-const roomJericho = "room17";
+const roomCompo = "room17";
+const roomJericho = "room40";
 const roomMondrian = "allee-sud";
 
 // Variable cache level
@@ -55,7 +55,7 @@ switch (levelUser) {
         currentRoom = roomCompo;
         $("#levelUser").text(levelUser);
         if(dir == "fr"){
-            $("#indiceMap",".popup2").html("La troisième &#156;uvre devant laquelle tu dois te rendre est un tableau en noir et blanc d’un artiste allemand du XXe siècle, composé de formes géométriques simples. Pour trouver ce tableau tu dois trouver celui qui est composé d’une forme en relief.");
+            $("#indiceMap",".popup2").html("La troisième &#156;uvre devant laquelle tu dois te rendre est un tableau en noir et blanc d’un artiste allemand du XXe siècle, composé de formes géométriques simples. Il a la particularité d’avoir une forme en relief.");
         } else {
             $("#indiceMap",".popup2").html("The third piece of work where you must be going is a black and white painting of a German artist of the 20th century. The painting is composed of simple eometric shapes but it has the peculiarity of having one in high-relief, you can not miss it.");
         }
@@ -214,6 +214,7 @@ function doOnOrientationChange() {
 // ### Disparition vues 2 et 3 crédits lorsque l'on est en anglais ###
 
 if (dir=="en") {
+    $(".title").text("CREDIT");
     $("#second-view , #third-view , #chevronDroite , .ariane").css("display","none");
     $("#sous-texte").css("width","100%");
     $(".justify").text("Toddle has been created and developped by AVEC agency, as part of a student project during the Bachelor's Degree CRWW (2016-2017) at IUT of Champs-sur Marne, in partnership with the Centre Georges Pompidou in Paris.");

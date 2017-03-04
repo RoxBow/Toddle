@@ -21,10 +21,10 @@
                     <br>
                     <p>
                         &#140;uvres ayant été utilisées dans l’application Toddle:
-                        <br> - Yves Klein - <i>IKB3 monochrome bleu (1960)</i> 
-                        <br> - Franck Stella - <i>Mas o menos (1964)</i> 
+                        <br> - Yves Klein - <i>IKB3 monochrome bleu</i>(1960) 
+                        <br> - Franck Stella - <i>Mas o menos</i>(1964) 
                         <br> - Friedrich Vordemberge - <i>Composition n°24</i>  (1926)
-                        <br> - Piet Mondrian - <i>New York City (1942)</i> 
+                        <br> - Piet Mondrian - <i>New York City</i>(1942) 
                         <br> - Barnett Newman - <i>Jericho</i> (1968 - 1969)
                     </p>
                 </div>
@@ -65,24 +65,7 @@
                         Toute participation incomplète ou réalisée sous une autre forme que celle prévue dans le présent règlement sera considérée comme nulle. La même sanction s’appliquera en cas de multi-participation.
                         <br><br><br><br>
 
-
-                        <span class="rose">3. GAINS :</span>
-                        <br><br>
-                        Les récompenses mises en jeu sont réparties comme suit :
-                        <br><br>
-                        - 1ere place : Peluche Rhinocéros Rouge (19,90€ TTC)
-                        <br>
-                        - 2eme place : Porte-Monnaie (14,50€ TTC)
-                        <br>
-                        - 3eme place : Trousse Centre Georges Pompidou (5,25€ TTC)
-                        <br><br>
-                        La valeur des prix est déterminée au moment de la rédaction du présent règlement et ne saurait faire l’objet d’une contestation quant à leur évaluation.
-                        <br><br>
-                        Tous frais exposés postérieurement au concours notamment pour l’entretien, la réparation, ou l’usage de ces lots sont entièrement à la charge du gagnant.
-                        <br><br><br><br>
-
-
-                        <span class="rose">4. DÉSIGNATION DES GAGNANTS :</span>
+                        <span class="rose">3. DÉSIGNATION DES GAGNANTS :</span>
                         <br><br>
                         Les 3 premiers du classement seront désignés et auront le droit de repartir avec leur récompenses.
                         <br><br>
@@ -90,24 +73,24 @@
                         <br><br><br><br>
 
 
-                        <span class="rose">5. ANNONCE DES GAGNANTS :</span>
+                        <span class="rose">4. ANNONCE DES GAGNANTS :</span>
                         <br><br>
-                        Tous les jours à 14h et 19h, les gagnants seront informés par e-mail à l’adresse indiquée par l’utilisateur à la fin de l’expérience.
+                        Tous les jours à 14h et 17h30, les gagnants seront informés par e-mail à l’adresse indiquée par l’utilisateur à la fin de l’expérience.
                         <br><br><br><br>
 
 
 
-                        <span class="rose">6. REMISE DE LOT :</span>
+                        <span class="rose">5. REMISE DE LOT :</span>
                         <br><br>
                         Les récompenses seront remises sur place.
                         Le lot restera à disposition du participant jusqu’au 5 mars au soir. Après ce délai, il ne pourra plus y prétendre.
                         <br><br>
                         Les gagnants s’engagent à accepter les lots tels que proposés sans possibilité d’échange notamment contre des espèces, d’autres biens ou services.
                         <br><br>
-                        L’agence AVEC se réserve le droit en cas de survenance d’un événement indépendant de sa volonté, notamment lié à ses fournisseurs ou à des circonstances imprévisibles, de remplacer les lots annoncés par des lots de valeur équivalente. Le gagnant sera tenu informé des éventuels changements.
+                        L’agence AVEC se réserve le droit en cas de survenance d’un événement indépendant de sa volonté, notamment lié à ses fournisseurs ou à des circonstances imprévisibles, de remplacer les lots annoncés par d'autres lots. Le gagnant sera tenu informé des éventuels changements.
                         <br><br>
                         Le présent règlement est régi par la loi française.
-                    </p>    
+                    </p>
                 </div>
             </div>
         </div>
@@ -117,19 +100,19 @@
                 <img src="../img/logo_gris_avec.png" class="logo">
                 <div>
                     <p class="bold antoine">ANTOINE LAURENS</p>
-                    <p class="rose fct">Concepteur<br>Graphiste</p>
+                    <p id="antoine" class="rose fct">Concepteur<br>Graphiste</p>
                 </div>
                 <div>
                     <p class="bold">VINCENT DEPLAIS</p>
-                    <p class="rose fct">Développeur</p>
+                    <p class="rose fct develop">Développeur</p>
                 </div>
                 <div>
                     <p class="bold">ELMAR TAVARES</p>
-                    <p class="rose fct">Développeur</p>
+                    <p class="rose fct develop">Développeur</p>
                 </div>
                 <div>
                     <p class="bold">CAROLINE TALIBON</p>
-                    <p class="rose fct">Chef de projet</p>
+                    <p id="caro" class="rose fct">Chef de projet</p>
                 </div>
                 <br>
             </div>
