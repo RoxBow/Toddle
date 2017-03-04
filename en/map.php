@@ -35,7 +35,7 @@ if(!isset($_SESSION['pseudo']) ){
                 <label> ●</label>
             </div>
             <div class="analyse">
-                <p>ANALYSING</p>
+                <p>ANALYZING</p>
             </div>
         </div>
        <header>

@@ -54,7 +54,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-                If you have succeeded until now, it is gonna be ok !
+                If you have succeeded until now, it is going to be fine !
             </p>
             <br>
             <br>

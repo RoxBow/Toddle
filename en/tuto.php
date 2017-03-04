@@ -82,7 +82,7 @@ if( !isset($_SESSION['pseudo']) ){
                         
                         <li>
                             <img src="../img/valide.png" alt="coche">
-                            <p>Valid if you have found</p>
+                            <p>Confirm if you have found</p>
                         </li>
                     </ul>
                     <button class="understood">OK</button>

@@ -36,10 +36,8 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <p>
               You’ve succeeded in solving the first challenge.
-            </p>
-            <br>
-            <p>
-              Let’s sum up what you learnt<br>
+
+              Let’s sum up what you have learnt<br>
             </p>
             <br>
             <p>

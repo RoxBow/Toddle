@@ -39,7 +39,7 @@ if( !isset($_SESSION['pseudo']) ){
             </p>
             <br>
             <p>
-              Let’s sum up what you learnt<br>
+              Let’s sum up what you've learnt<br>
             </p>
             <br>
             <p>
