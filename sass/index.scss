@@ -14,7 +14,7 @@ body {
         margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
         transform: translateY(-52%); /* tiré de la moitié de sa propre hauteur */
         .blocBtn {
-            margin: 2% auto;
+            //margin: 2% auto;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,9 +29,9 @@ body {
             }
             button {
                 @extend .btn_toddle;
-                font-size: 3vw;
-                margin: 0 4%;
-                padding: 5.2%;
+                font-size: 25px;
+                margin: 20px;
+                padding: 25px;
                 background: none;
                 border: 2px solid $blueToddle;
                 color: $blueToddle;

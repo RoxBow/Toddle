@@ -9,7 +9,7 @@ dir = dir.slice(-2);
 // CONST our arts
 const roomKlein = "allee-nord";
 const roomMasomenos = "allee-nord";
-const roomCompo = "room17";
+const roomCompo = "room17_1_";
 const roomJericho = "room40";
 const roomMondrian = "allee-sud";
 
@@ -214,7 +214,7 @@ function doOnOrientationChange() {
 // ### Disparition vues 2 et 3 crédits lorsque l'on est en anglais ###
 
 if (dir=="en") {
-    $(".title").text("CREDIT");
+    $(".title",".credits").text("CREDIT");
     $("#second-view , #third-view , #chevronDroite , .ariane").css("display","none");
     $("#sous-texte").css("width","100%");
     $(".justify").text("Toddle has been created and developped by AVEC agency, as part of a student project during the Bachelor's Degree CRWW (2016-2017) at IUT of Champs-sur Marne, in partnership with the Centre Georges Pompidou in Paris.");

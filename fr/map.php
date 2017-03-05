@@ -39,7 +39,7 @@ if(!isset($_SESSION['pseudo']) ){
             </div>
         </div>
        <header>
-            <img src="../img/toddle_form.png" alt="toddle" class="toddle_form">
+            <img src="../img/toddle_form.png" alt="toddle" class="toddle_form" id="cheat">
             <img src="../img/toddle_text.png" alt="toddle" class="toddle_text">
             <div class="blockRight">
                 <p class="name"><?php echo $_SESSION['pseudo']." - "; ?></p>

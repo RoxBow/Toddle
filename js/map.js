@@ -19,6 +19,17 @@ $(document).ready(function() {
         $("#sec").val(localSec);
         $("#min").val(localMin);
     }
+  
+    var countTouch = 0;
+  
+    $("#cheat", ".container").on("touchstart", function() {
+      countTouch++;
+      if(countTouch == 5){
+        var levelCheat = prompt("Entre directement le niveau", "");
+        localStorage.setItem("levelUser", levelCheat);
+        location.reload();
+      }
+    });
     
     $(document).on( "touchstart", function(e) {
         // POPUP HELP

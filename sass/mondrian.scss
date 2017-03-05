@@ -63,7 +63,7 @@
               color: $blueToddle;
               font-weight: bold;
             }
-        } 
+        }
     }
     #loose{
         position: absolute;
@@ -165,7 +165,6 @@
             overflow-y: auto;
             &::-webkit-scrollbar-track
             {
-                
                 border-radius: 10px;
                 background-color: $pinkToddle;
             }
@@ -212,7 +211,7 @@
             }
         } // .code
         .selection{
-            margin-top: 60px;
+            margin-top: 50px;
             display: flex;
             .choix{
                 text-align: center;
@@ -224,7 +223,7 @@
                 }
             }
             .selecteurs{
-                font-size: 30px;
+                font-size: 50px;
                 margin:  3px;
                 &:active{
                     color:$beigeToddle;
@@ -232,19 +231,19 @@
             }
             .valeurs{
                 color: $pinkToddle;
-                font-size: 27px;
-                margin-top: 3px;
+                font-size: 25px;
+                margin-top: 15px;
                 display: inline-block;
             }
             .couleur{
                 text-align: center;
                 width: 27%;
             }
-            .orientationLigne{
+            .orientationLigne {
                 @extend .couleur;
                 width: 45%;
-                margin-left: 5%;
-                margin-right: 5%;
+                margin-left: 4%;
+                margin-right: 4%;
               
             }
             .nombre{

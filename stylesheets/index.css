@@ -460,7 +460,6 @@ body {
 }
 /* line 16, ../sass/index.scss */
 .container .content .blocBtn {
-  margin: 2% auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -477,9 +476,9 @@ body {
 }
 /* line 30, ../sass/index.scss */
 .container .content .blocBtn button {
-  font-size: 3vw;
-  margin: 0 4%;
-  padding: 5.2%;
+  font-size: 25px;
+  margin: 20px;
+  padding: 25px;
   background: none;
   border: 2px solid #355E7E;
   color: #355E7E;
