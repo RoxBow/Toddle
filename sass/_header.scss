@@ -1,0 +1,49 @@
+@import "variables";
+
+header {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  margin: 0 0 15px 0;
+  height: 15%;
+  .toddle_form {
+    height: 80%;
+    float: left;
+  }
+  .toddle_text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    margin: auto;
+    height: 50%;
+  }
+  .blockRight {
+    position: absolute;
+    right: 5%;
+    top: 3vw;
+    width: auto;
+    font-size: 2.5vw;
+    font-weight: normal;
+    color: $pinkToddle;
+    .name, .chrono {
+      display: inline-block;
+    }
+    .chrono {
+      input {
+        font-size: 2.5vw;
+        color: $pinkToddle;
+        display: inline-block;
+        width: 6vw;
+        text-align: center;
+        border: none;
+        background: none;
+      }
+    }
+    .defi {
+      text-align: right;
+    }
+  } // blocRight
+
+} // header

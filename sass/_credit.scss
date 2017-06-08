@@ -1,0 +1,120 @@
+@import "variables";
+
+.credits {
+  #croix {
+    position: absolute;
+    right: 10%;
+    color: #aaa;
+    margin-top: 50px;
+  }
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin-top: 100%;
+  z-index: 5000;
+  background-color: rgba(255, 255, 255, 1);
+  .title {
+    font-size: 72px;
+    color: $pinkToddle;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  .content {
+    font-size: 20px;
+    color: $blueToddle;
+    font-weight: 600;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+    .chevron {
+      width: 40px;
+      margin-top: 22%;
+      position: absolute;
+    }
+    #chevronDroite {
+      right: 3%;
+    }
+    #chevronGauche {
+      transform: rotate(180deg);
+      left: 3%;
+      display: none;
+    }
+    .ariane {
+      text-align: center;
+      .apoint {
+        width: 20px;
+        margin: 0 10px;
+      }
+    }
+    .texte {
+      width: 100%;
+      margin-top: 20px;
+      height: 400px;
+      overflow: hidden;
+      #sous-texte {
+        display: flex;
+        height: 380px;
+        width: 300%;
+        & > * {
+          width: 100%;
+          padding: 0 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .sright {
+            padding-right: 15px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar-track {
+              border-radius: 10px;
+              background-color: $pinkToddle;
+            }
+
+            &::-webkit-scrollbar {
+              width: 7px;
+              margin-left: 5px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              border-radius: 20px;
+              background-color: $blueToddle;
+            }
+          }
+        }
+      }
+    } // .texte
+    .justify {
+      text-align: justify;
+    }
+    .bottom {
+      width: 120%;
+      margin-left: -10%;
+      .flexbottom {
+        display: flex;
+        align-items: stretch;
+        & > * {
+          width: 25%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          flex-direction: column;
+          .antoine {
+            margin-top: 17px;
+          }
+          .fct {
+            margin-top: 7px;
+          }
+        }
+        .logo {
+          align-self: flex-start;
+          width: 100px;
+        }
+      }
+    }
+  }
+
+} // credits

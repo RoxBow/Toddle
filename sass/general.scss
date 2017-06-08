@@ -1,404 +1,146 @@
-// ### Style générique ###
+// ### Style générique ### //
 
-@import "../stylesheets/reset.css"; // Import reset CSS
-@import "../stylesheets/font-awesome.min.css"; // Import icon
+/* ### COMPONENTS ### */
 
-/* ###### VARIABLES ###### */
+@import "reset"; // Import reset CSS
 
-// Colors //
-$blueToddle : #355E7E;
-$pinkToddle : #F38F9A;
-$beigeToddle : #F8B195;
+@import "variables"; // Import variable
 
-/* ###### FONTS ###### */
+@import "font-awesome"; // Import icon
+
+@import "credit"; // credit
+
+@import "header"; // header
+
+@import "button"; // button
+
+@import "overlay"; // overlay
+
+/* ### FONTS ### */
 
 // Main font
 @font-face {
-    font-family: "GothamRounded";
-    src: url(../fonts/GothamRoundedBook.ttf);
+  font-family: "GothamRounded";
+  src: url(../fonts/GothamRoundedBook.ttf);
 }
 
 @font-face {
-    font-family: "GothamRounded";
-    src: url(../fonts/GothamRoundedBold.ttf);
-    font-weight: bold;
+  font-family: "GothamRounded";
+  src: url(../fonts/GothamRoundedBold.ttf);
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: "GothamRounded";
-    src: url(../fonts/GothamRoundedMedium.ttf);
-    font-weight: 600;
+  font-family: "GothamRounded";
+  src: url(../fonts/GothamRoundedMedium.ttf);
+  font-weight: 600;
 }
 
 @font-face {
-    font-family: "GothamRounded";
-    src: url(../fonts/GothamRoundedItalic.otf);
-    font-style: italic;
+  font-family: "GothamRounded";
+  src: url(../fonts/GothamRoundedItalic.otf);
+  font-style: italic;
 }
 
 // Code Font
 @font-face {
-    font-family: "Inconsolata";
-    src: url(../fonts/Inconsolata-Regular.ttf);
+  font-family: "Inconsolata";
+  src: url(../fonts/Inconsolata-Regular.ttf);
 }
 
 @font-face {
-    font-family: "Inconsolata";
-    src: url(../fonts/Inconsolata-Bold.ttf);
-    font-weight: bold;
+  font-family: "Inconsolata";
+  src: url(../fonts/Inconsolata-Bold.ttf);
+  font-weight: bold;
 }
+
 
 html, body {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    font-family: "GothamRounded", "Verdana", "Arial", "Helvetica", sans-serif;
-    font-size: 16px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: $mainFont, "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
 }
 
-/* ###### CRÉDITS ###### */
-
-.credits{
-    #croix{
-        position: absolute;
-        right: 10%;
-        color: #aaa;
-        margin-top: 50px;
-    }
-    position: absolute;
-    display: none;
-    width: 100%;
-    height: 100%;
-    margin-top: 100%;
-    z-index: 5000;
-    background-color: rgba(255,255,255,1);
-    .title{
-        font-size: 72px;
-        color: $pinkToddle;
-        font-weight: 600;
-        width: 100%;
-        text-align: center;
-        padding-top: 50px;
-        padding-bottom: 20px;
-    }
-    .content{
-        font-size: 20px;
-        color: $blueToddle;
-        font-weight: 600;
-        width: 80%;
-        margin-left: 10%;
-        margin-top: 20px;
-        .chevron{
-            width: 40px;
-            margin-top: 22%;
-            position: absolute;
-        }
-        #chevronDroite{
-            right: 3%;
-        }
-        #chevronGauche{
-            transform: rotate(180deg);
-            left: 3%;
-            display: none;
-        }
-        .ariane{
-            text-align: center;
-            .apoint{
-                width: 20px;
-                margin: 0 10px;
-            }
-        }
-        .texte{
-            width: 100%;
-            margin-top: 20px;
-            height: 400px;
-            overflow: hidden;
-            #sous-texte{
-                display: flex;
-                height: 380px;
-                width: 300%;
-                & > *{
-                    width: 100%;
-                    padding: 0 10px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    .sright {
-                        padding-right: 15px;
-                        overflow-y: scroll;
-                        &::-webkit-scrollbar-track
-                        {
-                            
-                            border-radius: 10px;
-                            background-color: $pinkToddle;
-                        }
-
-                        &::-webkit-scrollbar
-                        {
-                            width: 7px;
-                            margin-left: 5px;
-                        }
-
-                        &::-webkit-scrollbar-thumb
-                        {
-                            border-radius: 20px;
-                            background-color: $blueToddle;
-                        }
-                    }
-                }
-            }
-        }
-        .justify{
-            text-align: justify;
-        }
-        .bottom{
-            width: 120%;
-            margin-left: -10%;
-            .flexbottom{
-                display: flex;
-                align-items: stretch;
-                & > *{
-                    width: 25%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 18px;
-                    flex-direction: column;
-                    .antoine{
-                        margin-top: 17px;
-                    }
-                    .fct{
-                        margin-top: 7px;
-                    }
-                }
-                .logo{
-                    align-self: flex-start;
-                    width: 100px;
-                }
-            }
-        }
-    }
-    
+body.lock {
+  overflow: hidden;
 }
 
 /* ###### HANDCLICK TUTO ###### */
 
-#handclick{
-    position: absolute;
-    width: 110px;
-    height: 110px;
-    z-index: 100;
+#handclick {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  z-index: 100;
+}
+
+/* ### Class colors ### */
+
+.rose {
+  color: $pinkToddle;
+}
+
+.bleu {
+  color: $blueToddle;
+}
+
+.beige {
+  color: $beigeToddle;
+}
+
+.noir {
+  color: black;
+}
+
+.medium {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+i {
+  font-style: italic;
 }
 
 .fa {
-    vertical-align: middle; // Centrage des icones par defaut
+  vertical-align: middle; // Icon center default
 }
-/* ###### Class for colors ###### */
 
-.rose{
-    color:$pinkToddle;
-}
-.bleu{
-    color:$blueToddle;
-}
-.beige{
-    color:$beigeToddle;
-}
-.noir{
-    color:black;
-}
-.six{
-    font-weight:600;
-}
-.bold{
-    font-weight: bold;
-}
-.center{
-    text-align: center;
-}
-i{
-    font-style: italic;
-}
 .container {
-    background: #fff;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  * {
+    outline: none;
+    box-sizing: border-box;
+  }
+  input {
+    font-family: $mainFont, "Arial", "Helvetica", sans-serif;
+  }
+
+  footer {
     width: 100%;
-    height: 100%;
-    position: relative;
-    * {
-        outline: none; // remove border browser
-        box-sizing: border-box;
+    text-align: right;
+    position: absolute;
+    z-index: 0;
+    bottom: 1%;
+    right: 1%;
+    img {
+      width: 5%;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1%;
     }
-    input {
-        font-family: 'GothamRounded';
-    }
-    button {
-        background: none;
-        border: none;
-        font-family: 'GothamRounded';
-        text-transform: uppercase;
-        font-weight: 600;
-    }
-    header {
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-        width: 100%;
-        margin: 0 0 15px 0;
-        height: 15%;
-        .toddle_form {
-            height: 80%;
-            float: left;
-        }
-        .toddle_text {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 25%;
-            margin: auto;
-            height: 50%;
-        }
-        .blockRight {
-            position: absolute;
-            right: 5%;
-            top: 3vw;
-            width: auto;
-            font-size: 2.5vw;
-            font-weight: normal;
-            color: $pinkToddle;
-            .name, .chrono {
-                display: inline-block;
-            }
-            .chrono {
-                input {
-                    font-size: 2.5vw;
-                    color: $pinkToddle;
-                    display: inline-block;
-                    width: 6vw;
-                    text-align: center;
-                    border: none;
-                    background: none;
-                }
-            }
-            .defi {
-                text-align: right;
-            }
-        } // .blockRight
-    } // header
-    footer {
-        width: 100%;
-        text-align: right;
-        position: absolute;
-        z-index: 0;
-        bottom: 1%;
-        right: 1%;
-        img {
-            width: 5%;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 1%;
-        }
-    }
-    .overlay {
-        display: none;
-        position: fixed;
-        z-index: 100;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0,0.6);
-        text-align: center;
-        .popup {
-            background-color: #fff;
-            border-radius: 15px;
-            position: absolute;
-            z-index: 200;
-            width: 50%;
-            height: 50%;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            color: $blueToddle;
-            font-size: 20px;
-            .sous-titre{
-                color: $pinkToddle;
-                font-size: 2.2rem;
-                font-weight: bold;
-                margin-bottom: 4%;
-                display: block;
-            }
-            .error {
-                margin: 3% auto;
-                color: red;
-                font-size: 2vw;
-            }
-        }
-        .close {
-            color: #aaa;
-            position: absolute;
-            right: 2%;
-            top: 2%;
-            font-size: 4vw;
-        }
-        // Orientation tablet mode
-        &.orientation {
-            display: block;
-            background-color: rgba(0,0,0,0.8);
-            z-index: 9998;
-            .content-orientation {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                display: inline-block;
-                right: 0;
-                left: 0;
-                margin: auto;
-                background: #fff;
-                text-align: center;
-                width: 80%;
-                height: 45%;
-                padding: 8%;
-                border-radius: 5%;
-                z-index: 9999;
-                img {
-                    width: 50%;
-                    display: inline-block;
-                    margin: auto;
-                    right: 0;
-                }
-                p {
-                    text-transform: uppercase;
-                    font-size: 5vw;
-                    color: #F38F9A;
-                    margin: 7% 0;
-                }
-            } // .content
-        }
-    } // .overlay
-}
+  }
 
-.btn_toddle {
-    background: $blueToddle;
-    padding: 20px;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    font-size: 30px;
-    margin: 0 auto;
-}
-
-.btn_help {
-    background: $pinkToddle;
-    color: #fff;
-    border: none;
-    border-radius: 35px;
-    font-size: 30px;
-    width: 70px;
-    height: 70px;
-}
+} // container

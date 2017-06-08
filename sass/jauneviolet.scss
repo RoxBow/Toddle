@@ -1,298 +1,300 @@
 @import "general";
 
-.overlay{
+.overlay {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  font-weight: 600;
+  #handclick {
+    top: 83%;
+    left: 42%;
+    z-index: 10000;
+    animation-duration: 3s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-play-state: running;
+  }
+  #win {
     position: absolute;
-    display: none;
     width: 100%;
     height: 100%;
-    z-index: 10;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.container{
-    font-weight: 600;
-    #handclick{
-      top: 83%;
-      left: 42%;
-      z-index: 10000;
-      animation-duration: 3s;
-      animation-name: slide;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease;
-      animation-play-state: running;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none;
+    .title {
+      font-weight: 600;
+      color: $pinkToddle;
+      font-size: 54px;
     }
-    #win{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        z-index: 10000;
-        display: none;
-        .title{
-          font-weight: 600;
-          color: $pinkToddle;
-          font-size: 54px;
-        }
-        .titlesuite{
-          color: $pinkToddle;
-          font-size: 42px;
-        }
-        .content-win{
-            width: 70%;
-            height: 67%;
-            margin-left: 15%;
-            margin-top: 12%;
-            padding-top: 3.5%;
-            background-color: white;
-            border-radius: 50px;
-            text-align: center;
-            color: $blueToddle;
-            font-size: 26px;
-            p{
-              width: 70%;
-              margin-left: 15%;
-            }
-            hr {
-              border: 3px solid $pinkToddle;
-              border-radius: 25px;
-              width: 70%;
-              margin: 3% auto;
-            }
-            .continuer{
-              color: #fff;
-              background-color: $blueToddle;
-              width: 35%;
-              height: 75px;
-              border-radius: 50px;
-              font-size: 30px;
-              margin: 4% 0;
-            }
-            .name{
-              color: $pinkToddle;
-            }
-            .parentheses{
-              color: $blueToddle;
-              font-weight: bold;
-            }
-        } 
+    .titlesuite {
+      color: $pinkToddle;
+      font-size: 42px;
     }
-    #loose{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        z-index: 10000;
-        display: none;
-        .title{
-          font-weight: 600;
-          color: $pinkToddle;
-          font-size: 54px;
-        }
-        .content-loose{
-            width: 70%;
-            height: 45%;
-            margin-top: 20%;
-            margin-left: 15%;
-            padding-top: 2%;
-            background-color: white;
-            border-radius: 50px;
-            text-align: center;
-            color: $blueToddle;
-            font-size: 26px;
-            p{
-              width: 75%;
-              margin-left: 12.5%;
-            }
-            hr {
-              border: 3px solid $pinkToddle;
-              border-radius: 25px;
-              width: 70%;
-              margin: 3% auto;
-            }
-            .rechercher{
-              color: #fff;
-              background-color: $blueToddle;
-              width: 35%;
-              height: 75px;
-              border-radius: 50px;
-              font-size: 35px;
-              margin-top: 0.5%;
-            }
-            .name{
-              color: $pinkToddle;
-            }
-        } 
-    }
-    h2 {
-        text-align: center;
-        font-size: 24px;
-        padding-bottom: 10px;
-    }
-    .consignes{
-        text-align: center;
-        font-size: 18px;
+    .content-win {
+      width: 70%;
+      height: 67%;
+      margin-left: 15%;
+      margin-top: 12%;
+      padding-top: 3.5%;
+      background-color: white;
+      border-radius: 50px;
+      text-align: center;
+      color: $blueToddle;
+      font-size: 26px;
+      p {
+        width: 70%;
+        margin-left: 15%;
+      }
+      hr {
+        border: 3px solid $pinkToddle;
+        border-radius: 25px;
+        width: 70%;
+        margin: 3% auto;
+      }
+      .continuer {
+        color: #fff;
+        background-color: $blueToddle;
+        width: 35%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 30px;
+        margin: 4% 0;
+      }
+      .name {
+        color: $pinkToddle;
+      }
+      .parentheses {
         color: $blueToddle;
-        width: 90%;
-        margin: 0 auto;
-        font-weight: 600;
+        font-weight: bold;
+      }
     }
-    .topBloc{
-        width: 100%;
-        position: relative;
-        .souscontainer{
-            display: flex;
-            justify-content: center;
-            .teintes{
-                p:nth-child(1){
-                    margin-top: 60px;
-                }
-                p{
-                    text-align: center;
-                    font-size: 24px;
-                }
-            }
-        }
-        .bouton2{
-            position: absolute;
-            z-index: 1100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: $pinkToddle;
-            width: 70px;
-            height: 70px;
-            border-radius: 35px;
-            bottom: 1%;
-            & > img{
-                width: 50%;
-            }
-            &:active{
-                background-color: $blueToddle;
-            }
-        }
-        #indice{
-            left: 3%;
-        }
-        #but{
-            right: 7.5%;
-        }
-        canvas {
-            background: #EFE9D3;
-            width: 60%;
-            margin-left: 2%;
-            margin-right: 2%;
-        }
-    }
-    .sousBloc{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 15px;
-        .colorsG, .colorsD {
-            display: inline-block;
-        }
-        .colors {
-            vertical-align: top;
-            width: 20px;
-            height: 20px;
-            display: inline-block;
-            margin-left: 2px;
-            margin-right: 2px;
-            margin-top: 3px;
-        }
-        .bouton2 {
-            align-self: flex-end;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: $pinkToddle;
-            width: 60px;
-            height: 60px;
-            border-radius: 30px;
-            margin-bottom: 1%;
-            & > img {
-                width: 50%;
-            }
-            &:active {
-                background-color: $blueToddle;
-            }
-        }
-        .bouton{
-            align-self: flex-end;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: $pinkToddle;
-            width: 60px;
-            height: 60px;
-            border-radius: 30px;
-            margin-bottom: 1%;
-            color: white;
-            &:active{
-                background-color: $blueToddle;
-            }
-
-        }
-        #codegauche{
-            width: 41%;
-            border: 1px solid;
-            height: 200px;
-            margin: 10px;
-            font-size: 24px;
-            #nbgauche{
-                font-size: 52px;
-            }
-            .indent1{
-                margin-left: 10px;
-            }
-            .indent2{
-                margin-left: 20px;
-            }
-        }
-        #codedroit{
-            width: 41%;
-            border: 1px solid;
-            height: 200px;
-            margin: 10px;
-            font-size: 24px;
-            #nbdroit{
-                font-size: 52px;
-            }
-            .indent1{
-                margin-left: 10px;
-            }
-            .indent2{
-                margin-left: 20px;
-            }
-        }
-    }
-}
-footer {
-    width: 100%;
-    text-align: right;
+  }
+  #loose {
     position: absolute;
-    bottom: 1%;
-    right: 1%;
-    img {
-        width: 5%;
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 1%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none;
+    .title {
+      font-weight: 600;
+      color: $pinkToddle;
+      font-size: 54px;
     }
+    .content-loose {
+      width: 70%;
+      height: 45%;
+      margin-top: 20%;
+      margin-left: 15%;
+      padding-top: 2%;
+      background-color: white;
+      border-radius: 50px;
+      text-align: center;
+      color: $blueToddle;
+      font-size: 26px;
+      p {
+        width: 75%;
+        margin-left: 12.5%;
+      }
+      hr {
+        border: 3px solid $pinkToddle;
+        border-radius: 25px;
+        width: 70%;
+        margin: 3% auto;
+      }
+      .rechercher {
+        color: #fff;
+        background-color: $blueToddle;
+        width: 35%;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 35px;
+        margin-top: 0.5%;
+      }
+      .name {
+        color: $pinkToddle;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 10px;
+  }
+  .consignes {
+    text-align: center;
+    font-size: 18px;
+    color: $blueToddle;
+    width: 90%;
+    margin: 0 auto;
+    font-weight: 600;
+  }
+  .topBloc {
+    width: 100%;
+    position: relative;
+    .souscontainer {
+      display: flex;
+      justify-content: center;
+      .teintes {
+        p:nth-child(1) {
+          margin-top: 60px;
+        }
+        p {
+          text-align: center;
+          font-size: 24px;
+        }
+      }
+    }
+    .bouton2 {
+      position: absolute;
+      z-index: 1100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $pinkToddle;
+      width: 70px;
+      height: 70px;
+      border-radius: 35px;
+      bottom: 1%;
+      & > img {
+        width: 50%;
+      }
+      &:active {
+        background-color: $blueToddle;
+      }
+    }
+    #indice {
+      left: 3%;
+    }
+    #but {
+      right: 7.5%;
+    }
+    canvas {
+      background: #EFE9D3;
+      width: 60%;
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+  }
+  .sousBloc {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    .colorsG, .colorsD {
+      display: inline-block;
+    }
+    .colors {
+      vertical-align: top;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-left: 2px;
+      margin-right: 2px;
+      margin-top: 3px;
+    }
+    .bouton2 {
+      align-self: flex-end;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $pinkToddle;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      margin-bottom: 1%;
+      & > img {
+        width: 50%;
+      }
+      &:active {
+        background-color: $blueToddle;
+      }
+    }
+    .bouton {
+      align-self: flex-end;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $pinkToddle;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      margin-bottom: 1%;
+      color: white;
+      &:active {
+        background-color: $blueToddle;
+      }
+
+    }
+    #codegauche {
+      width: 41%;
+      border: 1px solid;
+      height: 200px;
+      margin: 10px;
+      font-size: 24px;
+      #nbgauche {
+        font-size: 52px;
+      }
+      .indent1 {
+        margin-left: 10px;
+      }
+      .indent2 {
+        margin-left: 20px;
+      }
+    }
+    #codedroit {
+      width: 41%;
+      border: 1px solid;
+      height: 200px;
+      margin: 10px;
+      font-size: 24px;
+      #nbdroit {
+        font-size: 52px;
+      }
+      .indent1 {
+        margin-left: 10px;
+      }
+      .indent2 {
+        margin-left: 20px;
+      }
+    }
+  }
 }
+
+footer {
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  img {
+    width: 5%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1%;
+  }
+}
+
 @keyframes slide {
   0% {
     top: 83%;
-    left:42%;
+    left: 42%;
   }
 
   50% {
     top: 65%;
-    left:42%;
+    left: 42%;
   }
 
   0% {
     top: 83%;
-    left:42%;
+    left: 42%;
   }
 }

@@ -49,7 +49,7 @@ if(isset($_POST['pseudo'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
     <link rel="stylesheet" href="../stylesheets/name.css" media="all">
 </head>
-<body>
+<body class="lock">
     <?php
         include 'credits.php';
     ?>
@@ -62,7 +62,9 @@ if(isset($_POST['pseudo'])){
             <form action="" method="post">
                 <label for="pseudo">Choisis un pseudo</label>
                 <input required type="text" name="pseudo" id="pseudo" placeholder="Pseudo" autocomplete="off" />
-                <p class="error"> <?php echo $error; ?></p>
+                <p class="error">
+                    <?php echo $error; ?>
+                </p>
                 <button name="submit" type="submit" >
                     <span class="fa-stack ">
                         <i class="fa fa-circle fa-stack-2x"></i>
@@ -74,7 +76,7 @@ if(isset($_POST['pseudo'])){
         <?php
             include 'footer.php';
         ?>
-    </div>
+    </div> <!-- container -->
     
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/global.js"></script>

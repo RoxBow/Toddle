@@ -74,7 +74,7 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <section class="bleu">
             <img src="../img/h3.png" alt="Mouvement à faire" id="handclick"/>
-            <h2 class="rose six">DÉFI <span id="levelUser"></span>/5</h2>
+            <h2 class="rose medium">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
                 <p>Recrée l'oeuvre de Piet Mondrian en donnant des arguments à la fonction suivante: DessinerUneLigne(couleur, orientation, nombre).</p>
                 <br>

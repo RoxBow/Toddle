@@ -1,245 +1,251 @@
 // ### Style tuto.php ###
-
 @import "general";
 
 .container {
+  p {
+    text-align: center;
+  }
+  .entete {
+    color: $blueToddle;
+    margin: 0 0 2% 0;
     p {
-        text-align: center;
+      width: 73%;
+      margin: 0 auto;
+      font-size: 2.2vw;
+      &:first-child {
+        width: auto;
+        font-size: 3.2vw;
+        font-weight: 600;
+        margin: 0% 0 2% 0;
+      }
+      span {
+        color: $pinkToddle;
+      }
     }
-    .entete {
-        color: $blueToddle;
-        margin: 0 0 2% 0;
-        p {
-            width: 73%;
-            margin: 0 auto;
-            font-size: 2.2vw;
-            &:first-child {
-                width: auto;
-                font-size: 3.2vw;
-                font-weight: 600;
-                margin: 0% 0 2% 0;
-            }
-            span {
-                color: $pinkToddle;
-            }
-        }
-    }
-    .lessons {
-        height: 68%;
-        width: 100%;
+  }
+  .lessons {
+    height: 68%;
+    width: 100%;
+    color: #fff;
+    .lesson {
+      width: 10%;
+      height: 100%;
+      float: left;
+      text-align: center;
+      position: relative;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      transition: all 1s ease;
+      .content *, .fa-chevron-left {
+        display: none;
+      }
+      .content {
         color: #fff;
-        .lesson {
-            width: 10%;
-            height: 100%;
-            float: left;
+        hr {
+          border: 4px solid #fff;
+          display: block;
+          margin: 0;
+          padding: 0;
+          border-radius: 5px;
+          width: 50%;
+          margin: 0 auto;
+        }
+        .number {
+          box-sizing: content-box;
+          display: inline-block;
+          font-weight: bold;
+          border: none;
+          width: auto;
+          height: auto;
+          margin: 12% 0 2% 0;
+          line-height: inherit;
+          font-size: 5.4vw;
+        }
+      }
+      .fa-chevron-left {
+        position: absolute;
+        left: -9.5%;
+        bottom: 6%;
+        color: #fff;
+        font-size: 5.5vw;
+      }
+      &:first-child {
+        border-radius: 20px 0 0 0;
+        background: $beigeToddle;
+        .understood {
+          color: $beigeToddle;
+        }
+      }
+      &:nth-child(2) {
+        background: $pinkToddle;
+        .understood {
+          color: $pinkToddle;
+        }
+      }
+      &:nth-child(3) {
+        background: $blueToddle;
+        .understood {
+          color: $blueToddle;
+        }
+      }
+      &:last-child {
+        border-radius: 0 20px 0 0;
+        background: #fff;
+        border: 5px solid $blueToddle;
+        border-bottom: none;
+        .number, .understood {
+          color: $blueToddle;
+        }
+        hr {
+          border-color: $blueToddle;
+        }
+      }
+      // "up" class for lesson selected
+      &.up {
+        width: 70%;
+        .fa-chevron-left {
+          display: block;
+        }
+        .content {
+          hr {
+            display: none;
+          }
+          .number {
+            margin: 2% auto 2% auto;
+            font-size: 7vw;
+            box-sizing: content-box;
+            border-radius: 50%;
+            border: 1vw solid #fff;
+            display: block;
+            font-weight: bold;
+            width: 10vw;
+            height: 10vw;
+            line-height: 10vw;
+            &.spec {
+              border-color: $blueToddle;
+            }
+          }
+          .group_gif {
+            width: 50%;
+            margin: 2% auto;
+            img {
+              width: 50%;
+              display: inline-block;
+              vertical-align: middle;
+            }
+          }
+          .map {
+            width: 50%;
+            margin: 2% auto;
+          }
+          p {
+            font-size: 2vw;
+            width: 62vw;
+            margin: 0 auto;
+          }
+          ul {
+            //overflow: hidden;
+            margin: 2% 12% 0 0;
+            li {
+              width: 49%;
+              display: inline-block;
+              vertical-align: top;
+              margin: 0 0 3% 0;
+              p, img {
+                display: inline-block;
+              }
+              p {
+                width: 100%;
+                margin: 2% 0;
+              }
+              img {
+                width: 19%;
+                animation: animate_icon .9s infinite linear alternate;
+              }
+              .fa-stack {
+                display: inline-block;
+                font-size: 35px;
+                animation: animate_icon .9s infinite linear alternate;
+                .fa-question {
+                  color: $blueToddle;
+                }
+              }
+            }
+          }
+          // ul
+          .blocL4 {
             text-align: center;
-            position: relative;
-            -webkit-transition: all 1s ease;
-            -moz-transition: all 1s ease;
-            transition: all 1s ease;
-            .content *, .fa-chevron-left {
-                display: none;
+            width: 50%;
+            float: left;
+            color: $blueToddle;
+            .containerImg {
+              background: $blueToddle;
+              display: block;
+              border-radius: 50%;
+              width: 10vw;
+              height: 10vw;
+              line-height: 10vw;
+              margin: 0 auto;
+              img {
+                padding-bottom: 6%;
+                width: 68%;
+                display: inline-block;
+                vertical-align: middle;
+              }
             }
-            .content {
-                color: #fff;
-                hr {
-                    border: 4px solid #fff;
-                    display: block;
-                    margin: 0;
-                    padding: 0;
-                    border-radius: 5px;
-                    width: 50%;
-                    margin: 0 auto;
-                }
-                .number {
-                    box-sizing: content-box;
-                    display: inline-block;
-                    font-weight: bold;
-                    border: none;
-                    width: auto;
-                    height: auto;
-                    margin: 12% 0 2% 0;
-                    line-height: inherit;
-                    font-size: 5.4vw;
-                }
-            }
-            .fa-chevron-left {
-                position: absolute;
-                left: -9.5%;
-                bottom: 6%;
-                color: #fff;
-                font-size: 5.5vw;
-            }
-            &:first-child {
-                border-radius: 20px 0 0 0;
-                background: $beigeToddle;
-                .understood{
-                    color: $beigeToddle;
-                }
-            }
-            &:nth-child(2){
-                background: $pinkToddle;
-                .understood {
-                    color: $pinkToddle;
-                }
-            }
-            &:nth-child(3){
-                background: $blueToddle;
-                .understood {
-                    color: $blueToddle;
-                }
-            }
-            &:last-child{
-                border-radius: 0 20px 0 0;
-                background: #fff;
-                border: 5px solid $blueToddle;
-                border-bottom: none;
-                .number, .understood {
-                    color: $blueToddle;
-                }
-                hr {
-                    border-color: $blueToddle;
-                }
-            }
-            // "up" class for lesson selected
-            &.up {
-                width: 70%;
-                .fa-chevron-left {
-                    display: block;
-                }
-                .content {
-                    hr {
-                        display: none;
-                    }
-                    .number {
-                        margin: 2% auto 2% auto;
-                        font-size: 7vw;
-                        box-sizing: content-box;
-                        border-radius: 50%;
-                        border: 1vw solid #fff;
-                        display: block;
-                        font-weight: bold;
-                        width: 10vw;
-                        height: 10vw;
-                        line-height: 10vw;
-                        &.spec {
-                            border-color: $blueToddle;
-                        }
-                    }
-                    .group_gif {
-                        width: 50%;
-                        margin: 2% auto;
-                        img {
-                            width: 50%;
-                            display: inline-block;
-                            vertical-align: middle;
-                        }
-                    }
-                    .map {
-                        width: 50%;
-                        margin: 2% auto;
-                    }
-                    p {
-                        font-size: 2vw;
-                        width: 62vw;
-                        margin: 0 auto;
-                    }
-                    ul {
-                        //overflow: hidden;
-                        margin: 2% 12% 0 0;
-                        li {
-                            width: 49%;
-                            display: inline-block;
-                            vertical-align: top;
-                            margin: 0 0 3% 0;
-                            p, img {
-                                display: inline-block;
-                            }
-                            p {
-                                width: 100%;
-                                margin: 2% 0;
-                            }
-                            img {
-                                width: 19%;
-                                animation: animate_icon .9s infinite linear alternate;
-                            }
-                            .fa-stack {
-                                display: inline-block;
-                                font-size: 35px;
-                                animation: animate_icon .9s infinite linear alternate;
-                                .fa-question {
-                                    color: $blueToddle;
-                                }
-                            }
-                        }
-                    } // ul
-                    .blocL4 {
-                        text-align: center;
-                        width: 50%;
-                        float: left;
-                        color: $blueToddle;
-                        .containerImg {
-                            background: $blueToddle;
-                            display: block;
-                            border-radius: 50%;
-                            width: 10vw;
-                            height: 10vw;
-                            line-height: 10vw;
-                            margin: 0 auto;
-                            img {
-                                padding-bottom: 6%;
-                                width: 68%;
-                                display: inline-block;
-                                vertical-align: middle;
-                            }
-                        }
-                        p {
-                            display: inline-block;
-                            width: auto;
-                            margin: 6% 0;
-                            padding: 0 7%;
-                            font-weight: 600;
-                            
-                        }
-                    } // .blocL4
-                    * {
-                        display: block;
-                    }
-                    
-                } // .content
-                
-                .understood {
-                    @extend .btn_toddle; // Import style btn default toddle
-                    background: #fff;
-                    position: absolute;
-                    right: 2%;
-                    bottom: 3%;
-                    padding: 0;
-                    width: 8vw;
-                    height: 8vw;
-                    &.go {
-                        background: $blueToddle;
-                        color: #fff;
-                        right: 0;
-                        left: 0;
-                        bottom: 6%;
-                        margin: auto;
-                        width: 10vw;
-                        height: 10vw;
-                        font-size: 4.5vw;
-                    }
-                }
-            } // .lesson + .up
-        } // .lesson
-    } // .lessons
-} // .container
+            p {
+              display: inline-block;
+              width: auto;
+              margin: 6% 0;
+              padding: 0 7%;
+              font-weight: 600;
 
+            }
+          }
+          // .blocL4
+          * {
+            display: block;
+          }
+
+        }
+        // .content
+
+        .understood {
+          @extend .btn_toddle; // Import style btn default toddle
+          background: #fff;
+          position: absolute;
+          right: 2%;
+          bottom: 3%;
+          padding: 0;
+          width: 8vw;
+          height: 8vw;
+          &.go {
+            background: $blueToddle;
+            color: #fff;
+            right: 0;
+            left: 0;
+            bottom: 6%;
+            margin: auto;
+            width: 10vw;
+            height: 10vw;
+            font-size: 4.5vw;
+          }
+        }
+      }
+      // .lesson + .up
+    }
+    // .lesson
+  }
+  // .lessons
+}
+
+// .container
 
 @keyframes animate_icon {
   0% {
-        transform: scale(1.0);
-    }
-    100% {
-        transform: scale(1.15);
-    }
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.15);
+  }
 }

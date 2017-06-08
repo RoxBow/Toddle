@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" href="img/iconewebclip.png" />
     <meta name="apple-mobile-web-app-title" content="Toddle"> <!-- Name webclip -->
 </head>
-<body>
+<body class="lock">
     <?php
         include 'credits.php';
     ?>

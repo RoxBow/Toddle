@@ -1,36 +1,32 @@
 @import "general";
 
-body {
-    overflow: hidden;
-}
-
 .content {
-    text-align: center;
-    font-size: 2.7rem;
-    margin: 24% 0;
-    color: $blueToddle;
-    img {
-        width: 20%;
-        vertical-align: text-bottom;
+  text-align: center;
+  font-size: 2.7rem;
+  margin: 24% 0;
+  color: $blueToddle;
+  img {
+    width: 20%;
+    vertical-align: text-bottom;
+  }
+  hr {
+    border: 2px solid #F38F9A;
+    width: 50%;
+    margin: 4% auto;
+  }
+  p {
+    text-transform: uppercase;
+    &:first-child {
+      font-weight: 600;
     }
-    hr {
-        border: 2px solid #F38F9A;
-        width: 50%;
-        margin: 4% auto;
+    &.render {
+      width: 75%;
+      margin: 0 auto 3.5% auto;
     }
-    p {
-        text-transform: uppercase;
-        &:first-child {
-            font-weight: 600;
-        }
-        &.render {
-            width: 75%;
-            margin: 0 auto 3.5% auto;
-        }
-    }
-    button {
-        @extend .btn_toddle;
-        background: $pinkToddle;
-        font-size: 2.5rem;
-    }
+  }
+  button {
+    @extend .btn_toddle;
+    background: $pinkToddle;
+    font-size: 2.5rem;
+  }
 }

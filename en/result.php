@@ -224,7 +224,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
     <link rel="stylesheet" href="../stylesheets/result.css" media="all">
 </head>
-<body>
+<body class="lock">
     <?php
         include 'credits.php';
     ?>

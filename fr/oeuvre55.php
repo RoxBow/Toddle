@@ -76,7 +76,7 @@ if( !isset($_SESSION['pseudo']) ){
         </header>
         <section class="bleu">
             <img src="../img/h3.png" alt="Mouvement à faire" id="handclick"/>
-            <h2 class="rose six">DÉFI <span id="levelUser"></span>/5</h2>
+            <h2 class="rose medium">DÉFI <span id="levelUser"></span>/5</h2>
             <div class="consignes">
                 <p>Complète le code suivant pour recréer l'oeuvre de Newman. Glisse les étiquettes au bon endroit pour écrire ton code.</p>
                 <br>

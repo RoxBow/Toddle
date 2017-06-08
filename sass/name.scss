@@ -1,49 +1,48 @@
 // ### Style name.php ###
-
 @import "general";
 
 .container {
-    position: relative;
-    .container_form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 80%;
-        form {
-            text-align: center;
-        }
-        label {
-            display: block;
-            color: $pinkToddle;
-            font-size: 5vw;
-        }
-        input {
-            border-radius: 50px;
-            color: $blueToddle;
-            border: 2px solid $blueToddle;
-            text-align: center;
-            padding: 1.2% 3%;
-            margin: 3% 0;
-            display: inline-block;
-            font-size: 3vw;
-            &.error {
-                border: 2px solid red;
-                margin-bottom: 0;
-            }
-        }
-        .error {
-            margin: 3% auto;
-            color: red;
-            font-size: 2vw;
-        }
-        button {
-            font-size: 4vw;
-            margin: 2% auto 0 auto;
-            .fa-circle {
-                color: $blueToddle;
-            }
-        }
+  position: relative;
+  .container_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    form {
+      text-align: center;
     }
+    label {
+      display: block;
+      color: $pinkToddle;
+      font-size: 5vw;
+    }
+    input {
+      border-radius: 50px;
+      color: $blueToddle;
+      border: 2px solid $blueToddle;
+      text-align: center;
+      padding: 1.2% 3%;
+      margin: 3% 0;
+      display: inline-block;
+      font-size: 3vw;
+      &.error {
+        border: 2px solid red;
+        margin-bottom: 0;
+      }
+    }
+    .error {
+      margin: 3% auto;
+      color: red;
+      font-size: 2vw;
+    }
+    button {
+      font-size: 4vw;
+      margin: 2% auto 0 auto;
+      .fa-circle {
+        color: $blueToddle;
+      }
+    }
+  }
 }
 

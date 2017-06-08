@@ -1,0 +1,29 @@
+@import "variables";
+
+button {
+  background: none;
+  border: none;
+  font-family: $mainFont, "Arial", "Helvetica", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+} // button
+
+.btn_toddle {
+  background: $blueToddle;
+  padding: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.btn_help {
+  background: $pinkToddle;
+  color: #fff;
+  border: none;
+  border-radius: 35px;
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+}
