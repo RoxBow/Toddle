@@ -85,6 +85,11 @@
                     location.href = "en/name.php";
                 }
             });
+
+            var clickOrTouch = (('ontouchend' in window)) ? 'touchend' : 'click';
+            $('.logo_toddle').on(clickOrTouch, function() {
+                alert(clickOrTouch);
+            });
         });
     </script>
 </body>
