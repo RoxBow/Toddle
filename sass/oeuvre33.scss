@@ -1,238 +1,123 @@
 @import "general";
-.overlay{
-    position: absolute;
-    display: none;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    background-color: rgba(0,0,0,0.5);
-}
-.container{
-    font-weight: 600;
-    .valDeg {
-      transition: all .5s;
+@import "artwork";
+
+.container {
+  font-weight: 600;
+  .valDeg {
+    transition: all .5s;
+  }
+  #handclick {
+    top: 72.5%;
+    left: 62.3%;
+    z-index: 1000;
+  }
+  .consignes {
+    text-align: center;
+    font-size: 18px;
+    color: $blueToddle;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .leftBloc {
+    width: 50%;
+    float: left;
+    padding-left: 1%;
+    position: relative;
+    .souscontainer {
+      width: 470px;
+      height: 500px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid;
+      .content {
+        canvas {
+          position: absolute;
+        }
+      }
     }
-    #handclick{
-      top: 72.5%;
-      left: 62.3%;
-      z-index: 1000;
-      animation-duration: 2s;
-      animation-name: slide;
-      animation-iteration-count: infinite;
+  }
+  .rightBloc {
+    width: 50%;
+    float: right;
+    .code {
+      padding: 10px;
+      background-color: rgba(188, 188, 188, 0.2);
+      width: 90%;
+      .alinea1 {
+        line-height: 44px;
+        margin-left: 7px;
+      }
+      .alinea2 {
+        margin-left: 14px;
+      }
+      .alinea3 {
+        margin-left: 21px;
+      }
     }
-    #win{
-        position: absolute;
+    .columns {
+      display: flex;
+      margin-top: 5px;
+      color: $pinkToddle;
+      font-size: 20px;
+      width: 100%;
+      .gauche {
+        width: 65%;
+        div {
+          text-align: right;
+        }
+      }
+      .droite {
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .angleBarre {
+        margin-left: 70%;
+      }
+      .buttonV {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $pinkToddle;
+        width: 75px;
+        height: 75px;
+        border-radius: 37.5px;
+        color: white;
+        font-size: 15px;
+        &:active {
+          background-color: $blueToddle;
+        }
+      }
+      .range {
         width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        z-index: 10000;
-        display: none;
-        .title{
-          font-weight: 600;
-          color: $pinkToddle;
-          font-size: 54px;
+        background: #355E7E;
+        border: none;
+        margin: 12px 0;
+        border-radius: 10px;
+        .ui-slider-handle {
+          background: #F38F9A;
+          border-radius: 15px;
+          border: none;
+          top: -7px;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
         }
-        .titlesuite{
-          color: $pinkToddle;
-          font-size: 42px;
-        }
-        .content-win{
-            width: 70%;
-            height: 70%;
-            margin-left: 15%;
-            margin-top: 11.5%;
-            padding-top: 3.5%;
-            background-color: white;
-            border-radius: 50px;
-            text-align: center;
-            color: $blueToddle;
-            font-size: 26px;
-            p{
-              width: 70%;
-              margin-left: 15%;
-            }
-            hr {
-              border: 3px solid $pinkToddle;
-              border-radius: 25px;
-              width: 70%;
-              margin: 3% auto;
-            }
-            .continuer{
-              color: #fff;
-              background-color: $blueToddle;
-              width: 35%;
-              height: 75px;
-              border-radius: 50px;
-              font-size: 30px;
-              margin: 4% 0;
-            }
-            .name{
-              color: $pinkToddle;
-            }
-            .parentheses{
-              color: $blueToddle;
-              font-weight: bold;
-            }
-        } 
+      }
     }
-    #loose{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        z-index: 10000;
-        display: none;
-        .title{
-          font-weight: 600;
-          color: $pinkToddle;
-          font-size: 54px;
-        }
-        .content-loose{
-            width: 70%;
-            height: 45%;
-            margin-top: 20%;
-            margin-left: 15%;
-            padding-top: 2%;
-            background-color: white;
-            border-radius: 50px;
-            text-align: center;
-            color: $blueToddle;
-            font-size: 26px;
-            p{
-              width: 75%;
-              margin-left: 12.5%;
-            }
-            hr {
-              border: 3px solid $pinkToddle;
-              border-radius: 25px;
-              width: 70%;
-              margin: 3% auto;
-            }
-            .rechercher{
-              color: #fff;
-              background-color: $blueToddle;
-              width: 35%;
-              height: 75px;
-              border-radius: 50px;
-              font-size: 35px;
-              margin-top: 0.5%;
-            }
-            .name{
-              color: $pinkToddle;
-            }
-        } 
-    }
-    h2{
-        text-align: center;
-        font-size: 24px;
-        padding-bottom: 10px;
-    }
-    .consignes{
-        text-align: center;
-        font-size: 18px;
-        color: $blueToddle;
-        width: 80%;
-        margin-left: 10%;
-    }
-    .leftBloc{
-        width: 50%;
-        float: left;
-        padding-left: 1%;
-        position: relative;
-        .souscontainer{
-            width: 470px;
-            height: 500px;
-            overflow: hidden;
-            position: relative;
-            border: 1px solid;
-            .content{
-                canvas {
-                    position: absolute;
-                }
-            }
-        }
-    }
-    .rightBloc{
-        width: 50%;
-        float: right;
-        .code{
-            padding: 10px;
-            background-color: rgba(188,188,188,0.2);
-            width: 90%;
-            .alinea1{
-                line-height: 44px;
-                margin-left: 7px;
-            }
-            .alinea2{
-                margin-left: 14px;
-            }
-            .alinea3{
-                margin-left: 21px;
-            }
-        }
-        .columns{
-            display: flex;
-            margin-top: 5px;
-            color: $pinkToddle;
-            font-size: 20px;
-            width: 100%;
-            .gauche{
-                width: 65%;
-              div {
-                text-align: right;
-              }
-            }
-            .droite{
-                width: 35%;
-                display: flex;
-              justify-content: center;
-              align-items: center;
-                
-            }
-            .angleBarre {
-                margin-left: 70%;
-            }
-            .buttonV{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: $pinkToddle;
-                width: 75px;
-                height: 75px;
-                border-radius: 37.5px;
-                color: white;
-                font-size: 15px;
-                &:active{
-                    background-color: $blueToddle;
-                }
-            }
-          .range {
-            width: 100%;
-            background: #355E7E;
-            border: none;
-            margin: 12px 0;
-            border-radius: 10px;
-            .ui-slider-handle {
-              background: #F38F9A;
-              border-radius: 15px;
-              border: none;
-              top: -7px;
-              width: 30px;
-              height: 30px;
-              cursor: pointer;
-            }
-          }
-        }
-    } // .rightBloc
+  }
+  // .rightBloc
 }
+
 @keyframes slide {
   from {
     top: 72.5%;
-    left:62.3%;
+    left: 62.3%;
   }
 
   to {
     top: 72.5%;
-    left:75%;
+    left: 75%;
   }
 }

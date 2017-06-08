@@ -1,71 +1,65 @@
-// ### Style oeuvre.php ###
-
+// ### Style oeuvreretrouve.php ###
 @import "general";
 
 .container {
-    header{
+  .congratulate {
+    text-align: center;
+    color: $blueToddle;
+    font-size: 24px;
+    font-weight: 600;
+    width: 90vw;
+    margin-left: 5vw;
+    .title {
+      font-size: 54px;
+      color: $pinkToddle;
+      font-weight: 600;
     }
-    .rose{
-        color: $pinkToddle;
+    hr {
+      border: 3px solid $pinkToddle;
+      border-radius: 25px;
+      width: 70%;
+      margin: 2.5% auto;
     }
-    .congratulate{
-        text-align: center;
-        color: $blueToddle;
-        font-size: 24px;
-        font-weight: 600;
-        width: 90vw;
-        margin-left: 5vw;
-        .title{
-            font-size: 54px;
-            color: $pinkToddle;
-            font-weight: 600;
-        }
-        hr {
-            border: 3px solid $pinkToddle;
-            border-radius: 25px;
-            width: 70%;
-            margin: 2.5% auto;
-        }
-        .text-go{
-            font-weight: 600;
-            font-size: 40px;
-            width: 75%;
-            margin-top: 2.5%;
-            margin-left: 2vw;
-        }
-        .go{
-            background-color: $blueToddle;
-            color: #fff;
-            padding: 2% 1%;
-            border-radius: 50px;
-            font-size: 50px;
-            position: absolute;
-            margin-top: -95px;
-            margin-left: 25vw;
-        }
-        .go:active{
-            background-color: $pinkToddle;
-        }
-        .fonction{
-            font-size: 32px;
-            color: $pinkToddle;
-        }
-        .parentheses{
-            font-size: 32px;
-            color: $blueToddle;
-        }
-        .bold{
-            font-weight: bold;
-        }
-        .accolade{
-            margin-left: -67%;
-        }
-        .fct{
-            margin-left: -30%;
-        }
+    .text-go {
+      font-weight: 600;
+      font-size: 40px;
+      width: 75%;
+      margin-top: 2.5%;
+      margin-left: 2vw;
     }
-    .congratulate2{
-        @extend .congratulate;
-        margin-top: 10vh;
+    .go {
+      background-color: $blueToddle;
+      color: #fff;
+      padding: 2% 1%;
+      border-radius: 50px;
+      font-size: 50px;
+      position: absolute;
+      margin-top: -95px;
+      margin-left: 25vw;
     }
+    .go:active {
+      background-color: $pinkToddle;
+    }
+    .fonction {
+      font-size: 32px;
+      color: $pinkToddle;
+    }
+    .parentheses {
+      font-size: 32px;
+      color: $blueToddle;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    .accolade {
+      margin-left: -67%;
+    }
+    .fct {
+      margin-left: -30%;
+    }
+  }
+  .congratulate2 {
+    @extend .congratulate;
+    margin-top: 10vh;
+  }
 }

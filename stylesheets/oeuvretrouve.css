@@ -3846,78 +3846,69 @@ body.lock {
   overflow: hidden;
 }
 
-/* ###### HANDCLICK TUTO ###### */
-/* line 73, ../sass/general.scss */
-#handclick {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  z-index: 100;
-}
-
 /* ### Class colors ### */
-/* line 82, ../sass/general.scss */
+/* line 73, ../sass/general.scss */
 .rose {
   color: #F38F9A;
 }
 
-/* line 86, ../sass/general.scss */
+/* line 77, ../sass/general.scss */
 .bleu {
   color: #355E7E;
 }
 
-/* line 90, ../sass/general.scss */
+/* line 81, ../sass/general.scss */
 .beige {
   color: #F8B195;
 }
 
-/* line 94, ../sass/general.scss */
+/* line 85, ../sass/general.scss */
 .noir {
   color: black;
 }
 
-/* line 98, ../sass/general.scss */
+/* line 89, ../sass/general.scss */
 .medium {
   font-weight: 600;
 }
 
-/* line 102, ../sass/general.scss */
+/* line 93, ../sass/general.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 106, ../sass/general.scss */
+/* line 97, ../sass/general.scss */
 .center {
   text-align: center;
 }
 
-/* line 110, ../sass/general.scss */
+/* line 101, ../sass/general.scss */
 i {
   font-style: italic;
 }
 
-/* line 114, ../sass/general.scss */
+/* line 105, ../sass/general.scss */
 .fa {
   vertical-align: middle;
 }
 
-/* line 118, ../sass/general.scss */
+/* line 109, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 123, ../sass/general.scss */
+/* line 114, ../sass/general.scss */
 .container * {
   outline: none;
   box-sizing: border-box;
 }
-/* line 127, ../sass/general.scss */
+/* line 118, ../sass/general.scss */
 .container input {
   font-family: "GothamRounded", "Arial", "Helvetica", sans-serif;
 }
-/* line 131, ../sass/general.scss */
+/* line 122, ../sass/general.scss */
 .container footer {
   width: 100%;
   text-align: right;
@@ -3926,7 +3917,7 @@ i {
   bottom: 1%;
   right: 1%;
 }
-/* line 138, ../sass/general.scss */
+/* line 129, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
@@ -3934,11 +3925,7 @@ i {
   margin-right: 1%;
 }
 
-/* line 8, ../sass/oeuvretrouve.scss */
-.container .rose {
-  color: #F38F9A;
-}
-/* line 11, ../sass/oeuvretrouve.scss */
+/* line 5, ../sass/oeuvretrouve.scss */
 .container .congratulate, .container .congratulate2 {
   text-align: center;
   color: #355E7E;
@@ -3947,20 +3934,20 @@ i {
   width: 90vw;
   margin-left: 5vw;
 }
-/* line 18, ../sass/oeuvretrouve.scss */
+/* line 12, ../sass/oeuvretrouve.scss */
 .container .congratulate .title, .container .congratulate2 .title {
   font-size: 54px;
   color: #F38F9A;
   font-weight: 600;
 }
-/* line 23, ../sass/oeuvretrouve.scss */
+/* line 17, ../sass/oeuvretrouve.scss */
 .container .congratulate hr, .container .congratulate2 hr {
   border: 3px solid #F38F9A;
   border-radius: 25px;
   width: 70%;
   margin: 2.5% auto;
 }
-/* line 29, ../sass/oeuvretrouve.scss */
+/* line 23, ../sass/oeuvretrouve.scss */
 .container .congratulate .text-go, .container .congratulate2 .text-go {
   font-weight: 600;
   font-size: 40px;
@@ -3968,7 +3955,7 @@ i {
   margin-top: 2.5%;
   margin-left: 2vw;
 }
-/* line 36, ../sass/oeuvretrouve.scss */
+/* line 30, ../sass/oeuvretrouve.scss */
 .container .congratulate .go, .container .congratulate2 .go {
   background-color: #355E7E;
   color: #fff;
@@ -3979,33 +3966,33 @@ i {
   margin-top: -95px;
   margin-left: 25vw;
 }
-/* line 46, ../sass/oeuvretrouve.scss */
+/* line 40, ../sass/oeuvretrouve.scss */
 .container .congratulate .go:active, .container .congratulate2 .go:active {
   background-color: #F38F9A;
 }
-/* line 49, ../sass/oeuvretrouve.scss */
+/* line 43, ../sass/oeuvretrouve.scss */
 .container .congratulate .fonction, .container .congratulate2 .fonction {
   font-size: 32px;
   color: #F38F9A;
 }
-/* line 53, ../sass/oeuvretrouve.scss */
+/* line 47, ../sass/oeuvretrouve.scss */
 .container .congratulate .parentheses, .container .congratulate2 .parentheses {
   font-size: 32px;
   color: #355E7E;
 }
-/* line 57, ../sass/oeuvretrouve.scss */
+/* line 51, ../sass/oeuvretrouve.scss */
 .container .congratulate .bold, .container .congratulate2 .bold {
   font-weight: bold;
 }
-/* line 60, ../sass/oeuvretrouve.scss */
+/* line 54, ../sass/oeuvretrouve.scss */
 .container .congratulate .accolade, .container .congratulate2 .accolade {
   margin-left: -67%;
 }
-/* line 63, ../sass/oeuvretrouve.scss */
+/* line 57, ../sass/oeuvretrouve.scss */
 .container .congratulate .fct, .container .congratulate2 .fct {
   margin-left: -30%;
 }
-/* line 67, ../sass/oeuvretrouve.scss */
+/* line 61, ../sass/oeuvretrouve.scss */
 .container .congratulate2 {
   margin-top: 10vh;
 }

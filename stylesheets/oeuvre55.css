@@ -3846,78 +3846,69 @@ body.lock {
   overflow: hidden;
 }
 
-/* ###### HANDCLICK TUTO ###### */
-/* line 73, ../sass/general.scss */
-#handclick {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  z-index: 100;
-}
-
 /* ### Class colors ### */
-/* line 82, ../sass/general.scss */
+/* line 73, ../sass/general.scss */
 .rose {
   color: #F38F9A;
 }
 
-/* line 86, ../sass/general.scss */
+/* line 77, ../sass/general.scss */
 .bleu {
   color: #355E7E;
 }
 
-/* line 90, ../sass/general.scss */
+/* line 81, ../sass/general.scss */
 .beige {
   color: #F8B195;
 }
 
-/* line 94, ../sass/general.scss */
+/* line 85, ../sass/general.scss */
 .noir {
   color: black;
 }
 
-/* line 98, ../sass/general.scss */
+/* line 89, ../sass/general.scss */
 .medium {
   font-weight: 600;
 }
 
-/* line 102, ../sass/general.scss */
+/* line 93, ../sass/general.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 106, ../sass/general.scss */
+/* line 97, ../sass/general.scss */
 .center {
   text-align: center;
 }
 
-/* line 110, ../sass/general.scss */
+/* line 101, ../sass/general.scss */
 i {
   font-style: italic;
 }
 
-/* line 114, ../sass/general.scss */
+/* line 105, ../sass/general.scss */
 .fa {
   vertical-align: middle;
 }
 
-/* line 118, ../sass/general.scss */
+/* line 109, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 123, ../sass/general.scss */
+/* line 114, ../sass/general.scss */
 .container * {
   outline: none;
   box-sizing: border-box;
 }
-/* line 127, ../sass/general.scss */
+/* line 118, ../sass/general.scss */
 .container input {
   font-family: "GothamRounded", "Arial", "Helvetica", sans-serif;
 }
-/* line 131, ../sass/general.scss */
+/* line 122, ../sass/general.scss */
 .container footer {
   width: 100%;
   text-align: right;
@@ -3926,7 +3917,7 @@ i {
   bottom: 1%;
   right: 1%;
 }
-/* line 138, ../sass/general.scss */
+/* line 129, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
@@ -3934,7 +3925,16 @@ i {
   margin-right: 1%;
 }
 
-/* line 2, ../sass/oeuvre55.scss */
+/* line 3, ../sass/_artwork.scss */
+#handclick {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  z-index: 10000;
+  animation: 2s slide infinite;
+}
+
+/* line 11, ../sass/_artwork.scss */
 .overlay {
   position: absolute;
   display: none;
@@ -3944,12 +3944,15 @@ i {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 11, ../sass/oeuvre55.scss */
-.container {
-  font-weight: 600;
+/* line 20, ../sass/_artwork.scss */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 10px;
 }
-/* line 13, ../sass/oeuvre55.scss */
-.container #win {
+
+/* line 26, ../sass/_artwork.scss */
+#win {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -3957,44 +3960,44 @@ i {
   z-index: 10000;
   display: none;
 }
-/* line 20, ../sass/oeuvre55.scss */
-.container #win .title {
+/* line 33, ../sass/_artwork.scss */
+#win .title {
   font-weight: 600;
   color: #F38F9A;
   font-size: 54px;
 }
-/* line 25, ../sass/oeuvre55.scss */
-.container #win .titlesuite {
+/* line 38, ../sass/_artwork.scss */
+#win .titlesuite {
   color: #F38F9A;
   font-size: 42px;
 }
-/* line 29, ../sass/oeuvre55.scss */
-.container #win .content-win {
+/* line 42, ../sass/_artwork.scss */
+#win .content-win {
   width: 70%;
-  height: 67%;
+  height: 65%;
   margin-left: 15%;
   margin-top: 13%;
-  padding-top: 3.5%;
+  padding-top: 2%;
   background-color: white;
   border-radius: 50px;
   text-align: center;
   color: #355E7E;
   font-size: 26px;
 }
-/* line 40, ../sass/oeuvre55.scss */
-.container #win .content-win p {
-  width: 70%;
+/* line 53, ../sass/_artwork.scss */
+#win .content-win p {
+  width: 75%;
   margin-left: 15%;
 }
-/* line 44, ../sass/oeuvre55.scss */
-.container #win .content-win hr {
+/* line 57, ../sass/_artwork.scss */
+#win .content-win hr {
   border: 3px solid #F38F9A;
   border-radius: 25px;
   width: 70%;
   margin: 3% auto;
 }
-/* line 50, ../sass/oeuvre55.scss */
-.container #win .content-win .continuer {
+/* line 63, ../sass/_artwork.scss */
+#win .content-win .continuer {
   color: #fff;
   background-color: #355E7E;
   width: 35%;
@@ -4003,17 +4006,18 @@ i {
   font-size: 30px;
   margin: 4% 0;
 }
-/* line 59, ../sass/oeuvre55.scss */
-.container #win .content-win .name {
+/* line 72, ../sass/_artwork.scss */
+#win .content-win .name {
   color: #F38F9A;
 }
-/* line 62, ../sass/oeuvre55.scss */
-.container #win .content-win .parentheses {
+/* line 75, ../sass/_artwork.scss */
+#win .content-win .parentheses {
   color: #355E7E;
   font-weight: bold;
 }
-/* line 68, ../sass/oeuvre55.scss */
-.container #loose {
+
+/* line 84, ../sass/_artwork.scss */
+#loose {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -4021,14 +4025,14 @@ i {
   z-index: 10000;
   display: none;
 }
-/* line 75, ../sass/oeuvre55.scss */
-.container #loose .title {
+/* line 91, ../sass/_artwork.scss */
+#loose .title {
   font-weight: 600;
   color: #F38F9A;
   font-size: 54px;
 }
-/* line 80, ../sass/oeuvre55.scss */
-.container #loose .content-loose {
+/* line 96, ../sass/_artwork.scss */
+#loose .content-loose {
   width: 70%;
   height: 45%;
   margin-top: 20%;
@@ -4040,20 +4044,20 @@ i {
   color: #355E7E;
   font-size: 26px;
 }
-/* line 91, ../sass/oeuvre55.scss */
-.container #loose .content-loose p {
+/* line 107, ../sass/_artwork.scss */
+#loose .content-loose p {
   width: 75%;
   margin-left: 12.5%;
 }
-/* line 95, ../sass/oeuvre55.scss */
-.container #loose .content-loose hr {
+/* line 111, ../sass/_artwork.scss */
+#loose .content-loose hr {
   border: 3px solid #F38F9A;
   border-radius: 25px;
   width: 70%;
   margin: 3% auto;
 }
-/* line 101, ../sass/oeuvre55.scss */
-.container #loose .content-loose .rechercher {
+/* line 117, ../sass/_artwork.scss */
+#loose .content-loose .rechercher {
   color: #fff;
   background-color: #355E7E;
   width: 35%;
@@ -4062,26 +4066,31 @@ i {
   font-size: 35px;
   margin-top: 0.5%;
 }
-/* line 110, ../sass/oeuvre55.scss */
-.container #loose .content-loose .name {
+/* line 126, ../sass/_artwork.scss */
+#loose .content-loose .name {
   color: #F38F9A;
 }
-/* line 115, ../sass/oeuvre55.scss */
+
+@keyframes slide {
+  from {
+    top: 67%;
+    left: 47%;
+  }
+  to {
+    top: 67%;
+    left: 65%;
+  }
+}
+/* line 4, ../sass/oeuvre55.scss */
+.container {
+  font-weight: 600;
+}
+/* line 6, ../sass/oeuvre55.scss */
 .container #handclick {
   top: 71%;
   left: 57%;
-  z-index: 10000;
-  animation-duration: 2s;
-  animation-name: slide;
-  animation-iteration-count: infinite;
 }
-/* line 123, ../sass/oeuvre55.scss */
-.container h2 {
-  text-align: center;
-  font-size: 24px;
-  padding-bottom: 10px;
-}
-/* line 128, ../sass/oeuvre55.scss */
+/* line 10, ../sass/oeuvre55.scss */
 .container .consignes {
   text-align: center;
   font-size: 18px;
@@ -4090,7 +4099,7 @@ i {
   margin: 0 auto;
   font-weight: 600;
 }
-/* line 136, ../sass/oeuvre55.scss */
+/* line 18, ../sass/oeuvre55.scss */
 .container .leftBloc {
   overflow: hidden;
   width: 48%;
@@ -4099,33 +4108,33 @@ i {
   margin-left: 1%;
   position: relative;
 }
-/* line 143, ../sass/oeuvre55.scss */
+/* line 25, ../sass/oeuvre55.scss */
 .container .leftBloc .souscontainer {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
-/* line 147, ../sass/oeuvre55.scss */
+/* line 29, ../sass/oeuvre55.scss */
 .container .leftBloc .souscontainer canvas {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
 }
-/* line 153, ../sass/oeuvre55.scss */
+/* line 35, ../sass/oeuvre55.scss */
 .container .leftBloc .souscontainer #myCanvas {
   z-index: 0;
 }
-/* line 156, ../sass/oeuvre55.scss */
+/* line 38, ../sass/oeuvre55.scss */
 .container .leftBloc .souscontainer #myCanvas2 {
   z-index: 2;
 }
-/* line 161, ../sass/oeuvre55.scss */
+/* line 43, ../sass/oeuvre55.scss */
 .container .rightBloc {
   width: 50%;
   float: right;
 }
-/* line 164, ../sass/oeuvre55.scss */
+/* line 46, ../sass/oeuvre55.scss */
 .container .rightBloc .code {
   padding: 10px;
   background-color: #F2F2F2;
@@ -4135,58 +4144,38 @@ i {
   height: 202px;
   overflow-y: auto;
 }
-/* line 172, ../sass/oeuvre55.scss */
+/* line 54, ../sass/oeuvre55.scss */
 .container .rightBloc .code::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: #F38F9A;
 }
-/* line 179, ../sass/oeuvre55.scss */
+/* line 59, ../sass/oeuvre55.scss */
 .container .rightBloc .code::-webkit-scrollbar {
   width: 7px;
 }
-/* line 184, ../sass/oeuvre55.scss */
+/* line 63, ../sass/oeuvre55.scss */
 .container .rightBloc .code::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background-color: #355E7E;
 }
-/* line 189, ../sass/oeuvre55.scss */
+/* line 67, ../sass/oeuvre55.scss */
 .container .rightBloc .code .cadre {
   border: 1px solid #F38F9A;
   padding: 5px;
   content: "";
   border-radius: 20px;
 }
-/* line 194, ../sass/oeuvre55.scss */
-.container .rightBloc .code .cadre #noircache {
-  visibility: hidden;
-  color: white;
-}
-/* line 198, ../sass/oeuvre55.scss */
-.container .rightBloc .code .cadre #varcache {
-  visibility: hidden;
-  color: white;
-}
-/* line 202, ../sass/oeuvre55.scss */
-.container .rightBloc .code .cadre #rougecache {
-  visibility: hidden;
-  color: white;
-}
-/* line 206, ../sass/oeuvre55.scss */
-.container .rightBloc .code .cadre #dtcache {
-  visibility: hidden;
-  color: white;
-}
-/* line 210, ../sass/oeuvre55.scss */
-.container .rightBloc .code .cadre #ctcache {
-  visibility: hidden;
-  color: white;
-}
-/* line 214, ../sass/oeuvre55.scss */
+/* line 72, ../sass/oeuvre55.scss */
+.container .rightBloc .code .cadre #noircache,
+.container .rightBloc .code .cadre #varcache,
+.container .rightBloc .code .cadre #rougecache,
+.container .rightBloc .code .cadre #dtcache,
+.container .rightBloc .code .cadre #ctcache,
 .container .rightBloc .code .cadre #dlcache {
   visibility: hidden;
   color: white;
 }
-/* line 221, ../sass/oeuvre55.scss */
+/* line 85, ../sass/oeuvre55.scss */
 .container .rightBloc .etiquettes .etiq {
   z-index: 10;
   border-radius: 25px;
@@ -4197,37 +4186,37 @@ i {
   text-align: center;
   position: absolute;
 }
-/* line 231, ../sass/oeuvre55.scss */
+/* line 95, ../sass/oeuvre55.scss */
 .container .rightBloc .etiquettes #rouge {
   top: 57%;
   left: 52%;
 }
-/* line 235, ../sass/oeuvre55.scss */
+/* line 99, ../sass/oeuvre55.scss */
 .container .rightBloc .etiquettes #cligne {
   top: 57%;
   left: 77%;
 }
-/* line 239, ../sass/oeuvre55.scss */
+/* line 103, ../sass/oeuvre55.scss */
 .container .rightBloc .etiquettes #ctriangle {
   top: 75%;
   left: 77%;
 }
-/* line 243, ../sass/oeuvre55.scss */
+/* line 107, ../sass/oeuvre55.scss */
 .container .rightBloc .etiquettes #dligne {
   top: 75%;
   left: 52%;
 }
-/* line 247, ../sass/oeuvre55.scss */
+/* line 111, ../sass/oeuvre55.scss */
 .container .rightBloc .etiquettes #dtriangle {
   top: 66%;
   left: 77%;
 }
-/* line 251, ../sass/oeuvre55.scss */
+/* line 115, ../sass/oeuvre55.scss */
 .container .rightBloc .etiquettes #noir {
   top: 66%;
   left: 52%;
 }
-/* line 256, ../sass/oeuvre55.scss */
+/* line 120, ../sass/oeuvre55.scss */
 .container .rightBloc .bouton {
   position: absolute;
   display: flex;
@@ -4239,16 +4228,16 @@ i {
   border-radius: 30px;
   color: white;
 }
-/* line 266, ../sass/oeuvre55.scss */
+/* line 130, ../sass/oeuvre55.scss */
 .container .rightBloc .bouton:active {
   background-color: #355E7E;
 }
-/* line 270, ../sass/oeuvre55.scss */
+/* line 134, ../sass/oeuvre55.scss */
 .container .rightBloc #valider {
   top: 83%;
   left: 59%;
 }
-/* line 274, ../sass/oeuvre55.scss */
+/* line 138, ../sass/oeuvre55.scss */
 .container .rightBloc #undo {
   top: 83%;
   left: 84%;

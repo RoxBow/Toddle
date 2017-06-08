@@ -1,272 +1,155 @@
 // ### Style oeuvre.php ###
 @import "general";
-.overlay{
-    position: absolute;
-    display: none;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    background-color: rgba(0,0,0,0.5);
-}
+@import "artwork";
+
 .container {
-    #win{
-        position: absolute;
+  #jeu {
+    width: 100%;
+    height: 83%;
+    /*Décalage compensé dans .rightBloc pour pas de bug dans les coordonnées pour le drop des étiquettes*/
+    padding-left: 2%;
+    padding-right: 2%;
+    #handclick {
+      top: 57%;
+      left: 57%;
+    }
+    .leftBloc {
+      float: left;
+      width: 48%;
+      height: 92%;
+      position: relative;
+      z-index: 10;
+      .bouton2 {
+        z-index: 1100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $pinkToddle;
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+        bottom: 10%;
+        & > img {
+          width: 50%;
+        }
+      }
+      .bluebouton {
+        background-color: $blueToddle;
+      }
+    }
+    .rightBloc {
+      float: right;
+      width: 50%;
+      height: 92%;
+      overflow: hidden;
+      h2 {
+        text-align: center;
+        padding: 5px;
+        margin: 0;
+      }
+      & > div {
+        padding: 10px;
         width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        z-index: 10000;
-        display: none;
-        .title{
+      }
+      .codeBloc {
+        font-size: 19px;
+        padding: 15px;
+        bottom: 0;
+        height: 45%;
+        h2 {
+          color: $pinkToddle;
+          font-weight: bold;
+          font-size: 32px;
+        }
+        .consignes {
+          padding-top: 4%;
           font-weight: 600;
-          color: $pinkToddle;
-          font-size: 54px;
+          color: $blueToddle;
+          text-align: justify;
         }
-        .titlesuite{
-          color: $pinkToddle;
-          font-size: 42px;
+      }
+      .etiqBloc {
+        height: 55%;
+        .bouton {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $pinkToddle;
+          width: 50px;
+          height: 50px;
+          border-radius: 25px;
+          color: white;
         }
-        .content-win{
-            width: 70%;
-            height: 65%;
-            margin-left: 15%;
-            margin-top: 13%;
-            padding-top: 2%;
-            background-color: white;
-            border-radius: 50px;
-            text-align: center;
-            color: $blueToddle;
-            font-size: 26px;
-            p{
-              width: 75%;
-              margin-left: 15%;
-            }
-            hr {
-              border: 3px solid $pinkToddle;
-              border-radius: 25px;
-              width: 70%;
-              margin: 3% auto;
-            }
-            .continuer{
-              color: #fff;
-              background-color: $blueToddle;
-              width: 35%;
-              height: 75px;
-              border-radius: 50px;
-              font-size: 30px;
-              margin: 4% 0;
-            }
-            .name{
-              color: $pinkToddle;
-            }
-            .parentheses{
-              color: $blueToddle;
-              font-weight: bold;
-            }
-        } 
+        .bluebouton {
+          background-color: $blueToddle;
+        }
+        .etiq {
+          z-index: 15;
+          border-radius: 25px;
+          width: 43%;
+          padding: 15px;
+          margin: 10px auto;
+          background: $blueToddle;
+          color: #fff;
+          text-align: center;
+        }
+        /*Les pourcentages de positionnement sont en relation avec le div avec l'id: jeu et non relatif à la div de classe:rightBloc*/
+        #rectangle {
+          position: absolute;
+          margin-top: 17.5%;
+          margin-left: 1.5%;
+        }
+        #rouge {
+          position: absolute;
+          margin-top: 2.5%;
+          margin-left: 50%;
+          display: none;
+        }
+        #jaune {
+          position: absolute;
+          margin-top: 10%;
+          margin-left: 50%;
+          display: none;
+        }
+        #carre {
+          position: absolute;
+          margin-top: 10%;
+          margin-left: 1.5%;
+        }
+        #rond {
+          position: absolute;
+          margin-top: 2.5%;
+          margin-left: 1.5%;
+        }
+        #violet {
+          position: absolute;
+          margin-top: 17.5%;
+          margin-left: 50%;
+          display: none;
+        }
+        #undo {
+          position: absolute;
+          margin-top: 25%;
+          margin-left: 9%;
+        }
+        #valider {
+          position: absolute;
+          margin-top: 25%;
+          margin-left: 33.5%;
+        }
+      }
     }
-    #loose{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        z-index: 10000;
-        display: none;
-        .title{
-          font-weight: 600;
-          color: $pinkToddle;
-          font-size: 54px;
-        }
-        .content-loose{
-            width: 70%;
-            height: 45%;
-            margin-top: 20%;
-            margin-left: 15%;
-            padding-top: 2%;
-            background-color: white;
-            border-radius: 50px;
-            text-align: center;
-            color: $blueToddle;
-            font-size: 26px;
-            p{
-              width: 75%;
-              margin-left: 12.5%;
-            }
-            hr {
-              border: 3px solid $pinkToddle;
-              border-radius: 25px;
-              width: 70%;
-              margin: 3% auto;
-            }
-            .rechercher{
-              color: #fff;
-              background-color: $blueToddle;
-              width: 35%;
-              height: 75px;
-              border-radius: 50px;
-              font-size: 35px;
-              margin-top:0.5%;
-            }
-            .name{
-              color: $pinkToddle;
-            }
-        } 
-    }
-    #jeu{
-        width: 100%;
-        height: 83%;
-            /*Décalage compensé dans .rightBloc pour pas de bug dans les coordonnées pour le drop des étiquettes*/
-        padding-left: 2%;
-        padding-right: 2%;
-        #handclick{
-          top: 57%;
-          left: 57%;
-          z-index: 10000;
-          animation-duration: 2s;
-          animation-name: slide;
-          animation-iteration-count: infinite;
-        }
-        .leftBloc {
-            float: left;
-            width: 48%;
-            height: 92%;
-            position: relative;
-            z-index: 10;
-            .bouton2{
-                z-index: 1100;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: $pinkToddle;
-                width: 70px;
-                height: 70px;
-                border-radius: 35px;
-                bottom: 10%;
-                & > img{
-                    width: 50%;
-                }
-            }
-            .bluebouton{
-                background-color: $blueToddle;
-            }
-        }
-        .rightBloc {
-            float: right;
-            width: 50%;
-            height: 92%;
-            overflow: hidden;
-            h2 {
-                text-align: center;
-                padding: 5px;
-                margin: 0;
-            }
-            & > div {
-                padding: 10px;
-                width: 100%;
-            }
-            .codeBloc {
-                /*text-align: justify;*/
-                
-                font-size: 19px;
-                padding: 15px;
-                bottom: 0;
-                height: 45%;
-                h2{
-                  color: $pinkToddle;
-                  font-weight: bold;
-                  font-size: 32px;
-                }
-                .consignes{
-                  padding-top: 4%;
-                  font-weight: 600;
-                  color: $blueToddle;
-                  text-align: justify;
-                }
-            }
-            .etiqBloc {
-                height: 55%;
-                .bouton{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: $pinkToddle;
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 25px;
-                    color: white;
-                }
-                .bluebouton{
-                    background-color: $blueToddle;
-                }
-                .hidden-gauche{
-                }
-                .hidden-droit{
-                }
-                .etiq {
-                    z-index: 15;
-                    border-radius: 25px;
-                    width: 43%;
-                    padding: 15px;
-                    margin: 10px auto;
-                    background: $blueToddle;
-                    color: #fff;
-                    text-align: center;
-                }
-                    /*Les pourcentages de positionnement sont en relation avec le div avec l'id: jeu et non relatif à la div de classe:rightBloc*/
-                #rectangle{
-                    position: absolute;
-                    margin-top: 17.5%;
-                    margin-left: 1.5%;
-                }
-                #rouge{
-                    position: absolute;
-                    margin-top: 2.5%;
-                    margin-left: 50%;
-                    display: none;
-                }
-                #jaune{
-                    position: absolute;
-                    margin-top: 10%;
-                    margin-left: 50%;
-                    display: none;
-                }
-                #carre{
-                    position: absolute;
-                    margin-top: 10%;
-                    margin-left: 1.5%;
-                }
-                #rond{
-                    position: absolute;
-                    margin-top: 2.5%;
-                    margin-left: 1.5%;
-                }
-                #violet{
-                    position: absolute;
-                    margin-top: 17.5%;
-                    margin-left: 50%;
-                    display: none;
-                }
-                #undo{
-                    position: absolute;
-                    margin-top: 25%;
-                    margin-left: 9%;
-                }
-                #valider{
-                    position: absolute;
-                    margin-top: 25%;
-                    margin-left: 33.5%;
-                }
-            }
-        }
-    }
+  }
 }
+
 @keyframes slide {
   from {
     top: 57%;
-    left:57%;
+    left: 57%;
   }
 
   to {
     top: 48%;
-    left:18%;
+    left: 18%;
   }
 }

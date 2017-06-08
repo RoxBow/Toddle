@@ -3846,78 +3846,69 @@ body.lock {
   overflow: hidden;
 }
 
-/* ###### HANDCLICK TUTO ###### */
-/* line 73, ../sass/general.scss */
-#handclick {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  z-index: 100;
-}
-
 /* ### Class colors ### */
-/* line 82, ../sass/general.scss */
+/* line 73, ../sass/general.scss */
 .rose {
   color: #F38F9A;
 }
 
-/* line 86, ../sass/general.scss */
+/* line 77, ../sass/general.scss */
 .bleu {
   color: #355E7E;
 }
 
-/* line 90, ../sass/general.scss */
+/* line 81, ../sass/general.scss */
 .beige {
   color: #F8B195;
 }
 
-/* line 94, ../sass/general.scss */
+/* line 85, ../sass/general.scss */
 .noir {
   color: black;
 }
 
-/* line 98, ../sass/general.scss */
+/* line 89, ../sass/general.scss */
 .medium {
   font-weight: 600;
 }
 
-/* line 102, ../sass/general.scss */
+/* line 93, ../sass/general.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 106, ../sass/general.scss */
+/* line 97, ../sass/general.scss */
 .center {
   text-align: center;
 }
 
-/* line 110, ../sass/general.scss */
+/* line 101, ../sass/general.scss */
 i {
   font-style: italic;
 }
 
-/* line 114, ../sass/general.scss */
+/* line 105, ../sass/general.scss */
 .fa {
   vertical-align: middle;
 }
 
-/* line 118, ../sass/general.scss */
+/* line 109, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 123, ../sass/general.scss */
+/* line 114, ../sass/general.scss */
 .container * {
   outline: none;
   box-sizing: border-box;
 }
-/* line 127, ../sass/general.scss */
+/* line 118, ../sass/general.scss */
 .container input {
   font-family: "GothamRounded", "Arial", "Helvetica", sans-serif;
 }
-/* line 131, ../sass/general.scss */
+/* line 122, ../sass/general.scss */
 .container footer {
   width: 100%;
   text-align: right;
@@ -3926,7 +3917,7 @@ i {
   bottom: 1%;
   right: 1%;
 }
-/* line 138, ../sass/general.scss */
+/* line 129, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
@@ -3934,7 +3925,16 @@ i {
   margin-right: 1%;
 }
 
-/* line 3, ../sass/oeuvre2.scss */
+/* line 3, ../sass/_artwork.scss */
+#handclick {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  z-index: 10000;
+  animation: 2s slide infinite;
+}
+
+/* line 11, ../sass/_artwork.scss */
 .overlay {
   position: absolute;
   display: none;
@@ -3944,12 +3944,15 @@ i {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 11, ../sass/oeuvre2.scss */
-.container {
-  font-weight: 600;
+/* line 20, ../sass/_artwork.scss */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 10px;
 }
-/* line 13, ../sass/oeuvre2.scss */
-.container #win {
+
+/* line 26, ../sass/_artwork.scss */
+#win {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -3957,19 +3960,19 @@ i {
   z-index: 10000;
   display: none;
 }
-/* line 20, ../sass/oeuvre2.scss */
-.container #win .title {
+/* line 33, ../sass/_artwork.scss */
+#win .title {
   font-weight: 600;
   color: #F38F9A;
   font-size: 54px;
 }
-/* line 25, ../sass/oeuvre2.scss */
-.container #win .titlesuite {
+/* line 38, ../sass/_artwork.scss */
+#win .titlesuite {
   color: #F38F9A;
   font-size: 42px;
 }
-/* line 29, ../sass/oeuvre2.scss */
-.container #win .content-win {
+/* line 42, ../sass/_artwork.scss */
+#win .content-win {
   width: 70%;
   height: 65%;
   margin-left: 15%;
@@ -3981,20 +3984,20 @@ i {
   color: #355E7E;
   font-size: 26px;
 }
-/* line 40, ../sass/oeuvre2.scss */
-.container #win .content-win p {
-  width: 70%;
+/* line 53, ../sass/_artwork.scss */
+#win .content-win p {
+  width: 75%;
   margin-left: 15%;
 }
-/* line 44, ../sass/oeuvre2.scss */
-.container #win .content-win hr {
+/* line 57, ../sass/_artwork.scss */
+#win .content-win hr {
   border: 3px solid #F38F9A;
   border-radius: 25px;
   width: 70%;
   margin: 3% auto;
 }
-/* line 50, ../sass/oeuvre2.scss */
-.container #win .content-win .continuer {
+/* line 63, ../sass/_artwork.scss */
+#win .content-win .continuer {
   color: #fff;
   background-color: #355E7E;
   width: 35%;
@@ -4003,17 +4006,18 @@ i {
   font-size: 30px;
   margin: 4% 0;
 }
-/* line 59, ../sass/oeuvre2.scss */
-.container #win .content-win .name {
+/* line 72, ../sass/_artwork.scss */
+#win .content-win .name {
   color: #F38F9A;
 }
-/* line 62, ../sass/oeuvre2.scss */
-.container #win .content-win .parentheses {
+/* line 75, ../sass/_artwork.scss */
+#win .content-win .parentheses {
   color: #355E7E;
   font-weight: bold;
 }
-/* line 68, ../sass/oeuvre2.scss */
-.container #loose {
+
+/* line 84, ../sass/_artwork.scss */
+#loose {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -4021,14 +4025,14 @@ i {
   z-index: 10000;
   display: none;
 }
-/* line 75, ../sass/oeuvre2.scss */
-.container #loose .title {
+/* line 91, ../sass/_artwork.scss */
+#loose .title {
   font-weight: 600;
   color: #F38F9A;
   font-size: 54px;
 }
-/* line 80, ../sass/oeuvre2.scss */
-.container #loose .content-loose {
+/* line 96, ../sass/_artwork.scss */
+#loose .content-loose {
   width: 70%;
   height: 45%;
   margin-top: 20%;
@@ -4040,20 +4044,20 @@ i {
   color: #355E7E;
   font-size: 26px;
 }
-/* line 91, ../sass/oeuvre2.scss */
-.container #loose .content-loose p {
+/* line 107, ../sass/_artwork.scss */
+#loose .content-loose p {
   width: 75%;
   margin-left: 12.5%;
 }
-/* line 95, ../sass/oeuvre2.scss */
-.container #loose .content-loose hr {
+/* line 111, ../sass/_artwork.scss */
+#loose .content-loose hr {
   border: 3px solid #F38F9A;
   border-radius: 25px;
   width: 70%;
   margin: 3% auto;
 }
-/* line 101, ../sass/oeuvre2.scss */
-.container #loose .content-loose .rechercher {
+/* line 117, ../sass/_artwork.scss */
+#loose .content-loose .rechercher {
   color: #fff;
   background-color: #355E7E;
   width: 35%;
@@ -4062,30 +4066,39 @@ i {
   font-size: 35px;
   margin-top: 0.5%;
 }
-/* line 110, ../sass/oeuvre2.scss */
-.container #loose .content-loose .name {
+/* line 126, ../sass/_artwork.scss */
+#loose .content-loose .name {
   color: #F38F9A;
 }
-/* line 115, ../sass/oeuvre2.scss */
+
+@keyframes slide {
+  from {
+    top: 67%;
+    left: 47%;
+  }
+  to {
+    top: 67%;
+    left: 65%;
+  }
+}
+/* line 5, ../sass/oeuvre2.scss */
+.container {
+  font-weight: 600;
+}
+/* line 7, ../sass/oeuvre2.scss */
 .container canvas {
   margin: 0 auto;
   width: 700px;
   height: 450px;
   display: block;
 }
-/* line 121, ../sass/oeuvre2.scss */
-.container h2 {
-  text-align: center;
-  font-size: 24px;
-  padding-bottom: 10px;
-}
-/* line 126, ../sass/oeuvre2.scss */
+/* line 14, ../sass/oeuvre2.scss */
 .container .consignes {
   text-align: center;
   font-size: 18px;
   color: #355E7E;
 }
-/* line 131, ../sass/oeuvre2.scss */
+/* line 19, ../sass/oeuvre2.scss */
 .container .result {
   width: 100%;
   text-align: center;
@@ -4095,15 +4108,15 @@ i {
   justify-content: center;
   margin-top: -5px;
 }
-/* line 139, ../sass/oeuvre2.scss */
+/* line 27, ../sass/oeuvre2.scss */
 .container .result #valider {
   right: 62.5px;
 }
-/* line 143, ../sass/oeuvre2.scss */
+/* line 31, ../sass/oeuvre2.scss */
 .container .result p {
   margin: 5px 0;
 }
-/* line 146, ../sass/oeuvre2.scss */
+/* line 34, ../sass/oeuvre2.scss */
 .container .button {
   display: flex;
   text-align: center;
@@ -4117,29 +4130,29 @@ i {
   margin-top: -25%;
   position: absolute;
 }
-/* line 158, ../sass/oeuvre2.scss */
+/* line 46, ../sass/oeuvre2.scss */
 .container .button:active {
   background-color: #355E7E;
 }
-/* line 161, ../sass/oeuvre2.scss */
+/* line 49, ../sass/oeuvre2.scss */
 .container .button#moins, .container .button#plus {
   background: none;
   border-radius: 0;
   font-size: 5rem;
 }
-/* line 165, ../sass/oeuvre2.scss */
+/* line 53, ../sass/oeuvre2.scss */
 .container .button#moins .fa, .container .button#plus .fa {
   color: #F38F9A;
 }
-/* line 169, ../sass/oeuvre2.scss */
+/* line 57, ../sass/oeuvre2.scss */
 .container .button#moins {
   left: 50px;
 }
-/* line 172, ../sass/oeuvre2.scss */
+/* line 60, ../sass/oeuvre2.scss */
 .container .button#plus {
   right: 50px;
 }
-/* line 176, ../sass/oeuvre2.scss */
+/* line 64, ../sass/oeuvre2.scss */
 .container .buttonV {
   display: flex;
   align-items: center;
@@ -4152,11 +4165,11 @@ i {
   font-size: 15px;
   position: absolute;
 }
-/* line 187, ../sass/oeuvre2.scss */
+/* line 75, ../sass/oeuvre2.scss */
 .container .buttonV > img {
   width: 50%;
 }
-/* line 190, ../sass/oeuvre2.scss */
+/* line 78, ../sass/oeuvre2.scss */
 .container .buttonV:active {
   background-color: #355E7E;
 }

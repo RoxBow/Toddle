@@ -3846,78 +3846,69 @@ body.lock {
   overflow: hidden;
 }
 
-/* ###### HANDCLICK TUTO ###### */
-/* line 73, ../sass/general.scss */
-#handclick {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  z-index: 100;
-}
-
 /* ### Class colors ### */
-/* line 82, ../sass/general.scss */
+/* line 73, ../sass/general.scss */
 .rose {
   color: #F38F9A;
 }
 
-/* line 86, ../sass/general.scss */
+/* line 77, ../sass/general.scss */
 .bleu {
   color: #355E7E;
 }
 
-/* line 90, ../sass/general.scss */
+/* line 81, ../sass/general.scss */
 .beige {
   color: #F8B195;
 }
 
-/* line 94, ../sass/general.scss */
+/* line 85, ../sass/general.scss */
 .noir {
   color: black;
 }
 
-/* line 98, ../sass/general.scss */
+/* line 89, ../sass/general.scss */
 .medium {
   font-weight: 600;
 }
 
-/* line 102, ../sass/general.scss */
+/* line 93, ../sass/general.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 106, ../sass/general.scss */
+/* line 97, ../sass/general.scss */
 .center {
   text-align: center;
 }
 
-/* line 110, ../sass/general.scss */
+/* line 101, ../sass/general.scss */
 i {
   font-style: italic;
 }
 
-/* line 114, ../sass/general.scss */
+/* line 105, ../sass/general.scss */
 .fa {
   vertical-align: middle;
 }
 
-/* line 118, ../sass/general.scss */
+/* line 109, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 123, ../sass/general.scss */
+/* line 114, ../sass/general.scss */
 .container * {
   outline: none;
   box-sizing: border-box;
 }
-/* line 127, ../sass/general.scss */
+/* line 118, ../sass/general.scss */
 .container input {
   font-family: "GothamRounded", "Arial", "Helvetica", sans-serif;
 }
-/* line 131, ../sass/general.scss */
+/* line 122, ../sass/general.scss */
 .container footer {
   width: 100%;
   text-align: right;
@@ -3926,7 +3917,7 @@ i {
   bottom: 1%;
   right: 1%;
 }
-/* line 138, ../sass/general.scss */
+/* line 129, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
@@ -3934,11 +3925,121 @@ i {
   margin-right: 1%;
 }
 
-/* line 3, ../sass/map.scss */
+/* line 3, ../sass/_loader.scss */
+.cs-loader-inner {
+  position: absolute;
+  top: 2%;
+  width: 100%;
+  color: #000;
+  padding: 0;
+  text-align: center;
+}
+/* line 10, ../sass/_loader.scss */
+.cs-loader-inner label {
+  font-size: 4rem;
+  opacity: 0;
+  display: inline-block;
+}
+/* line 15, ../sass/_loader.scss */
+.cs-loader-inner label:first-child {
+  color: #F38F9A;
+}
+/* line 18, ../sass/_loader.scss */
+.cs-loader-inner label:nth-of-type(2) {
+  color: #355E7E;
+}
+/* line 21, ../sass/_loader.scss */
+.cs-loader-inner label:nth-of-type(3) {
+  color: #F8B195;
+}
+/* line 24, ../sass/_loader.scss */
+.cs-loader-inner label:nth-of-type(4) {
+  color: #F38F9A;
+}
+/* line 27, ../sass/_loader.scss */
+.cs-loader-inner label:nth-of-type(5) {
+  color: #355E7E;
+}
+/* line 30, ../sass/_loader.scss */
+.cs-loader-inner label:nth-of-type(6) {
+  color: #F8B195;
+}
+/* line 33, ../sass/_loader.scss */
+.cs-loader-inner .anim:nth-of-type(6) {
+  -moz-animation: anim 2s ease-in-out infinite;
+  -webkit-animation: anim 2s ease-in-out infinite;
+  /* Safari 4.0 - 8.0 */
+  animation: anim 2s ease-in-out infinite;
+}
+/* line 38, ../sass/_loader.scss */
+.cs-loader-inner .anim:nth-of-type(5) {
+  -moz-animation: anim 2s ease-in-out 0.1s infinite;
+  -webkit-animation: anim 2s ease-in-out 0.1s infinite;
+  /* Safari 4.0 - 8.0 */
+  animation: anim 2s ease-in-out 0.1s infinite;
+}
+/* line 43, ../sass/_loader.scss */
+.cs-loader-inner .anim:nth-of-type(4) {
+  -moz-animation: anim 2s ease-in-out 0.2s infinite;
+  -webkit-animation: anim 2s ease-in-out 0.2s infinite;
+  /* Safari 4.0 - 8.0 */
+  animation: anim 2s ease-in-out 0.2s infinite;
+}
+/* line 48, ../sass/_loader.scss */
+.cs-loader-inner .anim:nth-of-type(3) {
+  -moz-animation: anim 2s ease-in-out 0.3s infinite;
+  -webkit-animation: anim 2s ease-in-out 0.3s infinite;
+  /* Safari 4.0 - 8.0 */
+  animation: anim 2s ease-in-out 0.3s infinite;
+}
+/* line 53, ../sass/_loader.scss */
+.cs-loader-inner .anim:nth-of-type(2) {
+  -moz-animation: anim 2s ease-in-out 0.4s infinite;
+  -webkit-animation: anim 2s ease-in-out 0.4s infinite;
+  /* Safari 4.0 - 8.0 */
+  animation: anim 2s ease-in-out 0.4s infinite;
+}
+/* line 58, ../sass/_loader.scss */
+.cs-loader-inner .anim:nth-of-type(1) {
+  -moz-animation: anim 2s ease-in-out 0.5s infinite;
+  -webkit-animation: anim 2s ease-in-out 0.5s infinite;
+  /* Safari 4.0 - 8.0 */
+  animation: anim 2s ease-in-out 0.5s infinite;
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+}
+@-webkit-keyframes anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+}
+/* line 4, ../sass/map.scss */
 .container {
   position: relative;
 }
-/* line 5, ../sass/map.scss */
+/* line 6, ../sass/map.scss */
 .container #overlayChargement {
   display: none;
   position: fixed;
@@ -3950,7 +4051,7 @@ i {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
 }
-/* line 15, ../sass/map.scss */
+/* line 16, ../sass/map.scss */
 .container #overlayChargement .analyse {
   position: absolute;
   width: 100%;
@@ -3960,32 +4061,32 @@ i {
   color: white;
   font-size: 5vw;
 }
-/* line 25, ../sass/map.scss */
+/* line 26, ../sass/map.scss */
 .container .content {
   height: 83%;
 }
-/* line 28, ../sass/map.scss */
+/* line 29, ../sass/map.scss */
 .container .map {
   width: 100%;
   height: auto;
 }
-/* line 32, ../sass/map.scss */
+/* line 33, ../sass/map.scss */
 .container .group_btn {
   width: 100%;
   position: relative;
 }
-/* line 35, ../sass/map.scss */
+/* line 36, ../sass/map.scss */
 .container .group_btn form {
   position: absolute;
   width: 30%;
   margin-left: 34%;
 }
-/* line 39, ../sass/map.scss */
+/* line 40, ../sass/map.scss */
 .container .group_btn form .container_input {
   display: inline-block;
   position: relative;
 }
-/* line 42, ../sass/map.scss */
+/* line 43, ../sass/map.scss */
 .container .group_btn form .container_input input {
   position: absolute;
   top: 0;
@@ -3994,12 +4095,12 @@ i {
   height: 100%;
   opacity: 0;
 }
-/* line 50, ../sass/map.scss */
+/* line 51, ../sass/map.scss */
 .container .group_btn form .container_input label {
   font-size: 3vw;
   display: block;
 }
-/* line 58, ../sass/map.scss */
+/* line 59, ../sass/map.scss */
 .container .group_btn .help_map {
   position: absolute;
   animation: tremblement 2s ease-in 1s infinite;
@@ -4007,15 +4108,15 @@ i {
   margin-left: 55%;
   font-size: 2.7vw;
 }
-/* line 64, ../sass/map.scss */
+/* line 65, ../sass/map.scss */
 .container .group_btn .help_map .fa-circle {
   color: #F38F9A;
 }
-/* line 67, ../sass/map.scss */
+/* line 68, ../sass/map.scss */
 .container .group_btn .help_map .fa-question {
   color: #fff;
 }
-/* line 72, ../sass/map.scss */
+/* line 73, ../sass/map.scss */
 .container .popup2 {
   display: flex;
   align-items: center;
@@ -4033,7 +4134,7 @@ i {
   color: #355E7E;
   font-size: 24px;
 }
-/* line 88, ../sass/map.scss */
+/* line 89, ../sass/map.scss */
 .container .popup2 .sous-titre2 {
   color: #F38F9A;
   font-size: 2.2rem;
@@ -4041,7 +4142,7 @@ i {
   margin-bottom: 4%;
   display: block;
 }
-/* line 96, ../sass/map.scss */
+/* line 97, ../sass/map.scss */
 .container .badPicture {
   position: absolute;
   top: -30%;
@@ -4056,12 +4157,12 @@ i {
   font-size: 1.5rem;
   border-radius: 10px;
 }
-/* line 109, ../sass/map.scss */
+/* line 110, ../sass/map.scss */
 .container .badPicture .fa-stack {
   margin-bottom: 2%;
   font-size: 2rem;
 }
-/* line 112, ../sass/map.scss */
+/* line 113, ../sass/map.scss */
 .container .badPicture .fa-stack .fa-times {
   color: #fff;
 }
@@ -4095,101 +4196,7 @@ i {
     margin-left: 55%;
   }
 }
-/* line 151, ../sass/map.scss */
+/* line 152, ../sass/map.scss */
 .cs-loader-inner {
-  position: absolute;
   top: 44%;
-  width: 100%;
-  color: #000;
-  padding: 0;
-  text-align: center;
-}
-/* line 158, ../sass/map.scss */
-.cs-loader-inner label {
-  font-size: 4rem;
-  opacity: 0;
-  display: inline-block;
-}
-/* line 163, ../sass/map.scss */
-.cs-loader-inner label:first-child {
-  color: #F07381;
-}
-/* line 166, ../sass/map.scss */
-.cs-loader-inner label:nth-child(2) {
-  color: #355E7E;
-}
-/* line 169, ../sass/map.scss */
-.cs-loader-inner label:nth-child(3) {
-  color: #F8B195;
-}
-/* line 172, ../sass/map.scss */
-.cs-loader-inner label:nth-child(4) {
-  color: #F07381;
-}
-/* line 175, ../sass/map.scss */
-.cs-loader-inner label:nth-child(5) {
-  color: #355E7E;
-}
-/* line 178, ../sass/map.scss */
-.cs-loader-inner label:nth-child(6) {
-  color: #F8B195;
-}
-/* line 181, ../sass/map.scss */
-.cs-loader-inner .anim:nth-child(6) {
-  -webkit-animation: anim 2s infinite ease-in-out;
-  animation: anim 2s infinite ease-in-out;
-}
-/* line 185, ../sass/map.scss */
-.cs-loader-inner .anim:nth-child(5) {
-  -webkit-animation: anim 2s 100ms infinite ease-in-out;
-  animation: anim 2s 100ms infinite ease-in-out;
-}
-/* line 189, ../sass/map.scss */
-.cs-loader-inner .anim:nth-child(4) {
-  -webkit-animation: anim 2s 200ms infinite ease-in-out;
-  animation: anim 2s 200ms infinite ease-in-out;
-}
-/* line 193, ../sass/map.scss */
-.cs-loader-inner .anim:nth-child(3) {
-  -webkit-animation: anim 2s 300ms infinite ease-in-out;
-  animation: anim 2s 300ms infinite ease-in-out;
-}
-/* line 197, ../sass/map.scss */
-.cs-loader-inner .anim:nth-child(2) {
-  -webkit-animation: anim 2s 400ms infinite ease-in-out;
-  animation: anim 2s 400ms infinite ease-in-out;
-}
-/* line 201, ../sass/map.scss */
-.cs-loader-inner .anim:nth-child(1) {
-  -webkit-animation: anim 2s 500ms infinite ease-in-out;
-  animation: anim 2s 500ms infinite ease-in-out;
-}
-
-@keyframes anim {
-  0% {
-    opacity: 0;
-    transform: translateX(-300px);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(300px);
-  }
-}
-@-webkit-keyframes anim {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-300px);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(300px);
-  }
 }

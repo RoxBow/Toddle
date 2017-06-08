@@ -1,290 +1,156 @@
 @import "general";
-.overlay {
-    position: absolute;
-    display: none;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+@import "artwork";
 
 .container {
+  font-weight: 600;
+  #handclick {
+    top: 71%;
+    left: 57%;
+  }
+  .consignes {
+    text-align: center;
+    font-size: 18px;
+    color: $blueToddle;
+    width: 80%;
+    margin: 0 auto;
     font-weight: 600;
-    #win{
+  }
+  .leftBloc {
+    overflow: hidden;
+    width: 48%;
+    height: 500px;
+    float: left;
+    margin-left: 1%;
+    position: relative;
+    .souscontainer {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      canvas {
         position: absolute;
+        top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        z-index: 10000;
-        display: none;
-        .title{
-          font-weight: 600;
-          color: $pinkToddle;
-          font-size: 54px;
-        }
-        .titlesuite{
-          color: $pinkToddle;
-          font-size: 42px;
-        }
-        .content-win{
-            width: 70%;
-            height: 67%;
-            margin-left: 15%;
-            margin-top: 13%;
-            padding-top: 3.5%;
-            background-color: white;
-            border-radius: 50px;
-            text-align: center;
-            color: $blueToddle;
-            font-size: 26px;
-            p{
-              width: 70%;
-              margin-left: 15%;
-            }
-            hr {
-              border: 3px solid $pinkToddle;
-              border-radius: 25px;
-              width: 70%;
-              margin: 3% auto;
-            }
-            .continuer{
-              color: #fff;
-              background-color: $blueToddle;
-              width: 35%;
-              height: 75px;
-              border-radius: 50px;
-              font-size: 30px;
-              margin: 4% 0;
-            }
-            .name{
-              color: $pinkToddle;
-            }
-            .parentheses{
-              color: $blueToddle;
-              font-weight: bold;
-            }
-        } 
+      }
+      #myCanvas {
+        z-index: 0;
+      }
+      #myCanvas2 {
+        z-index: 2;
+      }
     }
-    #loose{
+  }
+  .rightBloc {
+    width: 50%;
+    float: right;
+    .code {
+      padding: 10px;
+      background-color: #F2F2F2;
+      width: 96%;
+      font-family: $mainFont, "Inconsolata", "Arial";
+      font-size: 26px;
+      height: 202px;
+      overflow-y: auto;
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: $pinkToddle;
+      }
+
+      &::-webkit-scrollbar {
+        width: 7px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 20px;
+        background-color: $blueToddle;
+      }
+      .cadre {
+        border: 1px solid $pinkToddle;
+        padding: 5px;
+        content: "";
+        border-radius: 20px;
+        #noircache,
+        #varcache,
+        #rougecache,
+        #dtcache,
+        #ctcache,
+        #dlcache {
+          visibility: hidden;
+          color: white;
+        }
+      }
+    }
+    // .code
+    .etiquettes {
+      .etiq {
+        z-index: 10;
+        border-radius: 25px;
+        width: 20%;
+        padding: 15px;
+        background: $blueToddle;
+        color: #fff;
+        text-align: center;
         position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        z-index: 10000;
-        display: none;
-        .title{
-          font-weight: 600;
-          color: $pinkToddle;
-          font-size: 54px;
-        }
-        .content-loose{
-            width: 70%;
-            height: 45%;
-            margin-top: 20%;
-            margin-left: 15%;
-            padding-top: 2%;
-            background-color: white;
-            border-radius: 50px;
-            text-align: center;
-            color: $blueToddle;
-            font-size: 26px;
-            p{
-              width: 75%;
-              margin-left: 12.5%;
-            }
-            hr {
-              border: 3px solid $pinkToddle;
-              border-radius: 25px;
-              width: 70%;
-              margin: 3% auto;
-            }
-            .rechercher{
-              color: #fff;
-              background-color: $blueToddle;
-              width: 35%;
-              height: 75px;
-              border-radius: 50px;
-              font-size: 35px;
-              margin-top: 0.5%;
-            }
-            .name{
-              color: $pinkToddle;
-            }
-        } 
+      }
+      #rouge {
+        top: 57%;
+        left: 52%;
+      }
+      #cligne {
+        top: 57%;
+        left: 77%;
+      }
+      #ctriangle {
+        top: 75%;
+        left: 77%;
+      }
+      #dligne {
+        top: 75%;
+        left: 52%;
+      }
+      #dtriangle {
+        top: 66%;
+        left: 77%;
+      }
+      #noir {
+        top: 66%;
+        left: 52%;
+      }
     }
-    #handclick{
-        top: 71%;
-        left: 57%;
-        z-index: 10000;
-        animation-duration: 2s;
-        animation-name: slide;
-        animation-iteration-count: infinite;
+    .bouton {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $pinkToddle;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      color: white;
+      &:active {
+        background-color: $blueToddle;
+      }
     }
-    h2 {
-        text-align: center;
-        font-size: 24px;
-        padding-bottom: 10px;
+    #valider {
+      top: 83%;
+      left: 59%;
     }
-    .consignes {
-        text-align: center;
-        font-size: 18px;
-        color: $blueToddle;
-        width: 80%;
-        margin: 0 auto;
-        font-weight: 600;
+    #undo {
+      top: 83%;
+      left: 84%;
     }
-    .leftBloc {
-        overflow: hidden;
-        width: 48%;
-        height: 500px;
-        float: left;
-        margin-left: 1%;
-        position: relative;
-        .souscontainer{
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            canvas{
-                position: absolute;
-                top: 0;
-                width: 100%;
-                height: 100%;
-            }
-            #myCanvas{
-                z-index: 0;
-            }
-            #myCanvas2{
-                z-index: 2;
-            }
-        }
-    }
-    .rightBloc {
-        width: 50%;
-        float: right;
-        .code {
-            padding: 10px;
-            background-color: #F2F2F2;
-            width: 96%;
-            font-family: "GothamRounded", "Inconsolata", "Arial";
-            font-size: 26px;
-            height: 202px;
-            overflow-y: auto;
-            &::-webkit-scrollbar-track
-            {
-                
-                border-radius: 10px;
-                background-color: $pinkToddle;
-            }
-
-            &::-webkit-scrollbar
-            {
-                width: 7px;
-            }
-
-            &::-webkit-scrollbar-thumb
-            {
-                border-radius: 20px;
-                background-color: $blueToddle;
-            }
-            .cadre{
-                border: 1px solid $pinkToddle;
-                padding: 5px;
-                content: "";
-                border-radius: 20px;
-                #noircache{
-                    visibility: hidden;
-                    color: white;
-                }
-                #varcache{
-                    visibility: hidden;
-                    color: white;
-                }
-                #rougecache{
-                    visibility: hidden;
-                    color: white;
-                }
-                #dtcache{
-                    visibility: hidden;
-                    color: white;
-                }
-                #ctcache{
-                    visibility: hidden;
-                    color: white;
-                }
-                #dlcache{
-                    visibility: hidden;
-                    color: white;
-                }
-            }
-        } // .code
-        .etiquettes{
-            .etiq {
-                z-index: 10;
-                border-radius: 25px;
-                width: 20%;
-                padding: 15px;
-                background: $blueToddle;
-                color: #fff;
-                text-align: center;
-                position: absolute;
-            }
-            #rouge{
-                top: 57%;
-                left: 52%;
-            }
-            #cligne{
-                top: 57%;
-                left: 77%;
-            }
-            #ctriangle{
-                top: 75%;
-                left: 77%;
-            }
-            #dligne{
-                top: 75%;
-                left: 52%;
-            }
-            #dtriangle{
-                top: 66%;
-                left: 77%;
-            }
-            #noir{
-                top: 66%;
-                left: 52%;
-            }
-        }
-        .bouton{
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: $pinkToddle;
-            width: 60px;
-            height: 60px;
-            border-radius: 30px;
-            color: white;
-            &:active{
-                background-color: $blueToddle;
-            }
-        }
-        #valider{
-            top: 83%;
-            left: 59%;
-        }
-        #undo{
-            top: 83%;
-            left: 84%;
-        }
-    } // .rightBloc
+  }
+  // .rightBloc
 }
+
 @keyframes slide {
   from {
     top: 71%;
-    left:57%;
+    left: 57%;
   }
 
   to {
     top: 30%;
-    left:78%;
+    left: 78%;
   }
 }

@@ -3847,78 +3847,69 @@ body.lock {
   overflow: hidden;
 }
 
-/* ###### HANDCLICK TUTO ###### */
-/* line 73, ../sass/general.scss */
-#handclick {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  z-index: 100;
-}
-
 /* ### Class colors ### */
-/* line 82, ../sass/general.scss */
+/* line 73, ../sass/general.scss */
 .rose {
   color: #F38F9A;
 }
 
-/* line 86, ../sass/general.scss */
+/* line 77, ../sass/general.scss */
 .bleu {
   color: #355E7E;
 }
 
-/* line 90, ../sass/general.scss */
+/* line 81, ../sass/general.scss */
 .beige {
   color: #F8B195;
 }
 
-/* line 94, ../sass/general.scss */
+/* line 85, ../sass/general.scss */
 .noir {
   color: black;
 }
 
-/* line 98, ../sass/general.scss */
+/* line 89, ../sass/general.scss */
 .medium {
   font-weight: 600;
 }
 
-/* line 102, ../sass/general.scss */
+/* line 93, ../sass/general.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 106, ../sass/general.scss */
+/* line 97, ../sass/general.scss */
 .center {
   text-align: center;
 }
 
-/* line 110, ../sass/general.scss */
+/* line 101, ../sass/general.scss */
 i {
   font-style: italic;
 }
 
-/* line 114, ../sass/general.scss */
+/* line 105, ../sass/general.scss */
 .fa {
   vertical-align: middle;
 }
 
-/* line 118, ../sass/general.scss */
+/* line 109, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 123, ../sass/general.scss */
+/* line 114, ../sass/general.scss */
 .container * {
   outline: none;
   box-sizing: border-box;
 }
-/* line 127, ../sass/general.scss */
+/* line 118, ../sass/general.scss */
 .container input {
   font-family: "GothamRounded", "Arial", "Helvetica", sans-serif;
 }
-/* line 131, ../sass/general.scss */
+/* line 122, ../sass/general.scss */
 .container footer {
   width: 100%;
   text-align: right;
@@ -3927,7 +3918,7 @@ i {
   bottom: 1%;
   right: 1%;
 }
-/* line 138, ../sass/general.scss */
+/* line 129, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
@@ -3935,100 +3926,7 @@ i {
   margin-right: 1%;
 }
 
-/* line 4, ../sass/index.scss */
-body {
-  overflow: hidden;
-}
-
-/* line 8, ../sass/index.scss */
-.container {
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-/* line 12, ../sass/index.scss */
-.container .content {
-  margin-top: 50vh;
-  /* poussé de la moitié de hauteur de viewport */
-  transform: translateY(-52%);
-  /* tiré de la moitié de sa propre hauteur */
-}
-/* line 15, ../sass/index.scss */
-.container .content .blocBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* line 19, ../sass/index.scss */
-.container .content .blocBtn .btnChoice {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
-  opacity: 0;
-  right: 100%;
-}
-/* line 28, ../sass/index.scss */
-.container .content .blocBtn button {
-  font-size: 25px;
-  margin: 20px;
-  padding: 25px;
-  background: none;
-  border: 2px solid #355E7E;
-  color: #355E7E;
-  -webkit-transition: color .4s, background .4s;
-  /* For Safari 3.1 to 6.0 */
-  transition: color .4s, background .4s;
-}
-/* line 38, ../sass/index.scss */
-.container .content .blocBtn button.selected {
-  background: #355E7E;
-  color: #fff;
-}
-/* line 42, ../sass/index.scss */
-.container .content .blocBtn button.launch {
-  position: relative;
-  background: #355E7E;
-  padding: 2%;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  font-size: 3.5vw;
-  margin: auto;
-  position: relative;
-}
-/* line 57, ../sass/index.scss */
-.container .content .valide {
-  display: none;
-  opacity: 0;
-  z-index: 100;
-  font-size: 4vw;
-  position: absolute;
-  right: 100%;
-  left: 0;
-  transition: all .5s;
-}
-/* line 66, ../sass/index.scss */
-.container .content .valide .fa-circle {
-  color: #F38F9A;
-}
-/* line 69, ../sass/index.scss */
-.container .content .valide.active {
-  right: 0;
-  left: 50%;
-  margin-left: -40px;
-  opacity: 1;
-}
-/* line 77, ../sass/index.scss */
-.container .logo_toddle {
-  width: 40%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-}
-
-/* line 85, ../sass/index.scss */
+/* line 3, ../sass/_loader.scss */
 .cs-loader-inner {
   position: absolute;
   top: 2%;
@@ -4037,72 +3935,72 @@ body {
   padding: 0;
   text-align: center;
 }
-/* line 92, ../sass/index.scss */
+/* line 10, ../sass/_loader.scss */
 .cs-loader-inner label {
   font-size: 4rem;
   opacity: 0;
   display: inline-block;
 }
-/* line 97, ../sass/index.scss */
+/* line 15, ../sass/_loader.scss */
 .cs-loader-inner label:first-child {
-  color: #F07381;
+  color: #F38F9A;
 }
-/* line 100, ../sass/index.scss */
+/* line 18, ../sass/_loader.scss */
 .cs-loader-inner label:nth-of-type(2) {
   color: #355E7E;
 }
-/* line 103, ../sass/index.scss */
+/* line 21, ../sass/_loader.scss */
 .cs-loader-inner label:nth-of-type(3) {
   color: #F8B195;
 }
-/* line 106, ../sass/index.scss */
+/* line 24, ../sass/_loader.scss */
 .cs-loader-inner label:nth-of-type(4) {
-  color: #F07381;
+  color: #F38F9A;
 }
-/* line 109, ../sass/index.scss */
+/* line 27, ../sass/_loader.scss */
 .cs-loader-inner label:nth-of-type(5) {
   color: #355E7E;
 }
-/* line 112, ../sass/index.scss */
+/* line 30, ../sass/_loader.scss */
 .cs-loader-inner label:nth-of-type(6) {
   color: #F8B195;
 }
-/* line 115, ../sass/index.scss */
+/* line 33, ../sass/_loader.scss */
 .cs-loader-inner .anim:nth-of-type(6) {
   -moz-animation: anim 2s ease-in-out infinite;
   -webkit-animation: anim 2s ease-in-out infinite;
   /* Safari 4.0 - 8.0 */
   animation: anim 2s ease-in-out infinite;
 }
-/* line 120, ../sass/index.scss */
+/* line 38, ../sass/_loader.scss */
 .cs-loader-inner .anim:nth-of-type(5) {
   -moz-animation: anim 2s ease-in-out 0.1s infinite;
   -webkit-animation: anim 2s ease-in-out 0.1s infinite;
   /* Safari 4.0 - 8.0 */
   animation: anim 2s ease-in-out 0.1s infinite;
 }
-/* line 125, ../sass/index.scss */
+/* line 43, ../sass/_loader.scss */
 .cs-loader-inner .anim:nth-of-type(4) {
   -moz-animation: anim 2s ease-in-out 0.2s infinite;
   -webkit-animation: anim 2s ease-in-out 0.2s infinite;
   /* Safari 4.0 - 8.0 */
   animation: anim 2s ease-in-out 0.2s infinite;
 }
-/* line 130, ../sass/index.scss */
+/* line 48, ../sass/_loader.scss */
 .cs-loader-inner .anim:nth-of-type(3) {
   -moz-animation: anim 2s ease-in-out 0.3s infinite;
   -webkit-animation: anim 2s ease-in-out 0.3s infinite;
   /* Safari 4.0 - 8.0 */
   animation: anim 2s ease-in-out 0.3s infinite;
 }
-/* line 135, ../sass/index.scss */
+/* line 53, ../sass/_loader.scss */
 .cs-loader-inner .anim:nth-of-type(2) {
   -moz-animation: anim 2s ease-in-out 0.4s infinite;
   -webkit-animation: anim 2s ease-in-out 0.4s infinite;
   /* Safari 4.0 - 8.0 */
   animation: anim 2s ease-in-out 0.4s infinite;
 }
-/* line 140, ../sass/index.scss */
+/* line 58, ../sass/_loader.scss */
 .cs-loader-inner .anim:nth-of-type(1) {
   -moz-animation: anim 2s ease-in-out 0.5s infinite;
   -webkit-animation: anim 2s ease-in-out 0.5s infinite;
@@ -4137,4 +4035,90 @@ body {
     opacity: 0;
     transform: translateX(300px);
   }
+}
+/* line 5, ../sass/index.scss */
+.container {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+/* line 9, ../sass/index.scss */
+.container .content {
+  margin-top: 50vh;
+  /* poussé de la moitié de hauteur de viewport */
+  transform: translateY(-52%);
+  /* tiré de la moitié de sa propre hauteur */
+}
+/* line 12, ../sass/index.scss */
+.container .content .blocBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 16, ../sass/index.scss */
+.container .content .blocBtn .btnChoice {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  opacity: 0;
+  right: 100%;
+}
+/* line 25, ../sass/index.scss */
+.container .content .blocBtn button {
+  font-size: 25px;
+  margin: 20px;
+  padding: 25px;
+  background: none;
+  border: 2px solid #355E7E;
+  color: #355E7E;
+  -webkit-transition: color .4s, background .4s;
+  /* For Safari 3.1 to 6.0 */
+  transition: color .4s, background .4s;
+}
+/* line 35, ../sass/index.scss */
+.container .content .blocBtn button.selected {
+  background: #355E7E;
+  color: #fff;
+}
+/* line 39, ../sass/index.scss */
+.container .content .blocBtn button.launch {
+  position: relative;
+  background: #355E7E;
+  padding: 2%;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 3.5vw;
+  margin: auto;
+}
+/* line 53, ../sass/index.scss */
+.container .content .valide {
+  display: none;
+  opacity: 0;
+  z-index: 100;
+  font-size: 4vw;
+  position: absolute;
+  right: 100%;
+  left: 0;
+  transition: all .5s;
+}
+/* line 62, ../sass/index.scss */
+.container .content .valide .fa-circle {
+  color: #F38F9A;
+}
+/* line 65, ../sass/index.scss */
+.container .content .valide.active {
+  right: 0;
+  left: 50%;
+  margin-left: -40px;
+  opacity: 1;
+}
+/* line 73, ../sass/index.scss */
+.container .logo_toddle {
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }

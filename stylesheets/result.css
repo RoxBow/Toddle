@@ -3846,78 +3846,69 @@ body.lock {
   overflow: hidden;
 }
 
-/* ###### HANDCLICK TUTO ###### */
-/* line 73, ../sass/general.scss */
-#handclick {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  z-index: 100;
-}
-
 /* ### Class colors ### */
-/* line 82, ../sass/general.scss */
+/* line 73, ../sass/general.scss */
 .rose {
   color: #F38F9A;
 }
 
-/* line 86, ../sass/general.scss */
+/* line 77, ../sass/general.scss */
 .bleu {
   color: #355E7E;
 }
 
-/* line 90, ../sass/general.scss */
+/* line 81, ../sass/general.scss */
 .beige {
   color: #F8B195;
 }
 
-/* line 94, ../sass/general.scss */
+/* line 85, ../sass/general.scss */
 .noir {
   color: black;
 }
 
-/* line 98, ../sass/general.scss */
+/* line 89, ../sass/general.scss */
 .medium {
   font-weight: 600;
 }
 
-/* line 102, ../sass/general.scss */
+/* line 93, ../sass/general.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 106, ../sass/general.scss */
+/* line 97, ../sass/general.scss */
 .center {
   text-align: center;
 }
 
-/* line 110, ../sass/general.scss */
+/* line 101, ../sass/general.scss */
 i {
   font-style: italic;
 }
 
-/* line 114, ../sass/general.scss */
+/* line 105, ../sass/general.scss */
 .fa {
   vertical-align: middle;
 }
 
-/* line 118, ../sass/general.scss */
+/* line 109, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 123, ../sass/general.scss */
+/* line 114, ../sass/general.scss */
 .container * {
   outline: none;
   box-sizing: border-box;
 }
-/* line 127, ../sass/general.scss */
+/* line 118, ../sass/general.scss */
 .container input {
   font-family: "GothamRounded", "Arial", "Helvetica", sans-serif;
 }
-/* line 131, ../sass/general.scss */
+/* line 122, ../sass/general.scss */
 .container footer {
   width: 100%;
   text-align: right;
@@ -3926,7 +3917,7 @@ i {
   bottom: 1%;
   right: 1%;
 }
-/* line 138, ../sass/general.scss */
+/* line 129, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
@@ -4034,16 +4025,16 @@ i {
   color: #355E7E;
 }
 
-/* line 94, ../sass/result.scss */
+/* line 91, ../sass/result.scss */
 .popup {
   display: flex;
   align-items: center;
 }
-/* line 97, ../sass/result.scss */
+/* line 94, ../sass/result.scss */
 .popup label {
   font-size: 2vw;
 }
-/* line 100, ../sass/result.scss */
+/* line 97, ../sass/result.scss */
 .popup input {
   border-radius: 50px;
   color: #355E7E;
@@ -4054,27 +4045,27 @@ i {
   margin: 5% 0;
   font-size: 3vw;
 }
-/* line 110, ../sass/result.scss */
+/* line 107, ../sass/result.scss */
 .popup button {
   font-size: 3.5vw;
 }
-/* line 112, ../sass/result.scss */
+/* line 109, ../sass/result.scss */
 .popup button .fa-circle {
   color: #355E7E;
 }
 
-/* line 118, ../sass/result.scss */
+/* line 115, ../sass/result.scss */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* line 122, ../sass/result.scss */
+/* line 119, ../sass/result.scss */
 ::-webkit-scrollbar-track {
   background-color: #F38F9A;
   border-radius: 8px;
 }
 
-/* line 127, ../sass/result.scss */
+/* line 124, ../sass/result.scss */
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #355E7E;

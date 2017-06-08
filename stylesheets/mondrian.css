@@ -3846,78 +3846,69 @@ body.lock {
   overflow: hidden;
 }
 
-/* ###### HANDCLICK TUTO ###### */
-/* line 73, ../sass/general.scss */
-#handclick {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  z-index: 100;
-}
-
 /* ### Class colors ### */
-/* line 82, ../sass/general.scss */
+/* line 73, ../sass/general.scss */
 .rose {
   color: #F38F9A;
 }
 
-/* line 86, ../sass/general.scss */
+/* line 77, ../sass/general.scss */
 .bleu {
   color: #355E7E;
 }
 
-/* line 90, ../sass/general.scss */
+/* line 81, ../sass/general.scss */
 .beige {
   color: #F8B195;
 }
 
-/* line 94, ../sass/general.scss */
+/* line 85, ../sass/general.scss */
 .noir {
   color: black;
 }
 
-/* line 98, ../sass/general.scss */
+/* line 89, ../sass/general.scss */
 .medium {
   font-weight: 600;
 }
 
-/* line 102, ../sass/general.scss */
+/* line 93, ../sass/general.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 106, ../sass/general.scss */
+/* line 97, ../sass/general.scss */
 .center {
   text-align: center;
 }
 
-/* line 110, ../sass/general.scss */
+/* line 101, ../sass/general.scss */
 i {
   font-style: italic;
 }
 
-/* line 114, ../sass/general.scss */
+/* line 105, ../sass/general.scss */
 .fa {
   vertical-align: middle;
 }
 
-/* line 118, ../sass/general.scss */
+/* line 109, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 123, ../sass/general.scss */
+/* line 114, ../sass/general.scss */
 .container * {
   outline: none;
   box-sizing: border-box;
 }
-/* line 127, ../sass/general.scss */
+/* line 118, ../sass/general.scss */
 .container input {
   font-family: "GothamRounded", "Arial", "Helvetica", sans-serif;
 }
-/* line 131, ../sass/general.scss */
+/* line 122, ../sass/general.scss */
 .container footer {
   width: 100%;
   text-align: right;
@@ -3926,7 +3917,7 @@ i {
   bottom: 1%;
   right: 1%;
 }
-/* line 138, ../sass/general.scss */
+/* line 129, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
@@ -3934,7 +3925,16 @@ i {
   margin-right: 1%;
 }
 
-/* line 2, ../sass/mondrian.scss */
+/* line 3, ../sass/_artwork.scss */
+#handclick {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  z-index: 10000;
+  animation: 2s slide infinite;
+}
+
+/* line 11, ../sass/_artwork.scss */
 .overlay {
   position: absolute;
   display: none;
@@ -3944,12 +3944,15 @@ i {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 11, ../sass/mondrian.scss */
-.container {
-  font-weight: 600;
+/* line 20, ../sass/_artwork.scss */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 10px;
 }
-/* line 13, ../sass/mondrian.scss */
-.container #win {
+
+/* line 26, ../sass/_artwork.scss */
+#win {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -3957,44 +3960,44 @@ i {
   z-index: 10000;
   display: none;
 }
-/* line 20, ../sass/mondrian.scss */
-.container #win .title {
+/* line 33, ../sass/_artwork.scss */
+#win .title {
   font-weight: 600;
   color: #F38F9A;
   font-size: 54px;
 }
-/* line 25, ../sass/mondrian.scss */
-.container #win .titlesuite {
+/* line 38, ../sass/_artwork.scss */
+#win .titlesuite {
   color: #F38F9A;
   font-size: 42px;
 }
-/* line 29, ../sass/mondrian.scss */
-.container #win .content-win {
+/* line 42, ../sass/_artwork.scss */
+#win .content-win {
   width: 70%;
-  height: 63%;
+  height: 65%;
   margin-left: 15%;
   margin-top: 13%;
-  padding-top: 3.5%;
+  padding-top: 2%;
   background-color: white;
   border-radius: 50px;
   text-align: center;
   color: #355E7E;
   font-size: 26px;
 }
-/* line 40, ../sass/mondrian.scss */
-.container #win .content-win p {
-  width: 70%;
+/* line 53, ../sass/_artwork.scss */
+#win .content-win p {
+  width: 75%;
   margin-left: 15%;
 }
-/* line 44, ../sass/mondrian.scss */
-.container #win .content-win hr {
+/* line 57, ../sass/_artwork.scss */
+#win .content-win hr {
   border: 3px solid #F38F9A;
   border-radius: 25px;
   width: 70%;
   margin: 3% auto;
 }
-/* line 50, ../sass/mondrian.scss */
-.container #win .content-win .continuer {
+/* line 63, ../sass/_artwork.scss */
+#win .content-win .continuer {
   color: #fff;
   background-color: #355E7E;
   width: 35%;
@@ -4003,17 +4006,18 @@ i {
   font-size: 30px;
   margin: 4% 0;
 }
-/* line 59, ../sass/mondrian.scss */
-.container #win .content-win .name {
+/* line 72, ../sass/_artwork.scss */
+#win .content-win .name {
   color: #F38F9A;
 }
-/* line 62, ../sass/mondrian.scss */
-.container #win .content-win .parentheses {
+/* line 75, ../sass/_artwork.scss */
+#win .content-win .parentheses {
   color: #355E7E;
   font-weight: bold;
 }
-/* line 68, ../sass/mondrian.scss */
-.container #loose {
+
+/* line 84, ../sass/_artwork.scss */
+#loose {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -4021,14 +4025,14 @@ i {
   z-index: 10000;
   display: none;
 }
-/* line 75, ../sass/mondrian.scss */
-.container #loose .title {
+/* line 91, ../sass/_artwork.scss */
+#loose .title {
   font-weight: 600;
   color: #F38F9A;
   font-size: 54px;
 }
-/* line 80, ../sass/mondrian.scss */
-.container #loose .content-loose {
+/* line 96, ../sass/_artwork.scss */
+#loose .content-loose {
   width: 70%;
   height: 45%;
   margin-top: 20%;
@@ -4040,20 +4044,20 @@ i {
   color: #355E7E;
   font-size: 26px;
 }
-/* line 91, ../sass/mondrian.scss */
-.container #loose .content-loose p {
+/* line 107, ../sass/_artwork.scss */
+#loose .content-loose p {
   width: 75%;
   margin-left: 12.5%;
 }
-/* line 95, ../sass/mondrian.scss */
-.container #loose .content-loose hr {
+/* line 111, ../sass/_artwork.scss */
+#loose .content-loose hr {
   border: 3px solid #F38F9A;
   border-radius: 25px;
   width: 70%;
   margin: 3% auto;
 }
-/* line 101, ../sass/mondrian.scss */
-.container #loose .content-loose .rechercher {
+/* line 117, ../sass/_artwork.scss */
+#loose .content-loose .rechercher {
   color: #fff;
   background-color: #355E7E;
   width: 35%;
@@ -4062,26 +4066,31 @@ i {
   font-size: 35px;
   margin-top: 0.5%;
 }
-/* line 110, ../sass/mondrian.scss */
-.container #loose .content-loose .name {
+/* line 126, ../sass/_artwork.scss */
+#loose .content-loose .name {
   color: #F38F9A;
 }
-/* line 115, ../sass/mondrian.scss */
+
+@keyframes slide {
+  from {
+    top: 67%;
+    left: 47%;
+  }
+  to {
+    top: 67%;
+    left: 65%;
+  }
+}
+/* line 4, ../sass/mondrian.scss */
+.container {
+  font-weight: 600;
+}
+/* line 6, ../sass/mondrian.scss */
 .container #handclick {
   top: 72%;
   left: 58.5%;
-  z-index: 10000;
-  animation-duration: 2s;
-  animation-name: slide;
-  animation-iteration-count: infinite;
 }
-/* line 123, ../sass/mondrian.scss */
-.container h2 {
-  text-align: center;
-  font-size: 24px;
-  padding-bottom: 10px;
-}
-/* line 128, ../sass/mondrian.scss */
+/* line 10, ../sass/mondrian.scss */
 .container .consignes {
   text-align: center;
   font-size: 18px;
@@ -4090,7 +4099,7 @@ i {
   margin: 0 auto;
   font-weight: 600;
 }
-/* line 136, ../sass/mondrian.scss */
+/* line 18, ../sass/mondrian.scss */
 .container .leftBloc {
   overflow: hidden;
   outline: 1px solid;
@@ -4100,25 +4109,25 @@ i {
   margin-left: 1%;
   position: relative;
 }
-/* line 144, ../sass/mondrian.scss */
+/* line 26, ../sass/mondrian.scss */
 .container .leftBloc .souscontainer {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
-/* line 148, ../sass/mondrian.scss */
+/* line 30, ../sass/mondrian.scss */
 .container .leftBloc .souscontainer canvas {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
 }
-/* line 156, ../sass/mondrian.scss */
+/* line 38, ../sass/mondrian.scss */
 .container .rightBloc {
   width: 50%;
   float: right;
 }
-/* line 159, ../sass/mondrian.scss */
+/* line 41, ../sass/mondrian.scss */
 .container .rightBloc .code {
   padding: 10px;
   background-color: #F2F2F2;
@@ -4127,21 +4136,21 @@ i {
   height: 250px;
   overflow-y: auto;
 }
-/* line 166, ../sass/mondrian.scss */
+/* line 48, ../sass/mondrian.scss */
 .container .rightBloc .code::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: #F38F9A;
 }
-/* line 172, ../sass/mondrian.scss */
+/* line 53, ../sass/mondrian.scss */
 .container .rightBloc .code::-webkit-scrollbar {
   width: 7px;
 }
-/* line 177, ../sass/mondrian.scss */
+/* line 57, ../sass/mondrian.scss */
 .container .rightBloc .code::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background-color: #355E7E;
 }
-/* line 182, ../sass/mondrian.scss */
+/* line 61, ../sass/mondrian.scss */
 .container .rightBloc .code input {
   border: none;
   border-bottom: 1px solid black;
@@ -4153,11 +4162,11 @@ i {
   width: 50px;
   margin: 0 4px;
 }
-/* line 192, ../sass/mondrian.scss */
+/* line 71, ../sass/mondrian.scss */
 .container .rightBloc .code input:disabled {
   background: #000;
 }
-/* line 196, ../sass/mondrian.scss */
+/* line 75, ../sass/mondrian.scss */
 .container .rightBloc .code button {
   padding: 12px 16px;
   background: none;
@@ -4170,65 +4179,65 @@ i {
   font-weight: bold;
   font-size: 16px;
 }
-/* line 208, ../sass/mondrian.scss */
+/* line 87, ../sass/mondrian.scss */
 .container .rightBloc .code input[type=number]::-webkit-inner-spin-button,
 .container .rightBloc .code input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
-/* line 213, ../sass/mondrian.scss */
+/* line 93, ../sass/mondrian.scss */
 .container .rightBloc .selection {
   margin-top: 50px;
   display: flex;
 }
-/* line 216, ../sass/mondrian.scss */
+/* line 96, ../sass/mondrian.scss */
 .container .rightBloc .selection .choix {
   text-align: center;
 }
-/* line 218, ../sass/mondrian.scss */
+/* line 98, ../sass/mondrian.scss */
 .container .rightBloc .selection .choix span:nth-child(1) {
   float: left;
 }
-/* line 221, ../sass/mondrian.scss */
+/* line 101, ../sass/mondrian.scss */
 .container .rightBloc .selection .choix span:nth-child(3) {
   float: right;
 }
-/* line 225, ../sass/mondrian.scss */
+/* line 105, ../sass/mondrian.scss */
 .container .rightBloc .selection .selecteurs {
   font-size: 50px;
   margin: 3px;
 }
-/* line 228, ../sass/mondrian.scss */
+/* line 108, ../sass/mondrian.scss */
 .container .rightBloc .selection .selecteurs:active {
   color: #F8B195;
 }
-/* line 232, ../sass/mondrian.scss */
+/* line 112, ../sass/mondrian.scss */
 .container .rightBloc .selection .valeurs {
   color: #F38F9A;
   font-size: 25px;
   margin-top: 15px;
   display: inline-block;
 }
-/* line 238, ../sass/mondrian.scss */
+/* line 118, ../sass/mondrian.scss */
 .container .rightBloc .selection .couleur, .container .rightBloc .selection .orientationLigne, .container .rightBloc .selection .nombre {
   text-align: center;
   width: 27%;
 }
-/* line 242, ../sass/mondrian.scss */
+/* line 122, ../sass/mondrian.scss */
 .container .rightBloc .selection .orientationLigne {
   width: 45%;
   margin-left: 4%;
   margin-right: 4%;
 }
-/* line 249, ../sass/mondrian.scss */
+/* line 129, ../sass/mondrian.scss */
 .container .rightBloc .selection .nombre {
   width: 16%;
 }
-/* line 254, ../sass/mondrian.scss */
+/* line 135, ../sass/mondrian.scss */
 .container .rightBloc .controles {
   margin-top: 35px;
   display: flex;
 }
-/* line 257, ../sass/mondrian.scss */
+/* line 138, ../sass/mondrian.scss */
 .container .rightBloc .controles .bouton2 {
   z-index: 1100;
   display: flex;
@@ -4241,15 +4250,15 @@ i {
   bottom: 10%;
   margin-left: 13%;
 }
-/* line 268, ../sass/mondrian.scss */
+/* line 149, ../sass/mondrian.scss */
 .container .rightBloc .controles .bouton2 > img {
   width: 70%;
 }
-/* line 271, ../sass/mondrian.scss */
+/* line 152, ../sass/mondrian.scss */
 .container .rightBloc .controles .bouton2:active {
   background-color: #355E7E;
 }
-/* line 275, ../sass/mondrian.scss */
+/* line 156, ../sass/mondrian.scss */
 .container .rightBloc .controles .bouton {
   display: flex;
   align-items: center;
@@ -4261,16 +4270,16 @@ i {
   color: white;
   margin-left: 5%;
 }
-/* line 285, ../sass/mondrian.scss */
+/* line 166, ../sass/mondrian.scss */
 .container .rightBloc .controles .bouton:active {
   background-color: #355E7E;
 }
-/* line 290, ../sass/mondrian.scss */
+/* line 171, ../sass/mondrian.scss */
 .container .rightBloc .controles #ajouter {
   width: 40%;
   margin-left: 5%;
 }
-/* line 294, ../sass/mondrian.scss */
+/* line 175, ../sass/mondrian.scss */
 .container .rightBloc .controles .bva {
   color: #fff;
   background-color: #355E7E;
@@ -4280,7 +4289,7 @@ i {
   font-size: 20px;
   margin-top: 0.5%;
 }
-/* line 302, ../sass/mondrian.scss */
+/* line 183, ../sass/mondrian.scss */
 .container .rightBloc .controles .bva:active {
   background-color: #F38F9A;
 }

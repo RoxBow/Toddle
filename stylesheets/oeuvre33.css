@@ -3846,78 +3846,69 @@ body.lock {
   overflow: hidden;
 }
 
-/* ###### HANDCLICK TUTO ###### */
-/* line 73, ../sass/general.scss */
-#handclick {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  z-index: 100;
-}
-
 /* ### Class colors ### */
-/* line 82, ../sass/general.scss */
+/* line 73, ../sass/general.scss */
 .rose {
   color: #F38F9A;
 }
 
-/* line 86, ../sass/general.scss */
+/* line 77, ../sass/general.scss */
 .bleu {
   color: #355E7E;
 }
 
-/* line 90, ../sass/general.scss */
+/* line 81, ../sass/general.scss */
 .beige {
   color: #F8B195;
 }
 
-/* line 94, ../sass/general.scss */
+/* line 85, ../sass/general.scss */
 .noir {
   color: black;
 }
 
-/* line 98, ../sass/general.scss */
+/* line 89, ../sass/general.scss */
 .medium {
   font-weight: 600;
 }
 
-/* line 102, ../sass/general.scss */
+/* line 93, ../sass/general.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 106, ../sass/general.scss */
+/* line 97, ../sass/general.scss */
 .center {
   text-align: center;
 }
 
-/* line 110, ../sass/general.scss */
+/* line 101, ../sass/general.scss */
 i {
   font-style: italic;
 }
 
-/* line 114, ../sass/general.scss */
+/* line 105, ../sass/general.scss */
 .fa {
   vertical-align: middle;
 }
 
-/* line 118, ../sass/general.scss */
+/* line 109, ../sass/general.scss */
 .container {
   background: #fff;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 123, ../sass/general.scss */
+/* line 114, ../sass/general.scss */
 .container * {
   outline: none;
   box-sizing: border-box;
 }
-/* line 127, ../sass/general.scss */
+/* line 118, ../sass/general.scss */
 .container input {
   font-family: "GothamRounded", "Arial", "Helvetica", sans-serif;
 }
-/* line 131, ../sass/general.scss */
+/* line 122, ../sass/general.scss */
 .container footer {
   width: 100%;
   text-align: right;
@@ -3926,7 +3917,7 @@ i {
   bottom: 1%;
   right: 1%;
 }
-/* line 138, ../sass/general.scss */
+/* line 129, ../sass/general.scss */
 .container footer img {
   width: 5%;
   display: inline-block;
@@ -3934,7 +3925,16 @@ i {
   margin-right: 1%;
 }
 
-/* line 2, ../sass/oeuvre33.scss */
+/* line 3, ../sass/_artwork.scss */
+#handclick {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  z-index: 10000;
+  animation: 2s slide infinite;
+}
+
+/* line 11, ../sass/_artwork.scss */
 .overlay {
   position: absolute;
   display: none;
@@ -3944,25 +3944,15 @@ i {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 10, ../sass/oeuvre33.scss */
-.container {
-  font-weight: 600;
+/* line 20, ../sass/_artwork.scss */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 10px;
 }
-/* line 12, ../sass/oeuvre33.scss */
-.container .valDeg {
-  transition: all .5s;
-}
-/* line 15, ../sass/oeuvre33.scss */
-.container #handclick {
-  top: 72.5%;
-  left: 62.3%;
-  z-index: 1000;
-  animation-duration: 2s;
-  animation-name: slide;
-  animation-iteration-count: infinite;
-}
-/* line 23, ../sass/oeuvre33.scss */
-.container #win {
+
+/* line 26, ../sass/_artwork.scss */
+#win {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -3970,44 +3960,44 @@ i {
   z-index: 10000;
   display: none;
 }
-/* line 30, ../sass/oeuvre33.scss */
-.container #win .title {
+/* line 33, ../sass/_artwork.scss */
+#win .title {
   font-weight: 600;
   color: #F38F9A;
   font-size: 54px;
 }
-/* line 35, ../sass/oeuvre33.scss */
-.container #win .titlesuite {
+/* line 38, ../sass/_artwork.scss */
+#win .titlesuite {
   color: #F38F9A;
   font-size: 42px;
 }
-/* line 39, ../sass/oeuvre33.scss */
-.container #win .content-win {
+/* line 42, ../sass/_artwork.scss */
+#win .content-win {
   width: 70%;
-  height: 70%;
+  height: 65%;
   margin-left: 15%;
-  margin-top: 11.5%;
-  padding-top: 3.5%;
+  margin-top: 13%;
+  padding-top: 2%;
   background-color: white;
   border-radius: 50px;
   text-align: center;
   color: #355E7E;
   font-size: 26px;
 }
-/* line 50, ../sass/oeuvre33.scss */
-.container #win .content-win p {
-  width: 70%;
+/* line 53, ../sass/_artwork.scss */
+#win .content-win p {
+  width: 75%;
   margin-left: 15%;
 }
-/* line 54, ../sass/oeuvre33.scss */
-.container #win .content-win hr {
+/* line 57, ../sass/_artwork.scss */
+#win .content-win hr {
   border: 3px solid #F38F9A;
   border-radius: 25px;
   width: 70%;
   margin: 3% auto;
 }
-/* line 60, ../sass/oeuvre33.scss */
-.container #win .content-win .continuer {
+/* line 63, ../sass/_artwork.scss */
+#win .content-win .continuer {
   color: #fff;
   background-color: #355E7E;
   width: 35%;
@@ -4016,17 +4006,18 @@ i {
   font-size: 30px;
   margin: 4% 0;
 }
-/* line 69, ../sass/oeuvre33.scss */
-.container #win .content-win .name {
+/* line 72, ../sass/_artwork.scss */
+#win .content-win .name {
   color: #F38F9A;
 }
-/* line 72, ../sass/oeuvre33.scss */
-.container #win .content-win .parentheses {
+/* line 75, ../sass/_artwork.scss */
+#win .content-win .parentheses {
   color: #355E7E;
   font-weight: bold;
 }
-/* line 78, ../sass/oeuvre33.scss */
-.container #loose {
+
+/* line 84, ../sass/_artwork.scss */
+#loose {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -4034,14 +4025,14 @@ i {
   z-index: 10000;
   display: none;
 }
-/* line 85, ../sass/oeuvre33.scss */
-.container #loose .title {
+/* line 91, ../sass/_artwork.scss */
+#loose .title {
   font-weight: 600;
   color: #F38F9A;
   font-size: 54px;
 }
-/* line 90, ../sass/oeuvre33.scss */
-.container #loose .content-loose {
+/* line 96, ../sass/_artwork.scss */
+#loose .content-loose {
   width: 70%;
   height: 45%;
   margin-top: 20%;
@@ -4053,20 +4044,20 @@ i {
   color: #355E7E;
   font-size: 26px;
 }
-/* line 101, ../sass/oeuvre33.scss */
-.container #loose .content-loose p {
+/* line 107, ../sass/_artwork.scss */
+#loose .content-loose p {
   width: 75%;
   margin-left: 12.5%;
 }
-/* line 105, ../sass/oeuvre33.scss */
-.container #loose .content-loose hr {
+/* line 111, ../sass/_artwork.scss */
+#loose .content-loose hr {
   border: 3px solid #F38F9A;
   border-radius: 25px;
   width: 70%;
   margin: 3% auto;
 }
-/* line 111, ../sass/oeuvre33.scss */
-.container #loose .content-loose .rechercher {
+/* line 117, ../sass/_artwork.scss */
+#loose .content-loose .rechercher {
   color: #fff;
   background-color: #355E7E;
   width: 35%;
@@ -4075,17 +4066,36 @@ i {
   font-size: 35px;
   margin-top: 0.5%;
 }
-/* line 120, ../sass/oeuvre33.scss */
-.container #loose .content-loose .name {
+/* line 126, ../sass/_artwork.scss */
+#loose .content-loose .name {
   color: #F38F9A;
 }
-/* line 125, ../sass/oeuvre33.scss */
-.container h2 {
-  text-align: center;
-  font-size: 24px;
-  padding-bottom: 10px;
+
+@keyframes slide {
+  from {
+    top: 67%;
+    left: 47%;
+  }
+  to {
+    top: 67%;
+    left: 65%;
+  }
 }
-/* line 130, ../sass/oeuvre33.scss */
+/* line 4, ../sass/oeuvre33.scss */
+.container {
+  font-weight: 600;
+}
+/* line 6, ../sass/oeuvre33.scss */
+.container .valDeg {
+  transition: all .5s;
+}
+/* line 9, ../sass/oeuvre33.scss */
+.container #handclick {
+  top: 72.5%;
+  left: 62.3%;
+  z-index: 1000;
+}
+/* line 14, ../sass/oeuvre33.scss */
 .container .consignes {
   text-align: center;
   font-size: 18px;
@@ -4093,14 +4103,14 @@ i {
   width: 80%;
   margin-left: 10%;
 }
-/* line 137, ../sass/oeuvre33.scss */
+/* line 21, ../sass/oeuvre33.scss */
 .container .leftBloc {
   width: 50%;
   float: left;
   padding-left: 1%;
   position: relative;
 }
-/* line 142, ../sass/oeuvre33.scss */
+/* line 26, ../sass/oeuvre33.scss */
 .container .leftBloc .souscontainer {
   width: 470px;
   height: 500px;
@@ -4108,35 +4118,35 @@ i {
   position: relative;
   border: 1px solid;
 }
-/* line 149, ../sass/oeuvre33.scss */
+/* line 33, ../sass/oeuvre33.scss */
 .container .leftBloc .souscontainer .content canvas {
   position: absolute;
 }
-/* line 155, ../sass/oeuvre33.scss */
+/* line 39, ../sass/oeuvre33.scss */
 .container .rightBloc {
   width: 50%;
   float: right;
 }
-/* line 158, ../sass/oeuvre33.scss */
+/* line 42, ../sass/oeuvre33.scss */
 .container .rightBloc .code {
   padding: 10px;
   background-color: rgba(188, 188, 188, 0.2);
   width: 90%;
 }
-/* line 162, ../sass/oeuvre33.scss */
+/* line 46, ../sass/oeuvre33.scss */
 .container .rightBloc .code .alinea1 {
   line-height: 44px;
   margin-left: 7px;
 }
-/* line 166, ../sass/oeuvre33.scss */
+/* line 50, ../sass/oeuvre33.scss */
 .container .rightBloc .code .alinea2 {
   margin-left: 14px;
 }
-/* line 169, ../sass/oeuvre33.scss */
+/* line 53, ../sass/oeuvre33.scss */
 .container .rightBloc .code .alinea3 {
   margin-left: 21px;
 }
-/* line 173, ../sass/oeuvre33.scss */
+/* line 57, ../sass/oeuvre33.scss */
 .container .rightBloc .columns {
   display: flex;
   margin-top: 5px;
@@ -4144,26 +4154,26 @@ i {
   font-size: 20px;
   width: 100%;
 }
-/* line 179, ../sass/oeuvre33.scss */
+/* line 63, ../sass/oeuvre33.scss */
 .container .rightBloc .columns .gauche {
   width: 65%;
 }
-/* line 181, ../sass/oeuvre33.scss */
+/* line 65, ../sass/oeuvre33.scss */
 .container .rightBloc .columns .gauche div {
   text-align: right;
 }
-/* line 185, ../sass/oeuvre33.scss */
+/* line 69, ../sass/oeuvre33.scss */
 .container .rightBloc .columns .droite {
   width: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* line 192, ../sass/oeuvre33.scss */
+/* line 75, ../sass/oeuvre33.scss */
 .container .rightBloc .columns .angleBarre {
   margin-left: 70%;
 }
-/* line 195, ../sass/oeuvre33.scss */
+/* line 78, ../sass/oeuvre33.scss */
 .container .rightBloc .columns .buttonV {
   display: flex;
   align-items: center;
@@ -4175,11 +4185,11 @@ i {
   color: white;
   font-size: 15px;
 }
-/* line 205, ../sass/oeuvre33.scss */
+/* line 88, ../sass/oeuvre33.scss */
 .container .rightBloc .columns .buttonV:active {
   background-color: #355E7E;
 }
-/* line 209, ../sass/oeuvre33.scss */
+/* line 92, ../sass/oeuvre33.scss */
 .container .rightBloc .columns .range {
   width: 100%;
   background: #355E7E;
@@ -4187,7 +4197,7 @@ i {
   margin: 12px 0;
   border-radius: 10px;
 }
-/* line 215, ../sass/oeuvre33.scss */
+/* line 98, ../sass/oeuvre33.scss */
 .container .rightBloc .columns .range .ui-slider-handle {
   background: #F38F9A;
   border-radius: 15px;

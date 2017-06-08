@@ -1,195 +1,83 @@
 // ### Style oeuvre2.php ###
 @import "general";
-.overlay{
-    position: absolute;
-    display: none;
+@import "artwork";
+
+.container {
+  font-weight: 600;
+  canvas {
+    margin: 0 auto;
+    width: 700px;
+    height: 450px;
+    display: block;
+  }
+
+  .consignes {
+    text-align: center;
+    font-size: 18px;
+    color: $blueToddle;
+  }
+  .result {
     width: 100%;
-    height: 100%;
-    z-index: 10;
-    background-color: rgba(0,0,0,0.5);
-}
-.container{
-    font-weight: 600;
-    #win{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        z-index: 10000;
-        display: none;
-        .title{
-          font-weight: 600;
-          color: $pinkToddle;
-          font-size: 54px;
-        }
-        .titlesuite{
-          color: $pinkToddle;
-          font-size: 42px;
-        }
-        .content-win{
-            width: 70%;
-            height: 65%;
-            margin-left: 15%;
-            margin-top: 13%;
-            padding-top: 2%;
-            background-color: white;
-            border-radius: 50px;
-            text-align: center;
-            color: $blueToddle;
-            font-size: 26px;
-            p{
-              width: 70%;
-              margin-left: 15%;
-            }
-            hr {
-              border: 3px solid $pinkToddle;
-              border-radius: 25px;
-              width: 70%;
-              margin: 3% auto;
-            }
-            .continuer{
-              color: #fff;
-              background-color: $blueToddle;
-              width: 35%;
-              height: 75px;
-              border-radius: 50px;
-              font-size: 30px;
-              margin: 4% 0;
-            }
-            .name{
-              color: $pinkToddle;
-            }
-            .parentheses{
-              color: $blueToddle;
-              font-weight: bold;
-            }
-        } 
+    text-align: center;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px;
+    #valider {
+      right: 62.5px;
     }
-    #loose{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        z-index: 10000;
-        display: none;
-        .title{
-          font-weight: 600;
-          color: $pinkToddle;
-          font-size: 54px;
-        }
-        .content-loose{
-            width: 70%;
-            height: 45%;
-            margin-top: 20%;
-            margin-left: 15%;
-            padding-top: 2%;
-            background-color: white;
-            border-radius: 50px;
-            text-align: center;
-            color: $blueToddle;
-            font-size: 26px;
-            p{
-              width: 75%;
-              margin-left: 12.5%;
-            }
-            hr {
-              border: 3px solid $pinkToddle;
-              border-radius: 25px;
-              width: 70%;
-              margin: 3% auto;
-            }
-            .rechercher{
-              color: #fff;
-              background-color: $blueToddle;
-              width: 35%;
-              height: 75px;
-              border-radius: 50px;
-              font-size: 35px;
-              margin-top: 0.5%;
-            }
-            .name{
-              color: $pinkToddle;
-            }
-        } 
+  }
+  .result p {
+    margin: 5px 0;
+  }
+  .button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 37.5px;
+    background-color: $pinkToddle;
+    color: white;
+    font-size: 75px;
+    margin-top: -25%;
+    position: absolute;
+    &:active {
+      background-color: $blueToddle;
     }
-    canvas {
-        margin: 0 auto;
-        width: 700px;
-        height: 450px;
-        display: block;
+    &#moins, &#plus {
+      background: none;
+      border-radius: 0;
+      font-size: 5rem;
+      .fa {
+        color: $pinkToddle;
+      }
     }
-    h2{
-        text-align: center;
-        font-size: 24px;
-        padding-bottom: 10px;
+    &#moins {
+      left: 50px;
     }
-    .consignes{
-        text-align: center;
-        font-size: 18px;
-        color: $blueToddle;
+    &#plus {
+      right: 50px;
     }
-    .result{
-        width: 100%;
-        text-align: center;
-        font-size: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: -5px;
-        #valider{
-            right: 62.5px;
-        }
+  }
+  .buttonV {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $pinkToddle;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    & > img {
+      width: 50%;
     }
-    .result p{
-        margin: 5px 0;
+    &:active {
+      background-color: $blueToddle;
     }
-    .button{
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        width: 75px;
-        height: 75px;
-        border-radius: 37.5px;
-        background-color: $pinkToddle;
-        color: white;
-        font-size: 75px;
-        margin-top: -25%;
-        position: absolute;
-        &:active{
-            background-color: $blueToddle;
-        }
-        &#moins, &#plus {
-            background: none;
-            border-radius: 0;
-            font-size: 5rem;
-            .fa {
-                color: $pinkToddle;
-            }
-        }
-        &#moins{
-            left: 50px;
-        }
-        &#plus{
-            right: 50px;
-        }
-    }
-    .buttonV{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $pinkToddle;
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        color: white;
-        font-size: 15px;
-        position: absolute;
-        & > img{
-            width: 50%;
-        }
-        &:active{
-            background-color: $blueToddle;
-        }
-    }
-    
+  }
+
 }

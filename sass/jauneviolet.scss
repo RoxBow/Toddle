@@ -1,133 +1,18 @@
 @import "general";
-
-.overlay {
-  position: absolute;
-  display: none;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+@import "artwork";
 
 .container {
   font-weight: 600;
   #handclick {
     top: 83%;
     left: 42%;
-    z-index: 10000;
     animation-duration: 3s;
     animation-name: slide;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
     animation-play-state: running;
   }
-  #win {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 10000;
-    display: none;
-    .title {
-      font-weight: 600;
-      color: $pinkToddle;
-      font-size: 54px;
-    }
-    .titlesuite {
-      color: $pinkToddle;
-      font-size: 42px;
-    }
-    .content-win {
-      width: 70%;
-      height: 67%;
-      margin-left: 15%;
-      margin-top: 12%;
-      padding-top: 3.5%;
-      background-color: white;
-      border-radius: 50px;
-      text-align: center;
-      color: $blueToddle;
-      font-size: 26px;
-      p {
-        width: 70%;
-        margin-left: 15%;
-      }
-      hr {
-        border: 3px solid $pinkToddle;
-        border-radius: 25px;
-        width: 70%;
-        margin: 3% auto;
-      }
-      .continuer {
-        color: #fff;
-        background-color: $blueToddle;
-        width: 35%;
-        height: 75px;
-        border-radius: 50px;
-        font-size: 30px;
-        margin: 4% 0;
-      }
-      .name {
-        color: $pinkToddle;
-      }
-      .parentheses {
-        color: $blueToddle;
-        font-weight: bold;
-      }
-    }
-  }
-  #loose {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 10000;
-    display: none;
-    .title {
-      font-weight: 600;
-      color: $pinkToddle;
-      font-size: 54px;
-    }
-    .content-loose {
-      width: 70%;
-      height: 45%;
-      margin-top: 20%;
-      margin-left: 15%;
-      padding-top: 2%;
-      background-color: white;
-      border-radius: 50px;
-      text-align: center;
-      color: $blueToddle;
-      font-size: 26px;
-      p {
-        width: 75%;
-        margin-left: 12.5%;
-      }
-      hr {
-        border: 3px solid $pinkToddle;
-        border-radius: 25px;
-        width: 70%;
-        margin: 3% auto;
-      }
-      .rechercher {
-        color: #fff;
-        background-color: $blueToddle;
-        width: 35%;
-        height: 75px;
-        border-radius: 50px;
-        font-size: 35px;
-        margin-top: 0.5%;
-      }
-      .name {
-        color: $pinkToddle;
-      }
-    }
-  }
-  h2 {
-    text-align: center;
-    font-size: 24px;
-    padding-bottom: 10px;
-  }
+
   .consignes {
     text-align: center;
     font-size: 18px;
@@ -266,21 +151,9 @@
       }
     }
   }
-}
+} // container
 
-footer {
-  width: 100%;
-  text-align: right;
-  position: absolute;
-  bottom: 1%;
-  right: 1%;
-  img {
-    width: 5%;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 1%;
-  }
-}
+
 
 @keyframes slide {
   0% {

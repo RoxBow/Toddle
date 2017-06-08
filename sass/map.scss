@@ -1,4 +1,5 @@
 @import "general";
+@import "loader";
 
 .container {
   position: relative;
@@ -149,89 +150,5 @@
 }
 
 .cs-loader-inner {
-  position: absolute;
   top: 44%;
-  width: 100%;
-  color: #000;
-  padding: 0;
-  text-align: center;
-  label {
-    font-size: 4rem;
-    opacity: 0;
-    display: inline-block;
-  }
-  label:first-child {
-    color: #F07381;
-  }
-  label:nth-child(2) {
-    color: #355E7E;
-  }
-  label:nth-child(3) {
-    color: #F8B195;
-  }
-  label:nth-child(4) {
-    color: #F07381;
-  }
-  label:nth-child(5) {
-    color: #355E7E;
-  }
-  label:nth-child(6) {
-    color: #F8B195;
-  }
-  .anim:nth-child(6) {
-    -webkit-animation: anim 2s infinite ease-in-out;
-    animation: anim 2s infinite ease-in-out;
-  }
-  .anim:nth-child(5) {
-    -webkit-animation: anim 2s 100ms infinite ease-in-out;
-    animation: anim 2s 100ms infinite ease-in-out;
-  }
-  .anim:nth-child(4) {
-    -webkit-animation: anim 2s 200ms infinite ease-in-out;
-    animation: anim 2s 200ms infinite ease-in-out;
-  }
-  .anim:nth-child(3) {
-    -webkit-animation: anim 2s 300ms infinite ease-in-out;
-    animation: anim 2s 300ms infinite ease-in-out;
-  }
-  .anim:nth-child(2) {
-    -webkit-animation: anim 2s 400ms infinite ease-in-out;
-    animation: anim 2s 400ms infinite ease-in-out;
-  }
-  .anim:nth-child(1) {
-    -webkit-animation: anim 2s 500ms infinite ease-in-out;
-    animation: anim 2s 500ms infinite ease-in-out;
-  }
-}
-
-// .cs-loader-inner
-
-@keyframes anim {
-  0% {
-    opacity: 0;
-    transform: translateX(-300px);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(300px);
-  }
-}
-
-@-webkit-keyframes anim {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-300px);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(300px);
-  }
 }

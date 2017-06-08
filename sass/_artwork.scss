@@ -1,0 +1,142 @@
+@import "variables";
+
+#handclick {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  z-index: 10000;
+  animation: 2s slide infinite;
+}
+
+.overlay {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+#win {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  display: none;
+  .title {
+    font-weight: 600;
+    color: $pinkToddle;
+    font-size: 54px;
+  }
+  .titlesuite {
+    color: $pinkToddle;
+    font-size: 42px;
+  }
+  .content-win {
+    width: 70%;
+    height: 65%;
+    margin-left: 15%;
+    margin-top: 13%;
+    padding-top: 2%;
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    color: $blueToddle;
+    font-size: 26px;
+    p {
+      width: 75%;
+      margin-left: 15%;
+    }
+    hr {
+      border: 3px solid $pinkToddle;
+      border-radius: 25px;
+      width: 70%;
+      margin: 3% auto;
+    }
+    .continuer {
+      color: #fff;
+      background-color: $blueToddle;
+      width: 35%;
+      height: 75px;
+      border-radius: 50px;
+      font-size: 30px;
+      margin: 4% 0;
+    }
+    .name {
+      color: $pinkToddle;
+    }
+    .parentheses {
+      color: $blueToddle;
+      font-weight: bold;
+    }
+  }
+}
+
+// #win
+
+#loose {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  display: none;
+  .title {
+    font-weight: 600;
+    color: $pinkToddle;
+    font-size: 54px;
+  }
+  .content-loose {
+    width: 70%;
+    height: 45%;
+    margin-top: 20%;
+    margin-left: 15%;
+    padding-top: 2%;
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    color: $blueToddle;
+    font-size: 26px;
+    p {
+      width: 75%;
+      margin-left: 12.5%;
+    }
+    hr {
+      border: 3px solid $pinkToddle;
+      border-radius: 25px;
+      width: 70%;
+      margin: 3% auto;
+    }
+    .rechercher {
+      color: #fff;
+      background-color: $blueToddle;
+      width: 35%;
+      height: 75px;
+      border-radius: 50px;
+      font-size: 35px;
+      margin-top: 0.5%;
+    }
+    .name {
+      color: $pinkToddle;
+    }
+  }
+} // #loose
+
+@keyframes slide {
+  from {
+    top: 67%;
+    left: 47%;
+  }
+
+  to {
+    top: 67%;
+    left: 65%;
+  }
+}
