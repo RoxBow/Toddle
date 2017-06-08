@@ -223,3 +223,18 @@ if (dir=="en") {
     $("#caro").text("Project Manager");
     $("#antoine").html("Graphic<br>Designer");
 }
+
+/* Fonction pour detecter si l'appli est joué sur un iphone ou ipad pour gérer les événeents touch et click à la fois
+    On initialise une variable avec la valeur click et si on est sur iphone ou ipad, cette variable prend la valeur
+*/
+var touchOrClique = "click";
+var agentUtilisateur = navigator.userAgent.match(/i(Pad|Phone)/i);
+
+function touchOrClick(){
+    if (agentUtilisateur != null) {
+        if (navigator.userAgent.match(/i(Pad|Phone)/i)[0]=="iPhone"||ipadOrIphone[0]=='iPad') {
+            touchOrClique="touchstart";
+        }
+    }
+    return touchOrClique;
+}
