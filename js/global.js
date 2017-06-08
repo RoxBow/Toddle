@@ -233,7 +233,7 @@ var agentUtilisateur = navigator.userAgent.match(/i(Pad|Phone)/i);
 function touchOrClick(){
     if (agentUtilisateur != null) {
         if (navigator.userAgent.match(/i(Pad|Phone)/i)[0]=="iPhone"||ipadOrIphone[0]=='iPad') {
-            touchOrClique=""+touchOrClick()+"";
+            touchOrClique="touchstart";
         }
     }
     return touchOrClique;
