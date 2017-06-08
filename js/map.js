@@ -22,7 +22,7 @@ $(document).ready(function() {
   
     var countTouch = 0;
   
-    $("#cheat", ".container").on("touchstart", function() {
+    $("#cheat", ".container").on(""+touchOrClick()+"", function() {
       countTouch++;
       if(countTouch == 5){
         var levelCheat = prompt("Entre directement le niveau", "");
@@ -31,7 +31,7 @@ $(document).ready(function() {
       }
     });
     
-    $(document).on( "touchstart", function(e) {
+    $(document).on( ""+touchOrClick()+"", function(e) {
         // POPUP HELP
         if( $(".help_map").is(e.target) || $(".fa-question").is(e.target) ){
             $("#indiceBloc").fadeIn();

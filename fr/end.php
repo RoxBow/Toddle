@@ -35,7 +35,7 @@ if(!isset($_SESSION['pseudo']) ){
             var countClick = 0;
             
             // Two tap on toddle (end.php) -> Reset app
-            $("#reset",".content").on("touchstart", function () {
+            $("#reset",".content").on(""+touchOrClick()+"", function () {
                 countClick += 1;
                 if (countClick == 2) {
                     location.href = "../index.php";

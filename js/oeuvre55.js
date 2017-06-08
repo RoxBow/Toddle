@@ -101,7 +101,7 @@ function drawLigne(){
     }
 }
 
-$(".continuer").on("touchstart",function(){
+$(".continuer").on(""+touchOrClick()+"",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
@@ -118,11 +118,11 @@ $(".continuer").on("touchstart",function(){
     }
 });
 
-$(".rechercher").on("touchstart",function(){
+$(".rechercher").on(""+touchOrClick()+"",function(){
     $('#loose').fadeOut(500);
 });
 
-$("#valider").on("touchstart", function(){
+$("#valider").on(""+touchOrClick()+"", function(){
     if (dl == 3 && dt == 3 && couleurDeLigne=="red" && couleurDuTriangle=="black") {
         stopchrono(); // Arrête chrono
         // Save time user in DB

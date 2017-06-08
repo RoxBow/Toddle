@@ -64,7 +64,7 @@ $(document).ready(function() {
 
 
     //Selection left
-    $("#chaudG").on("touchstart", function(){
+    $("#chaudG").on(""+touchOrClick()+"", function(){
         $("#chaudG").addClass("rose");
         $("#chaudG").removeClass("bleu");
         $("#froidG").addClass("bleu");
@@ -75,7 +75,7 @@ $(document).ready(function() {
         colors();
 
     });
-    $("#froidG").on("touchstart", function(){
+    $("#froidG").on(""+touchOrClick()+"", function(){
         $("#chaudG").addClass("bleu");
         $("#chaudG").removeClass("rose");
         $("#froidG").addClass("rose");
@@ -86,7 +86,7 @@ $(document).ready(function() {
         colors();
     });
     //Selection right
-    $("#chaudD").on("touchstart", function(){
+    $("#chaudD").on(""+touchOrClick()+"", function(){
         $("#chaudD").addClass("rose");
         $("#chaudD").removeClass("bleu");
         $("#froidD").addClass("bleu");
@@ -96,7 +96,7 @@ $(document).ready(function() {
         dessiner2();
         colors2();
     });
-    $("#froidD").on("touchstart", function(){
+    $("#froidD").on(""+touchOrClick()+"", function(){
         $("#chaudD").addClass("bleu");
         $("#chaudD").removeClass("rose");
         $("#froidD").addClass("rose");
@@ -195,7 +195,7 @@ $(".continuer").click(function(){
     document.location.href = "result.php";
 });
 
-$("#valider").on("touchstart", function(){
+$("#valider").on(""+touchOrClick()+"", function(){
     if (nbGauche==7 && nbDroite==7 && gauche=="froid" && droite=="chaud") {
         stopchrono(); // Arrête chrono
         // Save time user in DB

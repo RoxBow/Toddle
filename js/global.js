@@ -101,7 +101,7 @@ $(document).ready(function () {
     var countClick = 0;
 
     // 3 tap on toddle img left (header) -> Skip level (oeuvres)
-    $("#skip","header").on("touchstart", function () {
+    $("#skip","header").on(""+touchOrClick()+"", function () {
         countClick += 1;
         if (countClick == 3) {
             nbrLevel++;
@@ -111,14 +111,14 @@ $(document).ready(function () {
     });
     
     //Positions crédits
-    $("footer>img").on("touchstart", function () {
+    $("footer>img").on(""+touchOrClick()+"", function () {
         $(".credits").css("display", "block");
         $(".credits").animate({
             marginTop: "0%"
         }, 1000);
     });
 
-    $("#croix").on("touchstart", function () {
+    $("#croix").on(""+touchOrClick()+"", function () {
         $(".credits").animate({ marginTop: "100%" }, 750);
         setTimeout(function () {
             $(".credits").css("display", "none");
@@ -126,7 +126,7 @@ $(document).ready(function () {
     });
 
     //Slider crédits
-    $("#chevronGauche").on("touchstart",function(){
+    $("#chevronGauche").on(""+touchOrClick()+"",function(){
         if (countSlider==1 || countSlider==2) {
             $("#sous-texte").animate({
                 marginLeft: "+=100%"
@@ -140,7 +140,7 @@ $(document).ready(function () {
         }
     });
     
-    $("#chevronDroite").on("touchstart",function(){
+    $("#chevronDroite").on(""+touchOrClick()+"",function(){
         if (countSlider==0 || countSlider==1) {
             $("#sous-texte").animate({
                 marginLeft: "-=100%"
@@ -233,7 +233,7 @@ var agentUtilisateur = navigator.userAgent.match(/i(Pad|Phone)/i);
 function touchOrClick(){
     if (agentUtilisateur != null) {
         if (navigator.userAgent.match(/i(Pad|Phone)/i)[0]=="iPhone"||ipadOrIphone[0]=='iPad') {
-            touchOrClique="touchstart";
+            touchOrClique=""+touchOrClick()+"";
         }
     }
     return touchOrClique;

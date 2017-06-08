@@ -87,7 +87,7 @@ if( !isset($_SESSION['pseudo']) ){
             $("#min").val(localMin);
             chrono();
             
-            $("#oeuvretrouve4go").on("touchstart", function() {
+            $("#oeuvretrouve4go").on(""+touchOrClick()+"", function() {
                 localStorage.setItem("seconde", $("#sec").val());
                 localStorage.setItem("minute", $("#min").val());
                 document.location.replace("oeuvre4.php");

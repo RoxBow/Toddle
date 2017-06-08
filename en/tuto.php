@@ -112,7 +112,7 @@ if( !isset($_SESSION['pseudo']) ){
     <script type="text/javascript">
         $(document).ready(function () {
             /* ### TUTO ### */
-            $('.lesson', '.lessons').on("touchstart", function (e) {
+            $('.lesson', '.lessons').on(""+touchOrClick()+"", function (e) {
                 e.preventDefault();
 
                 if ($(e.target).hasClass('understood')) {

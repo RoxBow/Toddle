@@ -327,7 +327,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
                 }, 500);
               });
             
-            $(document).on("touchstart", function (e) {
+            $(document).on(""+touchOrClick()+"", function (e) {
                 if( $(".fa-envelope").is(e.target) ){
                     $(".blocPoppin").fadeIn(); // Open popup
                 }
@@ -340,7 +340,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
             });
             
             // Check onclick if mail entered is correct
-            $(".sendMail").on("touchstart", function(e) {
+            $(".sendMail").on(""+touchOrClick()+"", function(e) {
                 if(validateEmail($("#mail").val()) === false){
                     e.preventDefault();
                     $(".error").text("Adresse mail invalide");

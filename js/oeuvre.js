@@ -66,7 +66,7 @@ $(window).bind('beforeunload',function(){
         var mouseX, mouseY;
 
 
-        $("#undo").on("touchstart", function(){
+        $("#undo").on(""+touchOrClick()+"", function(){
           if (cpush==0) {
             cUndo();
           }
@@ -75,7 +75,7 @@ $(window).bind('beforeunload',function(){
           }
         });
 
-        $("#valider").on("touchstart", function(){
+        $("#valider").on(""+touchOrClick()+"", function(){
           if (validation==0 && verification ==1) {
             $( "#rectangle,#carre,#rond" ).css("z-index","5");
             $( "#rouge,#jaune,#violet" ).css("display","block");
@@ -114,7 +114,7 @@ $(window).bind('beforeunload',function(){
         });
 
           // Redirection or not after level complete
-        $(".continuer").on("touchstart", function(){
+        $(".continuer").on(""+touchOrClick()+"", function(){
             if(levelUser < 5){
                 nbrLevel++;
                 localStorage.setItem("levelUser", nbrLevel);
@@ -127,7 +127,7 @@ $(window).bind('beforeunload',function(){
             }
         });
 
-        $(".rechercher").on("touchstart", function(){
+        $(".rechercher").on(""+touchOrClick()+"", function(){
           $('#loose').fadeOut(500);
         });
 

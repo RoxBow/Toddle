@@ -31,7 +31,7 @@ function init() {
 }
 
 //nombre de lignes
-$("#valider").on("touchstart",function(){
+$("#valider").on(""+touchOrClick()+"",function(){
     var lines=$("#nbLignes").text();
     if (lines==resultat){
         win();
@@ -40,7 +40,7 @@ $("#valider").on("touchstart",function(){
     }
 });
 
-$("#plus").on("touchstart",function(){
+$("#plus").on(""+touchOrClick()+"",function(){
     if (nbLignes>-1 && nbLignes <31 && nbLignes!=31) {
         nbLignes += 1;
         if (nbLignes==31) {
@@ -51,7 +51,7 @@ $("#plus").on("touchstart",function(){
     }
 
 });
-$("#moins").on("touchstart",function(){
+$("#moins").on(""+touchOrClick()+"",function(){
     if (nbLignes>=0 && nbLignes <=30) {
         nbLignes -= 1;
         if (nbLignes==-1) {
@@ -62,7 +62,7 @@ $("#moins").on("touchstart",function(){
     }
 });
 
-$(".continuer").on("touchstart",function(){
+$(".continuer").on(""+touchOrClick()+"",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
@@ -74,7 +74,7 @@ $(".continuer").on("touchstart",function(){
         document.location.replace("result.php");
     }
 });
-$(".rechercher").on("touchstart",function(){
+$(".rechercher").on(""+touchOrClick()+"",function(){
     $('#loose').fadeOut(500);
 });
 

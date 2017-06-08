@@ -74,7 +74,7 @@ function init() {
 
 }
 
-$("#poubelle").on("touchstart", function(){
+$("#poubelle").on(""+touchOrClick()+"", function(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
     ctx2.clearRect(0,0,canvas2.width,canvas2.height);
     ctx3.clearRect(0,0,canvas3.width,canvas3.height);
@@ -88,7 +88,7 @@ $("#poubelle").on("touchstart", function(){
     }
 });
 
-$("#couplus").on("touchstart",function(){
+$("#couplus").on(""+touchOrClick()+"",function(){
     if (couselect==2) {
         couselect=0;
         $("#couleur").text(couleurs[couselect]);
@@ -98,7 +98,7 @@ $("#couplus").on("touchstart",function(){
     };
 });
 
-$("#coumoins").on("touchstart",function(){
+$("#coumoins").on(""+touchOrClick()+"",function(){
     if (couselect==0) {
         couselect=2;
         $("#couleur").text(couleurs[couselect]);
@@ -108,7 +108,7 @@ $("#coumoins").on("touchstart",function(){
     };
 });
 
-$("#oriplus").on("touchstart",function(){
+$("#oriplus").on(""+touchOrClick()+"",function(){
     if (oriselect==1) {
         oriselect=0;
         $("#orientation").text(orientationLigne[oriselect]);
@@ -118,7 +118,7 @@ $("#oriplus").on("touchstart",function(){
     };
 });
 
-$("#orimoins").on("touchstart",function(){
+$("#orimoins").on(""+touchOrClick()+"",function(){
 
     if (oriselect==0) {
         oriselect=1;
@@ -129,7 +129,7 @@ $("#orimoins").on("touchstart",function(){
     };
 });
 
-$("#nbplus").on("touchstart",function(){
+$("#nbplus").on(""+touchOrClick()+"",function(){
     if (nbselect==10) {
         nbselect=0;
         $("#nombre").text(nbselect);
@@ -139,7 +139,7 @@ $("#nbplus").on("touchstart",function(){
     }
 });
 
-$("#nbmoins").on("touchstart",function(){
+$("#nbmoins").on(""+touchOrClick()+"",function(){
     if (nbselect==0) {
         nbselect=10;
         $("#nombre").text(nbselect);
@@ -150,7 +150,7 @@ $("#nbmoins").on("touchstart",function(){
 
 });
 
-$(".continuer").on("touchstart",function(){
+$(".continuer").on(""+touchOrClick()+"",function(){
     if(levelUser < 5){
         nbrLevel++;
         localStorage.setItem("levelUser", nbrLevel);
@@ -163,17 +163,17 @@ $(".continuer").on("touchstart",function(){
     }
 });
 
-$(".rechercher").on("touchstart",function(){
+$(".rechercher").on(""+touchOrClick()+"",function(){
     $('#loose').fadeOut(500);
 });
 
-$("#valider").on("touchstart", function(){
+$("#valider").on(""+touchOrClick()+"", function(){
     if (result==1 && result2==1 && result3==1 && result4==1 && result5==1 && result6==1) {
         win();
     } else lose();
 });
 
-$(".bva").on("touchstart", function() {
+$(".bva").on(""+touchOrClick()+"", function() {
     var colorLine = couleurs[couselect];
     var sens = orientationLigne[oriselect];
     var nb = nbselect;
