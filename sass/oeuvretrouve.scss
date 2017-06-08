@@ -36,10 +36,11 @@
       position: absolute;
       margin-top: -95px;
       margin-left: 25vw;
+      &:active {
+        background-color: $pinkToddle;
+      }
     }
-    .go:active {
-      background-color: $pinkToddle;
-    }
+
     .fonction {
       font-size: 32px;
       color: $pinkToddle;

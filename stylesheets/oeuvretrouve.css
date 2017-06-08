@@ -3966,33 +3966,33 @@ i {
   margin-top: -95px;
   margin-left: 25vw;
 }
-/* line 40, ../sass/oeuvretrouve.scss */
+/* line 39, ../sass/oeuvretrouve.scss */
 .container .congratulate .go:active, .container .congratulate2 .go:active {
   background-color: #F38F9A;
 }
-/* line 43, ../sass/oeuvretrouve.scss */
+/* line 44, ../sass/oeuvretrouve.scss */
 .container .congratulate .fonction, .container .congratulate2 .fonction {
   font-size: 32px;
   color: #F38F9A;
 }
-/* line 47, ../sass/oeuvretrouve.scss */
+/* line 48, ../sass/oeuvretrouve.scss */
 .container .congratulate .parentheses, .container .congratulate2 .parentheses {
   font-size: 32px;
   color: #355E7E;
 }
-/* line 51, ../sass/oeuvretrouve.scss */
+/* line 52, ../sass/oeuvretrouve.scss */
 .container .congratulate .bold, .container .congratulate2 .bold {
   font-weight: bold;
 }
-/* line 54, ../sass/oeuvretrouve.scss */
+/* line 55, ../sass/oeuvretrouve.scss */
 .container .congratulate .accolade, .container .congratulate2 .accolade {
   margin-left: -67%;
 }
-/* line 57, ../sass/oeuvretrouve.scss */
+/* line 58, ../sass/oeuvretrouve.scss */
 .container .congratulate .fct, .container .congratulate2 .fct {
   margin-left: -30%;
 }
-/* line 61, ../sass/oeuvretrouve.scss */
+/* line 62, ../sass/oeuvretrouve.scss */
 .container .congratulate2 {
   margin-top: 10vh;
 }

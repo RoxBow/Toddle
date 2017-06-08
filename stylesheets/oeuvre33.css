@@ -4071,16 +4071,6 @@ h2 {
   color: #F38F9A;
 }
 
-@keyframes slide {
-  from {
-    top: 67%;
-    left: 47%;
-  }
-  to {
-    top: 67%;
-    left: 65%;
-  }
-}
 /* line 4, ../sass/oeuvre33.scss */
 .container {
   font-weight: 600;

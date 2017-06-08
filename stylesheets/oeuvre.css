@@ -4072,16 +4072,6 @@ h2 {
   color: #F38F9A;
 }
 
-@keyframes slide {
-  from {
-    top: 67%;
-    left: 47%;
-  }
-  to {
-    top: 67%;
-    left: 65%;
-  }
-}
 /* line 6, ../sass/oeuvre.scss */
 .container #jeu {
   width: 100%;

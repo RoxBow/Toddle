@@ -3945,7 +3945,7 @@ i {
   width: auto;
   font-size: 3.2vw;
   font-weight: 600;
-  margin: 0% 0 2% 0;
+  margin: 0 0 2% 0;
 }
 /* line 21, ../sass/tuto.scss */
 .container .entete p span {
@@ -4100,45 +4100,45 @@ i {
 .container .lessons .lesson.up .content ul {
   margin: 2% 12% 0 0;
 }
-/* line 148, ../sass/tuto.scss */
+/* line 147, ../sass/tuto.scss */
 .container .lessons .lesson.up .content ul li {
   width: 49%;
   display: inline-block;
   vertical-align: top;
   margin: 0 0 3% 0;
 }
-/* line 153, ../sass/tuto.scss */
+/* line 152, ../sass/tuto.scss */
 .container .lessons .lesson.up .content ul li p, .container .lessons .lesson.up .content ul li img {
   display: inline-block;
 }
-/* line 156, ../sass/tuto.scss */
+/* line 155, ../sass/tuto.scss */
 .container .lessons .lesson.up .content ul li p {
   width: 100%;
   margin: 2% 0;
 }
-/* line 160, ../sass/tuto.scss */
+/* line 159, ../sass/tuto.scss */
 .container .lessons .lesson.up .content ul li img {
   width: 19%;
   animation: animate_icon .9s infinite linear alternate;
 }
-/* line 164, ../sass/tuto.scss */
+/* line 163, ../sass/tuto.scss */
 .container .lessons .lesson.up .content ul li .fa-stack {
   display: inline-block;
   font-size: 35px;
   animation: animate_icon .9s infinite linear alternate;
 }
-/* line 168, ../sass/tuto.scss */
+/* line 167, ../sass/tuto.scss */
 .container .lessons .lesson.up .content ul li .fa-stack .fa-question {
   color: #355E7E;
 }
-/* line 175, ../sass/tuto.scss */
+/* line 174, ../sass/tuto.scss */
 .container .lessons .lesson.up .content .blocL4 {
   text-align: center;
   width: 50%;
   float: left;
   color: #355E7E;
 }
-/* line 180, ../sass/tuto.scss */
+/* line 179, ../sass/tuto.scss */
 .container .lessons .lesson.up .content .blocL4 .containerImg {
   background: #355E7E;
   display: block;
@@ -4148,14 +4148,14 @@ i {
   line-height: 10vw;
   margin: 0 auto;
 }
-/* line 188, ../sass/tuto.scss */
+/* line 187, ../sass/tuto.scss */
 .container .lessons .lesson.up .content .blocL4 .containerImg img {
   padding-bottom: 6%;
   width: 68%;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 195, ../sass/tuto.scss */
+/* line 194, ../sass/tuto.scss */
 .container .lessons .lesson.up .content .blocL4 p {
   display: inline-block;
   width: auto;
@@ -4163,11 +4163,11 @@ i {
   padding: 0 7%;
   font-weight: 600;
 }
-/* line 205, ../sass/tuto.scss */
+/* line 204, ../sass/tuto.scss */
 .container .lessons .lesson.up .content * {
   display: block;
 }
-/* line 212, ../sass/tuto.scss */
+/* line 211, ../sass/tuto.scss */
 .container .lessons .lesson.up .understood {
   background: #fff;
   position: absolute;
@@ -4177,7 +4177,7 @@ i {
   width: 8vw;
   height: 8vw;
 }
-/* line 221, ../sass/tuto.scss */
+/* line 220, ../sass/tuto.scss */
 .container .lessons .lesson.up .understood.go {
   background: #355E7E;
   color: #fff;
