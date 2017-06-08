@@ -53,13 +53,13 @@
             // Active animation loader
             $("label",".cs-loader-inner").addClass("anim");
           
-            $(".lang",".blocBtn").on("touchstart", function() {
+            $(".lang",".blocBtn").on(""+touchOrClick()+"", function() {
                 if(!$(this).hasClass("selected")){
                     $(".lang").toggleClass("selected");
                 }
             });
           
-            $(".launch", ".content").on("touchstart", function() {
+            $(".launch", ".content").on(""+touchOrClick()+"", function() {
                 $(this).animate({
                     left: "100%",
                     opacity: 0
@@ -78,17 +78,12 @@
             });
             
              // button launch experience
-            $("#validLang .fa", ".container").on("touchstart", function() {
+            $("#validLang .fa", ".container").on(""+touchOrClick()+"", function() {
                 if($(".selected").attr("value") === "french"){
                     location.href = "fr/name.php";
                 } else if($(".selected").attr("value") === "english") {
                     location.href = "en/name.php";
                 }
-            });
-
-            var clickOrTouch = (('ontouchend' in window)) ? 'touchend' : 'click';
-            $('.logo_toddle').on(clickOrTouch, function() {
-                alert(clickOrTouch);
             });
         });
     </script>
