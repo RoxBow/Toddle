@@ -28,7 +28,7 @@ function touche() {
   }
 }
 
-  document.body.addEventListener('touchstart', touche, false);
+  document.body.addEventListener(""+touchOrClick()+"", touche, false);
 });
 
 $("#valider").on(""+touchOrClick()+"",function(){

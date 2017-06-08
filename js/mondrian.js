@@ -27,7 +27,7 @@ function touche() {
         tuto=1;
     }
 }
-document.body.addEventListener('touchstart', touche, false);
+document.body.addEventListener(""+touchOrClick()+"", touche, false);
 
 var nbrLine, colorLine, x1, x2, y1, y2;
 

@@ -26,7 +26,7 @@ function touche() {
     }
 }
 
-document.body.addEventListener('touchstart', touche, false);
+document.body.addEventListener(""+touchOrClick()+"", touche, false);
 
 //Variables pour l'affichage du dessin
 var dl = 0,dt = 0;
@@ -278,7 +278,7 @@ function test(identifiant,x,y,posTop,posLeft){
 
 // Fonctions pour le undo //
 
-$("#undo").on('touchstart', function(){
+$("#undo").on(""+touchOrClick()+"", function(){
     cUndo();
 });
 

@@ -55,7 +55,7 @@ $(document).ready(function() {
           }
         }
 
-    document.body.addEventListener('touchstart', touche, false);
+    document.body.addEventListener(""+touchOrClick()+"", touche, false);
 
     /* ### CHRONO ### */
     $("#sec").val(localSec);
