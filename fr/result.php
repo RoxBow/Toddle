@@ -109,7 +109,8 @@ if(isset($_POST['mail'])){
             <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
               <tr>
                 <td style="vertical-align:top;">
-                  <p style="margin:0;"><img src="http://vincentdeplais.fr/toddle/img/logoToddle.png" alt="toddle" class="logoToddle" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;width:45%;display:block;margin:0 auto;"/></p>
+                  <p style="margin:0;"><img src="http://vincentdeplais.fr/toddle/projet/img/logoToddle.png" alt="toddle" class="logoToddle"
+                   style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;width:45%;display:block;margin:0 auto;"/></p>
                   <hr class="separateur" style="width:100%;height:10px;background:#F38F9A;border-radius:100px;border:none;margin:5% 0;">
                   <table border="0" cellpadding="0" cellspacing="0" class="header" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;text-align:center;text-transform:uppercase;margin:0 0 3% 0;font-weight:600;">
                     <tbody>
@@ -131,7 +132,7 @@ if(isset($_POST['mail'])){
                       </tr>
                       <tr>
                         <td style="vertical-align:top;">
-                          <button style="background:#355E7E;padding:2% 3%;font-size:1.4em;font-weight:600;border:none;border-radius:30px;margin:3% 0 0 0;cursor:pointer;"><a href="http://vincentdeplais.fr/toddle/classement/" style="text-decoration:none;color:#fff;">VOIR LE CLASSEMENT</a></button>
+                          <button style="background:#355E7E;padding:2% 3%;font-size:1.4em;font-weight:600;border:none;border-radius:30px;margin:3% 0 0 0;cursor:pointer;"><a href="http://vincentdeplais.fr/toddle/projet/classement/" style="text-decoration:none;color:#fff;">VOIR LE CLASSEMENT</a></button>
                         </td>
                       </tr>
                     </tbody>
@@ -159,8 +160,9 @@ if(isset($_POST['mail'])){
                   <table border="0" cellpadding="0" cellspacing="0" class="footer" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;margin:3% 0;text-align:center;">
                     <tr>
                       <td style="vertical-align:top;">
-                        <img src="http://vincentdeplais.fr/toddle/img/logo_color_avec.png" alt="agence" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;display:inline-block;width:20%;vertical-align:middle;">
-                        <img src="http://vincentdeplais.fr/toddle/img/logo_pompidou.png" alt="pompidou" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;display:inline-block;width:20%;vertical-align:middle;">
+                        <img src="http://vincentdeplais.fr/toddle/projet/img/logo_color_avec.png" alt="agence" 
+                        style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;display:inline-block;width:20%;vertical-align:middle;">
+                        <img src="http://vincentdeplais.fr/toddle/projet/img/logo_pompidou.png" alt="pompidou" style="border:none;-ms-interpolation-mode:bicubic;max-width:100%;display:inline-block;width:20%;vertical-align:middle;">
                       </td>
                     </tr>
                   </table>
