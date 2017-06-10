@@ -139,7 +139,7 @@ $(document).ready(function() {
   });
 
         /*Drag & drop du bouton rectangle*/
-  function hobjects(iden,haut,gauche,divHaut,divGauche,){
+  function hobjects(iden,haut,gauche,divHaut,divGauche){
       var hammertime = new Hammer(iden);
       hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 

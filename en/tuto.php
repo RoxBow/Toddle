@@ -19,7 +19,7 @@ if( !isset($_SESSION['pseudo']) ){
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
     <link rel="stylesheet" href="../stylesheets/tuto.css" media="all">
 </head>
-<body>
+<body class="lock">
     <div class="container">
         <header>
             <img src="../img/toddle_form.png" alt="toddle" class="toddle_form">
